@@ -1,0 +1,82 @@
+{
+  "purpose": "Unchanged released pure-domain dependencies for isolated articulated deployment integration. No old source edits.",
+  "sourceRoot": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\src",
+  "files": [
+    {
+      "path": "src/hardware/acquisition.ts",
+      "sha256": "72a1f573a47bfa7bf2707a15ae50c539f32be5863c7ef8caa69ca9e80a1846b0"
+    },
+    {
+      "path": "src/hardware/attitude.ts",
+      "sha256": "caf2396c3f38c2ee3d1ad38fb62c3c95252adfe04d3bdf7789e3c9896897d5a1"
+    },
+    {
+      "path": "src/hardware/catalog.ts",
+      "sha256": "878dfd6b1d8ca047667fe6a30a82e76fc275804ada3dffe31d4502eb2a72ec79"
+    },
+    {
+      "path": "src/hardware/index.ts",
+      "sha256": "d911a2cc099a374b3b394c4a083e2e2d7e0365730a2c09482d81f4cbca979728"
+    },
+    {
+      "path": "src/hardware/presets.ts",
+      "sha256": "45a04cf9c3b30a64fdb69f0f9b068627a48fb8c592b25f6e4915a0a670345797"
+    },
+    {
+      "path": "src/hardware/resolve.ts",
+      "sha256": "1277087e6b054bb819285b05b72eaaf3cdf26d7c7876573f606f989c7b587543"
+    },
+    {
+      "path": "src/hardware/types.ts",
+      "sha256": "e8d2ba99375e3e5f98faa814409a4d798bb7b63d16e9b61c335e31429b073bf4"
+    },
+    {
+      "path": "src/sim/assembly.ts",
+      "sha256": "8ef747b8dc73baacab53a542b67ba32db91c3cd7d16256afac26e39da5c4b57c"
+    },
+    {
+      "path": "src/sim/attitude.ts",
+      "sha256": "65b17947182722b23a94ba601d127eeeb6dc26925b05d4529564a3aae19145dd"
+    },
+    {
+      "path": "src/sim/catalog.ts",
+      "sha256": "677ec4087b8cf8fea90a3585572dcf56868fc3ccfb47b0d4b2aa6f4ce24f8607"
+    },
+    {
+      "path": "src/sim/hazards.ts",
+      "sha256": "4e2557769946c62d6b57160fce9666b91619c5f196a96756a9279847259b37f0"
+    },
+    {
+      "path": "src/sim/launch.ts",
+      "sha256": "23838eb690154ec192c0a2406d5d2c3ae81a810152b0d2ed495b9f8a32967fe3"
+    },
+    {
+      "path": "src/sim/persistence.ts",
+      "sha256": "a9bab8d46cf668c1c6d99f8b21f084bea81f71585decb6b40ef4fe0b6fb73169"
+    },
+    {
+      "path": "src/sim/physics.ts",
+      "sha256": "666fa2b79febf8ab1d7ba8bd04f061e80cd0acc250c1290951e7a9bc7f9694be"
+    },
+    {
+      "path": "src/sim/simulation.ts",
+      "sha256": "d3b2f74708013b4a052dcb9227a09818ca86759a3eea8f80636cd8af6991265a"
+    },
+    {
+      "path": "src/sim/targets.ts",
+      "sha256": "72fd8a5c19ef4d66d0eb73c9fcb64db49d8dcafc1ae867272d33a2adc658b06e"
+    },
+    {
+      "path": "src/sim/types.ts",
+      "sha256": "d3c9f427dbc0c1e3cd5c470250090abfa7269276f58fed3ea125b7f94e0e5edb"
+    },
+    {
+      "path": "src/transfer/operations-codec.ts",
+      "sha256": "c920b2795606b887a0eaeb55a2bb70a8129c383fd04e40b50add4a9dc893cf4d"
+    },
+    {
+      "path": "src/transfer/operations-codes.ts",
+      "sha256": "154c6f71f30011382affb69e6b7712a63308597edb8a206ade8d0a7ba9689a8e"
+    }
+  ]
+}

@@ -1,0 +1,1005 @@
+{
+  "createdAt": "2026-11-15T05:12:30.180998+00:00",
+  "status": "17 unique production browser cases passed across recorded 15-pass/2-fail batch and 2-pass closure; not one clean 17-case batch.",
+  "url": "http://127.0.0.1:5188/?qa",
+  "scope": "Frozen integrated production bundle, Chrome157.0.8103.52, real UI and authoritative Workers; no independent FPS, input-latency, Edge, or hosted deployment claim.",
+  "entrypoint": "assets/index-CYK1sbYI.js",
+  "deploymentUI": "assets/deployment-ui-Cvl1LH7S.js",
+  "deploymentWorker": "assets/deployment.worker-BIezmTdy.js",
+  "sourceIdentity": {
+    "perRunFiles": 285,
+    "productFiles": 275,
+    "allProductFilesExactAcrossBothRuns": true,
+    "onlyAcrossRunChange": [
+      "tests/browser/deployment-flow.spec.ts"
+    ],
+    "servedIndexExactlyMatchesDist": true
+  },
+  "runs": [
+    {
+      "candidate": "m8-production-r1",
+      "stats": {
+        "startTime": "2026-11-15T05:04:04.848Z",
+        "duration": 273005.118,
+        "expected": 15,
+        "skipped": 0,
+        "unexpected": 2,
+        "flaky": 0
+      },
+      "all285IdentitiesExactBeforeAfter": true,
+      "cases": [
+        {
+          "title": "real cable repair unfolding receipt and exact terminal replay",
+          "file": "deployment-flow.spec.ts",
+          "status": "failed",
+          "durationMs": 8914,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-flow.spec.ts",
+                "column": 41,
+                "line": 61
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m45.5\u001b[39m\nReceived:   \u001b[31m45.5\u001b[39m\n\n  59 |  const block=page.locator('[data-deployment-block=\"deploy-wing\"]'),blockBox=(await block.boundingBox())!;\n  60 |  await page.mouse.move(blockBox.x+blockBox.width/2,blockBox.y+blockBox.height/2);await page.mouse.down();await page.mouse.move(blockBox.x+blockBox.width/2+32,blockBox.y+blockBox.height/2,{steps:8});\n> 61 |  expect((await block.boundingBox())!.x).toBeGreaterThan(blockBox.x);expect((await state(page)).plan).toEqual(original.plan);\n     |                                         ^\n  62 |  await page.keyboard.press('Escape');await page.mouse.up();expect((await state(page)).plan).toEqual(original.plan);\n  63 |  // The visible repair CTA shares its action with the left part list. Repaint\n  64 |  // must return focus to this right-panel control, not the hidden duplicate.\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-flow.spec.ts:61:41"
+            }
+          ]
+        },
+        {
+          "title": "fixed wing is a real distinct complete alternative",
+          "file": "deployment-flow.spec.ts",
+          "status": "failed",
+          "durationMs": 28540,
+          "errors": [
+            {
+              "location": {
+                "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-flow.spec.ts",
+                "column": 77,
+                "line": 90
+              },
+              "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeUndefined\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m{\"action\": null, \"actionId\": null, \"activeJointId\": null, \"blockedAtEnd\": false, \"clearance\": null, \"desired\": \"deployed\", \"driveProfileId\": null, \"jointStates\": {}, \"mechanicalLatch\": true, \"motion\": null, \"motionElapsedSeconds\": 0, \"motorEnergyJ\": 0, \"partId\": \"wing\", \"phase\": \"deployed-latched\", \"phaseStartedAt\": 0, \"powerContactClosed\": true, \"reasonCode\": null, \"remainingReleaseSeconds\": 0, \"remainingVerificationSeconds\": 0, \"resumePhase\": null, \"rfContactClosed\": false, \"stopReason\": null, \"timeSeconds\": 1385.0067053601188}\u001b[39m\n\n  88 |  await open(page);const folded=await state(page);await control(page,'variants').click();await control(page,'preset:fixed').click();await ready(page);\n  89 |  const fixed=await state(page);expect(fixed.draft.launchable).toBe(true);expect(fixed.craft.launchPackageId).not.toBe(folded.craft.launchPackageId);expect(fixed.craft).not.toEqual(folded.craft);\n> 90 |  const result=await fullFlight(page);expect(result.runtime.mechanisms.wing).toBeUndefined();expect(result.result.mechanisms.every((m:any)=>m.mechanicalLatch)).toBe(true);\n     |                                                                             ^\n  91 |  await page.screenshot({path:join(out,'fixed-wing-terminal.png')});writeFileSync(join(out,'fixed-wing-result.json'),JSON.stringify(result.result,null,2));\n  92 | });\n  93 |\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-flow.spec.ts:90:77"
+            }
+          ]
+        },
+        {
+          "title": "ko normal 1280 repair layout and visible controls",
+          "file": "deployment-flow.spec.ts",
+          "status": "passed",
+          "durationMs": 6634,
+          "errors": []
+        },
+        {
+          "title": "ko normal 1920 repair layout and visible controls",
+          "file": "deployment-flow.spec.ts",
+          "status": "passed",
+          "durationMs": 5505,
+          "errors": []
+        },
+        {
+          "title": "ko large 1280 repair layout and visible controls",
+          "file": "deployment-flow.spec.ts",
+          "status": "passed",
+          "durationMs": 4875,
+          "errors": []
+        },
+        {
+          "title": "ko large 1920 repair layout and visible controls",
+          "file": "deployment-flow.spec.ts",
+          "status": "passed",
+          "durationMs": 4938,
+          "errors": []
+        },
+        {
+          "title": "en normal 1280 repair layout and visible controls",
+          "file": "deployment-flow.spec.ts",
+          "status": "passed",
+          "durationMs": 4879,
+          "errors": []
+        },
+        {
+          "title": "en normal 1920 repair layout and visible controls",
+          "file": "deployment-flow.spec.ts",
+          "status": "passed",
+          "durationMs": 5327,
+          "errors": []
+        },
+        {
+          "title": "en large 1280 repair layout and visible controls",
+          "file": "deployment-flow.spec.ts",
+          "status": "passed",
+          "durationMs": 5154,
+          "errors": []
+        },
+        {
+          "title": "en large 1920 repair layout and visible controls",
+          "file": "deployment-flow.spec.ts",
+          "status": "passed",
+          "durationMs": 5269,
+          "errors": []
+        },
+        {
+          "title": "all sixteen model cards place their own physical meshes through real pointer drags",
+          "file": "hardware-interaction.spec.ts",
+          "status": "passed",
+          "durationMs": 21286,
+          "errors": []
+        },
+        {
+          "title": "ko-normal native keyboard placement move cancel and undo",
+          "file": "keyboard-assembly.spec.ts",
+          "status": "passed",
+          "durationMs": 11909,
+          "errors": []
+        },
+        {
+          "title": "ko-large native keyboard placement move cancel and undo",
+          "file": "keyboard-assembly.spec.ts",
+          "status": "passed",
+          "durationMs": 9956,
+          "errors": []
+        },
+        {
+          "title": "en-normal native keyboard placement move cancel and undo",
+          "file": "keyboard-assembly.spec.ts",
+          "status": "passed",
+          "durationMs": 10108,
+          "errors": []
+        },
+        {
+          "title": "en-large native keyboard placement move cancel and undo",
+          "file": "keyboard-assembly.spec.ts",
+          "status": "passed",
+          "durationMs": 9715,
+          "errors": []
+        },
+        {
+          "title": "actual pointer repair reaches the spacecraft before Earth confirmation and returns science with version2 replay",
+          "file": "remote-operations.spec.ts",
+          "status": "passed",
+          "durationMs": 106064,
+          "errors": []
+        },
+        {
+          "title": "swingby builder changes real CG with a pointer move and preserves its plan and separate save slot",
+          "file": "swingby-builder.spec.ts",
+          "status": "passed",
+          "durationMs": 13374,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "candidate": "m8-production-r1-closure",
+      "stats": {
+        "startTime": "2026-11-15T05:09:05.127Z",
+        "duration": 116643.14,
+        "expected": 2,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "all285IdentitiesExactBeforeAfter": true,
+      "cases": [
+        {
+          "title": "real cable repair unfolding receipt and exact terminal replay",
+          "file": "deployment-flow.spec.ts",
+          "status": "passed",
+          "durationMs": 90995,
+          "errors": []
+        },
+        {
+          "title": "fixed wing is a real distinct complete alternative",
+          "file": "deployment-flow.spec.ts",
+          "status": "passed",
+          "durationMs": 24022,
+          "errors": []
+        }
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/en-large-1280-repair-layout-and-visible-controls.json",
+      "title": "en large 1280 repair layout and visible controls",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 2,
+      "nativeRestores": 0,
+      "warningsRetained": 0,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/en-large-1920-repair-layout-and-visible-controls.json",
+      "title": "en large 1920 repair layout and visible controls",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 2,
+      "nativeRestores": 0,
+      "warningsRetained": 0,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/en-normal-1280-repair-layout-and-visible-controls.json",
+      "title": "en normal 1280 repair layout and visible controls",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 2,
+      "nativeRestores": 0,
+      "warningsRetained": 0,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/en-normal-1920-repair-layout-and-visible-controls.json",
+      "title": "en normal 1920 repair layout and visible controls",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 2,
+      "nativeRestores": 0,
+      "warningsRetained": 0,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/fixed-wing-is-a-real-distinct-complete-alternative.json",
+      "title": "fixed wing is a real distinct complete alternative",
+      "status": "failed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 2,
+      "nativeRestores": 0,
+      "warningsRetained": 1,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/ko-large-1280-repair-layout-and-visible-controls.json",
+      "title": "ko large 1280 repair layout and visible controls",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 2,
+      "nativeRestores": 0,
+      "warningsRetained": 0,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/ko-large-1920-repair-layout-and-visible-controls.json",
+      "title": "ko large 1920 repair layout and visible controls",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 2,
+      "nativeRestores": 0,
+      "warningsRetained": 0,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/ko-normal-1280-repair-layout-and-visible-controls.json",
+      "title": "ko normal 1280 repair layout and visible controls",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 2,
+      "nativeRestores": 0,
+      "warningsRetained": 1,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/ko-normal-1920-repair-layout-and-visible-controls.json",
+      "title": "ko normal 1920 repair layout and visible controls",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 2,
+      "nativeRestores": 0,
+      "warningsRetained": 0,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/real-cable-repair-unfolding-receipt-and-exact-terminal-replay.json",
+      "title": "real cable repair unfolding receipt and exact terminal replay",
+      "status": "failed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 2,
+      "nativeRestores": 0,
+      "warningsRetained": 1,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/hardware-interaction/m8-production-r1/all-sixteen-model-cards-place-their-own-physical-meshes-through-real-pointer-drags.json",
+      "title": "all sixteen model cards place their own physical meshes through real pointer drags",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 1,
+      "nativeRestores": 0,
+      "warningsRetained": 0,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/en-large_native_keyboard_placement_move_cancel_and_undo.json",
+      "title": "en-large native keyboard placement move cancel and undo",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 1,
+      "nativeRestores": 0,
+      "warningsRetained": 0,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/en-normal_native_keyboard_placement_move_cancel_and_undo.json",
+      "title": "en-normal native keyboard placement move cancel and undo",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 1,
+      "nativeRestores": 0,
+      "warningsRetained": 0,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/ko-large_native_keyboard_placement_move_cancel_and_undo.json",
+      "title": "ko-large native keyboard placement move cancel and undo",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 1,
+      "nativeRestores": 0,
+      "warningsRetained": 0,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/ko-normal_native_keyboard_placement_move_cancel_and_undo.json",
+      "title": "ko-normal native keyboard placement move cancel and undo",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 1,
+      "nativeRestores": 0,
+      "warningsRetained": 1,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/remote-operations/m8-production-r1/actual-pointer-repair-reaches-the-spacecraft-before-earth-confirmation-and-returns-science-with-version2-replay.json",
+      "title": "actual pointer repair reaches the spacecraft before Earth confirmation and returns science with version2 replay",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 2,
+      "nativeRestores": 3,
+      "warningsRetained": 8,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/swingby-builder/m8-production-r1/report.json",
+      "title": "swingby builder changes real CG with a pointer move and preserves its plan and separate save slot",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 2,
+      "nativeRestores": 0,
+      "warningsRetained": 8,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1-closure/fixed-wing-is-a-real-distinct-complete-alternative.json",
+      "title": "fixed wing is a real distinct complete alternative",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 2,
+      "nativeRestores": 0,
+      "warningsRetained": 0,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1-closure/real-cable-repair-unfolding-receipt-and-exact-terminal-replay.json",
+      "title": "real cable repair unfolding receipt and exact terminal replay",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 2,
+      "nativeRestores": 0,
+      "warningsRetained": 1,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CYK1sbYI.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    }
+  ],
+  "rejectedHarness": {
+    "source": "docs/qa/milestone-8/production-r1/deployment-flow.rejected-harness.txt",
+    "timeline": {
+      "cause": "Worker ready preceded throttled visible timeline unlock. Pointer down began while the actual DOM track still had locked class.",
+      "traceTimesMs": {
+        "clearPreviewAfterLocked": 9972.733,
+        "mouseDownStart": 10018.539,
+        "firstUnlockedTrackAfterHeldMove": 10170.486
+      },
+      "closure": "Require visible unlocked track and readonly lock=false, verify actual center hit, then assert dragging=true, CSS position delta, unchanged draft during held drag and Escape rollback."
+    },
+    "fixedWing": {
+      "cause": "Harness incorrectly required a fixed wing to have no state. Actual domain retains a latched powered fixed device with no articulated joints, drive, motion or motor work.",
+      "closure": "Require heavy launch package, full-span larger geometry, fixed model identity, zero wing joints/drive/motion/work plus genuine mission success and16Mbit received."
+    },
+    "traces": [
+      {
+        "path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\m8-production-r1-traces\\deployment-flow-fixed-wing-58844-stinct-complete-alternative\\trace.zip",
+        "bytes": 21438233,
+        "sha256": "f249e5525a0bae6428600e34a9721f12b1d4c14f91ed84fe680d87f605a3a234",
+        "inRepository": false
+      },
+      {
+        "path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\m8-production-r1-traces\\deployment-flow-real-cable-7dcd1-t-and-exact-terminal-replay\\trace.zip",
+        "bytes": 15382513,
+        "sha256": "7da4484ba08e88956d0faf776b10678e08fcbc16218bf7ee81afbc91f84a17a6",
+        "inRepository": false
+      }
+    ]
+  },
+  "validatedBehavior": [
+    "Right-panel repair CTA retains focus across real replacement paint and400ms before actual canvas drag.",
+    "Held cable-guide ghost does not mutate craft; Escape cancels;75px committed move repairs real obstruction; undo/redo preserve exact craft.",
+    "Repaired craft reaches16Mbit Earth receipt then exported terminal checkpoint strictly reproduces exact runtime and result.",
+    "Fixed wing is actual full-span geometry in heavy launch package, remains latched with no wing motor work, and genuinely receives16Mbit.",
+    "Eight KO/EN normal/large at1280x720 and1920x1080 layouts keep required controls hit-testable and accept native timeline key edits with undo.",
+    "Sixteen model palette cards commit actual physical meshes via pointer drag; each uses an empty design setup fixture, not one sixteen-part mission.",
+    "Four KO/EN normal/large1280x720 keyboard placement cases use native Tab/Enter/Space/arrows/R/number entry, invalid prevention, cancel, camera restoration and undo/redo.",
+    "Remote repair installs at spacecraft before Earth ACK, returns real science, replays exactversion2 state; three native context restores plus app Exit retain ownership.",
+    "Swingby actual pointer movement changes CG/gimbal geometry while preserving plan and separate/legacy save slots through export/import/reload/Continue."
+  ],
+  "validation": {
+    "typescript": "npx.cmd tsc --noEmit passed after final test-only corrections",
+    "nativeAuditMandatoryAll19Executions": true,
+    "applicationErrors": 0,
+    "nativeOwnershipErrors": 0,
+    "shaderWarningsRetainedInReports": true
+  },
+  "visualReview": [
+    "en-large-1280-workshop.png",
+    "real-repaired-terminal.png",
+    "fixed-wing-terminal.png"
+  ],
+  "knownLimits": [
+    "Fixed wing Korean label still says folding solar wing in this frozen r1 product; root queued a bounded copy correction.",
+    "Default terminal camera mainly shows rear equipment faces; working-face view is a separate pending camera iteration.",
+    "Existing six-case resilience r4 handoff is earlier development evidence; it was copied exactly and is not claimed as a production rerun.",
+    "GPU released after Playwright exited; root-owned5188 preview left running. Raw rejected trace ZIPs remain outside Git."
+  ],
+  "files": [
+    {
+      "path": "docs/qa/milestone-8/production-r1/batch-results.json",
+      "bytes": 41932,
+      "sha256": "ea07a46cb10890fa21e611df8d17174e5e8b10e4ef5f00a64180fee7899d6ece"
+    },
+    {
+      "path": "docs/qa/milestone-8/production-r1/deployment-flow.rejected-harness.txt",
+      "bytes": 11383,
+      "sha256": "3b5d8eee0115a72c4038f6509767eb65b5ea5d436ddf54a4c86d438c4142d6d2"
+    },
+    {
+      "path": "docs/qa/milestone-8/production-r1/run.log",
+      "bytes": 7682,
+      "sha256": "460b211ef2591e45ead73b1a5aa973b00ed8e4c93d8fa73543bf681c204faa6b"
+    },
+    {
+      "path": "docs/qa/milestone-8/production-r1/source-after.json",
+      "bytes": 47241,
+      "sha256": "3d18a9149e221912549e4c8830fb3855a3f820c6c64aae663cb8bd2d1aa869b1"
+    },
+    {
+      "path": "docs/qa/milestone-8/production-r1/source-before.json",
+      "bytes": 47241,
+      "sha256": "761d9d9107d44382809eb99f82cf44c3f63d779c8e3cc0fa7544e3337f5e28af"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/en-large-1280-repair-layout-and-visible-controls.json",
+      "bytes": 1209,
+      "sha256": "47a39faefd99877a7b02d9af45b3ec4972a5b40f84b8f8c45c66d39bf3318164"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/en-large-1280-workshop.png",
+      "bytes": 241020,
+      "sha256": "37c03792c6cbd27b3d793f08b2287e97c7a1dc04a639c8579b289b1278250824"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/en-large-1920-repair-layout-and-visible-controls.json",
+      "bytes": 1210,
+      "sha256": "2257c20795fdccdb55cca66bb963a69fae80d85c420215a1a6777f29ba088f7a"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/en-large-1920-workshop.png",
+      "bytes": 459272,
+      "sha256": "3348a0f57729dab646eaabcb4fcacc27342d1c9176dbd8b951080bdb0d8fd7d6"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/en-normal-1280-repair-layout-and-visible-controls.json",
+      "bytes": 1210,
+      "sha256": "e9bb17d58f64821eb4cb770cd7d0249afdbe0e886f1e36b5f2a92ee9cacdc2e5"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/en-normal-1280-workshop.png",
+      "bytes": 241596,
+      "sha256": "d6c9277e792b3686b8c03d800b4507dfa48da78252abf2cf2bba24e936ecb5e6"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/en-normal-1920-repair-layout-and-visible-controls.json",
+      "bytes": 1211,
+      "sha256": "d437044678fc0863272138de5d73c88fc6f52962e277893afe8ce9281c58b880"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/en-normal-1920-workshop.png",
+      "bytes": 459966,
+      "sha256": "55a615917eac094f8ade5c4d1938e16edd65a2042f12e75203cfe1046de30f77"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/fixed-wing-is-a-real-distinct-complete-alternative-failure.png",
+      "bytes": 351155,
+      "sha256": "f24947870b8d7d1588a4c773902a8251f4ba7a558a1354e82b851d758b17263c"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/fixed-wing-is-a-real-distinct-complete-alternative.json",
+      "bytes": 1995,
+      "sha256": "38b741cfaa0b2afbc1b983809001b935b1916c42c09e6df3f72beb7b5406f3f9"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/ko-large-1280-repair-layout-and-visible-controls.json",
+      "bytes": 1209,
+      "sha256": "e703b2936f96693f33a3f714789754c28323ed7bc320628d0da3f02a17efdbe6"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/ko-large-1280-workshop.png",
+      "bytes": 231920,
+      "sha256": "13c679176a4c90c9148b05c7e5cdfab2e201a73c50f756a9beb05e3b3ea720ca"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/ko-large-1920-repair-layout-and-visible-controls.json",
+      "bytes": 1210,
+      "sha256": "ba503835c8cd4711defe830a127959dd46b26b26c368fb912c2739fde41e577d"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/ko-large-1920-workshop.png",
+      "bytes": 442460,
+      "sha256": "1e5f1b13bfde19dbfd97c0cc44eaee220e1af0b2dcb7202d7073f2df69126fe1"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/ko-normal-1280-repair-layout-and-visible-controls.json",
+      "bytes": 1994,
+      "sha256": "34ca6fb4cd351aa100d1537d25619090c4308e5dd597529ed17c332294633b46"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/ko-normal-1280-workshop.png",
+      "bytes": 233193,
+      "sha256": "ebfbbda32ab5fac07c0341498d835b6a57f8ed3cee3f93eacad457c009c881b4"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/ko-normal-1920-repair-layout-and-visible-controls.json",
+      "bytes": 1211,
+      "sha256": "30194ab4595149d61d1f10ee8ddac837acd5123a802116ba43bf4edfcf418b74"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/ko-normal-1920-workshop.png",
+      "bytes": 445250,
+      "sha256": "979fdc1c0e97d37aeded9d23310423de8b9b0c23a8d65d1790097f7a269f50ca"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/real-cable-repair-unfolding-receipt-and-exact-terminal-replay-failure.png",
+      "bytes": 233138,
+      "sha256": "b827ed3e464f54a41b2e1eb4a12d54cb6cb045ab8f07fd1b7195d1729cc58e1d"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/real-cable-repair-unfolding-receipt-and-exact-terminal-replay.json",
+      "bytes": 2004,
+      "sha256": "b1ecbd147e85cc2a8f46b067bf05ad182fe53256981b1a017d1df4d3e5b612e2"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1/real-obstruction-witness.png",
+      "bytes": 235533,
+      "sha256": "cf1862cf2830b50e6d310cdf70485df9d5f1d773980436d568b490159eafe7d2"
+    },
+    {
+      "path": "tests/browser/artifacts/hardware-interaction/m8-production-r1/all-sixteen-model-cards-place-their-own-physical-meshes-through-real-pointer-drags.json",
+      "bytes": 750,
+      "sha256": "d5ceef191e993e00e0cdb3d40bf950ac469b9a8110e5d1a07205a0de5bde0673"
+    },
+    {
+      "path": "tests/browser/artifacts/hardware-interaction/m8-production-r1/sixteen-actual-drags.json",
+      "bytes": 1716,
+      "sha256": "d6802b082954ba42ac845e67badfe42fafc481f6a9bf69cecf6f01093a081e7b"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/en-large-committed.png",
+      "bytes": 314470,
+      "sha256": "fd022edbe445e10f57d10fb2f064dde0144ffda5a55c644b66a9237cca6aa52d"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/en-large-rejected-ghost.png",
+      "bytes": 316140,
+      "sha256": "01823f0a3e4dcf034ab272690f51b7d5f8450a05b2cf87dc860ed218ed40a1f9"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/en-large-states.json",
+      "bytes": 3968,
+      "sha256": "0f20ee89ecdbc3b0d4535fcfa2bd27707877ab8e4d4bfba95931b2cd1ce18f56"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/en-large-valid-ghost.png",
+      "bytes": 314789,
+      "sha256": "cd93ac213ba22c1bb8ec99e763151e43ef4d49ec206f2befb02c770a370f3b47"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/en-large_native_keyboard_placement_move_cancel_and_undo.json",
+      "bytes": 895,
+      "sha256": "b53a0bc6dcd9c89791b7065a15f2b99c892ab7a03c07b6ad284a410ffacf719c"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/en-normal-committed.png",
+      "bytes": 314298,
+      "sha256": "3123065e7caecb7f1d09613253b14d808b303feec75e088e537c94a82b5d01de"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/en-normal-rejected-ghost.png",
+      "bytes": 318583,
+      "sha256": "ed821d605ae43aa5a52412e7f907e7b8ba38c093632a90352957429ecaf1c6e5"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/en-normal-states.json",
+      "bytes": 3947,
+      "sha256": "fb3fcea73554a47b099ed8741fa0c8965e5bee6fc418eda1bf860ea215a8b083"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/en-normal-valid-ghost.png",
+      "bytes": 315971,
+      "sha256": "4eab91c2ce3644d0d51952852ec2c833749e1b3e4d911267e747fa214c43da71"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/en-normal_native_keyboard_placement_move_cancel_and_undo.json",
+      "bytes": 896,
+      "sha256": "395fe0b21eef6e823fb83f9a7d90b4974a7e240d3a7f26cb84499b9aa1c1258e"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/ko-large-committed.png",
+      "bytes": 309172,
+      "sha256": "16e7aef93f46a877698e3a322aa631318841af6957c40a64e66712adf4753fc5"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/ko-large-rejected-ghost.png",
+      "bytes": 311198,
+      "sha256": "d92f8d03c8f6fd4b29f3bd0a84ddcc1b933e158d768889a394fe1d055fdd2bd6"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/ko-large-states.json",
+      "bytes": 3968,
+      "sha256": "de1368b4f6dff418981e58021ff75c18a23949945b88ed8f3a598f7f7859b3b9"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/ko-large-valid-ghost.png",
+      "bytes": 307129,
+      "sha256": "b0f09f40a647b305bf456a4acb90a3f75bdb87d78cf3a75a432ec6979787cf13"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/ko-large_native_keyboard_placement_move_cancel_and_undo.json",
+      "bytes": 895,
+      "sha256": "2c9a12e8a55b14eb6c74a593ff6b628de9a445be6feb0d2cbb2eefe8f79804fd"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/ko-normal-committed.png",
+      "bytes": 305565,
+      "sha256": "55e0673402ba63ed1a6e72757fc1a1be488aa3e8d404188cc2b5b8207573a1a8"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/ko-normal-rejected-ghost.png",
+      "bytes": 311269,
+      "sha256": "4a3d87473c4a214b0c14af4063e50658e8239294c71ffc609ced7dc16df7479b"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/ko-normal-states.json",
+      "bytes": 3947,
+      "sha256": "7d93b6c0d9eb74e8a745cb1fab19117d5b17ae441580d793705718917db5d0a2"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/ko-normal-valid-ghost.png",
+      "bytes": 308938,
+      "sha256": "b794f8798f3a8566e6b5334813ac9683e98845723fceac47ab6160c5f52eb69b"
+    },
+    {
+      "path": "tests/browser/artifacts/keyboard-assembly/m8-production-r1/ko-normal_native_keyboard_placement_move_cancel_and_undo.json",
+      "bytes": 1680,
+      "sha256": "7a50b1dd5596ed05475d278cc1a758cbaae6119c0d136e6a94ff03dfbedac68b"
+    },
+    {
+      "path": "tests/browser/artifacts/remote-operations/m8-production-r1/actual-pointer-repair-reaches-the-spacecraft-before-earth-confirmation-and-returns-science-with-version2-replay.json",
+      "bytes": 2076,
+      "sha256": "3dba9819436f3f848227c5bca118cf1b7709ca8281d4eb64bbb03392110db448"
+    },
+    {
+      "path": "tests/browser/artifacts/remote-operations/m8-production-r1/actual-received-science-restored-1280x720.png",
+      "bytes": 131292,
+      "sha256": "e53b348f15e24da48f9449a13679e4d03733ae1b50fa687baab7ab6da2d96e34"
+    },
+    {
+      "path": "tests/browser/artifacts/remote-operations/m8-production-r1/causal-flight-and-replay.json",
+      "bytes": 63733,
+      "sha256": "5244d596c9d9fcf0dbe40a8f5795fb050c01b9f53a9a6e2a4d340b055821b74f"
+    },
+    {
+      "path": "tests/browser/artifacts/remote-operations/m8-production-r1/earth-confirmed-future-work-1280x720.png",
+      "bytes": 153855,
+      "sha256": "682d20b0b267c73d6c3ddf096e79dc21d66fc8cbf6ea6b036a220b6534450ced"
+    },
+    {
+      "path": "tests/browser/artifacts/remote-operations/m8-production-r1/installed-but-earth-unconfirmed-1280x720.png",
+      "bytes": 146361,
+      "sha256": "decb0d4ad7a5386f4d997b502b1b40c932640062243419bc15193eab9dcf9104"
+    },
+    {
+      "path": "tests/browser/artifacts/remote-operations/m8-production-r1/mars-4k-actual-epoch-inspection-1280x720.png",
+      "bytes": 190656,
+      "sha256": "0f249adabecd3b18e1f5c71dce409e9366160aa9c9ff7178b42489f6c9d0fda5"
+    },
+    {
+      "path": "tests/browser/artifacts/remote-operations/m8-production-r1/mars-detail-lazy-context-cache.json",
+      "bytes": 5442,
+      "sha256": "fc9634f86819df5d34e111e08b5c35b8c8bd381d9a76fd0ccfab9db79ea229fd"
+    },
+    {
+      "path": "tests/browser/artifacts/remote-operations/m8-production-r1/queued-not-acknowledged-1280x720.png",
+      "bytes": 143376,
+      "sha256": "6b296fb976646849924543821dfe9194deafbf3290eef60a6350e530930c186d"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby-builder/m8-production-r1/actual-battery-drag-cg-change.png",
+      "bytes": 351373,
+      "sha256": "e91c0978c30ef7d7c5b6f6bd5e9ee2564c117acf8c16266c1fc87899deb4fa86"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby-builder/m8-production-r1/actual-campus-continue.png",
+      "bytes": 107536,
+      "sha256": "9e398c904ed26d4a65323bb196b64fdb3e004054cb5b33f49bd0cdf293d54e6f"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby-builder/m8-production-r1/actual-carrier-focused.png",
+      "bytes": 465333,
+      "sha256": "cf3883348eaa4edb7215366e5150929423cfffd04534933a5fc77e018dd3abec"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby-builder/m8-production-r1/actual-legacy-slot-restored.png",
+      "bytes": 406204,
+      "sha256": "cf0be09428831019e25220d8a0abcb5f820d723667e0c2b1095848afd605eefd"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby-builder/m8-production-r1/legacy-slot-transaction-evidence.json",
+      "bytes": 5849,
+      "sha256": "5c18086083baf9a31e487a10c544cdc3fbf217a0932e0e58b835664348c85d5d"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby-builder/m8-production-r1/physical-and-save-evidence.json",
+      "bytes": 11402,
+      "sha256": "3529f97ffc3adacfbd7e840c6a326d421a22ccfd141dacf2134054d45e8c0b58"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby-builder/m8-production-r1/report.json",
+      "bytes": 2200,
+      "sha256": "2beba71d098afffef5ae763cd472e182e6998bbcad8b83de841e2e468c096fc3"
+    },
+    {
+      "path": "docs/qa/milestone-8/production-r1-closure/batch-results.json",
+      "bytes": 5481,
+      "sha256": "15fd636cace49db5894fba6c7353f6eaa4ef1547715856c1367197a41e85e8d5"
+    },
+    {
+      "path": "docs/qa/milestone-8/production-r1-closure/run.log",
+      "bytes": 461,
+      "sha256": "d403683d1b34c900e2e80c18ba4552807ddc9ccb2ba0a36ea391efa24ff3bb53"
+    },
+    {
+      "path": "docs/qa/milestone-8/production-r1-closure/source-after.json",
+      "bytes": 47241,
+      "sha256": "5f04bc2b44c7bada40f170fb5be31a3fa2366019bf11cb6faeaafbdb8eafaabe"
+    },
+    {
+      "path": "docs/qa/milestone-8/production-r1-closure/source-before.json",
+      "bytes": 47241,
+      "sha256": "618d95bd45c39189872b077f72dbe711159fca537e8759c5fb4a023c5f3ec98c"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1-closure/fixed-wing-is-a-real-distinct-complete-alternative.json",
+      "bytes": 1219,
+      "sha256": "21abdb747aac23ecafb7141fbb81aee0a95249fca88949d8328e438accad2101"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1-closure/fixed-wing-result.json",
+      "bytes": 866,
+      "sha256": "5487781bb95a3b8b2deefecad27d591dd781b6737fedc08a900b7c13d6d9f3b0"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1-closure/fixed-wing-terminal.png",
+      "bytes": 351044,
+      "sha256": "40c801fedb5831baf21ba0b7d62c3cbed5778907e7bab7fe6704f04904c5fb8f"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1-closure/real-cable-repair-unfolding-receipt-and-exact-terminal-replay.json",
+      "bytes": 2015,
+      "sha256": "e9beeccaf985eabb094ab7dc46d6bd05fbe7b4d0fd8366e3f12b3d6c1434a1d6"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1-closure/real-obstruction-witness.png",
+      "bytes": 235533,
+      "sha256": "cf1862cf2830b50e6d310cdf70485df9d5f1d773980436d568b490159eafe7d2"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1-closure/real-repaired-terminal.png",
+      "bytes": 341324,
+      "sha256": "e964bdc34d152405d30b7e340979da3ee7d80d443360c65741849fde967ef771"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1-closure/repaired-terminal-save.json",
+      "bytes": 126787,
+      "sha256": "2a90184b942e3c138618cf10b02ec35d8e1f69806f7ebe9bbb6fe58220418878"
+    }
+  ]
+}

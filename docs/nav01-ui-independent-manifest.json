@@ -1,0 +1,53 @@
+{
+  "scope": "Independent CPU audit closure; native browser pending. No product edits by auditor.",
+  "finalUniqueCases": 9,
+  "finalPassed": 9,
+  "typecheckExitCode": 0,
+  "files": [
+    {
+      "path": "tests/nav01-render-contract.test.ts",
+      "bytes": 12246,
+      "sha256": "fc13669286e53868ab5563e7f097540a11a779b638ec7e5e28b52df78fac232f"
+    },
+    {
+      "path": "docs/nav01-ui-independent-audit.md",
+      "bytes": 3674,
+      "sha256": "cfc2d179b90d71ef39327ef5eef0539c39e0e91ec0bd92af347a3f6513f61e9c"
+    },
+    {
+      "path": "docs/qa/nav01-ui-independent-audit.json",
+      "bytes": 4153,
+      "sha256": "6da0d327a743615040278a2e84f68ee0adf5132093d72dd9344ad80256605652"
+    },
+    {
+      "path": "docs/qa/nav01-ui-independent-audit-rejected.json",
+      "bytes": 3146,
+      "sha256": "e1d46123749c30c454c0ddf5ffb6e6e988917565cc744bd29877616b37fb90e2"
+    },
+    {
+      "path": "docs/qa/nav01-render-contract-initial.json",
+      "bytes": 3691,
+      "sha256": "4e5b2c5c2968d7a504d85a9df950ac2307927b2f7520deae9d58a005fee3d02a"
+    },
+    {
+      "path": "docs/qa/nav01-render-contract-focus-rejected.json",
+      "bytes": 5342,
+      "sha256": "bd468622db42af17bcf284277a6fc26c8b4bdccca9c2c2e7a2f1e9090e4a377a"
+    },
+    {
+      "path": "docs/qa/nav01-render-contract-focus-closure.json",
+      "bytes": 4098,
+      "sha256": "f2f28af33dad7876a8fcb02f1cc654a455ff603fc1ae15180f073bf7473bdb9b"
+    },
+    {
+      "path": "docs/qa/nav01-render-contract-camera-closure.json",
+      "bytes": 4544,
+      "sha256": "3ccf7e904ecf0fa05044681becb4da59442dc22867e78c380d00e69d673847e1"
+    },
+    {
+      "path": "docs/qa/nav01-render-contract-focus-rejected.test.ts.txt",
+      "bytes": 10759,
+      "sha256": "246aebefd523abd0fae961d54d5ccfe1a031da3b0f57d53d651238ebe7c8db18"
+    }
+  ]
+}

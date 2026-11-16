@@ -1,0 +1,243 @@
+{
+  "scope": "CPU-only proposal search on same radial-angle cone, same zoom/focus, actual physical boxes/apertures. Center-ray visibility is preliminary, not full projected occlusion or visual acceptance.",
+  "radialAngleDeg": 58.96490126025893,
+  "distance": 0.08592393937181216,
+  "current": {
+    "angleDeg": null,
+    "score": -1,
+    "direction": [
+      -0.6333967152410626,
+      0.7708168945717546,
+      0.06819029377109934
+    ],
+    "cameraPosition": [
+      0.17857832509403182,
+      2.6322522292383668,
+      -2.0275291899919723
+    ],
+    "cameraUp": [
+      0.463584724606575,
+      0.4485367531430842,
+      -0.764136103185359
+    ],
+    "wingFrontMinimum": -0.574843818027909,
+    "rfFrontMinimum": -0.8289607496572473,
+    "apertures": [
+      {
+        "id": "wing:centre:aperture",
+        "partId": "wing",
+        "frontCosine": -0.5353060934709694,
+        "centerOccluded": true
+      },
+      {
+        "id": "wing:lower:aperture",
+        "partId": "wing",
+        "frontCosine": -0.4994490289867105,
+        "centerOccluded": true
+      },
+      {
+        "id": "wing:upper:aperture",
+        "partId": "wing",
+        "frontCosine": -0.574843818027909,
+        "centerOccluded": false
+      },
+      {
+        "id": "antenna:centre:aperture",
+        "partId": "antenna",
+        "frontCosine": -0.8217183401672071,
+        "centerOccluded": true
+      },
+      {
+        "id": "antenna:lower:aperture",
+        "partId": "antenna",
+        "frontCosine": -0.8289607496572473,
+        "centerOccluded": true
+      },
+      {
+        "id": "antenna:upper:aperture",
+        "partId": "antenna",
+        "frontCosine": -0.8143400072748949,
+        "centerOccluded": true
+      }
+    ]
+  },
+  "best": [
+    {
+      "angleDeg": 162,
+      "score": 0.3786131478906289,
+      "direction": [
+        0.37169941315724314,
+        -0.10515692531935905,
+        -0.9223782127283469
+      ],
+      "cameraPosition": [
+        0.26494014389337095,
+        2.556985107846748,
+        -2.112642738288057
+      ],
+      "cameraUp": [
+        -0.14117626842874326,
+        0.9756055401202006,
+        -0.16811630295514762
+      ],
+      "wingFrontMinimum": 0.3786131478906289,
+      "rfFrontMinimum": 0.4520448073718537,
+      "apertures": [
+        {
+          "id": "wing:centre:aperture",
+          "partId": "wing",
+          "frontCosine": 0.39990432400175313,
+          "centerOccluded": false
+        },
+        {
+          "id": "wing:lower:aperture",
+          "partId": "wing",
+          "frontCosine": 0.42091465581214743,
+          "centerOccluded": false
+        },
+        {
+          "id": "wing:upper:aperture",
+          "partId": "wing",
+          "frontCosine": 0.3786131478906289,
+          "centerOccluded": false
+        },
+        {
+          "id": "antenna:centre:aperture",
+          "partId": "antenna",
+          "frontCosine": 0.45649765219873484,
+          "centerOccluded": false
+        },
+        {
+          "id": "antenna:lower:aperture",
+          "partId": "antenna",
+          "frontCosine": 0.4520448073718537,
+          "centerOccluded": false
+        },
+        {
+          "id": "antenna:upper:aperture",
+          "partId": "antenna",
+          "frontCosine": 0.4608697872356176,
+          "centerOccluded": false
+        }
+      ]
+    },
+    {
+      "angleDeg": 165,
+      "score": 0.33708412136523586,
+      "direction": [
+        0.33009292935869844,
+        -0.11310223394891106,
+        -0.9371480900386869
+      ],
+      "cameraPosition": [
+        0.26136515090199053,
+        2.556302415629772,
+        -2.1139118243306
+      ],
+      "cameraUp": [
+        -0.11614186848650766,
+        0.9803861900511054,
+        -0.15922934635782665
+      ],
+      "wingFrontMinimum": 0.33708412136523586,
+      "rfFrontMinimum": 0.46088030193508117,
+      "apertures": [
+        {
+          "id": "wing:centre:aperture",
+          "partId": "wing",
+          "frontCosine": 0.35623906952201523,
+          "centerOccluded": false
+        },
+        {
+          "id": "wing:lower:aperture",
+          "partId": "wing",
+          "frontCosine": 0.37522786006704273,
+          "centerOccluded": false
+        },
+        {
+          "id": "wing:upper:aperture",
+          "partId": "wing",
+          "frontCosine": 0.33708412136523586,
+          "centerOccluded": false
+        },
+        {
+          "id": "antenna:centre:aperture",
+          "partId": "antenna",
+          "frontCosine": 0.46502721966569077,
+          "centerOccluded": false
+        },
+        {
+          "id": "antenna:lower:aperture",
+          "partId": "antenna",
+          "frontCosine": 0.46088030193508117,
+          "centerOccluded": false
+        },
+        {
+          "id": "antenna:upper:aperture",
+          "partId": "antenna",
+          "frontCosine": 0.46906942223638687,
+          "centerOccluded": false
+        }
+      ]
+    },
+    {
+      "angleDeg": 168,
+      "score": 0.29508491234308787,
+      "direction": [
+        0.2876815454440769,
+        -0.11963285103900811,
+        -0.9502248730501565
+      ],
+      "cameraPosition": [
+        0.25772099772183593,
+        2.555741279282862,
+        -2.115035433041256
+      ],
+      "cameraUp": [
+        -0.09062316442674595,
+        0.9843156276093161,
+        -0.15136111559235133
+      ],
+      "wingFrontMinimum": 0.29508491234308787,
+      "rfFrontMinimum": 0.46762654217243804,
+      "apertures": [
+        {
+          "id": "wing:centre:aperture",
+          "partId": "wing",
+          "frontCosine": 0.31196529754965374,
+          "centerOccluded": false
+        },
+        {
+          "id": "wing:lower:aperture",
+          "partId": "wing",
+          "frontCosine": 0.32875245302747336,
+          "centerOccluded": false
+        },
+        {
+          "id": "wing:upper:aperture",
+          "partId": "wing",
+          "frontCosine": 0.29508491234308787,
+          "centerOccluded": false
+        },
+        {
+          "id": "antenna:centre:aperture",
+          "partId": "antenna",
+          "frontCosine": 0.47142614037762975,
+          "centerOccluded": false
+        },
+        {
+          "id": "antenna:lower:aperture",
+          "partId": "antenna",
+          "frontCosine": 0.46762654217243804,
+          "centerOccluded": false
+        },
+        {
+          "id": "antenna:upper:aperture",
+          "partId": "antenna",
+          "frontCosine": 0.47509848729453935,
+          "centerOccluded": false
+        }
+      ]
+    }
+  ]
+}

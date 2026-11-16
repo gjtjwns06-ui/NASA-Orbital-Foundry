@@ -1,0 +1,68 @@
+
+********************************************
+***  GMAT Console Application
+********************************************
+
+General Mission Analysis Tool
+Console Based Version
+Build Date: Mar 26 2026  15:02:55
+
+
+Moderator is updating data files...
+Moderator is creating core engine...
+Successfully set Planetary Source to use: DE405
+Successfully set Planetary Source to use: DE405
+Successfully set Planetary Source to use: DE405
+Setting nutation file to C:\Users\gjtjw\Desktop\NASA_apps_challenge\.tools\gmat\data\planetary_coeff\NUTATION.DAT
+Setting leap seconds file to C:\Users\gjtjw\Desktop\NASA_apps_challenge\.tools\gmat\data\time\tai-utc.dat
+2026-11-15 05:58:33 GMAT Moderator successfully created core engine
+
+Interpreting scripts from the file.
+***** file: C:\Users\gjtjw\Desktop\NASA_apps_challenge\orbital-foundry\tools\swingby\gmat-exit-oracle-v1\case-07\oracle.script
+Successfully set Planetary Source to use: DE405
+Successfully set Planetary Source to use: DE405
+Successfully interpreted the script
+.................... Print out the whole sequence ........................................
+   Command::NoOp
+   Command::BeginMissionSequence
+   Command::Report
+   Command::Propagate
+   Command::Report
+   Command::Propagate
+   Command::Report
+   Command::Maneuver
+   Command::Report
+   Command::Propagate
+   Command::Report
+   Command::Propagate
+   Command::Report
+   Command::Propagate
+   Command::Report
+   Command::Propagate
+   Command::Report
+.................... End sequence ........................................................
+Running mission...
+Successfully set Planetary Source to use: DE405
+Successfully set Planetary Source to use: DE405
+Kernel C:/Users/gjtjw/Desktop/NASA_apps_challenge/.tools/gmat/data/planetary_ephem/spk/DE405AllPlanets.bsp has been loaded.
+Kernel C:\Users\gjtjw\Desktop\NASA_apps_challenge\.tools\gmat\data\planetary_coeff\SPICEPlanetaryConstantsKernel.tpc has been loaded.
+Kernel C:\Users\gjtjw\Desktop\NASA_apps_challenge\.tools\gmat\data\time\SPICELeapSecondKernel.tls has been loaded.
+Kernel C:\Users\gjtjw\Desktop\NASA_apps_challenge\.tools\gmat\data\planetary_coeff\SPICEEarthPredictedKernel.bpc has been loaded.
+Kernel C:\Users\gjtjw\Desktop\NASA_apps_challenge\.tools\gmat\data\planetary_coeff\SPICEEarthCurrentKernel.bpc has been loaded.
+Kernel C:\Users\gjtjw\Desktop\NASA_apps_challenge\.tools\gmat\data\planetary_coeff\earth_latest_high_prec.bpc has been loaded.
+Kernel C:\Users\gjtjw\Desktop\NASA_apps_challenge\.tools\gmat\data\planetary_coeff\SPICELunaCurrentKernel.bpc has been loaded.
+Kernel C:\Users\gjtjw\Desktop\NASA_apps_challenge\.tools\gmat\data\planetary_coeff\SPICELunaFrameKernel.tf has been loaded.
+**** WARNING **** For the line "Propagate Prop(Probe) {Probe.Mars.Periapsis, StopTolerance = 1e-10};" the achieved stop is outside of the stopping tolerance (1.000000e-10); the difference from the desired value is 3.771264e-10
+**** WARNING **** For the line "Propagate Prop(Probe) {Probe.Mars.RMAG = 100000};" the achieved stop is outside of the stopping tolerance (1.000000e-07); the difference from the desired value is 1.072680e-06
+**** WARNING **** For the line "Propagate Prop(Probe) {Probe.Mars.RMAG = 577000};" the achieved stop is outside of the stopping tolerance (1.000000e-07); the difference from the desired value is 1.269393e-06
+
+Mission run completed.
+===> Total Run Time: 0.296 seconds
+
+========================================
+
+
+*** GMAT Integration test (Console version) successful! ***
+
+Verbose mode is off
+Moderator is deleting core engine...

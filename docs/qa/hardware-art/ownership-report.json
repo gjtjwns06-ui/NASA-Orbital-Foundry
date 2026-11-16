@@ -1,0 +1,4450 @@
+{
+  "prototypeOnly": true,
+  "browser": "157.0.8103.52",
+  "errors": [],
+  "checks": [
+    {
+      "label": "hardware: expected hardware atlas allocation",
+      "passed": true,
+      "data": [
+        {
+          "uuid": "bbca3de2-2334-47b8-870d-70f426a3cd41",
+          "name": "original-hardware-colour-atlas"
+        },
+        {
+          "uuid": "33d366d6-d2b8-4ce3-8d98-ff2a1f877b9f",
+          "name": "original-hardware-surface-detail"
+        }
+      ]
+    },
+    {
+      "label": "hardware cycle 1: transfer owns distinct geometry/material/texture objects",
+      "passed": true,
+      "data": {
+        "materials": 0,
+        "textures": 0,
+        "geometries": 0
+      }
+    },
+    {
+      "label": "hardware cycle 1: CPU sources are shared while texture objects differ",
+      "passed": true,
+      "data": [
+        {
+          "uuid": "7a4a7380-93c0-491c-848f-f0d6ae0f4184",
+          "name": "original-hardware-colour-atlas"
+        },
+        {
+          "uuid": "357de157-2ae9-48cc-bc40-33228baa28fc",
+          "name": "original-hardware-surface-detail"
+        },
+        {
+          "uuid": "dabc9a03-b729-4c75-93db-3c1709928175",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "label": "hardware cycle 1: both atlas maps cloned",
+      "passed": true,
+      "data": [
+        {
+          "uuid": "7a4a7380-93c0-491c-848f-f0d6ae0f4184",
+          "name": "original-hardware-colour-atlas"
+        },
+        {
+          "uuid": "357de157-2ae9-48cc-bc40-33228baa28fc",
+          "name": "original-hardware-surface-detail"
+        },
+        {
+          "uuid": "dabc9a03-b729-4c75-93db-3c1709928175",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "label": "hardware cycle 1: original assembly receives zero dispose events",
+      "passed": true,
+      "data": []
+    },
+    {
+      "label": "hardware cycle 1: every owned transfer resource disposed exactly once",
+      "passed": true,
+      "data": []
+    },
+    {
+      "label": "hardware cycle 1: assembly reuses its original resources",
+      "passed": true,
+      "data": {
+        "geometries": true,
+        "materials": true,
+        "textures": true
+      }
+    },
+    {
+      "label": "hardware cycle 2: transfer owns distinct geometry/material/texture objects",
+      "passed": true,
+      "data": {
+        "materials": 0,
+        "textures": 0,
+        "geometries": 0
+      }
+    },
+    {
+      "label": "hardware cycle 2: CPU sources are shared while texture objects differ",
+      "passed": true,
+      "data": [
+        {
+          "uuid": "3ed87518-ba71-45bb-a04e-e3810010d7e4",
+          "name": "original-hardware-colour-atlas"
+        },
+        {
+          "uuid": "477dc8a7-0b5e-4da8-9f18-56a48ae70402",
+          "name": "original-hardware-surface-detail"
+        },
+        {
+          "uuid": "b4082d3f-afa0-4572-9a14-2d98ae8fe39d",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "label": "hardware cycle 2: both atlas maps cloned",
+      "passed": true,
+      "data": [
+        {
+          "uuid": "3ed87518-ba71-45bb-a04e-e3810010d7e4",
+          "name": "original-hardware-colour-atlas"
+        },
+        {
+          "uuid": "477dc8a7-0b5e-4da8-9f18-56a48ae70402",
+          "name": "original-hardware-surface-detail"
+        },
+        {
+          "uuid": "b4082d3f-afa0-4572-9a14-2d98ae8fe39d",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "label": "hardware: real transfer WebGL context loss is available",
+      "passed": true
+    },
+    {
+      "label": "hardware: PMREM environment regenerated after context restore",
+      "passed": true,
+      "data": {
+        "lost": 1,
+        "restored": 1,
+        "environmentBefore": "d936cbf8-29ea-45db-982a-13aef6c983e1",
+        "environmentAfter": "d42bb341-007e-4e98-807c-d39cba70e001"
+      }
+    },
+    {
+      "label": "hardware cycle 2: original assembly receives zero dispose events",
+      "passed": true,
+      "data": []
+    },
+    {
+      "label": "hardware cycle 2: every owned transfer resource disposed exactly once",
+      "passed": true,
+      "data": []
+    },
+    {
+      "label": "hardware cycle 2: assembly reuses its original resources",
+      "passed": true,
+      "data": {
+        "geometries": true,
+        "materials": true,
+        "textures": true
+      }
+    },
+    {
+      "label": "hardware cycle 3: transfer owns distinct geometry/material/texture objects",
+      "passed": true,
+      "data": {
+        "materials": 0,
+        "textures": 0,
+        "geometries": 0
+      }
+    },
+    {
+      "label": "hardware cycle 3: CPU sources are shared while texture objects differ",
+      "passed": true,
+      "data": [
+        {
+          "uuid": "de31026d-0746-42f8-b710-e39ab5dc29c6",
+          "name": "original-hardware-colour-atlas"
+        },
+        {
+          "uuid": "b2f48e08-0a23-4604-9ed9-ada243423e24",
+          "name": "original-hardware-surface-detail"
+        },
+        {
+          "uuid": "a1b61585-f640-4f65-9ac2-7f71f734896f",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "label": "hardware cycle 3: both atlas maps cloned",
+      "passed": true,
+      "data": [
+        {
+          "uuid": "de31026d-0746-42f8-b710-e39ab5dc29c6",
+          "name": "original-hardware-colour-atlas"
+        },
+        {
+          "uuid": "b2f48e08-0a23-4604-9ed9-ada243423e24",
+          "name": "original-hardware-surface-detail"
+        },
+        {
+          "uuid": "a1b61585-f640-4f65-9ac2-7f71f734896f",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "label": "hardware cycle 3: original assembly receives zero dispose events",
+      "passed": true,
+      "data": []
+    },
+    {
+      "label": "hardware cycle 3: every owned transfer resource disposed exactly once",
+      "passed": true,
+      "data": []
+    },
+    {
+      "label": "hardware cycle 3: assembly reuses its original resources",
+      "passed": true,
+      "data": {
+        "geometries": true,
+        "materials": true,
+        "textures": true
+      }
+    },
+    {
+      "label": "hardware: assembly GPU counts remain stable across three transfer cycles",
+      "passed": true,
+      "data": [
+        {
+          "geometries": 129,
+          "textures": 19,
+          "programs": 18
+        },
+        {
+          "geometries": 129,
+          "textures": 19,
+          "programs": 18
+        },
+        {
+          "geometries": 129,
+          "textures": 19,
+          "programs": 18
+        }
+      ]
+    },
+    {
+      "label": "legacy: expected hardware atlas allocation",
+      "passed": true,
+      "data": []
+    },
+    {
+      "label": "legacy cycle 1: transfer owns distinct geometry/material/texture objects",
+      "passed": true,
+      "data": {
+        "materials": 0,
+        "textures": 0,
+        "geometries": 0
+      }
+    },
+    {
+      "label": "legacy cycle 1: CPU sources are shared while texture objects differ",
+      "passed": true,
+      "data": [
+        {
+          "uuid": "4d3859d3-d55a-4dc7-97c8-624dfe410520",
+          "name": ""
+        }
+      ]
+    },
+    {
+      "label": "legacy cycle 1: original assembly receives zero dispose events",
+      "passed": true,
+      "data": []
+    },
+    {
+      "label": "legacy cycle 1: every owned transfer resource disposed exactly once",
+      "passed": true,
+      "data": []
+    },
+    {
+      "label": "legacy cycle 1: assembly reuses its original resources",
+      "passed": true,
+      "data": {
+        "geometries": true,
+        "materials": true,
+        "textures": true
+      }
+    },
+    {
+      "label": "no page or console errors",
+      "passed": true,
+      "data": []
+    }
+  ],
+  "profiles": [
+    {
+      "profile": "hardware",
+      "scripts": [
+        "http://127.0.0.1:4174/assets/index-DjskVm6z.js"
+      ],
+      "initial": {
+        "counts": {
+          "geometries": 58,
+          "materials": 21,
+          "textures": 4
+        },
+        "textures": [
+          {
+            "uuid": "936ca1e5-af1c-44a6-96bd-060a81f2cb1b",
+            "name": ""
+          },
+          {
+            "uuid": "bbca3de2-2334-47b8-870d-70f426a3cd41",
+            "name": "original-hardware-colour-atlas"
+          },
+          {
+            "uuid": "33d366d6-d2b8-4ce3-8d98-ff2a1f877b9f",
+            "name": "original-hardware-surface-detail"
+          },
+          {
+            "uuid": "373741d8-2d7d-403a-b5fb-b846fa778cf4",
+            "name": ""
+          }
+        ],
+        "resources": {
+          "geometries": 129,
+          "textures": 19,
+          "programs": 18
+        },
+        "design": {
+          "version": 1,
+          "missionId": "mars",
+          "name": "PATHFINDER-01",
+          "parts": [
+            {
+              "id": "solar-1",
+              "kind": "solarLarge",
+              "modelId": "tsp45-sixwing-v2",
+              "face": "px",
+              "u": 0,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "science-1",
+              "kind": "spectrometer",
+              "modelId": "mars-spectra-v2",
+              "face": "nz",
+              "u": 0,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "antenna-1",
+              "kind": "antenna",
+              "modelId": "xband-reflector-1m-v1",
+              "face": "pz",
+              "u": 0,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "radio-1",
+              "kind": "radio",
+              "modelId": "iris22-carrier-v1",
+              "face": "py",
+              "u": -0.22,
+              "v": 0.2,
+              "rotation": 0
+            },
+            {
+              "id": "battery-1",
+              "kind": "battery",
+              "modelId": "bpx100-dual-v2",
+              "face": "py",
+              "u": -0.22,
+              "v": -0.22,
+              "rotation": 0
+            },
+            {
+              "id": "storage-1",
+              "kind": "storage",
+              "modelId": "recorder-1p6-v2",
+              "face": "py",
+              "u": 0.22,
+              "v": -0.22,
+              "rotation": 0
+            },
+            {
+              "id": "adcs-1",
+              "kind": "adcs",
+              "modelId": "xact50-carrier-v1",
+              "face": "py",
+              "u": 0.22,
+              "v": 0.2,
+              "rotation": 0
+            },
+            {
+              "id": "engine-1",
+              "kind": "engine",
+              "modelId": "chemical230-v2",
+              "face": "ny",
+              "u": 0,
+              "v": 0,
+              "rotation": 0
+            }
+          ],
+          "plan": {
+            "altitudeKm": 600,
+            "inclinationDeg": 51.6,
+            "burnTime": 1200,
+            "progradeMps": 0,
+            "normalMps": 0,
+            "radialMps": 0,
+            "periapsisAltitudeKm": 1000,
+            "bPlaneAngleDeg": 0,
+            "operations": [
+              {
+                "id": "obs-1",
+                "kind": "observe",
+                "start": 7200,
+                "end": 10400
+              },
+              {
+                "id": "down-1",
+                "kind": "downlink",
+                "start": 10600,
+                "end": 17100
+              }
+            ]
+          },
+          "seed": 20261115,
+          "hardwareVersion": "hardware-2.0.0",
+          "busId": "pathfinder-d35-v1",
+          "activeRadioId": "radio-1"
+        }
+      },
+      "cycles": [
+        {
+          "cloned": {
+            "counts": {
+              "geometries": 57,
+              "materials": 20,
+              "textures": 4
+            },
+            "aliases": {
+              "materials": 0,
+              "textures": 0,
+              "geometries": 0
+            },
+            "sharedSources": [
+              {
+                "uuid": "7a4a7380-93c0-491c-848f-f0d6ae0f4184",
+                "name": "original-hardware-colour-atlas"
+              },
+              {
+                "uuid": "357de157-2ae9-48cc-bc40-33228baa28fc",
+                "name": "original-hardware-surface-detail"
+              },
+              {
+                "uuid": "dabc9a03-b729-4c75-93db-3c1709928175",
+                "name": ""
+              }
+            ],
+            "resources": {
+              "geometries": 75,
+              "textures": 10,
+              "programs": 27
+            }
+          },
+          "returned": {
+            "originalDisposeEvents": {
+              "geometries": [
+                {
+                  "uuid": "aeaccd83-8b51-4758-af34-aeccab76a32a",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "95e121f9-745e-494f-8f63-c00ab1e489a6",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "ce04f588-3b9c-44cf-bf4d-b5ded0e38331",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "d8d8c9ba-7620-4bc5-aa7b-ceb703c8d165",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "7d69d571-a887-46fb-a9c6-bfc4ea348e9c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "ff905bcf-2f0b-442c-81cf-34dd1e0893d8",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "b6be81ab-739c-4c48-b335-34b177aeadb1",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "bde816b9-3330-4086-aae0-266ac864f3fd",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8c195404-c4df-447b-ab76-05b96340f45a",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "4e03a71e-50f6-4f9f-a311-83170a0d03a0",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "9fe8d30a-cfcd-4f61-a342-c286e089c28d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "3dd811a8-61a0-470c-9c83-6843fa61478d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "c099320b-aebf-4dcd-949e-88a2661635fd",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "f762e2a3-4a2a-4fb2-a170-327a9e8936a9",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "82c592db-48c6-47aa-bf28-908d944508bf",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "5cc34085-4583-4543-9458-ff8801051c70",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "912ed0b0-dd36-4b96-bd06-8d2b57111fee",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "c1bc15b8-0e3c-4f7f-ad47-da668dc788f1",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "eae67738-c745-46e5-aaeb-cf33dccc7632",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "1960335e-4b09-4910-b1c7-e5c7aa098094",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "6f81e897-9b2a-4716-8a5d-6ff6865cd52b",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e7d4e86a-61e5-40e6-aa87-0df76b6b9d49",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "eee14d24-fa78-4fb7-a327-758a4012ef4c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "47c76d55-29d8-4de7-be35-e92f7653b753",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "263cd511-eaea-4819-b0d3-92289413d293",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "32ac5d3d-df1f-439c-a9b4-de7d802eddd0",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "2846064d-23ed-4a83-83a1-1d0b7c1284d9",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8844d75b-5a2f-4041-b5da-852166ef10b6",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e8d97076-be22-4504-b14d-31818c5f4f1d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "32795e93-196f-4390-b999-8284b0dcb05e",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "84879827-aa6a-47da-8cd4-3e405702ed90",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "9ef1a7b5-9e7b-4e92-96b7-1b2d556115eb",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "842eefc7-cab0-4471-8bf0-cf6b0ed1bb8c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "22e66c71-7b3f-43f1-9317-50510d61cea5",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "d53b82b6-14e7-4494-9bef-960a964b0709",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "33d00264-397e-4714-b2f8-e6cd5bf39e59",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "18d1649f-37d9-4370-95a2-3c453dba1671",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "0b2fac6e-08fb-4e65-87cd-5328d096ec6d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "a83a57b9-b945-46af-915f-c6414c92d8b4",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "7308d171-f62c-4ff6-a3ef-5b402c247bcd",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "83a71a06-a0bc-45d5-961b-678d44344e88",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "a9c3af70-8995-4080-a6ba-dd3cbe1fd680",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "10c2efb7-bbcd-44d8-959a-3828c0469f81",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "01e8e25d-a0e7-4740-a638-bedf3b0a1e0f",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "4c48bda8-7e5d-4f35-b4b8-eed269428d5c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "c31a5c1a-60f2-41b7-bd09-7e7f6d346ef8",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e0427d42-a923-4a86-bb8d-90d43df86721",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "282d0fd6-1abc-41e4-99dc-3cc2eee908d3",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "20a82915-43fa-48ae-abdc-d59bc306b503",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "5f53951b-2662-46c0-9a42-b374397739d8",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "ec8ef5f3-b1c1-4b8a-9be8-750c3d6ba4da",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "bcce2bcf-c3ea-4c9e-bb04-4b2e9fb27829",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "69608dfe-eeac-4164-8714-9e73b350edc6",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "b94a9b53-a710-498c-ab96-4f1bf08fcf63",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "195343f9-5731-4fb9-946b-b9466eb6fa78",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8b8b4699-0ba3-4805-a989-5bb2d30af422",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e601cfd9-04a3-4618-8377-af3acedd69ac",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "d38695a2-2983-4f62-8675-905d67f67e4e",
+                  "name": "",
+                  "count": 0
+                }
+              ],
+              "materials": [
+                {
+                  "uuid": "b915bcba-6bdb-413a-9ad1-3e92912e9985",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "22de25fa-1053-4836-b7ae-e64da6752883",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8e642bf9-6110-48b5-b716-9b77618519f3",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "45a3d1ba-3295-44a3-85b7-07cf3de61dc4",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "1f3ff19b-1926-44e3-8eff-3ab7503d2dd5",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "7991f5ad-b549-4b79-a135-5611f0cd69bb",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "1ac182c5-59bb-4b58-bb1c-b01695d11729",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8f21197c-3e2a-4b32-a7ff-ae8ed6784c3d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "6770bec0-e2aa-475f-a917-bbea1f3b46fd",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "9b6069df-56b9-4fbb-b44f-568c8fb3dafc",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "97ebba78-3e1e-4147-ab70-e5924ca0006c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "1aed0541-0482-4339-86b2-e5678a98512c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8da037b5-5894-4d9c-a249-691eb1983396",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "3c8e3926-c126-46e6-9422-9364fb95afdc",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "38bf443e-286b-4268-9931-94cd61883139",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "362c209e-8bfb-448e-8e46-c414ae1d4f5c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "bb9a9cd0-a53a-455b-b122-97f5dfc1d3ea",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "ebce5da5-4050-4fba-b900-45af68aaa014",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "5e296afe-1071-4cb5-b8f2-d78623625f19",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "b550f0b8-ae22-4edf-ac62-1a91bf08343a",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "72e10e9f-3e1d-49e8-a6fa-ca8aa408b840",
+                  "name": "",
+                  "count": 0
+                }
+              ],
+              "textures": [
+                {
+                  "uuid": "936ca1e5-af1c-44a6-96bd-060a81f2cb1b",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "bbca3de2-2334-47b8-870d-70f426a3cd41",
+                  "name": "original-hardware-colour-atlas",
+                  "count": 0
+                },
+                {
+                  "uuid": "33d366d6-d2b8-4ce3-8d98-ff2a1f877b9f",
+                  "name": "original-hardware-surface-detail",
+                  "count": 0
+                },
+                {
+                  "uuid": "373741d8-2d7d-403a-b5fb-b846fa778cf4",
+                  "name": "",
+                  "count": 0
+                }
+              ]
+            },
+            "ownedDisposeEvents": {
+              "geometries": [
+                {
+                  "uuid": "f03a47fc-aa2b-4ead-aa50-d03963db3019",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "63bf444d-b6c5-4456-8240-59db750a8270",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "b4d427dc-6b28-4093-bc99-c313c54793ba",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "7da88862-37b6-4b45-985f-5d25f00e0e8c",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "48c7437d-57cc-4586-8647-07b8051bd605",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "e8a5d11b-b981-4e74-8762-4e8c51324034",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "ba587a2c-ecdd-498e-b654-2b00e854007b",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "dd1c7652-d71b-48c3-8c45-78ffae212750",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "7cb4af44-c3e0-4b55-8d63-a94e0eca7f96",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "92a2ba5a-a2d9-4b19-b78b-cc805c153395",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "04bc4d94-3c4f-4bb2-8fac-c320f1c0e50b",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "1eeefbbb-f594-448d-9507-9bde0d7028d8",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "116679db-b389-4671-a996-d49fd53b5ad4",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "f6297592-fedf-4912-bfdd-2cac3c455293",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "406489ef-842a-4375-96a3-3864b8881731",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "8fdd983d-c417-4275-a8b3-e27d1da71b2b",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a0cb8231-eeb1-4ab8-898f-0896966c2dd6",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "9f9e9e4f-9c2f-4fe1-b087-9302884f2757",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "0e71d8ed-7b43-438b-b2ce-c6256c354e64",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "bd4248dc-2d2c-4bb5-ad0b-c639eac59cfd",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "b5300fc5-14c2-448b-8e85-cc73c2483bfa",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "6281b23a-fd43-4d97-a0b7-759a4d893602",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "fce96163-138c-42fb-9fd1-9699476251ab",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "57476288-021e-4998-a767-71541c4a42ba",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "4f4e36dc-5feb-4663-81d1-1f1f80f7808b",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "483a339b-90e2-4b14-8c4a-36965b40b0a9",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "715e47a6-5684-4fb3-8cd1-cb3272b1dc5a",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "579f839a-2208-41d3-9507-f204f5710e06",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "efcbc59b-685f-4037-b229-82932c31deaf",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "08c8ff1c-da19-40aa-b535-3c88588857cf",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "69957e13-15cc-4cc8-981b-70628691a992",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "aabfcc2b-74c1-455b-9e27-0213a22dae74",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "c8bfeded-a0c6-4e56-9a99-ab539e1c898d",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "51957cbe-7c47-4e7b-8229-470ce199cd51",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "d2cb6eb7-5de6-45d4-bea3-d50be6955867",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "6eac6e32-3be9-4bc7-9d5b-27cc2cdd8aae",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "ccbec014-a14a-4b91-98e0-ce1244126e52",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "2b7fb6c2-7a8f-42ed-89c4-7dc00b546198",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a78b819c-09d7-4c9d-a61b-04f500ebe1da",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "45ad9b26-f782-43a1-9649-bd1337ffbece",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "562d6e20-5ce5-4a02-86aa-0d4ddf9caf33",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "0cd571b1-4094-491a-9ff6-0feeac9daab3",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "2b7164c5-f1b1-4387-b84c-b62c50e816ab",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "e06da5bc-e5ae-4f74-9b30-90a65743f7c2",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "4f88d7ba-86de-4bd0-b73d-dbed9ecee7e1",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "7423fa9b-d94c-4b1a-965a-2e3f3a6ae939",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "e55913cf-ba22-4343-aff2-c409fde21977",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "99401e6e-abfb-40fa-9761-db3acfdd09e7",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "9c6b738b-e05d-43de-b69b-f13fe3e11371",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "20e0422d-3be4-46b2-b0ca-c57547ce22a1",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "80240303-5696-4eda-bb6e-51979e7578e0",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "563f2216-3cbd-4923-a1a4-70daf5f92417",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "4a865945-f64f-4065-b5f1-e14537f5e9ec",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "d1d54916-5413-4281-a280-15806aa35854",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "4f402cc9-c367-4ec9-8adc-8de82180827c",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "460e27c7-78af-49cf-afec-7fe5fcc12f52",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "5fd58549-5fc8-4ab2-89d1-9b98bb1307d6",
+                  "name": "",
+                  "count": 1
+                }
+              ],
+              "materials": [
+                {
+                  "uuid": "48a5d82b-77f3-45f5-b347-8d255139dde3",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "3066a2d4-e727-4977-9ff4-0d7b7b42fef7",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "dadad16c-f21e-4b32-8f06-bf365ba5f678",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "3bdddda5-e433-41ce-8036-d00ee6a3586f",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "fe73009e-44f3-410e-93ab-38740e8b21fb",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "88b9e4f8-fdc0-4866-96e6-682c1e4aad46",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "81d8dec5-338e-4ff0-bae6-7f69fe23be8e",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a8b27f64-68fd-463b-b7e6-a61367ae0784",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "f2415b2c-c139-4474-b92e-a54942d45df3",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "c14fe094-fc6d-4c43-bf66-95d39cdc1792",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "5772305e-b6ae-4dca-aa95-49b037365149",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "9c7e8d2e-af90-48e6-a52f-99868a10c138",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "12cd3f5f-16af-41e1-9717-0afcedaa549f",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "d82009b7-99ae-4890-8aef-d24cd3aad518",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "49eb1846-d09d-4457-a8e2-327e1ad4898e",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "9cac9dc5-2588-4334-b1e4-cdcc798a368b",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "eb47f15b-904f-490b-8639-79c1395296f0",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "481e5dca-2e5b-483f-8ca3-f5d7c8249e31",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "94774fe3-b945-4796-91ca-1ff8c2253c35",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "b02a3d42-12ca-482f-aa15-039696e440f1",
+                  "name": "",
+                  "count": 1
+                }
+              ],
+              "textures": [
+                {
+                  "uuid": "57cd584a-46f8-4ea7-8114-d469c908b2b1",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "7a4a7380-93c0-491c-848f-f0d6ae0f4184",
+                  "name": "original-hardware-colour-atlas",
+                  "count": 1
+                },
+                {
+                  "uuid": "357de157-2ae9-48cc-bc40-33228baa28fc",
+                  "name": "original-hardware-surface-detail",
+                  "count": 1
+                },
+                {
+                  "uuid": "dabc9a03-b729-4c75-93db-3c1709928175",
+                  "name": "",
+                  "count": 1
+                }
+              ]
+            },
+            "originalsRetained": {
+              "geometries": true,
+              "materials": true,
+              "textures": true
+            },
+            "resources": {
+              "geometries": 129,
+              "textures": 19,
+              "programs": 18
+            }
+          }
+        },
+        {
+          "cloned": {
+            "counts": {
+              "geometries": 57,
+              "materials": 20,
+              "textures": 4
+            },
+            "aliases": {
+              "materials": 0,
+              "textures": 0,
+              "geometries": 0
+            },
+            "sharedSources": [
+              {
+                "uuid": "3ed87518-ba71-45bb-a04e-e3810010d7e4",
+                "name": "original-hardware-colour-atlas"
+              },
+              {
+                "uuid": "477dc8a7-0b5e-4da8-9f18-56a48ae70402",
+                "name": "original-hardware-surface-detail"
+              },
+              {
+                "uuid": "b4082d3f-afa0-4572-9a14-2d98ae8fe39d",
+                "name": ""
+              }
+            ],
+            "resources": {
+              "geometries": 75,
+              "textures": 10,
+              "programs": 27
+            }
+          },
+          "returned": {
+            "originalDisposeEvents": {
+              "geometries": [
+                {
+                  "uuid": "aeaccd83-8b51-4758-af34-aeccab76a32a",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "95e121f9-745e-494f-8f63-c00ab1e489a6",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "ce04f588-3b9c-44cf-bf4d-b5ded0e38331",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "d8d8c9ba-7620-4bc5-aa7b-ceb703c8d165",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "7d69d571-a887-46fb-a9c6-bfc4ea348e9c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "ff905bcf-2f0b-442c-81cf-34dd1e0893d8",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "b6be81ab-739c-4c48-b335-34b177aeadb1",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "bde816b9-3330-4086-aae0-266ac864f3fd",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8c195404-c4df-447b-ab76-05b96340f45a",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "4e03a71e-50f6-4f9f-a311-83170a0d03a0",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "9fe8d30a-cfcd-4f61-a342-c286e089c28d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "3dd811a8-61a0-470c-9c83-6843fa61478d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "c099320b-aebf-4dcd-949e-88a2661635fd",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "f762e2a3-4a2a-4fb2-a170-327a9e8936a9",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "82c592db-48c6-47aa-bf28-908d944508bf",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "5cc34085-4583-4543-9458-ff8801051c70",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "912ed0b0-dd36-4b96-bd06-8d2b57111fee",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "c1bc15b8-0e3c-4f7f-ad47-da668dc788f1",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "eae67738-c745-46e5-aaeb-cf33dccc7632",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "1960335e-4b09-4910-b1c7-e5c7aa098094",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "6f81e897-9b2a-4716-8a5d-6ff6865cd52b",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e7d4e86a-61e5-40e6-aa87-0df76b6b9d49",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "eee14d24-fa78-4fb7-a327-758a4012ef4c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "47c76d55-29d8-4de7-be35-e92f7653b753",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "263cd511-eaea-4819-b0d3-92289413d293",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "32ac5d3d-df1f-439c-a9b4-de7d802eddd0",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "2846064d-23ed-4a83-83a1-1d0b7c1284d9",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8844d75b-5a2f-4041-b5da-852166ef10b6",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e8d97076-be22-4504-b14d-31818c5f4f1d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "32795e93-196f-4390-b999-8284b0dcb05e",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "84879827-aa6a-47da-8cd4-3e405702ed90",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "9ef1a7b5-9e7b-4e92-96b7-1b2d556115eb",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "842eefc7-cab0-4471-8bf0-cf6b0ed1bb8c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "22e66c71-7b3f-43f1-9317-50510d61cea5",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "d53b82b6-14e7-4494-9bef-960a964b0709",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "33d00264-397e-4714-b2f8-e6cd5bf39e59",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "18d1649f-37d9-4370-95a2-3c453dba1671",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "0b2fac6e-08fb-4e65-87cd-5328d096ec6d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "a83a57b9-b945-46af-915f-c6414c92d8b4",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "7308d171-f62c-4ff6-a3ef-5b402c247bcd",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "83a71a06-a0bc-45d5-961b-678d44344e88",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "a9c3af70-8995-4080-a6ba-dd3cbe1fd680",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "10c2efb7-bbcd-44d8-959a-3828c0469f81",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "01e8e25d-a0e7-4740-a638-bedf3b0a1e0f",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "4c48bda8-7e5d-4f35-b4b8-eed269428d5c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "c31a5c1a-60f2-41b7-bd09-7e7f6d346ef8",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e0427d42-a923-4a86-bb8d-90d43df86721",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "282d0fd6-1abc-41e4-99dc-3cc2eee908d3",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "20a82915-43fa-48ae-abdc-d59bc306b503",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "5f53951b-2662-46c0-9a42-b374397739d8",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "ec8ef5f3-b1c1-4b8a-9be8-750c3d6ba4da",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "bcce2bcf-c3ea-4c9e-bb04-4b2e9fb27829",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "69608dfe-eeac-4164-8714-9e73b350edc6",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "b94a9b53-a710-498c-ab96-4f1bf08fcf63",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "195343f9-5731-4fb9-946b-b9466eb6fa78",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8b8b4699-0ba3-4805-a989-5bb2d30af422",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e601cfd9-04a3-4618-8377-af3acedd69ac",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "d38695a2-2983-4f62-8675-905d67f67e4e",
+                  "name": "",
+                  "count": 0
+                }
+              ],
+              "materials": [
+                {
+                  "uuid": "b915bcba-6bdb-413a-9ad1-3e92912e9985",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "22de25fa-1053-4836-b7ae-e64da6752883",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8e642bf9-6110-48b5-b716-9b77618519f3",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "45a3d1ba-3295-44a3-85b7-07cf3de61dc4",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "1f3ff19b-1926-44e3-8eff-3ab7503d2dd5",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "7991f5ad-b549-4b79-a135-5611f0cd69bb",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "1ac182c5-59bb-4b58-bb1c-b01695d11729",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8f21197c-3e2a-4b32-a7ff-ae8ed6784c3d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "6770bec0-e2aa-475f-a917-bbea1f3b46fd",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "9b6069df-56b9-4fbb-b44f-568c8fb3dafc",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "97ebba78-3e1e-4147-ab70-e5924ca0006c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "1aed0541-0482-4339-86b2-e5678a98512c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8da037b5-5894-4d9c-a249-691eb1983396",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "3c8e3926-c126-46e6-9422-9364fb95afdc",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "38bf443e-286b-4268-9931-94cd61883139",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "362c209e-8bfb-448e-8e46-c414ae1d4f5c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "bb9a9cd0-a53a-455b-b122-97f5dfc1d3ea",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "ebce5da5-4050-4fba-b900-45af68aaa014",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "5e296afe-1071-4cb5-b8f2-d78623625f19",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "b550f0b8-ae22-4edf-ac62-1a91bf08343a",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "72e10e9f-3e1d-49e8-a6fa-ca8aa408b840",
+                  "name": "",
+                  "count": 0
+                }
+              ],
+              "textures": [
+                {
+                  "uuid": "936ca1e5-af1c-44a6-96bd-060a81f2cb1b",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "bbca3de2-2334-47b8-870d-70f426a3cd41",
+                  "name": "original-hardware-colour-atlas",
+                  "count": 0
+                },
+                {
+                  "uuid": "33d366d6-d2b8-4ce3-8d98-ff2a1f877b9f",
+                  "name": "original-hardware-surface-detail",
+                  "count": 0
+                },
+                {
+                  "uuid": "373741d8-2d7d-403a-b5fb-b846fa778cf4",
+                  "name": "",
+                  "count": 0
+                }
+              ]
+            },
+            "ownedDisposeEvents": {
+              "geometries": [
+                {
+                  "uuid": "0dae230c-5b57-4a88-916d-6d73d7b57c34",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "e97a0a31-d4b4-4f49-8c81-119037ce95bb",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "3ccdf9b3-d5d6-4d26-86d0-d60fc4cd1080",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "bfeabeaf-609f-4752-bb85-7c02f91f9704",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "3a9329af-23f4-4dc1-8936-f06f0b0a76bc",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "096195b1-54a5-4783-abb8-004756232697",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "8fa2cfbb-2257-4879-92ab-11866aeb5e86",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "6da91fb4-5dd1-4376-937f-39f9cab093d3",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "1d7f8617-5952-4971-a1c8-a5e763f7e5a8",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "dcf9e682-f2bc-4c89-87b1-353576819111",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "29259fdb-7aca-4267-9b0c-04a72149c27d",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "2a41c406-f7f2-421f-ba7e-49bd13572922",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "52406524-988a-4c5b-be9d-0bcfddb2d328",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "aa6dff9a-2af0-4cff-af4f-458a1b1a9d61",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a7886d51-2984-4215-bc02-74efda98ede2",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "76a08abc-d6d1-4f5a-b012-c456be31e5c7",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "23e83638-6380-4d99-bfab-ea53d989c3e7",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "94cbeacf-8bc3-4f3d-8a6e-801ca175e688",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "d9df6fc6-d4f4-480b-850b-613baac07dbb",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "5653ae3b-f87f-4b0b-ac19-707b7566de6a",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "638a7160-7453-46f5-a2c3-2d8881859ae7",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "f49de6f5-ce3b-4f6c-bd68-7271c7e82adc",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "312ea75a-f994-4d7c-a09f-88ff41a1d805",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "eab44588-d52e-4630-9837-e1324eeeee74",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "5f9c09fa-3471-4cc0-ab0a-75165ea8c38f",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "1718bd5d-8bec-496c-acb3-cc1915ffee93",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "20c55880-1eee-4fdc-a7e3-7dac40b00c00",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "b1614d0f-86f1-43e3-8977-d22b99e45506",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "d6612240-cbcb-4c16-8060-afbeeafdbac2",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "3efdf781-c38c-4481-9ef5-145f0bd88d3f",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "f0695ead-9153-4094-932c-75f3c9c9aebc",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "3a07aa49-87fc-4d07-8582-b14e44ee3b83",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "08d7fcc3-6deb-47ed-ad92-ebc1161aa59d",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "58acfc46-5c19-47e4-a942-6f5337fbdf17",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "3dd0cb58-a277-4ba0-8e32-e666a04364b4",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "1592f951-0e25-4502-b56d-2ea93f36742f",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "6f1ad29f-f0a9-459a-9c27-c64107c350a0",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "ec341045-b584-46c2-91c8-02069b2e31e8",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "902f6e70-0285-4ee7-ab49-4b3f71e989d5",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "735ccbc6-ced1-4572-a209-f165aa9dd91b",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "e18df59a-847b-4aea-b444-c27cf1127fcd",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "5c179a94-d97e-4681-991f-604a92f07f52",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "65d6f7c2-2962-4da3-b1a8-72f3f0fce75d",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "bb01b08f-2b6a-411e-9cdf-d070ff1bb258",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "d6803384-8188-4577-acbb-0497d67f69e0",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "0522dba1-ee05-4283-a1bf-cae6745d525d",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "81a28e23-0193-4cf2-958c-6a8f4c52761e",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "c4c65deb-e4cf-42b8-8e5c-3fe8953c351d",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "d3d34715-53ce-4fb0-b00c-b394df4913ce",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "10d27937-d53f-40f3-b07e-1aca6af2370a",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "881fea57-186c-4b1d-b691-e1a93efa69a0",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "f4e6d493-0763-4592-8396-f08767f29861",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "026e2618-e4ad-4afe-b062-57e852fb5fd7",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a7247745-17a6-4663-902f-6c52f3e3a402",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "1ec2841c-a3c0-4bef-a897-3ea13683c044",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "0ddd6a12-6958-4657-bcf2-9ecb90efa1a0",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "3f025f97-b501-4e00-9bf1-2f49781a11e2",
+                  "name": "",
+                  "count": 1
+                }
+              ],
+              "materials": [
+                {
+                  "uuid": "a6cde9da-74cb-442c-a4c7-a4855e01e7a6",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "8306e2f4-6a59-4b7e-904f-714b3df62482",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "cdfb0aaf-34c0-4a4b-be1c-ee45b87da9de",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "2de71a92-f7ca-4d99-baf7-597e79c41a71",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "cafc2c0f-da5b-439c-ba04-1c722d58c6c7",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "38a44fa8-1cdb-40f7-bb4c-e8424aa623ba",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "9bd7f2bc-f4d6-4b67-9265-1d5d6aab1483",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "13d1585b-abf1-470c-a566-113722aa3b44",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "702e743f-d54c-4ee9-b852-3662079bafcb",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "9edf4834-8ab9-45e4-972b-565f5471ae34",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "982d4da1-7b33-4502-9341-48971831e9d2",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "48bbc9f5-6e4a-426f-8733-9dd690805574",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "729f67bb-840c-497f-8e57-f709ab3d1cc4",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "19837fa2-c7af-4374-ab64-d03c1ebb71dc",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "8b2fdee4-826f-4396-9b6d-fa1b462679eb",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "aa73ae9c-190b-48d5-92c4-d00614abe9b5",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "b9932cf6-fa66-44c9-abc2-d78717ca6951",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "c4d7833f-3d86-44e1-b3e9-5bfb490752f9",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "6e1d6859-77c7-46f5-be50-d5f259ca31ba",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "16cb4c87-11b9-40ba-94c3-a8b8342c1985",
+                  "name": "",
+                  "count": 1
+                }
+              ],
+              "textures": [
+                {
+                  "uuid": "707e3f18-8455-48ee-8d0f-14be369dab90",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "3ed87518-ba71-45bb-a04e-e3810010d7e4",
+                  "name": "original-hardware-colour-atlas",
+                  "count": 1
+                },
+                {
+                  "uuid": "477dc8a7-0b5e-4da8-9f18-56a48ae70402",
+                  "name": "original-hardware-surface-detail",
+                  "count": 1
+                },
+                {
+                  "uuid": "b4082d3f-afa0-4572-9a14-2d98ae8fe39d",
+                  "name": "",
+                  "count": 1
+                }
+              ]
+            },
+            "originalsRetained": {
+              "geometries": true,
+              "materials": true,
+              "textures": true
+            },
+            "resources": {
+              "geometries": 129,
+              "textures": 19,
+              "programs": 18
+            }
+          }
+        },
+        {
+          "cloned": {
+            "counts": {
+              "geometries": 57,
+              "materials": 20,
+              "textures": 4
+            },
+            "aliases": {
+              "materials": 0,
+              "textures": 0,
+              "geometries": 0
+            },
+            "sharedSources": [
+              {
+                "uuid": "de31026d-0746-42f8-b710-e39ab5dc29c6",
+                "name": "original-hardware-colour-atlas"
+              },
+              {
+                "uuid": "b2f48e08-0a23-4604-9ed9-ada243423e24",
+                "name": "original-hardware-surface-detail"
+              },
+              {
+                "uuid": "a1b61585-f640-4f65-9ac2-7f71f734896f",
+                "name": ""
+              }
+            ],
+            "resources": {
+              "geometries": 75,
+              "textures": 10,
+              "programs": 27
+            }
+          },
+          "returned": {
+            "originalDisposeEvents": {
+              "geometries": [
+                {
+                  "uuid": "aeaccd83-8b51-4758-af34-aeccab76a32a",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "95e121f9-745e-494f-8f63-c00ab1e489a6",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "ce04f588-3b9c-44cf-bf4d-b5ded0e38331",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "d8d8c9ba-7620-4bc5-aa7b-ceb703c8d165",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "7d69d571-a887-46fb-a9c6-bfc4ea348e9c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "ff905bcf-2f0b-442c-81cf-34dd1e0893d8",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "b6be81ab-739c-4c48-b335-34b177aeadb1",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "bde816b9-3330-4086-aae0-266ac864f3fd",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8c195404-c4df-447b-ab76-05b96340f45a",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "4e03a71e-50f6-4f9f-a311-83170a0d03a0",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "9fe8d30a-cfcd-4f61-a342-c286e089c28d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "3dd811a8-61a0-470c-9c83-6843fa61478d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "c099320b-aebf-4dcd-949e-88a2661635fd",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "f762e2a3-4a2a-4fb2-a170-327a9e8936a9",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "82c592db-48c6-47aa-bf28-908d944508bf",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "5cc34085-4583-4543-9458-ff8801051c70",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "912ed0b0-dd36-4b96-bd06-8d2b57111fee",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "c1bc15b8-0e3c-4f7f-ad47-da668dc788f1",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "eae67738-c745-46e5-aaeb-cf33dccc7632",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "1960335e-4b09-4910-b1c7-e5c7aa098094",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "6f81e897-9b2a-4716-8a5d-6ff6865cd52b",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e7d4e86a-61e5-40e6-aa87-0df76b6b9d49",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "eee14d24-fa78-4fb7-a327-758a4012ef4c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "47c76d55-29d8-4de7-be35-e92f7653b753",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "263cd511-eaea-4819-b0d3-92289413d293",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "32ac5d3d-df1f-439c-a9b4-de7d802eddd0",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "2846064d-23ed-4a83-83a1-1d0b7c1284d9",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8844d75b-5a2f-4041-b5da-852166ef10b6",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e8d97076-be22-4504-b14d-31818c5f4f1d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "32795e93-196f-4390-b999-8284b0dcb05e",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "84879827-aa6a-47da-8cd4-3e405702ed90",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "9ef1a7b5-9e7b-4e92-96b7-1b2d556115eb",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "842eefc7-cab0-4471-8bf0-cf6b0ed1bb8c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "22e66c71-7b3f-43f1-9317-50510d61cea5",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "d53b82b6-14e7-4494-9bef-960a964b0709",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "33d00264-397e-4714-b2f8-e6cd5bf39e59",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "18d1649f-37d9-4370-95a2-3c453dba1671",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "0b2fac6e-08fb-4e65-87cd-5328d096ec6d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "a83a57b9-b945-46af-915f-c6414c92d8b4",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "7308d171-f62c-4ff6-a3ef-5b402c247bcd",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "83a71a06-a0bc-45d5-961b-678d44344e88",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "a9c3af70-8995-4080-a6ba-dd3cbe1fd680",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "10c2efb7-bbcd-44d8-959a-3828c0469f81",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "01e8e25d-a0e7-4740-a638-bedf3b0a1e0f",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "4c48bda8-7e5d-4f35-b4b8-eed269428d5c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "c31a5c1a-60f2-41b7-bd09-7e7f6d346ef8",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e0427d42-a923-4a86-bb8d-90d43df86721",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "282d0fd6-1abc-41e4-99dc-3cc2eee908d3",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "20a82915-43fa-48ae-abdc-d59bc306b503",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "5f53951b-2662-46c0-9a42-b374397739d8",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "ec8ef5f3-b1c1-4b8a-9be8-750c3d6ba4da",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "bcce2bcf-c3ea-4c9e-bb04-4b2e9fb27829",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "69608dfe-eeac-4164-8714-9e73b350edc6",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "b94a9b53-a710-498c-ab96-4f1bf08fcf63",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "195343f9-5731-4fb9-946b-b9466eb6fa78",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8b8b4699-0ba3-4805-a989-5bb2d30af422",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e601cfd9-04a3-4618-8377-af3acedd69ac",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "d38695a2-2983-4f62-8675-905d67f67e4e",
+                  "name": "",
+                  "count": 0
+                }
+              ],
+              "materials": [
+                {
+                  "uuid": "b915bcba-6bdb-413a-9ad1-3e92912e9985",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "22de25fa-1053-4836-b7ae-e64da6752883",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8e642bf9-6110-48b5-b716-9b77618519f3",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "45a3d1ba-3295-44a3-85b7-07cf3de61dc4",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "1f3ff19b-1926-44e3-8eff-3ab7503d2dd5",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "7991f5ad-b549-4b79-a135-5611f0cd69bb",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "1ac182c5-59bb-4b58-bb1c-b01695d11729",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8f21197c-3e2a-4b32-a7ff-ae8ed6784c3d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "6770bec0-e2aa-475f-a917-bbea1f3b46fd",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "9b6069df-56b9-4fbb-b44f-568c8fb3dafc",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "97ebba78-3e1e-4147-ab70-e5924ca0006c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "1aed0541-0482-4339-86b2-e5678a98512c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8da037b5-5894-4d9c-a249-691eb1983396",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "3c8e3926-c126-46e6-9422-9364fb95afdc",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "38bf443e-286b-4268-9931-94cd61883139",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "362c209e-8bfb-448e-8e46-c414ae1d4f5c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "bb9a9cd0-a53a-455b-b122-97f5dfc1d3ea",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "ebce5da5-4050-4fba-b900-45af68aaa014",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "5e296afe-1071-4cb5-b8f2-d78623625f19",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "b550f0b8-ae22-4edf-ac62-1a91bf08343a",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "72e10e9f-3e1d-49e8-a6fa-ca8aa408b840",
+                  "name": "",
+                  "count": 0
+                }
+              ],
+              "textures": [
+                {
+                  "uuid": "936ca1e5-af1c-44a6-96bd-060a81f2cb1b",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "bbca3de2-2334-47b8-870d-70f426a3cd41",
+                  "name": "original-hardware-colour-atlas",
+                  "count": 0
+                },
+                {
+                  "uuid": "33d366d6-d2b8-4ce3-8d98-ff2a1f877b9f",
+                  "name": "original-hardware-surface-detail",
+                  "count": 0
+                },
+                {
+                  "uuid": "373741d8-2d7d-403a-b5fb-b846fa778cf4",
+                  "name": "",
+                  "count": 0
+                }
+              ]
+            },
+            "ownedDisposeEvents": {
+              "geometries": [
+                {
+                  "uuid": "004fcf9c-ffda-4266-b4b2-73485d527362",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "615cdbc2-163e-4d7a-9c64-3e859ed5770e",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "cf0a46bf-d1de-4f76-b4fe-4c1f6e67ee41",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a70deeb6-6cae-405b-a1e3-e188a0877cf4",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "12e63c8a-e400-411e-83b0-88869ddc2bf5",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "b7d5bb6c-ecd2-47cd-9862-54bc9656d905",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "60957bc9-225d-4906-8c9e-25ada9162634",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "8c438031-b89d-4dad-ae16-d631e5adcb5f",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "caed0389-c626-4182-a63b-e4173f859f08",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "900975f0-e014-4618-b25e-23f159ba4f48",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "ac43bb6b-15c5-4900-97f9-acbdae88ac38",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "25e10bd5-3a65-4d87-8011-244f98d8a429",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "103b257a-495c-4b27-9e9e-bb35b659f6f1",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a82341ac-515e-4a5d-b3d0-129ae3cb4d60",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "bf9e39af-8759-485b-846c-0b0cf2885864",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "89259cbb-91a7-4210-959e-1d8f8ae739d8",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "5c305989-6ac3-48aa-b935-30aef0a28cd1",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "b5ee1ac1-3c4b-4623-9891-35bf39e323fe",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "10d56551-fd86-4af8-a8f6-d12f1fe13bb8",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "713f1c1a-929b-4181-a3ea-47b28d147bea",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "2bd7327e-43f0-46ad-b71a-72b985f7b269",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a32dfd2d-4438-43d4-bd8f-8c91fe630cdf",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "883eef60-e5f5-4bb8-aa57-c78ba659cfbf",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "1e1de63b-24e5-4ffd-af0b-7b30e42a99c1",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "7f9594bc-9a0b-4046-85ab-6c4695fa3ab1",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "529f1378-4283-4696-8931-5687821c0160",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "f000f39b-eda7-4d2e-bd20-d51a0f40f0f1",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "6eda034c-8dbe-43b0-9456-cf8c4ec21f14",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "f84ec48c-11ce-4b85-98bb-2e7a1dcbb2e7",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "946d9fac-bfd5-4970-afa9-e51d050e298d",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "5ab2bfe3-9074-462c-bd8e-705e56cb8866",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "3105c74b-f7ff-4a65-b5b8-1e32be2a70d0",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "4e448b0a-1e9c-488f-93c4-645c819545fe",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "ddbd06d9-8bf2-4069-a8f8-14be3eb29c8a",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "529ef9ca-a69b-4636-89ed-dd51068c949e",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "cdee74ad-02a7-481f-996f-2dcb0bff6824",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "99d78f84-ad29-4f59-8c88-ff4966bea38d",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "363922ef-4063-48ba-b052-293fae14a4e6",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "76f6b891-78dd-4e4d-95f8-eadeed2a7f15",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "af4c1f40-fcfb-4197-a848-719f7466c2e7",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "8ad959fa-31ba-40a2-ae83-c6487d7ebd4e",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "91723f65-fa37-4402-97a2-0d542cedeabc",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "04c5c5ea-48c0-4cb5-baca-914d5613a9ab",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "f2e24937-c0e2-41aa-ad20-28ee2ef0e1e3",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "e96eb972-8cd0-4c6f-9b25-af87c8291ec2",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "3654f2d9-2996-4898-ad21-3bd9124de7ec",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "e704c8d7-2c94-4963-b4c5-a60f56691676",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "be742212-6bc0-4145-9017-ebd34a293fd9",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "8a509a5d-87d6-46ba-9ff2-1aa3fa9f222d",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "d738b96e-796f-4fcf-913a-ce14acc6a27e",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "42c8d4e8-fed4-4ca3-b5fb-76595ca12b37",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "fb7a9b83-3e14-424a-801b-1f45cd49bdda",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "16b651ec-5cb2-4f8d-9055-67ac4f17cb31",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "164b1f36-1cc4-423e-ac4f-39742a041847",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "ec0e27bc-af63-4309-86f9-4ce35ac19141",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "18c924e1-3fa7-4837-b43c-e2e9a2208553",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "fc5fedc0-75d0-48eb-84f5-b02b0990157d",
+                  "name": "",
+                  "count": 1
+                }
+              ],
+              "materials": [
+                {
+                  "uuid": "a84bcc4e-5cc4-4d85-9325-f8821ace62e6",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "af8c7a09-f422-4030-967e-396f827f2ea8",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "7e67065d-65d4-4df7-bbad-e9d93b52960f",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "b67791e3-b8b8-4fd5-8cae-77cd4214c394",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "7771d658-008d-48f4-95df-e8d74d3eb461",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "949f0b37-ffcb-417b-9962-4e7ef6773403",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "ed263312-237c-4110-9132-74670b3c9b25",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "4b3dfc13-ccd9-439e-96e5-c3af3e351e2b",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "e3ecfc36-41d9-4b6c-8783-22a3b27c77d7",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "c8f42421-2546-4eaf-a1fd-fceab89b4f50",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "068850f4-9d27-497f-a93c-ab87bb4e3239",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "4183ad6a-0064-4c8f-bbfe-b2c5f62a0937",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "7dba1e0f-28fa-415b-9a2a-a18ad4d69023",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "5cd37136-e889-488d-a31d-c0a95d59f338",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "4891863d-07e7-45dc-b9d2-6c42a74d49e1",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a8f1fc63-f4ee-4fb6-baf0-2d208634faed",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "86c0814c-62ac-4991-b995-b6890df0791a",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "e78dd46d-f263-44ec-81e6-6872cfaca288",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "db46fc84-6e71-4294-9183-69a9b4dadc4c",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "b05a747c-9847-47d4-a170-0dcf64f5a2b0",
+                  "name": "",
+                  "count": 1
+                }
+              ],
+              "textures": [
+                {
+                  "uuid": "35074834-252a-4686-936f-3ca9a0ddf62b",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "de31026d-0746-42f8-b710-e39ab5dc29c6",
+                  "name": "original-hardware-colour-atlas",
+                  "count": 1
+                },
+                {
+                  "uuid": "b2f48e08-0a23-4604-9ed9-ada243423e24",
+                  "name": "original-hardware-surface-detail",
+                  "count": 1
+                },
+                {
+                  "uuid": "a1b61585-f640-4f65-9ac2-7f71f734896f",
+                  "name": "",
+                  "count": 1
+                }
+              ]
+            },
+            "originalsRetained": {
+              "geometries": true,
+              "materials": true,
+              "textures": true
+            },
+            "resources": {
+              "geometries": 129,
+              "textures": 19,
+              "programs": 18
+            }
+          }
+        }
+      ],
+      "context": {
+        "lost": 1,
+        "restored": 1,
+        "environmentBefore": "d936cbf8-29ea-45db-982a-13aef6c983e1",
+        "environmentAfter": "d42bb341-007e-4e98-807c-d39cba70e001"
+      }
+    },
+    {
+      "profile": "legacy",
+      "scripts": [
+        "http://127.0.0.1:4174/assets/index-DjskVm6z.js"
+      ],
+      "initial": {
+        "counts": {
+          "geometries": 104,
+          "materials": 13,
+          "textures": 3
+        },
+        "textures": [
+          {
+            "uuid": "b195c1c0-72f4-455b-a284-ce7fcc16bde9",
+            "name": ""
+          },
+          {
+            "uuid": "e98868be-5389-4415-b99c-6de85a585679",
+            "name": ""
+          },
+          {
+            "uuid": "8541e8c1-f261-4088-b36a-0602fdc98d93",
+            "name": ""
+          }
+        ],
+        "resources": {
+          "geometries": 175,
+          "textures": 18,
+          "programs": 18
+        },
+        "design": {
+          "version": 1,
+          "missionId": "mars",
+          "name": "PATHFINDER-01",
+          "parts": [
+            {
+              "id": "solar-1",
+              "kind": "solarLarge",
+              "face": "px",
+              "u": 0,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "science-1",
+              "kind": "spectrometer",
+              "face": "nz",
+              "u": 0,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "antenna-1",
+              "kind": "antenna",
+              "face": "pz",
+              "u": 0,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "battery-1",
+              "kind": "battery",
+              "face": "py",
+              "u": -0.28,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "storage-1",
+              "kind": "storage",
+              "face": "py",
+              "u": 0.28,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "engine-1",
+              "kind": "engine",
+              "face": "ny",
+              "u": 0,
+              "v": 0,
+              "rotation": 0
+            }
+          ],
+          "plan": {
+            "altitudeKm": 600,
+            "inclinationDeg": 51.6,
+            "burnTime": 1200,
+            "progradeMps": 0,
+            "normalMps": 0,
+            "radialMps": 0,
+            "periapsisAltitudeKm": 1000,
+            "bPlaneAngleDeg": 0,
+            "operations": [
+              {
+                "id": "obs-1",
+                "kind": "observe",
+                "start": 7200,
+                "end": 10400
+              },
+              {
+                "id": "down-1",
+                "kind": "downlink",
+                "start": 10600,
+                "end": 17100
+              }
+            ]
+          },
+          "seed": 20261115
+        }
+      },
+      "cycles": [
+        {
+          "cloned": {
+            "counts": {
+              "geometries": 103,
+              "materials": 12,
+              "textures": 3
+            },
+            "aliases": {
+              "materials": 0,
+              "textures": 0,
+              "geometries": 0
+            },
+            "sharedSources": [
+              {
+                "uuid": "4d3859d3-d55a-4dc7-97c8-624dfe410520",
+                "name": ""
+              }
+            ],
+            "resources": {
+              "geometries": 121,
+              "textures": 9,
+              "programs": 26
+            }
+          },
+          "returned": {
+            "originalDisposeEvents": {
+              "geometries": [
+                {
+                  "uuid": "06718695-2659-44bc-beea-15aace1ed85d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "23302cb7-df0e-4fdb-aeb8-4d526e6638e7",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8b6bea4b-7e29-42be-80d3-0928d186f629",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "3b9c247f-c553-4bbd-bdcf-bf24935c4179",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "491b0d5c-5eb1-4ca3-86ee-faea68e36217",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "ec049e0d-02f0-44f2-bd72-474acfa3fc59",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "034b3f28-869f-47c1-9516-2f1bf910ee0e",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "7c27e711-0a0d-4320-b007-c94c7df74da0",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "b4904c1b-719c-4aa1-87ad-0060f2f0c805",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "65c3e163-9dfb-4516-90cf-fee751de6bc2",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "4c9a9438-d66e-4bb1-ac8d-7c936bec948d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "b899ce56-9509-4636-a70d-d882c97ebf77",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "be69197f-4bde-4ba7-817a-cdc77a70e5c9",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "f18a4ca6-1915-418d-9046-918f6f62dc76",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "984cf7ad-832a-4511-b7b3-eb37d64f9d74",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "1beaeb97-aa7e-47e5-ab67-087cade1c9f0",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "d296d89f-58e0-4898-a201-c95e779a5e9b",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e7f3d67d-69a9-4688-8b5b-1bfeb4eebcbe",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "844950e5-df24-400c-95ee-626408d88fe7",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "4bf87bb6-e04d-4898-8c5a-208c25834be4",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "581d2315-715c-4e37-ba69-99ce0b501d62",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "f669e28a-1898-44e0-9cc6-715cd7b09b88",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e381f2e1-8840-4f5a-8a18-7b6ab8909a4b",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "6b5e52b8-9d18-4b18-b35d-a629262319cf",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8674c622-ac5e-4f6a-883b-3e9b8d2c1b9a",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "bbe5dd90-bfe3-4fac-9189-c7b920e319ad",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "009429c2-309a-4a16-857b-5355eb9caaa6",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e0269942-2f9e-4971-ace4-82ddfd9d4b94",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "c39d0370-c78b-4648-9508-1df6053ec691",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "1198af5a-faf0-4274-acc2-fc229c4d4533",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "56bd92bf-83be-44bc-a031-f8e7be58d668",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "c9ea4e2f-fa35-4cc1-a284-5827a46ec667",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "ff146949-bd24-4463-a858-e199aff69f13",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "0a937c63-b603-40c7-b9d2-8bcd589a3769",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "85f8c19a-bd61-4410-a756-f03492f22b07",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "c4879d5d-8071-4e9d-af5d-07212f4dfd44",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "5fa66990-9c7a-4589-87e0-01a882237eb0",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "48d4b4fc-02ea-49ea-abdf-23d0791eb7e3",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "060b0cab-d171-4c11-86c8-f2df71ddcca5",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "09b35738-3f27-4f19-bb4b-588ec59e76d2",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "279a5e33-7277-4ec3-8137-c783d8a80b07",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "be16e486-9cbc-4ec5-b32e-a8de439e6a87",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "16695b3e-bde5-4cb1-8011-0eedfab2421a",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "f7d3ce11-9b1d-4e63-9b38-bb4d6170b7b7",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "cd9cba79-e678-4b84-8866-aab1292f72a1",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "773a5f81-1b27-4dbb-87bd-3c76fc4ee050",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "57969fb5-c746-49f4-94a0-d5685594a6fd",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "35096871-fd63-4771-b548-e5a6d7d94f2c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "3ab3b563-a08f-44c1-98a3-de4b9054a639",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "db5f527d-8ed6-40a8-9570-6141f24d8950",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "65806422-1378-4daf-aed8-1c7adf4ea8c4",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "003fe02b-b035-4467-bf18-1fbb7135a66b",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "649a30e8-7daa-46b3-8311-1236d922b9c3",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "9daa2c3f-8f7a-4092-a559-1aa47a416c59",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "1683cd57-e57e-4e20-8d45-c53b985ec9a8",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "a4f07dc7-1681-4c21-bb86-6a056eb1774f",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "6299a9f5-8094-4430-b464-bd681a7c4779",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "ed30758a-0d20-4b2b-aece-af04a94a58da",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "5f54e6ee-d785-414e-bedb-fc0fa89138b5",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "21178772-d939-415b-91ce-8678dace5f49",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "4af8544d-5e5c-4c19-95c0-1bea3d47b860",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "6a43b2ed-630a-4725-b00d-fc8e198b6a3b",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "c084c3b2-2b4d-438c-ab5f-3039ee282b87",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "55eaecf7-f91b-4d79-8b4e-b55e19f3f0e1",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "d6be79bf-6df3-4efa-8d40-a1d66234e9b3",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "b7b69874-09ec-49bd-a674-01e56348230c",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8105dab1-fb79-4310-a5e5-729dc29f4f93",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "ddae1c5b-cd47-4b9f-bee0-0996fc0b35e3",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "6fec4b63-7211-426e-8c70-f3b2a03a49ee",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "fe73c1a1-0c86-4fcd-89ef-1a29a2e3a141",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "7521c099-5891-44ed-837a-2d193448ab9e",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "31338db1-4e00-4671-915e-3917fb8d192d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "a82f5a70-3821-4416-a2a0-e49bb2ce6228",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "22e4ccdd-4912-47d6-84d2-120a1a19b702",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "d856fb93-6ad1-4e6c-a471-896316de394a",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "c7aea7d4-7fd4-490e-ae55-e3ad6b5d70df",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "fc357e2c-f327-4801-8a80-c9d7084a2cd0",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "f12e2a15-3c2c-4aad-b8a9-9d017951cc36",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "0325dc49-5040-47b1-b7d5-08eab33a843f",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "91df9b5b-37ed-4057-ad7c-fcd4e7303069",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "96ef3e9a-ea56-4875-b8ce-b81f42e0b1f3",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "bbba95f6-54b8-49b7-88c4-b362710e41be",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "35d0f9c4-5af4-4f50-b8df-739064b4eb10",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "140f6e6b-b536-4f91-8fbd-cf9c74863e68",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e96565af-51b7-4be9-adc4-0f31e7be26fc",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "72686bc6-c01d-47cd-9a11-e548876fa81d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "339ea490-92b6-4ec7-adde-23112d0ec8df",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "238dc36e-6272-4989-914f-2aadbde17752",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "60b91cae-62fa-4e4b-a78c-318d30936832",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "d681ab35-c4bd-4151-8e4d-704fa0067c1a",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "41f38c81-5c20-4d35-a11a-9f170ea42e34",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e9ecc9d9-f4f3-4ec3-8764-7477d5976a9f",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "4c4dcdf0-b53f-4635-8dec-4c33ceb98cc4",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "b88c75c9-6b37-4bff-9621-0ed3e35bed23",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "603c1938-a120-4a3e-81b7-ad56fdde9688",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "352fbba8-5e6f-42b9-bff5-18a4601b857a",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "0448858b-c79a-44fe-abd6-bb6e706b92e9",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "a1785822-7d0d-4204-bc00-fa92b29d73dd",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "3f5cc9da-8255-4003-9ea1-a608a684aa44",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "384503bc-f385-4398-9902-059199abb3de",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "9728b44f-d08b-4b85-9938-0ee29841df73",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "b9399017-7309-47e0-a17a-21ab1f9fd7fc",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "2b27440b-9de7-4253-8626-4a22f38138c1",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "22e81ce6-aa29-493e-bb05-bb42cfd7ad97",
+                  "name": "",
+                  "count": 0
+                }
+              ],
+              "materials": [
+                {
+                  "uuid": "9c90f4ef-e3ed-41de-833d-343fb336bc52",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "2751c1ef-8f57-4e06-b6e4-d18235d580c3",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "3c7d8fc7-6ccc-4ddc-b97b-eabbca4c4530",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "16da6cb0-7bec-467f-9b9d-89c31565ac7d",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "cc80b89b-a05c-46d2-8132-1c59ca94e375",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "cb842e8a-db80-4437-aabb-5d37d9034593",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "5ab4780d-1495-40b1-b710-9fd22de2d79b",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "592e371c-5e4f-4ef3-a54e-00a370d09d21",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "b8a6fa18-9d73-43af-9730-e8ba43f3cbb9",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "dcd1ef95-286b-44d4-89e8-7670f36e9c28",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "b4d9fe94-da07-4124-9f5a-bc3fd6705da8",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e4763577-b11f-4eb4-964e-7bab4d1a2090",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "35a30df7-47d2-44cb-8fdf-eba9932fbc81",
+                  "name": "",
+                  "count": 0
+                }
+              ],
+              "textures": [
+                {
+                  "uuid": "b195c1c0-72f4-455b-a284-ce7fcc16bde9",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "e98868be-5389-4415-b99c-6de85a585679",
+                  "name": "",
+                  "count": 0
+                },
+                {
+                  "uuid": "8541e8c1-f261-4088-b36a-0602fdc98d93",
+                  "name": "",
+                  "count": 0
+                }
+              ]
+            },
+            "ownedDisposeEvents": {
+              "geometries": [
+                {
+                  "uuid": "0b84b9a3-b984-4611-956c-de93dc467c5b",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "2e34ba49-7c69-4720-824b-3ec0e3eec2e1",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "e2c3d763-8ce9-4dfc-af5b-71a6bdef6c71",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "5bbceb14-4cef-4738-9096-3065ace9ef8a",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "2002eba8-bc67-4200-bd28-d148c6ad535e",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a0439838-3a18-428a-aed9-232297c89b72",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "0eda2a76-17de-4059-bd53-8dc9599dd774",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "e341e43e-9d49-4813-87c3-c8a2743b6a59",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "cf00d24f-8a86-4dcd-9f74-04962ad3ae0e",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "9f99a2b6-7ea1-4190-9244-a22930994bd9",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "26bc5eec-a80a-4462-be31-702302f5302d",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a4eae723-ca26-4b17-8620-1262a02599ac",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "c5399551-b2c7-471c-a886-f225d5309360",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "82624c44-e07a-4b50-9259-b44bd6d64f2b",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "51733935-5c4f-42db-83a7-13cf88563533",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "ae2c16b4-2628-49f1-94af-ca04ab5875f7",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "5a1acbc2-2978-40c4-b973-dfdba7c85d0a",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "036d917b-454a-4c40-a4e4-ae4699f4fcf0",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "52eb7f35-9262-44c4-9a42-51e845907ce9",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "72eee0db-6879-4992-8601-48f8e29335c1",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a3f9f15f-9ba1-4d6d-be82-6b5fcb7027a4",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "db1e5988-0404-4cb4-9d23-6b5695da3ca4",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "c5d691c8-7493-44b6-ab69-b65fdf15c06f",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "ced904de-9e32-4550-91a2-e47153f05cb6",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "67d1e4ad-144c-4e66-b0b2-9a8c3ee95213",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "ece257a1-fbc2-4b29-8686-070608c5345b",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a2465b0a-4061-4c9a-87f2-55fdd9afa2c2",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "5d451fec-c749-4358-a665-3b8ff4df7d12",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "b077e66a-4fd2-45d0-adce-ae2c251503b5",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "e9000e71-99e6-4d3d-ae3b-fb6054180e59",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "569ac64b-b588-4275-8612-3bd5e806d13a",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "4fbe5992-be89-405d-b55d-1ff347565bb6",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "feb1cfc7-653f-4781-befb-bcba62fd3cfd",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "aa2c249f-2ec1-4234-afdd-705774f2acdb",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "217c2edc-1126-4dca-9bc8-773cd56f196b",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "ecf5cf31-7ef3-4026-8ea9-38ebb1c63284",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "2cdafa77-169e-4b0c-b01e-b064e88a047d",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "8d86f6a7-8a10-4e30-89a4-56e1daeb9129",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "b5ba2470-108d-49e1-ad88-d0d4453ef0c9",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "95e9bf27-1e1d-41d6-91b7-7d37e8c8b2d0",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a1b42fa8-bb49-4782-ba0f-558b840f3de3",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "8a6f0018-3fbe-4d3e-a21f-b4e3ae7c3ac5",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "842d4fc3-b82e-46fc-b9ef-8f7feb4dcf27",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "fe963a2b-2dbc-4bd2-8bbe-5a28dfa635ee",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "bc58d648-b01f-4302-8e3f-e95b79633941",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "cdeff2b5-c467-48b9-8444-b9a0b09463ca",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "c4d79e45-162c-4a21-83df-c2b828bf878a",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "b15421b5-dcef-447b-9de6-647fc64b9412",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "be0c53a9-2c0b-49a2-9d8c-59d8120219d0",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "1d939311-e454-441a-a05b-0099f3f6b63d",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "2d3e1d8e-5c4e-4bb9-ae93-6120a4d2b8f5",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "24972300-58cf-438b-8954-ebe1ecfed4e9",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "b466fdf9-5a7f-4b4d-94b7-66b60daeef36",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "8cf8decc-32bf-4d8e-81e8-138b1b1df456",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "b171bc3f-eda3-4078-8930-b76d4d38b7dd",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "229d1a92-a329-459e-bda7-b035a9cb72c1",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "84e67586-51cc-4954-a9ce-498ce54c6c60",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "8fafc4b0-a4c9-4814-9891-ca3b5deeaf39",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "03aeafc5-7535-4351-9f0d-b28913e21775",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "9f023112-8ba9-43a3-9227-31e10941c383",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "71a8dc8b-5037-46bb-85d4-7b6846658ad5",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "ecab2f4b-f10d-421d-af57-ffc35ef9aead",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "8d467840-918b-488f-8a5f-99e5e860883f",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "95ab8910-ef86-4374-a0f2-642637cf4d4a",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "67bc0577-02aa-4c7f-86fa-edd4e8373d57",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "9f800ddd-655e-4b98-a592-4e8b8b6ed6cd",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "f114c8b3-82c9-4039-942a-63fafdef6bfc",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "814cc01d-2cc9-40e0-a393-a4ff8ec00689",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "e8cd3013-de8b-47dd-8b0a-c87e02841312",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "c314fa55-66d5-4e76-9665-59bac6659f18",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "ef9fe01a-304c-4594-b100-ffe19bd4bc38",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "84dbee41-6c33-49c6-ab52-34b3cd2f6a33",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "13385ca9-c8c9-4f30-af31-a77cccb46371",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "3c1d6549-81c4-4fd2-bbbd-4de777f69802",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "688a2f6d-d141-49f2-a868-44d373717d19",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "c20edd77-6643-47ac-984a-c5d3899134bb",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "1674cffc-37a3-44d6-a943-63f68b08da8d",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "7aec55eb-b81b-4449-86e2-9da474a05537",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "b06ef3bc-550a-4566-8cfa-5c142e856cea",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a9e0e035-bd98-402a-bbb4-463fb2ad10b8",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "460fc0ab-7bd8-4e29-a394-512a9c43e945",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a2e05f27-62e8-4dfa-8a38-bf86efd30e36",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "15fcd5fd-2f74-4331-a5da-6f2dc73aa9d3",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "7da729cf-3e7e-4afb-8d97-c472cd589e17",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "04654795-a091-44ca-b1d8-1ea2f8519f0a",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "cdf9bc6d-5db4-4586-800d-ce3d7644de04",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "f72446a1-d894-4acf-b1f2-c8b2f99c4250",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "8e0e23c1-52fd-4cd1-ac33-251afb7bdb12",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "bc647593-2f81-4a1a-99d3-89650d8734e2",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "fc86db5d-e564-4844-9b32-4b662744a176",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "5424960d-344e-4296-978f-5d9b0a6d361f",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "48883744-5a7a-45c9-8426-ff71557038de",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "3d817c3f-90b8-4818-a20c-4c3a6d7324f5",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "0f802e62-a0fa-4322-83c4-9bb88d6a5644",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "597e5f65-27fb-4d24-b1b9-75da3cf0c529",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "68a8e3ae-a3d7-403d-b212-1462f1e31a57",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "5c218b97-3087-4289-8fbe-40251c2576c5",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "3ee8152a-c817-4e48-ba6f-6eff3f82ecd2",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "fb52237f-9336-4686-8a7b-d5853574d7b1",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "075d80fc-3dd8-48d6-b353-5b5530029bdc",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "f8f9f699-eb92-42ce-a192-7b3066af07ec",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "c1a079ab-b69d-4e8e-894b-8984995fee10",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "215a0441-4e84-49a5-b14c-877dddca5daf",
+                  "name": "",
+                  "count": 1
+                }
+              ],
+              "materials": [
+                {
+                  "uuid": "cbc1908b-cc4b-4771-b1d0-193c977bb773",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "5fa0ce40-a142-4639-b332-2ec98b6bcd61",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "bf37c83e-8306-489a-941b-573cf2be67e3",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "e1c7d304-d409-47ad-95fe-035ce2e4aefb",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "9218e02a-dd74-4261-9ca3-07f1f1f5fbfe",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "7abafe51-99b1-41e7-b306-a44833affaa1",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "f869017b-7b6a-4d0a-8fc2-108c0eef9fbb",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "a6edd547-b101-44f4-9f91-33d19042fdc5",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "5767b9c4-f8ea-442b-926b-bcd24120db22",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "9550c21d-1751-4a1a-98cb-ad457b0cd798",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "5b0151c7-913d-4174-af85-11d737bfa1ab",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "61933d3d-fc70-4bed-a89c-52e138c81277",
+                  "name": "",
+                  "count": 1
+                }
+              ],
+              "textures": [
+                {
+                  "uuid": "885b98fe-0f7b-4fbe-9cf7-6f7b186f5344",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "9d3e5e1f-a2b2-4028-9ec5-cdd9f2742c0b",
+                  "name": "",
+                  "count": 1
+                },
+                {
+                  "uuid": "4d3859d3-d55a-4dc7-97c8-624dfe410520",
+                  "name": "",
+                  "count": 1
+                }
+              ]
+            },
+            "originalsRetained": {
+              "geometries": true,
+              "materials": true,
+              "textures": true
+            },
+            "resources": {
+              "geometries": 175,
+              "textures": 18,
+              "programs": 18
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "completed": true
+}

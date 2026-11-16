@@ -1,0 +1,44 @@
+{
+  "candidate": "clearance-cues-r2-closure",
+  "productionCandidate": "clearance-cues-r2",
+  "reason": "Original test incorrectly required resize cancellation; this successor tests unchanged source/request/geometry/input plus fresh bounded projection, then previously unattempted cleanup",
+  "productionChanged": false,
+  "files": [
+    {
+      "path": "src/deployment-ui.ts",
+      "sha256": "0bfc11ab4efda1882951497fc09602bdc27db38eb6d8fc53985acb29e00c29bc"
+    },
+    {
+      "path": "src/deployment-ui.css",
+      "sha256": "c1e911b68b7a8a1cc2892eafa350f9099b4cfef22ee3dfdcce2c16b5e1be4735"
+    },
+    {
+      "path": "src/render/deployment-view.ts",
+      "sha256": "98b99c3227b82c4e17ff20138a71f6dcdc8026c14862e775fe0720cd93b454d9"
+    },
+    {
+      "path": "src/render/deployment-scene.ts",
+      "sha256": "293539c9f6c3f35d9cd1a29ab9f76d24971830950f31c889bb19a9fa0d83244d"
+    },
+    {
+      "path": "src/render/clearance-cue-layout.ts",
+      "sha256": "4f1e1e2cacf9051b2a7a9c55e326dc60e0c594852fafded091c5b4de40555332"
+    },
+    {
+      "path": "tests/deployment-clearance-cues.test.ts",
+      "sha256": "841157d710fa1c7cf4ac4de37f7a8f149b0d3c269e65cddd96396c5fd01a61a7"
+    },
+    {
+      "path": "tests/browser/deployment-clearance-cues.spec.ts",
+      "sha256": "128385fd44901dcdeb504236085c00a838e5beff20f4e09ae40fa13068e57e91"
+    },
+    {
+      "path": "docs/clearance-cues-prospective-acceptance.md",
+      "sha256": "fb5f9cafd5f80a71b01ed0cc96b961106b62bca7e2388490bc7c84b6faafdb52"
+    },
+    {
+      "path": "tests/browser/deployment-clearance-cues-closure.spec.ts",
+      "sha256": "cabe1417271fa643997744a1d66afbf004430658ed76c2dd7d8cf49f7faac7cb"
+    }
+  ]
+}

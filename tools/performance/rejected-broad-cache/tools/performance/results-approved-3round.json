@@ -1,0 +1,907 @@
+{
+  "metadata": {
+    "createdAt": "2026-11-14T19:29:42.327Z",
+    "node": "v24.14.0",
+    "os": "win32 10.0.26200",
+    "cpu": "Intel(R) Core(TM) Ultra 5 226V",
+    "logicalCpus": 8,
+    "totalMemoryBytes": 16687779840,
+    "powerProfile": "���� ����ǥ GUID: ab6534a3-bc02-4c44-94d1-a8535b2eb070  (SAMSUNG MODE)",
+    "rounds": 3,
+    "scenarios": [
+      "legacy-balanced",
+      "hardware-balanced",
+      "hardware-science"
+    ],
+    "steps": [
+      600
+    ],
+    "restore": true,
+    "bundleHash": "12b67136546dcb1413f29214f2fce0bcd898b56b4b4133f26a073990cc01dcbe",
+    "baseline": {
+      "files": 57,
+      "manifestSha256": "3bbe2195390abadf5da979916b0b20123b61199c21b1ffa55554adc6efadd3dc"
+    },
+    "policy": "One new worker per variant/case/round; alternating original/optimized order. Both engines bundled identically. Startup includes both imports. Compute starts after ready. Cold model caches; warm exact-time query only. No warm checkpoint reuse implemented. Heap delta is not peak memory."
+  },
+  "results": [
+    {
+      "type": "result",
+      "variant": "original",
+      "scenario": "legacy-balanced",
+      "step": 600,
+      "restore": true,
+      "inputHash": "2c2521e64d6beb20210a0d977901d7f39b7d94fe7761a90c607bd2e905e3c9a0",
+      "stateHash": "b889885e6fd890d7807363df01b86249c26a86fc1b62c5797396193e38b2093d",
+      "resultHash": "7e52736f07f541aeaa473fe56d2e4b904cb14603a5774bef35613d45675d81d7",
+      "queryHash": "ba70de8137d67ed9dd809182af20443bc145b0bb861d6d45236e377c0028d819",
+      "publicTelemetryHash": "09097544464b3138cebcda1cda1f80165ab832dcd9d8dfd5328667b6115f91e1",
+      "restoredHash": "b889885e6fd890d7807363df01b86249c26a86fc1b62c5797396193e38b2093d",
+      "solveMs": 6.152699999999868,
+      "constructMs": 7.732499999999845,
+      "forecastMs": 2080.5227999999997,
+      "warmQueryMs": 27.201300000000174,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 3.861699999999928,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 4.319899999999961,
+      "restoreMs": 1968.6018,
+      "heapDeltaBytes": 12735536,
+      "cacheEntries": null,
+      "ticks": 50777,
+      "status": "success",
+      "received": 3,
+      "energyWh": 176,
+      "energyMinimumWh": 3.5663307866490306,
+      "startupMs": 47.894599999999855,
+      "round": 0
+    },
+    {
+      "type": "result",
+      "variant": "optimized",
+      "scenario": "legacy-balanced",
+      "step": 600,
+      "restore": true,
+      "inputHash": "2c2521e64d6beb20210a0d977901d7f39b7d94fe7761a90c607bd2e905e3c9a0",
+      "stateHash": "b889885e6fd890d7807363df01b86249c26a86fc1b62c5797396193e38b2093d",
+      "resultHash": "7e52736f07f541aeaa473fe56d2e4b904cb14603a5774bef35613d45675d81d7",
+      "queryHash": "ba70de8137d67ed9dd809182af20443bc145b0bb861d6d45236e377c0028d819",
+      "publicTelemetryHash": "09097544464b3138cebcda1cda1f80165ab832dcd9d8dfd5328667b6115f91e1",
+      "restoredHash": "b889885e6fd890d7807363df01b86249c26a86fc1b62c5797396193e38b2093d",
+      "solveMs": 4.903800000000047,
+      "constructMs": 5.395999999999731,
+      "forecastMs": 2729.7141,
+      "warmQueryMs": 0.3749000000007072,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 3.8544999999994616,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 3.3067000000000917,
+      "restoreMs": 4106.4094000000005,
+      "heapDeltaBytes": 105525232,
+      "cacheEntries": {
+        "states": 32,
+        "withoutNetwork": 32,
+        "withNetwork": 32
+      },
+      "ticks": 50777,
+      "status": "success",
+      "received": 3,
+      "energyWh": 176,
+      "energyMinimumWh": 3.5663307866490306,
+      "startupMs": 45.6303999999991,
+      "round": 0
+    },
+    {
+      "type": "result",
+      "variant": "optimized",
+      "scenario": "legacy-balanced",
+      "step": 600,
+      "restore": true,
+      "inputHash": "2c2521e64d6beb20210a0d977901d7f39b7d94fe7761a90c607bd2e905e3c9a0",
+      "stateHash": "b889885e6fd890d7807363df01b86249c26a86fc1b62c5797396193e38b2093d",
+      "resultHash": "7e52736f07f541aeaa473fe56d2e4b904cb14603a5774bef35613d45675d81d7",
+      "queryHash": "ba70de8137d67ed9dd809182af20443bc145b0bb861d6d45236e377c0028d819",
+      "publicTelemetryHash": "09097544464b3138cebcda1cda1f80165ab832dcd9d8dfd5328667b6115f91e1",
+      "restoredHash": "b889885e6fd890d7807363df01b86249c26a86fc1b62c5797396193e38b2093d",
+      "solveMs": 6.087600000000748,
+      "constructMs": 5.44419999999991,
+      "forecastMs": 2667.2729,
+      "warmQueryMs": 0.47299999999995634,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 4.73070000000007,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 3.5649999999986903,
+      "restoreMs": 3522.863799999999,
+      "heapDeltaBytes": 213474176,
+      "cacheEntries": {
+        "states": 32,
+        "withoutNetwork": 32,
+        "withNetwork": 32
+      },
+      "ticks": 50777,
+      "status": "success",
+      "received": 3,
+      "energyWh": 176,
+      "energyMinimumWh": 3.5663307866490306,
+      "startupMs": 46.94470000000001,
+      "round": 1
+    },
+    {
+      "type": "result",
+      "variant": "original",
+      "scenario": "legacy-balanced",
+      "step": 600,
+      "restore": true,
+      "inputHash": "2c2521e64d6beb20210a0d977901d7f39b7d94fe7761a90c607bd2e905e3c9a0",
+      "stateHash": "b889885e6fd890d7807363df01b86249c26a86fc1b62c5797396193e38b2093d",
+      "resultHash": "7e52736f07f541aeaa473fe56d2e4b904cb14603a5774bef35613d45675d81d7",
+      "queryHash": "ba70de8137d67ed9dd809182af20443bc145b0bb861d6d45236e377c0028d819",
+      "publicTelemetryHash": "09097544464b3138cebcda1cda1f80165ab832dcd9d8dfd5328667b6115f91e1",
+      "restoredHash": "b889885e6fd890d7807363df01b86249c26a86fc1b62c5797396193e38b2093d",
+      "solveMs": 5.9549000000006345,
+      "constructMs": 6.123100000000704,
+      "forecastMs": 1957.8227000000006,
+      "warmQueryMs": 26.581200000000536,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 5.382999999997992,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 3.4562000000005355,
+      "restoreMs": 1899.877700000001,
+      "heapDeltaBytes": 6757984,
+      "cacheEntries": null,
+      "ticks": 50777,
+      "status": "success",
+      "received": 3,
+      "energyWh": 176,
+      "energyMinimumWh": 3.5663307866490306,
+      "startupMs": 42.95669999999882,
+      "round": 1
+    },
+    {
+      "type": "result",
+      "variant": "original",
+      "scenario": "legacy-balanced",
+      "step": 600,
+      "restore": true,
+      "inputHash": "2c2521e64d6beb20210a0d977901d7f39b7d94fe7761a90c607bd2e905e3c9a0",
+      "stateHash": "b889885e6fd890d7807363df01b86249c26a86fc1b62c5797396193e38b2093d",
+      "resultHash": "7e52736f07f541aeaa473fe56d2e4b904cb14603a5774bef35613d45675d81d7",
+      "queryHash": "ba70de8137d67ed9dd809182af20443bc145b0bb861d6d45236e377c0028d819",
+      "publicTelemetryHash": "09097544464b3138cebcda1cda1f80165ab832dcd9d8dfd5328667b6115f91e1",
+      "restoredHash": "b889885e6fd890d7807363df01b86249c26a86fc1b62c5797396193e38b2093d",
+      "solveMs": 5.02639999999883,
+      "constructMs": 6.689000000002125,
+      "forecastMs": 1877.1201999999976,
+      "warmQueryMs": 25.242899999997462,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 3.7590000000018335,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 2.7272999999986496,
+      "restoreMs": 1830.3690000000024,
+      "heapDeltaBytes": 16707536,
+      "cacheEntries": null,
+      "ticks": 50777,
+      "status": "success",
+      "received": 3,
+      "energyWh": 176,
+      "energyMinimumWh": 3.5663307866490306,
+      "startupMs": 43.78429999999935,
+      "round": 2
+    },
+    {
+      "type": "result",
+      "variant": "optimized",
+      "scenario": "legacy-balanced",
+      "step": 600,
+      "restore": true,
+      "inputHash": "2c2521e64d6beb20210a0d977901d7f39b7d94fe7761a90c607bd2e905e3c9a0",
+      "stateHash": "b889885e6fd890d7807363df01b86249c26a86fc1b62c5797396193e38b2093d",
+      "resultHash": "7e52736f07f541aeaa473fe56d2e4b904cb14603a5774bef35613d45675d81d7",
+      "queryHash": "ba70de8137d67ed9dd809182af20443bc145b0bb861d6d45236e377c0028d819",
+      "publicTelemetryHash": "09097544464b3138cebcda1cda1f80165ab832dcd9d8dfd5328667b6115f91e1",
+      "restoredHash": "b889885e6fd890d7807363df01b86249c26a86fc1b62c5797396193e38b2093d",
+      "solveMs": 6.464100000001054,
+      "constructMs": 5.617899999997462,
+      "forecastMs": 2789.640000000003,
+      "warmQueryMs": 0.5561999999990803,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 3.068599999998696,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 2.827400000001944,
+      "restoreMs": 3776.7927999999993,
+      "heapDeltaBytes": 85768400,
+      "cacheEntries": {
+        "states": 32,
+        "withoutNetwork": 32,
+        "withNetwork": 32
+      },
+      "ticks": 50777,
+      "status": "success",
+      "received": 3,
+      "energyWh": 176,
+      "energyMinimumWh": 3.5663307866490306,
+      "startupMs": 43.743900000001304,
+      "round": 2
+    },
+    {
+      "type": "result",
+      "variant": "original",
+      "scenario": "hardware-balanced",
+      "step": 600,
+      "restore": true,
+      "inputHash": "d45de7feff2da31c147529b552348276a24fb71d7c2a92b2e824cbb13ef76f6c",
+      "stateHash": "d9a3442ac10ea2ca7cd3a35f497d19170b116567a26e784890dabd05ff34cd9c",
+      "resultHash": "0422402873489202650abd3b9bdad92a953260f5a55b0ff4367051597dbee121",
+      "queryHash": "ba70de8137d67ed9dd809182af20443bc145b0bb861d6d45236e377c0028d819",
+      "publicTelemetryHash": "67da6f5993e99d3b97379f797cdb77d19411a05d9802dfd50905e60ac84cb4bb",
+      "restoredHash": "d9a3442ac10ea2ca7cd3a35f497d19170b116567a26e784890dabd05ff34cd9c",
+      "solveMs": 5.842899999996007,
+      "constructMs": 9.474400000006426,
+      "forecastMs": 26677.1651,
+      "warmQueryMs": 26.40980000000127,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 10.489199999996345,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 3.9996999999930267,
+      "restoreMs": 26768.4409,
+      "heapDeltaBytes": 37906408,
+      "cacheEntries": null,
+      "ticks": 90388,
+      "status": "success",
+      "received": 12,
+      "energyWh": 172,
+      "energyMinimumWh": 81.26247315914229,
+      "startupMs": 41.31399999999849,
+      "round": 0
+    },
+    {
+      "type": "result",
+      "variant": "optimized",
+      "scenario": "hardware-balanced",
+      "step": 600,
+      "restore": true,
+      "inputHash": "d45de7feff2da31c147529b552348276a24fb71d7c2a92b2e824cbb13ef76f6c",
+      "stateHash": "d9a3442ac10ea2ca7cd3a35f497d19170b116567a26e784890dabd05ff34cd9c",
+      "resultHash": "0422402873489202650abd3b9bdad92a953260f5a55b0ff4367051597dbee121",
+      "queryHash": "ba70de8137d67ed9dd809182af20443bc145b0bb861d6d45236e377c0028d819",
+      "publicTelemetryHash": "67da6f5993e99d3b97379f797cdb77d19411a05d9802dfd50905e60ac84cb4bb",
+      "restoredHash": "d9a3442ac10ea2ca7cd3a35f497d19170b116567a26e784890dabd05ff34cd9c",
+      "solveMs": 5.262799999996787,
+      "constructMs": 10.449399999997695,
+      "forecastMs": 31117.886,
+      "warmQueryMs": 0.294899999993504,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 10.799499999993714,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 3.401800000006915,
+      "restoreMs": 30497.262799999997,
+      "heapDeltaBytes": 118764136,
+      "cacheEntries": {
+        "states": 32,
+        "withoutNetwork": 32,
+        "withNetwork": 32
+      },
+      "ticks": 90388,
+      "status": "success",
+      "received": 12,
+      "energyWh": 172,
+      "energyMinimumWh": 81.26247315914229,
+      "startupMs": 43.67859999999928,
+      "round": 0
+    },
+    {
+      "type": "result",
+      "variant": "optimized",
+      "scenario": "hardware-balanced",
+      "step": 600,
+      "restore": true,
+      "inputHash": "d45de7feff2da31c147529b552348276a24fb71d7c2a92b2e824cbb13ef76f6c",
+      "stateHash": "d9a3442ac10ea2ca7cd3a35f497d19170b116567a26e784890dabd05ff34cd9c",
+      "resultHash": "0422402873489202650abd3b9bdad92a953260f5a55b0ff4367051597dbee121",
+      "queryHash": "ba70de8137d67ed9dd809182af20443bc145b0bb861d6d45236e377c0028d819",
+      "publicTelemetryHash": "67da6f5993e99d3b97379f797cdb77d19411a05d9802dfd50905e60ac84cb4bb",
+      "restoredHash": "d9a3442ac10ea2ca7cd3a35f497d19170b116567a26e784890dabd05ff34cd9c",
+      "solveMs": 5.99189999999362,
+      "constructMs": 9.864800000010291,
+      "forecastMs": 30834.60619999998,
+      "warmQueryMs": 0.36340000000200234,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 9.986999999993714,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 3.25789999999688,
+      "restoreMs": 30615.022800000006,
+      "heapDeltaBytes": 208006320,
+      "cacheEntries": {
+        "states": 32,
+        "withoutNetwork": 32,
+        "withNetwork": 32
+      },
+      "ticks": 90388,
+      "status": "success",
+      "received": 12,
+      "energyWh": 172,
+      "energyMinimumWh": 81.26247315914229,
+      "startupMs": 44.23580000002403,
+      "round": 1
+    },
+    {
+      "type": "result",
+      "variant": "original",
+      "scenario": "hardware-balanced",
+      "step": 600,
+      "restore": true,
+      "inputHash": "d45de7feff2da31c147529b552348276a24fb71d7c2a92b2e824cbb13ef76f6c",
+      "stateHash": "d9a3442ac10ea2ca7cd3a35f497d19170b116567a26e784890dabd05ff34cd9c",
+      "resultHash": "0422402873489202650abd3b9bdad92a953260f5a55b0ff4367051597dbee121",
+      "queryHash": "ba70de8137d67ed9dd809182af20443bc145b0bb861d6d45236e377c0028d819",
+      "publicTelemetryHash": "67da6f5993e99d3b97379f797cdb77d19411a05d9802dfd50905e60ac84cb4bb",
+      "restoredHash": "d9a3442ac10ea2ca7cd3a35f497d19170b116567a26e784890dabd05ff34cd9c",
+      "solveMs": 4.902100000006612,
+      "constructMs": 9.591400000004796,
+      "forecastMs": 26739.822599999985,
+      "warmQueryMs": 26.902499999996508,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 11.966000000014901,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 3.1722999999765307,
+      "restoreMs": 26781.968799999973,
+      "heapDeltaBytes": 35736104,
+      "cacheEntries": null,
+      "ticks": 90388,
+      "status": "success",
+      "received": 12,
+      "energyWh": 172,
+      "energyMinimumWh": 81.26247315914229,
+      "startupMs": 45.68280000000959,
+      "round": 1
+    },
+    {
+      "type": "result",
+      "variant": "original",
+      "scenario": "hardware-balanced",
+      "step": 600,
+      "restore": true,
+      "inputHash": "d45de7feff2da31c147529b552348276a24fb71d7c2a92b2e824cbb13ef76f6c",
+      "stateHash": "d9a3442ac10ea2ca7cd3a35f497d19170b116567a26e784890dabd05ff34cd9c",
+      "resultHash": "0422402873489202650abd3b9bdad92a953260f5a55b0ff4367051597dbee121",
+      "queryHash": "ba70de8137d67ed9dd809182af20443bc145b0bb861d6d45236e377c0028d819",
+      "publicTelemetryHash": "67da6f5993e99d3b97379f797cdb77d19411a05d9802dfd50905e60ac84cb4bb",
+      "restoredHash": "d9a3442ac10ea2ca7cd3a35f497d19170b116567a26e784890dabd05ff34cd9c",
+      "solveMs": 5.10720000002766,
+      "constructMs": 10.630600000033155,
+      "forecastMs": 26923.036100000027,
+      "warmQueryMs": 29.663999999989755,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 12.163799999980256,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 3.76769999996759,
+      "restoreMs": 26505.518299999996,
+      "heapDeltaBytes": 39121160,
+      "cacheEntries": null,
+      "ticks": 90388,
+      "status": "success",
+      "received": 12,
+      "energyWh": 172,
+      "energyMinimumWh": 81.26247315914229,
+      "startupMs": 45.289999999979045,
+      "round": 2
+    },
+    {
+      "type": "result",
+      "variant": "optimized",
+      "scenario": "hardware-balanced",
+      "step": 600,
+      "restore": true,
+      "inputHash": "d45de7feff2da31c147529b552348276a24fb71d7c2a92b2e824cbb13ef76f6c",
+      "stateHash": "d9a3442ac10ea2ca7cd3a35f497d19170b116567a26e784890dabd05ff34cd9c",
+      "resultHash": "0422402873489202650abd3b9bdad92a953260f5a55b0ff4367051597dbee121",
+      "queryHash": "ba70de8137d67ed9dd809182af20443bc145b0bb861d6d45236e377c0028d819",
+      "publicTelemetryHash": "67da6f5993e99d3b97379f797cdb77d19411a05d9802dfd50905e60ac84cb4bb",
+      "restoredHash": "d9a3442ac10ea2ca7cd3a35f497d19170b116567a26e784890dabd05ff34cd9c",
+      "solveMs": 5.243599999987055,
+      "constructMs": 10.322600000014063,
+      "forecastMs": 30554.898599999957,
+      "warmQueryMs": 0.33830000000307336,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 10.87240000005113,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 4.945799999986775,
+      "restoreMs": 30861.403300000005,
+      "heapDeltaBytes": 182246264,
+      "cacheEntries": {
+        "states": 32,
+        "withoutNetwork": 32,
+        "withNetwork": 32
+      },
+      "ticks": 90388,
+      "status": "success",
+      "received": 12,
+      "energyWh": 172,
+      "energyMinimumWh": 81.26247315914229,
+      "startupMs": 43.61300000001211,
+      "round": 2
+    },
+    {
+      "type": "result",
+      "variant": "original",
+      "scenario": "hardware-science",
+      "step": 600,
+      "restore": true,
+      "inputHash": "db27ebacc59def2a72cdff40bf81d495c27124902d7ffb0cae881d3a5472ae06",
+      "stateHash": "4fce5ffa58821f25423997c25127a33348e3ee9a03910746873bd89c3fc7ab4e",
+      "resultHash": "186a8b78fc3c1f8b51f86bbbf95963038938c1951b5366902e4dc202b195f0d4",
+      "queryHash": "472794174c5e2159ca43f9f52ac52869816431d0fc7b819cc4147d2104f96f9c",
+      "publicTelemetryHash": "9cc3399060ce7c4c1faa2efdb958a323f78df3e74dde814e5e3ac5fe404983c7",
+      "restoredHash": "4fce5ffa58821f25423997c25127a33348e3ee9a03910746873bd89c3fc7ab4e",
+      "solveMs": 5.325699999986682,
+      "constructMs": 15.67129999998724,
+      "forecastMs": 11181.56660000002,
+      "warmQueryMs": 25.541800000006333,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 11.542500000039581,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 3.2462999999988824,
+      "restoreMs": 11210.496800000023,
+      "heapDeltaBytes": 34978144,
+      "cacheEntries": null,
+      "ticks": 58096,
+      "status": "success",
+      "received": 12,
+      "energyWh": 172,
+      "energyMinimumWh": 146.2,
+      "startupMs": 42.84989999997197,
+      "round": 0
+    },
+    {
+      "type": "result",
+      "variant": "optimized",
+      "scenario": "hardware-science",
+      "step": 600,
+      "restore": true,
+      "inputHash": "db27ebacc59def2a72cdff40bf81d495c27124902d7ffb0cae881d3a5472ae06",
+      "stateHash": "4fce5ffa58821f25423997c25127a33348e3ee9a03910746873bd89c3fc7ab4e",
+      "resultHash": "186a8b78fc3c1f8b51f86bbbf95963038938c1951b5366902e4dc202b195f0d4",
+      "queryHash": "472794174c5e2159ca43f9f52ac52869816431d0fc7b819cc4147d2104f96f9c",
+      "publicTelemetryHash": "9cc3399060ce7c4c1faa2efdb958a323f78df3e74dde814e5e3ac5fe404983c7",
+      "restoredHash": "4fce5ffa58821f25423997c25127a33348e3ee9a03910746873bd89c3fc7ab4e",
+      "solveMs": 5.319099999964237,
+      "constructMs": 10.769199999980628,
+      "forecastMs": 12961.475399999996,
+      "warmQueryMs": 0.3356999999959953,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 9.704800000006799,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 3.70240000000922,
+      "restoreMs": 12800.791899999953,
+      "heapDeltaBytes": 342806224,
+      "cacheEntries": {
+        "states": 32,
+        "withoutNetwork": 32,
+        "withNetwork": 32
+      },
+      "ticks": 58096,
+      "status": "success",
+      "received": 12,
+      "energyWh": 172,
+      "energyMinimumWh": 146.2,
+      "startupMs": 44.536400000040885,
+      "round": 0
+    },
+    {
+      "type": "result",
+      "variant": "optimized",
+      "scenario": "hardware-science",
+      "step": 600,
+      "restore": true,
+      "inputHash": "db27ebacc59def2a72cdff40bf81d495c27124902d7ffb0cae881d3a5472ae06",
+      "stateHash": "4fce5ffa58821f25423997c25127a33348e3ee9a03910746873bd89c3fc7ab4e",
+      "resultHash": "186a8b78fc3c1f8b51f86bbbf95963038938c1951b5366902e4dc202b195f0d4",
+      "queryHash": "472794174c5e2159ca43f9f52ac52869816431d0fc7b819cc4147d2104f96f9c",
+      "publicTelemetryHash": "9cc3399060ce7c4c1faa2efdb958a323f78df3e74dde814e5e3ac5fe404983c7",
+      "restoredHash": "4fce5ffa58821f25423997c25127a33348e3ee9a03910746873bd89c3fc7ab4e",
+      "solveMs": 5.194500000041444,
+      "constructMs": 11.037600000039674,
+      "forecastMs": 12865.854200000002,
+      "warmQueryMs": 0.3018000000156462,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 12.17280000000028,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 3.457799999974668,
+      "restoreMs": 12851.297300000035,
+      "heapDeltaBytes": 321592864,
+      "cacheEntries": {
+        "states": 32,
+        "withoutNetwork": 32,
+        "withNetwork": 32
+      },
+      "ticks": 58096,
+      "status": "success",
+      "received": 12,
+      "energyWh": 172,
+      "energyMinimumWh": 146.2,
+      "startupMs": 43.490200000000186,
+      "round": 1
+    },
+    {
+      "type": "result",
+      "variant": "original",
+      "scenario": "hardware-science",
+      "step": 600,
+      "restore": true,
+      "inputHash": "db27ebacc59def2a72cdff40bf81d495c27124902d7ffb0cae881d3a5472ae06",
+      "stateHash": "4fce5ffa58821f25423997c25127a33348e3ee9a03910746873bd89c3fc7ab4e",
+      "resultHash": "186a8b78fc3c1f8b51f86bbbf95963038938c1951b5366902e4dc202b195f0d4",
+      "queryHash": "472794174c5e2159ca43f9f52ac52869816431d0fc7b819cc4147d2104f96f9c",
+      "publicTelemetryHash": "9cc3399060ce7c4c1faa2efdb958a323f78df3e74dde814e5e3ac5fe404983c7",
+      "restoredHash": "4fce5ffa58821f25423997c25127a33348e3ee9a03910746873bd89c3fc7ab4e",
+      "solveMs": 6.241700000013225,
+      "constructMs": 9.526400000031572,
+      "forecastMs": 11314.109200000006,
+      "warmQueryMs": 26.240999999979977,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 11.20270000002347,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 3.5860000000102445,
+      "restoreMs": 11216.24370000005,
+      "heapDeltaBytes": 24432336,
+      "cacheEntries": null,
+      "ticks": 58096,
+      "status": "success",
+      "received": 12,
+      "energyWh": 172,
+      "energyMinimumWh": 146.2,
+      "startupMs": 45.79330000001937,
+      "round": 1
+    },
+    {
+      "type": "result",
+      "variant": "original",
+      "scenario": "hardware-science",
+      "step": 600,
+      "restore": true,
+      "inputHash": "db27ebacc59def2a72cdff40bf81d495c27124902d7ffb0cae881d3a5472ae06",
+      "stateHash": "4fce5ffa58821f25423997c25127a33348e3ee9a03910746873bd89c3fc7ab4e",
+      "resultHash": "186a8b78fc3c1f8b51f86bbbf95963038938c1951b5366902e4dc202b195f0d4",
+      "queryHash": "472794174c5e2159ca43f9f52ac52869816431d0fc7b819cc4147d2104f96f9c",
+      "publicTelemetryHash": "9cc3399060ce7c4c1faa2efdb958a323f78df3e74dde814e5e3ac5fe404983c7",
+      "restoredHash": "4fce5ffa58821f25423997c25127a33348e3ee9a03910746873bd89c3fc7ab4e",
+      "solveMs": 5.34330000000773,
+      "constructMs": 10.95339999999851,
+      "forecastMs": 11240.424699999974,
+      "warmQueryMs": 25.040999999968335,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 11.650899999949615,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 3.952999999979511,
+      "restoreMs": 10967.612800000003,
+      "heapDeltaBytes": 39578000,
+      "cacheEntries": null,
+      "ticks": 58096,
+      "status": "success",
+      "received": 12,
+      "energyWh": 172,
+      "energyMinimumWh": 146.2,
+      "startupMs": 45.33780000003753,
+      "round": 2
+    },
+    {
+      "type": "result",
+      "variant": "optimized",
+      "scenario": "hardware-science",
+      "step": 600,
+      "restore": true,
+      "inputHash": "db27ebacc59def2a72cdff40bf81d495c27124902d7ffb0cae881d3a5472ae06",
+      "stateHash": "4fce5ffa58821f25423997c25127a33348e3ee9a03910746873bd89c3fc7ab4e",
+      "resultHash": "186a8b78fc3c1f8b51f86bbbf95963038938c1951b5366902e4dc202b195f0d4",
+      "queryHash": "472794174c5e2159ca43f9f52ac52869816431d0fc7b819cc4147d2104f96f9c",
+      "publicTelemetryHash": "9cc3399060ce7c4c1faa2efdb958a323f78df3e74dde814e5e3ac5fe404983c7",
+      "restoredHash": "4fce5ffa58821f25423997c25127a33348e3ee9a03910746873bd89c3fc7ab4e",
+      "solveMs": 5.566599999961909,
+      "constructMs": 9.526899999997113,
+      "forecastMs": 13004.040700000012,
+      "warmQueryMs": 0.3172999999951571,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 10.072500000009313,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 5.424799999978859,
+      "restoreMs": 12478.727799999993,
+      "heapDeltaBytes": 201658848,
+      "cacheEntries": {
+        "states": 32,
+        "withoutNetwork": 32,
+        "withNetwork": 32
+      },
+      "ticks": 58096,
+      "status": "success",
+      "received": 12,
+      "energyWh": 172,
+      "energyMinimumWh": 146.2,
+      "startupMs": 43.059199999959674,
+      "round": 2
+    }
+  ],
+  "summaries": [
+    {
+      "scenario": "legacy-balanced",
+      "step": 600,
+      "variant": "original",
+      "metrics": {
+        "startupMs": {
+          "median": 43.78429999999935,
+          "min": 42.95669999999882,
+          "max": 47.894599999999855
+        },
+        "solveMs": {
+          "median": 5.9549000000006345,
+          "min": 5.02639999999883,
+          "max": 6.152699999999868
+        },
+        "constructMs": {
+          "median": 6.689000000002125,
+          "min": 6.123100000000704,
+          "max": 7.732499999999845
+        },
+        "forecastMs": {
+          "median": 1957.8227000000006,
+          "min": 1877.1201999999976,
+          "max": 2080.5227999999997
+        },
+        "warmQueryMs": {
+          "median": 26.581200000000536,
+          "min": 25.242899999997462,
+          "max": 27.201300000000174
+        },
+        "warmPublicTelemetryMs": {
+          "median": 3.861699999999928,
+          "min": 3.7590000000018335,
+          "max": 5.382999999997992
+        },
+        "serializationMs": {
+          "median": 3.4562000000005355,
+          "min": 2.7272999999986496,
+          "max": 4.319899999999961
+        },
+        "restoreMs": {
+          "median": 1899.877700000001,
+          "min": 1830.3690000000024,
+          "max": 1968.6018
+        }
+      }
+    },
+    {
+      "scenario": "legacy-balanced",
+      "step": 600,
+      "variant": "optimized",
+      "metrics": {
+        "startupMs": {
+          "median": 45.6303999999991,
+          "min": 43.743900000001304,
+          "max": 46.94470000000001
+        },
+        "solveMs": {
+          "median": 6.087600000000748,
+          "min": 4.903800000000047,
+          "max": 6.464100000001054
+        },
+        "constructMs": {
+          "median": 5.44419999999991,
+          "min": 5.395999999999731,
+          "max": 5.617899999997462
+        },
+        "forecastMs": {
+          "median": 2729.7141,
+          "min": 2667.2729,
+          "max": 2789.640000000003
+        },
+        "warmQueryMs": {
+          "median": 0.47299999999995634,
+          "min": 0.3749000000007072,
+          "max": 0.5561999999990803
+        },
+        "warmPublicTelemetryMs": {
+          "median": 3.8544999999994616,
+          "min": 3.068599999998696,
+          "max": 4.73070000000007
+        },
+        "serializationMs": {
+          "median": 3.3067000000000917,
+          "min": 2.827400000001944,
+          "max": 3.5649999999986903
+        },
+        "restoreMs": {
+          "median": 3776.7927999999993,
+          "min": 3522.863799999999,
+          "max": 4106.4094000000005
+        }
+      }
+    },
+    {
+      "scenario": "hardware-balanced",
+      "step": 600,
+      "variant": "original",
+      "metrics": {
+        "startupMs": {
+          "median": 45.289999999979045,
+          "min": 41.31399999999849,
+          "max": 45.68280000000959
+        },
+        "solveMs": {
+          "median": 5.10720000002766,
+          "min": 4.902100000006612,
+          "max": 5.842899999996007
+        },
+        "constructMs": {
+          "median": 9.591400000004796,
+          "min": 9.474400000006426,
+          "max": 10.630600000033155
+        },
+        "forecastMs": {
+          "median": 26739.822599999985,
+          "min": 26677.1651,
+          "max": 26923.036100000027
+        },
+        "warmQueryMs": {
+          "median": 26.902499999996508,
+          "min": 26.40980000000127,
+          "max": 29.663999999989755
+        },
+        "warmPublicTelemetryMs": {
+          "median": 11.966000000014901,
+          "min": 10.489199999996345,
+          "max": 12.163799999980256
+        },
+        "serializationMs": {
+          "median": 3.76769999996759,
+          "min": 3.1722999999765307,
+          "max": 3.9996999999930267
+        },
+        "restoreMs": {
+          "median": 26768.4409,
+          "min": 26505.518299999996,
+          "max": 26781.968799999973
+        }
+      }
+    },
+    {
+      "scenario": "hardware-balanced",
+      "step": 600,
+      "variant": "optimized",
+      "metrics": {
+        "startupMs": {
+          "median": 43.67859999999928,
+          "min": 43.61300000001211,
+          "max": 44.23580000002403
+        },
+        "solveMs": {
+          "median": 5.262799999996787,
+          "min": 5.243599999987055,
+          "max": 5.99189999999362
+        },
+        "constructMs": {
+          "median": 10.322600000014063,
+          "min": 9.864800000010291,
+          "max": 10.449399999997695
+        },
+        "forecastMs": {
+          "median": 30834.60619999998,
+          "min": 30554.898599999957,
+          "max": 31117.886
+        },
+        "warmQueryMs": {
+          "median": 0.33830000000307336,
+          "min": 0.294899999993504,
+          "max": 0.36340000000200234
+        },
+        "warmPublicTelemetryMs": {
+          "median": 10.799499999993714,
+          "min": 9.986999999993714,
+          "max": 10.87240000005113
+        },
+        "serializationMs": {
+          "median": 3.401800000006915,
+          "min": 3.25789999999688,
+          "max": 4.945799999986775
+        },
+        "restoreMs": {
+          "median": 30615.022800000006,
+          "min": 30497.262799999997,
+          "max": 30861.403300000005
+        }
+      }
+    },
+    {
+      "scenario": "hardware-science",
+      "step": 600,
+      "variant": "original",
+      "metrics": {
+        "startupMs": {
+          "median": 45.33780000003753,
+          "min": 42.84989999997197,
+          "max": 45.79330000001937
+        },
+        "solveMs": {
+          "median": 5.34330000000773,
+          "min": 5.325699999986682,
+          "max": 6.241700000013225
+        },
+        "constructMs": {
+          "median": 10.95339999999851,
+          "min": 9.526400000031572,
+          "max": 15.67129999998724
+        },
+        "forecastMs": {
+          "median": 11240.424699999974,
+          "min": 11181.56660000002,
+          "max": 11314.109200000006
+        },
+        "warmQueryMs": {
+          "median": 25.541800000006333,
+          "min": 25.040999999968335,
+          "max": 26.240999999979977
+        },
+        "warmPublicTelemetryMs": {
+          "median": 11.542500000039581,
+          "min": 11.20270000002347,
+          "max": 11.650899999949615
+        },
+        "serializationMs": {
+          "median": 3.5860000000102445,
+          "min": 3.2462999999988824,
+          "max": 3.952999999979511
+        },
+        "restoreMs": {
+          "median": 11210.496800000023,
+          "min": 10967.612800000003,
+          "max": 11216.24370000005
+        }
+      }
+    },
+    {
+      "scenario": "hardware-science",
+      "step": 600,
+      "variant": "optimized",
+      "metrics": {
+        "startupMs": {
+          "median": 43.490200000000186,
+          "min": 43.059199999959674,
+          "max": 44.536400000040885
+        },
+        "solveMs": {
+          "median": 5.319099999964237,
+          "min": 5.194500000041444,
+          "max": 5.566599999961909
+        },
+        "constructMs": {
+          "median": 10.769199999980628,
+          "min": 9.526899999997113,
+          "max": 11.037600000039674
+        },
+        "forecastMs": {
+          "median": 12961.475399999996,
+          "min": 12865.854200000002,
+          "max": 13004.040700000012
+        },
+        "warmQueryMs": {
+          "median": 0.3172999999951571,
+          "min": 0.3018000000156462,
+          "max": 0.3356999999959953
+        },
+        "warmPublicTelemetryMs": {
+          "median": 10.072500000009313,
+          "min": 9.704800000006799,
+          "max": 12.17280000000028
+        },
+        "serializationMs": {
+          "median": 3.70240000000922,
+          "min": 3.457799999974668,
+          "max": 5.424799999978859
+        },
+        "restoreMs": {
+          "median": 12800.791899999953,
+          "min": 12478.727799999993,
+          "max": 12851.297300000035
+        }
+      }
+    }
+  ]
+}

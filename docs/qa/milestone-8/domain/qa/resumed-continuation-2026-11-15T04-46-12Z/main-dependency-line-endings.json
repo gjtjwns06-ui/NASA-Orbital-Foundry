@@ -1,0 +1,116 @@
+[
+  {
+    "path": "src/hardware/acquisition.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "72a1f573a47bfa7bf2707a15ae50c539f32be5863c7ef8caa69ca9e80a1846b0"
+  },
+  {
+    "path": "src/hardware/attitude.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "0eef1d54aa19eb8e28e248d6db573c085cb4aa0042b110e28efcedc32385916b"
+  },
+  {
+    "path": "src/hardware/catalog.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "851d71d5e8c9380607f762c71807683bbde32e09ead6670f8faca63cb8af95a4"
+  },
+  {
+    "path": "src/hardware/index.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "d911a2cc099a374b3b394c4a083e2e2d7e0365730a2c09482d81f4cbca979728"
+  },
+  {
+    "path": "src/hardware/presets.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "5e44d11f210c33f3694998f421bedf2453573bc25b04f63f23d7678f342e25c1"
+  },
+  {
+    "path": "src/hardware/resolve.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "97bacab7154dc8ea8d27f3703ddaef252e27cd12e41614b822d84ee287a5b697"
+  },
+  {
+    "path": "src/hardware/types.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "4e30922d24072a523b5bbd6c56b4222f8142cbb9036d2f6b0e32eea240c93cfa"
+  },
+  {
+    "path": "src/sim/assembly.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "e6cce1d48d9d475043040f9e1298e85b55ea37c40f3206e7ff28751bc533fbcd"
+  },
+  {
+    "path": "src/sim/attitude.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "65b17947182722b23a94ba601d127eeeb6dc26925b05d4529564a3aae19145dd"
+  },
+  {
+    "path": "src/sim/catalog.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "677ec4087b8cf8fea90a3585572dcf56868fc3ccfb47b0d4b2aa6f4ce24f8607"
+  },
+  {
+    "path": "src/sim/hazards.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "4e2557769946c62d6b57160fce9666b91619c5f196a96756a9279847259b37f0"
+  },
+  {
+    "path": "src/sim/launch.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "23838eb690154ec192c0a2406d5d2c3ae81a810152b0d2ed495b9f8a32967fe3"
+  },
+  {
+    "path": "src/sim/persistence.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "6aaf51c47e376517180394f568feedd3e2645cf1c1113208a0d90f0483e4af00"
+  },
+  {
+    "path": "src/sim/physics.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "666fa2b79febf8ab1d7ba8bd04f061e80cd0acc250c1290951e7a9bc7f9694be"
+  },
+  {
+    "path": "src/sim/simulation.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "e3749354176d83d11cd923d0192de2e75b3220e9ca58f6d83a71db36e01d508d"
+  },
+  {
+    "path": "src/sim/targets.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "f4349abcf6907b2624664c1f32bb127e9e0ce08567633e937db922594b47e9a1"
+  },
+  {
+    "path": "src/sim/types.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "d3c9f427dbc0c1e3cd5c470250090abfa7269276f58fed3ea125b7f94e0e5edb"
+  },
+  {
+    "path": "src/transfer/operations-codec.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "c920b2795606b887a0eaeb55a2bb70a8129c383fd04e40b50add4a9dc893cf4d"
+  },
+  {
+    "path": "src/transfer/operations-codes.ts",
+    "rawSame": true,
+    "normalizedSame": true,
+    "frozenNormalizedSha256": "154c6f71f30011382affb69e6b7712a63308597edb8a206ade8d0a7ba9689a8e"
+  }
+]

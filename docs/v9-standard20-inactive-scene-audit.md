@@ -1,0 +1,14 @@
+# V9 standard20 inactive-scene source audit
+
+Read-only source inspection during the root-owned performance lease; no test, build or browser execution. This is not causal profiling evidence.
+
+- `main.ts`'s existing RAF schedules the next callback, updates its local time and immediately returns when `transferExperience`/`transferOpening` exists. It does not call primary `GameScene.render`, NAV handle work, `controls.update`, or the composer during the standard20 transfer scene.
+- `openTransfer` hides the primary canvas and UI. `TransferExperience.frame` owns its separate renderer. `src/transfer-ui.ts` and `src/render/transfer-scene.ts` have no source diff against accepted checkpoint `b0c0c5cc07c8e0f7f77e06fb1eef86c99a274586`.
+- The new NAV code adds no recurring frame/timer callback. Main window pointer handlers still receive native replay events, but normal inactive state has no main drag/down; new shape-gesture branches require an active NAV handle. Source alone supplies no continuously running NAV hot path explaining the initial FPS shortfall.
+- Existing caveat: `openTransfer` clears the pending save timer, but not the old preview/deadline timers. Primary preview Worker message handling does not guard `transferExperience`, so a late original preview can update hidden-scene/UI state once. This behavior predates NAV01. Whether it occurred inside a timed interval is unobserved; do not label it the cause without trace evidence.
+
+Initial standard20 r1 and actual-medium r2 remain aggregate FAIL solely at raw mean ≥60 FPS (59.86756468 and 59.85085198). Their p99 is 17.1 ms; raw timing hashes and recomputed means match. All 297 product source/public/dist manifest entries are identical across standard r1, medium setup r1, medium timed r2 and high setup r2; each before/after manifest is unchanged. Different manifest totals reflect standard fixture/harness coverage, not a changed product. Medium r1's hidden Fit setup failure and high r2's real T5 uploaded-history precondition failure remain separate preserved attempts.
+
+The cadence is mainly 16.6–16.8 ms with sparse delays. Standard has 49 intervals at 24–26 ms, 19 under 10 ms and one 33.4 ms; medium has 35 at 24–26 ms, 13 under 10 ms, and a short 82.2 s delay cluster with one 53 ms long task. This does not establish a fixed 59.85 Hz platform clock. No long tasks in standard does not exclude shorter JS, GPU, compositor or OS stalls. Uncontrolled user desktop applications remain present.
+
+The contemporaneous v8 control and declared single v9 crossover are distinct future/result artifacts, not rewrites of those failures. A pass or changed cadence can establish run-to-run variability, but without controlled background/trace attribution it does not prove or rule out a particular product cause. Completion and a causal optimization claim remain separate from each individual numerical result.

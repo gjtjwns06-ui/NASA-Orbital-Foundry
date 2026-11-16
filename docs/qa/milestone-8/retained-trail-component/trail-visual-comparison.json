@@ -1,0 +1,50 @@
+[
+  {
+    "time": "0",
+    "region": [
+      0,
+      70,
+      1280,
+      720
+    ],
+    "reason": "Exclude explicitly different harness header; no images altered.",
+    "equalPixels": true,
+    "differenceBounds": null
+  },
+  {
+    "time": "240",
+    "region": [
+      0,
+      70,
+      1280,
+      720
+    ],
+    "reason": "Exclude explicitly different harness header; no images altered.",
+    "equalPixels": true,
+    "differenceBounds": null
+  },
+  {
+    "time": "600",
+    "region": [
+      0,
+      70,
+      1280,
+      720
+    ],
+    "reason": "Exclude explicitly different harness header; no images altered.",
+    "equalPixels": true,
+    "differenceBounds": null
+  },
+  {
+    "time": "1385",
+    "region": [
+      0,
+      70,
+      1280,
+      720
+    ],
+    "reason": "Exclude explicitly different harness header; no images altered.",
+    "equalPixels": true,
+    "differenceBounds": null
+  }
+]

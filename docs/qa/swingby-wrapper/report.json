@@ -1,0 +1,1188 @@
+{
+  "status": "pass",
+  "scope": "Standalone renderer only, real domain initial state and solved predictions; actual pointer commit/cancel and component picking, three real context restores then final disposal. No full mission/worker/performance claim.",
+  "browser": "157.0.8103.52",
+  "initialVelocity": {
+    "left": -0.4491320915121966,
+    "right": 0.4491320915121966,
+    "top": 0.2720704015891191,
+    "bottom": -0.2720704015891191,
+    "unitsPerCssPx": 0.00431857780300189,
+    "targetGoalDiameterCssPx": 70,
+    "goalDiameterCssPx": 70,
+    "viewZoom": 1,
+    "adapted": false,
+    "projection": "orthographic-direction-plane",
+    "angularMagnification": 40,
+    "physicalToleranceDeg": 0.12,
+    "displayAngleClamped": false
+  },
+  "captures": [
+    {
+      "mode": "normal",
+      "plan": {
+        "version": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "aim": {
+          "xKm": 389.2060197194739,
+          "yKm": 155.68240788801688
+        },
+        "operations": [
+          {
+            "id": "encounter-science",
+            "kind": "observe",
+            "start": 138241.26661755153,
+            "end": 143641.26661755153
+          },
+          {
+            "id": "science-return-1",
+            "kind": "downlink",
+            "start": 143641.26661755153,
+            "end": 147241.26661755153
+          },
+          {
+            "id": "science-return-2",
+            "kind": "downlink",
+            "start": 154441.26661755153,
+            "end": 158041.26661755153
+          },
+          {
+            "id": "science-return-3",
+            "kind": "downlink",
+            "start": 165241.26661755153,
+            "end": 168841.26661755153
+          },
+          {
+            "id": "science-return-4",
+            "kind": "downlink",
+            "start": 176041.26661755153,
+            "end": 179641.26661755153
+          },
+          {
+            "id": "science-return-5",
+            "kind": "downlink",
+            "start": 186841.26661755153,
+            "end": 190441.26661755153
+          },
+          {
+            "id": "science-return-6",
+            "kind": "downlink",
+            "start": 197641.26661755153,
+            "end": 201241.26661755153
+          },
+          {
+            "id": "science-return-7",
+            "kind": "downlink",
+            "start": 208441.26661755153,
+            "end": 212041.26661755153
+          },
+          {
+            "id": "science-return-8",
+            "kind": "downlink",
+            "start": 219241.26661755153,
+            "end": 222841.26661755153
+          },
+          {
+            "id": "science-return-9",
+            "kind": "downlink",
+            "start": 230041.26661755153,
+            "end": 233641.26661755153
+          },
+          {
+            "id": "science-return-10",
+            "kind": "downlink",
+            "start": 240841.26661755153,
+            "end": 244441.26661755153
+          },
+          {
+            "id": "science-return-11",
+            "kind": "downlink",
+            "start": 251641.26661755153,
+            "end": 255241.26661755153
+          },
+          {
+            "id": "science-return-12",
+            "kind": "downlink",
+            "start": 262441.26661755156,
+            "end": 266041.26661755156
+          },
+          {
+            "id": "science-return-13",
+            "kind": "downlink",
+            "start": 273241.26661755156,
+            "end": 276841.26661755156
+          },
+          {
+            "id": "science-return-14",
+            "kind": "downlink",
+            "start": 284041.26661755156,
+            "end": 287641.26661755156
+          },
+          {
+            "id": "science-return-15",
+            "kind": "downlink",
+            "start": 294841.26661755156,
+            "end": 298441.26661755156
+          },
+          {
+            "id": "science-return-16",
+            "kind": "downlink",
+            "start": 305641.26661755156,
+            "end": 309241.26661755156
+          }
+        ]
+      },
+      "events": [
+        {
+          "kind": "aim",
+          "xKm": -4.939477369045415e-10,
+          "yKm": -6.133923339566478e-10,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 38.920601973178535,
+          "yKm": 15.56839915677786,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 77.84120394284483,
+          "yKm": 31.136402393395212,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 116.76180591651526,
+          "yKm": 46.70480155078553,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 155.6824078877414,
+          "yKm": 62.27280478630495,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 194.6030098599176,
+          "yKm": 77.84120394481893,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 233.5236118311772,
+          "yKm": 93.40960310111795,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 272.4442138047914,
+          "yKm": 108.97760633767633,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 311.3648157760133,
+          "yKm": 124.54600549396011,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 350.28541774823907,
+          "yKm": 140.11400873177217,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 389.2060197194739,
+          "yKm": 155.68240788801688,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 389.2060197194739,
+          "yKm": 155.68240788801688,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": true
+        }
+      ],
+      "revision": 1,
+      "settings": {
+        "quality": "high",
+        "reducedMotion": true,
+        "pixelRatio": 1,
+        "surfaceDetail": {
+          "status": "idle",
+          "eligible": false,
+          "active": false,
+          "cached": false,
+          "requestCount": 0,
+          "width": null,
+          "height": null,
+          "error": null,
+          "activeWidth": 1440,
+          "activeHeight": 720
+        },
+        "stars": {
+          "count": 640,
+          "disposed": false,
+          "geometries": 1,
+          "materials": 1,
+          "textures": 0,
+          "translationParallax": false,
+          "simulationTimeAnimation": false
+        },
+        "carrier": {
+          "profileId": "cg-trim-impulse-v1",
+          "profileHash": "dca16c1db88e8a05dd82fb119bd8ba93ea47d9609ec18cfd960166bbe2a41c7b",
+          "thrustDirectionLocal": [
+            0.1204582568863472,
+            -0.06250020532206368,
+            -0.9907489756152174
+          ],
+          "gimbalAngleDeg": 7.799520755562826,
+          "carrierCentroidM": [
+            0,
+            0,
+            0.07
+          ],
+          "disposed": false,
+          "actualPoseAccepted": true
+        },
+        "resources": {
+          "geometries": 91,
+          "textures": 8,
+          "programs": 20
+        },
+        "lost": false
+      },
+      "velocity": {
+        "left": -0.4491320915121966,
+        "right": 0.4491320915121966,
+        "top": 0.2720704015891191,
+        "bottom": -0.2720704015891191,
+        "unitsPerCssPx": 0.00431857780300189,
+        "targetGoalDiameterCssPx": 70,
+        "goalDiameterCssPx": 70,
+        "viewZoom": 1,
+        "adapted": false,
+        "projection": "orthographic-direction-plane",
+        "angularMagnification": 40,
+        "physicalToleranceDeg": 0.12,
+        "displayAngleClamped": false
+      }
+    },
+    {
+      "mode": "large",
+      "plan": {
+        "version": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "aim": {
+          "xKm": 778.4120394396808,
+          "yKm": 311.3648157767435
+        },
+        "operations": [
+          {
+            "id": "encounter-science",
+            "kind": "observe",
+            "start": 138241.26661755153,
+            "end": 143641.26661755153
+          },
+          {
+            "id": "science-return-1",
+            "kind": "downlink",
+            "start": 143641.26661755153,
+            "end": 147241.26661755153
+          },
+          {
+            "id": "science-return-2",
+            "kind": "downlink",
+            "start": 154441.26661755153,
+            "end": 158041.26661755153
+          },
+          {
+            "id": "science-return-3",
+            "kind": "downlink",
+            "start": 165241.26661755153,
+            "end": 168841.26661755153
+          },
+          {
+            "id": "science-return-4",
+            "kind": "downlink",
+            "start": 176041.26661755153,
+            "end": 179641.26661755153
+          },
+          {
+            "id": "science-return-5",
+            "kind": "downlink",
+            "start": 186841.26661755153,
+            "end": 190441.26661755153
+          },
+          {
+            "id": "science-return-6",
+            "kind": "downlink",
+            "start": 197641.26661755153,
+            "end": 201241.26661755153
+          },
+          {
+            "id": "science-return-7",
+            "kind": "downlink",
+            "start": 208441.26661755153,
+            "end": 212041.26661755153
+          },
+          {
+            "id": "science-return-8",
+            "kind": "downlink",
+            "start": 219241.26661755153,
+            "end": 222841.26661755153
+          },
+          {
+            "id": "science-return-9",
+            "kind": "downlink",
+            "start": 230041.26661755153,
+            "end": 233641.26661755153
+          },
+          {
+            "id": "science-return-10",
+            "kind": "downlink",
+            "start": 240841.26661755153,
+            "end": 244441.26661755153
+          },
+          {
+            "id": "science-return-11",
+            "kind": "downlink",
+            "start": 251641.26661755153,
+            "end": 255241.26661755153
+          },
+          {
+            "id": "science-return-12",
+            "kind": "downlink",
+            "start": 262441.26661755156,
+            "end": 266041.26661755156
+          },
+          {
+            "id": "science-return-13",
+            "kind": "downlink",
+            "start": 273241.26661755156,
+            "end": 276841.26661755156
+          },
+          {
+            "id": "science-return-14",
+            "kind": "downlink",
+            "start": 284041.26661755156,
+            "end": 287641.26661755156
+          },
+          {
+            "id": "science-return-15",
+            "kind": "downlink",
+            "start": 294841.26661755156,
+            "end": 298441.26661755156
+          },
+          {
+            "id": "science-return-16",
+            "kind": "downlink",
+            "start": 305641.26661755156,
+            "end": 309241.26661755156
+          }
+        ]
+      },
+      "events": [
+        {
+          "kind": "aim",
+          "xKm": -4.939477369045415e-10,
+          "yKm": -6.133923339566478e-10,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 38.920601973178535,
+          "yKm": 15.56839915677786,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 77.84120394284483,
+          "yKm": 31.136402393395212,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 116.76180591651526,
+          "yKm": 46.70480155078553,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 155.6824078877414,
+          "yKm": 62.27280478630495,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 194.6030098599176,
+          "yKm": 77.84120394481893,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 233.5236118311772,
+          "yKm": 93.40960310111795,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 272.4442138047914,
+          "yKm": 108.97760633767633,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 311.3648157760133,
+          "yKm": 124.54600549396011,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 350.28541774823907,
+          "yKm": 140.11400873177217,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 389.2060197194739,
+          "yKm": 155.68240788801688,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 389.2060197194739,
+          "yKm": 155.68240788801688,
+          "revision": 0,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": true
+        },
+        {
+          "kind": "aim",
+          "xKm": 389.2060197194739,
+          "yKm": 155.68240788801688,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 330.82511676130645,
+          "yKm": 123.24857291119476,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 272.44421380316084,
+          "yKm": 90.814737934339,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 214.06331084502196,
+          "yKm": 58.3809029574869,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 155.68240788687405,
+          "yKm": 25.947067980675193,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "cancel"
+        },
+        {
+          "kind": "part",
+          "id": "solar-1"
+        },
+        {
+          "kind": "part",
+          "id": "solar-1"
+        },
+        {
+          "kind": "part",
+          "id": "solar-1"
+        },
+        {
+          "kind": "part",
+          "id": "solar-1"
+        },
+        {
+          "kind": "part",
+          "id": null
+        },
+        {
+          "kind": "aim",
+          "xKm": 389.2060197194739,
+          "yKm": 155.68240788801688,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 428.12662169306753,
+          "yKm": 171.25080704537646,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 467.0472236642367,
+          "yKm": 186.8188102808292,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 505.9678256341938,
+          "yKm": 202.3872094383731,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 544.8884276077426,
+          "yKm": 217.955212674949,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 583.8090295789152,
+          "yKm": 233.52361183116926,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 622.7296315524525,
+          "yKm": 249.09201098850542,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 661.6502335224993,
+          "yKm": 264.66001422527535,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 700.5708354960343,
+          "yKm": 280.2284133826118,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 739.4914374671314,
+          "yKm": 295.79641661807926,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 778.4120394396808,
+          "yKm": 311.3648157767435,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": false
+        },
+        {
+          "kind": "aim",
+          "xKm": 778.4120394396808,
+          "yKm": 311.3648157767435,
+          "revision": 1,
+          "scenarioId": "mars-exit-corridor-2027-v1",
+          "commit": true
+        }
+      ],
+      "revision": 2,
+      "settings": {
+        "quality": "high",
+        "reducedMotion": true,
+        "pixelRatio": 1,
+        "surfaceDetail": {
+          "status": "ready",
+          "eligible": false,
+          "active": false,
+          "cached": true,
+          "requestCount": 1,
+          "width": 4096,
+          "height": 2048,
+          "error": null,
+          "activeWidth": 1440,
+          "activeHeight": 720
+        },
+        "stars": {
+          "count": 640,
+          "disposed": false,
+          "geometries": 1,
+          "materials": 1,
+          "textures": 0,
+          "translationParallax": false,
+          "simulationTimeAnimation": false
+        },
+        "carrier": {
+          "profileId": "cg-trim-impulse-v1",
+          "profileHash": "dca16c1db88e8a05dd82fb119bd8ba93ea47d9609ec18cfd960166bbe2a41c7b",
+          "thrustDirectionLocal": [
+            0.1204582568863472,
+            -0.06250020532206368,
+            -0.9907489756152174
+          ],
+          "gimbalAngleDeg": 7.799520755562826,
+          "carrierCentroidM": [
+            0,
+            0,
+            0.07
+          ],
+          "disposed": false,
+          "actualPoseAccepted": true
+        },
+        "resources": {
+          "geometries": 92,
+          "textures": 10,
+          "programs": 21
+        },
+        "lost": false
+      },
+      "velocity": {
+        "left": -0.4491320915121966,
+        "right": 0.4491320915121966,
+        "top": 0.2720704015891191,
+        "bottom": -0.2720704015891191,
+        "unitsPerCssPx": 0.00431857780300189,
+        "targetGoalDiameterCssPx": 70,
+        "goalDiameterCssPx": 70,
+        "viewZoom": 1,
+        "adapted": false,
+        "projection": "orthographic-direction-plane",
+        "angularMagnification": 40,
+        "physicalToleranceDeg": 0.12,
+        "displayAngleClamped": false
+      }
+    }
+  ],
+  "state": {
+    "scene": {
+      "quality": "high",
+      "reducedMotion": true,
+      "pixelRatio": 1,
+      "surfaceDetail": {
+        "status": "ready",
+        "eligible": true,
+        "active": true,
+        "cached": true,
+        "requestCount": 1,
+        "width": 4096,
+        "height": 2048,
+        "error": null,
+        "activeWidth": 4096,
+        "activeHeight": 2048
+      },
+      "stars": {
+        "count": 640,
+        "disposed": false,
+        "geometries": 1,
+        "materials": 1,
+        "textures": 0,
+        "translationParallax": false,
+        "simulationTimeAnimation": false
+      },
+      "carrier": {
+        "profileId": "cg-trim-impulse-v1",
+        "profileHash": "dca16c1db88e8a05dd82fb119bd8ba93ea47d9609ec18cfd960166bbe2a41c7b",
+        "thrustDirectionLocal": [
+          0.1204582568863472,
+          -0.06250020532206368,
+          -0.9907489756152174
+        ],
+        "gimbalAngleDeg": 7.799520755562826,
+        "carrierCentroidM": [
+          0,
+          0,
+          0.07
+        ],
+        "disposed": false,
+        "actualPoseAccepted": true
+      },
+      "resources": {
+        "geometries": 89,
+        "textures": 9,
+        "programs": 21
+      },
+      "lost": false
+    },
+    "inspection": {
+      "enabled": true,
+      "frameKey": "actual-Mars-swingby",
+      "displayScale": 0.18,
+      "fitDistance": 2.2140422089503478,
+      "distance": 2.214042208950332,
+      "minDistance": 0.4035438493513933,
+      "maxDistance": 306.2051045673602,
+      "conservativeSurfaceClearance": 392.64872113171725,
+      "displayEnvelopeRadius": 0.40103184040354206,
+      "viewport": {
+        "left": 312,
+        "right": 312,
+        "top": 172,
+        "bottom": 172
+      },
+      "available": true,
+      "unavailableReason": null,
+      "timeSeconds": 0,
+      "selectedPartId": null,
+      "focusedPartId": null,
+      "attitudeIsActual": true,
+      "view": "current Mars epoch",
+      "displayScaleIsExaggerated": true,
+      "physicalPositionKm": [
+        440153.2998243743,
+        -37808.394132962625,
+        -68263.51721821791
+      ],
+      "craftPosition": [
+        389.5736537758144,
+        -60.419103600723915,
+        33.46369151759489
+      ],
+      "craftQuaternion": [
+        0.24779608896452315,
+        0.3702659611120061,
+        0.050046247072969896,
+        0.8938655321073745
+      ],
+      "cameraPosition": [
+        391.8027665749468,
+        -60.760279921445054,
+        33.60310342987374
+      ],
+      "cameraSurfaceClearance": 394.90751195728063
+    },
+    "events": [
+      {
+        "kind": "aim",
+        "xKm": -4.939477369045415e-10,
+        "yKm": -6.133923339566478e-10,
+        "revision": 0,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 38.920601973178535,
+        "yKm": 15.56839915677786,
+        "revision": 0,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 77.84120394284483,
+        "yKm": 31.136402393395212,
+        "revision": 0,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 116.76180591651526,
+        "yKm": 46.70480155078553,
+        "revision": 0,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 155.6824078877414,
+        "yKm": 62.27280478630495,
+        "revision": 0,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 194.6030098599176,
+        "yKm": 77.84120394481893,
+        "revision": 0,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 233.5236118311772,
+        "yKm": 93.40960310111795,
+        "revision": 0,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 272.4442138047914,
+        "yKm": 108.97760633767633,
+        "revision": 0,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 311.3648157760133,
+        "yKm": 124.54600549396011,
+        "revision": 0,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 350.28541774823907,
+        "yKm": 140.11400873177217,
+        "revision": 0,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 389.2060197194739,
+        "yKm": 155.68240788801688,
+        "revision": 0,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 389.2060197194739,
+        "yKm": 155.68240788801688,
+        "revision": 0,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": true
+      },
+      {
+        "kind": "aim",
+        "xKm": 389.2060197194739,
+        "yKm": 155.68240788801688,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 330.82511676130645,
+        "yKm": 123.24857291119476,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 272.44421380316084,
+        "yKm": 90.814737934339,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 214.06331084502196,
+        "yKm": 58.3809029574869,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 155.68240788687405,
+        "yKm": 25.947067980675193,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "cancel"
+      },
+      {
+        "kind": "part",
+        "id": "solar-1"
+      },
+      {
+        "kind": "part",
+        "id": "solar-1"
+      },
+      {
+        "kind": "part",
+        "id": "solar-1"
+      },
+      {
+        "kind": "part",
+        "id": "solar-1"
+      },
+      {
+        "kind": "part",
+        "id": null
+      },
+      {
+        "kind": "aim",
+        "xKm": 389.2060197194739,
+        "yKm": 155.68240788801688,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 428.12662169306753,
+        "yKm": 171.25080704537646,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 467.0472236642367,
+        "yKm": 186.8188102808292,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 505.9678256341938,
+        "yKm": 202.3872094383731,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 544.8884276077426,
+        "yKm": 217.955212674949,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 583.8090295789152,
+        "yKm": 233.52361183116926,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 622.7296315524525,
+        "yKm": 249.09201098850542,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 661.6502335224993,
+        "yKm": 264.66001422527535,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 700.5708354960343,
+        "yKm": 280.2284133826118,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 739.4914374671314,
+        "yKm": 295.79641661807926,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 778.4120394396808,
+        "yKm": 311.3648157767435,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 778.4120394396808,
+        "yKm": 311.3648157767435,
+        "revision": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": true
+      },
+      {
+        "kind": "aim",
+        "xKm": 778.4120394396808,
+        "yKm": 311.3648157767435,
+        "revision": 2,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 720.0311364814737,
+        "yKm": 278.93098079990256,
+        "revision": 2,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 661.6502335232898,
+        "yKm": 246.4971458230282,
+        "revision": 2,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 603.2693305650959,
+        "yKm": 214.06331084619507,
+        "revision": 2,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "aim",
+        "xKm": 544.8884276069247,
+        "yKm": 181.62947586932796,
+        "revision": 2,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "commit": false
+      },
+      {
+        "kind": "cancel"
+      },
+      {
+        "kind": "part",
+        "id": "solar-1"
+      },
+      {
+        "kind": "part",
+        "id": "solar-1"
+      },
+      {
+        "kind": "part",
+        "id": "solar-1"
+      },
+      {
+        "kind": "part",
+        "id": "solar-1"
+      },
+      {
+        "kind": "part",
+        "id": null
+      },
+      {
+        "kind": "lost"
+      },
+      {
+        "kind": "restored"
+      },
+      {
+        "kind": "lost"
+      },
+      {
+        "kind": "restored"
+      },
+      {
+        "kind": "lost"
+      },
+      {
+        "kind": "restored"
+      }
+    ]
+  },
+  "nativeErrors": [],
+  "errors": [],
+  "warnings": [
+    "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20",
+    "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20",
+    "THREE.WebGLProgram: Program Info Log: (221,91-147): warning X4122: sum of 0.996094 and -2.98545e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(207,10-73): warning X4008: floating point division by zero\n(207,10-73): warning X4008: floating point division by zero\n(207,10-73): warning X4008: floating point division by zero",
+    "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20",
+    "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20",
+    "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20",
+    "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20",
+    "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20",
+    "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20"
+  ]
+}

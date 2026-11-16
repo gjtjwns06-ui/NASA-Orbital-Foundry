@@ -1,0 +1,90 @@
+{
+  "id": "mars-exit-corridor-2027-v1",
+  "modelVersion": "swingby-1.0.0",
+  "status": "candidate",
+  "epochJdTdb": 2461617.8583186734,
+  "frame": "ICRF",
+  "timeScale": "TDB",
+  "initial": {
+    "positionKm": [
+      440153.29982437415,
+      -37808.39413296271,
+      -68263.51721821795
+    ],
+    "velocityKmS": [
+      -3.00918327149763,
+      0.30687738020424615,
+      0.4886458295047531
+    ]
+  },
+  "initialFuelKg": 0.25,
+  "correctionSeconds": 3600,
+  "controlX": [
+    0.1562129374280655,
+    0.9062145631889668,
+    0.39290289340284285
+  ],
+  "controlY": [
+    -0.10517112631692882,
+    0.4107856306096325,
+    -0.9056457364079372
+  ],
+  "aimPlane": {
+    "centerKm": [
+      29724.873634099986,
+      3629.2071239122934,
+      -1805.7527761393378
+    ],
+    "normal": [
+      -0.9821082182577061,
+      0.1001515409211235,
+      0.15947763630615536
+    ],
+    "xAxis": [
+      0.1562129374280655,
+      0.9062145631889668,
+      0.39290289340284285
+    ],
+    "yAxis": [
+      -0.10517112631692882,
+      0.4107856306096325,
+      -0.9056457364079372
+    ]
+  },
+  "control": {
+    "maxAxisMps": 7,
+    "maxMagnitudeMps": 8,
+    "solverVersion": "bounded-aim-newton-1",
+    "aimResidualKm": 0.01
+  },
+  "exit": {
+    "radiusKm": 100000,
+    "targetDirection": [
+      0.673214250772534,
+      -0.6698951100191053,
+      -0.31308643236216177
+    ],
+    "toleranceDeg": 0.12,
+    "energyRangeKm2S2": [
+      -284.5,
+      -279.5
+    ]
+  },
+  "safetyAltitudeKm": 250,
+  "patchRadiusKm": 577000,
+  "deadlineSeconds": 345600,
+  "science": {
+    "targetPackets": 3,
+    "minimumQuality": 0.4,
+    "captureIntervalS": 120,
+    "uniqueBinS": 300
+  },
+  "ephemeris": {
+    "datasetId": "jpl-horizons-icrf-tdb-20260801-20280301-v1",
+    "earthHash": "785c43fe2189d1470b03ee33ccace2eafbe897dde7f7e09f9dee34b1fa7aa22e",
+    "marsHash": "959901a397605c0b2d1b0fae5799172fe927b16fd30bbbe3fbcf2ea4ed1ef2d4"
+  },
+  "propulsionProfileId": "cg-trim-impulse-v1",
+  "propulsionHash": "dca16c1db88e8a05dd82fb119bd8ba93ea47d9609ec18cfd960166bbe2a41c7b",
+  "hash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091"
+}

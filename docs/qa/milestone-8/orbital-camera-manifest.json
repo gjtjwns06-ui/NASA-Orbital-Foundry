@@ -1,0 +1,55 @@
+{
+  "status": "bounded-component-accepted",
+  "productionFiles": [
+    "src/render/deployment-scene.ts",
+    "src/render/deployment-scene-types.ts",
+    "src/render/orbital-inspection-follow.ts"
+  ],
+  "files": [
+    {
+      "path": "src/render/deployment-scene.ts",
+      "bytes": 34970,
+      "sha256": "a30331d542c587b63eeec9ffb47578841d2a99c3771b0ffd1d7c988a0de6ed57"
+    },
+    {
+      "path": "src/render/deployment-scene-types.ts",
+      "bytes": 3879,
+      "sha256": "407ecaa33d4a95a1d3ac9965daa7d23dc5f16ea9815bf4d0ffdda3d193e8351c"
+    },
+    {
+      "path": "src/render/orbital-inspection-follow.ts",
+      "bytes": 3538,
+      "sha256": "0d2ff215102a4efb2c3464a3a5e16b9ad3a74dfad94982b07d04a1d10ec41055"
+    },
+    {
+      "path": "tests/orbital-inspection-follow.test.ts",
+      "bytes": 5630,
+      "sha256": "d4349d9d94a7867c38a6aee172d29c45c0bc9fe09dffe8e7b39f391abc63f2bc"
+    },
+    {
+      "path": "docs/camera-unit-results.json",
+      "bytes": 2667,
+      "sha256": "58b760a45099184416fdc92c07de3c611b3fca12c513e64ccafc83df6435ca86"
+    },
+    {
+      "path": "docs/qa/camera-fixture-browser-result.json",
+      "bytes": 76,
+      "sha256": "7c829be52abd2de9a811f6949ff1862b60843c684226714b5c78ee51d26a5d43"
+    },
+    {
+      "path": "docs/qa/camera-replay-fixture.json",
+      "bytes": 143734,
+      "sha256": "4a744ee2c294435dad3759cd20862d5163b294459e707c1cc5fe5dbd875ae054"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/report.json",
+      "bytes": 1946959,
+      "sha256": "b3f4ba03554c195e936d464e33b5943526aaa8688b17117465a1a7ee3de468e5"
+    },
+    {
+      "path": "docs/orbital-camera-handoff.md",
+      "bytes": 4994,
+      "sha256": "ce23e8cfea25c5d645abd9586b315bf92d6054f1b1a304aa424b2d6da0ed433d"
+    }
+  ]
+}

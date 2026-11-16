@@ -1,0 +1,189 @@
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+import type {Design,Quaternion} from '../sim/types';
+import {partTransformFor} from '../hardware';
+import {createBus,createPart} from './parts';
+import {CraftInspectionCamera,type InspectionViewport} from './craft-camera';
+import {LazySurfaceTexture} from './lazy-surface-texture';
+import {SwingbyObjective,type SwingbyObjectiveSnapshot,type SwingbyAimDrag,type SwingbyVector} from './swingby-objective';
+import {SwingbyCarrier,type SwingbyCarrierProfile} from './swingby-carrier';
+import {retireContextResources} from './context-resources';
+import {planetInspectionDirection} from './planet-inspection-direction';
+import {swingbyAimCamera} from './swingby-aim-camera';
+import {velocityInsetFrame} from './swingby-velocity-camera';
+
+export type SwingbyQuality='high'|'medium'|'low';
+export interface SwingbySceneSnapshot {
+ /** Actual runtime state, never a solution-preview epoch. */
+ timeSeconds:number;positionKm:SwingbyVector;attitudeQuaternion:Quaternion;sunDirectionICRF:SwingbyVector;
+ /** Caller-supplied visual surface rotation, not a body-fixed targeting model. */
+ marsSurfaceRotationRad:number;
+ objective:SwingbyObjectiveSnapshot;
+ /** Actual domain body-frame thrust; renderer converts through the actual mount. */
+ engine?:{partId:string;thrustDirectionBody:SwingbyVector};
+}
+export interface SwingbySceneCallbacks {
+ aimChange?:(point:SwingbyAimDrag,commit:boolean)=>void;aimCancel?:()=>void;
+ partSelected?:(id:string|null)=>void;contextLost?:()=>void;contextRestored?:()=>void;
+}
+const MARS_RADIUS_KM=3389.5,SCALE=3/MARS_RADIUS_KM;
+// Camera-only clearance, not a collision/success threshold. Near/contact states
+// keep their exact position and remain renderable in the planetary overview.
+const INSPECTION_CLEARANCE_KM=.02;
+const FRAME=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1,0,0),-Math.PI/2);
+const slots=['map','normalMap','roughnessMap','metalnessMap','emissiveMap','alphaMap','bumpMap','aoMap','lightMap','displacementMap','envMap'] as const;
+export const swingbyScenePosition=(v:SwingbyVector)=>new THREE.Vector3(v[0]*SCALE,v[2]*SCALE,-v[1]*SCALE);
+export const canInspectSwingbyState=(s:Pick<SwingbySceneSnapshot,'positionKm'>)=>new THREE.Vector3(...s.positionKm).length()>MARS_RADIUS_KM+INSPECTION_CLEARANCE_KM;
+export function validateSwingbySceneSnapshot(s:SwingbySceneSnapshot){
+ if(!s||!Number.isFinite(s.timeSeconds)||s.timeSeconds<0||!Number.isFinite(s.marsSurfaceRotationRad))throw new Error('Invalid actual swingby state.');
+ for(const v of [s.positionKm,s.sunDirectionICRF])if(!Array.isArray(v)||v.length!==3||!v.every(Number.isFinite))throw new Error('Invalid swingby physical vector.');
+ if(Math.abs(new THREE.Vector3(...s.sunDirectionICRF).length()-1)>1e-5)throw new Error('Sun direction must be a unit ICRF vector.');
+ if(!Array.isArray(s.attitudeQuaternion)||s.attitudeQuaternion.length!==4||!s.attitudeQuaternion.every(Number.isFinite)||Math.abs(new THREE.Quaternion(...s.attitudeQuaternion).length()-1)>1e-5)throw new Error('Actual attitude must be a unit quaternion.');
+ if(Math.abs(s.objective.elapsedSeconds-s.timeSeconds)>1e-6)throw new Error('Objective and actual spacecraft must share one display epoch.');
+ if(s.engine&&(!s.engine.partId||!s.engine.thrustDirectionBody.every(Number.isFinite)||Math.abs(new THREE.Vector3(...s.engine.thrustDirectionBody).length()-1)>1e-5))throw new Error('Actual thrust must be a body-frame unit vector.');
+}
+
+/** Isolated Mars-only renderer. No ephemeris, propagation, flight engine or
+ * synthetic FullTransferSolution. The caller owns all state and achievement. */
+export class SwingbyScene {
+ readonly renderer:THREE.WebGLRenderer;readonly canvas:HTMLCanvasElement;
+ readonly scene=new THREE.Scene();readonly camera=new THREE.PerspectiveCamera(43,1,.001,5000);
+ readonly objective=new SwingbyObjective();readonly controls:OrbitControls;
+ private readonly craft=new THREE.Group();private readonly mars:THREE.Mesh<THREE.SphereGeometry,THREE.MeshStandardMaterial>;
+ private readonly key=new THREE.DirectionalLight(0xffe5cf,3.1);private readonly insetScene=new THREE.Scene();
+ private readonly insetCamera=new THREE.OrthographicCamera(-1,1,1,-1,.01,50);
+ private readonly inspection:CraftInspectionCamera;private readonly observer:ResizeObserver;
+ private detail:LazySurfaceTexture;private baseMap:THREE.Texture|null=null;
+ private environment:THREE.WebGLRenderTarget|null=null;
+ private quality:SwingbyQuality;private reducedMotion:boolean;private disposed=false;private lost=false;
+ private snapshot:SwingbySceneSnapshot|null=null;private design:Design|null=null;private bounds=new THREE.Box3();
+ private partBounds=new Map<string,THREE.Box3>();private solids:THREE.Box3[]=[];
+ private selected:string|null=null;private focused:string|null=null;private hasFramed=false;private dragPointer:number|null=null;
+ private viewport:InspectionViewport={left:0,right:0,top:0,bottom:0};private velocityViewport:{left:number;top:number;width:number;height:number}|null=null;
+ private carrier:SwingbyCarrier|null=null;private carrierProfile:SwingbyCarrierProfile|null=null;private carrierPartId:string|null=null;
+ private carrierPoseValid=true;
+ private pointerStart:{x:number;y:number;id:number}|null=null;
+ constructor(private container:HTMLElement,private callbacks:SwingbySceneCallbacks={},options:{quality?:SwingbyQuality;reducedMotion?:boolean}={}){
+  this.quality=options.quality??'high';this.reducedMotion=options.reducedMotion??false;
+  this.renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});this.renderer.outputColorSpace=THREE.SRGBColorSpace;this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.1;this.renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+  this.canvas=this.renderer.domElement;this.canvas.setAttribute('aria-label','3D Mars swingby. Drag the fixed aim-plane target; right-drag to orbit and scroll to zoom.');this.canvas.tabIndex=0;Object.assign(this.canvas.style,{width:'100%',height:'100%',display:'block',touchAction:'none'});container.append(this.canvas);
+  this.scene.background=new THREE.Color(0x040b13);this.scene.environmentIntensity=.4;this.refreshEnvironment();
+  this.key.castShadow=true;this.key.shadow.mapSize.set(1024,1024);this.key.shadow.bias=-.00015;this.key.shadow.normalBias=.006;
+  this.scene.add(new THREE.AmbientLight(0xadc8e2,.32),this.key,this.key.target,this.craft,this.objective.group);
+  this.insetScene.add(this.objective.velocityGroup,new THREE.AmbientLight(0xffffff,2));this.insetCamera.position.set(0,0,6);this.insetCamera.lookAt(0,0,1);
+  this.objective.setDisplayFrame([0,0,0],SCALE);this.objective.setAimDisplay({spanKm:2000});
+  this.mars=new THREE.Mesh(new THREE.SphereGeometry(3,96,64),new THREE.MeshStandardMaterial({color:0xb87650,roughness:.93}));this.mars.name='actual-local-Mars';this.scene.add(this.mars);
+  this.detail=new LazySurfaceTexture({load:()=>new THREE.TextureLoader().loadAsync('/assets/textures/mars-mdim21-4k.webp'),validate:t=>{const im=t.image as {width:number;height:number};if(im.width!==4096||im.height!==2048)throw new Error('Unexpected Mars detail dimensions.');},configure:t=>{t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=Math.min(8,this.renderer.capabilities.getMaxAnisotropy());},changed:()=>{if(!this.disposed)this.applyMap();}});
+  new THREE.TextureLoader().load('/assets/mars.jpg',t=>{if(this.disposed){t.dispose();return;}t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=Math.min(8,this.renderer.capabilities.getMaxAnisotropy());this.baseMap=t;this.applyMap();},undefined,()=>{if(!this.disposed)this.canvas.dataset.textureFallback='true';});
+  this.controls=new OrbitControls(this.camera,this.canvas);this.controls.enableDamping=!this.reducedMotion;this.controls.dampingFactor=.1;this.controls.mouseButtons={LEFT:undefined as unknown as THREE.MOUSE,MIDDLE:THREE.MOUSE.PAN,RIGHT:THREE.MOUSE.ROTATE};this.controls.minDistance=3.4;this.controls.maxDistance=1800;
+  this.inspection=new CraftInspectionCamera(this.camera,this.controls);this.camera.position.set(14,10,18);this.controls.update();
+  this.canvas.addEventListener('pointerdown',this.pointerDown,true);this.canvas.addEventListener('pointermove',this.pointerMove);this.canvas.addEventListener('pointerup',this.pointerUp);this.canvas.addEventListener('pointercancel',this.pointerCancel);this.canvas.addEventListener('dblclick',this.doubleClick);this.canvas.addEventListener('webglcontextlost',this.contextLost);this.canvas.addEventListener('webglcontextrestored',this.contextRestored);window.addEventListener('keydown',this.keyDown);
+  this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(container);this.setQuality(this.quality);this.resize();
+ }
+ private refreshEnvironment(){const pmrem=new THREE.PMREMGenerator(this.renderer),room=new RoomEnvironment();this.environment=pmrem.fromScene(room,.08);this.scene.environment=this.environment.texture;room.dispose();pmrem.dispose();}
+ private retireTargets(){
+  this.environment?.dispose();this.environment=null;this.scene.environment=null;
+  // Retire pre-loss shadow handles BEFORE Three replaces its GL property cache.
+  this.key.shadow.map?.dispose();this.key.shadow.map=null;this.key.shadow.mapPass?.dispose();this.key.shadow.mapPass=null;
+ }
+ private applyMap(){const map=this.detail.activeTexture??this.baseMap;if(this.mars.material.map!==map){this.mars.material.map=map;if(map)this.mars.material.color.set(0xffffff);this.mars.material.needsUpdate=true;}}
+ private updateDetail(){if(this.disposed)return;this.detail.setEligible(!!this.snapshot&&this.inspection.enabled&&this.quality==='high'&&!this.lost&&this.renderer.capabilities.maxTextureSize>=4096);this.applyMap();}
+ /** Profile adapter also works in a builder, but no global catalogue is edited. */
+ setCarrierProfile(profile:SwingbyCarrierProfile|null,enginePartId:string|null){this.carrierProfile=profile?structuredClone(profile):null;this.carrierPartId=enginePartId;if(this.design)this.setCraft(this.design);}
+ setCraft(design:Design){
+  if(this.disposed)return;this.carrier?.dispose();this.carrier=null;this.disposeTree(this.craft);this.design=structuredClone(design);this.craft.add(createBus(design));
+  for(const part of design.parts){const object=createPart(part,design),tr=partTransformFor(design,part);object.position.set(...tr.position);object.quaternion.setFromRotationMatrix(new THREE.Matrix4().makeBasis(new THREE.Vector3(...tr.tangentU),new THREE.Vector3(...tr.tangentV),new THREE.Vector3(...tr.normal)));object.userData={...object.userData,partId:part.id,partKind:part.kind,modelId:part.modelId??null};this.craft.add(object);}
+  // Per-renderer clones retain the CPU source image but own distinct GL handles.
+  const materials=new Map<THREE.Material,THREE.Material>(),textures=new Map<THREE.Texture,THREE.Texture>();
+  this.craft.traverse(o=>{if(!(o instanceof THREE.Mesh))return;const copy=(m:THREE.Material)=>{if(materials.has(m))return materials.get(m)!;const c=m.clone() as THREE.MeshStandardMaterial;materials.set(m,c);for(const slot of slots){const t=(m as THREE.MeshStandardMaterial)[slot];if(t){let own=textures.get(t);if(!own){own=t.clone();own.needsUpdate=true;textures.set(t,own);}c[slot]=own;}}return c;};o.material=Array.isArray(o.material)?o.material.map(copy):copy(o.material);});
+  if(this.carrierProfile&&this.carrierPartId){const engine=this.craft.children.find(o=>o.userData.partId===this.carrierPartId&&o.userData.partKind==='engine');if(engine)this.carrier=new SwingbyCarrier(engine,this.carrierProfile);}
+  const p=this.craft.position.clone(),q=this.craft.quaternion.clone(),scale=this.craft.scale.clone();this.craft.position.set(0,0,0);this.craft.quaternion.identity();this.craft.scale.setScalar(1);this.craft.updateMatrixWorld(true);this.bounds.setFromObject(this.craft,true);this.partBounds.clear();this.solids=[];
+  for(const child of this.craft.children){const box=new THREE.Box3().setFromObject(child,true);this.solids.push(box);if(child.userData.partId)this.partBounds.set(child.userData.partId,box);}
+  this.craft.position.copy(p);this.craft.quaternion.copy(q);this.craft.scale.copy(scale);if(this.selected&&!this.partBounds.has(this.selected))this.selected=null;if(this.focused&&!this.partBounds.has(this.focused))this.focused=null;this.inspection.requestFit();this.position();
+ }
+ setSnapshot(snapshot:SwingbySceneSnapshot|null){
+  if(this.disposed)return;if(!snapshot){this.setInspection(false);this.snapshot=null;this.objective.setSnapshot(null);this.craft.visible=false;this.hasFramed=false;this.updateDetail();return;}
+  validateSwingbySceneSnapshot(snapshot);if(this.inspection.enabled&&!canInspectSwingbyState(snapshot))this.setInspection(false);this.objective.setSnapshot(snapshot.objective);this.snapshot=structuredClone(snapshot);this.position();if(!this.hasFramed){this.focusOverview('encounter');this.hasFramed=true;}
+ }
+ private position(){
+  const s=this.snapshot;if(!s||this.disposed)return;this.craft.visible=true;this.craft.position.copy(swingbyScenePosition(s.positionKm));this.craft.quaternion.set(...s.attitudeQuaternion).premultiply(FRAME);this.mars.rotation.y=s.marsSurfaceRotationRad;
+  this.objective.group.visible=!this.inspection.enabled;
+  this.carrierPoseValid=true;
+  if(this.carrier&&s.engine){const engine=this.craft.children.find(o=>o.userData.partId===s.engine!.partId);this.carrierPoseValid=!!engine&&s.engine.partId===this.carrierPartId&&this.carrier.setThrustDirection(new THREE.Vector3(...s.engine.thrustDirectionBody).applyQuaternion(engine.quaternion.clone().invert()).toArray() as [number,number,number]);}
+  if(this.inspection.enabled&&!this.bounds.isEmpty()){
+   const shoulder=new THREE.Vector3(5.9,3.9,-4.6).normalize().applyQuaternion(this.craft.quaternion);
+   const initialDirection=planetInspectionDirection({craftPosition:this.craft.position,bodyCenter:this.mars.position,bodyRadius:3,shoulder,width:this.container.clientWidth,height:this.container.clientHeight,fovDeg:this.camera.fov,insets:this.viewport}).direction;
+   const layout=this.inspection.update({position:this.craft.position,quaternion:this.craft.quaternion,bounds:this.bounds,focusBounds:this.focused?this.partBounds.get(this.focused):undefined,preferredScale:.18,obstacles:[{center:new THREE.Vector3(),radius:3.00001}],solidBounds:this.solids,initialDirection,frameKey:'actual-Mars-swingby'});this.craft.scale.setScalar(layout.scale);
+  }else this.craft.scale.setScalar(.18);
+  this.craft.updateMatrixWorld(true);const sun=swingbyScenePosition(s.sunDirectionICRF).normalize();this.key.target.position.copy(this.craft.position);this.key.position.copy(this.craft.position).addScaledVector(sun,20);
+  const shadow=this.key.shadow.camera,extent=Math.max(.5,this.bounds.isEmpty()?1:this.bounds.getSize(new THREE.Vector3()).length()*this.craft.scale.x);shadow.left=shadow.bottom=-extent;shadow.right=shadow.top=extent;shadow.near=1;shadow.far=40;shadow.updateProjectionMatrix();this.key.shadow.needsUpdate=true;this.updateDetail();
+ }
+ setInspection(enabled:boolean){
+  if(this.disposed||enabled&&(this.lost||!this.snapshot||this.bounds.isEmpty()||!canInspectSwingbyState(this.snapshot)))return false;if(enabled===this.inspection.enabled)return enabled;
+  this.cancelDrag();if(enabled){this.inspection.setViewport(this.container.clientWidth,this.container.clientHeight,this.viewport);this.inspection.enter();}else this.inspection.exit();
+  this.focused=this.selected=null;this.objective.group.visible=!enabled&&!!this.snapshot;this.position();return this.inspection.enabled;
+ }
+ getInspectionState(){return {...this.inspection.getState(),available:!!this.snapshot&&canInspectSwingbyState(this.snapshot),unavailableReason:this.snapshot&&!canInspectSwingbyState(this.snapshot)?'too-close-to-surface':null,timeSeconds:this.snapshot?.timeSeconds??null,selectedPartId:this.selected,focusedPartId:this.focused,attitudeIsActual:!!this.snapshot,view:'current Mars epoch',displayScaleIsExaggerated:true,physicalPositionKm:this.snapshot?.positionKm??null,craftPosition:this.craft.position.toArray(),craftQuaternion:this.craft.quaternion.toArray(),cameraPosition:this.camera.position.toArray(),cameraSurfaceClearance:this.camera.position.length()-3};}
+ setInspectionViewport(insets:InspectionViewport){this.inspection.setViewport(this.container.clientWidth,this.container.clientHeight,insets);this.viewport={...insets};if(this.inspection.enabled)this.position();}
+ focusInspectionPart(id:string|null){if(!this.inspection.enabled||id!==null&&!this.partBounds.has(id))return false;this.selected=this.focused=id;this.inspection.requestFit();this.position();this.callbacks.partSelected?.(id);return true;}
+ focusOverview(kind:'whole'|'encounter'|'aim'|'correction'='encounter'){
+  if(!this.snapshot)return;this.setInspection(false);const s=this.snapshot.objective,points:THREE.Vector3[]=[];
+  if(kind==='aim'){
+   const frame=swingbyAimCamera(s.aimPlane,s.aim,{kmToScene:SCALE,halfSpanKm:2000,width:this.container.clientWidth,height:this.container.clientHeight,fovDeg:this.camera.fov,insets:this.viewport});
+   this.controls.target.copy(frame.target);this.camera.position.copy(frame.position);this.camera.up.copy(frame.up);
+   const v=frame.view;this.camera.setViewOffset(v.fullWidth,v.fullHeight,v.offsetX,v.offsetY,v.width,v.height);this.camera.near=.001;this.camera.updateProjectionMatrix();this.controls.minDistance=.1;this.controls.maxDistance=2000;
+   const damping=this.controls.enableDamping;this.controls.enableDamping=false;this.controls.update();this.controls.enableDamping=damping;return;
+  }
+  else if(kind==='correction'&&s.correction)points.push(swingbyScenePosition(s.correction.positionKm));
+  else {points.push(new THREE.Vector3(-3,-3,-3),new THREE.Vector3(3,3,3));for(const p of [...s.referencePathKm??[],...s.predictedPathKm,...s.actualPathKm])if(kind==='whole'||new THREE.Vector3(...p).length()<MARS_RADIUS_KM*16)points.push(swingbyScenePosition(p));if(kind==='whole')points.push(this.craft.position.clone());}
+  const box=new THREE.Box3().setFromPoints(points),center=box.getCenter(new THREE.Vector3()),radius=Math.max(kind==='correction'?2:5,box.getSize(new THREE.Vector3()).length()/2);
+  this.controls.target.copy(center);this.camera.clearViewOffset();this.camera.up.set(0,1,0);this.camera.position.copy(center).addScaledVector(new THREE.Vector3(1,.65,1.2).normalize(),radius/Math.sin(this.camera.fov*Math.PI/360)*1.25);this.camera.near=.001;this.camera.updateProjectionMatrix();this.controls.minDistance=kind==='correction'?.1:3.4;this.controls.maxDistance=2000;this.controls.update();
+ }
+ setVelocityViewport(rect:{left:number;top:number;width:number;height:number}|null){if(rect&&!Object.values(rect).every(v=>Number.isFinite(v)&&v>=0))throw new Error('Invalid velocity viewport');this.velocityViewport=rect?{...rect}:null;}
+ getVelocityDisplayState(){
+  const rect=this.velocityViewport,geometry=this.objective.getVelocityDisplayGeometry(),label=this.objective.getLabelDTOs()?.velocity;
+  if(!rect||rect.width<32||rect.height<32||!geometry||!label)return null;
+  return {...velocityInsetFrame({width:rect.width,height:rect.height,goalRadius:geometry.goalRadius,tipPoints:geometry.tipPoints}),angularMagnification:label.angularMagnification,physicalToleranceDeg:label.physicalToleranceDeg,displayAngleClamped:label.displayAngleClamped};
+ }
+ setEditing(enabled:boolean){this.objective.setEditing(enabled);if(!enabled)this.cancelDrag();}
+ getAimScreen(){const p=this.objective.getAimWorldPosition();if(!p)return null;return this.project(p);}
+ getPartScreen(id:string){
+  if(!this.inspection.enabled)return null;const b=this.partBounds.get(id),part=this.craft.children.find(o=>o.userData.partId===id);if(!b||!part)return null;this.craft.updateMatrixWorld(true);
+  const candidates:THREE.Vector3[]=[];part.traverse(o=>{if(!(o instanceof THREE.Mesh)||!this.visibleInCraft(o))return;o.geometry.computeBoundingBox();const box=o.geometry.boundingBox;if(!box)return;const center=box.getCenter(new THREE.Vector3());candidates.push(center.clone().applyMatrix4(o.matrixWorld));for(let axis=0;axis<3;axis++)for(const edge of [box.min.getComponent(axis),box.max.getComponent(axis)])candidates.push(center.clone().setComponent(axis,edge).applyMatrix4(o.matrixWorld));});
+  for(const point of candidates){const p=this.project(point);if(p.visible&&this.partAt({clientX:p.x,clientY:p.y})===id)return p;}
+  return {...this.project(b.getCenter(new THREE.Vector3()).applyMatrix4(this.craft.matrixWorld)),visible:false};
+ }
+ private project(p:THREE.Vector3){this.camera.updateMatrixWorld();const v=p.clone().project(this.camera),r=this.canvas.getBoundingClientRect();return {x:r.left+(v.x+1)*r.width/2,y:r.top+(1-v.y)*r.height/2,visible:v.z>=-1&&v.z<=1&&Math.abs(v.x)<=1&&Math.abs(v.y)<=1};}
+ getMarsSurfaceDetailState(){const im=this.mars.material.map?.image as {width?:number;height?:number}|undefined;return {...this.detail.getState(),activeWidth:im?.width??null,activeHeight:im?.height??null};}
+ getRenderSettings(){return {quality:this.quality,reducedMotion:this.reducedMotion,pixelRatio:this.renderer.getPixelRatio(),surfaceDetail:this.getMarsSurfaceDetailState(),carrier:this.carrier?{...this.carrier.getState(),actualPoseAccepted:this.carrierPoseValid}:null,resources:{geometries:this.renderer.info.memory.geometries,textures:this.renderer.info.memory.textures,programs:this.renderer.info.programs?.length??0},lost:this.lost};}
+ setQuality(quality:SwingbyQuality){if(this.disposed)return;this.quality=quality;this.renderer.setPixelRatio(quality==='high'?Math.min(devicePixelRatio||1,1.5):1);this.renderer.shadowMap.enabled=quality!=='low';const segments=quality==='high'?[96,64]:quality==='medium'?[64,48]:[40,28];this.mars.geometry.dispose();this.mars.geometry=new THREE.SphereGeometry(3,segments[0],segments[1]);this.updateDetail();this.resize();}
+ setReducedMotion(enabled:boolean){this.reducedMotion=enabled;this.controls.enableDamping=!enabled;}
+ private ray(event:Pick<PointerEvent,'clientX'|'clientY'>){const r=this.canvas.getBoundingClientRect(),ray=new THREE.Raycaster();ray.setFromCamera(new THREE.Vector2((event.clientX-r.left)/r.width*2-1,1-(event.clientY-r.top)/r.height*2),this.camera);return ray;}
+ private visibleInCraft(object:THREE.Object3D){let o:THREE.Object3D|null=object;while(o&&o!==this.craft){if(!o.visible)return false;o=o.parent;}return !!o;}
+ private partAt(event:Pick<PointerEvent,'clientX'|'clientY'>){
+  // A visible bus surface occludes components behind it. Hidden stock-engine
+  // geometry under the reversible carrier adapter must not intercept clicks.
+  const hit=this.ray(event).intersectObject(this.craft,true).find(h=>this.visibleInCraft(h.object));if(!hit)return null;
+  let o:THREE.Object3D|null=hit.object;while(o&&o!==this.craft){if(o.userData.partId)return String(o.userData.partId);o=o.parent;}return null;
+ }
+ private pointerDown=(e:PointerEvent)=>{if(e.button!==0||this.lost)return;this.pointerStart={x:e.clientX,y:e.clientY,id:e.pointerId};if(this.inspection.enabled)return;const p=this.objective.beginAimDrag(this.ray(e).ray);if(!p)return;e.preventDefault();e.stopImmediatePropagation();this.canvas.setPointerCapture(e.pointerId);this.dragPointer=e.pointerId;this.controls.enabled=false;this.callbacks.aimChange?.(p,false);};
+ private pointerMove=(e:PointerEvent)=>{if(e.pointerId!==this.dragPointer)return;const p=this.objective.updateAimDrag(this.ray(e).ray);if(p)this.callbacks.aimChange?.(p,false);};
+ private pointerUp=(e:PointerEvent)=>{if(e.pointerId===this.dragPointer){const p=this.objective.endAimDrag(true);this.releasePointer();if(p)this.callbacks.aimChange?.(p,true);}else if(this.inspection.enabled&&this.pointerStart?.id===e.pointerId&&Math.hypot(e.clientX-this.pointerStart.x,e.clientY-this.pointerStart.y)<5){this.selected=this.partAt(e);this.callbacks.partSelected?.(this.selected);}this.pointerStart=null;};
+ private pointerCancel=()=>this.cancelDrag();private keyDown=(e:KeyboardEvent)=>{if(e.key==='Escape'&&this.dragPointer!==null){e.preventDefault();this.cancelDrag();}};
+ private doubleClick=(e:MouseEvent)=>{if(this.inspection.enabled)this.focusInspectionPart(this.partAt(e));};
+ private releasePointer(){if(this.dragPointer!==null&&this.canvas.hasPointerCapture(this.dragPointer))this.canvas.releasePointerCapture(this.dragPointer);this.dragPointer=null;this.controls.enabled=true;}
+ private cancelDrag(){if(this.dragPointer===null)return;this.objective.endAimDrag(false);this.releasePointer();this.callbacks.aimCancel?.();}
+ private contextLost=(event:Event)=>{event.preventDefault();if(this.disposed||this.lost)return;this.lost=true;this.cancelDrag();this.retireTargets();this.updateDetail();retireContextResources([this.scene,this.insetScene],{textures:[this.baseMap,this.detail.texture].filter((t):t is THREE.Texture=>!!t)});this.callbacks.contextLost?.();};
+ private contextRestored=()=>{if(this.disposed)return;this.refreshEnvironment();this.lost=false;this.detail.markContextRestored();this.position();this.callbacks.contextRestored?.();};
+ resize(){if(this.disposed)return;const w=Math.max(1,this.container.clientWidth),h=Math.max(1,this.container.clientHeight);this.renderer.setSize(w,h,false);this.camera.aspect=w/h;this.camera.updateProjectionMatrix();if(w-this.viewport.left-this.viewport.right>=32&&h-this.viewport.top-this.viewport.bottom>=32){this.inspection.setViewport(w,h,this.viewport);if(this.inspection.enabled)this.position();}}
+ render(dt:number){
+  if(this.disposed||this.lost)return;this.controls.update(dt);if(this.inspection.enabled)this.inspection.constrain();const w=this.container.clientWidth,h=this.container.clientHeight;this.renderer.setViewport(0,0,w,h);this.renderer.setScissorTest(false);this.renderer.render(this.scene,this.camera);
+  const v=this.velocityViewport,frame=this.getVelocityDisplayState();if(v&&frame&&this.snapshot&&!this.inspection.enabled){this.insetCamera.left=frame.left;this.insetCamera.right=frame.right;this.insetCamera.top=frame.top;this.insetCamera.bottom=frame.bottom;this.insetCamera.updateProjectionMatrix();this.objective.setVelocityMarkerWorldRadius(frame.unitsPerCssPx*4);this.renderer.setViewport(v.left,h-v.top-v.height,v.width,v.height);this.renderer.setScissor(v.left,h-v.top-v.height,v.width,v.height);this.renderer.setScissorTest(true);this.renderer.autoClear=false;this.renderer.clearDepth();this.renderer.render(this.insetScene,this.insetCamera);this.renderer.autoClear=true;this.renderer.setScissorTest(false);this.renderer.setViewport(0,0,w,h);}
+ }
+ private disposeTree(root:THREE.Object3D){const geometries=new Set<THREE.BufferGeometry>(),materials=new Set<THREE.Material>(),textures=new Set<THREE.Texture>();root.traverse(o=>{if(o instanceof THREE.Mesh||o instanceof THREE.Line){geometries.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:[o.material]){materials.add(m);for(const slot of slots){const t=(m as THREE.MeshStandardMaterial)[slot];if(t)textures.add(t);}}}});geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());root.clear();}
+ dispose(){
+  if(this.disposed)return;this.cancelDrag();this.disposed=true;this.observer.disconnect();this.controls.dispose();this.canvas.removeEventListener('pointerdown',this.pointerDown,true);this.canvas.removeEventListener('pointermove',this.pointerMove);this.canvas.removeEventListener('pointerup',this.pointerUp);this.canvas.removeEventListener('pointercancel',this.pointerCancel);this.canvas.removeEventListener('dblclick',this.doubleClick);this.canvas.removeEventListener('webglcontextlost',this.contextLost);this.canvas.removeEventListener('webglcontextrestored',this.contextRestored);window.removeEventListener('keydown',this.keyDown);
+  this.objective.dispose();this.carrier?.dispose();this.carrier=null;this.disposeTree(this.craft);this.craft.removeFromParent();this.mars.material.map=null;this.detail.dispose();this.baseMap?.dispose();this.baseMap=null;this.mars.geometry.dispose();this.mars.material.dispose();this.mars.removeFromParent();this.retireTargets();this.scene.clear();this.insetScene.clear();this.renderer.dispose();this.renderer.forceContextLoss();this.canvas.remove();
+ }
+}

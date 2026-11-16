@@ -1,0 +1,1865 @@
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { SSAOPass } from "three/addons/postprocessing/SSAOPass.js";
+import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+import { SMAAPass } from "three/addons/postprocessing/SMAAPass.js";
+import { ControlRoom } from "./control-room";
+import {
+  createBus,
+  createPart,
+  makeLabel,
+  isSharedPartMaterial,
+  isSharedPartTexture,
+} from "./parts";
+import type {
+  Design,
+  Part,
+  PartKind,
+  Face,
+  TrajectoryPoint,
+  Telemetry,
+  Vec3,
+  Quaternion,
+  DataPacket,
+} from "../sim/types";
+import { getPartDefinition, getPartGeometry, partTransformFor, resolveHardware } from "../hardware";
+import { getManeuvers, earthStateAt, marsStateAt } from "../sim/physics";
+import { debrisStateAt, conjunctionMetrics } from "../sim/hazards";
+import { createStowInspection, disposeStowInspection } from "./stow";
+import {
+  createTargetRegion,
+  createObservationFootprint,
+  updateObservationFootprint,
+  geographicToRender,
+} from "./targets";
+import {
+  createInspectionOverlay,
+  disposeInspectionOverlay,
+  type InspectionKind,
+  type InspectionSummary,
+} from "./inspection";
+
+export type ViewMode = "campus" | "build" | "plan" | "flight";
+export interface SceneCallbacks {
+  select: (id: string | null) => void;
+  placement: (part: Part, commit: boolean) => boolean;
+  navigation: (handle: string, dx: number, dy: number, finish: boolean) => void;
+  burnAt: (t: number) => void;
+  node: (id: string) => void;
+  target: (latDeg: number, lonDeg: number) => void;
+  contextLost: () => void;
+  assetProgress: (label: string, done: number, total: number) => void;
+}
+const v3 = (p: Vec3) => new THREE.Vector3(p[0], p[2], -p[1]);
+const Z = new THREE.Vector3(0, 0, 1);
+const FACE_NORMALS: Record<Face, THREE.Vector3> = {
+  px: new THREE.Vector3(1, 0, 0),
+  nx: new THREE.Vector3(-1, 0, 0),
+  py: new THREE.Vector3(0, 1, 0),
+  ny: new THREE.Vector3(0, -1, 0),
+  pz: new THREE.Vector3(0, 0, 1),
+  nz: new THREE.Vector3(0, 0, -1),
+};
+
+export class GameScene {
+  renderer: THREE.WebGLRenderer;
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(43, 1, 0.05, 1800);
+  controls: OrbitControls;
+  composer: EffectComposer;
+  ao: SSAOPass;
+  campus = new THREE.Group();
+  hangar = new THREE.Group();
+  space = new THREE.Group();
+  craft = new THREE.Group();
+  planet = new THREE.Group();
+  pathGroup = new THREE.Group();
+  handleGroup = new THREE.Group();
+  parts = new Map<string, THREE.Group>();
+  mode: ViewMode = "campus";
+  controlRoomActive = false;
+  private controlRoom: ControlRoom | null = null;
+  private roomRequested = false;
+  design!: Design;
+  selection: string | null = null;
+  targetPicking = false;
+  selectedManeuverId = "legacy";
+  referencePath = new THREE.Group();
+  groundFeatures = new THREE.Group();
+  private beamSurface: THREE.Vector3 | null = null;
+  private beamEpoch = 0;
+  private beamDirection: THREE.Vector3 | null = null;
+  private scienceMarkers = new Map<string, THREE.Group>();
+  private footprint: THREE.Group | null = null;
+  followCraft = false;
+  private lastCraftPosition: THREE.Vector3 | null = null;
+  stowOpen = false;
+  private stowGroup: THREE.Group | null = null;
+  bayOpen = false;
+  inspectionKind: InspectionKind | null = null;
+  inspectionSummary: InspectionSummary | null = null;
+  private inspectionGroup: THREE.Group | null = null;
+  private inspectionSun: Vec3 = [1, 0.25, 0.2];
+  private debrisMarker: THREE.Mesh | null = null;
+  cb: SceneCallbacks;
+  canvas: HTMLCanvasElement;
+  ready = false;
+  mission = "earth";
+  scale = 3 / 6378.137;
+  elapsed = 0;
+  quality: "high" | "medium" | "low" = "high";
+  private bus: THREE.Group;
+  private busProfileKey = "legacy";
+  private focusShadowSnapshot:{left:number;right:number;top:number;bottom:number;normalBias:number;bias:number;target:THREE.Vector3}|null=null;
+  private selectedFunction = new THREE.Group();
+  private outline = new THREE.BoxHelper(new THREE.Object3D(), 0x67e5d4);
+  private ray = new THREE.Raycaster();
+  private mouse = new THREE.Vector2();
+  private ghost: THREE.Group | null = null;
+  private ghostPart: Part | null = null;
+  private drag: {
+    type: "part" | "nav";
+    part?: Part;
+    handle?: string;
+    x: number;
+    y: number;
+    moved: boolean;
+  } | null = null;
+  private down: { x: number; y: number } | null = null;
+  private trajectoryPoints: TrajectoryPoint[] = [];
+  private pointMarker: THREE.Mesh;
+  private beam: THREE.Line;
+  private sun: THREE.DirectionalLight;
+  private hemi: THREE.HemisphereLight;
+  private earthMat: THREE.MeshStandardMaterial;
+  private earthMesh: THREE.Mesh;
+  private cloudMesh: THREE.Mesh;
+  private marsMap: THREE.Texture | null = null;
+  private earthMap: THREE.Texture | null = null;
+  private stars: THREE.Points;
+  private environmentTarget: THREE.WebGLRenderTarget;
+  private environmentTargetDisposed = false;
+  private restoreEnvironment = false;
+  private tween: {
+    from: THREE.Vector3;
+    to: THREE.Vector3;
+    targetFrom: THREE.Vector3;
+    target: THREE.Vector3;
+    t: number;
+  } | null = null;
+  private launchSequence: {
+    time: number;
+    rocket: THREE.Object3D;
+    base: THREE.Vector3;
+    effects: THREE.Group;
+    resolve: () => void;
+  } | null = null;
+  private mountedGeometry = new THREE.BoxGeometry(1.3, 1.6, 1.3);
+  private mount = new THREE.Mesh(
+    this.mountedGeometry,
+    new THREE.MeshBasicMaterial({ visible: false }),
+  );
+  private bgSky: THREE.Mesh;
+  private rotationRing: THREE.Mesh;
+  private lastFrame = performance.now();
+  frameTimes: number[] = [];
+  constructor(container: HTMLElement, cb: SceneCallbacks) {
+    this.cb = cb;
+    this.renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      alpha: false,
+      powerPreference: "high-performance",
+    });
+    this.renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
+    this.renderer.setSize(container.clientWidth, container.clientHeight);
+    this.renderer.outputColorSpace = THREE.SRGBColorSpace;
+    this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    this.renderer.toneMappingExposure = 1.15;
+    this.renderer.shadowMap.enabled = true;
+    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    this.canvas = this.renderer.domElement;
+    this.canvas.id = "universe";
+    this.canvas.setAttribute(
+      "aria-label",
+      "3D 우주선과 궤도 편집 화면. 오른쪽 드래그로 회전, 휠로 확대합니다.",
+    );
+    container.appendChild(this.canvas);
+    this.composer = new EffectComposer(this.renderer);
+    this.composer.addPass(new RenderPass(this.scene, this.camera));
+    this.ao = new SSAOPass(
+      this.scene,
+      this.camera,
+      container.clientWidth,
+      container.clientHeight,
+      16,
+    );
+    this.ao.kernelRadius = 0.32;
+    this.ao.minDistance = 0.0003;
+    this.ao.maxDistance = 0.035;
+    this.composer.addPass(this.ao);
+    this.composer.addPass(new OutputPass());
+    this.composer.addPass(new SMAAPass());
+    this.renderer.info.autoReset = false;
+    this.controls = new OrbitControls(this.camera, this.canvas);
+    this.controls.enableDamping = true;
+    this.controls.dampingFactor = 0.07;
+    this.controls.mouseButtons = {
+      LEFT: undefined as unknown as THREE.MOUSE,
+      MIDDLE: THREE.MOUSE.PAN,
+      RIGHT: THREE.MOUSE.ROTATE,
+    };
+    this.controls.minDistance = 2.8;
+    this.controls.maxDistance = 70;
+    this.controls.maxPolarAngle = Math.PI * 0.49;
+    const pmrem = new THREE.PMREMGenerator(this.renderer);
+    const environmentRoom = new RoomEnvironment();
+    this.environmentTarget = pmrem.fromScene(environmentRoom, 0.04);
+    this.scene.environment = this.environmentTarget.texture;
+    environmentRoom.dispose();
+    pmrem.dispose();
+    this.sun = new THREE.DirectionalLight(0xfff0d7, 2.2);
+    this.sun.position.set(12, 18, 10);
+    this.sun.castShadow = true;
+    this.sun.shadow.mapSize.set(2048, 2048);
+    this.sun.shadow.camera.left = -23;
+    this.sun.shadow.camera.right = 23;
+    this.sun.shadow.camera.top = 23;
+    this.sun.shadow.camera.bottom = -23;
+    this.sun.shadow.normalBias = 0.025;
+    this.sun.shadow.bias = -0.00015;
+    this.scene.add(this.sun);
+    this.hemi = new THREE.HemisphereLight(0xbad7e9, 0x68705b, 2.1);
+    this.scene.add(this.hemi);
+    this.bgSky = new THREE.Mesh(
+      new THREE.SphereGeometry(900, 24, 16),
+      new THREE.ShaderMaterial({
+        side: THREE.BackSide,
+        depthWrite: false,
+        uniforms: {
+          top: { value: new THREE.Color(0x2c71bb) },
+          bottom: { value: new THREE.Color(0x8dc5eb) },
+        },
+        vertexShader:
+          "varying vec3 vP;void main(){vP=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}",
+        fragmentShader:
+          "varying vec3 vP;uniform vec3 top;uniform vec3 bottom;void main(){float h=normalize(vP).y;gl_FragColor=vec4(mix(bottom,top,pow(clamp(h+.3,0.,1.),.65)),1.);}",
+      }),
+    );
+    this.scene.add(this.bgSky);
+    this.scene.add(this.campus, this.hangar, this.space, this.craft);
+    this.craft.position.y = 1.8;
+    this.bus = createBus();
+    this.craft.add(this.bus, this.mount, this.selectedFunction);
+    const plinth = new THREE.Mesh(
+      new THREE.CylinderGeometry(1.44, 1.6, 0.17, 64),
+      new THREE.MeshStandardMaterial({
+        color: 0x33424b,
+        metalness: 0.6,
+        roughness: 0.4,
+      }),
+    );
+    plinth.position.y = 0.08;
+    plinth.receiveShadow = true;
+    plinth.castShadow = true;
+    this.hangar.add(plinth);
+    const safetyRing = new THREE.Mesh(
+      new THREE.TorusGeometry(1.39, 0.018, 8, 64),
+      new THREE.MeshStandardMaterial({
+        color: 0xdfb255,
+        metalness: 0.25,
+        roughness: 0.4,
+      }),
+    );
+    safetyRing.rotation.x = Math.PI / 2;
+    safetyRing.position.y = 0.172;
+    this.hangar.add(safetyRing);
+    const landscape = new THREE.Mesh(
+      new THREE.PlaneGeometry(450, 450),
+      new THREE.MeshStandardMaterial({ color: 0x507e44, roughness: 1 }),
+    );
+    landscape.rotation.x = -Math.PI / 2;
+    landscape.position.y = -0.3;
+    landscape.receiveShadow = true;
+    this.campus.add(landscape);
+    for (let i = 0; i < 18; i++) {
+      const a = (i / 18) * Math.PI * 2;
+      const hill = new THREE.Mesh(
+        new THREE.IcosahedronGeometry(1, 1),
+        new THREE.MeshStandardMaterial({
+          color: new THREE.Color().setHSL(
+            0.24 + (i % 3) * 0.015,
+            0.25,
+            0.36 + (i % 4) * 0.025,
+          ),
+          roughness: 1,
+        }),
+      );
+      hill.scale.set(20 + (i % 4) * 4, 4 + (i % 5), 15 + (i % 3) * 3);
+      hill.position.set(
+        Math.cos(a) * (74 + (i % 3) * 10),
+        0,
+        Math.sin(a) * (74 + (i % 3) * 10),
+      );
+      this.campus.add(hill);
+    }
+    for (let i = 0; i < 9; i++) {
+      const cloud = new THREE.Group();
+      for (let j = 0; j < 4; j++) {
+        const puff = new THREE.Mesh(
+          new THREE.IcosahedronGeometry(2.2, 2),
+          new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 1 }),
+        );
+        puff.scale.set(1.3, 0.6 + ((i + j) % 3) * 0.15, 0.8);
+        puff.position.set(j * 2.1, Math.sin(j) * 0.8, 0);
+        cloud.add(puff);
+      }
+      cloud.position.set(-60 + i * 15, 24 + (i % 3) * 5, -62 + (i % 2) * 15);
+      this.campus.add(cloud);
+    }
+    this.outline.visible = false;
+    this.scene.add(this.outline);
+    this.rotationRing = new THREE.Mesh(
+      new THREE.TorusGeometry(0.8, 0.015, 8, 80),
+      new THREE.MeshBasicMaterial({
+        color: 0x79e8d5,
+        transparent: true,
+        opacity: 0.8,
+        depthTest: false,
+      }),
+    );
+    this.rotationRing.userData.handle = "rotate";
+    this.rotationRing.visible = false;
+    this.rotationRing.renderOrder = 12;
+    this.scene.add(this.rotationRing);
+    this.earthMat = new THREE.MeshStandardMaterial({
+      color: 0xffffff,
+      roughness: 0.88,
+      metalness: 0.05,
+      emissive: 0xffffff,
+      emissiveIntensity: 1,
+    });
+    this.earthMat.onBeforeCompile = (shader) => {
+      shader.vertexShader =
+        "varying vec3 vWorldSurfaceNormal;\n" + shader.vertexShader;
+      shader.vertexShader = shader.vertexShader.replace(
+        "#include <beginnormal_vertex>",
+        "#include <beginnormal_vertex>\nvWorldSurfaceNormal=normalize(mat3(modelMatrix)*objectNormal);",
+      );
+      shader.fragmentShader =
+        "varying vec3 vWorldSurfaceNormal;\n" + shader.fragmentShader;
+      shader.fragmentShader = shader.fragmentShader.replace(
+        "#include <emissivemap_fragment>",
+        "#include <emissivemap_fragment>\ntotalEmissiveRadiance *= 1.0 - smoothstep(-0.15,0.2,dot(normalize(vWorldSurfaceNormal),normalize(vec3(1.0,0.18,-0.3))));",
+      );
+    };
+    this.earthMesh = new THREE.Mesh(
+      new THREE.SphereGeometry(3, 96, 64),
+      this.earthMat,
+    );
+    this.planet.add(this.earthMesh);
+    this.cloudMesh = new THREE.Mesh(
+      new THREE.SphereGeometry(3.023, 72, 48),
+      new THREE.MeshStandardMaterial({
+        transparent: true,
+        opacity: 0.45,
+        depthWrite: false,
+        color: 0xffffff,
+        roughness: 1,
+      }),
+    );
+    this.cloudMesh.visible = false;
+    this.planet.add(this.cloudMesh);
+    const atm = new THREE.Mesh(
+      new THREE.SphereGeometry(3.065, 64, 48),
+      new THREE.ShaderMaterial({
+        transparent: true,
+        side: THREE.BackSide,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false,
+        uniforms: { tint: { value: new THREE.Color(0x329ec7) } },
+        vertexShader:
+          "varying vec3 n;varying vec3 v;void main(){vec4 p=modelViewMatrix*vec4(position,1.);n=normalize(normalMatrix*normal);v=normalize(-p.xyz);gl_Position=projectionMatrix*p;}",
+        fragmentShader:
+          "uniform vec3 tint;varying vec3 n;varying vec3 v;void main(){float f=pow(1.-abs(dot(normalize(n),normalize(v))),3.7);gl_FragColor=vec4(tint,f*.7);}",
+      }),
+    );
+    atm.name = "atmosphere";
+    this.planet.add(atm);
+    this.space.add(this.planet, this.pathGroup, this.handleGroup);
+    this.space.add(this.referencePath, this.groundFeatures);
+    const points: number[] = [],
+      colors: number[] = [];
+    let sd = 500;
+    const rnd = () => {
+      sd = (sd * 1664525 + 1013904223) >>> 0;
+      return sd / 4294967296;
+    };
+    for (let i = 0; i < 1700; i++) {
+      const a = rnd() * Math.PI * 2,
+        z = rnd() * 2 - 1,
+        r = Math.sqrt(1 - z * z),
+        dist = 150 + rnd() * 220;
+      points.push(r * Math.cos(a) * dist, z * dist, r * Math.sin(a) * dist);
+      const c = 0.3 + rnd() * 0.5;
+      colors.push(c, c * 0.97, c * 0.9);
+    }
+    const starGeo = new THREE.BufferGeometry();
+    starGeo.setAttribute(
+      "position",
+      new THREE.Float32BufferAttribute(points, 3),
+    );
+    starGeo.setAttribute("color", new THREE.Float32BufferAttribute(colors, 3));
+    this.stars = new THREE.Points(
+      starGeo,
+      new THREE.PointsMaterial({
+        size: 0.19,
+        vertexColors: true,
+        transparent: true,
+        opacity: 0.65,
+        sizeAttenuation: true,
+        depthWrite: false,
+      }),
+    );
+    this.space.add(this.stars);
+    this.pointMarker = new THREE.Mesh(
+      new THREE.SphereGeometry(0.065, 16, 12),
+      new THREE.MeshBasicMaterial({ color: 0xc0fff4 }),
+    );
+    this.space.add(this.pointMarker);
+    this.beam = new THREE.Line(
+      new THREE.BufferGeometry(),
+      new THREE.LineBasicMaterial({
+        color: 0x5fe8c5,
+        transparent: true,
+        opacity: 0.65,
+      }),
+    );
+    this.space.add(this.beam);
+    this.camera.position.set(28, 18, 31);
+    this.controls.target.set(0, 5, 0);
+    this.controls.update();
+    this.setMode("campus", false);
+    new ResizeObserver(() => this.resize(container)).observe(container);
+    this.canvas.addEventListener("contextmenu", (e) => e.preventDefault());
+    this.canvas.addEventListener("pointerdown", (e) => this.onDown(e));
+    this.canvas.addEventListener("dblclick", (e) => {
+      if (this.mode !== "build" || this.stowOpen || this.drag) return;
+      this.coordinates(e.clientX,e.clientY);
+      const hit=this.ray.intersectObjects([...this.parts.values()],true).find(h=>h.object.userData.partId);
+      if(hit){this.cb.select(hit.object.userData.partId);this.focusSelectedPart();}
+    });
+    window.addEventListener("pointermove", (e) => this.onMove(e));
+    window.addEventListener("pointerup", (e) => this.onUp(e));
+    this.canvas.addEventListener("webglcontextlost", (e) => {
+      e.preventDefault();
+      // Retire render-target handles before Three replaces the context caches.
+      // Deleting pre-loss handles after restoration produces INVALID_OPERATION.
+      if(!this.environmentTargetDisposed){this.environmentTarget.dispose();this.environmentTargetDisposed=true;}
+      // ShadowMap reinitializes its type tracker on restore and may replace a
+      // retained map on the first frame. Retire those old targets while lost.
+      this.scene.traverse(object=>{if(object instanceof THREE.Light&&object.shadow){object.shadow.dispose();object.shadow.map=null;object.shadow.mapPass=null;}});
+      this.scene.environment=null;
+      this.restoreEnvironment=false;
+      cb.contextLost();
+    });
+    this.canvas.addEventListener("webglcontextrestored", () => {
+      this.renderer.resetState();
+      this.restoreEnvironment = true;
+    });
+  }
+  async loadAssets() {
+    const loader = new GLTFLoader(),
+      tex = new THREE.TextureLoader();
+    let done = 0;
+    const total = 6;
+    const loaded = (label: string) =>
+      this.cb.assetProgress(label, ++done, total);
+    await Promise.all([
+      loader.loadAsync("/assets/launch-campus.glb").then((g) => {
+        g.scene.traverse((o) => {
+          if (o instanceof THREE.Mesh) {
+            o.castShadow = true;
+            o.receiveShadow = true;
+          }
+        });
+        const palette: Record<string, string> = {
+          Grass: "#527f4b",
+          GrassLight: "#79a35e",
+          TreeDark: "#235d4b",
+          TreeMid: "#478252",
+          TreeLight: "#7ca95d",
+          Pink: "#c78eac",
+          Teal: "#2b6373",
+          Ivory: "#e2e5dc",
+          ConcreteLight: "#b4beb1",
+          Asphalt: "#394a50",
+          Yellow: "#e4b24b",
+          Amber: "#c97837",
+        };
+        g.scene.traverse((o) => {
+          if (o instanceof THREE.Mesh) {
+            const material = o.material as THREE.MeshStandardMaterial;
+            if (palette[material.name])
+              material.color.set(palette[material.name]);
+          }
+        });
+        this.campus.add(g.scene);
+        loaded("발사 기지");
+      }),
+      loader.loadAsync("/assets/hangar.glb").then((g) => {
+        g.scene.traverse((o) => {
+          if (o instanceof THREE.Mesh) {
+            o.castShadow = true;
+            o.receiveShadow = true;
+          }
+        });
+        this.hangar.add(g.scene);
+        loaded("조립실");
+      }),
+      tex.loadAsync("/assets/earth-day.jpg").then((t) => {
+        t.colorSpace = THREE.SRGBColorSpace;
+        t.anisotropy = 8;
+        this.earthMap = t;
+        this.earthMat.map = t;
+        this.earthMat.needsUpdate = true;
+        loaded("지구 표면");
+      }),
+      tex.loadAsync("/assets/mars.jpg").then((t) => {
+        t.colorSpace = THREE.SRGBColorSpace;
+        t.anisotropy = 8;
+        this.marsMap = t;
+        loaded("화성 표면");
+      }),
+      tex.loadAsync("/assets/earth-clouds.png").then((t) => {
+        t.colorSpace = THREE.SRGBColorSpace;
+        const m = this.cloudMesh.material as THREE.MeshStandardMaterial;
+        m.map = t;
+        m.opacity = 0.23;
+        m.needsUpdate = true;
+        this.cloudMesh.visible = this.mission === "earth";
+        loaded("구름층");
+      }),
+      tex.loadAsync("/assets/earth-night.jpg").then((t) => {
+        t.colorSpace = THREE.SRGBColorSpace;
+        this.earthMat.emissiveMap = t;
+        this.earthMat.needsUpdate = true;
+        loaded("지구 야간");
+      }),
+    ]);
+    this.ready = true;
+  }
+  private resize(el: HTMLElement) {
+    const w = el.clientWidth,
+      h = el.clientHeight;
+    this.camera.aspect = w / h;
+    this.camera.updateProjectionMatrix();
+    this.renderer.setSize(w, h);
+    this.composer.setSize(w, h);
+    this.ao.setSize(Math.round(w * 0.65), Math.round(h * 0.65));
+  }
+  setMode(mode: ViewMode, animate = true) {
+    this.restoreFocusShadow();
+    this.leaveControlRoom();
+    this.followCraft = false;
+    this.lastCraftPosition = null;
+    this.mode = mode;
+    this.selectedFunction.visible = mode === "build" && !this.stowOpen;
+    this.setStowOpen(this.stowOpen);
+    this.setBayOpen(this.bayOpen);
+    if (this.inspectionGroup) this.inspectionGroup.visible = mode === "build";
+    const ground = mode === "campus" || mode === "build";
+    this.campus.visible = mode === "campus";
+    this.hangar.visible = mode === "build";
+    this.space.visible = !ground;
+    this.craft.visible = mode !== "campus";
+    this.bgSky.visible = mode === "campus";
+    this.scene.background = new THREE.Color(
+      mode === "build" ? 0x222f38 : 0x030912,
+    );
+    this.scene.fog = ground
+      ? new THREE.Fog(
+          mode === "build" ? 0x27333a : 0x94c2dc,
+          mode === "build" ? 24 : 140,
+          mode === "build" ? 60 : 340,
+        )
+      : null;
+    this.hemi.intensity = ground ? 0.65 : 0.04;
+    this.sun.intensity = ground ? 2.2 : 3;
+    this.sun.position.set(
+      ground ? 12 : 18,
+      ground ? 18 : 3.24,
+      ground ? 10 : -5.4,
+    );
+    this.sun.castShadow = ground;
+    this.scene.environmentIntensity = ground ? 0.52 : 0.08;
+    this.sun.shadow.camera.left = mode === "build" ? -9 : -26;
+    this.sun.shadow.camera.right = mode === "build" ? 9 : 26;
+    this.sun.shadow.camera.top = mode === "build" ? 9 : 26;
+    this.sun.shadow.camera.bottom = mode === "build" ? -9 : -26;
+    this.sun.shadow.camera.updateProjectionMatrix();
+    this.controls.maxPolarAngle =
+      mode === "build" ? Math.PI * 0.56 : ground ? Math.PI * 0.49 : Math.PI;
+    this.controls.minDistance =
+      mode === "build" ? 2.5 : mode === "campus" ? 15 : 3.4;
+    this.controls.maxDistance =
+      mode === "campus" ? 80 : mode === "build" ? 16 : 70;
+    this.craft.scale.setScalar(ground ? 1 : 0.12);
+    if (ground) this.craft.position.set(0, 1.8, 0);
+    this.craft.quaternion.identity();
+    this.handleGroup.visible = mode === "plan";
+    this.outline.visible = mode === "build" && !!this.selection;
+    this.rotationRing.visible = false;
+    this.ao.enabled = ground && this.quality === "high";
+    this.ao.kernelRadius = mode === "campus" ? 1.1 : 0.32;
+    this.renderer.toneMappingExposure = ground ? 1.1 : 1.45;
+    this.hemi.intensity = ground ? 0.65 : 0.13;
+    const pos =
+      mode === "campus"
+        ? new THREE.Vector3(26, 12, 30)
+        : mode === "build"
+          ? this.design?.hardwareVersion
+            ? new THREE.Vector3(5.9, 3.9, -4.6)
+            : new THREE.Vector3(5.1, 3.9, 6.8)
+          : new THREE.Vector3(this.mission === "mars" ? 11 : 7.6, 6.4, 9.6);
+    const target =
+      mode === "campus"
+        ? new THREE.Vector3(-4, 4, 0)
+        : mode === "build"
+          ? new THREE.Vector3(0, 1.75, 0)
+          : new THREE.Vector3(0, 0, 0);
+    this.flyCamera(pos, target, animate);
+  }
+  flyCamera(pos: THREE.Vector3, target: THREE.Vector3, animate = true) {
+    this.leaveControlRoom();
+    if (animate)
+      this.tween = {
+        from: this.camera.position.clone(),
+        to: pos,
+        targetFrom: this.controls.target.clone(),
+        target,
+        t: 0,
+      };
+    else {
+      this.camera.position.copy(pos);
+      this.controls.target.copy(target);
+      this.controls.update();
+    }
+  }
+  setDesign(design: Design) {
+    this.restoreFocusShadow();
+    for (const marker of this.scienceMarkers.values()) {
+      this.groundFeatures.remove(marker);
+      disposeGeometry(marker);
+    }
+    this.scienceMarkers.clear();
+    this.design = design;
+    const busKey = design.hardwareVersion ? `${design.hardwareVersion}:${design.busId}` : "legacy";
+    if (busKey !== this.busProfileKey) {
+      this.craft.remove(this.bus);
+      disposeGeometry(this.bus);
+      this.bus=createBus(design);
+      this.craft.add(this.bus);
+      this.busProfileKey=busKey;
+      this.setBayOpen(this.bayOpen);
+    }
+    const missionChanged = this.mission !== design.missionId;
+    this.mission = design.missionId;
+    this.scale = 3 / (this.mission === "earth" ? 6378.137 : 3389.5);
+    this.earthMat.map = this.mission === "earth" ? this.earthMap : this.marsMap;
+    this.earthMat.emissiveIntensity = this.mission === "earth" ? 1.2 : 0;
+    this.earthMat.needsUpdate = true;
+    this.cloudMesh.visible =
+      this.mission === "earth" &&
+      !!(this.cloudMesh.material as THREE.MeshStandardMaterial).map;
+    const atm = this.planet.getObjectByName("atmosphere") as THREE.Mesh;
+    (atm.material as THREE.ShaderMaterial).uniforms.tint.value.set(
+      this.mission === "earth" ? 0x329ec7 : 0xc77749,
+    );
+    for (const [id, o] of this.parts) {
+      if (!design.parts.some((p) => p.id === id)) {
+        this.craft.remove(o);
+        disposeGeometry(o);
+        this.parts.delete(id);
+      }
+    }
+    for (const p of design.parts) {
+      let o = this.parts.get(p.id);
+      const modelKey=`${design.hardwareVersion || "legacy"}:${p.kind}:${p.modelId || "legacy"}`;
+      if (o && o.userData.modelKey !== modelKey) {
+        this.craft.remove(o);
+        disposeGeometry(o);
+        this.parts.delete(p.id);
+        o = undefined;
+      }
+      if (!o) {
+        o = createPart(p,design);
+        o.userData.partKind = p.kind;
+        o.userData.modelKey = modelKey;
+        o.traverse((c) => (c.userData.partId = p.id));
+        this.parts.set(p.id, o);
+        this.craft.add(o);
+      }
+      this.placeObject(o, p);
+    }
+    if (this.stowOpen) this.setStowOpen(true);
+    this.setSelected(this.selection);
+    if (this.inspectionKind) this.setInspection(this.inspectionKind);
+    if (missionChanged) {
+      clearGroup(this.referencePath);
+      if (this.mode === "plan") this.setMode("plan");
+    }
+  }
+  async enterControlRoom() {
+    if (this.mode !== "flight") return;
+    this.roomRequested = true;
+    if (!this.controlRoom)
+      this.controlRoom = new ControlRoom(this.canvas, this.scene.environment);
+    await this.controlRoom.load();
+    if (!this.roomRequested || this.mode !== "flight") return;
+    this.tween = null;
+    this.controls.enabled = false;
+    this.controlRoom.controls.enabled = true;
+    this.controlRoomActive = true;
+  }
+  leaveControlRoom() {
+    this.roomRequested = false;
+    this.controlRoomActive = false;
+    this.controls.enabled = true;
+    if (this.controlRoom) this.controlRoom.controls.enabled = false;
+  }
+  private placeObject(o: THREE.Object3D, p: Part) {
+    const tr = partTransformFor(this.design,p);
+    o.position.set(...tr.position);
+    const mat = new THREE.Matrix4().makeBasis(
+      new THREE.Vector3(...tr.tangentU),
+      new THREE.Vector3(...tr.tangentV),
+      new THREE.Vector3(...tr.normal),
+    );
+    o.quaternion.setFromRotationMatrix(mat);
+  }
+  private referenceCameraHalfFov():number|undefined {
+    if(!this.design.hardwareVersion)return 28;
+    const camera=this.design.parts.find(p=>p.id===this.selection&&p.kind==='camera')??this.design.parts.find(p=>p.kind==='camera');
+    return camera?getPartDefinition(this.design,camera).optics?.halfAngleDeg:undefined;
+  }
+  setSelected(id: string | null) {
+    if(!id)this.restoreFocusShadow();
+    this.selection = id;
+    const o = id ? this.parts.get(id) : undefined;
+    this.outline.visible = !!o && this.mode === "build" && !this.stowOpen;
+    clearGroup(this.selectedFunction);
+    this.rotationRing.visible=false;
+    if (o) {
+      this.outline.setFromObject(o);
+      this.rotationRing.position.copy(o.getWorldPosition(new THREE.Vector3()));
+      this.rotationRing.quaternion.copy(
+        o.getWorldQuaternion(new THREE.Quaternion()),
+      );
+      this.rotationRing.translateZ(0.55);
+      this.rotationRing.visible = this.mode === "build" && !this.stowOpen;
+      const part=this.design.parts.find(p=>p.id===id);
+      if (part && this.design.hardwareVersion && this.mode === "build" && !this.stowOpen) {
+        const geometry=getPartGeometry(this.design,part);
+        this.selectedFunction.position.copy(o.position);
+        this.selectedFunction.quaternion.copy(o.quaternion);
+        const patches=geometry.apertures;
+        for(const aperture of patches) {
+          const arrow=new THREE.ArrowHelper(new THREE.Vector3(...aperture.normal),new THREE.Vector3(...aperture.center),.26,0x75d9de,.045,.022);
+          arrow.traverse(node=>{node.raycast=()=>{};if(node instanceof THREE.Mesh||node instanceof THREE.Line)node.geometry=node.geometry.clone();});
+          this.selectedFunction.add(arrow);
+        }
+        if(patches.length) {
+          const aperture=patches[0],label=makeLabel(part.kind==='camera'||part.kind==='spectrometer'?'OPTICAL AXIS':part.kind==='antenna'?'RF APERTURE':'SOLAR NORMAL');
+          label.scale.set(.48,.085,1);label.position.set(...aperture.center);label.position.addScaledVector(new THREE.Vector3(...aperture.normal),.31);label.raycast=()=>{};this.selectedFunction.add(label);
+        }
+        const hardware=resolveHardware(this.design),links=hardware.connections.filter(c=>c.partId===part.id);
+        const issues=hardware.issues.filter(issue=>issue.partId===part.id);
+        if(links.length||issues.length) {
+          const message=issues.length?'CONNECTION REQUIRED':links.map(c=>c.type==='power'?`${c.voltageV} V`:c.type==='rf'?'RF LINK':c.endpoint.toUpperCase()).join(' · ');
+          const label=makeLabel(message,issues.length?'#ff9d8c':'#bde6d5','#10282ddd',512,64);
+          label.scale.set(.55,.069,1);const depth=Math.max(...geometry.deployedBoxes.map(b=>b.center[2]+b.half[2]));label.position.set(0,-.17,depth+.045);label.raycast=()=>{};this.selectedFunction.add(label);
+        }
+      }
+    }
+  }
+  setTrajectory(points: TrajectoryPoint[]) {
+    this.trajectoryPoints = points;
+    clearGroup(this.pathGroup);
+    clearGroup(this.handleGroup);
+    if (!points.length) return;
+    const pts = points.map((p) => v3(p.positionKm).multiplyScalar(this.scale));
+    const g = new THREE.BufferGeometry().setFromPoints(pts);
+    const colors: number[] = [];
+    points.forEach((p) => {
+      const c = new THREE.Color(p.eclipse ? 0x536d80 : 0x59d6d2);
+      colors.push(c.r, c.g, c.b);
+    });
+    g.setAttribute("color", new THREE.Float32BufferAttribute(colors, 3));
+    this.pathGroup.add(
+      new THREE.Line(
+        g,
+        new THREE.LineBasicMaterial({
+          vertexColors: true,
+          transparent: true,
+          opacity: 0.9,
+        }),
+      ),
+    );
+    clearGroup(this.groundFeatures);
+    this.scienceMarkers.clear();
+    this.footprint = null;
+    if (this.mission === "earth") {
+      if (this.design.scienceTarget)
+        this.groundFeatures.add(
+          createTargetRegion(this.design.scienceTarget,3.02,Boolean(this.design.hardwareVersion)).group,
+        );
+      const halfFov=this.referenceCameraHalfFov();
+      if (points.length&&halfFov!==undefined) {
+        this.footprint = createObservationFootprint(
+          points[0].positionKm,
+          points[0].t,
+          3.025,
+          halfFov,
+        ).group;
+        this.groundFeatures.add(this.footprint);
+      }
+      const track = points.map((p) =>
+        v3(p.positionKm)
+          .normalize()
+          .multiplyScalar(3.018)
+          .applyAxisAngle(new THREE.Vector3(0, 1, 0), -p.t * 7.2921159e-5),
+      );
+      const groundLine = new THREE.Line(
+        new THREE.BufferGeometry().setFromPoints(track),
+        new THREE.LineDashedMaterial({
+          color: 0xf3c979,
+          dashSize: 0.035,
+          gapSize: 0.025,
+          transparent: true,
+          opacity: 0.65,
+        }),
+      );
+      groundLine.computeLineDistances();
+      this.groundFeatures.add(groundLine);
+      for (const [lat, lon] of [
+        [35, 75],
+        [-35, -60],
+        [35, -140],
+        [-25, 130],
+        [30, -15],
+      ]) {
+        const la = (lat * Math.PI) / 180,
+          lo = (lon * Math.PI) / 180;
+        const marker = new THREE.Mesh(
+          new THREE.SphereGeometry(0.025, 12, 8),
+          new THREE.MeshBasicMaterial({ color: 0xf0d299 }),
+        );
+        marker.position.set(
+          Math.cos(la) * Math.cos(lo) * 3.025,
+          Math.sin(la) * 3.025,
+          -Math.cos(la) * Math.sin(lo) * 3.025,
+        );
+        this.groundFeatures.add(marker);
+      }
+    }
+    this.debrisMarker = null;
+    if (this.design.hazard === "debris" && this.mission === "earth") {
+      const debrisPoints = points.map((p) =>
+        v3(debrisStateAt(p.t).positionKm).multiplyScalar(this.scale),
+      );
+      const line = new THREE.Line(
+        new THREE.BufferGeometry().setFromPoints(debrisPoints),
+        new THREE.LineDashedMaterial({
+          color: 0xf68d76,
+          dashSize: 0.055,
+          gapSize: 0.06,
+          transparent: true,
+          opacity: 0.65,
+        }),
+      );
+      line.computeLineDistances();
+      this.pathGroup.add(line);
+      const encounter = conjunctionMetrics(this.design),
+        marker = new THREE.Mesh(
+          new THREE.OctahedronGeometry(0.055),
+          new THREE.MeshBasicMaterial({ color: 0xff9e83 }),
+        );
+      marker.position.copy(
+        v3(encounter.debrisPositionKm).multiplyScalar(this.scale),
+      );
+      this.pathGroup.add(marker);
+      this.debrisMarker = marker;
+      const ring = new THREE.Mesh(
+        new THREE.TorusGeometry(0.22, 0.009, 6, 40),
+        new THREE.MeshBasicMaterial({
+          color: 0xffa18a,
+          transparent: true,
+          opacity: 0.9,
+        }),
+      );
+      ring.position.copy(
+        v3(encounter.spacecraftPositionKm).multiplyScalar(this.scale),
+      );
+      ring.lookAt(this.camera.position);
+      this.pathGroup.add(ring);
+    }
+    if (this.mission === "earth") {
+      const nodes = getManeuvers(this.design.plan),
+        active =
+          nodes.find((n) => n.id === this.selectedManeuverId) || nodes[0];
+      if (!active) return;
+      this.selectedManeuverId = active.id;
+      const orbitPoint = points.reduce((a, b) =>
+        Math.abs(a.t - active.time) < Math.abs(b.t - active.time) ? a : b,
+      );
+      const p = v3(orbitPoint.positionKm).multiplyScalar(this.scale),
+        rad = p.clone().normalize(),
+        vel = v3(orbitPoint.velocityKmS).normalize(),
+        normal = new THREE.Vector3().crossVectors(rad, vel).normalize();
+      this.addHandle(
+        "prograde",
+        p.clone().addScaledVector(vel, 0.68),
+        0x72e8bc,
+        "Δv",
+        p,
+      );
+      this.addHandle(
+        "normal",
+        p.clone().addScaledVector(normal, 0.7),
+        0xbb9aff,
+        "N",
+        p,
+      );
+      this.addHandle(
+        "radial",
+        p.clone().addScaledVector(rad, 0.65),
+        0xffba75,
+        "R",
+        p,
+      );
+      const a = pts[Math.floor(pts.length * 0.28)];
+      this.addHandle("altitude", a, 0xf8d680, "고도");
+      const b = pts[Math.floor(pts.length * 0.49)];
+      this.addHandle("inclination", b, 0xa89cfa, "궤도면");
+      nodes
+        .filter((n) => n.id !== active.id)
+        .forEach((n, i) => {
+          const near = points.reduce((a, b) =>
+            Math.abs(a.t - n.time) < Math.abs(b.t - n.time) ? a : b,
+          );
+          this.addHandle(
+            "node:" + n.id,
+            v3(near.positionKm).multiplyScalar(this.scale),
+            0x9baebc,
+            `M${i + 1}`,
+          );
+        });
+    } else {
+      const closest = points.reduce((a, b) =>
+          a.altitudeKm < b.altitudeKm ? a : b,
+        ),
+        p = v3(closest.positionKm).multiplyScalar(this.scale);
+      this.addHandle("bplane", p, 0xf6bc78, "접근점");
+      const grid = new THREE.GridHelper(10, 20, 0xd39d63, 0x4d3b37);
+      grid.position.copy(p);
+      grid.rotation.z = Math.PI / 2;
+      grid.material = new THREE.LineBasicMaterial({
+        color: 0x9e765c,
+        transparent: true,
+        opacity: 0.18,
+      });
+      this.handleGroup.add(grid);
+    }
+  }
+  freezeReferencePath() {
+    clearGroup(this.referencePath);
+    if (!this.trajectoryPoints.length) return;
+    const line = new THREE.Line(
+      new THREE.BufferGeometry().setFromPoints(
+        this.trajectoryPoints.map((p) =>
+          v3(p.positionKm).multiplyScalar(this.scale),
+        ),
+      ),
+      new THREE.LineDashedMaterial({
+        color: 0xb7b4ad,
+        dashSize: 0.035,
+        gapSize: 0.045,
+        transparent: true,
+        opacity: 0.45,
+      }),
+    );
+    line.computeLineDistances();
+    this.referencePath.add(line);
+  }
+  setStowOpen(open: boolean) {
+    if(open)this.restoreFocusShadow();
+    if (this.stowGroup) {
+      disposeStowInspection(this.stowGroup);
+      this.stowGroup = null;
+    }
+    this.stowOpen = open && this.mission === "earth";
+    const active = this.stowOpen && this.mode === "build";
+    this.selectedFunction.visible = this.mode === "build" && !active;
+    if (active) {
+      this.setInspection(null);
+      this.setBayOpen(false);
+      this.outline.visible = false;
+      this.rotationRing.visible = false;
+      this.stowGroup = createStowInspection(this.design);
+      this.craft.add(this.stowGroup);
+    }
+    for (const [id, o] of this.parts) {
+      const part = this.design.parts.find((p) => p.id === id);
+      o.visible = !(
+        active &&
+        part &&
+        ["solar", "solarLarge", "antenna"].includes(part.kind)
+      );
+    }
+  }
+  setBayOpen(open: boolean) {
+    this.bayOpen = open;
+    this.craft.traverse((o) => {
+      if (o.userData.bayCover) o.visible = !(open && this.mode === "build");
+    });
+  }
+  setInspection(kind: InspectionKind | null) {
+    if (this.inspectionGroup) {
+      this.craft.remove(this.inspectionGroup);
+      disposeInspectionOverlay(this.inspectionGroup);
+      this.inspectionGroup = null;
+    }
+    this.inspectionKind = kind;
+    this.inspectionSummary = null;
+    if (kind) {
+      const overlay = createInspectionOverlay(
+        this.design,
+        kind,
+        this.inspectionSun,
+      );
+      this.inspectionGroup = overlay.group;
+      this.inspectionSummary = overlay.summary;
+      this.inspectionGroup.visible = this.mode === "build";
+      this.craft.add(this.inspectionGroup);
+    }
+  }
+  dragInspectionSun(dx: number, dy: number) {
+    const p = new THREE.Vector3(...this.inspectionSun),
+      s = new THREE.Spherical().setFromVector3(p);
+    s.theta += dx * 0.012;
+    s.phi = THREE.MathUtils.clamp(s.phi + dy * 0.012, 0.03, Math.PI - 0.03);
+    p.setFromSpherical(s).normalize();
+    this.inspectionSun = p.toArray() as Vec3;
+    this.setInspection("power");
+  }
+  private addHandle(
+    name: string,
+    p: THREE.Vector3,
+    color: number,
+    label: string,
+    from?: THREE.Vector3,
+  ) {
+    const g = new THREE.Group();
+    g.position.copy(p);
+    g.userData.handle = name;
+    const ball = new THREE.Mesh(
+      new THREE.SphereGeometry(0.085, 20, 12),
+      new THREE.MeshBasicMaterial({ color, depthTest: false }),
+    );
+    ball.userData.handle = name;
+    ball.renderOrder = 10;
+    g.add(ball);
+    const ring = new THREE.Mesh(
+      new THREE.TorusGeometry(0.15, 0.012, 8, 32),
+      new THREE.MeshBasicMaterial({
+        color,
+        transparent: true,
+        opacity: 0.8,
+        depthTest: false,
+      }),
+    );
+    ring.userData.handle = name;
+    g.add(ring);
+    const hit = new THREE.Mesh(
+      new THREE.SphereGeometry(0.22, 12, 8),
+      new THREE.MeshBasicMaterial({
+        transparent: true,
+        opacity: 0,
+        depthWrite: false,
+      }),
+    );
+    hit.userData.handle = name;
+    g.add(hit);
+    const txt = makeLabel(label, "#e8e4d4");
+    txt.scale.set(0.8, 0.2, 1);
+    txt.position.set(0.38, 0.17, 0);
+    g.add(txt);
+    this.handleGroup.add(g);
+    if (from) {
+      const line = new THREE.Line(
+        new THREE.BufferGeometry().setFromPoints([from, p]),
+        new THREE.LineBasicMaterial({
+          color,
+          depthTest: false,
+          transparent: true,
+          opacity: 0.8,
+        }),
+      );
+      this.handleGroup.add(line);
+    }
+  }
+  setTelemetry(t: Telemetry) {
+    if (this.mode === "build" || this.mode === "campus") return;
+    const p = v3(t.positionKm).multiplyScalar(this.scale);
+    if (this.followCraft && this.lastCraftPosition) {
+      const movement = p.clone().sub(this.lastCraftPosition);
+      this.camera.position.add(movement);
+      this.controls.target.add(movement);
+    }
+    this.lastCraftPosition = p.clone();
+    this.craft.position.copy(p);
+    this.pointMarker.position.copy(p);
+    this.pointMarker.visible = this.mode !== "flight";
+    const basis = new THREE.Matrix4().makeBasis(
+      v3(t.bodyAxes.x),
+      v3(t.bodyAxes.y),
+      v3(t.bodyAxes.z),
+    );
+    if (this.mode !== "flight")
+      this.craft.quaternion.setFromRotationMatrix(basis);
+    if (this.debrisMarker)
+      this.debrisMarker.position.copy(
+        v3(debrisStateAt(t.time).positionKm).multiplyScalar(this.scale),
+      );
+    this.earthMesh.rotation.y = t.time * 7.2921159e-5;
+    this.cloudMesh.rotation.y = t.time * 7.2921159e-5;
+    this.groundFeatures.rotation.y = t.time * 7.2921159e-5;
+    if (this.footprint) {
+      updateObservationFootprint(this.footprint, t.positionKm, t.time,this.referenceCameraHalfFov());
+      this.footprint.visible = this.mode === "plan" || t.observing;
+    }
+    this.beam.visible =
+      t.observing || (t.linkReady && t.operation === "downlink");
+    const surface = t.observing
+      ? t.surfaceTargetPositionKm
+      : t.contactTargetPositionKm;
+    this.beamSurface = surface ? v3(surface).multiplyScalar(this.scale) : null;
+    this.beamDirection = surface ? null : v3(t.contactDirection);
+    this.beamEpoch = t.time;
+    const end =
+      this.beamSurface || p.clone().addScaledVector(this.beamDirection!, 20);
+    const attribute = this.beam.geometry.getAttribute("position") as
+      | THREE.BufferAttribute
+      | undefined;
+    if (attribute) {
+      attribute.setXYZ(0, p.x, p.y, p.z);
+      attribute.setXYZ(1, end.x, end.y, end.z);
+      attribute.needsUpdate = true;
+    } else
+      this.beam.geometry.setAttribute(
+        "position",
+        new THREE.Float32BufferAttribute([...p.toArray(), ...end.toArray()], 3),
+      );
+    this.beam.geometry.computeBoundingSphere();
+    (this.beam.material as THREE.LineBasicMaterial).color.set(
+      t.observing ? 0x5fe8c5 : 0xb59cfa,
+    );
+  }
+  setSciencePackets(packets: DataPacket[]) {
+    if (this.mission !== "earth") return;
+    for (const p of packets.slice(-48)) {
+      if (!p.observedPoint) continue;
+      let marker = this.scienceMarkers.get(p.id);
+      if (!marker) {
+        marker = new THREE.Group();
+        marker.position.copy(geographicToRender(p.observedPoint, 3.038));
+        marker.quaternion.setFromUnitVectors(
+          new THREE.Vector3(0, 0, 1),
+          marker.position.clone().normalize(),
+        );
+        const rim = new THREE.Mesh(
+          new THREE.RingGeometry(0.025, 0.035, 20),
+          new THREE.MeshBasicMaterial({
+            color: 0xe7bd75,
+            side: THREE.DoubleSide,
+            transparent: true,
+            opacity: 0.9,
+            depthWrite: false,
+          }),
+        );
+        const center = new THREE.Mesh(
+          new THREE.CircleGeometry(0.014, 16),
+          new THREE.MeshBasicMaterial({
+            color: 0xe7bd75,
+            transparent: true,
+            opacity: 0.75,
+            depthWrite: false,
+          }),
+        );
+        marker.add(rim, center);
+        marker.traverse((o) => (o.raycast = () => {}));
+        this.scienceMarkers.set(p.id, marker);
+        this.groundFeatures.add(marker);
+      }
+      const received = p.receivedAt !== null && p.receivedBits >= p.bits - 0.01;
+      marker.children.forEach((o) =>
+        ((o as THREE.Mesh).material as THREE.MeshBasicMaterial).color.set(
+          received ? 0x8ff1c6 : 0xe7bd75,
+        ),
+      );
+      marker.userData = {
+        packetId: p.id,
+        received,
+        capturedAt: p.capturedAt,
+        receivedAt: p.receivedAt,
+      };
+    }
+  }
+  /** Render pose at continuous simulation time; scientific resource decisions remain fixed-step. */
+  setFlightFrame(time: number, attitude: Quaternion | null, dt: number) {
+    if (this.mode !== "flight") return;
+    const state =
+        this.mission === "earth"
+          ? earthStateAt(this.design.plan, time)
+          : marsStateAt(this.design.plan, time),
+      p = v3(state.positionKm).multiplyScalar(this.scale);
+    if (this.followCraft && this.lastCraftPosition) {
+      const movement = p.clone().sub(this.lastCraftPosition);
+      this.camera.position.add(movement);
+      this.controls.target.add(movement);
+    }
+    this.lastCraftPosition = p.clone();
+    this.craft.position.copy(p);
+    if (attitude) {
+      const q = new THREE.Quaternion(...attitude).premultiply(
+        new THREE.Quaternion().setFromAxisAngle(
+          new THREE.Vector3(1, 0, 0),
+          -Math.PI / 2,
+        ),
+      );
+      this.craft.quaternion.slerp(q, 1 - Math.exp(-dt * 20));
+    }
+    this.earthMesh.rotation.y = time * 7.2921159e-5;
+    this.cloudMesh.rotation.y = this.earthMesh.rotation.y;
+    this.groundFeatures.rotation.y = this.earthMesh.rotation.y;
+    if (this.footprint)
+      updateObservationFootprint(this.footprint, state.positionKm, time,this.referenceCameraHalfFov());
+    if (this.debrisMarker)
+      this.debrisMarker.position.copy(
+        v3(debrisStateAt(time).positionKm).multiplyScalar(this.scale),
+      );
+    if (this.beam.visible) {
+      const a = this.beam.geometry.getAttribute("position") as
+        | THREE.BufferAttribute
+        | undefined;
+      if (a) {
+        a.setXYZ(0, p.x, p.y, p.z);
+        const end = this.beamSurface
+          ? this.beamSurface
+              .clone()
+              .applyAxisAngle(
+                new THREE.Vector3(0, 1, 0),
+                this.mission === "earth"
+                  ? (time - this.beamEpoch) * 7.2921159e-5
+                  : 0,
+              )
+          : p
+              .clone()
+              .addScaledVector(
+                this.beamDirection || new THREE.Vector3(1, 0, 0),
+                20,
+              );
+        a.setXYZ(1, end.x, end.y, end.z);
+        a.needsUpdate = true;
+        this.beam.geometry.computeBoundingSphere();
+      }
+    }
+  }
+  focusCraft() {
+    this.restoreFocusShadow();
+    if (this.mode === "build") {
+      this.controls.minDistance=2.5;
+      this.controls.maxPolarAngle=Math.PI*.56;
+      this.flyCamera(
+        new THREE.Vector3(3.5, 2.8, 4.7),
+        new THREE.Vector3(0, 1.8, 0),
+      );
+      return;
+    }
+    if (this.mode === "campus") return;
+    const p = this.craft.position.clone(),
+      radial = p.clone().normalize(),
+      side = new THREE.Vector3()
+        .crossVectors(radial, new THREE.Vector3(0, 1, 0))
+        .normalize();
+    this.followCraft = true;
+    this.craft.scale.setScalar(0.25);
+    this.controls.minDistance = 0.42;
+    this.tween = null;
+    this.camera.position
+      .copy(p)
+      .addScaledVector(radial, 2.3)
+      .addScaledVector(side, 1.1)
+      .add(new THREE.Vector3(0, 0.5, 0));
+    this.controls.target.copy(p);
+    this.controls.update();
+  }
+  focusSelectedPart(): boolean {
+    if(this.mode!=="build"||!this.selection||this.stowOpen)return false;
+    const object=this.parts.get(this.selection),part=this.design.parts.find(p=>p.id===this.selection);
+    if(!object||!part)return false;
+    if(this.design.hardwareVersion)this.focusHardwareShadow();
+    this.cancelDrag();
+    if(getPartDefinition(this.design,part).internal)this.setBayOpen(true);
+    object.updateWorldMatrix(true,true);
+    const bounds=new THREE.Box3().setFromObject(object),target=bounds.getCenter(new THREE.Vector3()),size=bounds.getSize(new THREE.Vector3());
+    const localDirection=new THREE.Vector3(.18,.18,1).normalize().applyQuaternion(object.getWorldQuaternion(new THREE.Quaternion()));
+    const distance=THREE.MathUtils.clamp(size.length()*2.5,.35,8);
+    this.controls.minDistance=.18;
+    this.controls.maxPolarAngle=Math.PI*.94;
+    const cameraPosition=target.clone().addScaledVector(localDirection,distance);
+    cameraPosition.y=Math.max(.24,cameraPosition.y);
+    this.flyCamera(cameraPosition,target);
+    return true;
+  }
+  private focusHardwareShadow() {
+    if(this.focusShadowSnapshot)return;
+    const camera=this.sun.shadow.camera;
+    this.focusShadowSnapshot={left:camera.left,right:camera.right,top:camera.top,bottom:camera.bottom,normalBias:this.sun.shadow.normalBias,bias:this.sun.shadow.bias,target:this.sun.target.position.clone()};
+    camera.left=camera.bottom=-3;camera.right=camera.top=3;
+    this.sun.target.position.copy(this.craft.position);this.sun.target.updateMatrixWorld(true);
+    this.sun.shadow.normalBias=.0015;this.sun.shadow.bias=-.000015;
+    camera.updateProjectionMatrix();this.sun.shadow.needsUpdate=true;
+  }
+  private restoreFocusShadow() {
+    const prior=this.focusShadowSnapshot;if(!prior)return;
+    Object.assign(this.sun.shadow.camera,{left:prior.left,right:prior.right,top:prior.top,bottom:prior.bottom});
+    this.sun.shadow.normalBias=prior.normalBias;this.sun.shadow.bias=prior.bias;this.sun.target.position.copy(prior.target);this.sun.target.updateMatrixWorld(true);
+    this.sun.shadow.camera.updateProjectionMatrix();this.sun.shadow.needsUpdate=true;this.focusShadowSnapshot=null;
+  }
+  playLaunch(): Promise<void> {
+    const rocket = this.campus.getObjectByName("LaunchVehicle");
+    if (!rocket) return Promise.resolve();
+    this.setMode("campus", false);
+    this.camera.position.set(23, 9, 27);
+    this.controls.target.set(0, 6, 0);
+    this.controls.enabled = false;
+    const effects = new THREE.Group();
+    const flame = new THREE.Mesh(
+      new THREE.ConeGeometry(0.48, 4, 24),
+      new THREE.MeshBasicMaterial({
+        color: 0xffbb62,
+        transparent: true,
+        opacity: 0.9,
+      }),
+    );
+    flame.rotation.z = Math.PI;
+    flame.position.set(0, -1.5, 0);
+    effects.add(flame);
+    const core = new THREE.Mesh(
+      new THREE.ConeGeometry(0.27, 3.3, 24),
+      new THREE.MeshBasicMaterial({ color: 0xfff5cf }),
+    );
+    core.rotation.z = Math.PI;
+    core.position.y = -1.2;
+    effects.add(core);
+    for (let i = 0; i < 28; i++) {
+      const puff = new THREE.Mesh(
+        new THREE.IcosahedronGeometry(0.7, 1),
+        new THREE.MeshStandardMaterial({
+          color: 0xe5e9e5,
+          transparent: true,
+          opacity: 0.55,
+          depthWrite: false,
+        }),
+      );
+      puff.userData.index = i;
+      effects.add(puff);
+    }
+    this.campus.add(effects);
+    return new Promise(
+      (resolve) =>
+        (this.launchSequence = {
+          time: 0,
+          rocket,
+          base: rocket.position.clone(),
+          effects,
+          resolve,
+        }),
+    );
+  }
+  skipLaunch() {
+    const s = this.launchSequence;
+    if (!s) return;
+    s.rocket.position.copy(s.base);
+    this.campus.remove(s.effects);
+    disposeGeometry(s.effects);
+    s.resolve();
+    this.launchSequence = null;
+    this.controls.enabled = true;
+  }
+  resetCamera() {
+    this.setMode(this.mode);
+  }
+  viewAxis(axis: "front" | "top" | "side") {
+    this.restoreFocusShadow();
+    if(this.mode==='build'){this.controls.minDistance=2.5;this.controls.maxPolarAngle=Math.PI*.56;}
+    const target =
+      this.mode === "build"
+        ? new THREE.Vector3(0, 1.8, 0)
+        : new THREE.Vector3();
+    const d = this.mode === "build" ? 7 : 10;
+    const p = target
+      .clone()
+      .add(
+        axis === "top"
+          ? new THREE.Vector3(0.001, d, 0.001)
+          : axis === "side"
+            ? new THREE.Vector3(d, 0, 0)
+            : new THREE.Vector3(0, 1, d),
+      );
+    this.flyCamera(p, target);
+  }
+  viewMount(face: Face) {
+    this.restoreFocusShadow();
+    if (this.mode !== "build") return;
+    this.controls.minDistance=2.5;this.controls.maxPolarAngle=Math.PI*.56;
+    const target = new THREE.Vector3(0, 1.8, 0),
+      p = target.clone().addScaledVector(FACE_NORMALS[face], 6);
+    if (face !== "py" && face !== "ny") p.y += 1.8;
+    else {
+      p.z += 0.01;
+      p.x += 0.01;
+    }
+    this.flyCamera(p, target);
+  }
+  beginDuplicate(part: Part) {
+    const r = this.canvas.getBoundingClientRect();
+    this.beginNewPart(part.kind, r.left + r.width / 2, r.top + r.height / 2, part.modelId);
+    if (this.ghostPart) this.ghostPart.rotation = part.rotation;
+  }
+  beginNewPart(kind: PartKind, x: number, y: number, modelId?: string) {
+    this.restoreFocusShadow();
+    if (this.mode !== "build") return;
+    if (this.stowOpen) this.setStowOpen(false);
+    this.cancelDrag();
+    const part: Part = {
+      id: `p-${Date.now().toString(36)}`,
+      kind,
+      face: "pz",
+      u: 0,
+      v: 0,
+      rotation: 0,
+      ...(modelId ? {modelId} : {}),
+    };
+    if (getPartDefinition(this.design,part).internal) this.setBayOpen(true);
+    this.ghostPart = part;
+    this.ghost = createPart(part,this.design);
+    this.ghost.traverse((o) => {
+      if (o instanceof THREE.Mesh) {
+        const m = (o.material as THREE.Material).clone();
+        m.transparent = true;
+        m.opacity = 0.55;
+        m.userData.ghostMaterial = true;
+        o.material = m;
+      }
+    });
+    this.craft.add(this.ghost);
+    this.drag = { type: "part", part, x, y, moved: true };
+    this.controls.enabled = false;
+    this.updatePlacement(x, y);
+  }
+  cancelDrag() {
+    if (this.ghost) {
+      this.craft.remove(this.ghost);
+      disposeGeometry(this.ghost);
+      this.ghost = null;
+    }
+    this.ghostPart = null;
+    this.drag = null;
+    this.controls.enabled = true;
+    for (const p of this.design?.parts ?? []) {
+      const o = this.parts.get(p.id);
+      if (o) {
+        o.visible = true;
+        this.placeObject(o, p);
+      }
+    }
+    if (this.stowOpen) this.setStowOpen(true);
+  }
+  private coordinates(x: number, y: number) {
+    const r = this.canvas.getBoundingClientRect();
+    this.mouse.set(
+      ((x - r.left) / r.width) * 2 - 1,
+      (-(y - r.top) / r.height) * 2 + 1,
+    );
+    this.ray.setFromCamera(this.mouse, this.camera);
+  }
+  private onDown(e: PointerEvent) {
+    if (e.button !== 0) return;
+    if (this.drag && this.ghost) return;
+    this.down = { x: e.clientX, y: e.clientY };
+    this.coordinates(e.clientX, e.clientY);
+    if (this.mode === "build") {
+      if (this.stowOpen) return;
+      if (this.inspectionGroup) {
+        const sunHits = this.ray
+          .intersectObject(this.inspectionGroup, true)
+          .filter((h) => h.object.userData.inspectionHandle === "sun");
+        if (sunHits.length) {
+          this.drag = {
+            type: "nav",
+            handle: "inspection-sun",
+            x: e.clientX,
+            y: e.clientY,
+            moved: false,
+          };
+          this.controls.enabled = false;
+          return;
+        }
+      }
+      const rotate = this.rotationRing.visible
+        ? this.ray.intersectObject(this.rotationRing)
+        : [];
+      if (rotate.length && this.selection) {
+        this.drag = {
+          type: "nav",
+          handle: "rotate",
+          x: e.clientX,
+          y: e.clientY,
+          moved: false,
+        };
+        this.controls.enabled = false;
+        return;
+      }
+      const hits = this.ray.intersectObjects([...this.parts.values()], true);
+      if (hits.length) {
+        const id = hits[0].object.userData.partId as string;
+        this.cb.select(id);
+        const part = this.design.parts.find((p) => p.id === id)!;
+        this.drag = {
+          type: "part",
+          part: { ...part },
+          x: e.clientX,
+          y: e.clientY,
+          moved: false,
+        };
+        this.controls.enabled = false;
+      } else this.cb.select(null);
+    } else if (this.mode === "plan") {
+      if (this.targetPicking) return;
+      const canvasRect = this.canvas.getBoundingClientRect();
+      const candidates = this.handleGroup.children
+        .filter((o) => o.userData.handle)
+        .map((o) => {
+          const p = this.project(o.getWorldPosition(new THREE.Vector3()));
+          return {
+            o,
+            d: Math.hypot(
+              p.x + canvasRect.left - e.clientX,
+              p.y + canvasRect.top - e.clientY,
+            ),
+            visible: p.visible,
+          };
+        })
+        .filter((c) => c.visible && c.d < 23)
+        .sort((a, b) => a.d - b.d);
+      if (candidates.length) {
+        const handle = candidates[0].o.userData.handle as string;
+        if (handle.startsWith("node:")) {
+          this.selectedManeuverId = handle.slice(5);
+          this.cb.node(this.selectedManeuverId);
+          this.down = null;
+          return;
+        }
+        this.drag = {
+          type: "nav",
+          handle,
+          x: e.clientX,
+          y: e.clientY,
+          moved: false,
+        };
+        this.controls.enabled = false;
+        return;
+      }
+    }
+  }
+  private onMove(e: PointerEvent) {
+    if (!this.drag) return;
+    const d = this.drag,
+      dx = e.clientX - d.x,
+      dy = e.clientY - d.y;
+    if (Math.abs(dx) + Math.abs(dy) > 2) d.moved = true;
+    if (d.type === "part") {
+      if (!d.moved) return;
+      if (!this.ghost) {
+        this.ghostPart = d.part!;
+        this.ghost = createPart(d.part!,this.design);
+        this.ghost.traverse((o) => {
+          if (o instanceof THREE.Mesh) {
+            const m = (o.material as THREE.Material).clone();
+            m.transparent = true;
+            m.opacity = 0.55;
+            m.userData.ghostMaterial = true;
+            o.material = m;
+          }
+        });
+        this.craft.add(this.ghost);
+        const original = this.parts.get(d.part!.id);
+        if (original) original.visible = false;
+      }
+      this.updatePlacement(e.clientX, e.clientY);
+    } else {
+      const factor = e.shiftKey ? 0.2 : 1;
+      this.cb.navigation(d.handle!, dx * factor, dy * factor, false);
+      d.x = e.clientX;
+      d.y = e.clientY;
+    }
+  }
+  private updatePlacement(x: number, y: number) {
+    if (!this.ghost || !this.ghostPart) return;
+    this.coordinates(x, y);
+    this.mount.updateMatrixWorld(true);
+    const hits = this.ray.intersectObject(this.mount);
+    if (!hits.length) {
+      this.ghost.visible = false;
+      return;
+    }
+    this.ghost.visible = true;
+    const hit = hits[0],
+      local = this.craft.worldToLocal(hit.point.clone()),
+      n = hit.face!.normal;
+    let face: Face =
+      Math.abs(n.x) > 0.5
+        ? n.x > 0
+          ? "px"
+          : "nx"
+        : Math.abs(n.y) > 0.5
+          ? n.y > 0
+            ? "py"
+            : "ny"
+          : n.z > 0
+            ? "pz"
+            : "nz";
+    const dummy = { ...this.ghostPart, face, u: 0, v: 0 };
+    const tr = partTransformFor(this.design,{ ...dummy, rotation: 0 }),
+      delta = local.sub(new THREE.Vector3(...tr.position));
+    dummy.u = delta.dot(new THREE.Vector3(...tr.tangentU));
+    dummy.v = delta.dot(new THREE.Vector3(...tr.tangentV));
+    this.ghostPart = dummy;
+    this.placeObject(this.ghost, dummy);
+    const valid = this.cb.placement(dummy, false);
+    this.ghost.traverse((o) => {
+      if (o instanceof THREE.Mesh) {
+        const m = o.material as THREE.MeshStandardMaterial;
+        if (m.emissive) m.emissive.set(valid ? 0x005449 : 0x861f13);
+      }
+    });
+  }
+  private onUp(e: PointerEvent) {
+    if (
+      this.targetPicking &&
+      this.mode === "plan" &&
+      this.mission === "earth" &&
+      this.down &&
+      Math.hypot(e.clientX - this.down.x, e.clientY - this.down.y) < 5
+    ) {
+      this.coordinates(e.clientX, e.clientY);
+      const hit = this.ray.intersectObject(this.earthMesh)[0];
+      if (hit) {
+        const p = this.earthMesh.worldToLocal(hit.point.clone()).normalize();
+        this.cb.target(
+          (Math.asin(p.y) * 180) / Math.PI,
+          (Math.atan2(-p.z, p.x) * 180) / Math.PI,
+        );
+        this.down = null;
+        return;
+      }
+    }
+    const d = this.drag;
+    if (d) {
+      if (d.type === "part" && d.moved && this.ghost?.visible && this.ghostPart)
+        this.cb.placement(this.ghostPart, true);
+      if (d.type === "nav") this.cb.navigation(d.handle!, 0, 0, true);
+      this.cancelDrag();
+    } else if (
+      this.mode === "plan" &&
+      this.mission === "earth" &&
+      this.down &&
+      Math.hypot(e.clientX - this.down.x, e.clientY - this.down.y) < 5
+    ) {
+      const r = this.canvas.getBoundingClientRect();
+      let best = 25,
+        time = -1;
+      for (const p of this.trajectoryPoints) {
+        const v = v3(p.positionKm)
+          .multiplyScalar(this.scale)
+          .project(this.camera);
+        if (v.z > 1) continue;
+        const dist = Math.hypot(
+          (v.x * 0.5 + 0.5) * r.width + r.left - e.clientX,
+          (-v.y * 0.5 + 0.5) * r.height + r.top - e.clientY,
+        );
+        if (dist < best) {
+          best = dist;
+          time = p.t;
+        }
+      }
+      if (time >= 0) this.cb.burnAt(time);
+    }
+    this.down = null;
+  }
+  project(world: THREE.Vector3) {
+    const p = world.clone().project(this.camera),
+      r = this.canvas.getBoundingClientRect();
+    return {
+      x: (p.x * 0.5 + 0.5) * r.width,
+      y: (-0.5 * p.y + 0.5) * r.height,
+      visible: p.z < 1,
+    };
+  }
+  getHandleScreen(name: string) {
+    const o = this.handleGroup.children.find((c) => c.userData.handle === name);
+    return o ? this.project(o.getWorldPosition(new THREE.Vector3())) : null;
+  }
+  getPartScreen(id: string) {
+    const o = this.parts.get(id);
+    return o ? this.project(o.getWorldPosition(new THREE.Vector3())) : null;
+  }
+  render(dt: number) {
+    if (this.restoreEnvironment) {
+      const pmrem = new THREE.PMREMGenerator(this.renderer),
+        room = new RoomEnvironment();
+      const next = pmrem.fromScene(room, 0.04);
+      room.dispose();
+      pmrem.dispose();
+      this.environmentTarget = next;
+      this.environmentTargetDisposed=false;
+      this.scene.environment = next.texture;
+      this.restoreEnvironment = false;
+    }
+    this.canvas.style.cursor =
+      this.targetPicking && this.mode === "plan"
+        ? "crosshair"
+        : this.drag
+          ? "grabbing"
+          : "";
+    this.elapsed += dt;
+    const now = performance.now();
+    this.frameTimes.push(now - this.lastFrame);
+    this.lastFrame = now;
+    if (this.frameTimes.length > 7200) this.frameTimes.shift();
+    if (this.inspectionGroup)
+      this.inspectionGroup.visible = this.mode === "build";
+    if (this.launchSequence) {
+      const s = this.launchSequence;
+      s.time += dt;
+      const rise = Math.pow(Math.max(0, s.time - 1.6), 2) * 2.8;
+      s.rocket.position.y = s.base.y + rise;
+      s.effects.position.set(s.base.x, s.base.y + rise + 0.2, s.base.z);
+      s.effects.children
+        .slice(0, 2)
+        .forEach((o, i) =>
+          o.scale.setScalar(
+            (0.9 + Math.sin(s.time * 50 + i) * 0.1) * Math.min(1, s.time),
+          ),
+        );
+      s.effects.children.slice(2).forEach((o, i) => {
+        const phase = (s.time * 0.6 + i * 0.06) % 1,
+          a = i * 2.399;
+        o.position.set(
+          Math.cos(a) * phase * 7,
+          -rise + phase * 0.8,
+          Math.sin(a) * phase * 7,
+        );
+        o.scale.setScalar(0.6 + phase * 2);
+        (o as THREE.Mesh).material instanceof THREE.MeshStandardMaterial &&
+          ((
+            o as THREE.Mesh<THREE.BufferGeometry, THREE.MeshStandardMaterial>
+          ).material.opacity = (1 - phase) * 0.65);
+      });
+      this.controls.target.y = 6 + rise * 0.65;
+      if (s.time > 5.6) this.skipLaunch();
+    }
+    if (this.tween) {
+      this.tween.t = Math.min(1, this.tween.t + dt * 1.6);
+      const a = this.tween.t,
+        e = a * a * (3 - 2 * a);
+      this.camera.position.lerpVectors(this.tween.from, this.tween.to, e);
+      this.controls.target.lerpVectors(
+        this.tween.targetFrom,
+        this.tween.target,
+        e,
+      );
+      if (a === 1) this.tween = null;
+    }
+    if (this.mode === "campus" && !this.launchSequence)
+      this.controls.autoRotate = true;
+    else this.controls.autoRotate = false;
+    this.controls.autoRotateSpeed = 0.16;
+    this.controls.update(dt);
+    if (this.followCraft && this.camera.position.length() < 3.09)
+      this.camera.position.normalize().multiplyScalar(3.09);
+    this.handleGroup.children.forEach((o) => {
+      if (o.userData.handle) {
+        o.quaternion.copy(this.camera.quaternion);
+      }
+    });
+    if (this.outline.visible) this.outline.update();
+    this.renderer.info.reset();
+    if (this.controlRoomActive && this.controlRoom?.ready)
+      this.controlRoom.render(this.renderer, this.scene, this.camera, dt);
+    else this.composer.render(dt);
+  }
+  setQuality(q: "high" | "medium" | "low") {
+    this.quality = q;
+    const ratio = Math.min(
+      devicePixelRatio,
+      q === "high" ? 1.5 : q === "medium" ? 1.15 : 1,
+    );
+    this.renderer.setPixelRatio(ratio);
+    this.composer.setPixelRatio(ratio);
+    this.ao.enabled =
+      q === "high" && (this.mode === "campus" || this.mode === "build");
+    this.renderer.shadowMap.enabled = q !== "low";
+    this.stars.visible = q !== "low";
+  }
+}
+function disposeGeometry(o: THREE.Object3D) {
+  const materials = new Set<THREE.Material>();
+  const textures = new Set<THREE.Texture>();
+  o.traverse((c) => {
+    if (c instanceof THREE.Mesh) {
+      c.geometry.dispose();
+      for (const m of Array.isArray(c.material) ? c.material : [c.material])
+        if (!isSharedPartMaterial(m)) materials.add(m);
+    }
+  });
+  for (const m of materials) {
+    for(const key of ["map","bumpMap","normalMap","roughnessMap","metalnessMap","emissiveMap","alphaMap"] as const) {
+      const texture=(m as THREE.MeshStandardMaterial)[key];
+      if(texture&&!isSharedPartTexture(texture))textures.add(texture);
+    }
+    m.dispose();
+  }
+  for(const texture of textures)texture.dispose();
+}
+function clearGroup(g: THREE.Group) {
+  for (const child of [...g.children]) {
+    g.remove(child);
+    child.traverse((o) => {
+      if (o instanceof THREE.Mesh || o instanceof THREE.Line) {
+        o.geometry.dispose();
+        for (const m of Array.isArray(o.material) ? o.material : [o.material]) {
+          const map = (m as THREE.MeshBasicMaterial).map;
+          if (map) map.dispose();
+          m.dispose();
+        }
+      }
+    });
+  }
+}

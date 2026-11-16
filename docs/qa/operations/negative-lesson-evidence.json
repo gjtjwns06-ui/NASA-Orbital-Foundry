@@ -1,0 +1,853 @@
+{
+  "generatedAt": "2026-11-14T20:45:16.986Z",
+  "method": "Actual common elapsed prefix, cloned deterministic continuations; no injected input checkpoint or physical values.",
+  "commonPrefixSeconds": 22455800,
+  "commonPrefixWallMs": 9539.237099999998,
+  "timingScope": "Non-exclusive functional execution with shared prefix/caches; not a performance benchmark or cold per-flight latency.",
+  "cases": [
+    {
+      "kind": "none",
+      "branchWallMs": 15386.465400000001,
+      "modelVersion": "transfer-3.0.0",
+      "networkHash": "1eb4ebd04d12efb8ea2bf36e30a8b88c0ee198e504ca6efbc7d992fa8159fff6",
+      "simulationStatus": "complete",
+      "result": {
+        "status": "failed",
+        "score": 23,
+        "received": 0,
+        "required": 3,
+        "reasons": [
+          "지구에 완전히 수신된 고유 분광 자료 0/3개",
+          "조명·거리·장비 방향·운영 일정의 관측 조건을 확인하세요."
+        ],
+        "elapsedSeconds": 22648321.688840948,
+        "energyMinimumWh": 100.27171463329704,
+        "fuelRemainingKg": 6,
+        "totalCost": 563,
+        "budgetRemaining": 197,
+        "packets": [],
+        "events": [
+          {
+            "time": 0,
+            "code": "ESCAPE_BURN",
+            "message": "정렬된 발사 단계가 3687 m/s 순간 탈출 기동을 수행하고 분리되었습니다. 단계 추진제 222.8 kg · 탐사선 추진제는 유지됩니다.",
+            "severity": "info"
+          },
+          {
+            "time": 248798.23730885983,
+            "code": "EARTH_EXIT",
+            "message": "지구 중력 구간을 떠나 태양 중심 순항으로 전환했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22279678.311176598,
+            "code": "MARS_ENTRY",
+            "message": "같은 위치·속도로 화성 조우 구간에 진입했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22464000,
+            "code": "PERIAPSIS",
+            "message": "계획한 실제 최근접점을 통과했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22648321.688840948,
+            "code": "MARS_EXIT",
+            "message": "화성 영향권 경계에 도착했습니다.",
+            "severity": "info"
+          }
+        ]
+      },
+      "commands": []
+    },
+    {
+      "kind": "late",
+      "branchWallMs": 13572.930399999997,
+      "modelVersion": "transfer-3.0.0",
+      "networkHash": "1eb4ebd04d12efb8ea2bf36e30a8b88c0ee198e504ca6efbc7d992fa8159fff6",
+      "simulationStatus": "complete",
+      "result": {
+        "status": "failed",
+        "score": 23,
+        "received": 0,
+        "required": 3,
+        "reasons": [
+          "지구에 완전히 수신된 고유 분광 자료 0/3개",
+          "조명·거리·장비 방향·운영 일정의 관측 조건을 확인하세요."
+        ],
+        "elapsedSeconds": 22648321.688840948,
+        "energyMinimumWh": 100.27171463329704,
+        "fuelRemainingKg": 6,
+        "totalCost": 563,
+        "budgetRemaining": 197,
+        "packets": [],
+        "events": [
+          {
+            "time": 0,
+            "code": "ESCAPE_BURN",
+            "message": "정렬된 발사 단계가 3687 m/s 순간 탈출 기동을 수행하고 분리되었습니다. 단계 추진제 222.8 kg · 탐사선 추진제는 유지됩니다.",
+            "severity": "info"
+          },
+          {
+            "time": 248798.23730885983,
+            "code": "EARTH_EXIT",
+            "message": "지구 중력 구간을 떠나 태양 중심 순항으로 전환했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22279678.311176598,
+            "code": "MARS_ENTRY",
+            "message": "같은 위치·속도로 화성 조우 구간에 진입했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22464000,
+            "code": "PERIAPSIS",
+            "message": "계획한 실제 최근접점을 통과했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22648321.688840948,
+            "code": "MARS_EXIT",
+            "message": "화성 영향권 경계에 도착했습니다.",
+            "severity": "info"
+          }
+        ]
+      },
+      "commands": [
+        {
+          "id": "late-command",
+          "queueSequence": 1,
+          "issuedAtSeconds": 22460100,
+          "envelope": {
+            "commandId": "late-command",
+            "expiresAtSeconds": 22460400,
+            "payload": {
+              "kind": "replace-schedule",
+              "baseRevision": 0,
+              "replaceFromSeconds": 22460400,
+              "operations": [
+                {
+                  "id": "encounter-science",
+                  "kind": "observe",
+                  "start": 22460400,
+                  "end": 22465800
+                },
+                {
+                  "id": "science-return-1",
+                  "kind": "downlink",
+                  "start": 22465800,
+                  "end": 22469400
+                },
+                {
+                  "id": "science-return-2",
+                  "kind": "downlink",
+                  "start": 22476600,
+                  "end": 22480200
+                },
+                {
+                  "id": "science-return-3",
+                  "kind": "downlink",
+                  "start": 22487400,
+                  "end": 22491000
+                },
+                {
+                  "id": "science-return-4",
+                  "kind": "downlink",
+                  "start": 22498200,
+                  "end": 22501800
+                },
+                {
+                  "id": "science-return-5",
+                  "kind": "downlink",
+                  "start": 22509000,
+                  "end": 22512600
+                },
+                {
+                  "id": "science-return-6",
+                  "kind": "downlink",
+                  "start": 22519800,
+                  "end": 22523400
+                },
+                {
+                  "id": "science-return-7",
+                  "kind": "downlink",
+                  "start": 22530600,
+                  "end": 22534200
+                },
+                {
+                  "id": "science-return-8",
+                  "kind": "downlink",
+                  "start": 22541400,
+                  "end": 22545000
+                },
+                {
+                  "id": "science-return-9",
+                  "kind": "downlink",
+                  "start": 22552200,
+                  "end": 22555800
+                },
+                {
+                  "id": "science-return-10",
+                  "kind": "downlink",
+                  "start": 22563000,
+                  "end": 22566600
+                },
+                {
+                  "id": "science-return-11",
+                  "kind": "downlink",
+                  "start": 22573800,
+                  "end": 22577400
+                },
+                {
+                  "id": "science-return-12",
+                  "kind": "downlink",
+                  "start": 22584600,
+                  "end": 22588200
+                },
+                {
+                  "id": "science-return-13",
+                  "kind": "downlink",
+                  "start": 22595400,
+                  "end": 22599000
+                },
+                {
+                  "id": "science-return-14",
+                  "kind": "downlink",
+                  "start": 22606200,
+                  "end": 22609800
+                },
+                {
+                  "id": "science-return-15",
+                  "kind": "downlink",
+                  "start": 22617000,
+                  "end": 22620600
+                },
+                {
+                  "id": "science-return-16",
+                  "kind": "downlink",
+                  "start": 22627800,
+                  "end": 22631400
+                }
+              ]
+            }
+          },
+          "canonicalBytes": "{\"commandId\":\"late-command\",\"expiresAtSeconds\":22460400,\"payload\":{\"baseRevision\":0,\"kind\":\"replace-schedule\",\"operations\":[{\"end\":22465800,\"id\":\"encounter-science\",\"kind\":\"observe\",\"start\":22460400},{\"end\":22469400,\"id\":\"science-return-1\",\"kind\":\"downlink\",\"start\":22465800},{\"end\":22480200,\"id\":\"science-return-2\",\"kind\":\"downlink\",\"start\":22476600},{\"end\":22491000,\"id\":\"science-return-3\",\"kind\":\"downlink\",\"start\":22487400},{\"end\":22501800,\"id\":\"science-return-4\",\"kind\":\"downlink\",\"start\":22498200},{\"end\":22512600,\"id\":\"science-return-5\",\"kind\":\"downlink\",\"start\":22509000},{\"end\":22523400,\"id\":\"science-return-6\",\"kind\":\"downlink\",\"start\":22519800},{\"end\":22534200,\"id\":\"science-return-7\",\"kind\":\"downlink\",\"start\":22530600},{\"end\":22545000,\"id\":\"science-return-8\",\"kind\":\"downlink\",\"start\":22541400},{\"end\":22555800,\"id\":\"science-return-9\",\"kind\":\"downlink\",\"start\":22552200},{\"end\":22566600,\"id\":\"science-return-10\",\"kind\":\"downlink\",\"start\":22563000},{\"end\":22577400,\"id\":\"science-return-11\",\"kind\":\"downlink\",\"start\":22573800},{\"end\":22588200,\"id\":\"science-return-12\",\"kind\":\"downlink\",\"start\":22584600},{\"end\":22599000,\"id\":\"science-return-13\",\"kind\":\"downlink\",\"start\":22595400},{\"end\":22609800,\"id\":\"science-return-14\",\"kind\":\"downlink\",\"start\":22606200},{\"end\":22620600,\"id\":\"science-return-15\",\"kind\":\"downlink\",\"start\":22617000},{\"end\":22631400,\"id\":\"science-return-16\",\"kind\":\"downlink\",\"start\":22627800}],\"replaceFromSeconds\":22460400}}",
+          "payloadHash": "4ae45c2d8efed9b74ed53fac08f47478df8214ce8ba95d1c5283f1b9b96ec620",
+          "payloadBytes": 1455,
+          "frameBits": 12152,
+          "attempts": [
+            {
+              "id": "late-command:try:1",
+              "attempt": 1,
+              "queuedSequence": 1,
+              "queuedAtSeconds": 22460100,
+              "queueDeadlineSeconds": 22460400,
+              "status": "lost",
+              "stationId": "G3",
+              "eirpDbW": 109.4,
+              "firstBit": {
+                "emittedAtSeconds": 22460100,
+                "arrivesAtSeconds": 22460988.778416876,
+                "emitterPositionKm": [
+                  95729729.74292754,
+                  -108129251.35519546,
+                  -46869614.74900382
+                ],
+                "receiverPositionKm": [
+                  -166643770.93720838,
+                  -150970586.79345435,
+                  -64754552.656867035
+                ]
+              },
+              "lastBit": {
+                "emittedAtSeconds": 22460147.46875,
+                "arrivesAtSeconds": 22461036.249408152,
+                "emitterPositionKm": [
+                  95730796.84852043,
+                  -108128454.14661905,
+                  -46869262.081203535
+                ],
+                "receiverPositionKm": [
+                  -166643107.54059303,
+                  -150971225.9402971,
+                  -64754847.06639222
+                ]
+              },
+              "plannedTransmitEndSeconds": 22460147.46875,
+              "emittedBits": 12152,
+              "arrivedBits": 12152,
+              "totalBits": 12152,
+              "emissionValid": true,
+              "receptionValid": false,
+              "truthFailureCode": "RX_LEVEL_OUTSIDE_MODEL",
+              "attentionAtSeconds": 22462525.030066304,
+              "groundAttentionExpired": true
+            }
+          ],
+          "acknowledgements": []
+        }
+      ]
+    },
+    {
+      "kind": "early",
+      "branchWallMs": 18159.683000000005,
+      "modelVersion": "transfer-3.0.0",
+      "networkHash": "1eb4ebd04d12efb8ea2bf36e30a8b88c0ee198e504ca6efbc7d992fa8159fff6",
+      "simulationStatus": "complete",
+      "result": {
+        "status": "success",
+        "score": 93,
+        "received": 12,
+        "required": 3,
+        "reasons": [],
+        "elapsedSeconds": 22648321.688840948,
+        "energyMinimumWh": 68.57028475443775,
+        "fuelRemainingKg": 6,
+        "totalCost": 563,
+        "budgetRemaining": 197,
+        "packets": [
+          {
+            "id": "mars-spectrum:-11",
+            "capturedAt": 22460875,
+            "readyAt": 22460895,
+            "bits": 1600000,
+            "quality": 0.4005447819033307,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 22480249.765339904
+          },
+          {
+            "id": "mars-spectrum:-10",
+            "capturedAt": 22461015,
+            "readyAt": 22461035,
+            "bits": 1600000,
+            "quality": 0.4214428285619301,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999998,
+            "receivedAt": 22499690.600053642
+          },
+          {
+            "id": "mars-spectrum:-9",
+            "capturedAt": 22461300,
+            "readyAt": 22461320,
+            "bits": 1600000,
+            "quality": 0.4715078848146021,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 22511271.097867157
+          },
+          {
+            "id": "mars-spectrum:-8",
+            "capturedAt": 22461600,
+            "readyAt": 22461620,
+            "bits": 1600000,
+            "quality": 0.538712499669813,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 22522911.591573004
+          },
+          {
+            "id": "mars-spectrum:-7",
+            "capturedAt": 22461900,
+            "readyAt": 22461920,
+            "bits": 1600000,
+            "quality": 0.627606213078516,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 22534492.085100908
+          },
+          {
+            "id": "mars-spectrum:-6",
+            "capturedAt": 22462200,
+            "readyAt": 22462220,
+            "bits": 1600000,
+            "quality": 0.7497410344850364,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999988,
+            "receivedAt": 22553812.910552826
+          },
+          {
+            "id": "mars-spectrum:-5",
+            "capturedAt": 22462500,
+            "readyAt": 22462516,
+            "bits": 1600000,
+            "quality": 0.9269361707301781,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999993,
+            "receivedAt": 22565393.406326655
+          },
+          {
+            "id": "mars-spectrum:-4",
+            "capturedAt": 22462800,
+            "readyAt": 22462816,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 22577033.895932138
+          },
+          {
+            "id": "mars-spectrum:-3",
+            "capturedAt": 22463100,
+            "readyAt": 22463116,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 22588614.39209575
+          },
+          {
+            "id": "mars-spectrum:-2",
+            "capturedAt": 22463400,
+            "readyAt": 22463416,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999988,
+            "receivedAt": 22607935.21298827
+          },
+          {
+            "id": "mars-spectrum:-1",
+            "capturedAt": 22463700,
+            "readyAt": 22463720,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 22619515.70412076
+          },
+          {
+            "id": "mars-spectrum:0",
+            "capturedAt": 22464000,
+            "readyAt": 22464020,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 22631156.201942373
+          }
+        ],
+        "events": [
+          {
+            "time": 0,
+            "code": "ESCAPE_BURN",
+            "message": "정렬된 발사 단계가 3687 m/s 순간 탈출 기동을 수행하고 분리되었습니다. 단계 추진제 222.8 kg · 탐사선 추진제는 유지됩니다.",
+            "severity": "info"
+          },
+          {
+            "time": 248798.23730885983,
+            "code": "EARTH_EXIT",
+            "message": "지구 중력 구간을 떠나 태양 중심 순항으로 전환했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22279678.311176598,
+            "code": "MARS_ENTRY",
+            "message": "같은 위치·속도로 화성 조우 구간에 진입했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22456736.075972345,
+            "code": "COMMAND_INSTALLED",
+            "reasonCode": "COMMAND_INSTALLED",
+            "message": "The future schedule was installed; its future work has not yet completed.",
+            "severity": "info"
+          },
+          {
+            "time": 22457634.805076245,
+            "code": "COMMAND_ACK_RECEIVED",
+            "reasonCode": "COMMAND_INSTALLED",
+            "message": "The future schedule was installed; its future work has not yet completed.",
+            "severity": "info"
+          },
+          {
+            "time": 22460895,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22461035,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22461320,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22461620,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22461920,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22462220,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22462516,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22462816,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22463116,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22463416,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22463720,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22464000,
+            "code": "PERIAPSIS",
+            "message": "계획한 실제 최근접점을 통과했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22464020,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22480249.765339904,
+            "code": "DATA_RECEIVED",
+            "message": "고유 분광 자료가 지구에 완전히 수신되었습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22499690.600053642,
+            "code": "DATA_RECEIVED",
+            "message": "고유 분광 자료가 지구에 완전히 수신되었습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22511271.097867157,
+            "code": "DATA_RECEIVED",
+            "message": "고유 분광 자료가 지구에 완전히 수신되었습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22522911.591573004,
+            "code": "DATA_RECEIVED",
+            "message": "고유 분광 자료가 지구에 완전히 수신되었습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22534492.085100908,
+            "code": "DATA_RECEIVED",
+            "message": "고유 분광 자료가 지구에 완전히 수신되었습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22553812.910552826,
+            "code": "DATA_RECEIVED",
+            "message": "고유 분광 자료가 지구에 완전히 수신되었습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22565393.406326655,
+            "code": "DATA_RECEIVED",
+            "message": "고유 분광 자료가 지구에 완전히 수신되었습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22577033.895932138,
+            "code": "DATA_RECEIVED",
+            "message": "고유 분광 자료가 지구에 완전히 수신되었습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22588614.39209575,
+            "code": "DATA_RECEIVED",
+            "message": "고유 분광 자료가 지구에 완전히 수신되었습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22607935.21298827,
+            "code": "DATA_RECEIVED",
+            "message": "고유 분광 자료가 지구에 완전히 수신되었습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22619515.70412076,
+            "code": "DATA_RECEIVED",
+            "message": "고유 분광 자료가 지구에 완전히 수신되었습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22631156.201942373,
+            "code": "DATA_RECEIVED",
+            "message": "고유 분광 자료가 지구에 완전히 수신되었습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 22648321.688840948,
+            "code": "MARS_EXIT",
+            "message": "화성 영향권 경계에 도착했습니다.",
+            "severity": "info"
+          }
+        ]
+      },
+      "commands": [
+        {
+          "id": "early-command",
+          "queueSequence": 1,
+          "issuedAtSeconds": 22455800,
+          "envelope": {
+            "commandId": "early-command",
+            "expiresAtSeconds": 22460400,
+            "payload": {
+              "kind": "replace-schedule",
+              "baseRevision": 0,
+              "replaceFromSeconds": 22460400,
+              "operations": [
+                {
+                  "id": "encounter-science",
+                  "kind": "observe",
+                  "start": 22460400,
+                  "end": 22465800
+                },
+                {
+                  "id": "science-return-1",
+                  "kind": "downlink",
+                  "start": 22465800,
+                  "end": 22469400
+                },
+                {
+                  "id": "science-return-2",
+                  "kind": "downlink",
+                  "start": 22476600,
+                  "end": 22480200
+                },
+                {
+                  "id": "science-return-3",
+                  "kind": "downlink",
+                  "start": 22487400,
+                  "end": 22491000
+                },
+                {
+                  "id": "science-return-4",
+                  "kind": "downlink",
+                  "start": 22498200,
+                  "end": 22501800
+                },
+                {
+                  "id": "science-return-5",
+                  "kind": "downlink",
+                  "start": 22509000,
+                  "end": 22512600
+                },
+                {
+                  "id": "science-return-6",
+                  "kind": "downlink",
+                  "start": 22519800,
+                  "end": 22523400
+                },
+                {
+                  "id": "science-return-7",
+                  "kind": "downlink",
+                  "start": 22530600,
+                  "end": 22534200
+                },
+                {
+                  "id": "science-return-8",
+                  "kind": "downlink",
+                  "start": 22541400,
+                  "end": 22545000
+                },
+                {
+                  "id": "science-return-9",
+                  "kind": "downlink",
+                  "start": 22552200,
+                  "end": 22555800
+                },
+                {
+                  "id": "science-return-10",
+                  "kind": "downlink",
+                  "start": 22563000,
+                  "end": 22566600
+                },
+                {
+                  "id": "science-return-11",
+                  "kind": "downlink",
+                  "start": 22573800,
+                  "end": 22577400
+                },
+                {
+                  "id": "science-return-12",
+                  "kind": "downlink",
+                  "start": 22584600,
+                  "end": 22588200
+                },
+                {
+                  "id": "science-return-13",
+                  "kind": "downlink",
+                  "start": 22595400,
+                  "end": 22599000
+                },
+                {
+                  "id": "science-return-14",
+                  "kind": "downlink",
+                  "start": 22606200,
+                  "end": 22609800
+                },
+                {
+                  "id": "science-return-15",
+                  "kind": "downlink",
+                  "start": 22617000,
+                  "end": 22620600
+                },
+                {
+                  "id": "science-return-16",
+                  "kind": "downlink",
+                  "start": 22627800,
+                  "end": 22631400
+                }
+              ]
+            }
+          },
+          "canonicalBytes": "{\"commandId\":\"early-command\",\"expiresAtSeconds\":22460400,\"payload\":{\"baseRevision\":0,\"kind\":\"replace-schedule\",\"operations\":[{\"end\":22465800,\"id\":\"encounter-science\",\"kind\":\"observe\",\"start\":22460400},{\"end\":22469400,\"id\":\"science-return-1\",\"kind\":\"downlink\",\"start\":22465800},{\"end\":22480200,\"id\":\"science-return-2\",\"kind\":\"downlink\",\"start\":22476600},{\"end\":22491000,\"id\":\"science-return-3\",\"kind\":\"downlink\",\"start\":22487400},{\"end\":22501800,\"id\":\"science-return-4\",\"kind\":\"downlink\",\"start\":22498200},{\"end\":22512600,\"id\":\"science-return-5\",\"kind\":\"downlink\",\"start\":22509000},{\"end\":22523400,\"id\":\"science-return-6\",\"kind\":\"downlink\",\"start\":22519800},{\"end\":22534200,\"id\":\"science-return-7\",\"kind\":\"downlink\",\"start\":22530600},{\"end\":22545000,\"id\":\"science-return-8\",\"kind\":\"downlink\",\"start\":22541400},{\"end\":22555800,\"id\":\"science-return-9\",\"kind\":\"downlink\",\"start\":22552200},{\"end\":22566600,\"id\":\"science-return-10\",\"kind\":\"downlink\",\"start\":22563000},{\"end\":22577400,\"id\":\"science-return-11\",\"kind\":\"downlink\",\"start\":22573800},{\"end\":22588200,\"id\":\"science-return-12\",\"kind\":\"downlink\",\"start\":22584600},{\"end\":22599000,\"id\":\"science-return-13\",\"kind\":\"downlink\",\"start\":22595400},{\"end\":22609800,\"id\":\"science-return-14\",\"kind\":\"downlink\",\"start\":22606200},{\"end\":22620600,\"id\":\"science-return-15\",\"kind\":\"downlink\",\"start\":22617000},{\"end\":22631400,\"id\":\"science-return-16\",\"kind\":\"downlink\",\"start\":22627800}],\"replaceFromSeconds\":22460400}}",
+          "payloadHash": "1fe117a8c12c0f118291b4c3f2251b8c33dead37d83a476e0b1f4c1aaf8bda97",
+          "payloadBytes": 1456,
+          "frameBits": 12160,
+          "attempts": [
+            {
+              "id": "early-command:try:1",
+              "attempt": 1,
+              "queuedSequence": 1,
+              "queuedAtSeconds": 22455800,
+              "queueDeadlineSeconds": 22460400,
+              "status": "delivered",
+              "stationId": "G2",
+              "eirpDbW": 109.4,
+              "firstBit": {
+                "emittedAtSeconds": 22455800,
+                "arrivesAtSeconds": 22456688.573747255,
+                "emitterPositionKm": [
+                  95632760.0985239,
+                  -108208265.18680303,
+                  -46908861.44700666
+                ],
+                "receiverPositionKm": [
+                  -166705173.32558995,
+                  -150913079.56102052,
+                  -64727907.00918903
+                ]
+              },
+              "lastBit": {
+                "emittedAtSeconds": 22455847.5,
+                "arrivesAtSeconds": 22456736.075972345,
+                "emitterPositionKm": [
+                  95633847.2334684,
+                  -108207466.70515259,
+                  -46908508.913073815
+                ],
+                "receiverPositionKm": [
+                  -166704486.4831401,
+                  -150913713.10196215,
+                  -64728201.58399738
+                ]
+              },
+              "plannedTransmitEndSeconds": 22455847.5,
+              "emittedBits": 12160,
+              "arrivedBits": 12160,
+              "totalBits": 12160,
+              "emissionValid": true,
+              "receptionValid": true,
+              "truthFailureCode": null,
+              "attentionAtSeconds": 22458224.65194469,
+              "groundAttentionExpired": true
+            }
+          ],
+          "acknowledgements": [
+            {
+              "id": "early-command:ack:1",
+              "commandId": "early-command",
+              "attempt": 1,
+              "decision": {
+                "commandId": "early-command",
+                "attempt": 1,
+                "payloadHash": "1fe117a8c12c0f118291b4c3f2251b8c33dead37d83a476e0b1f4c1aaf8bda97",
+                "status": "installed",
+                "revision": 1,
+                "decidedAtSeconds": 22456736.075972345,
+                "installedAtSeconds": 22456736.075972345,
+                "duplicate": false,
+                "scheduleHash": "bf54db31231b1a9c2c301686e0e490bac2638e8188d38516241ded603d2b7041",
+                "reasonCode": "COMMAND_INSTALLED"
+              },
+              "status": "delivered",
+              "stationId": "G2",
+              "firstBit": {
+                "emittedAtSeconds": 22456736.075972345,
+                "arrivesAtSeconds": 22457624.804606326,
+                "emitterPositionKm": [
+                  -166704486.4831401,
+                  -150913713.10196215,
+                  -64728201.58399738
+                ],
+                "receiverPositionKm": [
+                  95674553.89258774,
+                  -108177555.25835215,
+                  -46895315.25698314
+                ]
+              },
+              "lastBit": {
+                "emittedAtSeconds": 22456746.075972345,
+                "arrivesAtSeconds": 22457634.805076245,
+                "emitterPositionKm": [
+                  -166704341.9070106,
+                  -150913846.47433573,
+                  -64728263.5957299
+                ],
+                "receiverPositionKm": [
+                  95674783.09400421,
+                  -108177386.75411807,
+                  -46895241.003421046
+                ]
+              },
+              "plannedTransmitEndSeconds": 22456746.075972345,
+              "payloadRateBps": 409.6,
+              "emittedBits": 4096,
+              "totalBits": 4096,
+              "receivedAtSeconds": 22457634.805076245,
+              "failureCode": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

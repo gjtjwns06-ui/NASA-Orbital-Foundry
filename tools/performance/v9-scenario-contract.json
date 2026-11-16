@@ -1,0 +1,127 @@
+{
+  "status": "PREPARED_ONLY_NO_BROWSER_OR_GPU_EXECUTION",
+  "port": 5191,
+  "nodeMinimumMajor": 24,
+  "processDeadlineSeconds": 360,
+  "orderedIndependentRuns": [
+    {
+      "mode": "standard20-medium",
+      "harness": "tools/performance/v9-standard20.mjs",
+      "quality": "medium",
+      "actualFlight": false,
+      "parts": 20,
+      "craftPathSamples": 560,
+      "planetOrbitSamples": 600,
+      "guidePoints": 2,
+      "originalFixture": "tests/browser/artifacts/performance-standard-prep/hardware-20-design.json",
+      "originalReplay": "tests/browser/artifacts/performance-standard-prep/input-replay.json"
+    },
+    {
+      "mode": "firstlight-medium",
+      "harness": "tools/performance/v9-active-first-light.mjs",
+      "quality": "medium",
+      "actualFlight": true,
+      "preset": "compact",
+      "surfaceFinish": "textured",
+      "surfaceMapCount": 4,
+      "earthDetailRequests": 0,
+      "baseEarthWidth": 4096
+    },
+    {
+      "mode": "firstlight-high16k",
+      "harness": "tools/performance/v9-active-first-light.mjs",
+      "quality": "high",
+      "actualFlight": true,
+      "preset": "compact",
+      "surfaceFinish": "textured",
+      "surfaceMapCount": 4,
+      "earthWidth": 16384,
+      "earthHeight": 8192,
+      "compressedEarthMipCount": 15,
+      "allow8KFallbackAsPass": false
+    }
+  ],
+  "sharedGates": {
+    "viewport": [
+      1920,
+      1080
+    ],
+    "nativeDpr": 1,
+    "pixelRatio": 1,
+    "motion": "full",
+    "uiScale": "normal",
+    "pausedWarmupMs": 10000,
+    "durationMinMs": 120000,
+    "durationMaxMs": 121000,
+    "meanFpsMin": 60,
+    "p99MsMax": 33.3,
+    "rightDrags": 12,
+    "wheels": 12,
+    "applicationErrors": 0,
+    "resourceErrors": 0,
+    "nativeOwnershipErrors": 0,
+    "contextLosses": 0,
+    "visibility": "visible",
+    "immutableSourcePublicDistAndHarnesses": true
+  },
+  "flightOnlyGates": {
+    "startViaTrustedResumeClick": true,
+    "advanceMinSeconds": 115,
+    "maximumPhysicalLeadSeconds": 0.25,
+    "speed": 1,
+    "mechanismsMustMove": true,
+    "motorEnergyMustIncrease": true,
+    "renderFKMatchesCommittedWorker": true,
+    "compactObjectiveVisible": true,
+    "equipmentDefaultCollapsed": true,
+    "retainedHistoryCPUCapacity": 1024,
+    "maxActualHistoryPoints": 720,
+    "initialHistoryGPUUpload": false,
+    "allowedFirstHistoryNativeDelta": {
+      "Buffer": {
+        "created": 1,
+        "deleted": 0
+      },
+      "VertexArray": {
+        "created": 1,
+        "deleted": 0
+      },
+      "Program": {
+        "created": 1,
+        "deleted": 0
+      },
+      "Shader": {
+        "created": 2,
+        "deleted": 2
+      },
+      "Texture": {
+        "created": 0,
+        "deleted": 0
+      },
+      "Framebuffer": {
+        "created": 0,
+        "deleted": 0
+      },
+      "Renderbuffer": {
+        "created": 0,
+        "deleted": 0
+      }
+    },
+    "subsequentNativeCountersAndIdentities": "exactly stable"
+  },
+  "metricsObservedWithoutInventedThreshold": [
+    "p50",
+    "p95",
+    "maximum frame interval",
+    "frames over 33.3 ms",
+    "frames over 50 ms",
+    "long tasks",
+    "heapBytes",
+    "draw calls/triangles",
+    "startup detail readiness and startup frame/long-task record",
+    "CPU compressed mip payload/estimated finish mip bytes"
+  ],
+  "notMeasuredYet": true,
+  "fps": null,
+  "performanceVerdict": null
+}

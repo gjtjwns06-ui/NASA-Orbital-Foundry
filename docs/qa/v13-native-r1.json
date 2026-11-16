@@ -1,0 +1,441 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/browser/voyage-flow.spec.ts",
+      "tests/browser/solar-assist-navigation.spec.ts",
+      "tests/browser/solar-expedition.spec.ts",
+      "tests/browser/solar-second-destination.spec.ts",
+      "tests/browser/experience-reset-assembly.spec.ts",
+      "tests/browser/transfer-date-recovery.spec.ts",
+      "--reporter=list,json",
+      "--output=test-results-v13-integrated-r1",
+      "--max-failures=1"
+    ],
+    "configFile": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\playwright.config.ts",
+    "rootDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 1,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry/test-results-v13-integrated-r1",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\test-results-v13-integrated-r1",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser",
+        "snapshotDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5188",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "headless": true,
+          "launchOptions": {
+            "executablePath": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+            "args": [
+              "--disable-background-timer-throttling"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "experience-reset-assembly.spec.ts",
+      "file": "experience-reset-assembly.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "fresh entry exposes exploration and contextual assembly without false camera selection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5842,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T13:12:25.288Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2bafdc431a5cd03bacb8-236489868e21d5e0bc5f",
+          "file": "experience-reset-assembly.spec.ts",
+          "line": 14,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "solar-assist-navigation.spec.ts",
+      "file": "solar-assist-navigation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a physically matched assist can be compared, selected, edited, undone and retained through the workshop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14793,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T13:12:31.975Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d909aefe439f1acb0abc-7117a5a08a586456f674",
+          "file": "solar-assist-navigation.spec.ts",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "the built probe flies through Jupiter, returns actual two-band Saturn observations and can replan",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 114921,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 80000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 80000ms exceeded while waiting on the predicate\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\solar-assist-navigation.spec.ts:104:222",
+                    "location": {
+                      "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\solar-assist-navigation.spec.ts",
+                      "column": 222,
+                      "line": 104
+                    },
+                    "snippet": " \u001b[90m 102 |\u001b[39m  \u001b[90m// Actual approach must put the selected region inside the spectrometer's\u001b[39m\n \u001b[90m 103 |\u001b[39m  \u001b[90m// footprint. Neither zoom nor test automation invents spatial resolution.\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 104 |\u001b[39m  \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(\u001b[36masync\u001b[39m()\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m s\u001b[33m=\u001b[39m(\u001b[36mawait\u001b[39m state(page))\u001b[33m.\u001b[39mvoyage\u001b[33m,\u001b[39mr\u001b[33m=\u001b[39ms\u001b[33m.\u001b[39moperations\u001b[33m.\u001b[39mencounter\u001b[33m.\u001b[39mfeatures\u001b[33m.\u001b[39mfind((feature\u001b[33m:\u001b[39many)\u001b[33m=>\u001b[39mfeature\u001b[33m.\u001b[39mid\u001b[33m===\u001b[39ms\u001b[33m.\u001b[39mexposure\u001b[33m.\u001b[39mfeatureId)\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m \u001b[33m!\u001b[39m\u001b[33m!\u001b[39mr\u001b[33m&&\u001b[39ms\u001b[33m.\u001b[39mexposure\u001b[33m.\u001b[39mfootprintKm\u001b[33m<=\u001b[39mr\u001b[33m.\u001b[39mradiusKm\u001b[33m*\u001b[39m\u001b[35m3\u001b[39m\u001b[33m;\u001b[39m}\u001b[33m,\u001b[39m{timeout\u001b[33m:\u001b[39m\u001b[35m80000\u001b[39m})\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                                                                                                                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 105 |\u001b[39m  \u001b[36mawait\u001b[39m voyage(\u001b[32m'band:visible'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expose(page)\u001b[33m;\u001b[39m\n \u001b[90m 106 |\u001b[39m  \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(\u001b[36masync\u001b[39m()\u001b[33m=>\u001b[39m(\u001b[36mawait\u001b[39m state(page))\u001b[33m.\u001b[39mvoyage\u001b[33m.\u001b[39moperations\u001b[33m.\u001b[39mrecords\u001b[33m.\u001b[39mfilter((r\u001b[33m:\u001b[39many)\u001b[33m=>\u001b[39mr\u001b[33m.\u001b[39mvalid\u001b[33m&&\u001b[39mr\u001b[33m.\u001b[39mband\u001b[33m===\u001b[39m\u001b[32m'visible'\u001b[39m)\u001b[33m.\u001b[39mlength)\u001b[33m.\u001b[39mtoBe(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 107 |\u001b[39m  \u001b[36mawait\u001b[39m voyage(\u001b[32m'band:nir'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expose(page)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\solar-assist-navigation.spec.ts",
+                        "column": 222,
+                        "line": 104
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\nCall Log:\n- Timeout 80000ms exceeded while waiting on the predicate\n\n  102 |  // Actual approach must put the selected region inside the spectrometer's\n  103 |  // footprint. Neither zoom nor test automation invents spatial resolution.\n> 104 |  await expect.poll(async()=>{const s=(await state(page)).voyage,r=s.operations.encounter.features.find((feature:any)=>feature.id===s.exposure.featureId);return !!r&&s.exposure.footprintKm<=r.radiusKm*3;},{timeout:80000}).toBe(true);\n      |                                                                                                                                                                                                                              ^\n  105 |  await voyage('band:visible').click();await expose(page);\n  106 |  await expect.poll(async()=>(await state(page)).voyage.operations.records.filter((r:any)=>r.valid&&r.band==='visible').length).toBe(1);\n  107 |  await voyage('band:nir').click();await expose(page);\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\solar-assist-navigation.spec.ts:104:222"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T13:12:46.806Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\test-results-v13-integrated-r1\\solar-assist-navigation-th-f042e-observations-and-can-replan\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\solar-assist-navigation.spec.ts",
+                    "column": 222,
+                    "line": 104
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d909aefe439f1acb0abc-f1362c6cd4d9ba41e729",
+          "file": "solar-assist-navigation.spec.ts",
+          "line": 60,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "solar-expedition.spec.ts",
+      "file": "solar-expedition.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a real first expedition: story, responsive route drag, own craft, observation, return and discovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8b2f9ab4c0665a7f3d2f-628db5f4ca486ca14ca6",
+          "file": "solar-expedition.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "multiple destination routes and compact viewport remain operable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8b2f9ab4c0665a7f3d2f-f5bf092e42ae9d3b551d",
+          "file": "solar-expedition.spec.ts",
+          "line": 68,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "solar-second-destination.spec.ts",
+      "file": "solar-second-destination.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Venus requires and uses an actually installed spectrometer before returning a new discovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "00ad7fd1a130371bab08-d4ba7ceb56930994808c",
+          "file": "solar-second-destination.spec.ts",
+          "line": 13,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "transfer-date-recovery.spec.ts",
+      "file": "transfer-date-recovery.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "ko: the reported 80-day arrival has an explicit date repair, not a retry loop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "6286ab17fd8ea6364fc6-364a4a013671f1e33cc9",
+          "file": "transfer-date-recovery.spec.ts",
+          "line": 11,
+          "column": 3
+        },
+        {
+          "title": "en: the reported 80-day arrival has an explicit date repair, not a retry loop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "6286ab17fd8ea6364fc6-ff53435f794343313182",
+          "file": "transfer-date-recovery.spec.ts",
+          "line": 11,
+          "column": 3
+        },
+        {
+          "title": "a rejected old saved date can open a valid draft without rewriting that saved file",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "6286ab17fd8ea6364fc6-277c265db40e8afc270d",
+          "file": "transfer-date-recovery.spec.ts",
+          "line": 71,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "voyage-flow.spec.ts",
+      "file": "voyage-flow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "native expedition: incident, mounted view, measured photos, paused resume and received journal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1fbe09db65d58eb89f62-0ba4b63ac68792b2f40b",
+          "file": "voyage-flow.spec.ts",
+          "line": 8,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "message": "\u001b[31mTesting stopped early after 1 maximum allowed failures.\u001b[39m"
+    }
+  ],
+  "stats": {
+    "startTime": "2026-11-15T13:12:24.600Z",
+    "duration": 143983.771,
+    "expected": 2,
+    "skipped": 7,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,47 @@
+# M03 remote operations: implemented model boundary
+
+Runtime `transfer-3.0.0` is an explicit new flight. Released `transfer-1.0.0` and `transfer-2.0.0`, their catalogue, trajectory math, resource arithmetic and save-1 parser stay unchanged. The trajectory still carries its original patched-conic force-model identity: this feature adds no new GMAT validation claim. The separate command-network identity/hash is generated from `command-network.ts`; `tools/operations/export-model.mjs` writes the exact canonical JSON and a source manifest.
+
+## The playable decision
+
+`createOperationsLesson('iris-schedule-rescue-v1')` creates a launchable Iris craft and a 260-day transfer. No resource/checkpoint is inserted. Its onboard observation ends after 100 seconds, at periapsis−3500 s. The player extends that block's right edge to periapsis+1800 s by dragging into the empty charging interval. The existing downlink blocks remain. The fixed replacement cut is periapsis−3600 s; the preloaded Earth-pointing listening block runs from periapsis−10800 to−3600 s. The suggested submission time is periapsis−8200 s. Submission is a ground action, not an instantaneous spacecraft action.
+
+The full elapsed-flight tests require the early command to return at least three distinct quality-qualified science packets. Otherwise-identical no-command and late-command flights must complete with fewer than three. Exact current run timings/counts are recorded by `operations-runtime.test.ts` in `docs/qa/operations/lesson-runtime-evidence.json`; do not substitute authored schedule examples for that execution evidence.
+
+## Physical transport
+
+The separate uplink uses a fixed 256 information bit/s rate, a canonical UTF-8 envelope plus64-byte framing, a fixed station/EIRP for each frame, and first/last-bit moving-endpoint light-time solutions. Receiver tracking range is distinct from the decoding margin. Constants and source conditions are listed in the canonical network JSON and the primary-source design document. Five stations and their availability are educational assumptions, not real DSN allocation.
+
+Each actual reception interval checks the spacecraft's actual quaternion, retarded station direction, weighted physical aperture rays, EPS receive power, station horizon, solar exclusion and moving-Mars photon clearance. It does not use the requested Earth-pointing attitude as proof. A failed or uncertifiable interval discards the frame, leaves the onboard schedule unchanged and never waits for a later pointing opportunity.
+
+Conservative interval guards certify the declared numerical attitude path: piecewise quaternion interpolation through an integration interval's start/mid/end controller states. This is not a proof of unrestricted real continuous torque dynamics. A cone of possible directions expands each other-part/bus OBB by a bounded ray displacement; a central ray that misses the expanded OBB is clear throughout the cone. Uncertain intervals subdivide to0.01 s and then fail closed. Source-worldline clearance uses a certified convex squared-distance bracket against the moving cubic-Hermite Mars ephemeris. A cached trajectory certificate bounds the entire coast conic by its periapsis speed and local hyperbolae by their periapsis speed plus polynomial-bounded planet-origin speeds; no sampled endpoint alone establishes the global300 km/s guard bound.
+
+One ground frame emits at a time, with a one-second minimum interframe gap. A queued frame without a current opportunity is reconsidered on a60-second ground scheduling clock. Active TX/RX and slew use the selected1/.5/.25-second canonical grid; encounter/quiet/downlink resource grids remain explicit. Endpoints, expiry, installation, operation changes and ACK completion are exact physical boundaries. Zero/sub-step render requests cannot start an emission or mutate a paused physical checkpoint.
+
+ACKs have4096 payload bits. They consume the actual selected downlink payload capacity before science, with no second80% factor. Their station and rate are fixed per frame. TX-off or a lost/uncertifiable interval aborts the frame and preserves only prior emitted bits and the actual tail endpoint. ACKs are not automatically revived. Iris draws9.1 W RX-only or29.0 W simultaneous RX/TX, replacing the selected radio's old contribution once before bus conversion loss. Safe-mode radios are off. AX100 and other unsupported command chains are rejected for this authored Iris-only runtime; it does not pretend an AX100 has simultaneous RX/TX capability.
+
+The inherited science channel retains its released60-second conservative packet batching and midpoint link evaluation. New command/ACK interval certification does not claim that legacy science framing has acquired the same finite-frame receiver model. This limitation remains visible in the model description.
+
+## Protocol and Earth knowledge
+
+Only a complete valid frame received strictly before both expiry and replacement cut can install a new revision. Equality is rejected. A replacement cannot cut an existing block, overlap another block, reuse a retained ID or exceed40 operations. The past schedule prefix, trajectory, captures, resource history and emitted signals are preserved.
+
+Action IDs are idempotent even at the256-action limit. Command IDs bind immutable canonical bytes. Up to128 commands and32 attempts each are allowed. Explicit retry of an already installed command can return its original installation ACK after the original expiry; it cannot install again. Cancelling an unsent retry does not recall an older signal. Terminal flights reject new queue/retry actions, but an unsent local queue entry may still be cancelled.
+
+Earth knows local transmission/queue status, attention timeout and received ACK content only. Missing ACK means unconfirmed. Receiver-side loss or rejection is not exposed as a ground fact. Rejected ACKs may report an onboard revision but cannot create knowledge of that schedule. Ground schedule reconstruction requires received installed ACKs, matching local payload hashes and a known predecessor schedule; out-of-order confirmations wait for the missing chain. An ACK confirms installation, not completion of future science operations. `onboardTruth` is a separately labelled omniscient simulation view.
+
+Signal views mark a future final-bit endpoint with `lastBitIsPlanned`. A renderer must not show that predicted tail as already emitted or infer command installation from animation progress. All vector endpoints are heliocentric ICRF km, all times elapsed TDB seconds. Command events carry machine `reasonCode` for translation.
+
+## Save, replay and integration
+
+Save envelope2 captures initial craft/plan, numerical profile, dataset/catalogue/network hashes, ordered authoritative ground actions, and an exact replay checkpoint. The checkpoint contains resources, quaternion/controller, packets/pending science frames, events, complete command/ACK ledgers and Earth knowledge, but not trusted solved trajectory coordinates. The journal is stored once. A separately validated editor draft never enqueues a command.
+
+The parser bounds UTF-8 input at8 MiB, nesting at64, actions/commands/attempts and schedule sizes. It rejects unknown fields/identities, conflicting numerical profiles and forged replay state. `createTransferEngineReplay(text)` creates a detached task; `step(maxSteps)` advances bounded work, `cancel()` cannot install partial state, and `result()` is available only after exact verification. Root commits successful replay atomically to its session. Old saves retain the original2 MB/version-1 parser. The new IndexedDB slot is `autosave:transfer-3.0.0` in `orbital-foundry-journey`/`saves`.
+
+The facade exports create/advance/telemetry/result/solve/preview, command queue/cancel/retry and view functions, save serialization/storage, and replay. Explicit unknown model IDs, mismatched released profiles and invalid numeric options are rejected. A draft-only restore returns its numerical profile as `loaded.numerics` and in the save, so launch cannot silently use different defaults.
+
+## Acceptance evidence
+
+The pinned gates are1/.5/.25 s active and300/600 s cruise comparisons: identical decisions and science identities, command/ACK times within0.05 s, quaternion within0.05°, link margin within0.1 dB, min/final energy within0.10 Wh. Same-grid request partitioning is exact. The tests cover paused/zero-step behavior, actual full flights, five save phases, forgery and cancellation, independent link equations and source hashes, actual-aperture uncertainty, RX/TX accounting, ACK interruption and ground/truth separation. The final combined test output and source manifest must accompany merge; this document alone is not a PASS declaration.
+
+Primary sources: [NASA flight operations](https://science.nasa.gov/learn/basics-of-space-flight/chapter15-1/), [NASA telecommunications](https://science.nasa.gov/learn/basics-of-space-flight/chapter10-1/), [JPL Iris V2.2 brochure, September2022](https://scienceandtechnology.jpl.nasa.gov/sites/default/files/documents/Brochure_Iris_Transponder_V2.2_SEP_2022.pdf), [DSN104O](https://deepspace.jpl.nasa.gov/dsndocs/810-005/104/104O.pdf), [AX100 revision3.7](https://gomspace.com/wp-content/uploads/2025/09/gs-ds-nanocom-ax100.pdf). Source figures retain their stated conditions; framing, controller law, station allocation, link thresholds and gameplay schedule are explicitly authored assumptions.

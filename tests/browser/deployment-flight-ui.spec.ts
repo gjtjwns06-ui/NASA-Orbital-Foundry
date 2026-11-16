@@ -1,0 +1,84 @@
+import {test as base,expect,type Page} from '@playwright/test';
+import {mkdirSync,readFileSync,writeFileSync} from 'node:fs';
+import {join} from 'node:path';
+import {installNativeDeletionAudit} from './native-gl-audit';
+
+const candidate=process.env.PLAYWRIGHT_QA_CANDIDATE||'flight-ui-unfrozen';
+if(!/^[a-z0-9-]+$/.test(candidate))throw Error('Invalid candidate');
+const out=join(process.cwd(),'tests/browser/artifacts/deployment-flight-ui',candidate);mkdirSync(out,{recursive:true});
+const terminalText=readFileSync('tests/browser/artifacts/deployment-flow/m8-production-r1-closure/repaired-terminal-save.json','utf8');
+const test=base.extend<{audit:void}>({audit:[async({page},use,info)=>{
+ const errors:string[]=[],warnings:string[]=[];await installNativeDeletionAudit(page);
+ page.on('pageerror',e=>errors.push(e.stack||e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());if(m.type()==='warning')warnings.push(m.text());});
+ page.on('response',r=>{if(r.status()>=400&&!r.url().endsWith('/favicon.ico'))errors.push(`${r.status()} ${r.url()}`);});
+ await use();const native=await page.evaluate(()=>(window as any).__allContextDeletionAudit).catch(()=>null);
+ const name=info.title.replace(/[^a-z0-9]+/gi,'-').toLowerCase();
+ writeFileSync(join(out,name+'.json'),JSON.stringify({title:info.title,status:info.status,browser:page.context().browser()?.version(),url:page.url(),viewport:page.viewportSize(),errors,warnings,native,scripts:await page.locator('script[src]').evaluateAll(es=>es.map(e=>(e as HTMLScriptElement).src)).catch(()=>[])},null,2));
+ if(info.status!==info.expectedStatus)await page.screenshot({path:join(out,name+'-failure.png')}).catch(()=>{});
+ expect(errors).toEqual([]);expect(native?.errors??[]).toEqual([]);expect(native?.contexts?.length).toBeGreaterThan(0);expect(warnings.filter(w=>/INVALID_OPERATION|does not belong to this context|too many errors/.test(w))).toEqual([]);
+},{auto:true}]});
+test.setTimeout(180000);test.use({actionTimeout:15000});
+const state=(p:Page)=>p.evaluate(()=>(window as any).__game.deployment().getState());
+const physical=(s:any)=>({craft:s.craft,plan:s.plan,numerics:s.numerics,runtime:s.runtime,telemetry:s.telemetry,result:s.result});
+const control=(p:Page,a:string)=>p.locator(`[data-deployment-action="${a}"]`).first();
+const ready=(p:Page)=>p.waitForFunction(()=>{const s=(window as any).__game.deployment()?.getState();return s&&!s.pending&&!s.busy&&!s.restoring&&!s.saving&&!s.closing;},null,{timeout:180000});
+const camera=(p:Page)=>p.evaluate(()=>(window as any).__game.deployment().scene.qa.getCamera());
+async function settledCamera(p:Page){let last='',count=0;for(let i=0;i<60;i++){const current=await camera(p),text=JSON.stringify(current);count=text===last?count+1:0;if(count>=3)return current;last=text;await p.waitForTimeout(50);}throw Error('Actual camera damping did not converge');}
+async function hit(p:Page,selector:string){const result=await p.locator(selector).evaluate(el=>{const r=el.getBoundingClientRect(),h=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return {x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom,hit:el===h||el.contains(h),vw:innerWidth,vh:innerHeight};});expect(result.x).toBeGreaterThanOrEqual(0);expect(result.y).toBeGreaterThanOrEqual(0);expect(result.right).toBeLessThanOrEqual(result.vw);expect(result.bottom).toBeLessThanOrEqual(result.vh);expect(result.hit).toBe(true);return result;}
+async function boot(p:Page,language:'ko'|'en'='ko',scale:'normal'|'large'='normal',url='/?qa'){
+ await p.goto(url);await p.waitForFunction(()=>Boolean((window as any).__game?.getState().assetsReady));
+ if(language==='en')await p.locator('[data-action="language"]').click();
+ await p.locator('[data-action="settings"]').click();await p.locator('#ui-scale').selectOption(scale);await p.locator('#motion').selectOption('reduced');await p.locator('[data-action="close-modal"]').click();
+ await p.locator('[data-action="missions"]').click();await p.locator('[data-action="mission-deployment"]').click();await ready(p);
+}
+async function shortFlight(p:Page){await control(p,'variants').click();await control(p,'preset:compact').click();await ready(p);await control(p,'launch').click();await p.waitForFunction(()=>(window as any).__game.deployment().getState().runtime?.time>=3);await control(p,'play').click();await ready(p);expect((await state(p)).playing).toBe(false);await settledCamera(p);}
+async function beginTerminalRestore(p:Page){const started=Date.now(),choose=p.waitForEvent('filechooser');await control(p,'import').click();await(await choose).setFiles({name:'actual-v8-terminal.json',mimeType:'application/json',buffer:Buffer.from(terminalText)});await p.waitForFunction(()=>(window as any).__game.deployment().getState().restoring);return started;}
+async function finishTerminalRestore(p:Page,started:number){await p.waitForFunction(()=>(window as any).__game.deployment().getState().result?.success===true,null,{timeout:180000});await ready(p);expect((await state(p)).error).toBe('');return {wallSeconds:(Date.now()-started)/1000,flightSeconds:(await state(p)).runtime.time};}
+async function factsMatch(p:Page){const s=await state(p);const values=await p.locator('.deployment-objective-row meter').evaluateAll(es=>es.map(e=>({id:e.parentElement?.dataset.objective,value:(e as HTMLMeterElement).value,text:e.getAttribute('aria-valuetext')})));expect(values.find(v=>v.id==='power')?.value).toBeCloseTo(Math.min(90,Math.max(0,s.telemetry.solarPowerW)),10);expect(values.find(v=>v.id==='stable')?.value).toBeCloseTo(Math.min(60,s.runtime.solarGoodSeconds),10);expect(values.find(v=>v.id==='received')?.value).toBeCloseTo(Math.min(16e6,s.runtime.diagnosticReceivedBits),10);return values;}
+
+for(const size of [{width:1280,height:720},{width:1920,height:1080}])for(const scale of ['normal','large'] as const)for(const language of ['ko','en'] as const)test(`flight drawer ${language} ${scale} ${size.width}`,async({page})=>{
+ await page.setViewportSize(size);await boot(page,language,scale);await shortFlight(page);await expect(control(page,'equipment')).toHaveAttribute('aria-expanded','false');
+ const baseline=physical(await state(page)),view=await settledCamera(page),closedBounds=await hit(page,'.deployment-left'),readings=await factsMatch(page);
+ await expect(page.locator('#deployment-equipment-drawer')).toBeHidden();expect(await page.locator('#deployment-equipment-drawer button').evaluateAll(es=>es.every(e=>(e as HTMLElement).getClientRects().length===0))).toBe(true);
+ await hit(page,'[data-deployment-action="equipment"]');await page.screenshot({path:join(out,`${language}-${scale}-${size.width}-closed.png`)});
+ await control(page,'equipment').click();await expect(control(page,'equipment')).toHaveAttribute('aria-expanded','true');await expect(control(page,'equipment')).toBeFocused();await expect(page.locator('#deployment-equipment-drawer')).toBeVisible();
+ await hit(page,'[data-deployment-action="equipment-close"]');const openedBounds=await hit(page,'.deployment-left');expect(openedBounds.x+openedBounds.width).toBe(closedBounds.x+closedBounds.width);expect(await settledCamera(page)).toEqual(view);expect(physical(await state(page))).toEqual(baseline);
+ await page.screenshot({path:join(out,`${language}-${scale}-${size.width}-open.png`)});await page.keyboard.press('Escape');await expect(control(page,'equipment')).toHaveAttribute('aria-expanded','false');await expect(control(page,'equipment')).toBeFocused();expect(await settledCamera(page)).toEqual(view);
+ await page.keyboard.press('Space');await expect(control(page,'equipment')).toHaveAttribute('aria-expanded','true');expect((await state(page)).playing).toBe(false);await control(page,'equipment-close').click();await expect(control(page,'equipment')).toBeFocused();expect(physical(await state(page))).toEqual(baseline);
+ writeFileSync(join(out,`${language}-${scale}-${size.width}-observations.json`),JSON.stringify({closedBounds,openedBounds,view,readings,physical:baseline},null,2));
+});
+
+test('actual mesh selection details focus flight lock and repaint recovery',async({page})=>{
+ await page.setViewportSize({width:1280,height:720});await boot(page);await shortFlight(page);await control(page,'step').click();await ready(page);await control(page,'working-faces').click();await settledCamera(page);
+ const target=await page.evaluate(()=>{const s=(window as any).__game.deployment().scene;for(const id of ['wing','antenna','recovery','battery','radio','adcs']){const p=s.qa.getPartScreen(id);if(!p?.visible)continue;for(const dx of [0,-8,8,-18,18])for(const dy of [0,-8,8,-18,18]){const x=p.x+dx,y=p.y+dy;if(document.elementFromPoint(x,y)!==s.qa.canvas)continue;const picked=s.pick(x,y);if(picked)return {x,y,id:picked};}}return null;});expect(target).not.toBeNull();
+ const before=physical(await state(page)),beforeView=await settledCamera(page);await page.mouse.click(target!.x,target!.y);await expect(page.locator('.deployment-selected-part')).toHaveAttribute('data-selected-part',target!.id);await expect(control(page,'equipment')).toHaveAttribute('aria-expanded','false');expect(await settledCamera(page)).toEqual(beforeView);expect(physical(await state(page))).toEqual(before);
+ await hit(page,'[data-deployment-action="equipment-details"]');await control(page,'equipment-details').click();await expect(control(page,'equipment-close')).toBeFocused();await expect(page.locator('.deployment-selected-part')).toHaveAttribute('data-selected-part',target!.id);await page.keyboard.press('Escape');await expect(control(page,'equipment-details')).toBeFocused();expect(await settledCamera(page)).toEqual(beforeView);
+ await control(page,'focus').click();const focused=await settledCamera(page);expect(focused).not.toEqual(beforeView);expect(physical(await state(page))).toEqual(before);await page.screenshot({path:join(out,'actual-selected-part-focused.png')});
+ // Placement remains locked: a real left drag may select, but cannot edit craft or plan.
+ const p=await page.evaluate(id=>(window as any).__game.deployment().scene.qa.getPartScreen(id),target!.id);await page.mouse.move(p.x,p.y);await page.mouse.down();await page.mouse.move(p.x+30,p.y+18,{steps:12});await page.mouse.up();expect(physical(await state(page))).toEqual(before);expect((await state(page)).scene.workshopEditable).toBe(false);
+ await control(page,'equipment').click();await expect(control(page,'equipment')).toBeFocused();await control(page,'play').click();await page.keyboard.press('Tab');
+ // Repeated live telemetry paints retain the actual disclosure focus.
+ await control(page,'equipment').click();await expect(control(page,'equipment')).toBeFocused();const liveStart=(await state(page)).runtime.time;await page.waitForFunction(t=>(window as any).__game.deployment().getState().runtime.time>=t+5,liveStart);await expect(control(page,'equipment')).toBeFocused();await control(page,'play').click();await ready(page);
+ await control(page,'equipment').click();await expect(control(page,'equipment')).toBeFocused();const paused=physical(await state(page));
+ await page.evaluate(()=>{const c=(window as any).__game.deployment().scene.qa.canvas,gl=c.getContext('webgl2'),x=gl.getExtension('WEBGL_lose_context');x.loseContext();setTimeout(()=>x.restoreContext(),100);});await page.waitForFunction(()=>!(window as any).__game.deployment().scene.getState().contextLost);await page.waitForFunction(()=>(window as any).__allContextDeletionAudit.contextLostNotifications>0);await ready(page);await expect(control(page,'equipment')).toBeFocused();expect(physical(await state(page))).toEqual(paused);
+ writeFileSync(join(out,'mesh-focus-and-flight-lock.json'),JSON.stringify({target,before,beforeView,focused,paused,final:physical(await state(page))},null,2));
+});
+
+test('terminal baseline actual saved flight replay',async({page})=>{
+ await page.setViewportSize({width:1280,height:720});await boot(page,'ko','normal','http://127.0.0.1:5188/?qa');const timing=await finishTerminalRestore(page,await beginTerminalRestore(page));await control(page,'working-faces').click();await settledCamera(page);const original=physical(await state(page));await page.screenshot({path:join(out,'terminal-baseline-v8.png')});
+ writeFileSync(join(out,'terminal-baseline-physical.json'),JSON.stringify({timing,physical:original,view:await camera(page)},null,2));
+});
+
+test('terminal candidate visible cancel responsive camera and unchanged actual replay',async({page})=>{
+ const original=JSON.parse(readFileSync(join(out,'terminal-baseline-physical.json'),'utf8')).physical;
+ await page.setViewportSize({width:1280,height:720});await boot(page);const retained=physical(await state(page)),view=await settledCamera(page);expect((await state(page)).scene.workshopEditable).toBe(true);
+ const cancelledStarted=await beginTerminalRestore(page);await page.waitForFunction(()=>Number(document.querySelector<HTMLProgressElement>('.deployment-progress progress')?.value)>0);
+ await hit(page,'[data-deployment-action="cancel-restore"]');await expect(control(page,'variants')).toBeDisabled();expect((await state(page)).scene.workshopEditable).toBe(false);
+ const canvasPoint=await page.evaluate(()=>{const s=(window as any).__game.deployment().scene;for(const y of [300,340,400])for(const x of [600,550,650])if(document.elementFromPoint(x,y)===s.qa.canvas)return{x,y};return null;});expect(canvasPoint).not.toBeNull();
+ await page.mouse.move(canvasPoint!.x,canvasPoint!.y);await page.mouse.down({button:'right'});await page.mouse.move(canvasPoint!.x+70,canvasPoint!.y+30,{steps:12});await page.mouse.up({button:'right'});const duringView=await settledCamera(page);expect(duringView).not.toEqual(view);expect(physical(await state(page))).toEqual(retained);
+ const progress=await page.locator('.deployment-progress progress').evaluate(e=>(e as HTMLProgressElement).value);await page.screenshot({path:join(out,'terminal-restoring-visible-cancel.png')});await hit(page,'[data-deployment-action="cancel-restore"]');await control(page,'cancel-restore').click();await ready(page);expect(physical(await state(page))).toEqual(retained);await expect(control(page,'variants')).toBeEnabled();expect((await state(page)).scene.workshopEditable).toBe(true);await expect(page.locator('.deployment-progress')).toHaveCount(0);
+ const cancelled={wallSeconds:(Date.now()-cancelledStarted)/1000,progress,retained,after:physical(await state(page)),view,duringView};writeFileSync(join(out,'terminal-cancel-responsive.json'),JSON.stringify(cancelled,null,2));
+ await shortFlight(page);const started=await beginTerminalRestore(page);await hit(page,'[data-deployment-action="cancel-restore"]');await expect(page.locator('.deployment-progress progress')).toHaveAttribute('aria-label','계산 진행률');const timing=await finishTerminalRestore(page,started);expect(physical(await state(page))).toEqual(original);await control(page,'working-faces').click();await settledCamera(page);await expect(page.locator('[data-flight-status="complete"]')).toContainText('지구 수신 완료');await factsMatch(page);await page.screenshot({path:join(out,'terminal-compact-ui.png')});
+ await control(page,'equipment').click();await expect(control(page,'equipment')).toHaveAttribute('aria-expanded','true');await control(page,'part:wing').click();await settledCamera(page);await control(page,'equipment-close').click();await expect(control(page,'equipment')).toBeFocused();await page.screenshot({path:join(out,'terminal-selected-wing.png')});expect(physical(await state(page))).toEqual(original);
+ writeFileSync(join(out,'terminal-before-after-physical.json'),JSON.stringify({timing,before:original,after:physical(await state(page))},null,2));
+});

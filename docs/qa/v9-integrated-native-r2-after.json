@@ -1,0 +1,1530 @@
+{
+  "capturedAt": "2026-11-15T09:47:19.881Z",
+  "root": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-orbit-ui",
+  "scope": "Frozen integrated v9 production and focused native QA harness identities. Functional evidence; not a performance benchmark.",
+  "url": "http://127.0.0.1:5191",
+  "browserTarget": "chrome",
+  "servedIndexSha256": "0bee26a3db46a40b3e8263a5382f0a0099c5152335df0bd676917a8d3898eb9d",
+  "files": [
+    {
+      "path": "src/debrief.ts",
+      "bytes": 27416,
+      "sha256": "479c542471559baa747631123cc986080b27e22b7519c134ec7ef98f42a3cbd9"
+    },
+    {
+      "path": "src/deployment/clearance.ts",
+      "bytes": 6371,
+      "sha256": "f9a0f8352b82e78cbc28a5c9defdd7009368f98a00dedbb8c294c0b8303f434a"
+    },
+    {
+      "path": "src/deployment/craft.ts",
+      "bytes": 20592,
+      "sha256": "cb2d0e589ef3640039c59caa538418f6ee2e52361024380fe5d266d44fdfbc16"
+    },
+    {
+      "path": "src/deployment/devices.ts",
+      "bytes": 8231,
+      "sha256": "b9693f16d2c5565dab3d30dc3a19cabdab3bddb1cb1114c10210ccd955b3573c"
+    },
+    {
+      "path": "src/deployment/drive-feasibility.ts",
+      "bytes": 3903,
+      "sha256": "c5b396e634bd2643d8e82fb5b02281a81fdb9ff2034ed033c605cb4e678c8d2c"
+    },
+    {
+      "path": "src/deployment/environment.ts",
+      "bytes": 3049,
+      "sha256": "c54f302350a21009fa8d5af609dcf666be8e1b9390cdcc73fbeb713d857c18ca"
+    },
+    {
+      "path": "src/deployment/identity.ts",
+      "bytes": 2616,
+      "sha256": "e2ed2a2bd0a1d6c49a1086150dfe76518a7762108da954852535308bc7b3b7a8"
+    },
+    {
+      "path": "src/deployment/index.ts",
+      "bytes": 496,
+      "sha256": "5e5e4444d9d5c24cb39edcd0506ebef3439e164dcc6cdd29cf37262f709e6685"
+    },
+    {
+      "path": "src/deployment/kinematics.ts",
+      "bytes": 9715,
+      "sha256": "1a479434f5d1efd597c8097a3ba4afe88c61dba9334964f70bc1fb4de4661030"
+    },
+    {
+      "path": "src/deployment/lessons.ts",
+      "bytes": 1649,
+      "sha256": "7f7b5899aed0648759e795a8de577514e3dbd2231be025cabb0b33b66609f09d"
+    },
+    {
+      "path": "src/deployment/math.ts",
+      "bytes": 3957,
+      "sha256": "280bd6e8f5498da7f667d7a52167df1b585000a992efe8584f41333746f21304"
+    },
+    {
+      "path": "src/deployment/mechanism.ts",
+      "bytes": 12917,
+      "sha256": "ecb8ffd4f6f753c6f624c8a27c13632dd10772836e97ada85de4b1f5a1049b08"
+    },
+    {
+      "path": "src/deployment/momentum.ts",
+      "bytes": 5863,
+      "sha256": "a3ac3094b7e5904c68ac797d30003777ea61e236b21f7a4167ff2188e8b6ccab"
+    },
+    {
+      "path": "src/deployment/motion.ts",
+      "bytes": 3485,
+      "sha256": "df6fb42a0478f076aaa6d90b7646f55e3fa9c234f4eed03c2a0e4be29a68bef1"
+    },
+    {
+      "path": "src/deployment/persistence.ts",
+      "bytes": 7027,
+      "sha256": "d7be49dc894fb1c7c8f042ab22d5db0e1098b5ea5580aa39e22d620ca2666c09"
+    },
+    {
+      "path": "src/deployment/plan.ts",
+      "bytes": 3754,
+      "sha256": "889275f219759083f37b6c08a002016e963d5f245679049e7e50e38b18a13e32"
+    },
+    {
+      "path": "src/deployment/power.ts",
+      "bytes": 2014,
+      "sha256": "c02e5c581ffaa1eeeb0bfffbaceb2a0d201f48cc706fecb290968bac07d283dc"
+    },
+    {
+      "path": "src/deployment/runtime.ts",
+      "bytes": 34523,
+      "sha256": "e28a7ff09a957e1438299cfa85d0800b8b4119cc6c5a671008a486210782a7aa"
+    },
+    {
+      "path": "src/deployment/types.ts",
+      "bytes": 5180,
+      "sha256": "8f8648f6468ebaa6794913b374737559723115196f3ab01ad855a94bc8084866"
+    },
+    {
+      "path": "src/deployment/visibility.ts",
+      "bytes": 4538,
+      "sha256": "e2bd662a5b51d46d97fea00c5d1f88f1953ab6b0249aaf4798cf365b6c060077"
+    },
+    {
+      "path": "src/deployment-storage.ts",
+      "bytes": 3894,
+      "sha256": "21cfeba69bb843b0d429ada0c6ba5b94c7747cf086c06587a373dee91c6e2c28"
+    },
+    {
+      "path": "src/deployment-timeline.ts",
+      "bytes": 10793,
+      "sha256": "2ccccafe1be50e83661228bc4392c257fd4d847ff77350d994163d085cb7a8c4"
+    },
+    {
+      "path": "src/deployment-ui.css",
+      "bytes": 13508,
+      "sha256": "cc5654c0347a7aa400c87db11430ac732bc7c4a7e39096afa1d5252ef536f502"
+    },
+    {
+      "path": "src/deployment-ui.ts",
+      "bytes": 54277,
+      "sha256": "b34a8afdef02de1c1b02a0bc03a7c57a26123abc1d78a69ae0ec59f02b68aac5"
+    },
+    {
+      "path": "src/deployment-worker-controller.ts",
+      "bytes": 17459,
+      "sha256": "6453eb9d1f132d56b486552afa0c97a01a14b41b154ffdcbbcfffd0681f70242"
+    },
+    {
+      "path": "src/deployment.worker.ts",
+      "bytes": 220,
+      "sha256": "7cd5201988e9dcde7f75cd9abe469f84497345cb09c8e94e8922613290acb14b"
+    },
+    {
+      "path": "src/flight/data.ts",
+      "bytes": 2904,
+      "sha256": "f2ef8c95628288b6abeeaf813522003ff30f8602207fcaf9b972112edcb5c67f"
+    },
+    {
+      "path": "src/flight/environment.ts",
+      "bytes": 4272,
+      "sha256": "94fa256c3ca51402a539e69a2e2e0d4017f208f44b2193612caa342a27c7b067"
+    },
+    {
+      "path": "src/flight/resources.ts",
+      "bytes": 9680,
+      "sha256": "9402b93b23c2fcf13d0d0dc42d2ca779b0124adc8bc22b85cf324d13867107cf"
+    },
+    {
+      "path": "src/flight-advisor.ts",
+      "bytes": 12136,
+      "sha256": "f84cd568abb0eee0ca4265472af38a8c68a71e87b56cc22b1a5b6829b50b7c95"
+    },
+    {
+      "path": "src/forecast.worker.ts",
+      "bytes": 479,
+      "sha256": "0dd4067421d2c210122c41aa84d7053712585a9485c427ef876963d2103c4889"
+    },
+    {
+      "path": "src/hardware/acquisition.ts",
+      "bytes": 1647,
+      "sha256": "7134d09b7863d08ade9b504aa83538361aa6237b1cf73ac7cb8b1b6da1ce8b12"
+    },
+    {
+      "path": "src/hardware/attitude.ts",
+      "bytes": 1594,
+      "sha256": "caf2396c3f38c2ee3d1ad38fb62c3c95252adfe04d3bdf7789e3c9896897d5a1"
+    },
+    {
+      "path": "src/hardware/catalog.ts",
+      "bytes": 13495,
+      "sha256": "878dfd6b1d8ca047667fe6a30a82e76fc275804ada3dffe31d4502eb2a72ec79"
+    },
+    {
+      "path": "src/hardware/index.ts",
+      "bytes": 171,
+      "sha256": "dc89fde37db24ca4f253ddb58ef9db94b8d2926e224a77c75408906a203996c7"
+    },
+    {
+      "path": "src/hardware/presets.ts",
+      "bytes": 3632,
+      "sha256": "45a04cf9c3b30a64fdb69f0f9b068627a48fb8c592b25f6e4915a0a670345797"
+    },
+    {
+      "path": "src/hardware/resolve.ts",
+      "bytes": 15790,
+      "sha256": "1277087e6b054bb819285b05b72eaaf3cdf26d7c7876573f606f989c7b587543"
+    },
+    {
+      "path": "src/hardware/types.ts",
+      "bytes": 3165,
+      "sha256": "e8d2ba99375e3e5f98faa814409a4d798bb7b63d16e9b61c335e31429b073bf4"
+    },
+    {
+      "path": "src/hardware-i18n.ts",
+      "bytes": 3935,
+      "sha256": "1aa7a5760a25d20d804206a3c0b8598489ca62747c0c98514b42549dae1d5e99"
+    },
+    {
+      "path": "src/i18n.ts",
+      "bytes": 61981,
+      "sha256": "cb38413e97a5ae212fa1429d7650bc8a33b63061e10514fa0046b4fb0c3d7a31"
+    },
+    {
+      "path": "src/keyboard-assembly.css",
+      "bytes": 1580,
+      "sha256": "d0ca9d918f194c6b005455ab258952b6f185fcfee39224fe3d115cada2b159ec"
+    },
+    {
+      "path": "src/keyboard-assembly.ts",
+      "bytes": 4725,
+      "sha256": "1f43c02de7972216363d1ad8fa63eadc02ab719686ebafbc7cd5460b83193a17"
+    },
+    {
+      "path": "src/main.ts",
+      "bytes": 171113,
+      "sha256": "d6534342eaf3c7523164a3b1984de2bcbc4822a5406eaed59d6f84707699e307"
+    },
+    {
+      "path": "src/operations-editor.ts",
+      "bytes": 1359,
+      "sha256": "7d54dea48d8742a56790d48b4274c01b34b2215e1e5d8fceaaee1955adbe2177"
+    },
+    {
+      "path": "src/operations-i18n.ts",
+      "bytes": 4897,
+      "sha256": "0a87c8ae34b89eed1b6bca7c83fe487198bf44b865e72142a9e83367233732e3"
+    },
+    {
+      "path": "src/preview.worker.ts",
+      "bytes": 474,
+      "sha256": "ff18af03ae97b48965e0a6e0a763d119965c9c3f9c80f48158d2f51660448528"
+    },
+    {
+      "path": "src/redesign/adapters/swingby.ts",
+      "bytes": 14282,
+      "sha256": "94e45fb29d1052269d952d8b5f28849de969bbb1c11bdbc22c3ca280adbefe4e"
+    },
+    {
+      "path": "src/redesign/archive.ts",
+      "bytes": 8464,
+      "sha256": "f40bd2724c2ff758b677a48c975f9c7ec44d68851d5e087d1a21d4ab79037b34"
+    },
+    {
+      "path": "src/redesign/compare.ts",
+      "bytes": 4189,
+      "sha256": "3a2e196462a9ab4b49273b4e19e5b1097aba3226d589115bc17b6b20629c2a03"
+    },
+    {
+      "path": "src/redesign/diagnostics.ts",
+      "bytes": 6569,
+      "sha256": "a698b4d9b6cbee4b2aa331b6325525331e878a468b0f879f3dc20ab49716889d"
+    },
+    {
+      "path": "src/redesign/engine-pin.ts",
+      "bytes": 359,
+      "sha256": "643641ed9ade2b8ce09ce31761607bd3eedc0ce2f520360bcd22e3d662537741"
+    },
+    {
+      "path": "src/redesign/index.ts",
+      "bytes": 484,
+      "sha256": "8bdbee197ad16cf57590ec093399653db853da1d9948cf412c7ba12f4e372195"
+    },
+    {
+      "path": "src/redesign/render-types.ts",
+      "bytes": 1902,
+      "sha256": "8d8ef60d7ff0e606d42e4ea49b2763224924253d73a56d941d86d3a55df1ef30"
+    },
+    {
+      "path": "src/redesign/review.worker.ts",
+      "bytes": 203,
+      "sha256": "e2247f444fe8ae37ebde173434a74176d4aaa9f990b54e79b41ae3510751f876"
+    },
+    {
+      "path": "src/redesign/schema.ts",
+      "bytes": 10103,
+      "sha256": "aceeff9b0b013d3b55fa278bd7484964c6508d19202f93854ba96d6d788f6121"
+    },
+    {
+      "path": "src/redesign/semantics.ts",
+      "bytes": 5316,
+      "sha256": "a20bdb9a70121daa9f6c218a444333c41c95e08682ffbedc5a945716d1313754"
+    },
+    {
+      "path": "src/redesign/validation.ts",
+      "bytes": 4210,
+      "sha256": "014f735291f7f43d06e5e3d1339345b36da0696e79d4529311113e8801c9e695"
+    },
+    {
+      "path": "src/redesign/worker-controller.ts",
+      "bytes": 9920,
+      "sha256": "abb4c55a415683dae9b3eda1f889871e823ad1975f896cf3a4f78731462bb936"
+    },
+    {
+      "path": "src/render/bus-surface-detail.ts",
+      "bytes": 4491,
+      "sha256": "a9bf063414c950aa245484b0caa9a012a952bce982222eb0d5ee08211cb04aa2"
+    },
+    {
+      "path": "src/render/celestial-stars.ts",
+      "bytes": 2796,
+      "sha256": "f009ff2e0e2c8f8d190f3db33893c9e256a52ed0b1a2b6f32a1e64fb976020bb"
+    },
+    {
+      "path": "src/render/command-signals.ts",
+      "bytes": 13954,
+      "sha256": "36c1a14ef60010964a4a88b7c2e9919b7b4df39de0ee911ad18ffd6275066e84"
+    },
+    {
+      "path": "src/render/committed-orbit-trail.ts",
+      "bytes": 3934,
+      "sha256": "528ee9f878f453e5839417d64880397fd9e6cc6422584fad80e295698cac188d"
+    },
+    {
+      "path": "src/render/context-resources.ts",
+      "bytes": 2361,
+      "sha256": "761579cd58073b61023c2108d23c9aeae97f03f5a63b68855097769f88906458"
+    },
+    {
+      "path": "src/render/control-room.ts",
+      "bytes": 8211,
+      "sha256": "b6f7507223105c51bb4953070626c64dafb6e987605521e1179f3c36284f75ff"
+    },
+    {
+      "path": "src/render/craft-camera.ts",
+      "bytes": 11612,
+      "sha256": "ecd0632666f67e2b056fe2f90b4843e61c5319aab518c1a2cf7a244d06684fc1"
+    },
+    {
+      "path": "src/render/deployment-candidate.ts",
+      "bytes": 3007,
+      "sha256": "4283d40e7eb642b605eb8bcb2ee5402ac2cb7a8b874cc15eaaac1c6746ff368e"
+    },
+    {
+      "path": "src/render/deployment-chassis-art.ts",
+      "bytes": 4911,
+      "sha256": "5cdb29b90e9506304f3e610b2a5d8fc100bf2c1fa8c94c36c71e5de21397518a"
+    },
+    {
+      "path": "src/render/deployment-internal-art.ts",
+      "bytes": 5353,
+      "sha256": "e334949a22b78085b86d672df6ebb3f7e361a71c8940d9e7ab9094e5cf938d28"
+    },
+    {
+      "path": "src/render/deployment-link-meshes.ts",
+      "bytes": 8499,
+      "sha256": "7492d25e04c0ed300015a62f73798ba36fa8d292a328902d275dc1bf65df7c72"
+    },
+    {
+      "path": "src/render/deployment-scene-math.ts",
+      "bytes": 9082,
+      "sha256": "bdf4b18b9c50a4b50a6fc2edc91d5c1b7ddbcde11d59b30fddca340d9b7f2bc5"
+    },
+    {
+      "path": "src/render/deployment-scene-types.ts",
+      "bytes": 4192,
+      "sha256": "68da5ac1e98a19578217a02b73ef195f788706ffe32addf65f27ed81f4726642"
+    },
+    {
+      "path": "src/render/deployment-scene.ts",
+      "bytes": 39017,
+      "sha256": "7677e91ea88fd5656511103a8edef431c3f71d0618798c280a8cb93e014294a5"
+    },
+    {
+      "path": "src/render/deployment-surface-finish.ts",
+      "bytes": 5454,
+      "sha256": "4c5f0f13eff3b3bdbf1cce77a937905d6d1c8e076db1ff3b60653a0ea80e3cdc"
+    },
+    {
+      "path": "src/render/deployment-view.ts",
+      "bytes": 11515,
+      "sha256": "6fb065f30417368c4ddaa2992bd8422f29c4260b85abce0e4d267aee4dad8ad0"
+    },
+    {
+      "path": "src/render/deployment-workshop.ts",
+      "bytes": 3734,
+      "sha256": "3ac8f17f23e5f68cf42dace18c47afd594dcdc592fbb0fa7df64a8b268ab5ec5"
+    },
+    {
+      "path": "src/render/earth-surface-detail.ts",
+      "bytes": 4232,
+      "sha256": "b5da4230c23c1eae799712f27c95316b9568692df503f8b7bd59ca454cc9e933"
+    },
+    {
+      "path": "src/render/hinge-manipulator.ts",
+      "bytes": 15335,
+      "sha256": "32a5f60994ec53bc52eaade5a66d71585c07dd929fb27371bf9df783db40d774"
+    },
+    {
+      "path": "src/render/inspection.ts",
+      "bytes": 13066,
+      "sha256": "420576198d2f4b95ee047d4dbe294a012005a497e4a8b2dabc442d92df3fb38f"
+    },
+    {
+      "path": "src/render/lazy-surface-texture.ts",
+      "bytes": 2829,
+      "sha256": "1c783b01e8ee6268583c86433034163a017a216892c82a6309294bc4a592fd31"
+    },
+    {
+      "path": "src/render/orbit-manipulator.ts",
+      "bytes": 1704,
+      "sha256": "68b69ba7c507359063f964f45c97f853aa1cba1ec04f6087c5df91af81fd97db"
+    },
+    {
+      "path": "src/render/orbital-inspection-follow.ts",
+      "bytes": 3590,
+      "sha256": "3fe2712ea82fb5df2823fa0729f485fbb9582d8feeef04477fdb7fe6b2856cf7"
+    },
+    {
+      "path": "src/render/parts.ts",
+      "bytes": 33162,
+      "sha256": "057e599f7c0240e5d620a7ba5f604c1eccb8ea2c0bb85cc336ca2fdb553d1bf0"
+    },
+    {
+      "path": "src/render/planet-inspection-direction.ts",
+      "bytes": 2087,
+      "sha256": "37c039968613a3ab4e023745aee7b0e8cdca13c3e65eb5156c9dd88c9ccf665a"
+    },
+    {
+      "path": "src/render/review-frame.ts",
+      "bytes": 7658,
+      "sha256": "bca9f3324fdfda665094047dee146c592240c8e274a84798148e0fb5c36651fc"
+    },
+    {
+      "path": "src/render/scene.ts",
+      "bytes": 80212,
+      "sha256": "3ea0f90a59eb92bdd2602255feb15a1e37e53e00fbc695f542082cd2a7d9afb9"
+    },
+    {
+      "path": "src/render/stow.ts",
+      "bytes": 5232,
+      "sha256": "43c428fcc2f18a173a68c11d37a082442bae8e06b88795e39fdf27f6b87f37ef"
+    },
+    {
+      "path": "src/render/swingby-aim-camera.ts",
+      "bytes": 2174,
+      "sha256": "8447bc549f03b22fe123b005017f3f6943265ad1ecc193fee61db3d3c2d2d2f5"
+    },
+    {
+      "path": "src/render/swingby-builder-carrier.ts",
+      "bytes": 4195,
+      "sha256": "d92910fc3099432143efb8bc348c4c1b4e539c21ee346c0f6277dc2f5cd2b875"
+    },
+    {
+      "path": "src/render/swingby-carrier.ts",
+      "bytes": 7933,
+      "sha256": "fb487f32a04865e31f045df9e1449e8f46d38d51484bbabf1d5198cd33efd56a"
+    },
+    {
+      "path": "src/render/swingby-encounter-camera.ts",
+      "bytes": 4045,
+      "sha256": "3e5ce38dbadafdf92be2e6ba805efc78468bd92236feec4ce326c8f6900eeaeb"
+    },
+    {
+      "path": "src/render/swingby-objective.ts",
+      "bytes": 26522,
+      "sha256": "9ce79eef53f7abc90e7a715a976c21777539e37e9c6be3313b9f7ce244d7d04d"
+    },
+    {
+      "path": "src/render/swingby-review-scene.ts",
+      "bytes": 4570,
+      "sha256": "673f268664b479494392f67b65a26400246b66f7099a0151cbb212ef1f8f2113"
+    },
+    {
+      "path": "src/render/swingby-scene.ts",
+      "bytes": 32588,
+      "sha256": "b62b09595cca6381083b6c2ec7f5b242044a1ebe2b4575ade0ad6e5c09d76d9a"
+    },
+    {
+      "path": "src/render/swingby-velocity-camera.ts",
+      "bytes": 2222,
+      "sha256": "a5a8ad19b8bbff2c7ca8b9155ca6dbdbc5f4c89ad1e057ee1a929c1c177b558d"
+    },
+    {
+      "path": "src/render/targets.ts",
+      "bytes": 10462,
+      "sha256": "fc477328b2742989b0ab304bbdd844c8086a4a74faeb46d3a9f9cb3df5355ce4"
+    },
+    {
+      "path": "src/render/transfer-scene.ts",
+      "bytes": 68517,
+      "sha256": "5501aa7b7cdb66cc3c3fbefd592db11d887362f10d6d3167cfd2d0515feb64d5"
+    },
+    {
+      "path": "src/render/working-face-direction.ts",
+      "bytes": 7974,
+      "sha256": "63e2e2f413cab6ed27dd940900b6ecf2643f126baa4d554907640a457145becf"
+    },
+    {
+      "path": "src/review-client.ts",
+      "bytes": 3831,
+      "sha256": "14c2298804896a8e649ab5eaba4993da03a9c4e90b82110ab16d96cb51121aba"
+    },
+    {
+      "path": "src/review-ui.css",
+      "bytes": 9396,
+      "sha256": "e29d2adda2c38e0e92de63cf7cc23763ef572cd0f88d5bce280e0048d780869c"
+    },
+    {
+      "path": "src/review-ui.ts",
+      "bytes": 35244,
+      "sha256": "d8d67f5e8df2cffe79b93cf8b843dbf997bebb29f0c91fc548d06e62029384be"
+    },
+    {
+      "path": "src/sim/assembly.ts",
+      "bytes": 17633,
+      "sha256": "8ef747b8dc73baacab53a542b67ba32db91c3cd7d16256afac26e39da5c4b57c"
+    },
+    {
+      "path": "src/sim/attitude.ts",
+      "bytes": 1980,
+      "sha256": "2618a446925ecdba702305a78c3b5b2e0534ee2cd48bffbd71419db8782cf8b8"
+    },
+    {
+      "path": "src/sim/catalog.ts",
+      "bytes": 8499,
+      "sha256": "934b00be24d16dc223e429b3f1efb66ed30e33261f3e25c09515be00de8e2df5"
+    },
+    {
+      "path": "src/sim/earth-orbit.ts",
+      "bytes": 4196,
+      "sha256": "c3dd7721dcc7c0cac5bce9276db17ccc5212bc29b1d4fc1cf3c5526286c3f76b"
+    },
+    {
+      "path": "src/sim/hazards.ts",
+      "bytes": 3317,
+      "sha256": "d5c7165c01ed7cb70b67fdca59d44ac4e80ba54a06e649a53bf8f6439c36bc02"
+    },
+    {
+      "path": "src/sim/index.ts",
+      "bytes": 318,
+      "sha256": "ded6a9b3631fabbef9acd6bd7256420cd58ee330b288fdde8296ddbb4cba96e6"
+    },
+    {
+      "path": "src/sim/launch.ts",
+      "bytes": 10917,
+      "sha256": "817a0ccdeae92d1704378c016bee9719c1378960c07cbce8b6d8d922cdce15c1"
+    },
+    {
+      "path": "src/sim/persistence.ts",
+      "bytes": 15857,
+      "sha256": "5c96a6d62bca79bcdf691e5fd72e31c1983fd8bf86e49f9ed95640d480212bda"
+    },
+    {
+      "path": "src/sim/physics.ts",
+      "bytes": 11536,
+      "sha256": "de7a46913a7f395ac7b412de8dc742b0a5b7064198a7b35088d11462f835a6d9"
+    },
+    {
+      "path": "src/sim/simulation.ts",
+      "bytes": 30363,
+      "sha256": "4d6a7eb76b5c300436fbc814eb02db1d5cee59e73bb1e410af05e3c4eafd8ad0"
+    },
+    {
+      "path": "src/sim/targets.ts",
+      "bytes": 10910,
+      "sha256": "72fd8a5c19ef4d66d0eb73c9fcb64db49d8dcafc1ae867272d33a2adc658b06e"
+    },
+    {
+      "path": "src/sim/types.ts",
+      "bytes": 7827,
+      "sha256": "1af8571b2990d532eae91f7005a5ec70ee8db2a219ceaeed297eba141c08df7e"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 46623,
+      "sha256": "85f37f39750c84bef2b2afbd8f2d074090a9de9a6d036ea125bb1e25ec450b2f"
+    },
+    {
+      "path": "src/swingby/conic.ts",
+      "bytes": 3593,
+      "sha256": "9753fc162a7bd33bc11e1392bf60adbf54a517d8238de8376a8a0f5e8220c4dc"
+    },
+    {
+      "path": "src/swingby/index.ts",
+      "bytes": 254,
+      "sha256": "a1406ddb9acf919410290fc1d634dbf21b9930814fc0c0045c236f7bdc917287"
+    },
+    {
+      "path": "src/swingby/orbit.ts",
+      "bytes": 5862,
+      "sha256": "b79727fb707b8d3fab74c34689ed2125ddb72926d067f7ee1fc506610aa365c8"
+    },
+    {
+      "path": "src/swingby/persistence.ts",
+      "bytes": 8122,
+      "sha256": "da89e113cddcfb74eb3dbf1dca49162d3ded3d11761ce5aaa2945ff5030111bf"
+    },
+    {
+      "path": "src/swingby/planning.ts",
+      "bytes": 7578,
+      "sha256": "bd295b7c483b765684feb32da7dca337678d122b5326a77b60e578749619f53e"
+    },
+    {
+      "path": "src/swingby/propulsion.ts",
+      "bytes": 5346,
+      "sha256": "ee99d1184d29a4f5f01c9e6bc6b1d07be003102d175964fc6798024e152b11d9"
+    },
+    {
+      "path": "src/swingby/runtime.ts",
+      "bytes": 22340,
+      "sha256": "65ae46b88bfa5657fe46126c6ee79592334e1ef7c8131e38711601aa906ffe03"
+    },
+    {
+      "path": "src/swingby/scenario.ts",
+      "bytes": 2900,
+      "sha256": "afd4de1fa50395f0c586902dab8a4e6cb78deaf482bbdb7b2a3faf1028ab6171"
+    },
+    {
+      "path": "src/swingby/types.ts",
+      "bytes": 5219,
+      "sha256": "a684e49a52a30d2c2cfc72ae3a4ff8df66efc2d8659078a2313cb4125580b90d"
+    },
+    {
+      "path": "src/swingby/visual.ts",
+      "bytes": 3808,
+      "sha256": "cce70b91dcd30766ab15b2c81f55c491837a5f875146631a06ffef0901a38f2c"
+    },
+    {
+      "path": "src/swingby-ui.css",
+      "bytes": 7469,
+      "sha256": "179ed34b311e487cf6cefe9a4947d3636dedf57091eec396eeed695c3ecbe78c"
+    },
+    {
+      "path": "src/swingby-ui.ts",
+      "bytes": 46445,
+      "sha256": "9d4d39dc5759ed9c1cc88657d489641ba5f797ed6a3e95c1dd68fef76dbf4a29"
+    },
+    {
+      "path": "src/swingby-worker-controller.ts",
+      "bytes": 11662,
+      "sha256": "af71cabf6bbdb44c91f27cf357d907bc2fe92f9552e087c611d8a00f63bed554"
+    },
+    {
+      "path": "src/swingby.worker.ts",
+      "bytes": 39,
+      "sha256": "255d2fe71959311ecb2a6131e7c36f3fb79bd418e6c39764721ee4cd2337a25c"
+    },
+    {
+      "path": "src/transfer/command-guards.ts",
+      "bytes": 12042,
+      "sha256": "8dc75295d579f9c654987123f878912e94e3daa45acd2a353f698654030644b8"
+    },
+    {
+      "path": "src/transfer/command-link.ts",
+      "bytes": 12198,
+      "sha256": "00295ca1c4c1af53942540551575986b396234d63aa91d60b9314e0e719591bb"
+    },
+    {
+      "path": "src/transfer/command-network.ts",
+      "bytes": 2978,
+      "sha256": "51a8c50e061b96a46570ca80efd8dffd506a0b8413b540358c575216acc661f4"
+    },
+    {
+      "path": "src/transfer/command-transport.ts",
+      "bytes": 9902,
+      "sha256": "d31013d0ab838e9bba0dd2198625d11af2d2dee198279dc7dfc3965b2e9bf184"
+    },
+    {
+      "path": "src/transfer/data/earth.json",
+      "bytes": 287125,
+      "sha256": "3e851a9c9b3e7b41d84c4e7849a417609e6f25159e8c03f741dee65b6961cc64"
+    },
+    {
+      "path": "src/transfer/data/mars.json",
+      "bytes": 288165,
+      "sha256": "1c92638072744d778d6cce139e57a7d45bd03cc8be56d26a63ea8f6e2d9a97d7"
+    },
+    {
+      "path": "src/transfer/engine.ts",
+      "bytes": 9271,
+      "sha256": "8d87f9b491998806d4d818dcab4a0753ed48a0f28804f46c20bd87006a37e05c"
+    },
+    {
+      "path": "src/transfer/ephemeris.ts",
+      "bytes": 2271,
+      "sha256": "b632d046d81a91737995a4391ea10ec2fdff9ed47da2b129114032474ea26c81"
+    },
+    {
+      "path": "src/transfer/immutable.ts",
+      "bytes": 391,
+      "sha256": "410aa7373fb63c52be1caf7d944e6a8867fbf682cd0f1577757efc698b0a7c03"
+    },
+    {
+      "path": "src/transfer/index.ts",
+      "bytes": 198,
+      "sha256": "db624160f5a179a1b0ab66c098b66efacf3a009a461c678f154d87e504f09991"
+    },
+    {
+      "path": "src/transfer/math.ts",
+      "bytes": 14012,
+      "sha256": "0ebb9424202db05365a01e8c16e2cbeccbb4075f4756224297180ab1562f24ca"
+    },
+    {
+      "path": "src/transfer/operations-codec.ts",
+      "bytes": 3229,
+      "sha256": "6161ffb9c3e78a632b2f2ba09801edb97b3f189a10874016e60c39ce6c45c869"
+    },
+    {
+      "path": "src/transfer/operations-codes.ts",
+      "bytes": 3822,
+      "sha256": "73ea797d188c2493ffbff90981aa0f06f94c6c075deba0a1eb502bd5ef223dc6"
+    },
+    {
+      "path": "src/transfer/operations-lesson.ts",
+      "bytes": 1669,
+      "sha256": "fea8abfb9e06e005c65959fb216d05d1f1addecee3d806e42d9e635035b2606d"
+    },
+    {
+      "path": "src/transfer/operations-types.ts",
+      "bytes": 7207,
+      "sha256": "85ce5474c73bd378fc1e72e92128900e9eea53c1111853960e91e35b72a626be"
+    },
+    {
+      "path": "src/transfer/operations.ts",
+      "bytes": 22258,
+      "sha256": "4325762f88a4e954b65e0f10b649c90338b6ba9e9b0c16e486919cbf3e69357c"
+    },
+    {
+      "path": "src/transfer/persistence-v2.ts",
+      "bytes": 14314,
+      "sha256": "d82a961b6d2d110ed045531f11ae34db35447d90b0aece1a8d056c9938a9d221"
+    },
+    {
+      "path": "src/transfer/persistence.ts",
+      "bytes": 9062,
+      "sha256": "ac2eae845c809f120365604e2b75aee00f47258b1cfd4a0ba381810c6b6433e0"
+    },
+    {
+      "path": "src/transfer/planning.ts",
+      "bytes": 10382,
+      "sha256": "f6d7160c90d8d7d7489eac760e1dd67c469e23b2705ef9be3f65d9eda0eb5226"
+    },
+    {
+      "path": "src/transfer/runtime-v3.ts",
+      "bytes": 16769,
+      "sha256": "59328e1cac1d4810b19f31d0c01153e857474e2c5285ab73c3ca35f1e8620f4c"
+    },
+    {
+      "path": "src/transfer/runtime.ts",
+      "bytes": 23740,
+      "sha256": "6fac6489e85492f4903b7f4f805877883959d64cfeb2a2212f7fdaeffdee1954"
+    },
+    {
+      "path": "src/transfer/state.ts",
+      "bytes": 3816,
+      "sha256": "5ce53e9f3c6b348c256a7b45ce1730bb2f032b46ddcd73749a4fe54c8034658a"
+    },
+    {
+      "path": "src/transfer/types.ts",
+      "bytes": 4093,
+      "sha256": "92900ca12cb1b23ca8bc531fde27f1f479de8f98b348393613303e1a392c3414"
+    },
+    {
+      "path": "src/transfer-control.ts",
+      "bytes": 1431,
+      "sha256": "e3eaf3207c1844b6368a2001231236ead60f973ce9be5586e43d1471a234dfcd"
+    },
+    {
+      "path": "src/transfer-i18n.ts",
+      "bytes": 10090,
+      "sha256": "7b250bfc6bdf1f708fcc160a68282d239ac25d1434c0cec4c3aafde775051c00"
+    },
+    {
+      "path": "src/transfer-ui.css",
+      "bytes": 12859,
+      "sha256": "cb5894f6cfeb380c62e2e9eb4b3cbf8e698a7470a6f9d903649b7359629c3d93"
+    },
+    {
+      "path": "src/transfer-ui.ts",
+      "bytes": 75274,
+      "sha256": "53d634e9027c2fbb10db6ae8e0282d5bccd83daa05a871d4350fe5d1312f6fc0"
+    },
+    {
+      "path": "src/transfer-worker-controller.ts",
+      "bytes": 13123,
+      "sha256": "d2fb4ca5336f37a07e66ce2541acdff15d5943922d5a379ce5700b405124a74d"
+    },
+    {
+      "path": "src/transfer.worker.ts",
+      "bytes": 40,
+      "sha256": "87b181509e5d9f7fa639ecdc14ea741f9ba7721e9cbcbee3a2c2bdab201c2821"
+    },
+    {
+      "path": "src/ui-analysis.ts",
+      "bytes": 5306,
+      "sha256": "e85797b9f94964642480149726cdedbe3809c331984e0cc8b415ddac5cc635be"
+    },
+    {
+      "path": "src/ui-data.ts",
+      "bytes": 3260,
+      "sha256": "879f10f8471f3a1437108be82518529675df936c3aaeda11f2b16267312fc8b3"
+    },
+    {
+      "path": "src/ui-debrief.css",
+      "bytes": 5408,
+      "sha256": "bd818a7f58a34dd8100a7604422b7f5c7f04fc64e1cf1228b2e268041b1f0662"
+    },
+    {
+      "path": "src/ui-debrief.ts",
+      "bytes": 9935,
+      "sha256": "733d9dac55d6c18ec242257c066544ae3a64021f730e533404469df8941a4195"
+    },
+    {
+      "path": "src/ui-hardware.css",
+      "bytes": 7861,
+      "sha256": "a812ed251a10f566381a901818f50f7cb285a13f03de997b66db532df60cf30f"
+    },
+    {
+      "path": "src/ui-hardware.ts",
+      "bytes": 6583,
+      "sha256": "14ac6728856897a295327878b6df21a7a94675c087118e0a74be926a64d0c720"
+    },
+    {
+      "path": "src/ui-science-flow.css",
+      "bytes": 3259,
+      "sha256": "9dd97e3be0b397b3f0dcf411b60b0a595284b17dbe09d66a08690ea6294fd001"
+    },
+    {
+      "path": "src/ui-science-flow.ts",
+      "bytes": 11831,
+      "sha256": "ae90a10707c212544f1b70d1c01cac47cd2fa4609dfb867874471d80d9bfa129"
+    },
+    {
+      "path": "src/ui-science.ts",
+      "bytes": 17508,
+      "sha256": "c83eac3773999659e4c1ae7e9f7efe06c9a7ac11437dd28bc9d0785885a2bc74"
+    },
+    {
+      "path": "src/ui-transfer-operations.css",
+      "bytes": 5564,
+      "sha256": "5b35320255fc0e48afe89d6949675faed63d8a350324d066f5ff2155ddfb571f"
+    },
+    {
+      "path": "src/ui-transfer-operations.ts",
+      "bytes": 10876,
+      "sha256": "bbb566b4beb76838388081887c99b4a6f1fd433275bf0cd5067a651814e46a0f"
+    },
+    {
+      "path": "public/assets/basis/basis_transcoder.js",
+      "bytes": 57529,
+      "sha256": "8478b5b6d6b74e7d3082b89f6417321d8d1dc0307f2b30d4484bb11b441696a1"
+    },
+    {
+      "path": "public/assets/basis/basis_transcoder.wasm",
+      "bytes": 527333,
+      "sha256": "6cf17dc889352c42e9acf8897107978d127005fe3386c36a0e3845e27967630a"
+    },
+    {
+      "path": "public/assets/basis/LICENSE",
+      "bytes": 11347,
+      "sha256": "065fcf48d6af21c0b75e23be5ed5753aee75c892e1c2cf178fa6736305614a5c"
+    },
+    {
+      "path": "public/assets/basis/README.md",
+      "bytes": 1448,
+      "sha256": "930b11bbbb742b2525491b0964f0462d63d8b21383c0623ec4c98c43d53723c6"
+    },
+    {
+      "path": "public/assets/earth-clouds.png",
+      "bytes": 1640591,
+      "sha256": "5d1310c32468dd44c87ebb00254866670d652fa4b102e3841329edcc29fe6154"
+    },
+    {
+      "path": "public/assets/earth-day.jpg",
+      "bytes": 436962,
+      "sha256": "7a1ed50d144364f6c23a2a277bb990014f07d79488b74daf8ae0c897185c9b5b"
+    },
+    {
+      "path": "public/assets/earth-night.jpg",
+      "bytes": 117858,
+      "sha256": "e927fdb873e5cbe87bba3094f867b9352500b87f7d519daa5937179caa204709"
+    },
+    {
+      "path": "public/assets/environment-stats.json",
+      "bytes": 404,
+      "sha256": "0f75f0abcd0bd40b0f1d42a9eb1fe9a693584a0234ba7330483a4e72bbb886a5"
+    },
+    {
+      "path": "public/assets/fonts/Barlow-OFL.txt",
+      "bytes": 4470,
+      "sha256": "b4cc842153e834885f3f9385ce26de4e1213d3ffbe473a6c0519e5522a8e3608"
+    },
+    {
+      "path": "public/assets/fonts/font-0.woff",
+      "bytes": 22948,
+      "sha256": "65e36e90bf3cc4b937430cc037ed4b1de40ffb32d5a9e7c30e5ba6dfb9733827"
+    },
+    {
+      "path": "public/assets/fonts/font-1.woff",
+      "bytes": 24008,
+      "sha256": "ebc49ba82b1478d63483610dd9f15e1a861f1757ac96b04174117143075b061d"
+    },
+    {
+      "path": "public/assets/fonts/font-2.woff",
+      "bytes": 24060,
+      "sha256": "8522cc905c36015209aee2cd9cc0a9a9ef638b2d8fda17de705a207c4e6cc05e"
+    },
+    {
+      "path": "public/assets/fonts/font-3.woff",
+      "bytes": 84084,
+      "sha256": "146f4b25d964c9d1b964aceb26141be52f701d80ea631d964a9bdd4ba8b5730f"
+    },
+    {
+      "path": "public/assets/fonts/font-4.woff",
+      "bytes": 92788,
+      "sha256": "b968283ea3a2c9f4f7d61eb7a3fd18502ed30cfaf595c65c658749fbbe320f63"
+    },
+    {
+      "path": "public/assets/fonts/font-5.woff",
+      "bytes": 93044,
+      "sha256": "5a3033ccc9a89d0c260cab5cc5917a2051b7e42ad8abf2b2d36758b9b8514d3a"
+    },
+    {
+      "path": "public/assets/fonts/fonts.css",
+      "bytes": 1050,
+      "sha256": "994675cb9042e4ef2e912de535474e24d4beb2786cdb9e852ca19900690bcf27"
+    },
+    {
+      "path": "public/assets/fonts/IBMPlexSansKR-OFL.txt",
+      "bytes": 4456,
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+    },
+    {
+      "path": "public/assets/fonts/SOURCE.txt",
+      "bytes": 257,
+      "sha256": "08c01cb7abced6f3d01323a4eec9a16932723c2f53ef62860d4d0e42881877e1"
+    },
+    {
+      "path": "public/assets/hangar.glb",
+      "bytes": 3432944,
+      "sha256": "92af2508e0ea2a1b1b3c75577dc36e335d71ca704515cd2815e3c570f6785eab"
+    },
+    {
+      "path": "public/assets/hardware/library-v3.webp",
+      "bytes": 77488,
+      "sha256": "4154565a92642517272b5aa966a284c36bce7fde9f00357d7638316a2a264143"
+    },
+    {
+      "path": "public/assets/launch-campus.glb",
+      "bytes": 3566520,
+      "sha256": "754af65553eda7867a0fba459aef74b2c57bfec24b410d31993e3e5bc7427e06"
+    },
+    {
+      "path": "public/assets/mars.jpg",
+      "bytes": 972896,
+      "sha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780"
+    },
+    {
+      "path": "public/assets/mission-control-stats.json",
+      "bytes": 1101,
+      "sha256": "69910277760e06140dbd87bfc90378853be7f3ed0a78c568414533b34c81f4ce"
+    },
+    {
+      "path": "public/assets/mission-control.glb",
+      "bytes": 3019548,
+      "sha256": "fc166790eadcb735d7f9517fc53c9ed00692d0a68c6d254133cb44910efc918e"
+    },
+    {
+      "path": "public/assets/texture-provenance.json",
+      "bytes": 3718,
+      "sha256": "c4870ff7554b8992c1486e611b4874b9dee0a005a56bb5a38f32b40390dd3cbc"
+    },
+    {
+      "path": "public/assets/textures/earth-bmng-july2004-16k.ktx2",
+      "bytes": 10062327,
+      "sha256": "dae2a97d896170340f0df8331475145b1ac9e567e4726e3403583a02d5995f92"
+    },
+    {
+      "path": "public/assets/textures/earth-bmng-july2004-8k.ktx2",
+      "bytes": 2682779,
+      "sha256": "754427060f3910d6cead0a443468013c69aa8585ebfd5e885187b2d8f9ae1fd8"
+    },
+    {
+      "path": "public/assets/textures/mars-mdim21-4k.webp",
+      "bytes": 2553544,
+      "sha256": "5d06074054c7405a444ca1824acfc8f64589a2a65efcb986a2a9a31d3dbbe5df"
+    },
+    {
+      "path": "public/data/command-network.json",
+      "bytes": 2706,
+      "sha256": "1eb4ebd04d12efb8ea2bf36e30a8b88c0ee198e504ca6efbc7d992fa8159fff6"
+    },
+    {
+      "path": "public/data/component-sources.json",
+      "bytes": 22010,
+      "sha256": "46b6e9838fc2abff06465e5200a74d6d179621363f315025edb53e5cabfdb464"
+    },
+    {
+      "path": "public/data/earth-surface-detail.json",
+      "bytes": 3708,
+      "sha256": "73726ec26765be49c04cffece7dc944380137b8fc88d0e35d9c80e974989d25c"
+    },
+    {
+      "path": "public/data/gmat/earth-low-inclination.json",
+      "bytes": 192683,
+      "sha256": "8cdd6964b31711d41a59128d3b8450862c811e19e5d397dc3c3de939bb6125e4"
+    },
+    {
+      "path": "public/data/gmat/earth-polar.json",
+      "bytes": 192619,
+      "sha256": "ff52a7cf8c119270a1244352e06daf1b77485b7738aea6aaf1df2839fdab8513"
+    },
+    {
+      "path": "public/data/gmat/earth-reference.json",
+      "bytes": 192249,
+      "sha256": "a03e6cb00c074519e69650650457c9d161ae09b472bb8bd3d4f716cb355e4131"
+    },
+    {
+      "path": "public/data/gmat/earth-three-axis-burn.json",
+      "bytes": 192384,
+      "sha256": "9a9cd5b6cb7a155ed303e79c2731682223bbf352c8c9917fe0e5229471da5fb3"
+    },
+    {
+      "path": "public/data/gmat/mars-distant-tilted.json",
+      "bytes": 40692,
+      "sha256": "af6ef8c64d43ba2836dca095811d19acf483d49f0c85ba0e74a6b7118aff7848"
+    },
+    {
+      "path": "public/data/gmat/mars-high-polar.json",
+      "bytes": 40968,
+      "sha256": "d331853f2676f00fdbcb84215863be21c879e266fb27858631cc0d8a0db33703"
+    },
+    {
+      "path": "public/data/gmat/mars-low-tilted.json",
+      "bytes": 41073,
+      "sha256": "0bc722171226494c66f794568f430dde1124de936bcc9e2735f474dc592e56eb"
+    },
+    {
+      "path": "public/data/gmat/mars-reference.json",
+      "bytes": 30763,
+      "sha256": "b3fc9d5fc2a4ea262833dc1ca1aaf54807e6ac4416600f5d341e984c423cadf5"
+    },
+    {
+      "path": "public/data/gmat/validation-summary.json",
+      "bytes": 9812,
+      "sha256": "ccd5295bacae1544f784c824641f0e92361d778811c4c87e58dc9c870ddd01da"
+    },
+    {
+      "path": "public/data/hardware-catalog-v2.json",
+      "bytes": 65922,
+      "sha256": "7878c95c22bb6f1d34a132be1de8a13db2355da49ff6655484803267c8280b29"
+    },
+    {
+      "path": "public/data/hardware-thumbnails-v3.json",
+      "bytes": 712,
+      "sha256": "b8f10669afc805399267a0741ca7b79e6f10aecc8803e6ee300ba35a943f25c8"
+    },
+    {
+      "path": "public/data/mars-surface-detail.json",
+      "bytes": 53116,
+      "sha256": "887469f1eaebbcc49270ef3f41c6d296227e913ffd0a81b689d5ff65e90a790d"
+    },
+    {
+      "path": "public/data/swingby/model-v1.json",
+      "bytes": 4303,
+      "sha256": "6048bba1113a1e9737a3c840294ba64d3648a879ba15ac037064e2795e464b24"
+    },
+    {
+      "path": "public/data/swingby/propulsion-v1.json",
+      "bytes": 972,
+      "sha256": "217cb79ae7bdac236374ea872a3baf0f1cd653fb1305c24d11e154516a5a30fe"
+    },
+    {
+      "path": "public/data/swingby/scenario-v1.json",
+      "bytes": 2211,
+      "sha256": "2774a9e84ad1697be6c924b06134c85ba1c66f4c6e1d3ef2614bf35f5eab705e"
+    },
+    {
+      "path": "public/data/transfer/gmat-research-summary.json",
+      "bytes": 3297,
+      "sha256": "183b43fcd78cc28cfade46f95e2b70b21020d6b3cf53875e2103811378d655c4"
+    },
+    {
+      "path": "public/data/transfer/interpolation-report.json",
+      "bytes": 1977,
+      "sha256": "07a84964ce89fae67eb7d43bc4fe9bfcba7e45dbfed288fa78ee377125a93f8d"
+    },
+    {
+      "path": "public/data/transfer/model.md",
+      "bytes": 10738,
+      "sha256": "e70dcaafc64a45e046ebdc637e0ec699242b5d17113ccb681799122d4f9a74ea"
+    },
+    {
+      "path": "public/data/transfer/sources.json",
+      "bytes": 1869,
+      "sha256": "40cd7001fa1da435f288a6ec52a9d29395a4ddfe2dd83a7a0b2ad39526f09bbc"
+    },
+    {
+      "path": "public/favicon.svg",
+      "bytes": 362,
+      "sha256": "fc18700f7e557a5603588e71adb9d65778de99175c8f0ee54577441442bdf960"
+    },
+    {
+      "path": "dist/assets/basis/basis_transcoder.js",
+      "bytes": 57529,
+      "sha256": "8478b5b6d6b74e7d3082b89f6417321d8d1dc0307f2b30d4484bb11b441696a1"
+    },
+    {
+      "path": "dist/assets/basis/basis_transcoder.wasm",
+      "bytes": 527333,
+      "sha256": "6cf17dc889352c42e9acf8897107978d127005fe3386c36a0e3845e27967630a"
+    },
+    {
+      "path": "dist/assets/basis/LICENSE",
+      "bytes": 11347,
+      "sha256": "065fcf48d6af21c0b75e23be5ed5753aee75c892e1c2cf178fa6736305614a5c"
+    },
+    {
+      "path": "dist/assets/basis/README.md",
+      "bytes": 1448,
+      "sha256": "930b11bbbb742b2525491b0964f0462d63d8b21383c0623ec4c98c43d53723c6"
+    },
+    {
+      "path": "dist/assets/celestial-stars-D_WdQCjW.js",
+      "bytes": 1806,
+      "sha256": "22767a22491643d04d6930483d4b7829c285b6ae1bbfba61b919a2e68085779e"
+    },
+    {
+      "path": "dist/assets/data-CH-hSS_s.js",
+      "bytes": 15225,
+      "sha256": "0ed87b952a0e09443fc3758719eba0a1e5cf90fd84f35dbc3cea540d064e83a6"
+    },
+    {
+      "path": "dist/assets/deployment-ui-D3KCMYMI.css",
+      "bytes": 13164,
+      "sha256": "14612bd41ef1d89753ced307bb32804a7defdd47c53b03ae684a55276e6f0de3"
+    },
+    {
+      "path": "dist/assets/deployment-ui-D4HW_1RB.js",
+      "bytes": 142327,
+      "sha256": "f8611f42f53781da16c0be6942f6ee3290930360fcb0c04da2ad52f15f9dd809"
+    },
+    {
+      "path": "dist/assets/deployment.worker-pnFV-DFf.js",
+      "bytes": 119288,
+      "sha256": "e58ead0347a0145af9a133167acd45dd2ebfa3da533d43be95fa722a039659ec"
+    },
+    {
+      "path": "dist/assets/earth-clouds.png",
+      "bytes": 1640591,
+      "sha256": "5d1310c32468dd44c87ebb00254866670d652fa4b102e3841329edcc29fe6154"
+    },
+    {
+      "path": "dist/assets/earth-day.jpg",
+      "bytes": 436962,
+      "sha256": "7a1ed50d144364f6c23a2a277bb990014f07d79488b74daf8ae0c897185c9b5b"
+    },
+    {
+      "path": "dist/assets/earth-night.jpg",
+      "bytes": 117858,
+      "sha256": "e927fdb873e5cbe87bba3094f867b9352500b87f7d519daa5937179caa204709"
+    },
+    {
+      "path": "dist/assets/environment-stats.json",
+      "bytes": 404,
+      "sha256": "0f75f0abcd0bd40b0f1d42a9eb1fe9a693584a0234ba7330483a4e72bbb886a5"
+    },
+    {
+      "path": "dist/assets/fonts/Barlow-OFL.txt",
+      "bytes": 4470,
+      "sha256": "b4cc842153e834885f3f9385ce26de4e1213d3ffbe473a6c0519e5522a8e3608"
+    },
+    {
+      "path": "dist/assets/fonts/font-0.woff",
+      "bytes": 22948,
+      "sha256": "65e36e90bf3cc4b937430cc037ed4b1de40ffb32d5a9e7c30e5ba6dfb9733827"
+    },
+    {
+      "path": "dist/assets/fonts/font-1.woff",
+      "bytes": 24008,
+      "sha256": "ebc49ba82b1478d63483610dd9f15e1a861f1757ac96b04174117143075b061d"
+    },
+    {
+      "path": "dist/assets/fonts/font-2.woff",
+      "bytes": 24060,
+      "sha256": "8522cc905c36015209aee2cd9cc0a9a9ef638b2d8fda17de705a207c4e6cc05e"
+    },
+    {
+      "path": "dist/assets/fonts/font-3.woff",
+      "bytes": 84084,
+      "sha256": "146f4b25d964c9d1b964aceb26141be52f701d80ea631d964a9bdd4ba8b5730f"
+    },
+    {
+      "path": "dist/assets/fonts/font-4.woff",
+      "bytes": 92788,
+      "sha256": "b968283ea3a2c9f4f7d61eb7a3fd18502ed30cfaf595c65c658749fbbe320f63"
+    },
+    {
+      "path": "dist/assets/fonts/font-5.woff",
+      "bytes": 93044,
+      "sha256": "5a3033ccc9a89d0c260cab5cc5917a2051b7e42ad8abf2b2d36758b9b8514d3a"
+    },
+    {
+      "path": "dist/assets/fonts/fonts.css",
+      "bytes": 1050,
+      "sha256": "994675cb9042e4ef2e912de535474e24d4beb2786cdb9e852ca19900690bcf27"
+    },
+    {
+      "path": "dist/assets/fonts/IBMPlexSansKR-OFL.txt",
+      "bytes": 4456,
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+    },
+    {
+      "path": "dist/assets/fonts/SOURCE.txt",
+      "bytes": 257,
+      "sha256": "08c01cb7abced6f3d01323a4eec9a16932723c2f53ef62860d4d0e42881877e1"
+    },
+    {
+      "path": "dist/assets/forecast.worker-BOq_7-Hd.js",
+      "bytes": 81514,
+      "sha256": "dd816465c27f222fb41f6f946e2d915222970f60f820e0c89bffa8c9979ab958"
+    },
+    {
+      "path": "dist/assets/hangar.glb",
+      "bytes": 3432944,
+      "sha256": "92af2508e0ea2a1b1b3c75577dc36e335d71ca704515cd2815e3c570f6785eab"
+    },
+    {
+      "path": "dist/assets/hardware/library-v3.webp",
+      "bytes": 77488,
+      "sha256": "4154565a92642517272b5aa966a284c36bce7fde9f00357d7638316a2a264143"
+    },
+    {
+      "path": "dist/assets/index-BA9aEXW2.js",
+      "bytes": 1205762,
+      "sha256": "ff2ac3cc443d3109a264de12eaf72277c79b521be724e7bdfab92d4fb3a413c5"
+    },
+    {
+      "path": "dist/assets/index-Cb3n1i69.js",
+      "bytes": 78480,
+      "sha256": "2aafbaa7f45b03aeb8e0336fc2ded03ff1e780ef5875718cea3d728cc3131f18"
+    },
+    {
+      "path": "dist/assets/index-PdPCyJuF.css",
+      "bytes": 51121,
+      "sha256": "c3f2843d6f40dc96cf585525544b2cba45425aa7e527109c06152a125f692eb9"
+    },
+    {
+      "path": "dist/assets/KTX2Loader-lttJ2L-P.js",
+      "bytes": 59410,
+      "sha256": "7190d31f7a4f13c558fa60d5a02f93a91f98e52fb470a8b5706aa757c39fd086"
+    },
+    {
+      "path": "dist/assets/launch-campus.glb",
+      "bytes": 3566520,
+      "sha256": "754af65553eda7867a0fba459aef74b2c57bfec24b410d31993e3e5bc7427e06"
+    },
+    {
+      "path": "dist/assets/lazy-surface-texture-uAHGtvVa.js",
+      "bytes": 1497,
+      "sha256": "d15e38e25384218e57e1d760bea5aa00cfabd0485ecd0a7431be38eb595c47d1"
+    },
+    {
+      "path": "dist/assets/mars.jpg",
+      "bytes": 972896,
+      "sha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780"
+    },
+    {
+      "path": "dist/assets/mission-control-stats.json",
+      "bytes": 1101,
+      "sha256": "69910277760e06140dbd87bfc90378853be7f3ed0a78c568414533b34c81f4ce"
+    },
+    {
+      "path": "dist/assets/mission-control.glb",
+      "bytes": 3019548,
+      "sha256": "fc166790eadcb735d7f9517fc53c9ed00692d0a68c6d254133cb44910efc918e"
+    },
+    {
+      "path": "dist/assets/operations-codec-ByzpJODd.js",
+      "bytes": 590028,
+      "sha256": "85b6fd94ae72a9a48a6d9bf13d6666029b537742232e7dcb55ebfad8d355804b"
+    },
+    {
+      "path": "dist/assets/persistence-BPg8XC4B.js",
+      "bytes": 30133,
+      "sha256": "d8361d699caf86683cec00192da4d587b3e98054f28368f114af929b36b9df9b"
+    },
+    {
+      "path": "dist/assets/planet-inspection-direction-CFfPW6Re.js",
+      "bytes": 922,
+      "sha256": "556d479232e03d9c38bbb0fff7955b2d27acbcdc1dcfd9d3f4660dc473798cc4"
+    },
+    {
+      "path": "dist/assets/preview.worker-CkVnPFfo.js",
+      "bytes": 80627,
+      "sha256": "417cf5e354ff8788aad203821c630ef8eb4412dc3a2324b404f2b76e49f52fe5"
+    },
+    {
+      "path": "dist/assets/review-ui-BS_4bUaN.css",
+      "bytes": 9360,
+      "sha256": "dee4cfe0280a0a2cbf04dea9583efd941163f990ad0ecb4cbb31f08827d13e87"
+    },
+    {
+      "path": "dist/assets/review-ui-C0Wnllz_.js",
+      "bytes": 38947,
+      "sha256": "fdac3821a5d73f70604c86c930b8008de2126f3ce9889984cf7c8f4254cf886e"
+    },
+    {
+      "path": "dist/assets/review.worker-BoLKL8-R.js",
+      "bytes": 718172,
+      "sha256": "6ab6d7be0530d7d7d747903842a9ad4bcbb65c0ed5587718a80449ec39c09a28"
+    },
+    {
+      "path": "dist/assets/scenario-DtCKXXqJ.js",
+      "bytes": 3861,
+      "sha256": "114a97ea871ae8e868e9366afd994fb4183336113f4cb31aa0508002e62b62d6"
+    },
+    {
+      "path": "dist/assets/swingby-D5tDlM9Z.js",
+      "bytes": 3347,
+      "sha256": "2e7ff9442d8837b49fe7203d61b9389e6dfa6ef501f19f7522c3b1a482787300"
+    },
+    {
+      "path": "dist/assets/swingby-scene-CCMeQDDE.js",
+      "bytes": 45466,
+      "sha256": "a00abe6be197e068f29d2f61d89c700ae4b211bc6471c643bc132c7730451cf2"
+    },
+    {
+      "path": "dist/assets/swingby-ui-NQHWWJXd.js",
+      "bytes": 39926,
+      "sha256": "ff9cd9f3f761074934e2add4fd8cb80600fcc5d30a7a69e317ec80b48f410d6d"
+    },
+    {
+      "path": "dist/assets/swingby-ui-RBBPcnaa.css",
+      "bytes": 7368,
+      "sha256": "407158867f8bb625d3f46eef22c72635596bcd331eb7d434f6dfe984bbaaa05d"
+    },
+    {
+      "path": "dist/assets/swingby.worker-D95WMzCs.js",
+      "bytes": 693686,
+      "sha256": "bfa6c916202c1ef5c741d1d719d3e932e689094ced16b121b5ee01f31a6aaa6a"
+    },
+    {
+      "path": "dist/assets/texture-provenance.json",
+      "bytes": 3718,
+      "sha256": "c4870ff7554b8992c1486e611b4874b9dee0a005a56bb5a38f32b40390dd3cbc"
+    },
+    {
+      "path": "dist/assets/textures/earth-bmng-july2004-16k.ktx2",
+      "bytes": 10062327,
+      "sha256": "dae2a97d896170340f0df8331475145b1ac9e567e4726e3403583a02d5995f92"
+    },
+    {
+      "path": "dist/assets/textures/earth-bmng-july2004-8k.ktx2",
+      "bytes": 2682779,
+      "sha256": "754427060f3910d6cead0a443468013c69aa8585ebfd5e885187b2d8f9ae1fd8"
+    },
+    {
+      "path": "dist/assets/textures/mars-mdim21-4k.webp",
+      "bytes": 2553544,
+      "sha256": "5d06074054c7405a444ca1824acfc8f64589a2a65efcb986a2a9a31d3dbbe5df"
+    },
+    {
+      "path": "dist/assets/transfer-ui-DQKH8AFZ.js",
+      "bytes": 136402,
+      "sha256": "b0aa4a4426fbbe7ddcb0c29a6e9f7f113096501e07d74b03dfab0027e2c9dbe6"
+    },
+    {
+      "path": "dist/assets/transfer-ui-DSUbDJc3.css",
+      "bytes": 14165,
+      "sha256": "10d4b6d142705120a4ab923a3035289c94e30471e06ce7451de123ea28871d7c"
+    },
+    {
+      "path": "dist/assets/transfer.worker-xBEW4vhK.js",
+      "bytes": 745241,
+      "sha256": "6650792bcf9c100126aaced3467ffcb09de67ef4373236cf9fb61faf4a59915b"
+    },
+    {
+      "path": "dist/data/command-network.json",
+      "bytes": 2706,
+      "sha256": "1eb4ebd04d12efb8ea2bf36e30a8b88c0ee198e504ca6efbc7d992fa8159fff6"
+    },
+    {
+      "path": "dist/data/component-sources.json",
+      "bytes": 22010,
+      "sha256": "46b6e9838fc2abff06465e5200a74d6d179621363f315025edb53e5cabfdb464"
+    },
+    {
+      "path": "dist/data/earth-surface-detail.json",
+      "bytes": 3708,
+      "sha256": "73726ec26765be49c04cffece7dc944380137b8fc88d0e35d9c80e974989d25c"
+    },
+    {
+      "path": "dist/data/gmat/earth-low-inclination.json",
+      "bytes": 192683,
+      "sha256": "8cdd6964b31711d41a59128d3b8450862c811e19e5d397dc3c3de939bb6125e4"
+    },
+    {
+      "path": "dist/data/gmat/earth-polar.json",
+      "bytes": 192619,
+      "sha256": "ff52a7cf8c119270a1244352e06daf1b77485b7738aea6aaf1df2839fdab8513"
+    },
+    {
+      "path": "dist/data/gmat/earth-reference.json",
+      "bytes": 192249,
+      "sha256": "a03e6cb00c074519e69650650457c9d161ae09b472bb8bd3d4f716cb355e4131"
+    },
+    {
+      "path": "dist/data/gmat/earth-three-axis-burn.json",
+      "bytes": 192384,
+      "sha256": "9a9cd5b6cb7a155ed303e79c2731682223bbf352c8c9917fe0e5229471da5fb3"
+    },
+    {
+      "path": "dist/data/gmat/mars-distant-tilted.json",
+      "bytes": 40692,
+      "sha256": "af6ef8c64d43ba2836dca095811d19acf483d49f0c85ba0e74a6b7118aff7848"
+    },
+    {
+      "path": "dist/data/gmat/mars-high-polar.json",
+      "bytes": 40968,
+      "sha256": "d331853f2676f00fdbcb84215863be21c879e266fb27858631cc0d8a0db33703"
+    },
+    {
+      "path": "dist/data/gmat/mars-low-tilted.json",
+      "bytes": 41073,
+      "sha256": "0bc722171226494c66f794568f430dde1124de936bcc9e2735f474dc592e56eb"
+    },
+    {
+      "path": "dist/data/gmat/mars-reference.json",
+      "bytes": 30763,
+      "sha256": "b3fc9d5fc2a4ea262833dc1ca1aaf54807e6ac4416600f5d341e984c423cadf5"
+    },
+    {
+      "path": "dist/data/gmat/validation-summary.json",
+      "bytes": 9812,
+      "sha256": "ccd5295bacae1544f784c824641f0e92361d778811c4c87e58dc9c870ddd01da"
+    },
+    {
+      "path": "dist/data/hardware-catalog-v2.json",
+      "bytes": 65922,
+      "sha256": "7878c95c22bb6f1d34a132be1de8a13db2355da49ff6655484803267c8280b29"
+    },
+    {
+      "path": "dist/data/hardware-thumbnails-v3.json",
+      "bytes": 712,
+      "sha256": "b8f10669afc805399267a0741ca7b79e6f10aecc8803e6ee300ba35a943f25c8"
+    },
+    {
+      "path": "dist/data/mars-surface-detail.json",
+      "bytes": 53116,
+      "sha256": "887469f1eaebbcc49270ef3f41c6d296227e913ffd0a81b689d5ff65e90a790d"
+    },
+    {
+      "path": "dist/data/swingby/model-v1.json",
+      "bytes": 4303,
+      "sha256": "6048bba1113a1e9737a3c840294ba64d3648a879ba15ac037064e2795e464b24"
+    },
+    {
+      "path": "dist/data/swingby/propulsion-v1.json",
+      "bytes": 972,
+      "sha256": "217cb79ae7bdac236374ea872a3baf0f1cd653fb1305c24d11e154516a5a30fe"
+    },
+    {
+      "path": "dist/data/swingby/scenario-v1.json",
+      "bytes": 2211,
+      "sha256": "2774a9e84ad1697be6c924b06134c85ba1c66f4c6e1d3ef2614bf35f5eab705e"
+    },
+    {
+      "path": "dist/data/transfer/gmat-research-summary.json",
+      "bytes": 3297,
+      "sha256": "183b43fcd78cc28cfade46f95e2b70b21020d6b3cf53875e2103811378d655c4"
+    },
+    {
+      "path": "dist/data/transfer/interpolation-report.json",
+      "bytes": 1977,
+      "sha256": "07a84964ce89fae67eb7d43bc4fe9bfcba7e45dbfed288fa78ee377125a93f8d"
+    },
+    {
+      "path": "dist/data/transfer/model.md",
+      "bytes": 10738,
+      "sha256": "e70dcaafc64a45e046ebdc637e0ec699242b5d17113ccb681799122d4f9a74ea"
+    },
+    {
+      "path": "dist/data/transfer/sources.json",
+      "bytes": 1869,
+      "sha256": "40cd7001fa1da435f288a6ec52a9d29395a4ddfe2dd83a7a0b2ad39526f09bbc"
+    },
+    {
+      "path": "dist/favicon.svg",
+      "bytes": 362,
+      "sha256": "fc18700f7e557a5603588e71adb9d65778de99175c8f0ee54577441442bdf960"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 633,
+      "sha256": "0bee26a3db46a40b3e8263a5382f0a0099c5152335df0bd676917a8d3898eb9d"
+    },
+    {
+      "path": "tests/browser/orbit-apsis.spec.ts",
+      "bytes": 11765,
+      "sha256": "23854a164fbcd471fdd867c8607ef84434d6b591eef60c79e53b5269d1cb4a73"
+    },
+    {
+      "path": "tests/browser/deployment-v9-integrated.spec.ts",
+      "bytes": 8047,
+      "sha256": "4239a11ec21ccc04866b9ebd6c66a7e0d8bc2d4a76eb835395e4b18705d58f9e"
+    },
+    {
+      "path": "tests/browser/native-gl-audit.ts",
+      "bytes": 2301,
+      "sha256": "fb6c180498f2be920d88cf46690529801a8eb7ba2bec1c119698af0da52f2276"
+    },
+    {
+      "path": "package.json",
+      "bytes": 603,
+      "sha256": "d6280465a7943c6fc667f307e9f9bd47dfaf7a72001baf5fad3442c98f9a3e8a"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 56233,
+      "sha256": "88c2112e8e9d0b985bc1760787e4bb7bc5cf465d11ec54fda29f7adc66566ca7"
+    },
+    {
+      "path": "playwright.config.ts",
+      "bytes": 550,
+      "sha256": "7f97aa712e0cc737f10972dde352d5ee7d1d1f6be41dde8b5b948f3ce7f4c880"
+    },
+    {
+      "path": "tools/qa/v9-source.mjs",
+      "bytes": 1911,
+      "sha256": "35a931e70b8cf50c3d93a9cf2c98574c3563d2d8d5f423c19eca4dd84cc185cd"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+Google Fonts CSS: https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap
+Barlow Condensed and IBM Plex Sans KR are distributed under SIL OFL.
+Downloaded for local offline loading.

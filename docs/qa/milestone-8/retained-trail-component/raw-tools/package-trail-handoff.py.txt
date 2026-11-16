@@ -1,0 +1,26 @@
+from pathlib import Path
+import hashlib,json,difflib
+from datetime import datetime,timezone
+from PIL import Image,ImageChops
+
+root=Path(__file__).resolve().parents[1]
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+old=(root/'docs/deployment-scene-baseline.ts.txt').read_text(encoding='utf-8').splitlines(keepends=True)
+scene=(root/'src/render/deployment-scene.ts').read_text(encoding='utf-8').splitlines(keepends=True)
+helper=(root/'src/render/committed-orbit-trail.ts').read_text(encoding='utf-8').splitlines(keepends=True)
+diff=''.join(difflib.unified_diff(old,scene,fromfile='a/src/render/deployment-scene.ts',tofile='b/src/render/deployment-scene.ts'))+''.join(difflib.unified_diff([],helper,fromfile='/dev/null',tofile='b/src/render/committed-orbit-trail.ts'))
+(root/'docs/retained-trail-production.diff').write_text(diff,encoding='utf-8',newline='\n')
+receipt={'command':'npx.cmd tsc --noEmit','exitCode':0,'stdout':'','stderr':'','wallTimeSeconds':7.1603447,'toolChunkId':'1996a0','scope':'Product scene/helper and CPU tests on accepted candidate; isolated later browser tool files are not in tsconfig include.'}
+(root/'docs/trail-typecheck.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf-8')
+comparisons=[]
+for time in ['0','240','600','1385']:
+    a=Image.open(root/f'docs/qa/retained-trail-v1/baseline-t{time}.png').convert('RGB')
+    b=Image.open(root/f'docs/qa/retained-trail-v1/candidate-t{time}.png').convert('RGB')
+    region=(0,70,a.width,a.height)
+    delta=ImageChops.difference(a.crop(region),b.crop(region))
+    comparisons.append({'time':time,'region':region,'reason':'Exclude explicitly different harness header; no images altered.','equalPixels':delta.getbbox() is None,'differenceBounds':delta.getbbox()})
+(root/'docs/trail-visual-comparison.json').write_text(json.dumps(comparisons,indent=2)+'\n',encoding='utf-8')
+paths=[root/'src/render/deployment-scene.ts',root/'src/render/committed-orbit-trail.ts',root/'tests/committed-orbit-trail.test.ts']+sorted(p for p in (root/'docs').rglob('*') if p.is_file() and p.name!='retained-trail-manifest.json')+sorted(p for p in (root/'tools').glob('*') if p.is_file())
+manifest={'createdAt':datetime.now(timezone.utc).isoformat(),'scope':'Isolated candidate handoff; no main writes. GPU released.','files':[{'path':p.relative_to(root).as_posix(),'sha256':sha(p),'bytes':p.stat().st_size} for p in paths],'visualComparisons':comparisons}
+(root/'docs/retained-trail-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
+print(json.dumps({'files':len(paths),'bytes':sum(p.stat().st_size for p in paths),'visualComparisons':comparisons},indent=2))

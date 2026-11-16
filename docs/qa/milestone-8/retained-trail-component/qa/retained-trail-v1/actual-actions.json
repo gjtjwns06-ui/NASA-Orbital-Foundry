@@ -1,0 +1,102 @@
+[
+  {
+    "action": "save",
+    "text": "저장"
+  },
+  {
+    "action": "export",
+    "text": "JSON ↓"
+  },
+  {
+    "action": "import",
+    "text": "JSON ↑"
+  },
+  {
+    "action": "exit",
+    "text": "임무 선택"
+  },
+  {
+    "action": "variants",
+    "text": "다른 설계 접기"
+  },
+  {
+    "action": "preset:clearance",
+    "text": "간섭 수리"
+  },
+  {
+    "action": "preset:compact",
+    "text": "접이식 기본형"
+  },
+  {
+    "action": "preset:fixed",
+    "text": "고정 패널형"
+  },
+  {
+    "action": "preset:recovery",
+    "text": "전력 회복"
+  },
+  {
+    "action": "part:battery",
+    "text": "01배터리bpx100-4s2p-v2 · py"
+  },
+  {
+    "action": "part:radio",
+    "text": "02무전기iris22-carrier-v1 · py"
+  },
+  {
+    "action": "part:adcs",
+    "text": "03자세제어xact50-carrier-v1 · py"
+  },
+  {
+    "action": "part:recorder",
+    "text": "04기록장치recorder-1p6-v2 · py"
+  },
+  {
+    "action": "part:controller",
+    "text": "05전개 제어기mechanism-controller-v1 · py"
+  },
+  {
+    "action": "part:wing",
+    "text": "06접이식 태양판hinged-pv135-v1 · pz"
+  },
+  {
+    "action": "part:antenna",
+    "text": "07전개식 안테나folded-x-array-v1 · px"
+  },
+  {
+    "action": "part:recovery",
+    "text": "08회복용 태양판body-pv15-v1 · pz"
+  },
+  {
+    "action": "focus",
+    "text": "선택 부품 초점"
+  },
+  {
+    "action": "fit",
+    "text": "기체 전체"
+  },
+  {
+    "action": "launch",
+    "text": "궤도에서 가동 시작"
+  },
+  {
+    "action": "sweep",
+    "text": "전개 순서의 간섭 검사"
+  },
+  {
+    "action": "undo",
+    "text": "되돌리기"
+  },
+  {
+    "action": "redo",
+    "text": "다시 실행"
+  },
+  {
+    "action": "forecast",
+    "text": "전체 비행 예측"
+  },
+  {
+    "action": "timeline",
+    "text": "일정 접기"
+  }
+]

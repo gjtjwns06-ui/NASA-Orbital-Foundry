@@ -1,0 +1,8 @@
+{
+  "scope": "Independently pointer-edited and flown Chrome157 and Edge157 terminal saves on production-v6a, all fields except serialization wall time. No tolerant rounding.",
+  "comparedLeaves": 491,
+  "different": 0,
+  "differences": [],
+  "chromeSha256": "8727890977db6b8a30f022540c74edf8bd3c0b42fa310d7f9e9ebf68be03f7d4",
+  "edgeSha256": "de1e872122458102b22f46f13335250b5b48a027f0957f5512171b026dddf30c"
+}

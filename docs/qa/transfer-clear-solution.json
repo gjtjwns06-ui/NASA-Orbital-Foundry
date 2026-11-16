@@ -1,0 +1,18 @@
+{
+  "cleared": {
+    "paths": 0,
+    "orbits": 0,
+    "craft": false,
+    "earth": false,
+    "mars": false,
+    "handle": null,
+    "legend": "유효한 전이 경로가 없습니다. 날짜 또는 조우 조건을 수정하세요."
+  },
+  "restored": {
+    "paths": 3,
+    "craft": true,
+    "earth": true,
+    "mars": true,
+    "handle": true
+  }
+}

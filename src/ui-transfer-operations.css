@@ -1,0 +1,285 @@
+/* Version-3 command UI; classic timeline dimensions remain unchanged. */
+.operations-live .transfer-timeline {
+  height: 210px;
+}
+.operations-live .transfer-left,
+.operations-live .transfer-right {
+  bottom: 242px;
+}
+.operations-live .transfer-error {
+  bottom: 254px;
+}
+.operations-live .transfer-right > .command-console {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+  margin-bottom: 22px;
+}
+.simulation-truth-note {
+  padding: 8px 10px;
+  border: 1px solid #91b0b644;
+  color: #b6cccc;
+  font-size: 10px;
+  line-height: 1.5;
+  background: #09222b99;
+}
+body.large-ui .operations-live .transfer-timeline {
+  height: 232px;
+}
+body.large-ui .operations-live .transfer-left,
+body.large-ui .operations-live .transfer-right {
+  bottom: 264px;
+}
+body.large-ui .operations-live .transfer-error {
+  bottom: 276px;
+}
+.operations-timeline .transfer-time-labels {
+  margin-left: 108px;
+}
+.command-console {
+  border-top: 1px solid #749a9944;
+  margin-top: 16px;
+  padding-top: 14px;
+}
+.command-console-heading {
+  display: block;
+  position: relative;
+}
+.command-console h3 {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 4px 0 8px;
+  word-break: keep-all;
+}
+.command-revision {
+  position: absolute;
+  right: 0;
+  top: 0;
+  flex-shrink: 0;
+  color: #91d5c2;
+  font-size: 9px;
+  padding-top: 2px;
+}
+.command-console .command-boundary-note {
+  color: #acc3c3;
+  font-size: 10px;
+  line-height: 1.6;
+}
+.command-draft-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0 7px;
+  font-size: 11px;
+}
+.command-draft-summary span {
+  color: #b5c9cb;
+}
+.command-console .command-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 9px;
+}
+.command-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+.command-card {
+  border: 1px solid #71969a44;
+  border-left: 3px solid #a8bfc6;
+  border-radius: 4px;
+  padding: 10px;
+  background: #07182088;
+}
+.command-card header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 6px;
+}
+.command-card strong {
+  font-size: 11px;
+}
+.command-card header span {
+  font-size: 10px;
+  color: #e6cd90;
+}
+.command-card small,
+.command-card p,
+.command-empty {
+  font-size: 10px;
+  color: #b3c6ca;
+  line-height: 1.5;
+}
+.command-card p {
+  margin: 6px 0 0;
+}
+.command-card.confirmed {
+  border-left-color: #83d6b9;
+}
+.command-card.confirmed header span {
+  color: #9be3c6;
+}
+.command-card.rejected {
+  border-left-color: #ecae92;
+}
+.command-card.unconfirmed {
+  border-left-style: dashed;
+}
+.command-card progress {
+  width: 100%;
+  height: 4px;
+  accent-color: #e8c47d;
+  margin: 8px 0 1px;
+}
+.command-console .command-estimate {
+  color: #e6cd90;
+  font-size: 10px;
+  line-height: 1.5;
+}
+.command-validation {
+  color: #efb39e;
+  font-size: 10px;
+  line-height: 1.5;
+  padding-left: 16px;
+}
+.command-history {
+  margin-top: 10px;
+}
+.command-history .command-card {
+  margin-top: 8px;
+}
+.live-operations-layers {
+  display: grid;
+  gap: 4px;
+  margin: 6px 0;
+}
+.live-operations-row {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+}
+.live-layer-label {
+  color: #a9c5c5;
+  font-size: 9px;
+}
+.live-operation-track {
+  height: 26px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #759c9d22;
+  border-radius: 3px;
+  background: #071923bb;
+  touch-action: none;
+  pointer-events: auto;
+}
+.live-operation {
+  position: absolute;
+  top: 2px;
+  height: 20px;
+  min-width: 2px;
+  border: 1px solid #6ba493;
+  background: #325d53;
+  border-radius: 3px;
+  font-size: 9px;
+  color: #e3f2ea;
+  white-space: nowrap;
+  user-select: none;
+  overflow: hidden;
+}
+.live-operation > span {
+  padding: 0 5px;
+  line-height: 18px;
+  pointer-events: none;
+}
+.live-operation.observe {
+  background: #3e536a;
+  border-color: #89a8cb;
+}
+.live-operation.downlink {
+  background: #64562e;
+  border-color: #c8b478;
+}
+.submitted .live-operation {
+  opacity: 0.72;
+  border-style: dashed;
+}
+.draft .live-operation {
+  border-color: #e4f2ec;
+  box-shadow: inset 0 0 0 1px #e4f2ec22;
+}
+.live-operation.editable {
+  cursor: grab;
+  overflow: visible;
+}
+.live-operation.editable > span {
+  display: block;
+  overflow: hidden;
+}
+.live-operation.editable:active {
+  cursor: grabbing;
+}
+.live-operation.editable:focus-visible {
+  outline: 2px solid #9ff1db;
+  outline-offset: -2px;
+}
+.live-operation.locked {
+  opacity: 0.7;
+}
+.live-operation [data-operations-edge] {
+  position: absolute;
+  right: -8px;
+  top: 0;
+  bottom: 0;
+  width: 18px;
+  background: linear-gradient(
+    90deg,
+    transparent 7px,
+    #effdf0 7px,
+    #effdf0 10px,
+    transparent 10px
+  );
+  cursor: ew-resize;
+}
+.live-layer-empty {
+  color: #92aab4;
+  position: absolute;
+  left: 8px;
+  top: 5px;
+  font-size: 9px;
+  pointer-events: none;
+}
+.live-now-line,
+.live-peri-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #9fe5d1;
+  pointer-events: none;
+}
+.live-peri-line {
+  background: #f7bb74;
+  opacity: 0.65;
+}
+@media (max-width: 1350px), (max-height: 780px) {
+  .live-operations-row {
+    grid-template-columns: 83px minmax(0, 1fr);
+    gap: 6px;
+  }
+  .live-layer-label {
+    font-size: 8px;
+  }
+  .live-operation-track {
+    height: 24px;
+  }
+  .live-operation {
+    height: 18px;
+  }
+  .live-operation > span {
+    line-height: 16px;
+  }
+}

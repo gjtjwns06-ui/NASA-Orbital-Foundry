@@ -1,0 +1,19 @@
+# Proposed next spacecraft art slice — original, bounded, unimplemented
+
+The current actual craft image reads as a gold box with clearly separated array, dish and engine. It is legible, but broad surfaces dominate; the small service details disappear in the normal approximately200px craft view. The existing factory already provides rounded panels, corner rails, eight fasteners, recessed optics and shared PCB/foil maps. Repeating those details more densely would add noise rather than improve form.
+
+The next candidate should improve broad shape and light response first. No production file changes are included in this proposal.
+
+| Candidate change | Visual purpose | Geometry and physics boundary |
+|---|---|---|
+| Divide each broad fixed foil face into two or three visibly inset blanket sections, with continuous metallic perimeter lip | Make the broad gold plane read as assembled hardware at normal scale | Keep the exact±0.65×±0.8×±0.65m outer bus bounds; a seam is an inward recess, not an extra shell. Leave upper bay-cover tags and openings intact. |
+| Improve corner-rail end joints and bevel continuity using the existing silver material | Give the silhouette and sunlit edges coherent highlights | Existing rails are already50mm wide; refine those surfaces inside their current volume. No enlarged bus or moved mounting surface. |
+| Add two small service hatches with an inset dark gasket, restrained quarter-turn fasteners and one original engraved identifier | Supply recognizable construction details without covering the whole bus in stripes | Hatch and fastener tops stay within the authoritative shell. No advertised thermal, electrical or mechanical capability is inferred from decorative geometry. |
+| Route one or two short original harness segments along existing interior rails, visible only with the bay open | Make the open bay feel constructed and connect boards visually to nearby ports | Keep every segment outside the certified module placement volume. If no free volume remains, omit the harness. Do not invent connectivity, capacity or a routed physical cable model. |
+| Refine selected existing component attachment brackets and lens retaining-ring edge response | Give equipment a visible mechanical connection to the bus | Each variant remains inside its existing shared descriptor, including deployed/stowed boxes. Do not change original vendor specifications or imply vendor CAD. |
+
+Provisional art budget for a complete two-bus slice: no more than8,000 additional bus triangles, no more than two additional material batches in the closed view, no additional initial bitmap requests, and no new1024px atlas. Reuse silver/dark/accent and existing foil detail maps; merge static hardware by material and bay-cover status. These are acceptance limits for a candidate, not current measured savings.
+
+Review the normal initial assembly, open/closed bay, physically mounted eight-part flight craft and selected-part close-up in both1280 layouts. Compare exactly the same camera, Sun direction, tone mapping and actual state before/after. The improvement must be visible at200–300px craft size as well as in a close-up. Keep the original legacy factories untouched and compare their rendered output explicitly.
+
+Required verification before integration: every rendered vertex inside the same bus/component descriptor; no hidden/copolanar surface flicker or hatch leak; normal moving ghost and focus bounds; independently owned clone materials in secondary renderers; three actual context restores followed by craft replacement and final disposal; material/geometry counters across repeated rebuilds; and the existing actual deployed benchmark after the visual candidate is accepted. There is no claim of commercial-game parity or a replacement for a physical CAD/mass-distribution model.

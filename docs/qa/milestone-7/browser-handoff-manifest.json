@@ -1,0 +1,810 @@
+{
+  "createdAtUtc": "2026-11-14T23:17:42.978Z",
+  "productSourceRoot": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-swingby-ui",
+  "scope": "Independent review QA. Accepted reports identify their actual dev/production snapshots. No original-game completion or arbitrary JS-runtime save portability claim.",
+  "productionCandidate": {
+    "url": "http://127.0.0.1:5181",
+    "entry": "index-BbLlOPi5.js",
+    "reviewUi": "review-ui-Cdx6R-nJ.js",
+    "reviewWorker": "review.worker-bic3fHDF.js",
+    "swingbyUi": "swingby-ui-DL44FxM4.js",
+    "swingbyWorker": "C4kKUDc8",
+    "transferWorker": "2o9Pvo6w"
+  },
+  "ownedFiles": {
+    "package.json": {
+      "bytes": 117,
+      "sha256": "1a9ab96ac60a5b25a992d0289e78cc70ef4b68cac1dd40e013661e5cbea89f12"
+    },
+    "README.md": {
+      "bytes": 2434,
+      "sha256": "b1ef6f61ee8b12f6484242317656483989aef3e403faee4751141be3d58ddd85"
+    },
+    "HANDOFF.md": {
+      "bytes": 8190,
+      "sha256": "d44eeae95ed93b78fa5018d40c5b8882f6b3c61c6fa0b29d2bc0a4a4122ef07d"
+    },
+    "playwright.config.ts": {
+      "bytes": 667,
+      "sha256": "5b29334d7ba2aa4615060a7a8ce89814c2e2cb11fadcb1c408e041a0d1b3670c"
+    },
+    "vitest.config.ts": {
+      "bytes": 132,
+      "sha256": "7e9b0cda1eecbc8c0e8dee24badcd4aec0809bdfb8eb656172546fb14476da7d"
+    },
+    "tsconfig.json": {
+      "bytes": 125,
+      "sha256": "a88f7692b7c064f35dcd85c21a5aeaac18815d85c746559a430095f4f10f4604"
+    },
+    "audit-fixture.mjs": {
+      "bytes": 2244,
+      "sha256": "59247da5a10d2517903dbb8b917c1fcd493d7d5f77086a08abd84badc0544923"
+    },
+    "compare-actual-browsers.mjs": {
+      "bytes": 3130,
+      "sha256": "26a95d43ae16536551833f19b56a03ef2084d2a2e4fc076855e6d64e796932ea"
+    },
+    "prepare-integration.mjs": {
+      "bytes": 2784,
+      "sha256": "6e533b62b5000a7c9fea7a5c55e15a9aea17eee5f2194fad6eacdbd74ce39149"
+    },
+    "write-manifest.mjs": {
+      "bytes": 4577,
+      "sha256": "45ba155069055b90574c5cc425ee9e1c1a1ae8ec53942a2d4350a1020ada15ec"
+    },
+    "tests/helpers.ts": {
+      "bytes": 11795,
+      "sha256": "7a3e195164c09f33236f81113319e6761926734c4bb9bd336b1dfe4195549223"
+    },
+    "tests/native-gl-audit.ts": {
+      "bytes": 2271,
+      "sha256": "831ed787cd2864170b34b942158b0c2d538f3ca0ca94d64ca4dbbae4bd0e8909"
+    },
+    "tests/review-journey.spec.ts": {
+      "bytes": 7830,
+      "sha256": "8d4feb1844f707cb0e42c316980117cc59f8d05754236f2d50e39c288a9b1ac3"
+    },
+    "tests/review-layout.spec.ts": {
+      "bytes": 11662,
+      "sha256": "7efeeb5bb220d4d93a6bf3c6663247f6536447b698b5f5a5c502ec1d2264f8cf"
+    },
+    "tests/review-storage.spec.ts": {
+      "bytes": 4139,
+      "sha256": "d257291df7bdeb252b9094086bd7a788d790d18f47bf1b605114a72df9c4552a"
+    },
+    "tests/unit/review-client.test.ts": {
+      "bytes": 5439,
+      "sha256": "3ca067afc0989715cb755d234b3b82e9ba3efb5b1516e24ab8a88ccad13eea98"
+    }
+  },
+  "currentProductSource": {
+    "src/main.ts": {
+      "bytes": 154478,
+      "sha256": "0f04e76906f2f1ea380e6cf171dae1ba1787eb44ed2213012ccc02d0052a5fd3"
+    },
+    "src/swingby-ui.ts": {
+      "bytes": 46158,
+      "sha256": "c1102fb08024c411a175bbd301e10a1aca05098f8c48a50d97591f9153996f4f"
+    },
+    "src/review-client.ts": {
+      "bytes": 3831,
+      "sha256": "14c2298804896a8e649ab5eaba4993da03a9c4e90b82110ab16d96cb51121aba"
+    },
+    "src/review-ui.ts": {
+      "bytes": 35034,
+      "sha256": "f1d0ed41043b00784508240a372f3dcf9cb17b1d431dd4a8b5b41184ae412f83"
+    },
+    "src/review-ui.css": {
+      "bytes": 9396,
+      "sha256": "e29d2adda2c38e0e92de63cf7cc23763ef572cd0f88d5bce280e0048d780869c"
+    },
+    "src/render/review-frame.ts": {
+      "bytes": 7602,
+      "sha256": "7193312421d8c5ddf0e7d288157373fee7689dea8bfd67ba4cd0fb4eeb7a7de1"
+    },
+    "src/render/swingby-review-scene.ts": {
+      "bytes": 4530,
+      "sha256": "36134ce7aa67201a10893d6c5ed9ca38157bec59ad2e9c645d845a4b55960840"
+    },
+    "src/redesign/engine-pin.ts": {
+      "bytes": 359,
+      "sha256": "643641ed9ade2b8ce09ce31761607bd3eedc0ce2f520360bcd22e3d662537741"
+    }
+  },
+  "reports": [
+    {
+      "path": "artifacts/review-actual-v1/actual-weak-adcs-a-to-pointer-redesign-b-completes-both-flights-and-preserves-verified-comparison-report.json",
+      "bytes": 5454,
+      "sha256": "80ce9f183eaef411c45c511f7fc2f80d718c4e707ee5626a39703c5f7e407b2b",
+      "title": "actual weak ADCS A to pointer redesign B completes both flights and preserves verified comparison",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5177/?qa",
+      "applicationErrors": [],
+      "nativeErrors": [],
+      "warningCount": 15,
+      "scripts": [
+        "http://127.0.0.1:5177/@vite/client",
+        "http://127.0.0.1:5177/src/main.ts?t=1794696792297"
+      ],
+      "workers": [
+        "http://127.0.0.1:5177/src/preview.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/forecast.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/redesign/review.worker.ts?worker_file&type=module"
+      ],
+      "sourceHashes": {
+        "src/review-client.ts": "14c2298804896a8e649ab5eaba4993da03a9c4e90b82110ab16d96cb51121aba",
+        "src/review-ui.ts": "b0fcd5180f2ffb02b33b6a447672ec8a9a1e4f4a93b1d39456605f77ac6952f0",
+        "src/swingby-ui.ts": "ac0f97ce2293400036192f1cb37169e6959cccd3ca3b462544f3fb7a9061c069",
+        "src/main.ts": "0f04e76906f2f1ea380e6cf171dae1ba1787eb44ed2213012ccc02d0052a5fd3",
+        "src/render/swingby-review-scene.ts": "36134ce7aa67201a10893d6c5ed9ca38157bec59ad2e9c645d845a4b55960840"
+      }
+    },
+    {
+      "path": "artifacts/review-fast-v1/ko-normal-imported-genuine-short-review-keeps-controls-reachable-and-replays-actual-history-report.json",
+      "bytes": 2701,
+      "sha256": "0d883df23ccc3d750ce6759e8fd5effa683e1781f7afc895e7c8f5274870f51d",
+      "title": "ko-normal imported genuine short review keeps controls reachable and replays actual history",
+      "status": "failed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5177/?qa",
+      "applicationErrors": [],
+      "nativeErrors": [],
+      "warningCount": 3,
+      "scripts": [
+        "http://127.0.0.1:5177/@vite/client",
+        "http://127.0.0.1:5177/src/main.ts?t=1794696101284"
+      ],
+      "workers": [
+        "http://127.0.0.1:5177/src/forecast.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/preview.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/redesign/review.worker.ts?worker_file&type=module"
+      ],
+      "sourceHashes": {
+        "src/review-client.ts": "844e59b6553896824308134b237e4597833f7650f1667150cd62a75ff44bcb9f",
+        "src/review-ui.ts": "f0cf0635c7141c3211f3c05618321fd4daebbdb4aad26e1d078433faf5988f57",
+        "src/swingby-ui.ts": "ac0f97ce2293400036192f1cb37169e6959cccd3ca3b462544f3fb7a9061c069",
+        "src/main.ts": "0f04e76906f2f1ea380e6cf171dae1ba1787eb44ed2213012ccc02d0052a5fd3",
+        "src/render/swingby-review-scene.ts": "36134ce7aa67201a10893d6c5ed9ca38157bec59ad2e9c645d845a4b55960840"
+      }
+    },
+    {
+      "path": "artifacts/review-fast-v2/ko-normal-imported-genuine-short-review-keeps-controls-reachable-and-replays-actual-history-report.json",
+      "bytes": 2940,
+      "sha256": "1ffdee2492b48096ec9d5442f3fe775639a5433f0bbfb8f92f487ece2d3f7ca9",
+      "title": "ko-normal imported genuine short review keeps controls reachable and replays actual history",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5177/?qa",
+      "applicationErrors": [],
+      "nativeErrors": [],
+      "warningCount": 5,
+      "scripts": [
+        "http://127.0.0.1:5177/@vite/client",
+        "http://127.0.0.1:5177/src/main.ts?t=1794696464193"
+      ],
+      "workers": [
+        "http://127.0.0.1:5177/src/forecast.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/preview.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/redesign/review.worker.ts?worker_file&type=module"
+      ],
+      "sourceHashes": {
+        "src/review-client.ts": "844e59b6553896824308134b237e4597833f7650f1667150cd62a75ff44bcb9f",
+        "src/review-ui.ts": "e630ac02b2c9cf6ec9abbe18c54ead6a544ca258f03b13ec79fc127b2739bf38",
+        "src/swingby-ui.ts": "ac0f97ce2293400036192f1cb37169e6959cccd3ca3b462544f3fb7a9061c069",
+        "src/main.ts": "0f04e76906f2f1ea380e6cf171dae1ba1787eb44ed2213012ccc02d0052a5fd3",
+        "src/render/swingby-review-scene.ts": "36134ce7aa67201a10893d6c5ed9ca38157bec59ad2e9c645d845a4b55960840"
+      }
+    },
+    {
+      "path": "artifacts/review-fast-v3/en-large-imported-genuine-short-review-keeps-controls-reachable-and-replays-actual-history-report.json",
+      "bytes": 1921,
+      "sha256": "54bc8d5ae75ab1b57b091e8a3aafbf0ba336d932bf1fe34e9b89555efa6dbc84",
+      "title": "en-large imported genuine short review keeps controls reachable and replays actual history",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5177/?qa",
+      "applicationErrors": [],
+      "nativeErrors": [],
+      "warningCount": 2,
+      "scripts": [
+        "http://127.0.0.1:5177/@vite/client",
+        "http://127.0.0.1:5177/src/main.ts?t=1794696464193"
+      ],
+      "workers": [
+        "http://127.0.0.1:5177/src/forecast.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/preview.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/redesign/review.worker.ts?worker_file&type=module"
+      ],
+      "sourceHashes": {
+        "src/review-client.ts": "844e59b6553896824308134b237e4597833f7650f1667150cd62a75ff44bcb9f",
+        "src/review-ui.ts": "e630ac02b2c9cf6ec9abbe18c54ead6a544ca258f03b13ec79fc127b2739bf38",
+        "src/swingby-ui.ts": "ac0f97ce2293400036192f1cb37169e6959cccd3ca3b462544f3fb7a9061c069",
+        "src/main.ts": "0f04e76906f2f1ea380e6cf171dae1ba1787eb44ed2213012ccc02d0052a5fd3",
+        "src/render/swingby-review-scene.ts": "36134ce7aa67201a10893d6c5ed9ca38157bec59ad2e9c645d845a4b55960840"
+      }
+    },
+    {
+      "path": "artifacts/review-fast-v3/en-normal-imported-genuine-short-review-keeps-controls-reachable-and-replays-actual-history-report.json",
+      "bytes": 1922,
+      "sha256": "9727f5a397bef9e79d8b0e864296d9177f569b01f81caab93efa7b9f533926fe",
+      "title": "en-normal imported genuine short review keeps controls reachable and replays actual history",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5177/?qa",
+      "applicationErrors": [],
+      "nativeErrors": [],
+      "warningCount": 2,
+      "scripts": [
+        "http://127.0.0.1:5177/@vite/client",
+        "http://127.0.0.1:5177/src/main.ts?t=1794696464193"
+      ],
+      "workers": [
+        "http://127.0.0.1:5177/src/preview.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/forecast.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/redesign/review.worker.ts?worker_file&type=module"
+      ],
+      "sourceHashes": {
+        "src/review-client.ts": "844e59b6553896824308134b237e4597833f7650f1667150cd62a75ff44bcb9f",
+        "src/review-ui.ts": "e630ac02b2c9cf6ec9abbe18c54ead6a544ca258f03b13ec79fc127b2739bf38",
+        "src/swingby-ui.ts": "ac0f97ce2293400036192f1cb37169e6959cccd3ca3b462544f3fb7a9061c069",
+        "src/main.ts": "0f04e76906f2f1ea380e6cf171dae1ba1787eb44ed2213012ccc02d0052a5fd3",
+        "src/render/swingby-review-scene.ts": "36134ce7aa67201a10893d6c5ed9ca38157bec59ad2e9c645d845a4b55960840"
+      }
+    },
+    {
+      "path": "artifacts/review-fast-v3/ko-large-imported-genuine-short-review-keeps-controls-reachable-and-replays-actual-history-report.json",
+      "bytes": 2703,
+      "sha256": "881eed90da9ede4a45e400fb44615854f72a61343861e3aa335adaca261a0065",
+      "title": "ko-large imported genuine short review keeps controls reachable and replays actual history",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5177/?qa",
+      "applicationErrors": [],
+      "nativeErrors": [],
+      "warningCount": 3,
+      "scripts": [
+        "http://127.0.0.1:5177/@vite/client",
+        "http://127.0.0.1:5177/src/main.ts?t=1794696464193"
+      ],
+      "workers": [
+        "http://127.0.0.1:5177/src/forecast.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/preview.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/redesign/review.worker.ts?worker_file&type=module"
+      ],
+      "sourceHashes": {
+        "src/review-client.ts": "844e59b6553896824308134b237e4597833f7650f1667150cd62a75ff44bcb9f",
+        "src/review-ui.ts": "e630ac02b2c9cf6ec9abbe18c54ead6a544ca258f03b13ec79fc127b2739bf38",
+        "src/swingby-ui.ts": "ac0f97ce2293400036192f1cb37169e6959cccd3ca3b462544f3fb7a9061c069",
+        "src/main.ts": "0f04e76906f2f1ea380e6cf171dae1ba1787eb44ed2213012ccc02d0052a5fd3",
+        "src/render/swingby-review-scene.ts": "36134ce7aa67201a10893d6c5ed9ca38157bec59ad2e9c645d845a4b55960840"
+      }
+    },
+    {
+      "path": "artifacts/review-faults-v1/blocked-review-storage-retains-exact-in-memory-a-across-a-real-fork-and-new-partial-flight-report.json",
+      "bytes": 2370,
+      "sha256": "00fb233946a7fc638b04e4d3856a76ab4497e5bf697255efe30de412db93b534",
+      "title": "blocked review storage retains exact in-memory A across a real fork and new partial flight",
+      "status": "timedOut",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5177/?qa",
+      "applicationErrors": [],
+      "nativeErrors": [],
+      "warningCount": 4,
+      "scripts": [
+        "http://127.0.0.1:5177/@vite/client",
+        "http://127.0.0.1:5177/src/main.ts?t=1794696792297"
+      ],
+      "workers": [
+        "blob:http://127.0.0.1:5177/aa843a95-d032-47a3-bdde-37ca706cd44c",
+        "http://127.0.0.1:5177/src/forecast.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/swingby.worker.ts?worker_file&type=module",
+        "blob:http://127.0.0.1:5177/d2ec8211-093f-41a6-84b4-cc8360377203"
+      ],
+      "sourceHashes": {
+        "src/review-client.ts": "14c2298804896a8e649ab5eaba4993da03a9c4e90b82110ab16d96cb51121aba",
+        "src/review-ui.ts": "b0fcd5180f2ffb02b33b6a447672ec8a9a1e4f4a93b1d39456605f77ac6952f0",
+        "src/swingby-ui.ts": "ac0f97ce2293400036192f1cb37169e6959cccd3ca3b462544f3fb7a9061c069",
+        "src/main.ts": "0f04e76906f2f1ea380e6cf171dae1ba1787eb44ed2213012ccc02d0052a5fd3",
+        "src/render/swingby-review-scene.ts": "36134ce7aa67201a10893d6c5ed9ca38157bec59ad2e9c645d845a4b55960840"
+      }
+    },
+    {
+      "path": "artifacts/review-faults-v1/late-actual-archive-response-preserves-old-source-handles-and-does-not-mislabel-them-as-persisted-report.json",
+      "bytes": 2709,
+      "sha256": "467d540df5b015878346228135368502698144e563f92aa83e0d6bca41fd9d96",
+      "title": "late actual archive response preserves old source handles and does not mislabel them as persisted",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5177/?qa",
+      "applicationErrors": [],
+      "nativeErrors": [],
+      "warningCount": 3,
+      "scripts": [
+        "http://127.0.0.1:5177/@vite/client",
+        "http://127.0.0.1:5177/src/main.ts?t=1794696792297"
+      ],
+      "workers": [
+        "http://127.0.0.1:5177/src/preview.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/forecast.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/redesign/review.worker.ts?worker_file&type=module"
+      ],
+      "sourceHashes": {
+        "src/review-client.ts": "14c2298804896a8e649ab5eaba4993da03a9c4e90b82110ab16d96cb51121aba",
+        "src/review-ui.ts": "b0fcd5180f2ffb02b33b6a447672ec8a9a1e4f4a93b1d39456605f77ac6952f0",
+        "src/swingby-ui.ts": "ac0f97ce2293400036192f1cb37169e6959cccd3ca3b462544f3fb7a9061c069",
+        "src/main.ts": "0f04e76906f2f1ea380e6cf171dae1ba1787eb44ed2213012ccc02d0052a5fd3",
+        "src/render/swingby-review-scene.ts": "36134ce7aa67201a10893d6c5ed9ca38157bec59ad2e9c645d845a4b55960840"
+      }
+    },
+    {
+      "path": "artifacts/review-label-v4/en-large-imported-genuine-short-review-keeps-controls-reachable-and-replays-actual-history-report.json",
+      "bytes": 2703,
+      "sha256": "61d58f2ac104acd7c20d8915db1f89ac75e0a8f7edefb21d38665c6a6728094a",
+      "title": "en-large imported genuine short review keeps controls reachable and replays actual history",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5177/?qa",
+      "applicationErrors": [],
+      "nativeErrors": [],
+      "warningCount": 3,
+      "scripts": [
+        "http://127.0.0.1:5177/@vite/client",
+        "http://127.0.0.1:5177/src/main.ts?t=1794696792297"
+      ],
+      "workers": [
+        "http://127.0.0.1:5177/src/forecast.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/preview.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/redesign/review.worker.ts?worker_file&type=module"
+      ],
+      "sourceHashes": {
+        "src/review-client.ts": "14c2298804896a8e649ab5eaba4993da03a9c4e90b82110ab16d96cb51121aba",
+        "src/review-ui.ts": "b0fcd5180f2ffb02b33b6a447672ec8a9a1e4f4a93b1d39456605f77ac6952f0",
+        "src/swingby-ui.ts": "ac0f97ce2293400036192f1cb37169e6959cccd3ca3b462544f3fb7a9061c069",
+        "src/main.ts": "0f04e76906f2f1ea380e6cf171dae1ba1787eb44ed2213012ccc02d0052a5fd3",
+        "src/render/swingby-review-scene.ts": "36134ce7aa67201a10893d6c5ed9ca38157bec59ad2e9c645d845a4b55960840"
+      }
+    },
+    {
+      "path": "artifacts/review-production7-chrome/en-large-imported-genuine-short-review-keeps-controls-reachable-and-replays-actual-history-report.json",
+      "bytes": 2614,
+      "sha256": "f3a4dcccc2432ce4831a28f8ba0499ce83c533c78a42ce5214229b495b359361",
+      "title": "en-large imported genuine short review keeps controls reachable and replays actual history",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5181/?qa",
+      "applicationErrors": [],
+      "nativeErrors": [],
+      "warningCount": 3,
+      "scripts": [
+        "http://127.0.0.1:5181/assets/index-BbLlOPi5.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5181/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5181/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5181/assets/review.worker-bic3fHDF.js"
+      ],
+      "sourceHashes": {
+        "src/review-client.ts": "14c2298804896a8e649ab5eaba4993da03a9c4e90b82110ab16d96cb51121aba",
+        "src/review-ui.ts": "f1d0ed41043b00784508240a372f3dcf9cb17b1d431dd4a8b5b41184ae412f83",
+        "src/swingby-ui.ts": "c1102fb08024c411a175bbd301e10a1aca05098f8c48a50d97591f9153996f4f",
+        "src/main.ts": "0f04e76906f2f1ea380e6cf171dae1ba1787eb44ed2213012ccc02d0052a5fd3",
+        "src/render/swingby-review-scene.ts": "36134ce7aa67201a10893d6c5ed9ca38157bec59ad2e9c645d845a4b55960840"
+      }
+    },
+    {
+      "path": "artifacts/review-production7-chrome/late-actual-archive-response-preserves-old-source-handles-and-does-not-mislabel-them-as-persisted-report.json",
+      "bytes": 1837,
+      "sha256": "2e3ed118ff8aea39350b55a6e628c4f4e4a02fed75cdf2c3f1ac5d89136fc403",
+      "title": "late actual archive response preserves old source handles and does not mislabel them as persisted",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5181/?qa",
+      "applicationErrors": [],
+      "nativeErrors": [],
+      "warningCount": 2,
+      "scripts": [
+        "http://127.0.0.1:5181/assets/index-BbLlOPi5.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5181/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5181/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5181/assets/review.worker-bic3fHDF.js"
+      ],
+      "sourceHashes": {
+        "src/review-client.ts": "14c2298804896a8e649ab5eaba4993da03a9c4e90b82110ab16d96cb51121aba",
+        "src/review-ui.ts": "f1d0ed41043b00784508240a372f3dcf9cb17b1d431dd4a8b5b41184ae412f83",
+        "src/swingby-ui.ts": "c1102fb08024c411a175bbd301e10a1aca05098f8c48a50d97591f9153996f4f",
+        "src/main.ts": "0f04e76906f2f1ea380e6cf171dae1ba1787eb44ed2213012ccc02d0052a5fd3",
+        "src/render/swingby-review-scene.ts": "36134ce7aa67201a10893d6c5ed9ca38157bec59ad2e9c645d845a4b55960840"
+      }
+    },
+    {
+      "path": "artifacts/review-production7-edge/actual-weak-adcs-a-to-pointer-redesign-b-completes-both-flights-and-preserves-verified-comparison-report.json",
+      "bytes": 4582,
+      "sha256": "b0f7b1d5a77f32645b55879facb5abfc25ab7b1aafdb836307f9354f9f08b59e",
+      "title": "actual weak ADCS A to pointer redesign B completes both flights and preserves verified comparison",
+      "status": "passed",
+      "browser": "157.0.4341.46",
+      "url": "http://127.0.0.1:5181/?qa",
+      "applicationErrors": [],
+      "nativeErrors": [],
+      "warningCount": 14,
+      "scripts": [
+        "http://127.0.0.1:5181/assets/index-BbLlOPi5.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5181/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5181/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5181/assets/review.worker-bic3fHDF.js"
+      ],
+      "sourceHashes": {
+        "src/review-client.ts": "14c2298804896a8e649ab5eaba4993da03a9c4e90b82110ab16d96cb51121aba",
+        "src/review-ui.ts": "f1d0ed41043b00784508240a372f3dcf9cb17b1d431dd4a8b5b41184ae412f83",
+        "src/swingby-ui.ts": "c1102fb08024c411a175bbd301e10a1aca05098f8c48a50d97591f9153996f4f",
+        "src/main.ts": "0f04e76906f2f1ea380e6cf171dae1ba1787eb44ed2213012ccc02d0052a5fd3",
+        "src/render/swingby-review-scene.ts": "36134ce7aa67201a10893d6c5ed9ca38157bec59ad2e9c645d845a4b55960840"
+      }
+    },
+    {
+      "path": "artifacts/review-storage-v2/blocked-review-storage-retains-exact-in-memory-a-across-a-real-fork-and-new-partial-flight-report.json",
+      "bytes": 3166,
+      "sha256": "2727bbaa4810e9e6f2fb23149ecbe58507595fc916fbfb42a0a2c4ed69f68f56",
+      "title": "blocked review storage retains exact in-memory A across a real fork and new partial flight",
+      "status": "failed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5177/?qa",
+      "applicationErrors": [],
+      "nativeErrors": [],
+      "warningCount": 5,
+      "scripts": [
+        "http://127.0.0.1:5177/@vite/client",
+        "http://127.0.0.1:5177/src/main.ts?t=1794696792297"
+      ],
+      "workers": [
+        "http://127.0.0.1:5177/src/forecast.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/preview.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/redesign/review.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/swingby.worker.ts?worker_file&type=module"
+      ],
+      "sourceHashes": {
+        "src/review-client.ts": "14c2298804896a8e649ab5eaba4993da03a9c4e90b82110ab16d96cb51121aba",
+        "src/review-ui.ts": "b0fcd5180f2ffb02b33b6a447672ec8a9a1e4f4a93b1d39456605f77ac6952f0",
+        "src/swingby-ui.ts": "ac0f97ce2293400036192f1cb37169e6959cccd3ca3b462544f3fb7a9061c069",
+        "src/main.ts": "0f04e76906f2f1ea380e6cf171dae1ba1787eb44ed2213012ccc02d0052a5fd3",
+        "src/render/swingby-review-scene.ts": "36134ce7aa67201a10893d6c5ed9ca38157bec59ad2e9c645d845a4b55960840"
+      }
+    },
+    {
+      "path": "artifacts/review-storage-v3/blocked-review-storage-retains-exact-in-memory-a-across-a-real-fork-and-new-partial-flight-report.json",
+      "bytes": 3869,
+      "sha256": "5f1bc3d7a7aff5add03f88e85628f12151eb2132a2510a09311cf18c323852c6",
+      "title": "blocked review storage retains exact in-memory A across a real fork and new partial flight",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5177/?qa",
+      "applicationErrors": [],
+      "nativeErrors": [],
+      "warningCount": 9,
+      "scripts": [
+        "http://127.0.0.1:5177/@vite/client",
+        "http://127.0.0.1:5177/src/main.ts?t=1794696792297"
+      ],
+      "workers": [
+        "http://127.0.0.1:5177/src/forecast.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/preview.worker.ts?worker_file&type=module",
+        "http://127.0.0.1:5177/src/redesign/review.worker.ts?worker_file&type=module"
+      ],
+      "sourceHashes": {
+        "src/review-client.ts": "14c2298804896a8e649ab5eaba4993da03a9c4e90b82110ab16d96cb51121aba",
+        "src/review-ui.ts": "b0fcd5180f2ffb02b33b6a447672ec8a9a1e4f4a93b1d39456605f77ac6952f0",
+        "src/swingby-ui.ts": "ac0f97ce2293400036192f1cb37169e6959cccd3ca3b462544f3fb7a9061c069",
+        "src/main.ts": "0f04e76906f2f1ea380e6cf171dae1ba1787eb44ed2213012ccc02d0052a5fd3",
+        "src/render/swingby-review-scene.ts": "36134ce7aa67201a10893d6c5ed9ca38157bec59ad2e9c645d845a4b55960840"
+      }
+    }
+  ],
+  "acceptedUniqueReviewCaseTitles": [
+    "actual weak ADCS A to pointer redesign B completes both flights and preserves verified comparison",
+    "ko-normal imported genuine short review keeps controls reachable and replays actual history",
+    "en-large imported genuine short review keeps controls reachable and replays actual history",
+    "en-normal imported genuine short review keeps controls reachable and replays actual history",
+    "ko-large imported genuine short review keeps controls reachable and replays actual history",
+    "late actual archive response preserves old source handles and does not mislabel them as persisted",
+    "blocked review storage retains exact in-memory A across a real fork and new partial flight"
+  ],
+  "evidenceFiles": {
+    "artifacts/chrome-edge-actual-flight-comparison.json": {
+      "bytes": 1683,
+      "sha256": "599fb8d301f4d737dffba036d708b66dd2b9c0eb2e13e906f7a82fbc6ebfd4f2"
+    },
+    "artifacts/review-actual-v1/actual-A-B-export.json": {
+      "bytes": 27254,
+      "sha256": "313372da074a4871836b3dfdbb39102940cde128dcc4a10ec39a234ad1dcbac0"
+    },
+    "artifacts/review-actual-v1/actual-A-B-journey-evidence.json": {
+      "bytes": 7871,
+      "sha256": "5640521b63d814a3963af67c3d5998feb080e0fd20b702a986f62b9e45327daa"
+    },
+    "artifacts/review-actual-v1/actual-A-B-observed-improvement.png": {
+      "bytes": 84983,
+      "sha256": "5257767808caa346f93754202dab7afc0952f874b4a1a4ce3b1aa6632b029cd7"
+    },
+    "artifacts/review-actual-v1/actual-A-B-reloaded-and-imported.png": {
+      "bytes": 85935,
+      "sha256": "c459cb627a95f77c4f768b43e18473a9c6f3122327af38eee0ecc57ec9a808f9"
+    },
+    "artifacts/review-actual-v1/actual-A-diagnostic-time-and-adcs-focus.png": {
+      "bytes": 156306,
+      "sha256": "f2eb26d99cd8ea049ce28154b2d1698a8603af817c836f364d5f79a7e2bfc9b7"
+    },
+    "artifacts/review-actual-v1/actual-A-failed-correction-result.png": {
+      "bytes": 122885,
+      "sha256": "21bf2535ceb2060e99a230b54f9293753d2eafe06c39eb3b55836312e1bd3510"
+    },
+    "artifacts/review-actual-v1/actual-A-flight.json": {
+      "bytes": 30707,
+      "sha256": "1c90fc6c2ba04719933682c05900608cbbd58f4a2a77e40809da64ff494ee6c7"
+    },
+    "artifacts/review-actual-v1/actual-A-weak-adcs-pointer-build.png": {
+      "bytes": 347531,
+      "sha256": "0a23fa2052daebdcbf37d46b0b9b83b9d0fa1be52b841a3160917cd68f8a19e4"
+    },
+    "artifacts/review-actual-v1/actual-B-flight.json": {
+      "bytes": 41972,
+      "sha256": "833d376b6aaa21519673c444d52641a2b7c34476edd480c510df11124032f11d"
+    },
+    "artifacts/review-actual-v1/actual-B-strong-adcs-pointer-build.png": {
+      "bytes": 347966,
+      "sha256": "79010177fa0902013ee1e905cbc688663eba041175eded2693aca3adf773c5cd"
+    },
+    "artifacts/review-actual-v1/actual-B-successful-correction-result.png": {
+      "bytes": 120101,
+      "sha256": "b7406fbadae9ea2109419b6fc61e1a9c9f037ec3b5fc78ad71bedab47523613b"
+    },
+    "artifacts/review-fast-v1/ko-normal-imported-genuine-short-review-keeps-controls-reachable-and-replays-actual-history-failure.png": {
+      "bytes": 117097,
+      "sha256": "de758232d486e8145c38571c5105c42ecc6c8d2bddb1b5403f53a1e801d1b963"
+    },
+    "artifacts/review-fast-v1/node-browser-checkpoint-diff.json": {
+      "bytes": 2708,
+      "sha256": "95d4b1817499f1e3a2f19ce12710f9caf6a5c2959e7032c645c65b1d7e0feaf1"
+    },
+    "artifacts/review-fast-v1/short-fixture-provenance.json": {
+      "bytes": 22728,
+      "sha256": "65ca05c8a95fe2295c75b4a93e11c8cf1b46d6a5b7e716dd355fd93cdada2288"
+    },
+    "artifacts/review-fast-v2/ko-normal-actual-layout.json": {
+      "bytes": 61494,
+      "sha256": "c5c1137952056c086008a73f8996594c1453438c62a06dc9e1d87a547bcb00b9"
+    },
+    "artifacts/review-fast-v2/ko-normal-real-review-context-restored.png": {
+      "bytes": 100206,
+      "sha256": "7b91b6455fc48f2b9e9464eb3b3b50f0e41b41f531952713e55932047c3db090"
+    },
+    "artifacts/review-fast-v2/ko-normal-short-review-entry.png": {
+      "bytes": 98152,
+      "sha256": "9a901d240a3cf5e79275beabcb235fad3df71eb9ca8dbf831e22b97f90acd97b"
+    },
+    "artifacts/review-fast-v2/ko-normal-short-review-final.png": {
+      "bytes": 99849,
+      "sha256": "bef57029a250ec92b497ba7d3c7523560e7a7c6ea9f63beb1e338c39f496ec30"
+    },
+    "artifacts/review-fast-v2/short-fixture-provenance.json": {
+      "bytes": 57919,
+      "sha256": "bb083bdf0a2cdc9edb6834ef15b410b73f0d735a18fffc2cf4f429c9abcd740e"
+    },
+    "artifacts/review-fast-v3/en-large-actual-layout.json": {
+      "bytes": 61393,
+      "sha256": "79a623990eadd5ad44ea410a08dc4441686f03bf464ef0bc5f71240c91d9dfe4"
+    },
+    "artifacts/review-fast-v3/en-large-short-review-entry.png": {
+      "bytes": 107063,
+      "sha256": "5c3a87da1539e1dfad5279be52fe1610f612fd888389a4358b561c3934b02c17"
+    },
+    "artifacts/review-fast-v3/en-large-short-review-final.png": {
+      "bytes": 109053,
+      "sha256": "a9f5c08b6ce136fe8ee73e151bd6dac0152dfbaa74945638471a7aa3cc563a28"
+    },
+    "artifacts/review-fast-v3/en-normal-actual-layout.json": {
+      "bytes": 61455,
+      "sha256": "5dcb03e406d8768f2b982fd211008899dc95376638dcf33058aca61da8ad0979"
+    },
+    "artifacts/review-fast-v3/en-normal-partial-time-comparison-blocked.png": {
+      "bytes": 102648,
+      "sha256": "f4fe808a87498fbac600428660ee3b56a34d41a0729175a0854c6e65df116e82"
+    },
+    "artifacts/review-fast-v3/en-normal-short-review-entry.png": {
+      "bytes": 106047,
+      "sha256": "0cef255c4f3f1e64f58f2fdff8b8f6f19394854e2ddddeca2df397ff44345e54"
+    },
+    "artifacts/review-fast-v3/en-normal-short-review-final.png": {
+      "bytes": 106909,
+      "sha256": "17b8441a51737f8510724fe85cb37ff9ce81bb61d8cca962ceb81cddaa5dfccb"
+    },
+    "artifacts/review-fast-v3/ko-large-actual-layout.json": {
+      "bytes": 61498,
+      "sha256": "cb47fd5ec5bfbd6e52c92c8797c1bff7d8cf91f1d510044613f9933e2793113f"
+    },
+    "artifacts/review-fast-v3/ko-large-short-review-entry.png": {
+      "bytes": 99490,
+      "sha256": "c608a2b714e216067bfba2add0b9659f2904ee9000fd9b3ac2d00f35f20c697d"
+    },
+    "artifacts/review-fast-v3/ko-large-short-review-final.png": {
+      "bytes": 101235,
+      "sha256": "712cd326721d53992fa406aa5e466d7cb868bb6c018b6e2bdc4ec5a29e8328fc"
+    },
+    "artifacts/review-fast-v3/short-fixture-provenance.json": {
+      "bytes": 57919,
+      "sha256": "a6729785cafe3c85bb83f489199e194b2a9d98519a545f2f1ff8065c34ae1df5"
+    },
+    "artifacts/review-faults-v1/blocked-review-storage-retains-exact-in-memory-a-across-a-real-fork-and-new-partial-flight-failure.png": {
+      "bytes": 119513,
+      "sha256": "63c225b985442fecbc6378663e28bc480f4dcb72413bd8ca26f8d9fc0ba091b8"
+    },
+    "artifacts/review-faults-v1/cancelled-real-import-old-pair-not-archived.png": {
+      "bytes": 107704,
+      "sha256": "07fcd84fa1b10965f34f3f8627a32b6f5e9d02d8b172781e1262801f3a5aa02b"
+    },
+    "artifacts/review-faults-v1/late-real-archive-response.json": {
+      "bytes": 30201,
+      "sha256": "6f563479111a667e5ec3ee6ba8477495e3aa6efc9c81eb8845b3194447a33646"
+    },
+    "artifacts/review-faults-v1/short-fixture-provenance.json": {
+      "bytes": 57919,
+      "sha256": "b6fbbab92f61bdcfca08701684736529ccc2d54715ee65f61a1a48e2d759e857"
+    },
+    "artifacts/review-label-v4/en-large-actual-layout.json": {
+      "bytes": 61524,
+      "sha256": "7b81346bfe60e36c773392a5fb8528d083b6a0361e4d5a1ca93dcae41e5a546d"
+    },
+    "artifacts/review-label-v4/en-large-short-review-entry.png": {
+      "bytes": 107777,
+      "sha256": "635e583d4af222eb308df5c89a0b4b3b64981c7cc9501696090593505a1f593c"
+    },
+    "artifacts/review-label-v4/en-large-short-review-final.png": {
+      "bytes": 108660,
+      "sha256": "3d0fd30057dcd0f5099e5f25689e2fc02e3e8ffdd40e21ad24e65682298022fe"
+    },
+    "artifacts/review-label-v4/short-fixture-provenance.json": {
+      "bytes": 57919,
+      "sha256": "b09b40f0a19cca5e6ddd6cfc61c8caa98f443fb086c7c18cf1cde7da2720bebc"
+    },
+    "artifacts/review-production7-chrome/cancelled-real-import-old-pair-not-archived.png": {
+      "bytes": 107959,
+      "sha256": "98770dcd0df24890f266072cc9a4aa9303efa978577514caa043fc163e8515e6"
+    },
+    "artifacts/review-production7-chrome/en-large-actual-layout.json": {
+      "bytes": 61529,
+      "sha256": "b1b6079407b8b9cebaed8548968bf72c180e39092b3f2f17b683f9f031980b5c"
+    },
+    "artifacts/review-production7-chrome/en-large-short-review-entry.png": {
+      "bytes": 107901,
+      "sha256": "a214ce51f4ec9030676be8c7e73205e2e95a5b27108971d487e733dfecfacfb5"
+    },
+    "artifacts/review-production7-chrome/en-large-short-review-final.png": {
+      "bytes": 108915,
+      "sha256": "90b18e3263fe23378ec461ef6dc457a864963f30b04cc49efec67f824ef092bd"
+    },
+    "artifacts/review-production7-chrome/late-real-archive-response.json": {
+      "bytes": 30201,
+      "sha256": "7e9e5a72922e9e22f05e196a50fc095862ab927fb04c7000151edb58429c5aad"
+    },
+    "artifacts/review-production7-chrome/short-fixture-provenance.json": {
+      "bytes": 57919,
+      "sha256": "632ea37eba11097b9b75a74c3eb771ffa08dfeb24898cdfe41fd9f293f531c03"
+    },
+    "artifacts/review-production7-edge/actual-A-B-export.json": {
+      "bytes": 27254,
+      "sha256": "e86d650be1424dfe0f3c77b14899ad7ce0d8be29e1d0fb39b8ff02b0cd609ecd"
+    },
+    "artifacts/review-production7-edge/actual-A-B-journey-evidence.json": {
+      "bytes": 7871,
+      "sha256": "d91a1fe429074e651de320a2e5e2e4af8f215d3ef1d9d14aa3f95e95290404c2"
+    },
+    "artifacts/review-production7-edge/actual-A-B-observed-improvement.png": {
+      "bytes": 85232,
+      "sha256": "74b69134a2d6e14af20e6a21ca1d837e141e5ae427459bd57963e7298a04956c"
+    },
+    "artifacts/review-production7-edge/actual-A-B-reloaded-and-imported.png": {
+      "bytes": 85536,
+      "sha256": "f4ce40a022ca361797b6c7c2528e0d784fe301ca49be9aaa083447d68dbb69bc"
+    },
+    "artifacts/review-production7-edge/actual-A-diagnostic-time-and-adcs-focus.png": {
+      "bytes": 157652,
+      "sha256": "b9a9004926572b83a8a57c45c38ea6f18ef6ae2fc7d2537aa935bf3e4dca6bbd"
+    },
+    "artifacts/review-production7-edge/actual-A-failed-correction-result.png": {
+      "bytes": 122720,
+      "sha256": "b96273646ca8d869c510ada0b7974ea8481ed94cf2ac253c1e8f042351ebabcb"
+    },
+    "artifacts/review-production7-edge/actual-A-flight.json": {
+      "bytes": 30707,
+      "sha256": "2c544cce569b855df2e081160ad2f08d0414c04ccdc6841332d9d13d9153ba32"
+    },
+    "artifacts/review-production7-edge/actual-A-weak-adcs-pointer-build.png": {
+      "bytes": 347460,
+      "sha256": "d8b4020337ab939103e64193cea278759d3121ef9b157233619045a179054445"
+    },
+    "artifacts/review-production7-edge/actual-B-flight.json": {
+      "bytes": 41972,
+      "sha256": "e6218fc22b94e478fe73431810c2dc8bdab075c8bcb04f5ea001cc269739cfbd"
+    },
+    "artifacts/review-production7-edge/actual-B-strong-adcs-pointer-build.png": {
+      "bytes": 347898,
+      "sha256": "7ce51b529dacae3a0f8c5ae4fde282542a19190f4fafd80b2d2f0fe7ea472a68"
+    },
+    "artifacts/review-production7-edge/actual-B-successful-correction-result.png": {
+      "bytes": 119934,
+      "sha256": "522be42f3a7f85ea11cd0497144dc6bece2253225e9e44b153ba3dfbc9a61491"
+    },
+    "artifacts/review-storage-v2/blocked-review-storage-retains-exact-in-memory-a-across-a-real-fork-and-new-partial-flight-failure.png": {
+      "bytes": 392481,
+      "sha256": "d1ded4fc904159560d704f87284d9cc0a93550807f7e17b69f94e240b3f057ef"
+    },
+    "artifacts/review-storage-v2/storage-failure-explicit-memory-fork.png": {
+      "bytes": 111720,
+      "sha256": "dd77ccb766053ac1d7fed2c405d8b3be94ce7cb1993048c63214f3c59ac14247"
+    },
+    "artifacts/review-storage-v3/blocked-storage-real-partial-evidence.json": {
+      "bytes": 12316,
+      "sha256": "4d55e9673d9324a544333fcf974a854b3f9a507af9ec8033c571366e198c813f"
+    },
+    "artifacts/review-storage-v3/storage-failure-explicit-memory-fork.png": {
+      "bytes": 111655,
+      "sha256": "2cafe442236ab0fc741b8ad9f19d8096b41842c9d04bf7a9f223b386b13deac0"
+    },
+    "artifacts/review-storage-v3/storage-failure-memory-A-retained-after-B.png": {
+      "bytes": 107430,
+      "sha256": "4c017c21c214ebe7e0f156473cc5f9af856e5c753ba092cb810600373f2ea8d7"
+    }
+  },
+  "rejectedAttemptNotes": [
+    "review-fast-v1: genuine Node24 source differs from Chrome157 at14 tiny numeric leaves; exact replay rejects, no tolerance weakening.",
+    "review-faults-v1 storage case: async test Worker wrapper lost its initial message; synchronous API-only denial fixes harness.",
+    "review-storage-v2: test compared raw factory UI craft instead of exact normalized authoritative save; corrected to exact saved craft, plan, numerics and runtime.craft."
+  ],
+  "limits": [
+    "First pin/cold full replay takes tens of seconds; observed functional timings are not isolated benchmarks.",
+    "Nonfatal Three shader and PMREM warnings are retained separately from application/native resource failures.",
+    "First portability-failure trace was overwritten; original report, screenshot and exact difference remain. Later candidate traces are separate."
+  ],
+  "externalEvidence": {
+    "tests/browser/swingby-builder.spec.ts": {
+      "bytes": 17971,
+      "sha256": "b81c021c36df1b5c6daeb96e4bfde322a4529108adffeae8d97fb5e983aa8fae"
+    },
+    "tests/browser/artifacts/remote-operations/review-production7-preservation/actual-pointer-repair-reaches-the-spacecraft-before-earth-confirmation-and-returns-science-with-version2-replay.json": {
+      "bytes": 2858,
+      "sha256": "6a8acfa3cfcad3fd38971f30a5cde986734b8246c29a571d7dcbe5181987acd9"
+    },
+    "tests/browser/artifacts/remote-operations/review-production7-preservation/causal-flight-and-replay.json": {
+      "bytes": 63733,
+      "sha256": "b0a7902c83deaab482f19c62332219d8ae12f24d011281e822bb81bca33694c9"
+    },
+    "tests/browser/artifacts/remote-operations/review-production7-preservation/mars-detail-lazy-context-cache.json": {
+      "bytes": 5442,
+      "sha256": "61c31fe87c21049fbdda766508b8aea304e7b0b22ff6a7a153364a7e2a9181a4"
+    },
+    "tests/browser/artifacts/swingby-builder/review-production7-preservation/report.json": {
+      "bytes": 1798,
+      "sha256": "9044ac4d0f7396dac347bf7f75acd45194b82e7e30ad1a278105d88b9111b67f"
+    },
+    "tests/browser/artifacts/swingby-builder/review-production7-builder-closure/report.json": {
+      "bytes": 2580,
+      "sha256": "0d935db9f8d5d1915fb07ae2fd424dc54796fa90bb622db0f563515d641485be"
+    },
+    "tests/browser/artifacts/swingby-builder/review-production7-builder-closure/legacy-slot-transaction-evidence.json": {
+      "bytes": 5849,
+      "sha256": "0d563fe7a89a962fa96c2b160520aa9640c46eb926babd022af67e726fb5a374"
+    },
+    "tests/browser/artifacts/swingby-builder/review-production7-builder-closure/physical-and-save-evidence.json": {
+      "bytes": 11403,
+      "sha256": "2f7ec20f4bd58f2a67d098188c1f2b3d7a3d6973c64a33caf7f40ad26c84131e"
+    }
+  },
+  "portableIntegrationManifest": {
+    "bytes": 1842,
+    "sha256": "7171376ff5b244476d3ca19537ac55d251adca38ae0dd85670c62f87f292140d"
+  }
+}

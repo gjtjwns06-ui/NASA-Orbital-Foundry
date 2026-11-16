@@ -1,0 +1,38 @@
+{
+  "baselineFactorySha256": "6597ad74baa296be57fc55f1161f85452bb67465805169eab180f446f4d663dd",
+  "productionFiles": [
+    "src/render/parts.ts",
+    "src/render/bus-surface-detail.ts"
+  ],
+  "status": "43CPUtests+TSC PASS; final2same-camera imagesPASS;3native contextcycles+20imagesonprecedingcap-onlyvariant",
+  "files": [
+    {
+      "path": "src/render/parts.ts",
+      "sha256": "057e599f7c0240e5d620a7ba5f604c1eccb8ea2c0bb85cc336ca2fdb553d1bf0"
+    },
+    {
+      "path": "src/render/bus-surface-detail.ts",
+      "sha256": "9f9aeed858157c879995b06372a24594fc297637b3036dcb7d93de777bc141db"
+    },
+    {
+      "path": "tests/bus-surface-detail.test.ts",
+      "sha256": "6380b52ccd2823d45c2393dc2aa0acace1100768b6a065bb052df002ec247293"
+    },
+    {
+      "path": "tests/fixtures/parts-v5-baseline.ts",
+      "sha256": "0264bd807415d677cf57b441a784a72a29aa6b42ffed7eea55e4b4b63358f498"
+    },
+    {
+      "path": "tools/check-bus-art.mjs",
+      "sha256": "efcc2769cb945ebbc4b7e4fc156f0575c9e21306b420b41f07443da41aa06aa6"
+    },
+    {
+      "path": "docs/qa/bus-art-final/comparison.json",
+      "sha256": "bc4e82b4f5b3fef43d71b057209d0af871423828e4386b4edc4b8834743b77ac"
+    },
+    {
+      "path": "docs/qa/bus-art/comparison.json",
+      "sha256": "9a19c50a8561474f16f9aab6587e983337c2a08305d277d92f839cfcf12ba697"
+    }
+  ]
+}

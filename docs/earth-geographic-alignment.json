@@ -1,0 +1,10 @@
+{
+  "scope": "CPU geographic alignment of original accepted 4K map against downsampled NASA-derived 8K PNG before KTX lower-left row storage. Native rendered comparisons separately verify the KTX orientation.",
+  "correlation": {
+    "unchanged": 0.9990221495052363,
+    "verticalFlip": -0.053346415910876493,
+    "horizontalMirror": 0.5996971010231169,
+    "longitudeHalfTurn": 0.5500998146795952
+  },
+  "sourceAndDerivedUV": "Same July2004 equirectangular extent; no longitude shift or hemisphere flip in geographic content. KTX lower-left storage compensates for compressed textures flipY=false."
+}

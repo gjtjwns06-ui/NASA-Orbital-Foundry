@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-14T17:16:41.144Z",
+  "url": "http://127.0.0.1:5173/?qa",
+  "browser": "157.0.8103.52",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "errors": [],
+  "ready": true,
+  "camera": [
+    6.999999999999998,
+    5,
+    14
+  ],
+  "target": [
+    0,
+    2.8000000000000003,
+    -2.5000000000000004
+  ],
+  "info": {
+    "frame": 4148,
+    "calls": 164,
+    "triangles": 157290,
+    "points": 1700,
+    "lines": 870
+  },
+  "screen": "MeshBasicMaterial"
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "status": "PROTOTYPE ONLY",
+  "gmatRelease": "R2026a",
+  "executableSha256": "36c880ad6c3f5e69b2e7e90c9d9cec4086eced9c1073fc5b289966d54db15f5f",
+  "generatedAtUtc": "2026-11-14T17:02:22.753Z",
+  "scope": "Independent propagation of identical Cartesian states under central gravity only. No Earth departure/SOI matching or full mission proof.",
+  "epochNote": "Input states are numerical ICRF vectors. For this autonomous central-force test they are treated as axes of an inertial MJ2000Eq coordinate frame at an arbitrary common TAI reference epoch. No ephemeris or TDB-to-TAI conversion is tested.",
+  "results": [
+    {
+      "id": "transfer-reference",
+      "body": "Sun",
+      "mu": 132712440041.27942,
+      "sampleCount": 261,
+      "maxPositionErrorKm": 0.00018800165751445914,
+      "maxVelocityErrorKmS": 2.443639317550166e-11,
+      "pass": true,
+      "scriptSha256": "40db16d5e644dbc3420387021f44e235d9fae00bce07112f6f1386ca5c090b41",
+      "csvSha256": "ecc12bb0511a95e9a5907fbdeab2bacf4ab0d6eb8e32b12016d5e56f894eb6a8"
+    },
+    {
+      "id": "transfer-low-energy",
+      "body": "Sun",
+      "mu": 132712440041.27942,
+      "sampleCount": 286,
+      "maxPositionErrorKm": 0.0001465406606502114,
+      "maxVelocityErrorKmS": 2.5813952620796955e-11,
+      "pass": true,
+      "scriptSha256": "51fd2adf26fe77a3b124b1b3f4211157f89e5ecf172525a846be2dde5551f2ad",
+      "csvSha256": "3b391730adad1c4edc1b773e5e0d8d9064777f065383cebe30e2b00c32137137"
+    },
+    {
+      "id": "mars-actual-asymptote",
+      "body": "Mars",
+      "mu": 42828.375214,
+      "sampleCount": 1220,
+      "maxPositionErrorKm": 0.000009629371369887022,
+      "maxVelocityErrorKmS": 9.65581588402352e-10,
+      "pass": true,
+      "scriptSha256": "34f2afe05e156954584b5d1bd649223f3cad3f5cdc165ccdd491525879ed1ca3",
+      "csvSha256": "dd8f4f8d6448fee78e8d7c485af269f15fe52015a2dbe0525aebe0723fd8e04c"
+    },
+    {
+      "id": "matched-earth-escape",
+      "body": "Earth",
+      "mu": 398600.435507,
+      "sampleCount": 831,
+      "maxPositionErrorKm": 0.000007529899568043143,
+      "maxVelocityErrorKmS": 3.2039826468117555e-9,
+      "pass": true,
+      "scriptSha256": "749b41d774ed8598856076f50570e94f7c1ed60cad0ffdc72cd62eea4ea394c2",
+      "csvSha256": "dd39a2c2cb141190e7b8dd678b04ac45cda8600a8b894fb82b595a7b0b97ed71"
+    },
+    {
+      "id": "matched-solar-coast",
+      "body": "Sun",
+      "mu": 132712440041.27942,
+      "sampleCount": 256,
+      "maxPositionErrorKm": 0.00012741735917788424,
+      "maxVelocityErrorKmS": 1.775713784524605e-11,
+      "pass": true,
+      "scriptSha256": "04b11705b87e5a00d59d5e3e37836fa8ab5325305e44c6fbb28586ef2a2cd802",
+      "csvSha256": "7197d2e51ae84bad06e3885a6386ecfd9244eef46671cd4dcdb26719577af50b"
+    },
+    {
+      "id": "matched-mars-encounter",
+      "body": "Mars",
+      "mu": 42828.375214,
+      "sampleCount": 1230,
+      "maxPositionErrorKm": 0.000006703682465467689,
+      "maxVelocityErrorKmS": 1.1738625933420815e-9,
+      "pass": true,
+      "scriptSha256": "118c8f7920d649812cb924fe17ad00b87922fae355b85875977f9cf917e75e8e",
+      "csvSha256": "55461bd0a2b7f862cb87c9cf3ad8c11545d97e1b92b22133d3a4f949a0c9cb4b"
+    }
+  ],
+  "pass": true
+}

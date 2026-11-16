@@ -1,0 +1,15 @@
+{
+  "status": "exact-two-production-files-integrated",
+  "files": {
+    "src/render/deployment-scene.ts": "96fb848cf5961f7f54bedd78617bab4a5b06278cea478287e2ab3ecebc35f07a",
+    "src/render/committed-orbit-trail.ts": "8f0faa19d2b95832d3f74f4889ab850f43417ccdaaa084c22a8e050f8bf91ce3"
+  },
+  "testFixturePathAdaptedOnly": "docs/qa/milestone-8/camera-component/camera-replay-fixture.json",
+  "fixtureBytesIdentical": true,
+  "scope": "Retains actual path Line/material/buffer, unchanged active Float32 vertices and bounds; original failed perf evidence preserved.",
+  "validation": "Build and35 focused main CPU checks passed; oneEdge same-product nativecase passed after a test-only upload-version comparison correction; isolated final120s actual-flight successor passed all gates.",
+  "entrypoint": "index-BA0mrQ_m.js",
+  "deploymentUI": "deployment-ui-DOLz7QoT.js",
+  "deploymentWorker": "deployment.worker-BIezmTdy.js",
+  "performanceReport": "tests/browser/artifacts/performance-deployment-retained/m8-retained-active-r1/chrome/report.json"
+}

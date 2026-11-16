@@ -1,0 +1,48 @@
+import {describe,it,expect} from 'vitest';
+import {readFileSync} from 'node:fs';
+import * as THREE from 'three';
+import {chooseWorkingFaceDirection,type WorkingFaceFrame} from '../../../src/render/working-face-direction';
+import {deploymentBounds,deploymentLimbDirection,DEPLOYMENT_DISPLAY_FRAME,deploymentVector} from '../../../src/render/deployment-scene-math';
+import {inspectionFit,inspectionLayout} from '../../../src/render/craft-camera';
+import type {DeploymentSceneSnapshot} from '../../../src/render/deployment-scene-types';
+import type {ApertureView,OrientedBoxView} from '../../../src/deployment/types';
+const fixture=JSON.parse(readFileSync('docs/qa/milestone-8/working-face-component/actual-camera-fixture.json','utf8'));
+const vector=(x:number,y:number,z:number)=>new THREE.Vector3(x,y,z);
+function actualFrame(s:DeploymentSceneSnapshot):WorkingFaceFrame {
+ const position=deploymentVector(s.environment.positionKm).multiplyScalar(3/6378.137),quaternion=DEPLOYMENT_DISPLAY_FRAME.clone().multiply(new THREE.Quaternion(...s.attitudeQuaternion)),bodyOffset=vector(...s.geometry.mass.centerOfMassM).negate(),bounds=deploymentBounds(s.geometry).bounds.translate(bodyOffset),viewport={left:248,right:248,top:170,bottom:120},limbDirection=deploymentLimbDirection(position,3,1280,720,42,viewport).direction,layout=inspectionLayout({position,quaternion,bounds,preferredScale:.25,obstacles:[{center:vector(0,0,0),radius:3}],initialDirection:limbDirection,frameKey:'cpu'},inspectionFit(1280,720,42,viewport).distancePerRadius);
+ return{geometry:s.geometry,position,quaternion,bodyOffset,displayScale:layout.scale,target:layout.target,distance:layout.fitDistance,earthRadius:3,limbDirection,currentDirection:vector(-.6,.77,.07).normalize()};
+}
+function fixedFrame():WorkingFaceFrame {
+ const boxes:OrientedBoxView[]=[{id:'a',linkId:'fixed-a',partId:'unrelated-one',centerM:[0,.2,0],halfM:[.1,.01,.1],axes:[[1,0,0],[0,1,0],[0,0,1]]},{id:'b',linkId:'fixed-b',partId:'unrelated-two',centerM:[0,0,.2],halfM:[.1,.1,.01],axes:[[1,0,0],[0,1,0],[0,0,1]]}];
+ const apertures:ApertureView[]=[{id:'first',linkId:'fixed-a',partId:'unrelated-one',emittingBoxId:'a',kind:'solar',centerM:[0,.211,0],normal:[0,1,0],tangentU:[1,0,0],tangentV:[0,0,-1],widthM:.18,heightM:.18},{id:'second',linkId:'fixed-b',partId:'unrelated-two',emittingBoxId:'b',kind:'rf',centerM:[0,0,.211],normal:[0,0,1],tangentU:[1,0,0],tangentV:[0,1,0],widthM:.18,heightM:.18}];
+ return{geometry:{boxes,apertures},position:vector(3.3,0,0),quaternion:new THREE.Quaternion(),bodyOffset:vector(0,0,0),displayScale:.01,target:vector(3.3,0,0),distance:.08,earthRadius:3,limbDirection:vector(.5,Math.sqrt(.75),0),currentDirection:vector(1,0,0)};
+}
+describe('explicit current working-face camera suggestion',()=>{
+ it('finds both current PV/RF faces without touching the actual terminal craft or orbital frame',()=>{
+  const f=actualFrame(fixture.snapshots[3]),before=JSON.stringify(f),choice=chooseWorkingFaceDirection(f);expect(choice.status).toBe('found');if(choice.status!=='found')return;
+  expect(choice.visibleKinds).toEqual(['solar','rf']);expect(choice.minimumTypeScore).toBeGreaterThan(.25);expect(choice.apertures.filter(a=>a.partId!=='recovery').every(a=>a.frontCosine>.2&&a.clearSamples>=4)).toBe(true);
+  expect(choice.direction.dot(f.position.clone().normalize())).toBeCloseTo(f.limbDirection.dot(f.position.clone().normalize()),12);expect(choice.direction.length()).toBeCloseTo(1,12);expect(choice.up.length()).toBeCloseTo(1,12);expect(choice.up.dot(choice.direction)).toBeCloseTo(0,12);expect(JSON.stringify(f)).toBe(before);
+ });
+ it('uses supplied stowed and partially deployed geometry without a time or model-ID switch',()=>{
+  const outcomes=[];for(const snapshot of fixture.snapshots.slice(0,3)){const f=actualFrame(snapshot),start=performance.now(),choice=chooseWorkingFaceDirection(f);outcomes.push({time:snapshot.timeSeconds,status:choice.status,ms:performance.now()-start,...(choice.status==='found'?{kinds:choice.visibleKinds,score:choice.minimumTypeScore}:{reason:choice.reason})});expect(choice.status).toBe('found');if(choice.status==='found')expect(choice.apertures.some(a=>a.clearSamples>0&&a.frontCosine>.06)).toBe(true);}console.log(JSON.stringify({actualGeometryCases:outcomes}));
+ });
+ it('supports fixed plates and arbitrary part identities, balancing kinds instead of hardcoded equipment',()=>{
+  const f=fixedFrame(),choice=chooseWorkingFaceDirection(f);expect(choice.status).toBe('found');if(choice.status==='found'){expect(choice.visibleKinds).toEqual(['solar','rf']);expect(choice.minimumTypeScore).toBeGreaterThan(.5);expect(choice.apertures.every(a=>a.clearSamples===5)).toBe(true);}
+ });
+ it('rejects a completely enclosing real occluder, including with a rotated OBB',()=>{
+  const f=fixedFrame(),q=new THREE.Quaternion().setFromAxisAngle(vector(1,2,3).normalize(),.53);f.geometry.boxes.push({id:'cover',linkId:'cover',partId:'cover',centerM:[0,0,0],halfM:[.9,.9,.9],axes:[vector(1,0,0).applyQuaternion(q).toArray(),vector(0,1,0).applyQuaternion(q).toArray(),vector(0,0,1).applyQuaternion(q).toArray()]});expect(chooseWorkingFaceDirection(f)).toEqual({status:'unavailable',reason:'no-visible-working-face'});
+ });
+ it('is deterministic across geometry-array order and preserves all inputs',()=>{
+  const f=actualFrame(fixture.snapshots[2]),first=chooseWorkingFaceDirection(f),reversed={...f,geometry:{boxes:[...f.geometry.boxes].reverse(),apertures:[...f.geometry.apertures].reverse()}};expect(chooseWorkingFaceDirection(reversed)).toEqual(first);expect(chooseWorkingFaceDirection(f)).toEqual(first);
+ });
+ it('keeps the same result under a uniform display-unit rescaling',()=>{
+  const f=fixedFrame(),a=chooseWorkingFaceDirection(f),b=chooseWorkingFaceDirection({...f,position:f.position.clone().multiplyScalar(10),target:f.target.clone().multiplyScalar(10),distance:f.distance*10,displayScale:f.displayScale*10,earthRadius:f.earthRadius*10});expect(a.status).toBe('found');expect(b.status).toBe('found');if(a.status==='found'&&b.status==='found'){expect(a.direction.distanceTo(b.direction)).toBeLessThan(1e-10);expect(a.minimumTypeScore).toBeCloseTo(b.minimumTypeScore,12);}
+ });
+ it('accepts the renderer current offset as a direction independent of its length',()=>{
+  const f=actualFrame(fixture.snapshots[0]),a=chooseWorkingFaceDirection(f),b=chooseWorkingFaceDirection({...f,currentDirection:f.currentDirection.clone().multiplyScalar(.081),limbDirection:f.limbDirection.clone().multiplyScalar(.04)});expect(a.status).toBe('found');expect(b.status).toBe('found');if(a.status==='found'&&b.status==='found')expect(a.direction.distanceTo(b.direction)).toBeLessThan(1e-12);
+ });
+ it('returns informative fallbacks for missing faces and malformed presentation inputs',()=>{
+  const f=fixedFrame();expect(chooseWorkingFaceDirection({...f,geometry:{...f.geometry,apertures:[]}})).toEqual({status:'unavailable',reason:'no-working-apertures'});
+  const bad=[null,{...f,displayScale:0},{...f,position:vector(NaN,0,0)},{...f,currentDirection:vector(0,0,0)},{...f,limbDirection:vector(1e300,0,0)},{...f,quaternion:new THREE.Quaternion(0,0,0,0)},{...f,geometry:{...f.geometry,boxes:[]}}, {...f,geometry:{...f.geometry,apertures:[null]}}];for(const x of bad)expect(chooseWorkingFaceDirection(x as any)).toEqual({status:'unavailable',reason:'invalid-input'});
+ });
+});

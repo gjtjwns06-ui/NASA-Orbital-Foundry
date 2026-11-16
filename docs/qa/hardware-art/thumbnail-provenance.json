@@ -1,0 +1,200 @@
+{
+  "browser": "157.0.8103.52",
+  "scripts": [
+    "http://127.0.0.1:4174/assets/index-DjskVm6z.js"
+  ],
+  "source": "src/render/parts.ts normalized LF UTF-8",
+  "renderSourceSha256": "9c8be91b7ed6d11410451a748522997c72887f57b74659d39b49782770fdbfeb",
+  "tool": "tools/generate-hardware-thumbnails.mjs",
+  "originalProceduralModels": true,
+  "externalImagesOrAI": false,
+  "width": 1024,
+  "height": 1024,
+  "format": "WebP",
+  "alpha": true,
+  "sampling": "2x opaque 3D render with transparent background, canvas downsample; no MSAA gamma unpremultiplication",
+  "bytes": 77488,
+  "quality": 0.9,
+  "transparentPixels": 768879,
+  "tileCoverage": [
+    9599,
+    11301,
+    24349,
+    19235,
+    20224,
+    18353,
+    19430,
+    19198,
+    22998,
+    3803,
+    14120,
+    18979,
+    17892,
+    12896,
+    23798,
+    23522
+  ],
+  "models": [
+    {
+      "modelId": "tsp45-fixed-v2",
+      "meshes": 5,
+      "triangles": 3606,
+      "sizeMetres": [
+        0.20800000429153442,
+        0.9399999976158142,
+        0.42000001706182954
+      ]
+    },
+    {
+      "modelId": "tsp45-sixwing-v2",
+      "meshes": 20,
+      "triangles": 19536,
+      "sizeMetres": [
+        1.1799999475479126,
+        1.940000057220459,
+        0.42000001706182954
+      ]
+    },
+    {
+      "modelId": "bpx100-4s2p-v2",
+      "meshes": 4,
+      "triangles": 1800,
+      "sizeMetres": [
+        0.10999999940395355,
+        0.10000000149011612,
+        0.05970000123977661
+      ]
+    },
+    {
+      "modelId": "bpx100-dual-v2",
+      "meshes": 4,
+      "triangles": 2400,
+      "sizeMetres": [
+        0.2199999988079071,
+        0.10000000149011612,
+        0.06965000268816948
+      ]
+    },
+    {
+      "modelId": "wide-mono-v2",
+      "meshes": 4,
+      "triangles": 2232,
+      "sizeMetres": [
+        0.2199999988079071,
+        0.2199999988079071,
+        0.29774999655783174
+      ]
+    },
+    {
+      "modelId": "narrow-mono-v2",
+      "meshes": 4,
+      "triangles": 2232,
+      "sizeMetres": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.5058599714189768
+      ]
+    },
+    {
+      "modelId": "mars-spectra-v2",
+      "meshes": 4,
+      "triangles": 2232,
+      "sizeMetres": [
+        0.36000001430511475,
+        0.2800000011920929,
+        0.39684999026358125
+      ]
+    },
+    {
+      "modelId": "ax100u-carrier-v1",
+      "meshes": 5,
+      "triangles": 4660,
+      "sizeMetres": [
+        0.11999999731779099,
+        0.09000000357627869,
+        0.040500000189244746
+      ]
+    },
+    {
+      "modelId": "iris22-carrier-v1",
+      "meshes": 5,
+      "triangles": 13060,
+      "sizeMetres": [
+        0.18000000715255737,
+        0.1599999964237213,
+        0.08999999617785215
+      ]
+    },
+    {
+      "modelId": "uhf-dipole-pair-v1",
+      "meshes": 2,
+      "triangles": 900,
+      "sizeMetres": [
+        0.36000001430511475,
+        0.36000001430511475,
+        0.10800000317394734
+      ]
+    },
+    {
+      "modelId": "xband-reflector-1m-v1",
+      "meshes": 4,
+      "triangles": 3120,
+      "sizeMetres": [
+        0.984000027179718,
+        0.984000027179718,
+        0.6949999932199716
+      ]
+    },
+    {
+      "modelId": "xact15-carrier-v1",
+      "meshes": 5,
+      "triangles": 1492,
+      "sizeMetres": [
+        0.11999999731779099,
+        0.11999999731779099,
+        0.0630000008635223
+      ]
+    },
+    {
+      "modelId": "xact50-carrier-v1",
+      "meshes": 5,
+      "triangles": 1492,
+      "sizeMetres": [
+        0.11999999731779099,
+        0.11999999731779099,
+        0.08550000200346113
+      ]
+    },
+    {
+      "modelId": "chemical230-v2",
+      "meshes": 2,
+      "triangles": 384,
+      "sizeMetres": [
+        0.3495999872684479,
+        0.349599987268448,
+        0.5609999895095826
+      ]
+    },
+    {
+      "modelId": "recorder-1p6-v2",
+      "meshes": 4,
+      "triangles": 4200,
+      "sizeMetres": [
+        0.12999999523162842,
+        0.10000000149011612,
+        0.04924999877810478
+      ]
+    },
+    {
+      "modelId": "recorder-8-v2",
+      "meshes": 4,
+      "triangles": 5400,
+      "sizeMetres": [
+        0.18000000715255737,
+        0.12999999523162842,
+        0.0689499982893467
+      ]
+    }
+  ],
+  "errors": []
+}

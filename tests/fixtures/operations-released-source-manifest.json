@@ -1,0 +1,31 @@
+{
+  "description": "Accepted runtime1/2 numerical source snapshot captured before operations3 edits; excludes only explicitly reviewed state helper exports, erased event type and facade barrel.",
+  "files": {
+    "src/sim/assembly.ts": "8ef747b8dc73baacab53a542b67ba32db91c3cd7d16256afac26e39da5c4b57c",
+    "src/sim/attitude.ts": "65b17947182722b23a94ba601d127eeeb6dc26925b05d4529564a3aae19145dd",
+    "src/sim/catalog.ts": "677ec4087b8cf8fea90a3585572dcf56868fc3ccfb47b0d4b2aa6f4ce24f8607",
+    "src/sim/hazards.ts": "4e2557769946c62d6b57160fce9666b91619c5f196a96756a9279847259b37f0",
+    "src/sim/index.ts": "f4fc8c6553d27e0a24e78bbd867ec08f694ee78f2f770da4bd5cd43ace5da17a",
+    "src/sim/launch.ts": "23838eb690154ec192c0a2406d5d2c3ae81a810152b0d2ed495b9f8a32967fe3",
+    "src/sim/persistence.ts": "a9bab8d46cf668c1c6d99f8b21f084bea81f71585decb6b40ef4fe0b6fb73169",
+    "src/sim/physics.ts": "666fa2b79febf8ab1d7ba8bd04f061e80cd0acc250c1290951e7a9bc7f9694be",
+    "src/sim/simulation.ts": "d3b2f74708013b4a052dcb9227a09818ca86759a3eea8f80636cd8af6991265a",
+    "src/sim/targets.ts": "72fd8a5c19ef4d66d0eb73c9fcb64db49d8dcafc1ae867272d33a2adc658b06e",
+    "src/sim/types.ts": "d3c9f427dbc0c1e3cd5c470250090abfa7269276f58fed3ea125b7f94e0e5edb",
+    "src/hardware/acquisition.ts": "72a1f573a47bfa7bf2707a15ae50c539f32be5863c7ef8caa69ca9e80a1846b0",
+    "src/hardware/attitude.ts": "caf2396c3f38c2ee3d1ad38fb62c3c95252adfe04d3bdf7789e3c9896897d5a1",
+    "src/hardware/catalog.ts": "878dfd6b1d8ca047667fe6a30a82e76fc275804ada3dffe31d4502eb2a72ec79",
+    "src/hardware/index.ts": "d911a2cc099a374b3b394c4a083e2e2d7e0365730a2c09482d81f4cbca979728",
+    "src/hardware/presets.ts": "45a04cf9c3b30a64fdb69f0f9b068627a48fb8c592b25f6e4915a0a670345797",
+    "src/hardware/resolve.ts": "1277087e6b054bb819285b05b72eaaf3cdf26d7c7876573f606f989c7b587543",
+    "src/hardware/types.ts": "e8d2ba99375e3e5f98faa814409a4d798bb7b63d16e9b61c335e31429b073bf4",
+    "src/transfer/ephemeris.ts": "3abcd5a400cb7c64ca4f87e148ef144d59b8ea51611d758b64298a344af1475f",
+    "src/transfer/immutable.ts": "fb00f45f34a79c34efd1f0fd96ededbaec3425824c6a8c0b5b56bdd6e71485d2",
+    "src/transfer/math.ts": "479b13215239b256f51569e16fb6141b76025974ee7f22b4d208b635e2e6a632",
+    "src/transfer/persistence.ts": "2e9d7e0e63b683d10d471d6a2446f2644699717d69407afc40f53c6af888f44c",
+    "src/transfer/planning.ts": "f6d7160c90d8d7d7489eac760e1dd67c469e23b2705ef9be3f65d9eda0eb5226",
+    "src/transfer/runtime.ts": "6fac6489e85492f4903b7f4f805877883959d64cfeb2a2212f7fdaeffdee1954",
+    "src/transfer/data/earth.json": "3e851a9c9b3e7b41d84c4e7849a417609e6f25159e8c03f741dee65b6961cc64",
+    "src/transfer/data/mars.json": "1c92638072744d778d6cce139e57a7d45bd03cc8be56d26a63ea8f6e2d9a97d7"
+  }
+}

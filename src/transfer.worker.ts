@@ -1,0 +1,1 @@
+import './transfer-worker-controller';

@@ -1,0 +1,56 @@
+{
+  "status": "passed-scoped-domain-acceptance",
+  "completedAtUtc": "2026-11-15T05:02:19.817103+00:00",
+  "modelVersion": "deployment-1.0.0",
+  "sourceFileCount": 19,
+  "sourceAndTestsChangedDuringResume": false,
+  "legacyDependenciesUnchanged": 19,
+  "uniqueTestFiles": 20,
+  "uniqueTests": 69,
+  "singleComplete69TestRun": false,
+  "batches": [
+    {
+      "scope": "resumed remaining domain cases",
+      "files": 18,
+      "tests": 65,
+      "status": "passed",
+      "vitestSeconds": 917.79,
+      "processSeconds": 918.6102822000103,
+      "results": "docs/qa/resumed-continuation-2026-11-15T04-46-12Z/vitest-results.json",
+      "process": "docs/qa/resumed-continuation-2026-11-15T04-46-12Z/process-result.json"
+    },
+    {
+      "scope": "source-matched actual eclipse recovery four-profile convergence",
+      "files": 1,
+      "tests": 1,
+      "status": "previously reported passed; raw source and all stored acceptance assertions rechecked on resume",
+      "reportedSeconds": 274.99,
+      "evidence": "docs/qa/recovery-convergence-2026-11-14T23-46-54-595Z/report.json"
+    },
+    {
+      "scope": "source-matched genuine fatal cutoff, pending/final receiver drain and strict replay",
+      "files": 1,
+      "tests": 3,
+      "status": "previously reported passed; raw source hashes rechecked on resume",
+      "reportedSeconds": 115.83,
+      "evidence": "docs/qa/terminal-drain-2026-11-14T23-44-48-963Z/report.json"
+    }
+  ],
+  "typecheck": {
+    "command": "npm.cmd run typecheck",
+    "status": "passed",
+    "exitCode": 0
+  },
+  "interruptedAttempts": [
+    "Original full69 suite paused by user; no active process or recoverable terminal verdict on resume.",
+    "A resumed full-suite attempt was stopped after29.19s at root instruction before any test verdict, to avoid repeating the retained source-matched gates. Its exact process result is preserved."
+  ],
+  "retainedEvidenceRecheck": "docs/qa/resumed-continuation-2026-11-15T04-46-12Z/retained-evidence-recheck.json",
+  "sourceAfter": "docs/qa/resumed-continuation-2026-11-15T04-46-12Z/source-after.json",
+  "portability": "All20 tests and4 required fixtures use repository-relative paths; no sibling-workspace imports; generated evidence uses fresh timestamped directories. All19 dependency bytes match current main.",
+  "limitations": [
+    "Domain-only acceptance; actual UI/Worker races, browser native graphics, art and performance remain root-owned gates.",
+    "Broader Stage3 inter-device negative-ordering fixture remains unproved. Demonstrated negative ordering is sibling-wing lower-before-upper; full wing\u2192RF device sequence is positively certified.",
+    "No arbitrary runtime save portability or flight certification claim."
+  ]
+}

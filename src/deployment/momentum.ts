@@ -1,0 +1,29 @@
+import type {AngularState,ControllerLimits,DeploymentGeometryView,Quaternion,Vec3} from './types';
+import {add,conjugate,DeploymentError,dot,finiteVector,inverse,length,matrixVector,multiplyQuaternion,normalizedQuaternion,rotate,scale,sub} from './math';
+/** Shape momentum already contains the hinge reactions. Do not apply an
+ * additional artificial opposite hinge impulse to this momentum relation. */
+export function solveBodyAngularVelocity(geometry:DeploymentGeometryView,quaternion:Quaternion,totalInertialMomentumNms:Vec3,wheelMomentumBodyNms:Vec3):Vec3 {
+ return matrixVector(inverse(geometry.mass.lockedInertiaKgM2),sub(sub(rotate(conjugate(quaternion),totalInertialMomentumNms),geometry.mass.shapeMomentumNms),wheelMomentumBodyNms));
+}
+export function totalAngularMomentum(geometry:DeploymentGeometryView,state:Pick<AngularState,'quaternion'|'angularVelocityBodyRadS'|'wheelMomentumBodyNms'>):Vec3 {return rotate(state.quaternion,add(add(matrixVector(geometry.mass.lockedInertiaKgM2,state.angularVelocityBodyRadS),geometry.mass.shapeMomentumNms),state.wheelMomentumBodyNms));}
+export function initializedAngularState(geometry:DeploymentGeometryView,quaternion:Quaternion,angularVelocityBodyRadS:Vec3=[0,0,0],wheelMomentumBodyNms:Vec3=[0,0,0]):AngularState {if(!finiteVector(angularVelocityBodyRadS)||!finiteVector(wheelMomentumBodyNms))throw new DeploymentError('INVALID_ANGULAR_STATE');const state={quaternion:normalizedQuaternion(quaternion),angularVelocityBodyRadS:[...angularVelocityBodyRadS] as Vec3,wheelMomentumBodyNms:[...wheelMomentumBodyNms] as Vec3,totalInertialMomentumNms:[0,0,0] as Vec3};state.totalInertialMomentumNms=totalAngularMomentum(geometry,state);if(state.totalInertialMomentumNms.some(v=>!Number.isFinite(v)))throw new DeploymentError('INVALID_ANGULAR_STATE');return state;}
+/** Whole craft kinetic energy about its COM, excluding wheel rotor spin energy.
+ * Used for a conservative actuator feasibility test, not invented orbital energy. */
+export function articulatedKineticEnergyJ(geometry:DeploymentGeometryView,omega:Vec3):number {return .5*dot(omega,matrixVector(geometry.mass.lockedInertiaKgM2,omega))+dot(omega,geometry.mass.shapeMomentumNms)+geometry.mass.shapeKineticEnergyJ;}
+export interface AttitudeController {target:Quaternion;limits:ControllerLimits;proportionalNmPerRad:number;derivativeNmsPerRad:number;enabled:boolean}
+export interface AttitudeStep {state:AngularState;bodyTorqueNm:Vec3;wheelSaturated:boolean}
+/** Torque-limited reaction-wheel control. A midpoint predictor evaluates the
+ * PD law at the interval midpoint; the resulting held torque is constrained
+ * by both torque and the actual remaining wheel momentum for the full step.
+ * Quaternion integration uses RK4 with articulated geometry at every stage.
+ * External torques are absent in this declared short-lesson model. */
+export function advanceAngularState(state:AngularState,geometryAt:(elapsedSeconds:number)=>DeploymentGeometryView,dt:number,controller?:AttitudeController):AttitudeStep {
+ if(!Number.isFinite(dt)||dt<0||dt>1||![state.totalInertialMomentumNms,state.wheelMomentumBodyNms,state.angularVelocityBodyRadS].every(finiteVector))throw new DeploymentError('INVALID_ATTITUDE_STEP');
+ const q0=normalizedQuaternion(state.quaternion),wheel0=state.wheelMomentumBodyNms,H=state.totalInertialMomentumNms,initial=geometryAt(0),omega0=solveBodyAngularVelocity(initial,q0,H,wheel0);let torque:Vec3=[0,0,0],saturated=false;
+ if(controller){const {limits,proportionalNmPerRad:kp,derivativeNmsPerRad:kd}=controller;if(![limits.torqueNm,limits.momentumNms].every(finiteVector)||[...limits.torqueNm,...limits.momentumNms,kp,kd].some(n=>!Number.isFinite(n)||n<0))throw new DeploymentError('INVALID_CONTROLLER');if(wheel0.some((v,i)=>Math.abs(v)>limits.momentumNms[i]+1e-12))throw new DeploymentError('WHEEL_STATE_RANGE');}
+ if(dt===0)return {state:structuredClone(state),bodyTorqueNm:torque,wheelSaturated:saturated};
+ const integrate=(duration:number,held:Vec3)=>{const wheelAt=(t:number)=>sub(wheel0,scale(held,t)),derivative=(q:Quaternion,t:number):Quaternion=>{const normal=normalizedQuaternion(q),omega=solveBodyAngularVelocity(geometryAt(t),normal,H,wheelAt(t));return multiplyQuaternion(normal,[...omega,0]).map(v=>v*.5) as Quaternion;},plus=(q:Quaternion,k:Quaternion,f:number)=>q.map((v,i)=>v+k[i]*f) as Quaternion,k1=derivative(q0,0),k2=derivative(plus(q0,k1,duration/2),duration/2),k3=derivative(plus(q0,k2,duration/2),duration/2),k4=derivative(plus(q0,k3,duration),duration),q=normalizedQuaternion(q0.map((v,i)=>v+duration*(k1[i]+2*k2[i]+2*k3[i]+k4[i])/6) as Quaternion),wheel=wheelAt(duration);return {q,wheel,omega:solveBodyAngularVelocity(geometryAt(duration),q,H,wheel)};};
+ if(controller?.enabled){const {limits,proportionalNmPerRad:kp,derivativeNmsPerRad:kd}=controller,target=normalizedQuaternion(controller.target),law=(q:Quaternion,omega:Vec3,recordSaturation:boolean):Vec3=>{let error=multiplyQuaternion(conjugate(q),target);if(error[3]<0)error=error.map(n=>-n) as Quaternion;const vector:Vec3=[error[0],error[1],error[2]],m=length(vector),angle=2*Math.atan2(m,error[3]),rotation=m<1e-14?[0,0,0] as Vec3:scale(vector,angle/m);return rotation.map((v,i)=>{const desired=kp*v-kd*omega[i],bounded=Math.max(-limits.torqueNm[i],Math.min(limits.torqueNm[i],desired)),low=(wheel0[i]-limits.momentumNms[i])/dt,high=(wheel0[i]+limits.momentumNms[i])/dt,actual=Math.max(low,Math.min(high,bounded));if(recordSaturation&&Math.abs(actual-bounded)>1e-14)saturated=true;return actual;}) as Vec3;};const midpoint=integrate(dt/2,law(q0,omega0,false));torque=law(midpoint.q,midpoint.omega,true);}
+ const {q,wheel,omega}=integrate(dt,torque);
+ return {state:{quaternion:q,wheelMomentumBodyNms:wheel,totalInertialMomentumNms:[...H],angularVelocityBodyRadS:omega},bodyTorqueNm:torque,wheelSaturated:saturated};
+}

@@ -1,0 +1,103 @@
+{
+  "createdAt": "2026-11-15T06:05:41.460877+00:00",
+  "acceptedBaseCommit": "b0c0c5cc07c8e0f7f77e06fb1eef86c99a274586",
+  "scope": "Only listed production/test/assets for explicit integration. No whole-tree merge. Baseline medium assets and accepted trail/internal/camera helper content preserved.",
+  "files": [
+    {
+      "path": "src/render/deployment-scene.ts",
+      "sha256": "71ef9f26c48119c9ef6a01d7080d45fdb4ebd40bdca08e19330213a2b0cf0bc7",
+      "bytes": 38180
+    },
+    {
+      "path": "src/render/deployment-scene-types.ts",
+      "sha256": "ce150dc65f12d06372e6e34cdc0e1daee91bfc3a0f1da71a2f73cce6ac072d21",
+      "bytes": 4002
+    },
+    {
+      "path": "src/render/earth-surface-detail.ts",
+      "sha256": "b5da4230c23c1eae799712f27c95316b9568692df503f8b7bd59ca454cc9e933",
+      "bytes": 4232
+    },
+    {
+      "path": "tests/earth-surface-detail.test.ts",
+      "sha256": "94fabb6bd0de60fac4cd3527d28e87c803209a66bc6d88669efa52705fdbf652",
+      "bytes": 6030
+    },
+    {
+      "path": "public/assets/textures/earth-bmng-july2004-8k.ktx2",
+      "sha256": "754427060f3910d6cead0a443468013c69aa8585ebfd5e885187b2d8f9ae1fd8",
+      "bytes": 2682779
+    },
+    {
+      "path": "public/assets/textures/earth-bmng-july2004-16k.ktx2",
+      "sha256": "dae2a97d896170340f0df8331475145b1ac9e567e4726e3403583a02d5995f92",
+      "bytes": 10062327
+    },
+    {
+      "path": "public/assets/basis/basis_transcoder.js",
+      "sha256": "8478b5b6d6b74e7d3082b89f6417321d8d1dc0307f2b30d4484bb11b441696a1",
+      "bytes": 57529
+    },
+    {
+      "path": "public/assets/basis/basis_transcoder.wasm",
+      "sha256": "6cf17dc889352c42e9acf8897107978d127005fe3386c36a0e3845e27967630a",
+      "bytes": 527333
+    },
+    {
+      "path": "public/assets/basis/README.md",
+      "sha256": "930b11bbbb742b2525491b0964f0462d63d8b21383c0623ec4c98c43d53723c6",
+      "bytes": 1448
+    },
+    {
+      "path": "public/assets/basis/LICENSE",
+      "sha256": "065fcf48d6af21c0b75e23be5ed5753aee75c892e1c2cf178fa6736305614a5c",
+      "bytes": 11347
+    },
+    {
+      "path": "public/data/earth-surface-detail.json",
+      "sha256": "73726ec26765be49c04cffece7dc944380137b8fc88d0e35d9c80e974989d25c",
+      "bytes": 3708
+    }
+  ],
+  "preservedAcceptedModules": [
+    {
+      "path": "src/render/committed-orbit-trail.ts",
+      "candidateSha256": "8f0faa19d2b95832d3f74f4889ab850f43417ccdaaa084c22a8e050f8bf91ce3",
+      "acceptedGitSha256": "8f0faa19d2b95832d3f74f4889ab850f43417ccdaaa084c22a8e050f8bf91ce3",
+      "contentIdenticalAfterLineEndingNormalization": true
+    },
+    {
+      "path": "src/render/deployment-internal-art.ts",
+      "candidateSha256": "871e1fd9f910db321a84d5327e867fa5550f66de649472f8eb8454f54c564622",
+      "acceptedGitSha256": "871e1fd9f910db321a84d5327e867fa5550f66de649472f8eb8454f54c564622",
+      "contentIdenticalAfterLineEndingNormalization": true
+    },
+    {
+      "path": "src/render/deployment-link-meshes.ts",
+      "candidateSha256": "51db499646e104023466013a4fbdae736b0995d46dff516385309c4613ccb6e1",
+      "acceptedGitSha256": "51db499646e104023466013a4fbdae736b0995d46dff516385309c4613ccb6e1",
+      "contentIdenticalAfterLineEndingNormalization": true
+    },
+    {
+      "path": "src/render/orbital-inspection-follow.ts",
+      "candidateSha256": "0d2ff215102a4efb2c3464a3a5e16b9ad3a74dfad94982b07d04a1d10ec41055",
+      "acceptedGitSha256": "0d2ff215102a4efb2c3464a3a5e16b9ad3a74dfad94982b07d04a1d10ec41055",
+      "contentIdenticalAfterLineEndingNormalization": true
+    },
+    {
+      "path": "src/render/working-face-direction.ts",
+      "candidateSha256": "39cb00a30088c95b1287297bea792d9aa7bc3a7f4fb787f55834da1fdfc3f47e",
+      "acceptedGitSha256": "39cb00a30088c95b1287297bea792d9aa7bc3a7f4fb787f55834da1fdfc3f47e",
+      "contentIdenticalAfterLineEndingNormalization": true
+    },
+    {
+      "path": "src/render/lazy-surface-texture.ts",
+      "candidateSha256": "15355346f1c1076e52e21e7a7369cb2c5bbe44add7888c9f04994b30219ed3e4",
+      "acceptedGitSha256": "15355346f1c1076e52e21e7a7369cb2c5bbe44add7888c9f04994b30219ed3e4",
+      "contentIdenticalAfterLineEndingNormalization": true
+    }
+  ],
+  "basisRuntimeLicense": "Apache-2.0; copied from installed Three0.182.0 with upstream license retained.",
+  "sourceAcquisitionAndRecipe": "public/data/earth-surface-detail.json and tools/prepare-earth-detail.py; original21,125,326-byte NASA source remains in isolated research/source; sourcePNG intermediates and downloaded encoder are not runtime deliverables.",
+  "noPerformanceClaim": "Functional/visual native browser proof only. Integrated isolated high16K performance remains root acceptance."
+}

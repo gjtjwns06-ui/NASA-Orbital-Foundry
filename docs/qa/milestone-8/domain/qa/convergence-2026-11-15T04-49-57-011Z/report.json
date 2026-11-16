@@ -1,0 +1,4905 @@
+{
+  "criteria": {
+    "energyWh": 0.05,
+    "angleDeg": 0.05,
+    "jointDeg": 0.01,
+    "eventSeconds": 0.01
+  },
+  "metrics": [
+    {
+      "profile": {
+        "activeStepSeconds": 0.5,
+        "idleStepSeconds": 5
+      },
+      "energyDifferenceWh": 0.00015556489184831435,
+      "angleDifferenceDeg": 0.0002547623937153816,
+      "jointDifferenceDeg": 0,
+      "minimumEnergyDifferenceWh": 0.00015556489208634616,
+      "endEnergyDifferenceWh": 0.00015556488882850772,
+      "receiptTimeDifferenceS": 0,
+      "latchTimeDifferenceS": 0
+    },
+    {
+      "profile": {
+        "activeStepSeconds": 0.125,
+        "idleStepSeconds": 5
+      },
+      "energyDifferenceWh": 0.00007777531021702089,
+      "angleDifferenceDeg": 0.00006780919481475191,
+      "jointDifferenceDeg": 0,
+      "minimumEnergyDifferenceWh": 0.00007777528927022104,
+      "endEnergyDifferenceWh": 0.00007777531226338397,
+      "receiptTimeDifferenceS": 0,
+      "latchTimeDifferenceS": 0
+    },
+    {
+      "profile": {
+        "activeStepSeconds": 0.25,
+        "idleStepSeconds": 1
+      },
+      "energyDifferenceWh": 2.842170943040401e-14,
+      "angleDifferenceDeg": 0.0000017075472925031877,
+      "jointDifferenceDeg": 0,
+      "minimumEnergyDifferenceWh": 2.842170943040401e-14,
+      "endEnergyDifferenceWh": 2.842170943040401e-14,
+      "receiptTimeDifferenceS": 0,
+      "latchTimeDifferenceS": 0
+    }
+  ],
+  "results": [
+    {
+      "numerics": {
+        "activeStepSeconds": 0.25,
+        "idleStepSeconds": 5
+      },
+      "result": {
+        "modelVersion": "deployment-1.0.0",
+        "status": "complete",
+        "success": true,
+        "evaluatedAt": 1385.0067053601188,
+        "reason": null,
+        "fatalAtSeconds": null,
+        "receiverDrainUntilSeconds": null,
+        "pendingReceiverDrain": false,
+        "solarGoodSeconds": 60,
+        "diagnosticCreatedAt": 226.5,
+        "receivedBits": 16000000,
+        "requiredBits": 16000000,
+        "energyMinimumWh": 29.293032987227637,
+        "energyWh": 37.396316567773525,
+        "motorEnergyJ": 1128,
+        "massKg": 49.65999999999998,
+        "cost": 374,
+        "budget": 560,
+        "mechanisms": [
+          {
+            "partId": "wing",
+            "phase": "deployed-latched",
+            "mechanicalLatch": true,
+            "powerContactClosed": true,
+            "rfContactClosed": false
+          },
+          {
+            "partId": "antenna",
+            "phase": "deployed-latched",
+            "mechanicalLatch": true,
+            "powerContactClosed": false,
+            "rfContactClosed": true
+          }
+        ]
+      },
+      "samples": {
+        "25": {
+          "q": [
+            0.38351577769452294,
+            0.5166913926913704,
+            0.6143801630248047,
+            0.45659902349833364
+          ],
+          "energy": 29.981019023709454,
+          "joints": {
+            "wing:lower-hinge": -3.141592653589793,
+            "wing:upper-hinge": 2.9554242000437316,
+            "antenna:lower-hinge": -3.141592653589793,
+            "antenna:upper-hinge": 3.141592653589793
+          }
+        },
+        "60": {
+          "q": [
+            0.36539523396955664,
+            0.5319005959305743,
+            0.6204735000147511,
+            0.44562396122793685
+          ],
+          "energy": 29.718398272997035,
+          "joints": {
+            "wing:lower-hinge": -3.141592653589793,
+            "wing:upper-hinge": 0.51196324725167,
+            "antenna:lower-hinge": -3.141592653589793,
+            "antenna:upper-hinge": 3.141592653589793
+          }
+        },
+        "100": {
+          "q": [
+            0.4112555257989795,
+            0.4988540865334168,
+            0.6013639096695023,
+            0.4694410942767219
+          ],
+          "energy": 29.415889848686227,
+          "joints": {
+            "wing:lower-hinge": -0.9890199094634533,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": -3.141592653589793,
+            "antenna:upper-hinge": 3.141592653589793
+          }
+        },
+        "150": {
+          "q": [
+            0.3855902870331055,
+            0.5143724590133412,
+            0.6153841524417301,
+            0.4561178015358196
+          ],
+          "energy": 29.505995950190723,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": -3.141592653589793,
+            "antenna:upper-hinge": 3.141592653589793
+          }
+        },
+        "300": {
+          "q": [
+            0.393156767935812,
+            0.5102971258974387,
+            0.6112027666233876,
+            0.45984320936488393
+          ],
+          "energy": 30.464329283524606,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        },
+        "600": {
+          "q": [
+            0.38441093030567886,
+            0.517204210352423,
+            0.613155029226616,
+            0.4569124112883746
+          ],
+          "energy": 32.38099595019237,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        },
+        "900": {
+          "q": [
+            0.07807199442215615,
+            0.7126635601491322,
+            0.657706923061457,
+            0.23116448057507058
+          ],
+          "energy": 34.29766261686014,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        },
+        "1200": {
+          "q": [
+            -0.033091657631112124,
+            0.7045583401428143,
+            0.5013867108197392,
+            0.5011126158298062
+          ],
+          "energy": 36.21432928352784,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        },
+        "1300": {
+          "q": [
+            0.010180272739050311,
+            0.6934489077320446,
+            0.3316358827889464,
+            0.6395643952402205
+          ],
+          "energy": 36.85321817241699,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        }
+      },
+      "latches": [
+        {
+          "timeSeconds": 116.66666666666666,
+          "code": "LATCH_VERIFIED",
+          "partId": "wing"
+        },
+        {
+          "timeSeconds": 296.66666666666663,
+          "code": "LATCH_VERIFIED",
+          "partId": "antenna"
+        }
+      ],
+      "received": [
+        {
+          "offset": 0,
+          "arrivesAt": 1136.0076888756987
+        },
+        {
+          "offset": 64000,
+          "arrivesAt": 1137.0076772187738
+        },
+        {
+          "offset": 128000,
+          "arrivesAt": 1138.007665607816
+        },
+        {
+          "offset": 192000,
+          "arrivesAt": 1139.0076540430466
+        },
+        {
+          "offset": 256000,
+          "arrivesAt": 1140.0076425246862
+        },
+        {
+          "offset": 320000,
+          "arrivesAt": 1141.0076310529566
+        },
+        {
+          "offset": 384000,
+          "arrivesAt": 1142.0076196280804
+        },
+        {
+          "offset": 448000,
+          "arrivesAt": 1143.0076082502799
+        },
+        {
+          "offset": 512000,
+          "arrivesAt": 1144.0075969197778
+        },
+        {
+          "offset": 576000,
+          "arrivesAt": 1145.0075856367976
+        },
+        {
+          "offset": 640000,
+          "arrivesAt": 1146.007574401563
+        },
+        {
+          "offset": 704000,
+          "arrivesAt": 1147.007563214298
+        },
+        {
+          "offset": 768000,
+          "arrivesAt": 1148.0075520752268
+        },
+        {
+          "offset": 832000,
+          "arrivesAt": 1149.0075409845747
+        },
+        {
+          "offset": 896000,
+          "arrivesAt": 1150.007529942566
+        },
+        {
+          "offset": 960000,
+          "arrivesAt": 1151.0075189494266
+        },
+        {
+          "offset": 1024000,
+          "arrivesAt": 1152.007508005382
+        },
+        {
+          "offset": 1088000,
+          "arrivesAt": 1153.0074971106583
+        },
+        {
+          "offset": 1152000,
+          "arrivesAt": 1154.0074862654812
+        },
+        {
+          "offset": 1216000,
+          "arrivesAt": 1155.007475470078
+        },
+        {
+          "offset": 1280000,
+          "arrivesAt": 1156.0074647246747
+        },
+        {
+          "offset": 1344000,
+          "arrivesAt": 1157.0074540294988
+        },
+        {
+          "offset": 1408000,
+          "arrivesAt": 1158.0074433847772
+        },
+        {
+          "offset": 1472000,
+          "arrivesAt": 1159.0074327907373
+        },
+        {
+          "offset": 1536000,
+          "arrivesAt": 1160.007422247607
+        },
+        {
+          "offset": 1600000,
+          "arrivesAt": 1161.007411755614
+        },
+        {
+          "offset": 1664000,
+          "arrivesAt": 1162.0074013149858
+        },
+        {
+          "offset": 1728000,
+          "arrivesAt": 1163.007390925951
+        },
+        {
+          "offset": 1792000,
+          "arrivesAt": 1164.0073805887378
+        },
+        {
+          "offset": 1856000,
+          "arrivesAt": 1165.0073703035741
+        },
+        {
+          "offset": 1920000,
+          "arrivesAt": 1166.007360070689
+        },
+        {
+          "offset": 1984000,
+          "arrivesAt": 1167.0073498903107
+        },
+        {
+          "offset": 2048000,
+          "arrivesAt": 1168.007339762668
+        },
+        {
+          "offset": 2112000,
+          "arrivesAt": 1169.0073296879893
+        },
+        {
+          "offset": 2176000,
+          "arrivesAt": 1170.0073196665035
+        },
+        {
+          "offset": 2240000,
+          "arrivesAt": 1171.0073096984395
+        },
+        {
+          "offset": 2304000,
+          "arrivesAt": 1172.007299784026
+        },
+        {
+          "offset": 2368000,
+          "arrivesAt": 1173.0072899234915
+        },
+        {
+          "offset": 2432000,
+          "arrivesAt": 1174.007280117065
+        },
+        {
+          "offset": 2496000,
+          "arrivesAt": 1175.0072703649753
+        },
+        {
+          "offset": 2560000,
+          "arrivesAt": 1176.0072606674507
+        },
+        {
+          "offset": 2624000,
+          "arrivesAt": 1177.00725102472
+        },
+        {
+          "offset": 2688000,
+          "arrivesAt": 1178.0072414370115
+        },
+        {
+          "offset": 2752000,
+          "arrivesAt": 1179.007231904554
+        },
+        {
+          "offset": 2816000,
+          "arrivesAt": 1180.007222427575
+        },
+        {
+          "offset": 2880000,
+          "arrivesAt": 1181.0072130063033
+        },
+        {
+          "offset": 2944000,
+          "arrivesAt": 1182.0072036409665
+        },
+        {
+          "offset": 3008000,
+          "arrivesAt": 1183.007194331792
+        },
+        {
+          "offset": 3072000,
+          "arrivesAt": 1184.007185079008
+        },
+        {
+          "offset": 3136000,
+          "arrivesAt": 1185.0071758828415
+        },
+        {
+          "offset": 3200000,
+          "arrivesAt": 1186.0071667435193
+        },
+        {
+          "offset": 3264000,
+          "arrivesAt": 1187.0071576612684
+        },
+        {
+          "offset": 3328000,
+          "arrivesAt": 1188.0071486363156
+        },
+        {
+          "offset": 3392000,
+          "arrivesAt": 1189.0071396688866
+        },
+        {
+          "offset": 3456000,
+          "arrivesAt": 1190.0071307592077
+        },
+        {
+          "offset": 3520000,
+          "arrivesAt": 1191.0071219075041
+        },
+        {
+          "offset": 3584000,
+          "arrivesAt": 1192.0071131140012
+        },
+        {
+          "offset": 3648000,
+          "arrivesAt": 1193.007104378924
+        },
+        {
+          "offset": 3712000,
+          "arrivesAt": 1194.0070957024964
+        },
+        {
+          "offset": 3776000,
+          "arrivesAt": 1195.0070870849427
+        },
+        {
+          "offset": 3840000,
+          "arrivesAt": 1196.0070785264863
+        },
+        {
+          "offset": 3904000,
+          "arrivesAt": 1197.0070700273504
+        },
+        {
+          "offset": 3968000,
+          "arrivesAt": 1198.0070615877576
+        },
+        {
+          "offset": 4032000,
+          "arrivesAt": 1199.0070532079299
+        },
+        {
+          "offset": 4096000,
+          "arrivesAt": 1200.0070448880883
+        },
+        {
+          "offset": 4160000,
+          "arrivesAt": 1201.0070366284547
+        },
+        {
+          "offset": 4224000,
+          "arrivesAt": 1202.0070284292487
+        },
+        {
+          "offset": 4288000,
+          "arrivesAt": 1203.0070202906904
+        },
+        {
+          "offset": 4352000,
+          "arrivesAt": 1204.0070122129991
+        },
+        {
+          "offset": 4416000,
+          "arrivesAt": 1205.0070041963932
+        },
+        {
+          "offset": 4480000,
+          "arrivesAt": 1206.0069962410903
+        },
+        {
+          "offset": 4544000,
+          "arrivesAt": 1207.006988347308
+        },
+        {
+          "offset": 4608000,
+          "arrivesAt": 1208.0069805152623
+        },
+        {
+          "offset": 4672000,
+          "arrivesAt": 1209.0069727451694
+        },
+        {
+          "offset": 4736000,
+          "arrivesAt": 1210.0069650372438
+        },
+        {
+          "offset": 4800000,
+          "arrivesAt": 1211.0069573916999
+        },
+        {
+          "offset": 4864000,
+          "arrivesAt": 1212.006949808751
+        },
+        {
+          "offset": 4928000,
+          "arrivesAt": 1213.0069422886097
+        },
+        {
+          "offset": 4992000,
+          "arrivesAt": 1214.0069348314876
+        },
+        {
+          "offset": 5056000,
+          "arrivesAt": 1215.0069274375956
+        },
+        {
+          "offset": 5120000,
+          "arrivesAt": 1216.0069201071433
+        },
+        {
+          "offset": 5184000,
+          "arrivesAt": 1217.00691284034
+        },
+        {
+          "offset": 5248000,
+          "arrivesAt": 1218.0069056373936
+        },
+        {
+          "offset": 5312000,
+          "arrivesAt": 1219.006898498511
+        },
+        {
+          "offset": 5376000,
+          "arrivesAt": 1220.0068914238984
+        },
+        {
+          "offset": 5440000,
+          "arrivesAt": 1221.0068844137609
+        },
+        {
+          "offset": 5504000,
+          "arrivesAt": 1222.0068774683023
+        },
+        {
+          "offset": 5568000,
+          "arrivesAt": 1223.0068705877254
+        },
+        {
+          "offset": 5632000,
+          "arrivesAt": 1224.0068637722322
+        },
+        {
+          "offset": 5696000,
+          "arrivesAt": 1225.0068570220233
+        },
+        {
+          "offset": 5760000,
+          "arrivesAt": 1226.0068503372981
+        },
+        {
+          "offset": 5824000,
+          "arrivesAt": 1227.0068437182554
+        },
+        {
+          "offset": 5888000,
+          "arrivesAt": 1228.0068371650918
+        },
+        {
+          "offset": 5952000,
+          "arrivesAt": 1229.0068306780038
+        },
+        {
+          "offset": 6016000,
+          "arrivesAt": 1230.0068242571856
+        },
+        {
+          "offset": 6080000,
+          "arrivesAt": 1231.0068179028308
+        },
+        {
+          "offset": 6144000,
+          "arrivesAt": 1232.0068116151315
+        },
+        {
+          "offset": 6208000,
+          "arrivesAt": 1233.0068053942787
+        },
+        {
+          "offset": 6272000,
+          "arrivesAt": 1234.0067992404615
+        },
+        {
+          "offset": 6336000,
+          "arrivesAt": 1235.0067931538683
+        },
+        {
+          "offset": 6400000,
+          "arrivesAt": 1236.0067871346857
+        },
+        {
+          "offset": 6464000,
+          "arrivesAt": 1237.006781183099
+        },
+        {
+          "offset": 6528000,
+          "arrivesAt": 1238.0067752992923
+        },
+        {
+          "offset": 6592000,
+          "arrivesAt": 1239.0067694834474
+        },
+        {
+          "offset": 6656000,
+          "arrivesAt": 1240.0067637357454
+        },
+        {
+          "offset": 6720000,
+          "arrivesAt": 1241.006758056366
+        },
+        {
+          "offset": 6784000,
+          "arrivesAt": 1242.0067524454864
+        },
+        {
+          "offset": 6848000,
+          "arrivesAt": 1243.0067469032836
+        },
+        {
+          "offset": 6912000,
+          "arrivesAt": 1244.0067414299315
+        },
+        {
+          "offset": 6976000,
+          "arrivesAt": 1245.0067360256035
+        },
+        {
+          "offset": 7040000,
+          "arrivesAt": 1246.006730690471
+        },
+        {
+          "offset": 7104000,
+          "arrivesAt": 1247.0067254247035
+        },
+        {
+          "offset": 7168000,
+          "arrivesAt": 1248.0067202284695
+        },
+        {
+          "offset": 7232000,
+          "arrivesAt": 1249.006715101935
+        },
+        {
+          "offset": 7296000,
+          "arrivesAt": 1250.0067100452645
+        },
+        {
+          "offset": 7360000,
+          "arrivesAt": 1251.0067050586213
+        },
+        {
+          "offset": 7424000,
+          "arrivesAt": 1252.0067001421658
+        },
+        {
+          "offset": 7488000,
+          "arrivesAt": 1253.0066952960576
+        },
+        {
+          "offset": 7552000,
+          "arrivesAt": 1254.0066905204542
+        },
+        {
+          "offset": 7616000,
+          "arrivesAt": 1255.006685815511
+        },
+        {
+          "offset": 7680000,
+          "arrivesAt": 1256.0066811813815
+        },
+        {
+          "offset": 7744000,
+          "arrivesAt": 1257.0066766182179
+        },
+        {
+          "offset": 7808000,
+          "arrivesAt": 1258.0066721261699
+        },
+        {
+          "offset": 7872000,
+          "arrivesAt": 1259.006667705385
+        },
+        {
+          "offset": 7936000,
+          "arrivesAt": 1260.0066633560098
+        },
+        {
+          "offset": 8000000,
+          "arrivesAt": 1261.0066590781878
+        },
+        {
+          "offset": 8064000,
+          "arrivesAt": 1262.006654872061
+        },
+        {
+          "offset": 8128000,
+          "arrivesAt": 1263.0066507377694
+        },
+        {
+          "offset": 8192000,
+          "arrivesAt": 1264.0066466754508
+        },
+        {
+          "offset": 8256000,
+          "arrivesAt": 1265.006642685241
+        },
+        {
+          "offset": 8320000,
+          "arrivesAt": 1266.0066387672737
+        },
+        {
+          "offset": 8384000,
+          "arrivesAt": 1267.0066349216804
+        },
+        {
+          "offset": 8448000,
+          "arrivesAt": 1268.0066311485905
+        },
+        {
+          "offset": 8512000,
+          "arrivesAt": 1269.0066274481312
+        },
+        {
+          "offset": 8576000,
+          "arrivesAt": 1270.0066238204276
+        },
+        {
+          "offset": 8640000,
+          "arrivesAt": 1271.0066202656028
+        },
+        {
+          "offset": 8704000,
+          "arrivesAt": 1272.0066167837772
+        },
+        {
+          "offset": 8768000,
+          "arrivesAt": 1273.0066133750695
+        },
+        {
+          "offset": 8832000,
+          "arrivesAt": 1274.0066100395954
+        },
+        {
+          "offset": 8896000,
+          "arrivesAt": 1275.0066067774692
+        },
+        {
+          "offset": 8960000,
+          "arrivesAt": 1276.0066035888021
+        },
+        {
+          "offset": 9024000,
+          "arrivesAt": 1277.0066004737039
+        },
+        {
+          "offset": 9088000,
+          "arrivesAt": 1278.0065974322813
+        },
+        {
+          "offset": 9152000,
+          "arrivesAt": 1279.0065944646385
+        },
+        {
+          "offset": 9216000,
+          "arrivesAt": 1280.0065915708785
+        },
+        {
+          "offset": 9280000,
+          "arrivesAt": 1281.0065887511005
+        },
+        {
+          "offset": 9344000,
+          "arrivesAt": 1282.0065860054024
+        },
+        {
+          "offset": 9408000,
+          "arrivesAt": 1283.0065833338788
+        },
+        {
+          "offset": 9472000,
+          "arrivesAt": 1284.0065807366227
+        },
+        {
+          "offset": 9536000,
+          "arrivesAt": 1285.0065782137242
+        },
+        {
+          "offset": 9600000,
+          "arrivesAt": 1286.0065757652708
+        },
+        {
+          "offset": 9664000,
+          "arrivesAt": 1287.006573391348
+        },
+        {
+          "offset": 9728000,
+          "arrivesAt": 1288.0065710920385
+        },
+        {
+          "offset": 9792000,
+          "arrivesAt": 1289.0065688674222
+        },
+        {
+          "offset": 9856000,
+          "arrivesAt": 1290.006566717577
+        },
+        {
+          "offset": 9920000,
+          "arrivesAt": 1291.0065646425785
+        },
+        {
+          "offset": 9984000,
+          "arrivesAt": 1292.0065626424987
+        },
+        {
+          "offset": 10048000,
+          "arrivesAt": 1293.006560717408
+        },
+        {
+          "offset": 10112000,
+          "arrivesAt": 1294.0065588673742
+        },
+        {
+          "offset": 10176000,
+          "arrivesAt": 1295.006557092462
+        },
+        {
+          "offset": 10240000,
+          "arrivesAt": 1296.0065553927334
+        },
+        {
+          "offset": 10304000,
+          "arrivesAt": 1297.0065537682488
+        },
+        {
+          "offset": 10368000,
+          "arrivesAt": 1298.0065522190648
+        },
+        {
+          "offset": 10432000,
+          "arrivesAt": 1299.0065507452364
+        },
+        {
+          "offset": 10496000,
+          "arrivesAt": 1300.0065493468153
+        },
+        {
+          "offset": 10560000,
+          "arrivesAt": 1301.0065480238504
+        },
+        {
+          "offset": 10624000,
+          "arrivesAt": 1302.006546776389
+        },
+        {
+          "offset": 10688000,
+          "arrivesAt": 1303.0065456044747
+        },
+        {
+          "offset": 10752000,
+          "arrivesAt": 1304.0065445081486
+        },
+        {
+          "offset": 10816000,
+          "arrivesAt": 1305.0065434874498
+        },
+        {
+          "offset": 10880000,
+          "arrivesAt": 1306.0065425424139
+        },
+        {
+          "offset": 10944000,
+          "arrivesAt": 1307.0065416730743
+        },
+        {
+          "offset": 11008000,
+          "arrivesAt": 1308.0065408794617
+        },
+        {
+          "offset": 11072000,
+          "arrivesAt": 1309.0065401616037
+        },
+        {
+          "offset": 11136000,
+          "arrivesAt": 1310.0065395195254
+        },
+        {
+          "offset": 11200000,
+          "arrivesAt": 1311.00653895325
+        },
+        {
+          "offset": 11264000,
+          "arrivesAt": 1312.0065384627965
+        },
+        {
+          "offset": 11328000,
+          "arrivesAt": 1313.0065380481822
+        },
+        {
+          "offset": 11392000,
+          "arrivesAt": 1314.0065377094218
+        },
+        {
+          "offset": 11456000,
+          "arrivesAt": 1315.0065374465264
+        },
+        {
+          "offset": 11520000,
+          "arrivesAt": 1316.0065372595054
+        },
+        {
+          "offset": 11584000,
+          "arrivesAt": 1317.0065371483647
+        },
+        {
+          "offset": 11648000,
+          "arrivesAt": 1318.006537113108
+        },
+        {
+          "offset": 11712000,
+          "arrivesAt": 1319.0065371537357
+        },
+        {
+          "offset": 11776000,
+          "arrivesAt": 1320.0065372702463
+        },
+        {
+          "offset": 11840000,
+          "arrivesAt": 1321.006537462635
+        },
+        {
+          "offset": 11904000,
+          "arrivesAt": 1322.006537730894
+        },
+        {
+          "offset": 11968000,
+          "arrivesAt": 1323.0065380750136
+        },
+        {
+          "offset": 12032000,
+          "arrivesAt": 1324.0065384949808
+        },
+        {
+          "offset": 12096000,
+          "arrivesAt": 1325.0065389907802
+        },
+        {
+          "offset": 12160000,
+          "arrivesAt": 1326.0065395623933
+        },
+        {
+          "offset": 12224000,
+          "arrivesAt": 1327.0065402097994
+        },
+        {
+          "offset": 12288000,
+          "arrivesAt": 1328.0065409329748
+        },
+        {
+          "offset": 12352000,
+          "arrivesAt": 1329.0065417318926
+        },
+        {
+          "offset": 12416000,
+          "arrivesAt": 1330.0065426065244
+        },
+        {
+          "offset": 12480000,
+          "arrivesAt": 1331.006543556838
+        },
+        {
+          "offset": 12544000,
+          "arrivesAt": 1332.0065445827993
+        },
+        {
+          "offset": 12608000,
+          "arrivesAt": 1333.0065456843708
+        },
+        {
+          "offset": 12672000,
+          "arrivesAt": 1334.006546861513
+        },
+        {
+          "offset": 12736000,
+          "arrivesAt": 1335.006548114183
+        },
+        {
+          "offset": 12800000,
+          "arrivesAt": 1336.006549442336
+        },
+        {
+          "offset": 12864000,
+          "arrivesAt": 1337.0065508459243
+        },
+        {
+          "offset": 12928000,
+          "arrivesAt": 1338.0065523248973
+        },
+        {
+          "offset": 12992000,
+          "arrivesAt": 1339.0065538792019
+        },
+        {
+          "offset": 13056000,
+          "arrivesAt": 1340.0065555087824
+        },
+        {
+          "offset": 13120000,
+          "arrivesAt": 1341.0065572135804
+        },
+        {
+          "offset": 13184000,
+          "arrivesAt": 1342.0065589935352
+        },
+        {
+          "offset": 13248000,
+          "arrivesAt": 1343.0065608485831
+        },
+        {
+          "offset": 13312000,
+          "arrivesAt": 1344.0065627786585
+        },
+        {
+          "offset": 13376000,
+          "arrivesAt": 1345.0065647836918
+        },
+        {
+          "offset": 13440000,
+          "arrivesAt": 1346.0065668636125
+        },
+        {
+          "offset": 13504000,
+          "arrivesAt": 1347.0065690183465
+        },
+        {
+          "offset": 13568000,
+          "arrivesAt": 1348.0065712478176
+        },
+        {
+          "offset": 13632000,
+          "arrivesAt": 1349.006573551947
+        },
+        {
+          "offset": 13696000,
+          "arrivesAt": 1350.006575930653
+        },
+        {
+          "offset": 13760000,
+          "arrivesAt": 1351.0065783838522
+        },
+        {
+          "offset": 13824000,
+          "arrivesAt": 1352.0065809114578
+        },
+        {
+          "offset": 13888000,
+          "arrivesAt": 1353.0065835133814
+        },
+        {
+          "offset": 13952000,
+          "arrivesAt": 1354.0065861895314
+        },
+        {
+          "offset": 14016000,
+          "arrivesAt": 1355.006588939814
+        },
+        {
+          "offset": 14080000,
+          "arrivesAt": 1356.0065917641336
+        },
+        {
+          "offset": 14144000,
+          "arrivesAt": 1357.006594662391
+        },
+        {
+          "offset": 14208000,
+          "arrivesAt": 1358.0065976344858
+        },
+        {
+          "offset": 14272000,
+          "arrivesAt": 1359.0066006803145
+        },
+        {
+          "offset": 14336000,
+          "arrivesAt": 1360.0066037997713
+        },
+        {
+          "offset": 14400000,
+          "arrivesAt": 1361.0066069927482
+        },
+        {
+          "offset": 14464000,
+          "arrivesAt": 1362.006610259135
+        },
+        {
+          "offset": 14528000,
+          "arrivesAt": 1363.0066135988188
+        },
+        {
+          "offset": 14592000,
+          "arrivesAt": 1364.0066170116847
+        },
+        {
+          "offset": 14656000,
+          "arrivesAt": 1365.0066204976158
+        },
+        {
+          "offset": 14720000,
+          "arrivesAt": 1366.0066240564925
+        },
+        {
+          "offset": 14784000,
+          "arrivesAt": 1367.006627688193
+        },
+        {
+          "offset": 14848000,
+          "arrivesAt": 1368.0066313925934
+        },
+        {
+          "offset": 14912000,
+          "arrivesAt": 1369.0066351695675
+        },
+        {
+          "offset": 14976000,
+          "arrivesAt": 1370.0066390189875
+        },
+        {
+          "offset": 15040000,
+          "arrivesAt": 1371.0066429407223
+        },
+        {
+          "offset": 15104000,
+          "arrivesAt": 1372.0066469346398
+        },
+        {
+          "offset": 15168000,
+          "arrivesAt": 1373.0066510006054
+        },
+        {
+          "offset": 15232000,
+          "arrivesAt": 1374.0066551384818
+        },
+        {
+          "offset": 15296000,
+          "arrivesAt": 1375.0066593481308
+        },
+        {
+          "offset": 15360000,
+          "arrivesAt": 1376.0066636294112
+        },
+        {
+          "offset": 15424000,
+          "arrivesAt": 1377.00666798218
+        },
+        {
+          "offset": 15488000,
+          "arrivesAt": 1378.0066724062926
+        },
+        {
+          "offset": 15552000,
+          "arrivesAt": 1379.0066769016018
+        },
+        {
+          "offset": 15616000,
+          "arrivesAt": 1380.0066814679592
+        },
+        {
+          "offset": 15680000,
+          "arrivesAt": 1381.0066861052132
+        },
+        {
+          "offset": 15744000,
+          "arrivesAt": 1382.006690813212
+        },
+        {
+          "offset": 15808000,
+          "arrivesAt": 1383.0066955918003
+        },
+        {
+          "offset": 15872000,
+          "arrivesAt": 1384.006700440822
+        },
+        {
+          "offset": 15936000,
+          "arrivesAt": 1385.0067053601188
+        }
+      ],
+      "diagnosticCreatedAt": 226.5
+    },
+    {
+      "numerics": {
+        "activeStepSeconds": 0.5,
+        "idleStepSeconds": 5
+      },
+      "result": {
+        "modelVersion": "deployment-1.0.0",
+        "status": "complete",
+        "success": true,
+        "evaluatedAt": 1385.0067053601188,
+        "reason": null,
+        "fatalAtSeconds": null,
+        "receiverDrainUntilSeconds": null,
+        "pendingReceiverDrain": false,
+        "solarGoodSeconds": 60,
+        "diagnosticCreatedAt": 226.5,
+        "receivedBits": 16000000,
+        "requiredBits": 16000000,
+        "energyMinimumWh": 29.293188552119723,
+        "energyWh": 37.39647213266235,
+        "motorEnergyJ": 1128,
+        "massKg": 49.65999999999998,
+        "cost": 374,
+        "budget": 560,
+        "mechanisms": [
+          {
+            "partId": "wing",
+            "phase": "deployed-latched",
+            "mechanicalLatch": true,
+            "powerContactClosed": true,
+            "rfContactClosed": false
+          },
+          {
+            "partId": "antenna",
+            "phase": "deployed-latched",
+            "mechanicalLatch": true,
+            "powerContactClosed": false,
+            "rfContactClosed": true
+          }
+        ]
+      },
+      "samples": {
+        "25": {
+          "q": [
+            0.38351588438198303,
+            0.5166914121388113,
+            0.6143800781430765,
+            0.45659902609358877
+          ],
+          "energy": 29.98101902355751,
+          "joints": {
+            "wing:lower-hinge": -3.141592653589793,
+            "wing:upper-hinge": 2.9554242000437316,
+            "antenna:lower-hinge": -3.141592653589793,
+            "antenna:upper-hinge": 3.141592653589793
+          }
+        },
+        "60": {
+          "q": [
+            0.3653955759792199,
+            0.5319002979162242,
+            0.6204733549946029,
+            0.445624238426488
+          ],
+          "energy": 29.718553805840017,
+          "joints": {
+            "wing:lower-hinge": -3.141592653589793,
+            "wing:upper-hinge": 0.51196324725167,
+            "antenna:lower-hinge": -3.141592653589793,
+            "antenna:upper-hinge": 3.141592653589793
+          }
+        },
+        "100": {
+          "q": [
+            0.41125460033086203,
+            0.49885466354328145,
+            0.6013644832117945,
+            0.46944055715205707
+          ],
+          "energy": 29.416045372867565,
+          "joints": {
+            "wing:lower-hinge": -0.9890199094634533,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": -3.141592653589793,
+            "antenna:upper-hinge": 3.141592653589793
+          }
+        },
+        "150": {
+          "q": [
+            0.38559085162065704,
+            0.5143722072536837,
+            0.6153837364558965,
+            0.4561181694002222
+          ],
+          "energy": 29.50615151508257,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": -3.141592653589793,
+            "antenna:upper-hinge": 3.141592653589793
+          }
+        },
+        "300": {
+          "q": [
+            0.39315660528616975,
+            0.5102973516558386,
+            0.6112026332281423,
+            0.45984327520132046
+          ],
+          "energy": 30.464484848415392,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        },
+        "600": {
+          "q": [
+            0.38441080902293234,
+            0.5172042668708169,
+            0.6131551351933398,
+            0.4569123071476544
+          ],
+          "energy": 32.38115151508145,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        },
+        "900": {
+          "q": [
+            0.0780725330189135,
+            0.7126629699403877,
+            0.6577076831590452,
+            0.23116395561877215
+          ],
+          "energy": 34.297818181749214,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        },
+        "1200": {
+          "q": [
+            -0.03309160945325161,
+            0.7045582710239456,
+            0.501387501860387,
+            0.5011119247171656
+          ],
+          "energy": 36.21448484841682,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        },
+        "1300": {
+          "q": [
+            0.010179529811378984,
+            0.6934493133498361,
+            0.3316375014502779,
+            0.6395631279391247
+          ],
+          "energy": 36.85337373730588,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        }
+      },
+      "latches": [
+        {
+          "timeSeconds": 116.66666666666666,
+          "code": "LATCH_VERIFIED",
+          "partId": "wing"
+        },
+        {
+          "timeSeconds": 296.66666666666663,
+          "code": "LATCH_VERIFIED",
+          "partId": "antenna"
+        }
+      ],
+      "received": [
+        {
+          "offset": 0,
+          "arrivesAt": 1136.0076888756987
+        },
+        {
+          "offset": 64000,
+          "arrivesAt": 1137.0076772187738
+        },
+        {
+          "offset": 128000,
+          "arrivesAt": 1138.007665607816
+        },
+        {
+          "offset": 192000,
+          "arrivesAt": 1139.0076540430466
+        },
+        {
+          "offset": 256000,
+          "arrivesAt": 1140.0076425246862
+        },
+        {
+          "offset": 320000,
+          "arrivesAt": 1141.0076310529566
+        },
+        {
+          "offset": 384000,
+          "arrivesAt": 1142.0076196280804
+        },
+        {
+          "offset": 448000,
+          "arrivesAt": 1143.0076082502799
+        },
+        {
+          "offset": 512000,
+          "arrivesAt": 1144.0075969197778
+        },
+        {
+          "offset": 576000,
+          "arrivesAt": 1145.0075856367976
+        },
+        {
+          "offset": 640000,
+          "arrivesAt": 1146.007574401563
+        },
+        {
+          "offset": 704000,
+          "arrivesAt": 1147.007563214298
+        },
+        {
+          "offset": 768000,
+          "arrivesAt": 1148.0075520752268
+        },
+        {
+          "offset": 832000,
+          "arrivesAt": 1149.0075409845747
+        },
+        {
+          "offset": 896000,
+          "arrivesAt": 1150.007529942566
+        },
+        {
+          "offset": 960000,
+          "arrivesAt": 1151.0075189494266
+        },
+        {
+          "offset": 1024000,
+          "arrivesAt": 1152.007508005382
+        },
+        {
+          "offset": 1088000,
+          "arrivesAt": 1153.0074971106583
+        },
+        {
+          "offset": 1152000,
+          "arrivesAt": 1154.0074862654812
+        },
+        {
+          "offset": 1216000,
+          "arrivesAt": 1155.007475470078
+        },
+        {
+          "offset": 1280000,
+          "arrivesAt": 1156.0074647246747
+        },
+        {
+          "offset": 1344000,
+          "arrivesAt": 1157.0074540294988
+        },
+        {
+          "offset": 1408000,
+          "arrivesAt": 1158.0074433847772
+        },
+        {
+          "offset": 1472000,
+          "arrivesAt": 1159.0074327907373
+        },
+        {
+          "offset": 1536000,
+          "arrivesAt": 1160.007422247607
+        },
+        {
+          "offset": 1600000,
+          "arrivesAt": 1161.007411755614
+        },
+        {
+          "offset": 1664000,
+          "arrivesAt": 1162.0074013149858
+        },
+        {
+          "offset": 1728000,
+          "arrivesAt": 1163.007390925951
+        },
+        {
+          "offset": 1792000,
+          "arrivesAt": 1164.0073805887378
+        },
+        {
+          "offset": 1856000,
+          "arrivesAt": 1165.0073703035741
+        },
+        {
+          "offset": 1920000,
+          "arrivesAt": 1166.007360070689
+        },
+        {
+          "offset": 1984000,
+          "arrivesAt": 1167.0073498903107
+        },
+        {
+          "offset": 2048000,
+          "arrivesAt": 1168.007339762668
+        },
+        {
+          "offset": 2112000,
+          "arrivesAt": 1169.0073296879893
+        },
+        {
+          "offset": 2176000,
+          "arrivesAt": 1170.0073196665035
+        },
+        {
+          "offset": 2240000,
+          "arrivesAt": 1171.0073096984395
+        },
+        {
+          "offset": 2304000,
+          "arrivesAt": 1172.007299784026
+        },
+        {
+          "offset": 2368000,
+          "arrivesAt": 1173.0072899234915
+        },
+        {
+          "offset": 2432000,
+          "arrivesAt": 1174.007280117065
+        },
+        {
+          "offset": 2496000,
+          "arrivesAt": 1175.0072703649753
+        },
+        {
+          "offset": 2560000,
+          "arrivesAt": 1176.0072606674507
+        },
+        {
+          "offset": 2624000,
+          "arrivesAt": 1177.00725102472
+        },
+        {
+          "offset": 2688000,
+          "arrivesAt": 1178.0072414370115
+        },
+        {
+          "offset": 2752000,
+          "arrivesAt": 1179.007231904554
+        },
+        {
+          "offset": 2816000,
+          "arrivesAt": 1180.007222427575
+        },
+        {
+          "offset": 2880000,
+          "arrivesAt": 1181.0072130063033
+        },
+        {
+          "offset": 2944000,
+          "arrivesAt": 1182.0072036409665
+        },
+        {
+          "offset": 3008000,
+          "arrivesAt": 1183.007194331792
+        },
+        {
+          "offset": 3072000,
+          "arrivesAt": 1184.007185079008
+        },
+        {
+          "offset": 3136000,
+          "arrivesAt": 1185.0071758828415
+        },
+        {
+          "offset": 3200000,
+          "arrivesAt": 1186.0071667435193
+        },
+        {
+          "offset": 3264000,
+          "arrivesAt": 1187.0071576612684
+        },
+        {
+          "offset": 3328000,
+          "arrivesAt": 1188.0071486363156
+        },
+        {
+          "offset": 3392000,
+          "arrivesAt": 1189.0071396688866
+        },
+        {
+          "offset": 3456000,
+          "arrivesAt": 1190.0071307592077
+        },
+        {
+          "offset": 3520000,
+          "arrivesAt": 1191.0071219075041
+        },
+        {
+          "offset": 3584000,
+          "arrivesAt": 1192.0071131140012
+        },
+        {
+          "offset": 3648000,
+          "arrivesAt": 1193.007104378924
+        },
+        {
+          "offset": 3712000,
+          "arrivesAt": 1194.0070957024964
+        },
+        {
+          "offset": 3776000,
+          "arrivesAt": 1195.0070870849427
+        },
+        {
+          "offset": 3840000,
+          "arrivesAt": 1196.0070785264863
+        },
+        {
+          "offset": 3904000,
+          "arrivesAt": 1197.0070700273504
+        },
+        {
+          "offset": 3968000,
+          "arrivesAt": 1198.0070615877576
+        },
+        {
+          "offset": 4032000,
+          "arrivesAt": 1199.0070532079299
+        },
+        {
+          "offset": 4096000,
+          "arrivesAt": 1200.0070448880883
+        },
+        {
+          "offset": 4160000,
+          "arrivesAt": 1201.0070366284547
+        },
+        {
+          "offset": 4224000,
+          "arrivesAt": 1202.0070284292487
+        },
+        {
+          "offset": 4288000,
+          "arrivesAt": 1203.0070202906904
+        },
+        {
+          "offset": 4352000,
+          "arrivesAt": 1204.0070122129991
+        },
+        {
+          "offset": 4416000,
+          "arrivesAt": 1205.0070041963932
+        },
+        {
+          "offset": 4480000,
+          "arrivesAt": 1206.0069962410903
+        },
+        {
+          "offset": 4544000,
+          "arrivesAt": 1207.006988347308
+        },
+        {
+          "offset": 4608000,
+          "arrivesAt": 1208.0069805152623
+        },
+        {
+          "offset": 4672000,
+          "arrivesAt": 1209.0069727451694
+        },
+        {
+          "offset": 4736000,
+          "arrivesAt": 1210.0069650372438
+        },
+        {
+          "offset": 4800000,
+          "arrivesAt": 1211.0069573916999
+        },
+        {
+          "offset": 4864000,
+          "arrivesAt": 1212.006949808751
+        },
+        {
+          "offset": 4928000,
+          "arrivesAt": 1213.0069422886097
+        },
+        {
+          "offset": 4992000,
+          "arrivesAt": 1214.0069348314876
+        },
+        {
+          "offset": 5056000,
+          "arrivesAt": 1215.0069274375956
+        },
+        {
+          "offset": 5120000,
+          "arrivesAt": 1216.0069201071433
+        },
+        {
+          "offset": 5184000,
+          "arrivesAt": 1217.00691284034
+        },
+        {
+          "offset": 5248000,
+          "arrivesAt": 1218.0069056373936
+        },
+        {
+          "offset": 5312000,
+          "arrivesAt": 1219.006898498511
+        },
+        {
+          "offset": 5376000,
+          "arrivesAt": 1220.0068914238984
+        },
+        {
+          "offset": 5440000,
+          "arrivesAt": 1221.0068844137609
+        },
+        {
+          "offset": 5504000,
+          "arrivesAt": 1222.0068774683023
+        },
+        {
+          "offset": 5568000,
+          "arrivesAt": 1223.0068705877254
+        },
+        {
+          "offset": 5632000,
+          "arrivesAt": 1224.0068637722322
+        },
+        {
+          "offset": 5696000,
+          "arrivesAt": 1225.0068570220233
+        },
+        {
+          "offset": 5760000,
+          "arrivesAt": 1226.0068503372981
+        },
+        {
+          "offset": 5824000,
+          "arrivesAt": 1227.0068437182554
+        },
+        {
+          "offset": 5888000,
+          "arrivesAt": 1228.0068371650918
+        },
+        {
+          "offset": 5952000,
+          "arrivesAt": 1229.0068306780038
+        },
+        {
+          "offset": 6016000,
+          "arrivesAt": 1230.0068242571856
+        },
+        {
+          "offset": 6080000,
+          "arrivesAt": 1231.0068179028308
+        },
+        {
+          "offset": 6144000,
+          "arrivesAt": 1232.0068116151315
+        },
+        {
+          "offset": 6208000,
+          "arrivesAt": 1233.0068053942787
+        },
+        {
+          "offset": 6272000,
+          "arrivesAt": 1234.0067992404615
+        },
+        {
+          "offset": 6336000,
+          "arrivesAt": 1235.0067931538683
+        },
+        {
+          "offset": 6400000,
+          "arrivesAt": 1236.0067871346857
+        },
+        {
+          "offset": 6464000,
+          "arrivesAt": 1237.006781183099
+        },
+        {
+          "offset": 6528000,
+          "arrivesAt": 1238.0067752992923
+        },
+        {
+          "offset": 6592000,
+          "arrivesAt": 1239.0067694834474
+        },
+        {
+          "offset": 6656000,
+          "arrivesAt": 1240.0067637357454
+        },
+        {
+          "offset": 6720000,
+          "arrivesAt": 1241.006758056366
+        },
+        {
+          "offset": 6784000,
+          "arrivesAt": 1242.0067524454864
+        },
+        {
+          "offset": 6848000,
+          "arrivesAt": 1243.0067469032836
+        },
+        {
+          "offset": 6912000,
+          "arrivesAt": 1244.0067414299315
+        },
+        {
+          "offset": 6976000,
+          "arrivesAt": 1245.0067360256035
+        },
+        {
+          "offset": 7040000,
+          "arrivesAt": 1246.006730690471
+        },
+        {
+          "offset": 7104000,
+          "arrivesAt": 1247.0067254247035
+        },
+        {
+          "offset": 7168000,
+          "arrivesAt": 1248.0067202284695
+        },
+        {
+          "offset": 7232000,
+          "arrivesAt": 1249.006715101935
+        },
+        {
+          "offset": 7296000,
+          "arrivesAt": 1250.0067100452645
+        },
+        {
+          "offset": 7360000,
+          "arrivesAt": 1251.0067050586213
+        },
+        {
+          "offset": 7424000,
+          "arrivesAt": 1252.0067001421658
+        },
+        {
+          "offset": 7488000,
+          "arrivesAt": 1253.0066952960576
+        },
+        {
+          "offset": 7552000,
+          "arrivesAt": 1254.0066905204542
+        },
+        {
+          "offset": 7616000,
+          "arrivesAt": 1255.006685815511
+        },
+        {
+          "offset": 7680000,
+          "arrivesAt": 1256.0066811813815
+        },
+        {
+          "offset": 7744000,
+          "arrivesAt": 1257.0066766182179
+        },
+        {
+          "offset": 7808000,
+          "arrivesAt": 1258.0066721261699
+        },
+        {
+          "offset": 7872000,
+          "arrivesAt": 1259.006667705385
+        },
+        {
+          "offset": 7936000,
+          "arrivesAt": 1260.0066633560098
+        },
+        {
+          "offset": 8000000,
+          "arrivesAt": 1261.0066590781878
+        },
+        {
+          "offset": 8064000,
+          "arrivesAt": 1262.006654872061
+        },
+        {
+          "offset": 8128000,
+          "arrivesAt": 1263.0066507377694
+        },
+        {
+          "offset": 8192000,
+          "arrivesAt": 1264.0066466754508
+        },
+        {
+          "offset": 8256000,
+          "arrivesAt": 1265.006642685241
+        },
+        {
+          "offset": 8320000,
+          "arrivesAt": 1266.0066387672737
+        },
+        {
+          "offset": 8384000,
+          "arrivesAt": 1267.0066349216804
+        },
+        {
+          "offset": 8448000,
+          "arrivesAt": 1268.0066311485905
+        },
+        {
+          "offset": 8512000,
+          "arrivesAt": 1269.0066274481312
+        },
+        {
+          "offset": 8576000,
+          "arrivesAt": 1270.0066238204276
+        },
+        {
+          "offset": 8640000,
+          "arrivesAt": 1271.0066202656028
+        },
+        {
+          "offset": 8704000,
+          "arrivesAt": 1272.0066167837772
+        },
+        {
+          "offset": 8768000,
+          "arrivesAt": 1273.0066133750695
+        },
+        {
+          "offset": 8832000,
+          "arrivesAt": 1274.0066100395954
+        },
+        {
+          "offset": 8896000,
+          "arrivesAt": 1275.0066067774692
+        },
+        {
+          "offset": 8960000,
+          "arrivesAt": 1276.0066035888021
+        },
+        {
+          "offset": 9024000,
+          "arrivesAt": 1277.0066004737039
+        },
+        {
+          "offset": 9088000,
+          "arrivesAt": 1278.0065974322813
+        },
+        {
+          "offset": 9152000,
+          "arrivesAt": 1279.0065944646385
+        },
+        {
+          "offset": 9216000,
+          "arrivesAt": 1280.0065915708785
+        },
+        {
+          "offset": 9280000,
+          "arrivesAt": 1281.0065887511005
+        },
+        {
+          "offset": 9344000,
+          "arrivesAt": 1282.0065860054024
+        },
+        {
+          "offset": 9408000,
+          "arrivesAt": 1283.0065833338788
+        },
+        {
+          "offset": 9472000,
+          "arrivesAt": 1284.0065807366227
+        },
+        {
+          "offset": 9536000,
+          "arrivesAt": 1285.0065782137242
+        },
+        {
+          "offset": 9600000,
+          "arrivesAt": 1286.0065757652708
+        },
+        {
+          "offset": 9664000,
+          "arrivesAt": 1287.006573391348
+        },
+        {
+          "offset": 9728000,
+          "arrivesAt": 1288.0065710920385
+        },
+        {
+          "offset": 9792000,
+          "arrivesAt": 1289.0065688674222
+        },
+        {
+          "offset": 9856000,
+          "arrivesAt": 1290.006566717577
+        },
+        {
+          "offset": 9920000,
+          "arrivesAt": 1291.0065646425785
+        },
+        {
+          "offset": 9984000,
+          "arrivesAt": 1292.0065626424987
+        },
+        {
+          "offset": 10048000,
+          "arrivesAt": 1293.006560717408
+        },
+        {
+          "offset": 10112000,
+          "arrivesAt": 1294.0065588673742
+        },
+        {
+          "offset": 10176000,
+          "arrivesAt": 1295.006557092462
+        },
+        {
+          "offset": 10240000,
+          "arrivesAt": 1296.0065553927334
+        },
+        {
+          "offset": 10304000,
+          "arrivesAt": 1297.0065537682488
+        },
+        {
+          "offset": 10368000,
+          "arrivesAt": 1298.0065522190648
+        },
+        {
+          "offset": 10432000,
+          "arrivesAt": 1299.0065507452364
+        },
+        {
+          "offset": 10496000,
+          "arrivesAt": 1300.0065493468153
+        },
+        {
+          "offset": 10560000,
+          "arrivesAt": 1301.0065480238504
+        },
+        {
+          "offset": 10624000,
+          "arrivesAt": 1302.006546776389
+        },
+        {
+          "offset": 10688000,
+          "arrivesAt": 1303.0065456044747
+        },
+        {
+          "offset": 10752000,
+          "arrivesAt": 1304.0065445081486
+        },
+        {
+          "offset": 10816000,
+          "arrivesAt": 1305.0065434874498
+        },
+        {
+          "offset": 10880000,
+          "arrivesAt": 1306.0065425424139
+        },
+        {
+          "offset": 10944000,
+          "arrivesAt": 1307.0065416730743
+        },
+        {
+          "offset": 11008000,
+          "arrivesAt": 1308.0065408794617
+        },
+        {
+          "offset": 11072000,
+          "arrivesAt": 1309.0065401616037
+        },
+        {
+          "offset": 11136000,
+          "arrivesAt": 1310.0065395195254
+        },
+        {
+          "offset": 11200000,
+          "arrivesAt": 1311.00653895325
+        },
+        {
+          "offset": 11264000,
+          "arrivesAt": 1312.0065384627965
+        },
+        {
+          "offset": 11328000,
+          "arrivesAt": 1313.0065380481822
+        },
+        {
+          "offset": 11392000,
+          "arrivesAt": 1314.0065377094218
+        },
+        {
+          "offset": 11456000,
+          "arrivesAt": 1315.0065374465264
+        },
+        {
+          "offset": 11520000,
+          "arrivesAt": 1316.0065372595054
+        },
+        {
+          "offset": 11584000,
+          "arrivesAt": 1317.0065371483647
+        },
+        {
+          "offset": 11648000,
+          "arrivesAt": 1318.006537113108
+        },
+        {
+          "offset": 11712000,
+          "arrivesAt": 1319.0065371537357
+        },
+        {
+          "offset": 11776000,
+          "arrivesAt": 1320.0065372702463
+        },
+        {
+          "offset": 11840000,
+          "arrivesAt": 1321.006537462635
+        },
+        {
+          "offset": 11904000,
+          "arrivesAt": 1322.006537730894
+        },
+        {
+          "offset": 11968000,
+          "arrivesAt": 1323.0065380750136
+        },
+        {
+          "offset": 12032000,
+          "arrivesAt": 1324.0065384949808
+        },
+        {
+          "offset": 12096000,
+          "arrivesAt": 1325.0065389907802
+        },
+        {
+          "offset": 12160000,
+          "arrivesAt": 1326.0065395623933
+        },
+        {
+          "offset": 12224000,
+          "arrivesAt": 1327.0065402097994
+        },
+        {
+          "offset": 12288000,
+          "arrivesAt": 1328.0065409329748
+        },
+        {
+          "offset": 12352000,
+          "arrivesAt": 1329.0065417318926
+        },
+        {
+          "offset": 12416000,
+          "arrivesAt": 1330.0065426065244
+        },
+        {
+          "offset": 12480000,
+          "arrivesAt": 1331.006543556838
+        },
+        {
+          "offset": 12544000,
+          "arrivesAt": 1332.0065445827993
+        },
+        {
+          "offset": 12608000,
+          "arrivesAt": 1333.0065456843708
+        },
+        {
+          "offset": 12672000,
+          "arrivesAt": 1334.006546861513
+        },
+        {
+          "offset": 12736000,
+          "arrivesAt": 1335.006548114183
+        },
+        {
+          "offset": 12800000,
+          "arrivesAt": 1336.006549442336
+        },
+        {
+          "offset": 12864000,
+          "arrivesAt": 1337.0065508459243
+        },
+        {
+          "offset": 12928000,
+          "arrivesAt": 1338.0065523248973
+        },
+        {
+          "offset": 12992000,
+          "arrivesAt": 1339.0065538792019
+        },
+        {
+          "offset": 13056000,
+          "arrivesAt": 1340.0065555087824
+        },
+        {
+          "offset": 13120000,
+          "arrivesAt": 1341.0065572135804
+        },
+        {
+          "offset": 13184000,
+          "arrivesAt": 1342.0065589935352
+        },
+        {
+          "offset": 13248000,
+          "arrivesAt": 1343.0065608485831
+        },
+        {
+          "offset": 13312000,
+          "arrivesAt": 1344.0065627786585
+        },
+        {
+          "offset": 13376000,
+          "arrivesAt": 1345.0065647836918
+        },
+        {
+          "offset": 13440000,
+          "arrivesAt": 1346.0065668636125
+        },
+        {
+          "offset": 13504000,
+          "arrivesAt": 1347.0065690183465
+        },
+        {
+          "offset": 13568000,
+          "arrivesAt": 1348.0065712478176
+        },
+        {
+          "offset": 13632000,
+          "arrivesAt": 1349.006573551947
+        },
+        {
+          "offset": 13696000,
+          "arrivesAt": 1350.006575930653
+        },
+        {
+          "offset": 13760000,
+          "arrivesAt": 1351.0065783838522
+        },
+        {
+          "offset": 13824000,
+          "arrivesAt": 1352.0065809114578
+        },
+        {
+          "offset": 13888000,
+          "arrivesAt": 1353.0065835133814
+        },
+        {
+          "offset": 13952000,
+          "arrivesAt": 1354.0065861895314
+        },
+        {
+          "offset": 14016000,
+          "arrivesAt": 1355.006588939814
+        },
+        {
+          "offset": 14080000,
+          "arrivesAt": 1356.0065917641336
+        },
+        {
+          "offset": 14144000,
+          "arrivesAt": 1357.006594662391
+        },
+        {
+          "offset": 14208000,
+          "arrivesAt": 1358.0065976344858
+        },
+        {
+          "offset": 14272000,
+          "arrivesAt": 1359.0066006803145
+        },
+        {
+          "offset": 14336000,
+          "arrivesAt": 1360.0066037997713
+        },
+        {
+          "offset": 14400000,
+          "arrivesAt": 1361.0066069927482
+        },
+        {
+          "offset": 14464000,
+          "arrivesAt": 1362.006610259135
+        },
+        {
+          "offset": 14528000,
+          "arrivesAt": 1363.0066135988188
+        },
+        {
+          "offset": 14592000,
+          "arrivesAt": 1364.0066170116847
+        },
+        {
+          "offset": 14656000,
+          "arrivesAt": 1365.0066204976158
+        },
+        {
+          "offset": 14720000,
+          "arrivesAt": 1366.0066240564925
+        },
+        {
+          "offset": 14784000,
+          "arrivesAt": 1367.006627688193
+        },
+        {
+          "offset": 14848000,
+          "arrivesAt": 1368.0066313925934
+        },
+        {
+          "offset": 14912000,
+          "arrivesAt": 1369.0066351695675
+        },
+        {
+          "offset": 14976000,
+          "arrivesAt": 1370.0066390189875
+        },
+        {
+          "offset": 15040000,
+          "arrivesAt": 1371.0066429407223
+        },
+        {
+          "offset": 15104000,
+          "arrivesAt": 1372.0066469346398
+        },
+        {
+          "offset": 15168000,
+          "arrivesAt": 1373.0066510006054
+        },
+        {
+          "offset": 15232000,
+          "arrivesAt": 1374.0066551384818
+        },
+        {
+          "offset": 15296000,
+          "arrivesAt": 1375.0066593481308
+        },
+        {
+          "offset": 15360000,
+          "arrivesAt": 1376.0066636294112
+        },
+        {
+          "offset": 15424000,
+          "arrivesAt": 1377.00666798218
+        },
+        {
+          "offset": 15488000,
+          "arrivesAt": 1378.0066724062926
+        },
+        {
+          "offset": 15552000,
+          "arrivesAt": 1379.0066769016018
+        },
+        {
+          "offset": 15616000,
+          "arrivesAt": 1380.0066814679592
+        },
+        {
+          "offset": 15680000,
+          "arrivesAt": 1381.0066861052132
+        },
+        {
+          "offset": 15744000,
+          "arrivesAt": 1382.006690813212
+        },
+        {
+          "offset": 15808000,
+          "arrivesAt": 1383.0066955918003
+        },
+        {
+          "offset": 15872000,
+          "arrivesAt": 1384.006700440822
+        },
+        {
+          "offset": 15936000,
+          "arrivesAt": 1385.0067053601188
+        }
+      ],
+      "diagnosticCreatedAt": 226.5
+    },
+    {
+      "numerics": {
+        "activeStepSeconds": 0.125,
+        "idleStepSeconds": 5
+      },
+      "result": {
+        "modelVersion": "deployment-1.0.0",
+        "status": "complete",
+        "success": true,
+        "evaluatedAt": 1385.0067053601188,
+        "reason": null,
+        "fatalAtSeconds": null,
+        "receiverDrainUntilSeconds": null,
+        "pendingReceiverDrain": false,
+        "solarGoodSeconds": 60,
+        "diagnosticCreatedAt": 226.5,
+        "receivedBits": 16000000,
+        "requiredBits": 16000000,
+        "energyMinimumWh": 29.292955211938366,
+        "energyWh": 37.39623879246126,
+        "motorEnergyJ": 1128,
+        "massKg": 49.65999999999998,
+        "cost": 374,
+        "budget": 560,
+        "mechanisms": [
+          {
+            "partId": "wing",
+            "phase": "deployed-latched",
+            "mechanicalLatch": true,
+            "powerContactClosed": true,
+            "rfContactClosed": false
+          },
+          {
+            "partId": "antenna",
+            "phase": "deployed-latched",
+            "mechanicalLatch": true,
+            "powerContactClosed": false,
+            "rfContactClosed": true
+          }
+        ]
+      },
+      "samples": {
+        "25": {
+          "q": [
+            0.38351574959591034,
+            0.5166913881724584,
+            0.6143801850647771,
+            0.4565990225570739
+          ],
+          "energy": 29.981019023751365,
+          "joints": {
+            "wing:lower-hinge": -3.141592653589793,
+            "wing:upper-hinge": 2.9554242000437316,
+            "antenna:lower-hinge": -3.141592653589793,
+            "antenna:upper-hinge": 3.141592653589793
+          }
+        },
+        "60": {
+          "q": [
+            0.3653951502349732,
+            0.5319006685450712,
+            0.6204735360036948,
+            0.44562389310397055
+          ],
+          "energy": 29.71832050713301,
+          "joints": {
+            "wing:lower-hinge": -3.141592653589793,
+            "wing:upper-hinge": 0.51196324725167,
+            "antenna:lower-hinge": -3.141592653589793,
+            "antenna:upper-hinge": 3.141592653589793
+          }
+        },
+        "100": {
+          "q": [
+            0.4112557700947343,
+            0.49885393208596823,
+            0.6013637609687189,
+            0.46944123487366646
+          ],
+          "energy": 29.415812084529353,
+          "joints": {
+            "wing:lower-hinge": -0.9890199094634533,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": -3.141592653589793,
+            "antenna:upper-hinge": 3.141592653589793
+          }
+        },
+        "150": {
+          "q": [
+            0.3855901292243677,
+            0.5143725346690964,
+            0.615384264791007,
+            0.4561176980456427
+          ],
+          "energy": 29.505918174901453,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": -3.141592653589793,
+            "antenna:upper-hinge": 3.141592653589793
+          }
+        },
+        "300": {
+          "q": [
+            0.3931568050059096,
+            0.5102970703102232,
+            0.6112028040092863,
+            0.45984318966527526
+          ],
+          "energy": 30.464251508235336,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        },
+        "600": {
+          "q": [
+            0.3844109610013893,
+            0.5172041957875769,
+            0.6131550027732559,
+            0.4569124374492806
+          ],
+          "energy": 32.38091817490141,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        },
+        "900": {
+          "q": [
+            0.07807185742038875,
+            0.7126637126716868,
+            0.6577067259933091,
+            0.23116461732518714
+          ],
+          "energy": 34.29758484156065,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        },
+        "1200": {
+          "q": [
+            -0.03309166345902667,
+            0.7045583602845009,
+            0.5013865152848418,
+            0.5011127827677648
+          ],
+          "energy": 36.21425150822005,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        },
+        "1300": {
+          "q": [
+            0.010180487366334446,
+            0.6934488278561539,
+            0.33163543687046676,
+            0.6395647096530929
+          ],
+          "energy": 36.85314039710677,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        }
+      },
+      "latches": [
+        {
+          "timeSeconds": 116.66666666666666,
+          "code": "LATCH_VERIFIED",
+          "partId": "wing"
+        },
+        {
+          "timeSeconds": 296.66666666666663,
+          "code": "LATCH_VERIFIED",
+          "partId": "antenna"
+        }
+      ],
+      "received": [
+        {
+          "offset": 0,
+          "arrivesAt": 1136.0076888756987
+        },
+        {
+          "offset": 64000,
+          "arrivesAt": 1137.0076772187738
+        },
+        {
+          "offset": 128000,
+          "arrivesAt": 1138.007665607816
+        },
+        {
+          "offset": 192000,
+          "arrivesAt": 1139.0076540430466
+        },
+        {
+          "offset": 256000,
+          "arrivesAt": 1140.0076425246862
+        },
+        {
+          "offset": 320000,
+          "arrivesAt": 1141.0076310529566
+        },
+        {
+          "offset": 384000,
+          "arrivesAt": 1142.0076196280804
+        },
+        {
+          "offset": 448000,
+          "arrivesAt": 1143.0076082502799
+        },
+        {
+          "offset": 512000,
+          "arrivesAt": 1144.0075969197778
+        },
+        {
+          "offset": 576000,
+          "arrivesAt": 1145.0075856367976
+        },
+        {
+          "offset": 640000,
+          "arrivesAt": 1146.007574401563
+        },
+        {
+          "offset": 704000,
+          "arrivesAt": 1147.007563214298
+        },
+        {
+          "offset": 768000,
+          "arrivesAt": 1148.0075520752268
+        },
+        {
+          "offset": 832000,
+          "arrivesAt": 1149.0075409845747
+        },
+        {
+          "offset": 896000,
+          "arrivesAt": 1150.007529942566
+        },
+        {
+          "offset": 960000,
+          "arrivesAt": 1151.0075189494266
+        },
+        {
+          "offset": 1024000,
+          "arrivesAt": 1152.007508005382
+        },
+        {
+          "offset": 1088000,
+          "arrivesAt": 1153.0074971106583
+        },
+        {
+          "offset": 1152000,
+          "arrivesAt": 1154.0074862654812
+        },
+        {
+          "offset": 1216000,
+          "arrivesAt": 1155.007475470078
+        },
+        {
+          "offset": 1280000,
+          "arrivesAt": 1156.0074647246747
+        },
+        {
+          "offset": 1344000,
+          "arrivesAt": 1157.0074540294988
+        },
+        {
+          "offset": 1408000,
+          "arrivesAt": 1158.0074433847772
+        },
+        {
+          "offset": 1472000,
+          "arrivesAt": 1159.0074327907373
+        },
+        {
+          "offset": 1536000,
+          "arrivesAt": 1160.007422247607
+        },
+        {
+          "offset": 1600000,
+          "arrivesAt": 1161.007411755614
+        },
+        {
+          "offset": 1664000,
+          "arrivesAt": 1162.0074013149858
+        },
+        {
+          "offset": 1728000,
+          "arrivesAt": 1163.007390925951
+        },
+        {
+          "offset": 1792000,
+          "arrivesAt": 1164.0073805887378
+        },
+        {
+          "offset": 1856000,
+          "arrivesAt": 1165.0073703035741
+        },
+        {
+          "offset": 1920000,
+          "arrivesAt": 1166.007360070689
+        },
+        {
+          "offset": 1984000,
+          "arrivesAt": 1167.0073498903107
+        },
+        {
+          "offset": 2048000,
+          "arrivesAt": 1168.007339762668
+        },
+        {
+          "offset": 2112000,
+          "arrivesAt": 1169.0073296879893
+        },
+        {
+          "offset": 2176000,
+          "arrivesAt": 1170.0073196665035
+        },
+        {
+          "offset": 2240000,
+          "arrivesAt": 1171.0073096984395
+        },
+        {
+          "offset": 2304000,
+          "arrivesAt": 1172.007299784026
+        },
+        {
+          "offset": 2368000,
+          "arrivesAt": 1173.0072899234915
+        },
+        {
+          "offset": 2432000,
+          "arrivesAt": 1174.007280117065
+        },
+        {
+          "offset": 2496000,
+          "arrivesAt": 1175.0072703649753
+        },
+        {
+          "offset": 2560000,
+          "arrivesAt": 1176.0072606674507
+        },
+        {
+          "offset": 2624000,
+          "arrivesAt": 1177.00725102472
+        },
+        {
+          "offset": 2688000,
+          "arrivesAt": 1178.0072414370115
+        },
+        {
+          "offset": 2752000,
+          "arrivesAt": 1179.007231904554
+        },
+        {
+          "offset": 2816000,
+          "arrivesAt": 1180.007222427575
+        },
+        {
+          "offset": 2880000,
+          "arrivesAt": 1181.0072130063033
+        },
+        {
+          "offset": 2944000,
+          "arrivesAt": 1182.0072036409665
+        },
+        {
+          "offset": 3008000,
+          "arrivesAt": 1183.007194331792
+        },
+        {
+          "offset": 3072000,
+          "arrivesAt": 1184.007185079008
+        },
+        {
+          "offset": 3136000,
+          "arrivesAt": 1185.0071758828415
+        },
+        {
+          "offset": 3200000,
+          "arrivesAt": 1186.0071667435193
+        },
+        {
+          "offset": 3264000,
+          "arrivesAt": 1187.0071576612684
+        },
+        {
+          "offset": 3328000,
+          "arrivesAt": 1188.0071486363156
+        },
+        {
+          "offset": 3392000,
+          "arrivesAt": 1189.0071396688866
+        },
+        {
+          "offset": 3456000,
+          "arrivesAt": 1190.0071307592077
+        },
+        {
+          "offset": 3520000,
+          "arrivesAt": 1191.0071219075041
+        },
+        {
+          "offset": 3584000,
+          "arrivesAt": 1192.0071131140012
+        },
+        {
+          "offset": 3648000,
+          "arrivesAt": 1193.007104378924
+        },
+        {
+          "offset": 3712000,
+          "arrivesAt": 1194.0070957024964
+        },
+        {
+          "offset": 3776000,
+          "arrivesAt": 1195.0070870849427
+        },
+        {
+          "offset": 3840000,
+          "arrivesAt": 1196.0070785264863
+        },
+        {
+          "offset": 3904000,
+          "arrivesAt": 1197.0070700273504
+        },
+        {
+          "offset": 3968000,
+          "arrivesAt": 1198.0070615877576
+        },
+        {
+          "offset": 4032000,
+          "arrivesAt": 1199.0070532079299
+        },
+        {
+          "offset": 4096000,
+          "arrivesAt": 1200.0070448880883
+        },
+        {
+          "offset": 4160000,
+          "arrivesAt": 1201.0070366284547
+        },
+        {
+          "offset": 4224000,
+          "arrivesAt": 1202.0070284292487
+        },
+        {
+          "offset": 4288000,
+          "arrivesAt": 1203.0070202906904
+        },
+        {
+          "offset": 4352000,
+          "arrivesAt": 1204.0070122129991
+        },
+        {
+          "offset": 4416000,
+          "arrivesAt": 1205.0070041963932
+        },
+        {
+          "offset": 4480000,
+          "arrivesAt": 1206.0069962410903
+        },
+        {
+          "offset": 4544000,
+          "arrivesAt": 1207.006988347308
+        },
+        {
+          "offset": 4608000,
+          "arrivesAt": 1208.0069805152623
+        },
+        {
+          "offset": 4672000,
+          "arrivesAt": 1209.0069727451694
+        },
+        {
+          "offset": 4736000,
+          "arrivesAt": 1210.0069650372438
+        },
+        {
+          "offset": 4800000,
+          "arrivesAt": 1211.0069573916999
+        },
+        {
+          "offset": 4864000,
+          "arrivesAt": 1212.006949808751
+        },
+        {
+          "offset": 4928000,
+          "arrivesAt": 1213.0069422886097
+        },
+        {
+          "offset": 4992000,
+          "arrivesAt": 1214.0069348314876
+        },
+        {
+          "offset": 5056000,
+          "arrivesAt": 1215.0069274375956
+        },
+        {
+          "offset": 5120000,
+          "arrivesAt": 1216.0069201071433
+        },
+        {
+          "offset": 5184000,
+          "arrivesAt": 1217.00691284034
+        },
+        {
+          "offset": 5248000,
+          "arrivesAt": 1218.0069056373936
+        },
+        {
+          "offset": 5312000,
+          "arrivesAt": 1219.006898498511
+        },
+        {
+          "offset": 5376000,
+          "arrivesAt": 1220.0068914238984
+        },
+        {
+          "offset": 5440000,
+          "arrivesAt": 1221.0068844137609
+        },
+        {
+          "offset": 5504000,
+          "arrivesAt": 1222.0068774683023
+        },
+        {
+          "offset": 5568000,
+          "arrivesAt": 1223.0068705877254
+        },
+        {
+          "offset": 5632000,
+          "arrivesAt": 1224.0068637722322
+        },
+        {
+          "offset": 5696000,
+          "arrivesAt": 1225.0068570220233
+        },
+        {
+          "offset": 5760000,
+          "arrivesAt": 1226.0068503372981
+        },
+        {
+          "offset": 5824000,
+          "arrivesAt": 1227.0068437182554
+        },
+        {
+          "offset": 5888000,
+          "arrivesAt": 1228.0068371650918
+        },
+        {
+          "offset": 5952000,
+          "arrivesAt": 1229.0068306780038
+        },
+        {
+          "offset": 6016000,
+          "arrivesAt": 1230.0068242571856
+        },
+        {
+          "offset": 6080000,
+          "arrivesAt": 1231.0068179028308
+        },
+        {
+          "offset": 6144000,
+          "arrivesAt": 1232.0068116151315
+        },
+        {
+          "offset": 6208000,
+          "arrivesAt": 1233.0068053942787
+        },
+        {
+          "offset": 6272000,
+          "arrivesAt": 1234.0067992404615
+        },
+        {
+          "offset": 6336000,
+          "arrivesAt": 1235.0067931538683
+        },
+        {
+          "offset": 6400000,
+          "arrivesAt": 1236.0067871346857
+        },
+        {
+          "offset": 6464000,
+          "arrivesAt": 1237.006781183099
+        },
+        {
+          "offset": 6528000,
+          "arrivesAt": 1238.0067752992923
+        },
+        {
+          "offset": 6592000,
+          "arrivesAt": 1239.0067694834474
+        },
+        {
+          "offset": 6656000,
+          "arrivesAt": 1240.0067637357454
+        },
+        {
+          "offset": 6720000,
+          "arrivesAt": 1241.006758056366
+        },
+        {
+          "offset": 6784000,
+          "arrivesAt": 1242.0067524454864
+        },
+        {
+          "offset": 6848000,
+          "arrivesAt": 1243.0067469032836
+        },
+        {
+          "offset": 6912000,
+          "arrivesAt": 1244.0067414299315
+        },
+        {
+          "offset": 6976000,
+          "arrivesAt": 1245.0067360256035
+        },
+        {
+          "offset": 7040000,
+          "arrivesAt": 1246.006730690471
+        },
+        {
+          "offset": 7104000,
+          "arrivesAt": 1247.0067254247035
+        },
+        {
+          "offset": 7168000,
+          "arrivesAt": 1248.0067202284695
+        },
+        {
+          "offset": 7232000,
+          "arrivesAt": 1249.006715101935
+        },
+        {
+          "offset": 7296000,
+          "arrivesAt": 1250.0067100452645
+        },
+        {
+          "offset": 7360000,
+          "arrivesAt": 1251.0067050586213
+        },
+        {
+          "offset": 7424000,
+          "arrivesAt": 1252.0067001421658
+        },
+        {
+          "offset": 7488000,
+          "arrivesAt": 1253.0066952960576
+        },
+        {
+          "offset": 7552000,
+          "arrivesAt": 1254.0066905204542
+        },
+        {
+          "offset": 7616000,
+          "arrivesAt": 1255.006685815511
+        },
+        {
+          "offset": 7680000,
+          "arrivesAt": 1256.0066811813815
+        },
+        {
+          "offset": 7744000,
+          "arrivesAt": 1257.0066766182179
+        },
+        {
+          "offset": 7808000,
+          "arrivesAt": 1258.0066721261699
+        },
+        {
+          "offset": 7872000,
+          "arrivesAt": 1259.006667705385
+        },
+        {
+          "offset": 7936000,
+          "arrivesAt": 1260.0066633560098
+        },
+        {
+          "offset": 8000000,
+          "arrivesAt": 1261.0066590781878
+        },
+        {
+          "offset": 8064000,
+          "arrivesAt": 1262.006654872061
+        },
+        {
+          "offset": 8128000,
+          "arrivesAt": 1263.0066507377694
+        },
+        {
+          "offset": 8192000,
+          "arrivesAt": 1264.0066466754508
+        },
+        {
+          "offset": 8256000,
+          "arrivesAt": 1265.006642685241
+        },
+        {
+          "offset": 8320000,
+          "arrivesAt": 1266.0066387672737
+        },
+        {
+          "offset": 8384000,
+          "arrivesAt": 1267.0066349216804
+        },
+        {
+          "offset": 8448000,
+          "arrivesAt": 1268.0066311485905
+        },
+        {
+          "offset": 8512000,
+          "arrivesAt": 1269.0066274481312
+        },
+        {
+          "offset": 8576000,
+          "arrivesAt": 1270.0066238204276
+        },
+        {
+          "offset": 8640000,
+          "arrivesAt": 1271.0066202656028
+        },
+        {
+          "offset": 8704000,
+          "arrivesAt": 1272.0066167837772
+        },
+        {
+          "offset": 8768000,
+          "arrivesAt": 1273.0066133750695
+        },
+        {
+          "offset": 8832000,
+          "arrivesAt": 1274.0066100395954
+        },
+        {
+          "offset": 8896000,
+          "arrivesAt": 1275.0066067774692
+        },
+        {
+          "offset": 8960000,
+          "arrivesAt": 1276.0066035888021
+        },
+        {
+          "offset": 9024000,
+          "arrivesAt": 1277.0066004737039
+        },
+        {
+          "offset": 9088000,
+          "arrivesAt": 1278.0065974322813
+        },
+        {
+          "offset": 9152000,
+          "arrivesAt": 1279.0065944646385
+        },
+        {
+          "offset": 9216000,
+          "arrivesAt": 1280.0065915708785
+        },
+        {
+          "offset": 9280000,
+          "arrivesAt": 1281.0065887511005
+        },
+        {
+          "offset": 9344000,
+          "arrivesAt": 1282.0065860054024
+        },
+        {
+          "offset": 9408000,
+          "arrivesAt": 1283.0065833338788
+        },
+        {
+          "offset": 9472000,
+          "arrivesAt": 1284.0065807366227
+        },
+        {
+          "offset": 9536000,
+          "arrivesAt": 1285.0065782137242
+        },
+        {
+          "offset": 9600000,
+          "arrivesAt": 1286.0065757652708
+        },
+        {
+          "offset": 9664000,
+          "arrivesAt": 1287.006573391348
+        },
+        {
+          "offset": 9728000,
+          "arrivesAt": 1288.0065710920385
+        },
+        {
+          "offset": 9792000,
+          "arrivesAt": 1289.0065688674222
+        },
+        {
+          "offset": 9856000,
+          "arrivesAt": 1290.006566717577
+        },
+        {
+          "offset": 9920000,
+          "arrivesAt": 1291.0065646425785
+        },
+        {
+          "offset": 9984000,
+          "arrivesAt": 1292.0065626424987
+        },
+        {
+          "offset": 10048000,
+          "arrivesAt": 1293.006560717408
+        },
+        {
+          "offset": 10112000,
+          "arrivesAt": 1294.0065588673742
+        },
+        {
+          "offset": 10176000,
+          "arrivesAt": 1295.006557092462
+        },
+        {
+          "offset": 10240000,
+          "arrivesAt": 1296.0065553927334
+        },
+        {
+          "offset": 10304000,
+          "arrivesAt": 1297.0065537682488
+        },
+        {
+          "offset": 10368000,
+          "arrivesAt": 1298.0065522190648
+        },
+        {
+          "offset": 10432000,
+          "arrivesAt": 1299.0065507452364
+        },
+        {
+          "offset": 10496000,
+          "arrivesAt": 1300.0065493468153
+        },
+        {
+          "offset": 10560000,
+          "arrivesAt": 1301.0065480238504
+        },
+        {
+          "offset": 10624000,
+          "arrivesAt": 1302.006546776389
+        },
+        {
+          "offset": 10688000,
+          "arrivesAt": 1303.0065456044747
+        },
+        {
+          "offset": 10752000,
+          "arrivesAt": 1304.0065445081486
+        },
+        {
+          "offset": 10816000,
+          "arrivesAt": 1305.0065434874498
+        },
+        {
+          "offset": 10880000,
+          "arrivesAt": 1306.0065425424139
+        },
+        {
+          "offset": 10944000,
+          "arrivesAt": 1307.0065416730743
+        },
+        {
+          "offset": 11008000,
+          "arrivesAt": 1308.0065408794617
+        },
+        {
+          "offset": 11072000,
+          "arrivesAt": 1309.0065401616037
+        },
+        {
+          "offset": 11136000,
+          "arrivesAt": 1310.0065395195254
+        },
+        {
+          "offset": 11200000,
+          "arrivesAt": 1311.00653895325
+        },
+        {
+          "offset": 11264000,
+          "arrivesAt": 1312.0065384627965
+        },
+        {
+          "offset": 11328000,
+          "arrivesAt": 1313.0065380481822
+        },
+        {
+          "offset": 11392000,
+          "arrivesAt": 1314.0065377094218
+        },
+        {
+          "offset": 11456000,
+          "arrivesAt": 1315.0065374465264
+        },
+        {
+          "offset": 11520000,
+          "arrivesAt": 1316.0065372595054
+        },
+        {
+          "offset": 11584000,
+          "arrivesAt": 1317.0065371483647
+        },
+        {
+          "offset": 11648000,
+          "arrivesAt": 1318.006537113108
+        },
+        {
+          "offset": 11712000,
+          "arrivesAt": 1319.0065371537357
+        },
+        {
+          "offset": 11776000,
+          "arrivesAt": 1320.0065372702463
+        },
+        {
+          "offset": 11840000,
+          "arrivesAt": 1321.006537462635
+        },
+        {
+          "offset": 11904000,
+          "arrivesAt": 1322.006537730894
+        },
+        {
+          "offset": 11968000,
+          "arrivesAt": 1323.0065380750136
+        },
+        {
+          "offset": 12032000,
+          "arrivesAt": 1324.0065384949808
+        },
+        {
+          "offset": 12096000,
+          "arrivesAt": 1325.0065389907802
+        },
+        {
+          "offset": 12160000,
+          "arrivesAt": 1326.0065395623933
+        },
+        {
+          "offset": 12224000,
+          "arrivesAt": 1327.0065402097994
+        },
+        {
+          "offset": 12288000,
+          "arrivesAt": 1328.0065409329748
+        },
+        {
+          "offset": 12352000,
+          "arrivesAt": 1329.0065417318926
+        },
+        {
+          "offset": 12416000,
+          "arrivesAt": 1330.0065426065244
+        },
+        {
+          "offset": 12480000,
+          "arrivesAt": 1331.006543556838
+        },
+        {
+          "offset": 12544000,
+          "arrivesAt": 1332.0065445827993
+        },
+        {
+          "offset": 12608000,
+          "arrivesAt": 1333.0065456843708
+        },
+        {
+          "offset": 12672000,
+          "arrivesAt": 1334.006546861513
+        },
+        {
+          "offset": 12736000,
+          "arrivesAt": 1335.006548114183
+        },
+        {
+          "offset": 12800000,
+          "arrivesAt": 1336.006549442336
+        },
+        {
+          "offset": 12864000,
+          "arrivesAt": 1337.0065508459243
+        },
+        {
+          "offset": 12928000,
+          "arrivesAt": 1338.0065523248973
+        },
+        {
+          "offset": 12992000,
+          "arrivesAt": 1339.0065538792019
+        },
+        {
+          "offset": 13056000,
+          "arrivesAt": 1340.0065555087824
+        },
+        {
+          "offset": 13120000,
+          "arrivesAt": 1341.0065572135804
+        },
+        {
+          "offset": 13184000,
+          "arrivesAt": 1342.0065589935352
+        },
+        {
+          "offset": 13248000,
+          "arrivesAt": 1343.0065608485831
+        },
+        {
+          "offset": 13312000,
+          "arrivesAt": 1344.0065627786585
+        },
+        {
+          "offset": 13376000,
+          "arrivesAt": 1345.0065647836918
+        },
+        {
+          "offset": 13440000,
+          "arrivesAt": 1346.0065668636125
+        },
+        {
+          "offset": 13504000,
+          "arrivesAt": 1347.0065690183465
+        },
+        {
+          "offset": 13568000,
+          "arrivesAt": 1348.0065712478176
+        },
+        {
+          "offset": 13632000,
+          "arrivesAt": 1349.006573551947
+        },
+        {
+          "offset": 13696000,
+          "arrivesAt": 1350.006575930653
+        },
+        {
+          "offset": 13760000,
+          "arrivesAt": 1351.0065783838522
+        },
+        {
+          "offset": 13824000,
+          "arrivesAt": 1352.0065809114578
+        },
+        {
+          "offset": 13888000,
+          "arrivesAt": 1353.0065835133814
+        },
+        {
+          "offset": 13952000,
+          "arrivesAt": 1354.0065861895314
+        },
+        {
+          "offset": 14016000,
+          "arrivesAt": 1355.006588939814
+        },
+        {
+          "offset": 14080000,
+          "arrivesAt": 1356.0065917641336
+        },
+        {
+          "offset": 14144000,
+          "arrivesAt": 1357.006594662391
+        },
+        {
+          "offset": 14208000,
+          "arrivesAt": 1358.0065976344858
+        },
+        {
+          "offset": 14272000,
+          "arrivesAt": 1359.0066006803145
+        },
+        {
+          "offset": 14336000,
+          "arrivesAt": 1360.0066037997713
+        },
+        {
+          "offset": 14400000,
+          "arrivesAt": 1361.0066069927482
+        },
+        {
+          "offset": 14464000,
+          "arrivesAt": 1362.006610259135
+        },
+        {
+          "offset": 14528000,
+          "arrivesAt": 1363.0066135988188
+        },
+        {
+          "offset": 14592000,
+          "arrivesAt": 1364.0066170116847
+        },
+        {
+          "offset": 14656000,
+          "arrivesAt": 1365.0066204976158
+        },
+        {
+          "offset": 14720000,
+          "arrivesAt": 1366.0066240564925
+        },
+        {
+          "offset": 14784000,
+          "arrivesAt": 1367.006627688193
+        },
+        {
+          "offset": 14848000,
+          "arrivesAt": 1368.0066313925934
+        },
+        {
+          "offset": 14912000,
+          "arrivesAt": 1369.0066351695675
+        },
+        {
+          "offset": 14976000,
+          "arrivesAt": 1370.0066390189875
+        },
+        {
+          "offset": 15040000,
+          "arrivesAt": 1371.0066429407223
+        },
+        {
+          "offset": 15104000,
+          "arrivesAt": 1372.0066469346398
+        },
+        {
+          "offset": 15168000,
+          "arrivesAt": 1373.0066510006054
+        },
+        {
+          "offset": 15232000,
+          "arrivesAt": 1374.0066551384818
+        },
+        {
+          "offset": 15296000,
+          "arrivesAt": 1375.0066593481308
+        },
+        {
+          "offset": 15360000,
+          "arrivesAt": 1376.0066636294112
+        },
+        {
+          "offset": 15424000,
+          "arrivesAt": 1377.00666798218
+        },
+        {
+          "offset": 15488000,
+          "arrivesAt": 1378.0066724062926
+        },
+        {
+          "offset": 15552000,
+          "arrivesAt": 1379.0066769016018
+        },
+        {
+          "offset": 15616000,
+          "arrivesAt": 1380.0066814679592
+        },
+        {
+          "offset": 15680000,
+          "arrivesAt": 1381.0066861052132
+        },
+        {
+          "offset": 15744000,
+          "arrivesAt": 1382.006690813212
+        },
+        {
+          "offset": 15808000,
+          "arrivesAt": 1383.0066955918003
+        },
+        {
+          "offset": 15872000,
+          "arrivesAt": 1384.006700440822
+        },
+        {
+          "offset": 15936000,
+          "arrivesAt": 1385.0067053601188
+        }
+      ],
+      "diagnosticCreatedAt": 226.5
+    },
+    {
+      "numerics": {
+        "activeStepSeconds": 0.25,
+        "idleStepSeconds": 1
+      },
+      "result": {
+        "modelVersion": "deployment-1.0.0",
+        "status": "complete",
+        "success": true,
+        "evaluatedAt": 1385.0067053601188,
+        "reason": null,
+        "fatalAtSeconds": null,
+        "receiverDrainUntilSeconds": null,
+        "pendingReceiverDrain": false,
+        "solarGoodSeconds": 60,
+        "diagnosticCreatedAt": 226.5,
+        "receivedBits": 16000000,
+        "requiredBits": 16000000,
+        "energyMinimumWh": 29.293032987227665,
+        "energyWh": 37.39631656777355,
+        "motorEnergyJ": 1128,
+        "massKg": 49.65999999999998,
+        "cost": 374,
+        "budget": 560,
+        "mechanisms": [
+          {
+            "partId": "wing",
+            "phase": "deployed-latched",
+            "mechanicalLatch": true,
+            "powerContactClosed": true,
+            "rfContactClosed": false
+          },
+          {
+            "partId": "antenna",
+            "phase": "deployed-latched",
+            "mechanicalLatch": true,
+            "powerContactClosed": false,
+            "rfContactClosed": true
+          }
+        ]
+      },
+      "samples": {
+        "25": {
+          "q": [
+            0.38351577769452294,
+            0.5166913926913704,
+            0.6143801630248047,
+            0.45659902349833364
+          ],
+          "energy": 29.981019023709482,
+          "joints": {
+            "wing:lower-hinge": -3.141592653589793,
+            "wing:upper-hinge": 2.9554242000437316,
+            "antenna:lower-hinge": -3.141592653589793,
+            "antenna:upper-hinge": 3.141592653589793
+          }
+        },
+        "60": {
+          "q": [
+            0.36539523396955664,
+            0.5319005959305743,
+            0.6204735000147511,
+            0.44562396122793685
+          ],
+          "energy": 29.718398272997064,
+          "joints": {
+            "wing:lower-hinge": -3.141592653589793,
+            "wing:upper-hinge": 0.51196324725167,
+            "antenna:lower-hinge": -3.141592653589793,
+            "antenna:upper-hinge": 3.141592653589793
+          }
+        },
+        "100": {
+          "q": [
+            0.4112555257989795,
+            0.4988540865334168,
+            0.6013639096695023,
+            0.4694410942767219
+          ],
+          "energy": 29.415889848686255,
+          "joints": {
+            "wing:lower-hinge": -0.9890199094634533,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": -3.141592653589793,
+            "antenna:upper-hinge": 3.141592653589793
+          }
+        },
+        "150": {
+          "q": [
+            0.3855902870331055,
+            0.5143724590133412,
+            0.6153841524417301,
+            0.4561178015358196
+          ],
+          "energy": 29.50599595019075,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": -3.141592653589793,
+            "antenna:upper-hinge": 3.141592653589793
+          }
+        },
+        "300": {
+          "q": [
+            0.393156767935812,
+            0.5102971258974387,
+            0.6112027666233876,
+            0.45984320936488393
+          ],
+          "energy": 30.464329283524634,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        },
+        "600": {
+          "q": [
+            0.38441093030567886,
+            0.517204210352423,
+            0.613155029226616,
+            0.4569124112883746
+          ],
+          "energy": 32.3809959501924,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        },
+        "900": {
+          "q": [
+            0.07807199442215615,
+            0.7126635601491322,
+            0.657706923061457,
+            0.23116448057507058
+          ],
+          "energy": 34.297662616860165,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        },
+        "1200": {
+          "q": [
+            -0.033091657631112124,
+            0.7045583401428143,
+            0.5013867108197392,
+            0.5011126158298062
+          ],
+          "energy": 36.21432928352787,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        },
+        "1300": {
+          "q": [
+            0.010180272739050311,
+            0.6934489077320446,
+            0.3316358827889464,
+            0.6395643952402205
+          ],
+          "energy": 36.853218172417016,
+          "joints": {
+            "wing:lower-hinge": 0,
+            "wing:upper-hinge": 0,
+            "antenna:lower-hinge": 0,
+            "antenna:upper-hinge": 0
+          }
+        }
+      },
+      "latches": [
+        {
+          "timeSeconds": 116.66666666666666,
+          "code": "LATCH_VERIFIED",
+          "partId": "wing"
+        },
+        {
+          "timeSeconds": 296.66666666666663,
+          "code": "LATCH_VERIFIED",
+          "partId": "antenna"
+        }
+      ],
+      "received": [
+        {
+          "offset": 0,
+          "arrivesAt": 1136.0076888756987
+        },
+        {
+          "offset": 64000,
+          "arrivesAt": 1137.0076772187738
+        },
+        {
+          "offset": 128000,
+          "arrivesAt": 1138.007665607816
+        },
+        {
+          "offset": 192000,
+          "arrivesAt": 1139.0076540430466
+        },
+        {
+          "offset": 256000,
+          "arrivesAt": 1140.0076425246862
+        },
+        {
+          "offset": 320000,
+          "arrivesAt": 1141.0076310529566
+        },
+        {
+          "offset": 384000,
+          "arrivesAt": 1142.0076196280804
+        },
+        {
+          "offset": 448000,
+          "arrivesAt": 1143.0076082502799
+        },
+        {
+          "offset": 512000,
+          "arrivesAt": 1144.0075969197778
+        },
+        {
+          "offset": 576000,
+          "arrivesAt": 1145.0075856367976
+        },
+        {
+          "offset": 640000,
+          "arrivesAt": 1146.007574401563
+        },
+        {
+          "offset": 704000,
+          "arrivesAt": 1147.007563214298
+        },
+        {
+          "offset": 768000,
+          "arrivesAt": 1148.0075520752268
+        },
+        {
+          "offset": 832000,
+          "arrivesAt": 1149.0075409845747
+        },
+        {
+          "offset": 896000,
+          "arrivesAt": 1150.007529942566
+        },
+        {
+          "offset": 960000,
+          "arrivesAt": 1151.0075189494266
+        },
+        {
+          "offset": 1024000,
+          "arrivesAt": 1152.007508005382
+        },
+        {
+          "offset": 1088000,
+          "arrivesAt": 1153.0074971106583
+        },
+        {
+          "offset": 1152000,
+          "arrivesAt": 1154.0074862654812
+        },
+        {
+          "offset": 1216000,
+          "arrivesAt": 1155.007475470078
+        },
+        {
+          "offset": 1280000,
+          "arrivesAt": 1156.0074647246747
+        },
+        {
+          "offset": 1344000,
+          "arrivesAt": 1157.0074540294988
+        },
+        {
+          "offset": 1408000,
+          "arrivesAt": 1158.0074433847772
+        },
+        {
+          "offset": 1472000,
+          "arrivesAt": 1159.0074327907373
+        },
+        {
+          "offset": 1536000,
+          "arrivesAt": 1160.007422247607
+        },
+        {
+          "offset": 1600000,
+          "arrivesAt": 1161.007411755614
+        },
+        {
+          "offset": 1664000,
+          "arrivesAt": 1162.0074013149858
+        },
+        {
+          "offset": 1728000,
+          "arrivesAt": 1163.007390925951
+        },
+        {
+          "offset": 1792000,
+          "arrivesAt": 1164.0073805887378
+        },
+        {
+          "offset": 1856000,
+          "arrivesAt": 1165.0073703035741
+        },
+        {
+          "offset": 1920000,
+          "arrivesAt": 1166.007360070689
+        },
+        {
+          "offset": 1984000,
+          "arrivesAt": 1167.0073498903107
+        },
+        {
+          "offset": 2048000,
+          "arrivesAt": 1168.007339762668
+        },
+        {
+          "offset": 2112000,
+          "arrivesAt": 1169.0073296879893
+        },
+        {
+          "offset": 2176000,
+          "arrivesAt": 1170.0073196665035
+        },
+        {
+          "offset": 2240000,
+          "arrivesAt": 1171.0073096984395
+        },
+        {
+          "offset": 2304000,
+          "arrivesAt": 1172.007299784026
+        },
+        {
+          "offset": 2368000,
+          "arrivesAt": 1173.0072899234915
+        },
+        {
+          "offset": 2432000,
+          "arrivesAt": 1174.007280117065
+        },
+        {
+          "offset": 2496000,
+          "arrivesAt": 1175.0072703649753
+        },
+        {
+          "offset": 2560000,
+          "arrivesAt": 1176.0072606674507
+        },
+        {
+          "offset": 2624000,
+          "arrivesAt": 1177.00725102472
+        },
+        {
+          "offset": 2688000,
+          "arrivesAt": 1178.0072414370115
+        },
+        {
+          "offset": 2752000,
+          "arrivesAt": 1179.007231904554
+        },
+        {
+          "offset": 2816000,
+          "arrivesAt": 1180.007222427575
+        },
+        {
+          "offset": 2880000,
+          "arrivesAt": 1181.0072130063033
+        },
+        {
+          "offset": 2944000,
+          "arrivesAt": 1182.0072036409665
+        },
+        {
+          "offset": 3008000,
+          "arrivesAt": 1183.007194331792
+        },
+        {
+          "offset": 3072000,
+          "arrivesAt": 1184.007185079008
+        },
+        {
+          "offset": 3136000,
+          "arrivesAt": 1185.0071758828415
+        },
+        {
+          "offset": 3200000,
+          "arrivesAt": 1186.0071667435193
+        },
+        {
+          "offset": 3264000,
+          "arrivesAt": 1187.0071576612684
+        },
+        {
+          "offset": 3328000,
+          "arrivesAt": 1188.0071486363156
+        },
+        {
+          "offset": 3392000,
+          "arrivesAt": 1189.0071396688866
+        },
+        {
+          "offset": 3456000,
+          "arrivesAt": 1190.0071307592077
+        },
+        {
+          "offset": 3520000,
+          "arrivesAt": 1191.0071219075041
+        },
+        {
+          "offset": 3584000,
+          "arrivesAt": 1192.0071131140012
+        },
+        {
+          "offset": 3648000,
+          "arrivesAt": 1193.007104378924
+        },
+        {
+          "offset": 3712000,
+          "arrivesAt": 1194.0070957024964
+        },
+        {
+          "offset": 3776000,
+          "arrivesAt": 1195.0070870849427
+        },
+        {
+          "offset": 3840000,
+          "arrivesAt": 1196.0070785264863
+        },
+        {
+          "offset": 3904000,
+          "arrivesAt": 1197.0070700273504
+        },
+        {
+          "offset": 3968000,
+          "arrivesAt": 1198.0070615877576
+        },
+        {
+          "offset": 4032000,
+          "arrivesAt": 1199.0070532079299
+        },
+        {
+          "offset": 4096000,
+          "arrivesAt": 1200.0070448880883
+        },
+        {
+          "offset": 4160000,
+          "arrivesAt": 1201.0070366284547
+        },
+        {
+          "offset": 4224000,
+          "arrivesAt": 1202.0070284292487
+        },
+        {
+          "offset": 4288000,
+          "arrivesAt": 1203.0070202906904
+        },
+        {
+          "offset": 4352000,
+          "arrivesAt": 1204.0070122129991
+        },
+        {
+          "offset": 4416000,
+          "arrivesAt": 1205.0070041963932
+        },
+        {
+          "offset": 4480000,
+          "arrivesAt": 1206.0069962410903
+        },
+        {
+          "offset": 4544000,
+          "arrivesAt": 1207.006988347308
+        },
+        {
+          "offset": 4608000,
+          "arrivesAt": 1208.0069805152623
+        },
+        {
+          "offset": 4672000,
+          "arrivesAt": 1209.0069727451694
+        },
+        {
+          "offset": 4736000,
+          "arrivesAt": 1210.0069650372438
+        },
+        {
+          "offset": 4800000,
+          "arrivesAt": 1211.0069573916999
+        },
+        {
+          "offset": 4864000,
+          "arrivesAt": 1212.006949808751
+        },
+        {
+          "offset": 4928000,
+          "arrivesAt": 1213.0069422886097
+        },
+        {
+          "offset": 4992000,
+          "arrivesAt": 1214.0069348314876
+        },
+        {
+          "offset": 5056000,
+          "arrivesAt": 1215.0069274375956
+        },
+        {
+          "offset": 5120000,
+          "arrivesAt": 1216.0069201071433
+        },
+        {
+          "offset": 5184000,
+          "arrivesAt": 1217.00691284034
+        },
+        {
+          "offset": 5248000,
+          "arrivesAt": 1218.0069056373936
+        },
+        {
+          "offset": 5312000,
+          "arrivesAt": 1219.006898498511
+        },
+        {
+          "offset": 5376000,
+          "arrivesAt": 1220.0068914238984
+        },
+        {
+          "offset": 5440000,
+          "arrivesAt": 1221.0068844137609
+        },
+        {
+          "offset": 5504000,
+          "arrivesAt": 1222.0068774683023
+        },
+        {
+          "offset": 5568000,
+          "arrivesAt": 1223.0068705877254
+        },
+        {
+          "offset": 5632000,
+          "arrivesAt": 1224.0068637722322
+        },
+        {
+          "offset": 5696000,
+          "arrivesAt": 1225.0068570220233
+        },
+        {
+          "offset": 5760000,
+          "arrivesAt": 1226.0068503372981
+        },
+        {
+          "offset": 5824000,
+          "arrivesAt": 1227.0068437182554
+        },
+        {
+          "offset": 5888000,
+          "arrivesAt": 1228.0068371650918
+        },
+        {
+          "offset": 5952000,
+          "arrivesAt": 1229.0068306780038
+        },
+        {
+          "offset": 6016000,
+          "arrivesAt": 1230.0068242571856
+        },
+        {
+          "offset": 6080000,
+          "arrivesAt": 1231.0068179028308
+        },
+        {
+          "offset": 6144000,
+          "arrivesAt": 1232.0068116151315
+        },
+        {
+          "offset": 6208000,
+          "arrivesAt": 1233.0068053942787
+        },
+        {
+          "offset": 6272000,
+          "arrivesAt": 1234.0067992404615
+        },
+        {
+          "offset": 6336000,
+          "arrivesAt": 1235.0067931538683
+        },
+        {
+          "offset": 6400000,
+          "arrivesAt": 1236.0067871346857
+        },
+        {
+          "offset": 6464000,
+          "arrivesAt": 1237.006781183099
+        },
+        {
+          "offset": 6528000,
+          "arrivesAt": 1238.0067752992923
+        },
+        {
+          "offset": 6592000,
+          "arrivesAt": 1239.0067694834474
+        },
+        {
+          "offset": 6656000,
+          "arrivesAt": 1240.0067637357454
+        },
+        {
+          "offset": 6720000,
+          "arrivesAt": 1241.006758056366
+        },
+        {
+          "offset": 6784000,
+          "arrivesAt": 1242.0067524454864
+        },
+        {
+          "offset": 6848000,
+          "arrivesAt": 1243.0067469032836
+        },
+        {
+          "offset": 6912000,
+          "arrivesAt": 1244.0067414299315
+        },
+        {
+          "offset": 6976000,
+          "arrivesAt": 1245.0067360256035
+        },
+        {
+          "offset": 7040000,
+          "arrivesAt": 1246.006730690471
+        },
+        {
+          "offset": 7104000,
+          "arrivesAt": 1247.0067254247035
+        },
+        {
+          "offset": 7168000,
+          "arrivesAt": 1248.0067202284695
+        },
+        {
+          "offset": 7232000,
+          "arrivesAt": 1249.006715101935
+        },
+        {
+          "offset": 7296000,
+          "arrivesAt": 1250.0067100452645
+        },
+        {
+          "offset": 7360000,
+          "arrivesAt": 1251.0067050586213
+        },
+        {
+          "offset": 7424000,
+          "arrivesAt": 1252.0067001421658
+        },
+        {
+          "offset": 7488000,
+          "arrivesAt": 1253.0066952960576
+        },
+        {
+          "offset": 7552000,
+          "arrivesAt": 1254.0066905204542
+        },
+        {
+          "offset": 7616000,
+          "arrivesAt": 1255.006685815511
+        },
+        {
+          "offset": 7680000,
+          "arrivesAt": 1256.0066811813815
+        },
+        {
+          "offset": 7744000,
+          "arrivesAt": 1257.0066766182179
+        },
+        {
+          "offset": 7808000,
+          "arrivesAt": 1258.0066721261699
+        },
+        {
+          "offset": 7872000,
+          "arrivesAt": 1259.006667705385
+        },
+        {
+          "offset": 7936000,
+          "arrivesAt": 1260.0066633560098
+        },
+        {
+          "offset": 8000000,
+          "arrivesAt": 1261.0066590781878
+        },
+        {
+          "offset": 8064000,
+          "arrivesAt": 1262.006654872061
+        },
+        {
+          "offset": 8128000,
+          "arrivesAt": 1263.0066507377694
+        },
+        {
+          "offset": 8192000,
+          "arrivesAt": 1264.0066466754508
+        },
+        {
+          "offset": 8256000,
+          "arrivesAt": 1265.006642685241
+        },
+        {
+          "offset": 8320000,
+          "arrivesAt": 1266.0066387672737
+        },
+        {
+          "offset": 8384000,
+          "arrivesAt": 1267.0066349216804
+        },
+        {
+          "offset": 8448000,
+          "arrivesAt": 1268.0066311485905
+        },
+        {
+          "offset": 8512000,
+          "arrivesAt": 1269.0066274481312
+        },
+        {
+          "offset": 8576000,
+          "arrivesAt": 1270.0066238204276
+        },
+        {
+          "offset": 8640000,
+          "arrivesAt": 1271.0066202656028
+        },
+        {
+          "offset": 8704000,
+          "arrivesAt": 1272.0066167837772
+        },
+        {
+          "offset": 8768000,
+          "arrivesAt": 1273.0066133750695
+        },
+        {
+          "offset": 8832000,
+          "arrivesAt": 1274.0066100395954
+        },
+        {
+          "offset": 8896000,
+          "arrivesAt": 1275.0066067774692
+        },
+        {
+          "offset": 8960000,
+          "arrivesAt": 1276.0066035888021
+        },
+        {
+          "offset": 9024000,
+          "arrivesAt": 1277.0066004737039
+        },
+        {
+          "offset": 9088000,
+          "arrivesAt": 1278.0065974322813
+        },
+        {
+          "offset": 9152000,
+          "arrivesAt": 1279.0065944646385
+        },
+        {
+          "offset": 9216000,
+          "arrivesAt": 1280.0065915708785
+        },
+        {
+          "offset": 9280000,
+          "arrivesAt": 1281.0065887511005
+        },
+        {
+          "offset": 9344000,
+          "arrivesAt": 1282.0065860054024
+        },
+        {
+          "offset": 9408000,
+          "arrivesAt": 1283.0065833338788
+        },
+        {
+          "offset": 9472000,
+          "arrivesAt": 1284.0065807366227
+        },
+        {
+          "offset": 9536000,
+          "arrivesAt": 1285.0065782137242
+        },
+        {
+          "offset": 9600000,
+          "arrivesAt": 1286.0065757652708
+        },
+        {
+          "offset": 9664000,
+          "arrivesAt": 1287.006573391348
+        },
+        {
+          "offset": 9728000,
+          "arrivesAt": 1288.0065710920385
+        },
+        {
+          "offset": 9792000,
+          "arrivesAt": 1289.0065688674222
+        },
+        {
+          "offset": 9856000,
+          "arrivesAt": 1290.006566717577
+        },
+        {
+          "offset": 9920000,
+          "arrivesAt": 1291.0065646425785
+        },
+        {
+          "offset": 9984000,
+          "arrivesAt": 1292.0065626424987
+        },
+        {
+          "offset": 10048000,
+          "arrivesAt": 1293.006560717408
+        },
+        {
+          "offset": 10112000,
+          "arrivesAt": 1294.0065588673742
+        },
+        {
+          "offset": 10176000,
+          "arrivesAt": 1295.006557092462
+        },
+        {
+          "offset": 10240000,
+          "arrivesAt": 1296.0065553927334
+        },
+        {
+          "offset": 10304000,
+          "arrivesAt": 1297.0065537682488
+        },
+        {
+          "offset": 10368000,
+          "arrivesAt": 1298.0065522190648
+        },
+        {
+          "offset": 10432000,
+          "arrivesAt": 1299.0065507452364
+        },
+        {
+          "offset": 10496000,
+          "arrivesAt": 1300.0065493468153
+        },
+        {
+          "offset": 10560000,
+          "arrivesAt": 1301.0065480238504
+        },
+        {
+          "offset": 10624000,
+          "arrivesAt": 1302.006546776389
+        },
+        {
+          "offset": 10688000,
+          "arrivesAt": 1303.0065456044747
+        },
+        {
+          "offset": 10752000,
+          "arrivesAt": 1304.0065445081486
+        },
+        {
+          "offset": 10816000,
+          "arrivesAt": 1305.0065434874498
+        },
+        {
+          "offset": 10880000,
+          "arrivesAt": 1306.0065425424139
+        },
+        {
+          "offset": 10944000,
+          "arrivesAt": 1307.0065416730743
+        },
+        {
+          "offset": 11008000,
+          "arrivesAt": 1308.0065408794617
+        },
+        {
+          "offset": 11072000,
+          "arrivesAt": 1309.0065401616037
+        },
+        {
+          "offset": 11136000,
+          "arrivesAt": 1310.0065395195254
+        },
+        {
+          "offset": 11200000,
+          "arrivesAt": 1311.00653895325
+        },
+        {
+          "offset": 11264000,
+          "arrivesAt": 1312.0065384627965
+        },
+        {
+          "offset": 11328000,
+          "arrivesAt": 1313.0065380481822
+        },
+        {
+          "offset": 11392000,
+          "arrivesAt": 1314.0065377094218
+        },
+        {
+          "offset": 11456000,
+          "arrivesAt": 1315.0065374465264
+        },
+        {
+          "offset": 11520000,
+          "arrivesAt": 1316.0065372595054
+        },
+        {
+          "offset": 11584000,
+          "arrivesAt": 1317.0065371483647
+        },
+        {
+          "offset": 11648000,
+          "arrivesAt": 1318.006537113108
+        },
+        {
+          "offset": 11712000,
+          "arrivesAt": 1319.0065371537357
+        },
+        {
+          "offset": 11776000,
+          "arrivesAt": 1320.0065372702463
+        },
+        {
+          "offset": 11840000,
+          "arrivesAt": 1321.006537462635
+        },
+        {
+          "offset": 11904000,
+          "arrivesAt": 1322.006537730894
+        },
+        {
+          "offset": 11968000,
+          "arrivesAt": 1323.0065380750136
+        },
+        {
+          "offset": 12032000,
+          "arrivesAt": 1324.0065384949808
+        },
+        {
+          "offset": 12096000,
+          "arrivesAt": 1325.0065389907802
+        },
+        {
+          "offset": 12160000,
+          "arrivesAt": 1326.0065395623933
+        },
+        {
+          "offset": 12224000,
+          "arrivesAt": 1327.0065402097994
+        },
+        {
+          "offset": 12288000,
+          "arrivesAt": 1328.0065409329748
+        },
+        {
+          "offset": 12352000,
+          "arrivesAt": 1329.0065417318926
+        },
+        {
+          "offset": 12416000,
+          "arrivesAt": 1330.0065426065244
+        },
+        {
+          "offset": 12480000,
+          "arrivesAt": 1331.006543556838
+        },
+        {
+          "offset": 12544000,
+          "arrivesAt": 1332.0065445827993
+        },
+        {
+          "offset": 12608000,
+          "arrivesAt": 1333.0065456843708
+        },
+        {
+          "offset": 12672000,
+          "arrivesAt": 1334.006546861513
+        },
+        {
+          "offset": 12736000,
+          "arrivesAt": 1335.006548114183
+        },
+        {
+          "offset": 12800000,
+          "arrivesAt": 1336.006549442336
+        },
+        {
+          "offset": 12864000,
+          "arrivesAt": 1337.0065508459243
+        },
+        {
+          "offset": 12928000,
+          "arrivesAt": 1338.0065523248973
+        },
+        {
+          "offset": 12992000,
+          "arrivesAt": 1339.0065538792019
+        },
+        {
+          "offset": 13056000,
+          "arrivesAt": 1340.0065555087824
+        },
+        {
+          "offset": 13120000,
+          "arrivesAt": 1341.0065572135804
+        },
+        {
+          "offset": 13184000,
+          "arrivesAt": 1342.0065589935352
+        },
+        {
+          "offset": 13248000,
+          "arrivesAt": 1343.0065608485831
+        },
+        {
+          "offset": 13312000,
+          "arrivesAt": 1344.0065627786585
+        },
+        {
+          "offset": 13376000,
+          "arrivesAt": 1345.0065647836918
+        },
+        {
+          "offset": 13440000,
+          "arrivesAt": 1346.0065668636125
+        },
+        {
+          "offset": 13504000,
+          "arrivesAt": 1347.0065690183465
+        },
+        {
+          "offset": 13568000,
+          "arrivesAt": 1348.0065712478176
+        },
+        {
+          "offset": 13632000,
+          "arrivesAt": 1349.006573551947
+        },
+        {
+          "offset": 13696000,
+          "arrivesAt": 1350.006575930653
+        },
+        {
+          "offset": 13760000,
+          "arrivesAt": 1351.0065783838522
+        },
+        {
+          "offset": 13824000,
+          "arrivesAt": 1352.0065809114578
+        },
+        {
+          "offset": 13888000,
+          "arrivesAt": 1353.0065835133814
+        },
+        {
+          "offset": 13952000,
+          "arrivesAt": 1354.0065861895314
+        },
+        {
+          "offset": 14016000,
+          "arrivesAt": 1355.006588939814
+        },
+        {
+          "offset": 14080000,
+          "arrivesAt": 1356.0065917641336
+        },
+        {
+          "offset": 14144000,
+          "arrivesAt": 1357.006594662391
+        },
+        {
+          "offset": 14208000,
+          "arrivesAt": 1358.0065976344858
+        },
+        {
+          "offset": 14272000,
+          "arrivesAt": 1359.0066006803145
+        },
+        {
+          "offset": 14336000,
+          "arrivesAt": 1360.0066037997713
+        },
+        {
+          "offset": 14400000,
+          "arrivesAt": 1361.0066069927482
+        },
+        {
+          "offset": 14464000,
+          "arrivesAt": 1362.006610259135
+        },
+        {
+          "offset": 14528000,
+          "arrivesAt": 1363.0066135988188
+        },
+        {
+          "offset": 14592000,
+          "arrivesAt": 1364.0066170116847
+        },
+        {
+          "offset": 14656000,
+          "arrivesAt": 1365.0066204976158
+        },
+        {
+          "offset": 14720000,
+          "arrivesAt": 1366.0066240564925
+        },
+        {
+          "offset": 14784000,
+          "arrivesAt": 1367.006627688193
+        },
+        {
+          "offset": 14848000,
+          "arrivesAt": 1368.0066313925934
+        },
+        {
+          "offset": 14912000,
+          "arrivesAt": 1369.0066351695675
+        },
+        {
+          "offset": 14976000,
+          "arrivesAt": 1370.0066390189875
+        },
+        {
+          "offset": 15040000,
+          "arrivesAt": 1371.0066429407223
+        },
+        {
+          "offset": 15104000,
+          "arrivesAt": 1372.0066469346398
+        },
+        {
+          "offset": 15168000,
+          "arrivesAt": 1373.0066510006054
+        },
+        {
+          "offset": 15232000,
+          "arrivesAt": 1374.0066551384818
+        },
+        {
+          "offset": 15296000,
+          "arrivesAt": 1375.0066593481308
+        },
+        {
+          "offset": 15360000,
+          "arrivesAt": 1376.0066636294112
+        },
+        {
+          "offset": 15424000,
+          "arrivesAt": 1377.00666798218
+        },
+        {
+          "offset": 15488000,
+          "arrivesAt": 1378.0066724062926
+        },
+        {
+          "offset": 15552000,
+          "arrivesAt": 1379.0066769016018
+        },
+        {
+          "offset": 15616000,
+          "arrivesAt": 1380.0066814679592
+        },
+        {
+          "offset": 15680000,
+          "arrivesAt": 1381.0066861052132
+        },
+        {
+          "offset": 15744000,
+          "arrivesAt": 1382.006690813212
+        },
+        {
+          "offset": 15808000,
+          "arrivesAt": 1383.0066955918003
+        },
+        {
+          "offset": 15872000,
+          "arrivesAt": 1384.006700440822
+        },
+        {
+          "offset": 15936000,
+          "arrivesAt": 1385.0067053601188
+        }
+      ],
+      "diagnosticCreatedAt": 226.5
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "clearance.ts",
+      "sha256": "dd6f8dd65a32043e683e9844a7188a06664128983fd98a290f8e758b92e5f690"
+    },
+    {
+      "path": "craft.ts",
+      "sha256": "cb2d0e589ef3640039c59caa538418f6ee2e52361024380fe5d266d44fdfbc16"
+    },
+    {
+      "path": "devices.ts",
+      "sha256": "b9693f16d2c5565dab3d30dc3a19cabdab3bddb1cb1114c10210ccd955b3573c"
+    },
+    {
+      "path": "drive-feasibility.ts",
+      "sha256": "3ec4e57381bbf0f710db7ed8fae882797ab2fc2c361b8a9bfbbc5bb217569e01"
+    },
+    {
+      "path": "environment.ts",
+      "sha256": "c54f302350a21009fa8d5af609dcf666be8e1b9390cdcc73fbeb713d857c18ca"
+    },
+    {
+      "path": "identity.ts",
+      "sha256": "357ad661c316a485793ebd9644f1fb038638de7fe1c5a28c6c6d46126730e943"
+    },
+    {
+      "path": "index.ts",
+      "sha256": "b3c2c05f7e0da478d2074043630aea928c62ad64190bc5af6195b128df2d6844"
+    },
+    {
+      "path": "kinematics.ts",
+      "sha256": "7cae3a5de631464ce1544b3d2a61a93802b69e941e3a6d79f15291fe70849877"
+    },
+    {
+      "path": "lessons.ts",
+      "sha256": "b9c3bec80b9fe034c7933da2284de2c4dadecba9384bf0fdfa3e81ea967f9c2f"
+    },
+    {
+      "path": "math.ts",
+      "sha256": "c772617c4f2a34114371f9d3b88775fa3df02e95a2e3fdc12c029680f4d97b67"
+    },
+    {
+      "path": "mechanism.ts",
+      "sha256": "8c558d11280dd385073b5d259fef9a6eb95f95127791d7817e16e7824b64584d"
+    },
+    {
+      "path": "momentum.ts",
+      "sha256": "ddff5498117277ba3a7339a289cd3a0ef4333a21b5cb94820f6eed37f99a4ced"
+    },
+    {
+      "path": "motion.ts",
+      "sha256": "1849b9490f25066f4598971acbdd501bb3578017db881ceafb866b1292735891"
+    },
+    {
+      "path": "persistence.ts",
+      "sha256": "454549781a9b88482ebd601cd7e64422a2bc7bf2c493921ffa018a349739e957"
+    },
+    {
+      "path": "plan.ts",
+      "sha256": "889275f219759083f37b6c08a002016e963d5f245679049e7e50e38b18a13e32"
+    },
+    {
+      "path": "power.ts",
+      "sha256": "7c808a0a87c5d2a843345cc99b677162b10471a9a19dabb49780e7f8f83a65f6"
+    },
+    {
+      "path": "runtime.ts",
+      "sha256": "e28a7ff09a957e1438299cfa85d0800b8b4119cc6c5a671008a486210782a7aa"
+    },
+    {
+      "path": "types.ts",
+      "sha256": "4d2fdfe9781a832f77bd2cc4eb3dc2c046ecb6c5f54ff409f75183717196a28b"
+    },
+    {
+      "path": "visibility.ts",
+      "sha256": "496fdac44d3f386922f56f3e3f38652b410d9d2f231d175b673201a9b2e65138"
+    }
+  ]
+}

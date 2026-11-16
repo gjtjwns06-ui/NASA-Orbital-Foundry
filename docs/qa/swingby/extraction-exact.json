@@ -1,0 +1,7 @@
+{
+  "generatedAt": "2026-11-14T22:19:43.409Z",
+  "fixtureHash": "ce2810bda5d37f4a8d60c7c74e6dcd0a82177162d0c9bc2252fa12025ae63b97",
+  "count": 52,
+  "status": "PASS",
+  "scope": "Exact whole-checkpoint/telemetry/result equality with immutable pre-extraction binary oracle. No approximate tolerances or regenerated oracle."
+}

@@ -1,0 +1,281 @@
+{
+  "scope": "All raw browser ZIPs, including renamed *.trace.zip, retained locally and excluded from source push; tests, images, JSON and hashes stay published.",
+  "generatedAtUtc": "2026-11-14T22:26:14.245775+00:00",
+  "archives": [
+    {
+      "path": "tests/browser/artifacts/swingby-builder/builder-integration-v1/raycaster-harness-failure.trace.zip",
+      "bytes": 18066311,
+      "sha256": "bdb5404e6a3967e7ba36d7cb252a26f6d18a98aa02fbbe878f13474531ac34fa"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a-render-commit/playwright/swingby-flow-en-large-cont-983a7-stay-accessible-at-1280x720/trace.zip",
+      "bytes": 13407975,
+      "sha256": "1f0b206cce48acd6cdc737f5e250ed9cc17cd0a54c472fbd452ef529c4b3df25"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a-render-commit/playwright/swingby-flow-en-large-cont-983a7-stay-accessible-at-1280x720-repeat1/trace.zip",
+      "bytes": 13663672,
+      "sha256": "567d65bcf6e9f6f40d27b94ae314eeb85d62a2380b447bd5409928ac07b4c114"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a-render-commit/playwright/swingby-flow-en-large-cont-983a7-stay-accessible-at-1280x720-repeat2/trace.zip",
+      "bytes": 13370254,
+      "sha256": "9f1f61ae357eb9eb9648c8de89a516064aead4a80ade17aeb71fded21ccaec20"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a-harness-fix/playwright/swingby-flow-en-large-cont-983a7-stay-accessible-at-1280x720/trace.zip",
+      "bytes": 11242218,
+      "sha256": "98fa36cf3d7ca20ebec2f7a5febf950d6aa95376de78df75acd83898b1744678"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a-harness-fix/playwright/swingby-flow-en-normal-con-8adca-stay-accessible-at-1280x720/trace.zip",
+      "bytes": 13189603,
+      "sha256": "807c554c84823db575815c0fafcba7d1e7cdb526c39072eafa661211c75f2127"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a-harness-fix/playwright/swingby-flow-ko-large-cont-fc7b8-stay-accessible-at-1280x720/trace.zip",
+      "bytes": 13174796,
+      "sha256": "89faa73a737a21aada75c4a697973462c6fdc4503cd27d214cc46632ced0bd80"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a-harness-fix/playwright/swingby-flow-ko-normal-con-da24f-stay-accessible-at-1280x720/trace.zip",
+      "bytes": 13123824,
+      "sha256": "6ffa11bfd53f5875323f900a8224e888845928e31640ec456ad8c5e0a27c57a5"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a-harness-fix/playwright/swingby-flow-unreachable-d-4f483-cit-escape-with-JSON-backup/trace.zip",
+      "bytes": 10548073,
+      "sha256": "e06f96cfaac88c1fa6778d1bafd4f7ec8ff886d2f31d1cae65b8a22d44bc288f"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a-edge/playwright/swingby-flow-pointer-aim-a-35c7b-play-the-terminal-encounter/trace.zip",
+      "bytes": 33267019,
+      "sha256": "17f7f711e54558f10dcb11f8c7439b38d11c3abf1bebaea37dd0d2b60d748289"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a-edge/playwright/swingby-flow-unreachable-d-4f483-cit-escape-with-JSON-backup/trace.zip",
+      "bytes": 10795101,
+      "sha256": "5b40e59b5df09360c58c4be1f41abd4e12069064ee839a67ecbd36733bd0c72f"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a/playwright/builder-focus-drag-en-larg-a6e91-uses-its-actual-mount-plane/trace.zip",
+      "bytes": 22907512,
+      "sha256": "0302e47d05abed920ccab05c018ac83faf1fa9f8e4a861ea2e2878ab77097c66"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a/playwright/builder-focus-drag-en-norm-01ab6-uses-its-actual-mount-plane/trace.zip",
+      "bytes": 22316698,
+      "sha256": "7be743b64402005c7ac5f8fdc06c93ff96692f797056a3d8f711b17a72b8602f"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a/playwright/builder-focus-drag-ko-larg-5bb96-uses-its-actual-mount-plane/trace.zip",
+      "bytes": 22252316,
+      "sha256": "e8395e90d1ca49f3851b4864aa23d034f46821742b1dae920d94f76a3e3d0563"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a/playwright/builder-focus-drag-ko-norm-9c8a9-uses-its-actual-mount-plane/trace.zip",
+      "bytes": 21979996,
+      "sha256": "d45ff6de9e5f8f559abf1272b27fd3a094753b2ab7852897c7c0d7eb3c6acbb7"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a/playwright/swingby-builder-swingby-bu-f2760-plan-and-separate-save-slot/trace.zip",
+      "bytes": 35283050,
+      "sha256": "afa79d9d42e96a3e7de6ae8d08ba5e0274ae4017731eee7f8ed3b553e1aaa537"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a/playwright/swingby-flow-en-large-cont-983a7-stay-accessible-at-1280x720/trace.zip",
+      "bytes": 8222967,
+      "sha256": "207f9c1f0634ae4a0bfcca6c945185ab62654bffe9fba237159e0f0dc4419c0d"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a/playwright/swingby-flow-en-normal-con-8adca-stay-accessible-at-1280x720/trace.zip",
+      "bytes": 8230617,
+      "sha256": "6c429da3b956024cb3d2dd05e9c94a371d005cbea32a957c0593adcd02293060"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a/playwright/swingby-flow-explicit-back-e5d4c-autosave-cannot-unlock-exit/trace.zip",
+      "bytes": 18127964,
+      "sha256": "b0e1408724e6b47cbf742072c8761f4c6b51202e6ec5ece812e8b8591d41a67a"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a/playwright/swingby-flow-ko-large-cont-fc7b8-stay-accessible-at-1280x720/trace.zip",
+      "bytes": 8313368,
+      "sha256": "745b80b08332682103e95e2af8e2c385bf2f7dd1087e45aa08943dc75bbd0e2f"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a/playwright/swingby-flow-ko-normal-con-da24f-stay-accessible-at-1280x720/trace.zip",
+      "bytes": 8174782,
+      "sha256": "fe048f24d21fccfab67c897473c911582c9f5df9d4d01e0c116dca2697bb2472"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a/playwright/swingby-flow-pointer-aim-a-35c7b-play-the-terminal-encounter/trace.zip",
+      "bytes": 32300876,
+      "sha256": "0e8fe234ab089cdaf31ff6e96237733489d9b93ce016ca4c06f869a52787e9d0"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a/playwright/swingby-flow-timeline-poin-f5fb2-import-preserves-the-flight/trace.zip",
+      "bytes": 16515558,
+      "sha256": "18edb2d5c7660fef1c14e9cc92e53cc3367960c4ad1bf0789ada5888fc7a0d7e"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/production-v6a/playwright/swingby-flow-unreachable-d-4f483-cit-escape-with-JSON-backup/trace.zip",
+      "bytes": 46360823,
+      "sha256": "f2774eb6a1c7c18737b3f4972efcd1cb600e8490c4871eff3389f4c761efe5b0"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/integration-ui-v2/playwright/swingby-flow-timeline-poin-f5fb2-import-preserves-the-flight/trace.zip",
+      "bytes": 14680162,
+      "sha256": "f4cf691e5f16576b159ea2a0a543b1afc21298be4eb7a66176180e7aedc987c6"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/integration-ui-v1/playwright/swingby-flow-timeline-poin-f5fb2-import-preserves-the-flight/trace.zip",
+      "bytes": 16624860,
+      "sha256": "c7cfa661917f8d9f79a83780cb4fa8713a85e0d7f68f1fce7a987a93a82f47c9"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/integration-save-v1/playwright/swingby-flow-explicit-back-e5d4c-autosave-cannot-unlock-exit/trace.zip",
+      "bytes": 19725780,
+      "sha256": "a2a052abdcbdedb5547203179e574abc2b7fdeed897a7c9c6c5a738bf9e99ff2"
+    },
+    {
+      "path": "tests/browser/artifacts/swingby/integration-flight-v1/playwright/swingby-flow-pointer-aim-a-35c7b-play-the-terminal-encounter/trace.zip",
+      "bytes": 31516746,
+      "sha256": "8565625c648cb8ab77e2e198efa0432ef792ac0a8eb3a0144a3b2be228edeed7"
+    },
+    {
+      "path": "tests/browser/artifacts/remote-operations/9b/playwright-traces/remote-operations-actual-p-fe402-cience-with-version2-replay/trace.zip",
+      "bytes": 45419692,
+      "sha256": "5f9d5dc6f014721d614ffd71a34dbf356076530bbf1a6641241a9ce3cc2ae044"
+    },
+    {
+      "path": "tests/browser/artifacts/remote-operations/9a-native-probe/playwright-traces/remote-operations-actual-p-fe402-cience-with-version2-replay/trace.zip",
+      "bytes": 20615922,
+      "sha256": "c2976223ed70c8b9f7d7d69847a0842345b85acba1ee6a340f0b0afdc17579f0"
+    },
+    {
+      "path": "tests/browser/artifacts/remote-operations/9a/playwright-traces/remote-operations-actual-p-fe402-cience-with-version2-replay/trace.zip",
+      "bytes": 44382878,
+      "sha256": "8f99f7c592762cc9984f2e4741eb0c3f9bc34b5452a9bca6ea142a89a3775464"
+    },
+    {
+      "path": "tests/browser/artifacts/remote-operations/8d/playwright-traces/remote-operations-actual-p-fe402-cience-with-version2-replay/trace.zip",
+      "bytes": 37904943,
+      "sha256": "1c3d073468eca654ebe4d2323937e9611c361de41384cbecd2f96634514e0463"
+    },
+    {
+      "path": "tests/browser/artifacts/remote-operations/8d/playwright-traces/remote-operations-bounded--ac077-exit-saves-no-phantom-draft/trace.zip",
+      "bytes": 30768661,
+      "sha256": "cb253d826f6408d75b89a558a731293415a2fd08d41ab5bffaf9073f35d9e4ca"
+    },
+    {
+      "path": "tests/browser/artifacts/remote-operations/8d/playwright-traces/remote-operations-unsent-c-cfa49-t-preserves-the-live-flight/trace.zip",
+      "bytes": 31686049,
+      "sha256": "f48a046a4759212ba188d01ddbc208fc1c1df046b4fc9abeb7d8af35eaeb2c3c"
+    },
+    {
+      "path": "tests/browser/artifacts/milestone-6-legacy/playwright/hardware-interaction-all-s-cb121--through-real-pointer-drags/trace.zip",
+      "bytes": 80455150,
+      "sha256": "6c598e72c1ba7e981230f516f929524fce11ab9590e96339c3edb38a75d5c5e5"
+    },
+    {
+      "path": "tests/browser/artifacts/milestone-6-legacy/playwright/remote-operations-actual-p-fe402-cience-with-version2-replay/trace.zip",
+      "bytes": 47517173,
+      "sha256": "0044b5cf3bc60691a528c0f463261447b4d6d98deb39cd64542ecdcdb8e94c60"
+    },
+    {
+      "path": "tests/browser/artifacts/milestone-6-legacy/playwright/transfer-context-ownership-b0ed0-hout-cross-context-deletion/trace.zip",
+      "bytes": 15151206,
+      "sha256": "ac3ccd67a89d191aedf542cf26029c0a2e2c7673b4f577f7a570c51219f16c34"
+    },
+    {
+      "path": "tests/browser/artifacts/milestone-6-legacy/playwright/transfer-context-ownership-e074c-thout-stale-target-deletion/trace.zip",
+      "bytes": 29762147,
+      "sha256": "ab29b51706d3682115055aa83434bfb48b93ced115794f6c023261609ff17c13"
+    },
+    {
+      "path": "tests/browser/artifacts/craft-camera/9a/playwright-traces/craft-camera-en-large-actu-b1234-fit-and-preserve-the-flight/trace.zip",
+      "bytes": 25477443,
+      "sha256": "3fd2e81c17f888c7cb3d6d1a12ed49d9b67501fa0c9ae16d4ce2834a2e992990"
+    },
+    {
+      "path": "tests/browser/artifacts/craft-camera/9a/playwright-traces/craft-camera-en-normal-act-2805c-fit-and-preserve-the-flight/trace.zip",
+      "bytes": 24984682,
+      "sha256": "b1a8adc8c94eb511c4a0bde1acc166bc79750c233131ad731f9c33669a50744a"
+    },
+    {
+      "path": "tests/browser/artifacts/craft-camera/9a/playwright-traces/craft-camera-ko-large-actu-89d81-fit-and-preserve-the-flight/trace.zip",
+      "bytes": 24633071,
+      "sha256": "3013707fb8563ef4508a05b736281d9768c136484d5ef7037ab90d4b3041ebd1"
+    },
+    {
+      "path": "tests/browser/artifacts/craft-camera/9a/playwright-traces/craft-camera-ko-normal-act-204b8-fit-and-preserve-the-flight/trace.zip",
+      "bytes": 28399200,
+      "sha256": "46f09bb445ae947fa2b05f7a6602a803c6420772c5e7378c77d8f44ff576ac73"
+    },
+    {
+      "path": "tests/browser/artifacts/craft-camera/9a/attempt-1-body-geometry-harness/playwright-traces/craft-camera-en-normal-act-2805c-fit-and-preserve-the-flight/trace.zip",
+      "bytes": 17709843,
+      "sha256": "848bd9b6447d894565a2f01853c1f0c31c77d7d4066bc9b6ecae427dda0b843f"
+    },
+    {
+      "path": "tests/browser/artifacts/craft-camera/9a/attempt-1-body-geometry-harness/playwright-traces/craft-camera-ko-large-actu-89d81-fit-and-preserve-the-flight/trace.zip",
+      "bytes": 17754934,
+      "sha256": "633c4cdd6bff13f64e4fd36fdd235197787af9dc61f9a73617404c7f79dec117"
+    },
+    {
+      "path": "tests/browser/artifacts/craft-camera/9a/attempt-1-body-geometry-harness/playwright-traces/craft-camera-ko-normal-act-204b8-fit-and-preserve-the-flight/trace.zip",
+      "bytes": 17889865,
+      "sha256": "36a04d3c37b296dea8bad485bd669bc887043d57009eea586134be88c398f8e0"
+    },
+    {
+      "path": "tests/browser/artifacts/candidate-8a-regression/playwright/hardware-flow-English-hard-3873b-s-versioned-JSON-checkpoint/trace.zip",
+      "bytes": 79293436,
+      "sha256": "38885b9ed5ba9fcb5221383f4967b72faa5346289ad538f70aac58a4bd40138c"
+    },
+    {
+      "path": "tests/browser/artifacts/candidate-8a-regression/playwright/transfer-flow-3D-departure-21e39--plan-without-numeric-input/trace.zip",
+      "bytes": 16539910,
+      "sha256": "a092a1223e5e611cbc49bc2d587141a65178830c060cac31b62cc83b5a9c1b73"
+    },
+    {
+      "path": "tests/browser/artifacts/candidate-8a-regression/playwright/transfer-flow-full-Earth-t-fd955-verified-receipt-checkpoint/trace.zip",
+      "bytes": 26988570,
+      "sha256": "6cf44245ac8c168c1f70b29a3b10c42c41e509760bb4cf75bfa80a8f23b90f2b"
+    },
+    {
+      "path": "tests/browser/artifacts/candidate-8a-regression/playwright/transfer-resilience-an-inv-456c1--strand-the-current-M03-run/trace.zip",
+      "bytes": 16358283,
+      "sha256": "a4713daf73fa4fa0e73fe0f386c9e9accf31e83e62cf88e27ab90988add23da0"
+    },
+    {
+      "path": "tests/browser/artifacts/candidate-8a-regression/playwright/transfer-resilience-M03-We-06d38-ronment-before-time-resumes/trace.zip",
+      "bytes": 14744510,
+      "sha256": "2dde588413f98a7e5363122b3eb97483839603262115b0a33cda4943b2437a93"
+    },
+    {
+      "path": "tests/browser/artifacts/builder-focus-drag/focus-drag-after/builder-focus-drag-en-larg-a6e91-uses-its-actual-mount-plane.trace.zip",
+      "bytes": 22833297,
+      "sha256": "97d75a00fccaa075feafdfdb3edce4e3f8f0be47b0a34735d39ba6c079d1e03f"
+    },
+    {
+      "path": "tests/browser/artifacts/builder-focus-drag/focus-drag-after/builder-focus-drag-en-norm-01ab6-uses-its-actual-mount-plane.trace.zip",
+      "bytes": 22594245,
+      "sha256": "8c30ac95f2e3ff514d9251e0c6bab61e2646827a2aca29b0fe98ec3c6abd2e10"
+    },
+    {
+      "path": "tests/browser/artifacts/builder-focus-drag/focus-drag-after/builder-focus-drag-ko-larg-5bb96-uses-its-actual-mount-plane.trace.zip",
+      "bytes": 22721301,
+      "sha256": "fecb434d81b91592e99a59e3380b3fa982ab63d6d9ff683faedae4ac2f3f16c7"
+    },
+    {
+      "path": "tests/browser/artifacts/builder-focus-drag/focus-drag-after/builder-focus-drag-ko-norm-9c8a9-uses-its-actual-mount-plane.trace.zip",
+      "bytes": 22195023,
+      "sha256": "caeed23684017c0ad3eb5689af63cd22fd62a8d77046da77253551b5f5206b8f"
+    },
+    {
+      "path": "tests/browser/artifacts/builder-focus-drag/focus-drag-before/trace.zip",
+      "bytes": 14743516,
+      "sha256": "8f6d4a41cc8c672296683a412acdb0d27c00050e64f168dd6f6237348d472c50"
+    }
+  ]
+}

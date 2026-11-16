@@ -1,0 +1,35 @@
+{
+  "status": "REJECTED_CANDIDATE_EVIDENCE",
+  "files": [
+    {
+      "file": "convergence-before-boundary-fix.json",
+      "bytes": 298548,
+      "sha256": "9e5b1a83e3a943dba1e0abd52c5338613ee57a60e96b2732c88a761f186296cb"
+    },
+    {
+      "file": "data.ts",
+      "bytes": 2866,
+      "sha256": "ee417119b7d3b8bec122143d86cb16dc83009ab65c2080490d779c7aa8485c6a"
+    },
+    {
+      "file": "failure.txt",
+      "bytes": 300,
+      "sha256": "0b86d56c719128c265efbf3008ba228d58edc44a45c4f8978b1f4c56a7130a12"
+    },
+    {
+      "file": "flight-before-boundary-fix.json",
+      "bytes": 173378,
+      "sha256": "d81685e65b0694c68323f686aa4723214149b3b88d7f22677a1559c82140c39d"
+    },
+    {
+      "file": "runtime.ts",
+      "bytes": 21918,
+      "sha256": "eeba22f186763b74d7ad533f38582ea6cbeb7f014c328fc74e7add5e1f75d7d3"
+    },
+    {
+      "file": "swingby-runtime.test.ts",
+      "bytes": 7677,
+      "sha256": "d62f1076a86234a32e133268455e2f160442a5fcb5618ca43acb6b79936ea83e"
+    }
+  ]
+}

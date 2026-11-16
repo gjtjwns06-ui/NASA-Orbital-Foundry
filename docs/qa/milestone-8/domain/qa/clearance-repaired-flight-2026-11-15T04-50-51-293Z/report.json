@@ -1,0 +1,1190 @@
+{
+  "result": {
+    "modelVersion": "deployment-1.0.0",
+    "status": "complete",
+    "success": true,
+    "evaluatedAt": 1385.0067053601188,
+    "reason": null,
+    "fatalAtSeconds": null,
+    "receiverDrainUntilSeconds": null,
+    "pendingReceiverDrain": false,
+    "solarGoodSeconds": 60,
+    "diagnosticCreatedAt": 226.75,
+    "receivedBits": 16000000,
+    "requiredBits": 16000000,
+    "energyMinimumWh": 29.293044737218025,
+    "energyWh": 37.39632831776391,
+    "motorEnergyJ": 1128,
+    "massKg": 49.80999999999998,
+    "cost": 377,
+    "budget": 560,
+    "mechanisms": [
+      {
+        "partId": "wing",
+        "phase": "deployed-latched",
+        "mechanicalLatch": true,
+        "powerContactClosed": true,
+        "rfContactClosed": false
+      },
+      {
+        "partId": "antenna",
+        "phase": "deployed-latched",
+        "mechanicalLatch": true,
+        "powerContactClosed": false,
+        "rfContactClosed": true
+      }
+    ]
+  },
+  "events": [
+    {
+      "timeSeconds": 20,
+      "code": "ACTION_STARTED",
+      "partId": "wing"
+    },
+    {
+      "timeSeconds": 21,
+      "code": "RELEASED",
+      "partId": "wing"
+    },
+    {
+      "timeSeconds": 21,
+      "code": "MOTION_STARTED",
+      "partId": "wing",
+      "jointId": "wing:upper-hinge"
+    },
+    {
+      "timeSeconds": 67.83333333333333,
+      "code": "MOTION_STARTED",
+      "partId": "wing",
+      "jointId": "wing:lower-hinge"
+    },
+    {
+      "timeSeconds": 114.66666666666666,
+      "code": "LATCH_VERIFYING",
+      "partId": "wing"
+    },
+    {
+      "timeSeconds": 116.66666666666666,
+      "code": "LATCH_VERIFIED",
+      "partId": "wing"
+    },
+    {
+      "timeSeconds": 200,
+      "code": "ACTION_STARTED",
+      "partId": "antenna"
+    },
+    {
+      "timeSeconds": 201,
+      "code": "RELEASED",
+      "partId": "antenna"
+    },
+    {
+      "timeSeconds": 201,
+      "code": "MOTION_STARTED",
+      "partId": "antenna",
+      "jointId": "antenna:upper-hinge"
+    },
+    {
+      "timeSeconds": 226.75,
+      "code": "COMMISSIONING_DIAGNOSTIC_CREATED"
+    },
+    {
+      "timeSeconds": 247.83333333333331,
+      "code": "MOTION_STARTED",
+      "partId": "antenna",
+      "jointId": "antenna:lower-hinge"
+    },
+    {
+      "timeSeconds": 294.66666666666663,
+      "code": "LATCH_VERIFYING",
+      "partId": "antenna"
+    },
+    {
+      "timeSeconds": 296.66666666666663,
+      "code": "LATCH_VERIFIED",
+      "partId": "antenna"
+    },
+    {
+      "timeSeconds": 1136.0076888756987,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1137.0076772187738,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1138.007665607816,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1139.0076540430466,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1140.0076425246862,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1141.0076310529566,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1142.0076196280804,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1143.0076082502799,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1144.0075969197778,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1145.0075856367976,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1146.007574401563,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1147.007563214298,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1148.0075520752268,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1149.0075409845747,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1150.007529942566,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1151.0075189494266,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1152.007508005382,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1153.0074971106583,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1154.0074862654812,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1155.007475470078,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1156.0074647246747,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1157.0074540294988,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1158.0074433847772,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1159.0074327907373,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1160.007422247607,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1161.007411755614,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1162.0074013149858,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1163.007390925951,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1164.0073805887378,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1165.0073703035741,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1166.007360070689,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1167.0073498903107,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1168.007339762668,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1169.0073296879893,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1170.0073196665035,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1171.0073096984395,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1172.007299784026,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1173.0072899234915,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1174.007280117065,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1175.0072703649753,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1176.0072606674507,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1177.00725102472,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1178.0072414370115,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1179.007231904554,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1180.007222427575,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1181.0072130063033,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1182.0072036409665,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1183.007194331792,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1184.007185079008,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1185.0071758828415,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1186.0071667435193,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1187.0071576612684,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1188.0071486363156,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1189.0071396688866,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1190.0071307592077,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1191.0071219075041,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1192.0071131140012,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1193.007104378924,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1194.0070957024964,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1195.0070870849427,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1196.0070785264863,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1197.0070700273504,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1198.0070615877576,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1199.0070532079299,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1200.0070448880883,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1201.0070366284547,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1202.0070284292487,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1203.0070202906904,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1204.0070122129991,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1205.0070041963932,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1206.0069962410903,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1207.006988347308,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1208.0069805152623,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1209.0069727451694,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1210.0069650372438,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1211.0069573916999,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1212.006949808751,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1213.0069422886097,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1214.0069348314876,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1215.0069274375956,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1216.0069201071433,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1217.00691284034,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1218.0069056373936,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1219.006898498511,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1220.0068914238984,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1221.0068844137609,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1222.0068774683023,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1223.0068705877254,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1224.0068637722322,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1225.0068570220233,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1226.0068503372981,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1227.0068437182554,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1228.0068371650918,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1229.0068306780038,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1230.0068242571856,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1231.0068179028308,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1232.0068116151315,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1233.0068053942787,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1234.0067992404615,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1235.0067931538683,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1236.0067871346857,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1237.006781183099,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1238.0067752992923,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1239.0067694834474,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1240.0067637357454,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1241.006758056366,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1242.0067524454864,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1243.0067469032836,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1244.0067414299315,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1245.0067360256035,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1246.006730690471,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1247.0067254247035,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1248.0067202284695,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1249.006715101935,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1250.0067100452645,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1251.0067050586213,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1252.0067001421658,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1253.0066952960576,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1254.0066905204542,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1255.006685815511,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1256.0066811813815,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1257.0066766182179,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1258.0066721261699,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1259.006667705385,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1260.0066633560098,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1261.0066590781878,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1262.006654872061,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1263.0066507377694,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1264.0066466754508,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1265.006642685241,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1266.0066387672737,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1267.0066349216804,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1268.0066311485905,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1269.0066274481312,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1270.0066238204276,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1271.0066202656028,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1272.0066167837772,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1273.0066133750695,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1274.0066100395954,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1275.0066067774692,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1276.0066035888021,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1277.0066004737039,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1278.0065974322813,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1279.0065944646385,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1280.0065915708785,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1281.0065887511005,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1282.0065860054024,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1283.0065833338788,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1284.0065807366227,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1285.0065782137242,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1286.0065757652708,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1287.006573391348,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1288.0065710920385,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1289.0065688674222,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1290.006566717577,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1291.0065646425785,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1292.0065626424987,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1293.006560717408,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1294.0065588673742,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1295.006557092462,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1296.0065553927334,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1297.0065537682488,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1298.0065522190648,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1299.0065507452364,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1300.0065493468153,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1301.0065480238504,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1302.006546776389,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1303.0065456044747,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1304.0065445081486,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1305.0065434874498,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1306.0065425424139,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1307.0065416730743,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1308.0065408794617,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1309.0065401616037,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1310.0065395195254,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1311.00653895325,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1312.0065384627965,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1313.0065380481822,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1314.0065377094218,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1315.0065374465264,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1316.0065372595054,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1317.0065371483647,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1318.006537113108,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1319.0065371537357,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1320.0065372702463,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1321.006537462635,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1322.006537730894,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1323.0065380750136,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1324.0065384949808,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1325.0065389907802,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1326.0065395623933,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1327.0065402097994,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1328.0065409329748,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1329.0065417318926,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1330.0065426065244,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1331.006543556838,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1332.0065445827993,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1333.0065456843708,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1334.006546861513,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1335.006548114183,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1336.006549442336,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1337.0065508459243,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1338.0065523248973,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1339.0065538792019,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1340.0065555087824,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1341.0065572135804,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1342.0065589935352,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1343.0065608485831,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1344.0065627786585,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1345.0065647836918,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1346.0065668636125,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1347.0065690183465,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1348.0065712478176,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1349.006573551947,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1350.006575930653,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1351.0065783838522,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1352.0065809114578,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1353.0065835133814,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1354.0065861895314,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1355.006588939814,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1356.0065917641336,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1357.006594662391,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1358.0065976344858,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1359.0066006803145,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1360.0066037997713,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1361.0066069927482,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1362.006610259135,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1363.0066135988188,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1364.0066170116847,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1365.0066204976158,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1366.0066240564925,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1367.006627688193,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1368.0066313925934,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1369.0066351695675,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1370.0066390189875,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1371.0066429407223,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1372.0066469346398,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1373.0066510006054,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1374.0066551384818,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1375.0066593481308,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1376.0066636294112,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1377.00666798218,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1378.0066724062926,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1379.0066769016018,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1380.0066814679592,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1381.0066861052132,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1382.006690813212,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1383.0066955918003,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1384.006700440822,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1385.0067053601188,
+      "code": "DIAGNOSTIC_FRAME_RECEIVED"
+    },
+    {
+      "timeSeconds": 1385.0067053601188,
+      "code": "COMMISSIONING_COMPLETE"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": "clearance.ts",
+      "sha256": "dd6f8dd65a32043e683e9844a7188a06664128983fd98a290f8e758b92e5f690"
+    },
+    {
+      "path": "craft.ts",
+      "sha256": "cb2d0e589ef3640039c59caa538418f6ee2e52361024380fe5d266d44fdfbc16"
+    },
+    {
+      "path": "devices.ts",
+      "sha256": "b9693f16d2c5565dab3d30dc3a19cabdab3bddb1cb1114c10210ccd955b3573c"
+    },
+    {
+      "path": "drive-feasibility.ts",
+      "sha256": "3ec4e57381bbf0f710db7ed8fae882797ab2fc2c361b8a9bfbbc5bb217569e01"
+    },
+    {
+      "path": "environment.ts",
+      "sha256": "c54f302350a21009fa8d5af609dcf666be8e1b9390cdcc73fbeb713d857c18ca"
+    },
+    {
+      "path": "identity.ts",
+      "sha256": "357ad661c316a485793ebd9644f1fb038638de7fe1c5a28c6c6d46126730e943"
+    },
+    {
+      "path": "index.ts",
+      "sha256": "b3c2c05f7e0da478d2074043630aea928c62ad64190bc5af6195b128df2d6844"
+    },
+    {
+      "path": "kinematics.ts",
+      "sha256": "7cae3a5de631464ce1544b3d2a61a93802b69e941e3a6d79f15291fe70849877"
+    },
+    {
+      "path": "lessons.ts",
+      "sha256": "b9c3bec80b9fe034c7933da2284de2c4dadecba9384bf0fdfa3e81ea967f9c2f"
+    },
+    {
+      "path": "math.ts",
+      "sha256": "c772617c4f2a34114371f9d3b88775fa3df02e95a2e3fdc12c029680f4d97b67"
+    },
+    {
+      "path": "mechanism.ts",
+      "sha256": "8c558d11280dd385073b5d259fef9a6eb95f95127791d7817e16e7824b64584d"
+    },
+    {
+      "path": "momentum.ts",
+      "sha256": "ddff5498117277ba3a7339a289cd3a0ef4333a21b5cb94820f6eed37f99a4ced"
+    },
+    {
+      "path": "motion.ts",
+      "sha256": "1849b9490f25066f4598971acbdd501bb3578017db881ceafb866b1292735891"
+    },
+    {
+      "path": "persistence.ts",
+      "sha256": "454549781a9b88482ebd601cd7e64422a2bc7bf2c493921ffa018a349739e957"
+    },
+    {
+      "path": "plan.ts",
+      "sha256": "889275f219759083f37b6c08a002016e963d5f245679049e7e50e38b18a13e32"
+    },
+    {
+      "path": "power.ts",
+      "sha256": "7c808a0a87c5d2a843345cc99b677162b10471a9a19dabb49780e7f8f83a65f6"
+    },
+    {
+      "path": "runtime.ts",
+      "sha256": "e28a7ff09a957e1438299cfa85d0800b8b4119cc6c5a671008a486210782a7aa"
+    },
+    {
+      "path": "types.ts",
+      "sha256": "4d2fdfe9781a832f77bd2cc4eb3dc2c046ecb6c5f54ff409f75183717196a28b"
+    },
+    {
+      "path": "visibility.ts",
+      "sha256": "496fdac44d3f386922f56f3e3f38652b410d9d2f231d175b673201a9b2e65138"
+    }
+  ]
+}

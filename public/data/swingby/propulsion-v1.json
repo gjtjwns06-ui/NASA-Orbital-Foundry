@@ -1,0 +1,52 @@
+{
+  "id": "cg-trim-impulse-v1",
+  "provenance": "game-assumption",
+  "engineModelId": "chemical230-v2",
+  "carrierMassKg": 0.4,
+  "carrierCost": 12,
+  "maximumGimbalDeg": 10,
+  "prepareLeadSeconds": 1800,
+  "valveLeadSeconds": 60,
+  "pointingToleranceDeg": 0.1,
+  "angularRateToleranceDegS": 0.01,
+  "geometry": {
+    "envelope": {
+      "center": [
+        0,
+        0,
+        0.3
+      ],
+      "half": [
+        0.19,
+        0.19,
+        0.3
+      ]
+    },
+    "annulus": {
+      "center": [
+        0,
+        0,
+        0.07
+      ],
+      "outerRadiusM": 0.18,
+      "innerRadiusM": 0.07,
+      "thicknessM": 0.04
+    },
+    "pivot": [
+      0,
+      0,
+      0.12
+    ],
+    "nominalThrust": [
+      0,
+      0,
+      -1
+    ],
+    "bell": {
+      "lengthM": 0.46,
+      "mouthRadiusM": 0.1,
+      "neckRadiusM": 0.025
+    }
+  },
+  "hash": "dca16c1db88e8a05dd82fb119bd8ba93ea47d9609ec18cfd960166bbe2a41c7b"
+}

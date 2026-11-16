@@ -1,0 +1,819 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/browser/deployment-flow.spec.ts",
+      "tests/browser/keyboard-assembly.spec.ts",
+      "tests/browser/hardware-interaction.spec.ts",
+      "tests/browser/swingby-builder.spec.ts",
+      "tests/browser/remote-operations.spec.ts",
+      "--grep",
+      "real cable repair|fixed wing is|repair layout and visible controls|native keyboard placement|all sixteen model cards|swingby builder changes|actual pointer repair reaches",
+      "--trace=retain-on-failure",
+      "--output=C:/Users/gjtjw/Desktop/NASA_apps_challenge/m8-production-r1-traces",
+      "--reporter=list,json"
+    ],
+    "configFile": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\playwright.config.ts",
+    "rootDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/m8-production-r1-traces",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\m8-production-r1-traces",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser",
+        "snapshotDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5188",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "headless": true,
+          "launchOptions": {
+            "executablePath": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+            "args": [
+              "--disable-background-timer-throttling"
+            ]
+          },
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "deployment-flow.spec.ts",
+      "file": "deployment-flow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real cable repair unfolding receipt and exact terminal replay",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8914,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m45.5\u001b[39m\nReceived:   \u001b[31m45.5\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m45.5\u001b[39m\nReceived:   \u001b[31m45.5\u001b[39m\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-flow.spec.ts:61:41",
+                    "location": {
+                      "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-flow.spec.ts",
+                      "column": 41,
+                      "line": 61
+                    },
+                    "snippet": " \u001b[90m 59 |\u001b[39m  \u001b[36mconst\u001b[39m block\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-deployment-block=\"deploy-wing\"]'\u001b[39m)\u001b[33m,\u001b[39mblockBox\u001b[33m=\u001b[39m(\u001b[36mawait\u001b[39m block\u001b[33m.\u001b[39mboundingBox())\u001b[33m!\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 60 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mmove(blockBox\u001b[33m.\u001b[39mx\u001b[33m+\u001b[39mblockBox\u001b[33m.\u001b[39mwidth\u001b[33m/\u001b[39m\u001b[35m2\u001b[39m\u001b[33m,\u001b[39mblockBox\u001b[33m.\u001b[39my\u001b[33m+\u001b[39mblockBox\u001b[33m.\u001b[39mheight\u001b[33m/\u001b[39m\u001b[35m2\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mdown()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mmove(blockBox\u001b[33m.\u001b[39mx\u001b[33m+\u001b[39mblockBox\u001b[33m.\u001b[39mwidth\u001b[33m/\u001b[39m\u001b[35m2\u001b[39m\u001b[33m+\u001b[39m\u001b[35m32\u001b[39m\u001b[33m,\u001b[39mblockBox\u001b[33m.\u001b[39my\u001b[33m+\u001b[39mblockBox\u001b[33m.\u001b[39mheight\u001b[33m/\u001b[39m\u001b[35m2\u001b[39m\u001b[33m,\u001b[39m{steps\u001b[33m:\u001b[39m\u001b[35m8\u001b[39m})\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 61 |\u001b[39m  expect((\u001b[36mawait\u001b[39m block\u001b[33m.\u001b[39mboundingBox())\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mx)\u001b[33m.\u001b[39mtoBeGreaterThan(blockBox\u001b[33m.\u001b[39mx)\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m state(page))\u001b[33m.\u001b[39mplan)\u001b[33m.\u001b[39mtoEqual(original\u001b[33m.\u001b[39mplan)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 62 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Escape'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mup()\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m state(page))\u001b[33m.\u001b[39mplan)\u001b[33m.\u001b[39mtoEqual(original\u001b[33m.\u001b[39mplan)\u001b[33m;\u001b[39m\n \u001b[90m 63 |\u001b[39m  \u001b[90m// The visible repair CTA shares its action with the left part list. Repaint\u001b[39m\n \u001b[90m 64 |\u001b[39m  \u001b[90m// must return focus to this right-panel control, not the hidden duplicate.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-flow.spec.ts",
+                        "column": 41,
+                        "line": 61
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m45.5\u001b[39m\nReceived:   \u001b[31m45.5\u001b[39m\n\n  59 |  const block=page.locator('[data-deployment-block=\"deploy-wing\"]'),blockBox=(await block.boundingBox())!;\n  60 |  await page.mouse.move(blockBox.x+blockBox.width/2,blockBox.y+blockBox.height/2);await page.mouse.down();await page.mouse.move(blockBox.x+blockBox.width/2+32,blockBox.y+blockBox.height/2,{steps:8});\n> 61 |  expect((await block.boundingBox())!.x).toBeGreaterThan(blockBox.x);expect((await state(page)).plan).toEqual(original.plan);\n     |                                         ^\n  62 |  await page.keyboard.press('Escape');await page.mouse.up();expect((await state(page)).plan).toEqual(original.plan);\n  63 |  // The visible repair CTA shares its action with the left part list. Repaint\n  64 |  // must return focus to this right-panel control, not the hidden duplicate.\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-flow.spec.ts:61:41"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:04:06.369Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\m8-production-r1-traces\\deployment-flow-real-cable-7dcd1-t-and-exact-terminal-replay\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\m8-production-r1-traces\\deployment-flow-real-cable-7dcd1-t-and-exact-terminal-replay\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-flow.spec.ts",
+                    "column": 41,
+                    "line": 61
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e5aa0b857a084ff88913-4564b8f6900d6014bec6",
+          "file": "deployment-flow.spec.ts",
+          "line": 52,
+          "column": 1
+        },
+        {
+          "title": "fixed wing is a real distinct complete alternative",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 28540,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeUndefined\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m{\"action\": null, \"actionId\": null, \"activeJointId\": null, \"blockedAtEnd\": false, \"clearance\": null, \"desired\": \"deployed\", \"driveProfileId\": null, \"jointStates\": {}, \"mechanicalLatch\": true, \"motion\": null, \"motionElapsedSeconds\": 0, \"motorEnergyJ\": 0, \"partId\": \"wing\", \"phase\": \"deployed-latched\", \"phaseStartedAt\": 0, \"powerContactClosed\": true, \"reasonCode\": null, \"remainingReleaseSeconds\": 0, \"remainingVerificationSeconds\": 0, \"resumePhase\": null, \"rfContactClosed\": false, \"stopReason\": null, \"timeSeconds\": 1385.0067053601188}\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeUndefined\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m{\"action\": null, \"actionId\": null, \"activeJointId\": null, \"blockedAtEnd\": false, \"clearance\": null, \"desired\": \"deployed\", \"driveProfileId\": null, \"jointStates\": {}, \"mechanicalLatch\": true, \"motion\": null, \"motionElapsedSeconds\": 0, \"motorEnergyJ\": 0, \"partId\": \"wing\", \"phase\": \"deployed-latched\", \"phaseStartedAt\": 0, \"powerContactClosed\": true, \"reasonCode\": null, \"remainingReleaseSeconds\": 0, \"remainingVerificationSeconds\": 0, \"resumePhase\": null, \"rfContactClosed\": false, \"stopReason\": null, \"timeSeconds\": 1385.0067053601188}\u001b[39m\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-flow.spec.ts:90:77",
+                    "location": {
+                      "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-flow.spec.ts",
+                      "column": 77,
+                      "line": 90
+                    },
+                    "snippet": " \u001b[90m 88 |\u001b[39m  \u001b[36mawait\u001b[39m open(page)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m folded\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m state(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m control(page\u001b[33m,\u001b[39m\u001b[32m'variants'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m control(page\u001b[33m,\u001b[39m\u001b[32m'preset:fixed'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m ready(page)\u001b[33m;\u001b[39m\n \u001b[90m 89 |\u001b[39m  \u001b[36mconst\u001b[39m fixed\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m state(page)\u001b[33m;\u001b[39mexpect(fixed\u001b[33m.\u001b[39mdraft\u001b[33m.\u001b[39mlaunchable)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39mexpect(fixed\u001b[33m.\u001b[39mcraft\u001b[33m.\u001b[39mlaunchPackageId)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBe(folded\u001b[33m.\u001b[39mcraft\u001b[33m.\u001b[39mlaunchPackageId)\u001b[33m;\u001b[39mexpect(fixed\u001b[33m.\u001b[39mcraft)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoEqual(folded\u001b[33m.\u001b[39mcraft)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 90 |\u001b[39m  \u001b[36mconst\u001b[39m result\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m fullFlight(page)\u001b[33m;\u001b[39mexpect(result\u001b[33m.\u001b[39mruntime\u001b[33m.\u001b[39mmechanisms\u001b[33m.\u001b[39mwing)\u001b[33m.\u001b[39mtoBeUndefined()\u001b[33m;\u001b[39mexpect(result\u001b[33m.\u001b[39mresult\u001b[33m.\u001b[39mmechanisms\u001b[33m.\u001b[39mevery((m\u001b[33m:\u001b[39many)\u001b[33m=>\u001b[39mm\u001b[33m.\u001b[39mmechanicalLatch))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 91 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39mjoin(out\u001b[33m,\u001b[39m\u001b[32m'fixed-wing-terminal.png'\u001b[39m)})\u001b[33m;\u001b[39mwriteFileSync(join(out\u001b[33m,\u001b[39m\u001b[32m'fixed-wing-result.json'\u001b[39m)\u001b[33m,\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify(result\u001b[33m.\u001b[39mresult\u001b[33m,\u001b[39m\u001b[36mnull\u001b[39m\u001b[33m,\u001b[39m\u001b[35m2\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 92 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 93 |\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-flow.spec.ts",
+                        "column": 77,
+                        "line": 90
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeUndefined\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m{\"action\": null, \"actionId\": null, \"activeJointId\": null, \"blockedAtEnd\": false, \"clearance\": null, \"desired\": \"deployed\", \"driveProfileId\": null, \"jointStates\": {}, \"mechanicalLatch\": true, \"motion\": null, \"motionElapsedSeconds\": 0, \"motorEnergyJ\": 0, \"partId\": \"wing\", \"phase\": \"deployed-latched\", \"phaseStartedAt\": 0, \"powerContactClosed\": true, \"reasonCode\": null, \"remainingReleaseSeconds\": 0, \"remainingVerificationSeconds\": 0, \"resumePhase\": null, \"rfContactClosed\": false, \"stopReason\": null, \"timeSeconds\": 1385.0067053601188}\u001b[39m\n\n  88 |  await open(page);const folded=await state(page);await control(page,'variants').click();await control(page,'preset:fixed').click();await ready(page);\n  89 |  const fixed=await state(page);expect(fixed.draft.launchable).toBe(true);expect(fixed.craft.launchPackageId).not.toBe(folded.craft.launchPackageId);expect(fixed.craft).not.toEqual(folded.craft);\n> 90 |  const result=await fullFlight(page);expect(result.runtime.mechanisms.wing).toBeUndefined();expect(result.result.mechanisms.every((m:any)=>m.mechanicalLatch)).toBe(true);\n     |                                                                             ^\n  91 |  await page.screenshot({path:join(out,'fixed-wing-terminal.png')});writeFileSync(join(out,'fixed-wing-result.json'),JSON.stringify(result.result,null,2));\n  92 | });\n  93 |\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-flow.spec.ts:90:77"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:04:17.582Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\m8-production-r1-traces\\deployment-flow-fixed-wing-58844-stinct-complete-alternative\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\m8-production-r1-traces\\deployment-flow-fixed-wing-58844-stinct-complete-alternative\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-flow.spec.ts",
+                    "column": 77,
+                    "line": 90
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e5aa0b857a084ff88913-9636294f6c85b11b4f58",
+          "file": "deployment-flow.spec.ts",
+          "line": 87,
+          "column": 1
+        },
+        {
+          "title": "ko normal 1280 repair layout and visible controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6634,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:04:48.472Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5aa0b857a084ff88913-8eeef432d5bae7083529",
+          "file": "deployment-flow.spec.ts",
+          "line": 95,
+          "column": 2
+        },
+        {
+          "title": "ko normal 1920 repair layout and visible controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5505,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:04:55.473Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5aa0b857a084ff88913-1679d35182032d3788db",
+          "file": "deployment-flow.spec.ts",
+          "line": 95,
+          "column": 2
+        },
+        {
+          "title": "ko large 1280 repair layout and visible controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4875,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:05:00.995Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5aa0b857a084ff88913-4f4e8ebdb5c15d45e8bc",
+          "file": "deployment-flow.spec.ts",
+          "line": 95,
+          "column": 2
+        },
+        {
+          "title": "ko large 1920 repair layout and visible controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4938,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:05:05.885Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5aa0b857a084ff88913-352f9a4f986ef19687e8",
+          "file": "deployment-flow.spec.ts",
+          "line": 95,
+          "column": 2
+        },
+        {
+          "title": "en normal 1280 repair layout and visible controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4879,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:05:10.836Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5aa0b857a084ff88913-b0a84e0b7e15d226dd2a",
+          "file": "deployment-flow.spec.ts",
+          "line": 95,
+          "column": 2
+        },
+        {
+          "title": "en normal 1920 repair layout and visible controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5327,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:05:15.729Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5aa0b857a084ff88913-1afe79e0da4a1a9a6458",
+          "file": "deployment-flow.spec.ts",
+          "line": 95,
+          "column": 2
+        },
+        {
+          "title": "en large 1280 repair layout and visible controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5154,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:05:21.070Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5aa0b857a084ff88913-784198551f8b7dff84fd",
+          "file": "deployment-flow.spec.ts",
+          "line": 95,
+          "column": 2
+        },
+        {
+          "title": "en large 1920 repair layout and visible controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5269,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:05:26.236Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e5aa0b857a084ff88913-feb1c5f105c4a97785b1",
+          "file": "deployment-flow.spec.ts",
+          "line": 95,
+          "column": 2
+        }
+      ]
+    },
+    {
+      "title": "hardware-interaction.spec.ts",
+      "file": "hardware-interaction.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "all sixteen model cards place their own physical meshes through real pointer drags",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21286,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:05:31.576Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "46ca1c9fd341fbc8e1ee-139998e3416c305dc7c6",
+          "file": "hardware-interaction.spec.ts",
+          "line": 24,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "keyboard-assembly.spec.ts",
+      "file": "keyboard-assembly.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "ko-normal native keyboard placement move cancel and undo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11909,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:07:54.303Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c3ce33dafff955d3b4a7-ddc8d76bb045ad43d061",
+          "file": "keyboard-assembly.spec.ts",
+          "line": 35,
+          "column": 2
+        },
+        {
+          "title": "ko-large native keyboard placement move cancel and undo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9956,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:08:07.100Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c3ce33dafff955d3b4a7-f975d01df05865c2bb60",
+          "file": "keyboard-assembly.spec.ts",
+          "line": 35,
+          "column": 2
+        },
+        {
+          "title": "en-normal native keyboard placement move cancel and undo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10108,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:08:17.073Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c3ce33dafff955d3b4a7-0cbfedd1e447b0a717cc",
+          "file": "keyboard-assembly.spec.ts",
+          "line": 35,
+          "column": 2
+        },
+        {
+          "title": "en-large native keyboard placement move cancel and undo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9715,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:08:27.196Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c3ce33dafff955d3b4a7-ae5d3d5e2130bfbb177f",
+          "file": "keyboard-assembly.spec.ts",
+          "line": 35,
+          "column": 2
+        }
+      ]
+    },
+    {
+      "title": "remote-operations.spec.ts",
+      "file": "remote-operations.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "actual pointer repair reaches the spacecraft before Earth confirmation and returns science with version2 replay",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 360000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 106064,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:05:52.945Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "remote-operations-browser-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJ0ZXN0IjogImFjdHVhbCBwb2ludGVyIHJlcGFpciByZWFjaGVzIHRoZSBzcGFjZWNyYWZ0IGJlZm9yZSBFYXJ0aCBjb25maXJtYXRpb24gYW5kIHJldHVybnMgc2NpZW5jZSB3aXRoIHZlcnNpb24yIHJlcGxheSIsCiAgInN0YXR1cyI6ICJwYXNzZWQiLAogICJicm93c2VyIjogIjE1Ny4wLjgxMDMuNTIiLAogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo1MTg4Lz9xYSIsCiAgInZpZXdwb3J0IjogewogICAgIndpZHRoIjogMTI4MCwKICAgICJoZWlnaHQiOiA3MjAKICB9LAogICJlcnJvcnMiOiBbXSwKICAid2FybmluZ3MiOiBbCiAgICAiVEhSRUUuc2lnbWFSYWRpYW5zLCAwLjA4LCBpcyB0b28gbGFyZ2UgYW5kIHdpbGwgY2xpcCwgYXMgaXQgcmVxdWVzdGVkIDM5IHNhbXBsZXMgd2hlbiB0aGUgbWF4aW11bSBpcyBzZXQgdG8gMjAiLAogICAgIlRIUkVFLnNpZ21hUmFkaWFucywgMC4wOCwgaXMgdG9vIGxhcmdlIGFuZCB3aWxsIGNsaXAsIGFzIGl0IHJlcXVlc3RlZCAzOSBzYW1wbGVzIHdoZW4gdGhlIG1heGltdW0gaXMgc2V0IHRvIDIwIiwKICAgICJUSFJFRS5zaWdtYVJhZGlhbnMsIDAuMDgsIGlzIHRvbyBsYXJnZSBhbmQgd2lsbCBjbGlwLCBhcyBpdCByZXF1ZXN0ZWQgMzkgc2FtcGxlcyB3aGVuIHRoZSBtYXhpbXVtIGlzIHNldCB0byAyMCIsCiAgICAiVEhSRUUuc2lnbWFSYWRpYW5zLCAwLjA4LCBpcyB0b28gbGFyZ2UgYW5kIHdpbGwgY2xpcCwgYXMgaXQgcmVxdWVzdGVkIDM5IHNhbXBsZXMgd2hlbiB0aGUgbWF4aW11bSBpcyBzZXQgdG8gMjAiLAogICAgIlRIUkVFLnNpZ21hUmFkaWFucywgMC4wOCwgaXMgdG9vIGxhcmdlIGFuZCB3aWxsIGNsaXAsIGFzIGl0IHJlcXVlc3RlZCAzOSBzYW1wbGVzIHdoZW4gdGhlIG1heGltdW0gaXMgc2V0IHRvIDIwIiwKICAgICJUSFJFRS5zaWdtYVJhZGlhbnMsIDAuMDgsIGlzIHRvbyBsYXJnZSBhbmQgd2lsbCBjbGlwLCBhcyBpdCByZXF1ZXN0ZWQgMzkgc2FtcGxlcyB3aGVuIHRoZSBtYXhpbXVtIGlzIHNldCB0byAyMCIsCiAgICAiVEhSRUUuc2lnbWFSYWRpYW5zLCAwLjA4LCBpcyB0b28gbGFyZ2UgYW5kIHdpbGwgY2xpcCwgYXMgaXQgcmVxdWVzdGVkIDM5IHNhbXBsZXMgd2hlbiB0aGUgbWF4aW11bSBpcyBzZXQgdG8gMjAiLAogICAgIlRIUkVFLnNpZ21hUmFkaWFucywgMC4wOCwgaXMgdG9vIGxhcmdlIGFuZCB3aWxsIGNsaXAsIGFzIGl0IHJlcXVlc3RlZCAzOSBzYW1wbGVzIHdoZW4gdGhlIG1heGltdW0gaXMgc2V0IHRvIDIwIgogIF0sCiAgIm5hdGl2ZURlbGV0aW9uQXVkaXQiOiB7CiAgICAiZXJyb3JzIjogW10sCiAgICAiY29udGV4dHMiOiBbCiAgICAgIHsKICAgICAgICAiaWQiOiAxLAogICAgICAgICJjYW52YXNJZCI6ICIiLAogICAgICAgICJnZW5lcmF0aW9uIjogMCwKICAgICAgICAiY3JlYXRlZCI6IDQ4NCwKICAgICAgICAiZGVsZXRlcyI6IDEwOCwKICAgICAgICAicmVzdG9yZXMiOiAwCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAiaWQiOiAyLAogICAgICAgICJjYW52YXNJZCI6ICIiLAogICAgICAgICJnZW5lcmF0aW9uIjogMywKICAgICAgICAiY3JlYXRlZCI6IDIxOTksCiAgICAgICAgImRlbGV0ZXMiOiAyMTcwLAogICAgICAgICJyZXN0b3JlcyI6IDMKICAgICAgfQogICAgXSwKICAgICJjb250ZXh0TG9zdE5vdGlmaWNhdGlvbnMiOiAzCiAgfSwKICAic2NyaXB0cyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjUxODgvYXNzZXRzL2luZGV4LUNZSzFzYllJLmpzIgogIF0sCiAgIndvcmtlcnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo1MTg4L2Fzc2V0cy9wcmV2aWV3Lndvcmtlci1EVUZMUWlGci5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo1MTg4L2Fzc2V0cy9mb3JlY2FzdC53b3JrZXItRDRCWVpfUmguanMiCiAgXSwKICAic2NvcGUiOiAiUmVhbCBVSSwgYWN0dWFsIGNvbXB1dGVkIGZsaWdodCwgcG9pbnRlciBzY2hlZHVsZSBlZGl0aW5nLCBmaW5pdGUgY29tbWFuZC9BQ0sgaGlzdG9yeSBhbmQgdmVyc2lvbjIgcmVwbGF5LiBObyBpbmplY3RlZCBjaGVja3BvaW50L291dGNvbWUgb3IgaW5kZXBlbmRlbnQgcGVyZm9ybWFuY2UgY2xhaW0uIgp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7e12fe93d9b97430944b-a4ff2c68457305f7e34b",
+          "file": "remote-operations.spec.ts",
+          "line": 92,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "swingby-builder.spec.ts",
+      "file": "swingby-builder.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "swingby builder changes real CG with a pointer move and preserves its plan and separate save slot",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13374,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:07:39.181Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "swingby-builder-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJ0ZXN0IjogInN3aW5nYnkgYnVpbGRlciBjaGFuZ2VzIHJlYWwgQ0cgd2l0aCBhIHBvaW50ZXIgbW92ZSBhbmQgcHJlc2VydmVzIGl0cyBwbGFuIGFuZCBzZXBhcmF0ZSBzYXZlIHNsb3QiLAogICJzdGF0dXMiOiAicGFzc2VkIiwKICAiYnJvd3NlciI6ICIxNTcuMC44MTAzLjUyIiwKICAidmlld3BvcnQiOiB7CiAgICAid2lkdGgiOiAxMjgwLAogICAgImhlaWdodCI6IDcyMAogIH0sCiAgInVybCI6ICJodHRwOi8vMTI3LjAuMC4xOjUxODgvP3FhIiwKICAic2NyaXB0cyI6IFsKICAgICJodHRwOi8vMTI3LjAuMC4xOjUxODgvYXNzZXRzL2luZGV4LUNZSzFzYllJLmpzIgogIF0sCiAgIndvcmtlcnMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo1MTg4L2Fzc2V0cy9wcmV2aWV3Lndvcmtlci1EVUZMUWlGci5qcyIsCiAgICAiaHR0cDovLzEyNy4wLjAuMTo1MTg4L2Fzc2V0cy9mb3JlY2FzdC53b3JrZXItRDRCWVpfUmguanMiCiAgXSwKICAiZXJyb3JzIjogW10sCiAgIndhcm5pbmdzIjogWwogICAgIlRIUkVFLnNpZ21hUmFkaWFucywgMC4wOCwgaXMgdG9vIGxhcmdlIGFuZCB3aWxsIGNsaXAsIGFzIGl0IHJlcXVlc3RlZCAzOSBzYW1wbGVzIHdoZW4gdGhlIG1heGltdW0gaXMgc2V0IHRvIDIwIiwKICAgICJUSFJFRS5zaWdtYVJhZGlhbnMsIDAuMDgsIGlzIHRvbyBsYXJnZSBhbmQgd2lsbCBjbGlwLCBhcyBpdCByZXF1ZXN0ZWQgMzkgc2FtcGxlcyB3aGVuIHRoZSBtYXhpbXVtIGlzIHNldCB0byAyMCIsCiAgICAiVEhSRUUuc2lnbWFSYWRpYW5zLCAwLjA4LCBpcyB0b28gbGFyZ2UgYW5kIHdpbGwgY2xpcCwgYXMgaXQgcmVxdWVzdGVkIDM5IHNhbXBsZXMgd2hlbiB0aGUgbWF4aW11bSBpcyBzZXQgdG8gMjAiLAogICAgIlRIUkVFLnNpZ21hUmFkaWFucywgMC4wOCwgaXMgdG9vIGxhcmdlIGFuZCB3aWxsIGNsaXAsIGFzIGl0IHJlcXVlc3RlZCAzOSBzYW1wbGVzIHdoZW4gdGhlIG1heGltdW0gaXMgc2V0IHRvIDIwIiwKICAgICJUSFJFRS5zaWdtYVJhZGlhbnMsIDAuMDgsIGlzIHRvbyBsYXJnZSBhbmQgd2lsbCBjbGlwLCBhcyBpdCByZXF1ZXN0ZWQgMzkgc2FtcGxlcyB3aGVuIHRoZSBtYXhpbXVtIGlzIHNldCB0byAyMCIsCiAgICAiVEhSRUUuc2lnbWFSYWRpYW5zLCAwLjA4LCBpcyB0b28gbGFyZ2UgYW5kIHdpbGwgY2xpcCwgYXMgaXQgcmVxdWVzdGVkIDM5IHNhbXBsZXMgd2hlbiB0aGUgbWF4aW11bSBpcyBzZXQgdG8gMjAiLAogICAgIlRIUkVFLnNpZ21hUmFkaWFucywgMC4wOCwgaXMgdG9vIGxhcmdlIGFuZCB3aWxsIGNsaXAsIGFzIGl0IHJlcXVlc3RlZCAzOSBzYW1wbGVzIHdoZW4gdGhlIG1heGltdW0gaXMgc2V0IHRvIDIwIiwKICAgICJUSFJFRS5zaWdtYVJhZGlhbnMsIDAuMDgsIGlzIHRvbyBsYXJnZSBhbmQgd2lsbCBjbGlwLCBhcyBpdCByZXF1ZXN0ZWQgMzkgc2FtcGxlcyB3aGVuIHRoZSBtYXhpbXVtIGlzIHNldCB0byAyMCIKICBdLAogICJuYXRpdmUiOiB7CiAgICAiZXJyb3JzIjogW10sCiAgICAiY29udGV4dHMiOiBbCiAgICAgIHsKICAgICAgICAiaWQiOiAxLAogICAgICAgICJjYW52YXNJZCI6ICIiLAogICAgICAgICJnZW5lcmF0aW9uIjogMCwKICAgICAgICAiY3JlYXRlZCI6IDEyNDksCiAgICAgICAgImRlbGV0ZXMiOiAxMjAsCiAgICAgICAgInJlc3RvcmVzIjogMAogICAgICB9LAogICAgICB7CiAgICAgICAgImlkIjogMiwKICAgICAgICAiY2FudmFzSWQiOiAiIiwKICAgICAgICAiZ2VuZXJhdGlvbiI6IDAsCiAgICAgICAgImNyZWF0ZWQiOiA4MDgsCiAgICAgICAgImRlbGV0ZXMiOiA3OTgsCiAgICAgICAgInJlc3RvcmVzIjogMAogICAgICB9CiAgICBdLAogICAgImNvbnRleHRMb3N0Tm90aWZpY2F0aW9ucyI6IDAKICB9LAogICJmaXh0dXJlQ29kZVNoYTI1NiI6ICI2MDJlZTE3MzVkMGI1Zjc1OTViMWMwZTM1NWM5MzRjNjg2YTVlYzQ1NzZiZmMxZWMxZTQ1YWExYjJlMDEyOGMwIiwKICAic2NvcGUiOiAiQWN0dWFsIFVJIGVudHJ5LCBwb2ludGVyIGFpbSwgdmlzaWJsZSBtZXNoIGNsaWNrL21vdmUsIGJ1cyBwaWNrZXIsIHVuZG8sIEpTT04gYW5kIGNhbXB1cyBjb250aW51ZS4gUmVhZC1vbmx5IHByb2plY3Rpb25zIGFuZCBzb3VyY2UtZG9tYWluIGNhbGN1bGF0aW9uczsgbm8gUUEgc3RhdGUgaW5qZWN0aW9uLCBXb3JrZXIgcG9zdHMsIGZha2UgY29tcGxldGlvbiBvciBzaW11bGF0aW9uIGFkdmFuY2VtZW50LiIKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7ba7850450cc382309ab-a0a9673c5aca3c56c952",
+          "file": "swingby-builder.spec.ts",
+          "line": 69,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-15T05:04:04.848Z",
+    "duration": 273005.118,
+    "expected": 15,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

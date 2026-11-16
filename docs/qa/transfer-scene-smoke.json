@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-14T17:20:09.317Z",
+  "browser": "157.0.8103.52",
+  "errors": [],
+  "handles": {
+    "departure": {
+      "x": 947.6192366079343,
+      "y": 347.62566677798833,
+      "visible": true,
+      "jdTdb": 2461359.5
+    },
+    "arrival": {
+      "x": 349.69633270532086,
+      "y": 569.5101959913269,
+      "visible": true,
+      "jdTdb": 2461619.5
+    }
+  },
+  "first": 2461359.5,
+  "events": [
+    {
+      "kind": "departure",
+      "jd": 2461377.5,
+      "commit": true
+    },
+    {
+      "kind": "arrival",
+      "jd": 2461637.5,
+      "commit": true
+    }
+  ],
+  "preview": true,
+  "craft": [
+    -1.4435637330401163,
+    1.627641191979684,
+    -3.2188201915484247
+  ],
+  "info": {
+    "geometries": 117,
+    "textures": 9
+  },
+  "canvasesAfterDispose": 0
+}

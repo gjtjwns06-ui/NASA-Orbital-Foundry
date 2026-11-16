@@ -1,0 +1,243 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/browser/transfer-plan-comparison.spec.ts",
+      "--reporter=json"
+    ],
+    "configFile": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\playwright.config.ts",
+    "rootDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry-next-nav05/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry-next-nav05/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry-next-nav05/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\tests\\browser",
+        "snapshotDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5193",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "headless": true,
+          "launchOptions": {
+            "executablePath": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+            "args": [
+              "--disable-background-timer-throttling"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "transfer-plan-comparison.spec.ts",
+      "file": "transfer-plan-comparison.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "native date route change preserves computed consequences through infeasible input and exact return",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 38964,
+                  "error": {
+                    "message": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.transfer-topbar>span')\u001b[22m\n\u001b[2m    - locator resolved to <span>M03 · 지구에서 화성까지</span>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <canvas width=\"1280\" height=\"720\" data-quality=\"medium\" id=\"transfer-universe\" data-engine=\"three.js r182\" aria-label=\"3D 지구–화성 전이. 출발·도착 손잡이를 왼쪽 드래그, 시점을 오른쪽 드래그, 휠로 확대합니다.\"></canvas> from <div class=\"transfer-viewport\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <canvas width=\"1280\" height=\"720\" data-quality=\"medium\" id=\"transfer-universe\" data-engine=\"three.js r182\" aria-label=\"3D 지구–화성 전이. 출발·도착 손잡이를 왼쪽 드래그, 시점을 오른쪽 드래그, 휠로 확대합니다.\"></canvas> from <div class=\"transfer-viewport\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    26 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <canvas width=\"1280\" height=\"720\" data-quality=\"medium\" id=\"transfer-universe\" data-engine=\"three.js r182\" aria-label=\"3D 지구–화성 전이. 출발·도착 손잡이를 왼쪽 드래그, 시점을 오른쪽 드래그, 휠로 확대합니다.\"></canvas> from <div class=\"transfer-viewport\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+                    "stack": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.transfer-topbar>span')\u001b[22m\n\u001b[2m    - locator resolved to <span>M03 · 지구에서 화성까지</span>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <canvas width=\"1280\" height=\"720\" data-quality=\"medium\" id=\"transfer-universe\" data-engine=\"three.js r182\" aria-label=\"3D 지구–화성 전이. 출발·도착 손잡이를 왼쪽 드래그, 시점을 오른쪽 드래그, 휠로 확대합니다.\"></canvas> from <div class=\"transfer-viewport\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <canvas width=\"1280\" height=\"720\" data-quality=\"medium\" id=\"transfer-universe\" data-engine=\"three.js r182\" aria-label=\"3D 지구–화성 전이. 출발·도착 손잡이를 왼쪽 드래그, 시점을 오른쪽 드래그, 휠로 확대합니다.\"></canvas> from <div class=\"transfer-viewport\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    26 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <canvas width=\"1280\" height=\"720\" data-quality=\"medium\" id=\"transfer-universe\" data-engine=\"three.js r182\" aria-label=\"3D 지구–화성 전이. 출발·도착 손잡이를 왼쪽 드래그, 시점을 오른쪽 드래그, 휠로 확대합니다.\"></canvas> from <div class=\"transfer-viewport\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\tests\\browser\\transfer-plan-comparison.spec.ts:34:184",
+                    "location": {
+                      "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\tests\\browser\\transfer-plan-comparison.spec.ts",
+                      "column": 184,
+                      "line": 34
+                    },
+                    "snippet": " \u001b[90m 32 |\u001b[39m  \u001b[36mconst\u001b[39m prior\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m overlay(page)\u001b[33m;\u001b[39mexpect(prior\u001b[33m.\u001b[39mvisible)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39mexpect(prior\u001b[33m.\u001b[39mpaths)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m3\u001b[39m)\u001b[33m;\u001b[39mexpect(prior\u001b[33m.\u001b[39mpaths\u001b[33m.\u001b[39mevery((p\u001b[33m:\u001b[39many)\u001b[33m=>\u001b[39mp\u001b[33m.\u001b[39mdashed\u001b[33m&&\u001b[39mp\u001b[33m.\u001b[39mpoints\u001b[33m.\u001b[39mlength\u001b[33m>=\u001b[39m\u001b[35m300\u001b[39m))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m rows\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m checkRows(page\u001b[33m,\u001b[39moriginal\u001b[33m,\u001b[39mchanged)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m hit(page\u001b[33m,\u001b[39m\u001b[32m'[data-transfer-action=\"restore-previous-plan\"]'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39mjoin(out\u001b[33m,\u001b[39m\u001b[32m'ko-normal-1280-changed.png'\u001b[39m)})\u001b[33m;\u001b[39m\n \u001b[90m 33 |\u001b[39m  \u001b[36mconst\u001b[39m blockedPoints\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m dragDate(page\u001b[33m,\u001b[39m\u001b[35m43\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m blocked\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m state(page)\u001b[33m;\u001b[39mexpect(blocked\u001b[33m.\u001b[39mevaluation\u001b[33m.\u001b[39mlaunchable)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39mexpect(blocked\u001b[33m.\u001b[39mcomparison\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[32m'unlaunchable'\u001b[39m)\u001b[33m;\u001b[39mexpect(blocked\u001b[33m.\u001b[39mcomparison\u001b[33m.\u001b[39mpreviousPlan)\u001b[33m.\u001b[39mtoEqual(changed\u001b[33m.\u001b[39mplan)\u001b[33m;\u001b[39mexpect(blocked\u001b[33m.\u001b[39mevaluation\u001b[33m.\u001b[39mstageFuelRemainingKg)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39mjoin(out\u001b[33m,\u001b[39m\u001b[32m'ko-normal-1280-fuel-blocked.png'\u001b[39m)})\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-transfer-date=\"arrival\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'2026-11-20'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-transfer-date=\"arrival\"]'\u001b[39m)\u001b[33m.\u001b[39mpress(\u001b[32m'Tab'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.transfer-topbar>span'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m ready(page)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m invalid\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m state(page)\u001b[33m;\u001b[39mexpect(invalid\u001b[33m.\u001b[39mcomparison\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[32m'infeasible'\u001b[39m)\u001b[33m;\u001b[39mexpect(invalid\u001b[33m.\u001b[39msolution)\u001b[33m.\u001b[39mtoBeNull()\u001b[33m;\u001b[39mexpect(invalid\u001b[33m.\u001b[39mcomparison\u001b[33m.\u001b[39mpreviousPlan)\u001b[33m.\u001b[39mtoEqual(changed\u001b[33m.\u001b[39mplan)\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m overlay(page))\u001b[33m.\u001b[39mvisible)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39mexpect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-comparison=\"c3\"]'\u001b[39m)\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'data-current-value'\u001b[39m))\u001b[33m.\u001b[39mtoBeNull()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m hit(page\u001b[33m,\u001b[39m\u001b[32m'[data-transfer-action=\"restore-previous-plan\"]'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39mjoin(out\u001b[33m,\u001b[39m\u001b[32m'ko-normal-1280-infeasible.png'\u001b[39m)})\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 35 |\u001b[39m  \u001b[36mawait\u001b[39m action(page\u001b[33m,\u001b[39m\u001b[32m'restore-previous-plan'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m ready(page)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m restored\u001b[33m=\u001b[39maccepted(\u001b[36mawait\u001b[39m state(page))\u001b[33m;\u001b[39mexpect(restored)\u001b[33m.\u001b[39mtoEqual(changed)\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m state(page))\u001b[33m.\u001b[39mcomparison\u001b[33m.\u001b[39mpreviousPlan)\u001b[33m.\u001b[39mtoBeNull()\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m overlay(page))\u001b[33m.\u001b[39mpaths)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(action(page\u001b[33m,\u001b[39m\u001b[32m'launch'\u001b[39m))\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39mjoin(out\u001b[33m,\u001b[39m\u001b[32m'ko-normal-1280-restored.png'\u001b[39m)})\u001b[33m;\u001b[39m\n \u001b[90m 36 |\u001b[39m  writeFileSync(join(out\u001b[33m,\u001b[39m\u001b[32m'native-route-return.json'\u001b[39m)\u001b[33m,\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({points\u001b[33m,\u001b[39moriginal\u001b[33m,\u001b[39mchanged\u001b[33m,\u001b[39mprior\u001b[33m,\u001b[39mrows\u001b[33m,\u001b[39mblockedPoints\u001b[33m,\u001b[39mblocked\u001b[33m:\u001b[39maccepted(blocked)\u001b[33m,\u001b[39minvalid\u001b[33m:\u001b[39m{plan\u001b[33m:\u001b[39minvalid\u001b[33m.\u001b[39mplan\u001b[33m,\u001b[39mcomparison\u001b[33m:\u001b[39minvalid\u001b[33m.\u001b[39mcomparison\u001b[33m,\u001b[39merror\u001b[33m:\u001b[39minvalid\u001b[33m.\u001b[39merror}\u001b[33m,\u001b[39mrestored}\u001b[33m,\u001b[39m\u001b[36mnull\u001b[39m\u001b[33m,\u001b[39m\u001b[35m2\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m })\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\tests\\browser\\transfer-plan-comparison.spec.ts",
+                        "column": 184,
+                        "line": 34
+                      },
+                      "message": "TimeoutError: locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.transfer-topbar>span')\u001b[22m\n\u001b[2m    - locator resolved to <span>M03 · 지구에서 화성까지</span>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <canvas width=\"1280\" height=\"720\" data-quality=\"medium\" id=\"transfer-universe\" data-engine=\"three.js r182\" aria-label=\"3D 지구–화성 전이. 출발·도착 손잡이를 왼쪽 드래그, 시점을 오른쪽 드래그, 휠로 확대합니다.\"></canvas> from <div class=\"transfer-viewport\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <canvas width=\"1280\" height=\"720\" data-quality=\"medium\" id=\"transfer-universe\" data-engine=\"three.js r182\" aria-label=\"3D 지구–화성 전이. 출발·도착 손잡이를 왼쪽 드래그, 시점을 오른쪽 드래그, 휠로 확대합니다.\"></canvas> from <div class=\"transfer-viewport\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    26 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <canvas width=\"1280\" height=\"720\" data-quality=\"medium\" id=\"transfer-universe\" data-engine=\"three.js r182\" aria-label=\"3D 지구–화성 전이. 출발·도착 손잡이를 왼쪽 드래그, 시점을 오른쪽 드래그, 휠로 확대합니다.\"></canvas> from <div class=\"transfer-viewport\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n\n  32 |  const prior=await overlay(page);expect(prior.visible).toBe(true);expect(prior.paths).toHaveLength(3);expect(prior.paths.every((p:any)=>p.dashed&&p.points.length>=300)).toBe(true);const rows=await checkRows(page,original,changed);await hit(page,'[data-transfer-action=\"restore-previous-plan\"]');await page.screenshot({path:join(out,'ko-normal-1280-changed.png')});\n  33 |  const blockedPoints=await dragDate(page,43);const blocked=await state(page);expect(blocked.evaluation.launchable).toBe(false);expect(blocked.comparison.status).toBe('unlaunchable');expect(blocked.comparison.previousPlan).toEqual(changed.plan);expect(blocked.evaluation.stageFuelRemainingKg).toBeLessThan(0);await page.screenshot({path:join(out,'ko-normal-1280-fuel-blocked.png')});\n> 34 |  await page.locator('[data-transfer-date=\"arrival\"]').fill('2026-11-20');await page.locator('[data-transfer-date=\"arrival\"]').press('Tab');await page.locator('.transfer-topbar>span').click();await ready(page);const invalid=await state(page);expect(invalid.comparison.status).toBe('infeasible');expect(invalid.solution).toBeNull();expect(invalid.comparison.previousPlan).toEqual(changed.plan);expect((await overlay(page)).visible).toBe(true);expect(await page.locator('[data-comparison=\"c3\"]').getAttribute('data-current-value')).toBeNull();await hit(page,'[data-transfer-action=\"restore-previous-plan\"]');await page.screenshot({path:join(out,'ko-normal-1280-infeasible.png')});\n     |                                                                                                                                                                                        ^\n  35 |  await action(page,'restore-previous-plan').click();await ready(page);const restored=accepted(await state(page));expect(restored).toEqual(changed);expect((await state(page)).comparison.previousPlan).toBeNull();expect((await overlay(page)).paths).toHaveLength(0);await expect(action(page,'launch')).toBeEnabled();await page.screenshot({path:join(out,'ko-normal-1280-restored.png')});\n  36 |  writeFileSync(join(out,'native-route-return.json'),JSON.stringify({points,original,changed,prior,rows,blockedPoints,blocked:accepted(blocked),invalid:{plan:invalid.plan,comparison:invalid.comparison,error:invalid.error},restored},null,2));\n  37 | });\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\tests\\browser\\transfer-plan-comparison.spec.ts:34:184"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T10:20:23.821Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\test-results\\transfer-plan-comparison-n-c3d94-ible-input-and-exact-return\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\tests\\browser\\transfer-plan-comparison.spec.ts",
+                    "column": 184,
+                    "line": 34
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a051eda28369453b5bd5-fc4ec76c7c50ab9373b9",
+          "file": "transfer-plan-comparison.spec.ts",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "English large comparison survives pointer cancellation context restore and resets on import and launch",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 30256,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 14\u001b[39m\n\u001b[31m+ Received  +  4\u001b[39m\n\n\u001b[33m@@ -1,7 +1,9 @@\u001b[39m\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"craft\": Object {\u001b[22m\n\u001b[31m+     \"hazard\": \"none\",\u001b[39m\n\u001b[31m+     \"launchPackageId\": undefined,\u001b[39m\n\u001b[2m      \"missionId\": \"mars\",\u001b[22m\n\u001b[2m      \"name\": \"PATHFINDER-01\",\u001b[22m\n\u001b[2m      \"parts\": Array [\u001b[22m\n\u001b[2m        Object {\u001b[22m\n\u001b[2m          \"face\": \"px\",\u001b[22m\n\u001b[33m@@ -56,28 +58,16 @@\u001b[39m\n\u001b[2m        \"altitudeKm\": 600,\u001b[22m\n\u001b[2m        \"bPlaneAngleDeg\": 0,\u001b[22m\n\u001b[2m        \"burnTime\": 1200,\u001b[22m\n\u001b[2m        \"inclinationDeg\": 51.6,\u001b[22m\n\u001b[2m        \"normalMps\": 0,\u001b[22m\n\u001b[32m-       \"operations\": Array [\u001b[39m\n\u001b[32m-         Object {\u001b[39m\n\u001b[32m-           \"end\": 10400,\u001b[39m\n\u001b[32m-           \"id\": \"obs-1\",\u001b[39m\n\u001b[32m-           \"kind\": \"observe\",\u001b[39m\n\u001b[32m-           \"start\": 7200,\u001b[39m\n\u001b[32m-         },\u001b[39m\n\u001b[32m-         Object {\u001b[39m\n\u001b[32m-           \"end\": 17100,\u001b[39m\n\u001b[32m-           \"id\": \"down-1\",\u001b[39m\n\u001b[32m-           \"kind\": \"downlink\",\u001b[39m\n\u001b[32m-           \"start\": 10600,\u001b[39m\n\u001b[32m-         },\u001b[39m\n\u001b[32m-       ],\u001b[39m\n\u001b[31m+       \"operations\": Array [],\u001b[39m\n\u001b[2m        \"periapsisAltitudeKm\": 1000,\u001b[22m\n\u001b[2m        \"progradeMps\": 0,\u001b[22m\n\u001b[2m        \"radialMps\": 0,\u001b[22m\n\u001b[2m      },\u001b[22m\n\u001b[31m+     \"scienceTarget\": undefined,\u001b[39m\n\u001b[2m      \"seed\": 20261115,\u001b[22m\n\u001b[2m      \"version\": 1,\u001b[22m\n\u001b[2m    },\u001b[22m\n\u001b[2m    \"evaluation\": Object {\u001b[22m\n\u001b[2m      \"availableDeltaVMps\": 4323.226560902583,\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 14\u001b[39m\n\u001b[31m+ Received  +  4\u001b[39m\n\n\u001b[33m@@ -1,7 +1,9 @@\u001b[39m\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"craft\": Object {\u001b[22m\n\u001b[31m+     \"hazard\": \"none\",\u001b[39m\n\u001b[31m+     \"launchPackageId\": undefined,\u001b[39m\n\u001b[2m      \"missionId\": \"mars\",\u001b[22m\n\u001b[2m      \"name\": \"PATHFINDER-01\",\u001b[22m\n\u001b[2m      \"parts\": Array [\u001b[22m\n\u001b[2m        Object {\u001b[22m\n\u001b[2m          \"face\": \"px\",\u001b[22m\n\u001b[33m@@ -56,28 +58,16 @@\u001b[39m\n\u001b[2m        \"altitudeKm\": 600,\u001b[22m\n\u001b[2m        \"bPlaneAngleDeg\": 0,\u001b[22m\n\u001b[2m        \"burnTime\": 1200,\u001b[22m\n\u001b[2m        \"inclinationDeg\": 51.6,\u001b[22m\n\u001b[2m        \"normalMps\": 0,\u001b[22m\n\u001b[32m-       \"operations\": Array [\u001b[39m\n\u001b[32m-         Object {\u001b[39m\n\u001b[32m-           \"end\": 10400,\u001b[39m\n\u001b[32m-           \"id\": \"obs-1\",\u001b[39m\n\u001b[32m-           \"kind\": \"observe\",\u001b[39m\n\u001b[32m-           \"start\": 7200,\u001b[39m\n\u001b[32m-         },\u001b[39m\n\u001b[32m-         Object {\u001b[39m\n\u001b[32m-           \"end\": 17100,\u001b[39m\n\u001b[32m-           \"id\": \"down-1\",\u001b[39m\n\u001b[32m-           \"kind\": \"downlink\",\u001b[39m\n\u001b[32m-           \"start\": 10600,\u001b[39m\n\u001b[32m-         },\u001b[39m\n\u001b[32m-       ],\u001b[39m\n\u001b[31m+       \"operations\": Array [],\u001b[39m\n\u001b[2m        \"periapsisAltitudeKm\": 1000,\u001b[22m\n\u001b[2m        \"progradeMps\": 0,\u001b[22m\n\u001b[2m        \"radialMps\": 0,\u001b[22m\n\u001b[2m      },\u001b[22m\n\u001b[31m+     \"scienceTarget\": undefined,\u001b[39m\n\u001b[2m      \"seed\": 20261115,\u001b[22m\n\u001b[2m      \"version\": 1,\u001b[22m\n\u001b[2m    },\u001b[22m\n\u001b[2m    \"evaluation\": Object {\u001b[22m\n\u001b[2m      \"availableDeltaVMps\": 4323.226560902583,\u001b[22m\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\tests\\browser\\transfer-plan-comparison.spec.ts:46:613",
+                    "location": {
+                      "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\tests\\browser\\transfer-plan-comparison.spec.ts",
+                      "column": 613,
+                      "line": 46
+                    },
+                    "snippet": " \u001b[90m 44 |\u001b[39m  \u001b[36mconst\u001b[39m extension\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluateHandle(()\u001b[33m=>\u001b[39m(window \u001b[36mas\u001b[39m any)\u001b[33m.\u001b[39m__game\u001b[33m.\u001b[39mtransfer()\u001b[33m.\u001b[39mscene\u001b[33m.\u001b[39mrenderer\u001b[33m.\u001b[39mgetContext()\u001b[33m.\u001b[39mgetExtension(\u001b[32m'WEBGL_lose_context'\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m extension\u001b[33m.\u001b[39mevaluate(x\u001b[33m=>\u001b[39mx\u001b[33m.\u001b[39mloseContext())\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForFunction(()\u001b[33m=>\u001b[39m(window \u001b[36mas\u001b[39m any)\u001b[33m.\u001b[39m__allContextDeletionAudit\u001b[33m.\u001b[39mcontextLostNotifications\u001b[33m>\u001b[39m\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m extension\u001b[33m.\u001b[39mevaluate(x\u001b[33m=>\u001b[39mx\u001b[33m.\u001b[39mrestoreContext())\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForFunction(()\u001b[33m=>\u001b[39m(window \u001b[36mas\u001b[39m any)\u001b[33m.\u001b[39m__allContextDeletionAudit\u001b[33m.\u001b[39mcontexts\u001b[33m.\u001b[39msome((c\u001b[33m:\u001b[39many)\u001b[33m=>\u001b[39mc\u001b[33m.\u001b[39mrestores\u001b[33m>\u001b[39m\u001b[35m0\u001b[39m))\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m ready(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m settled(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m extension\u001b[33m.\u001b[39mdispose()\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m  expect(\u001b[36mawait\u001b[39m resources\u001b[33m.\u001b[39mevaluate(refs\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m g\u001b[33m=\u001b[39m(window \u001b[36mas\u001b[39m any)\u001b[33m.\u001b[39m__game\u001b[33m.\u001b[39mtransfer()\u001b[33m.\u001b[39mscene\u001b[33m.\u001b[39mpreviousPathGroup\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m refs\u001b[33m.\u001b[39mevery((r\u001b[33m:\u001b[39many\u001b[33m,\u001b[39mi\u001b[33m:\u001b[39mnumber)\u001b[33m=>\u001b[39m{\u001b[36mconst\u001b[39m o\u001b[33m=\u001b[39mg\u001b[33m.\u001b[39mchildren[i]\u001b[33m;\u001b[39m\u001b[36mreturn\u001b[39m o\u001b[33m===\u001b[39mr\u001b[33m.\u001b[39mobject\u001b[33m&&\u001b[39mo\u001b[33m.\u001b[39mgeometry\u001b[33m===\u001b[39mr\u001b[33m.\u001b[39mgeometry\u001b[33m&&\u001b[39mo\u001b[33m.\u001b[39mmaterial\u001b[33m===\u001b[39mr\u001b[33m.\u001b[39mmaterial\u001b[33m&&\u001b[39mo\u001b[33m.\u001b[39mgeometry\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'position'\u001b[39m)\u001b[33m===\u001b[39mr\u001b[33m.\u001b[39mattribute\u001b[33m&&\u001b[39mo\u001b[33m.\u001b[39mgeometry\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'position'\u001b[39m)\u001b[33m.\u001b[39marray\u001b[33m===\u001b[39mr\u001b[33m.\u001b[39marray\u001b[33m;\u001b[39m})\u001b[33m;\u001b[39m}))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39mexpect(\u001b[36mawait\u001b[39m overlay(page))\u001b[33m.\u001b[39mtoEqual(prior)\u001b[33m;\u001b[39mexpect(accepted(\u001b[36mawait\u001b[39m state(page)))\u001b[33m.\u001b[39mtoEqual(before)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m resources\u001b[33m.\u001b[39mdispose()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m hit(page\u001b[33m,\u001b[39m\u001b[32m'[data-transfer-action=\"restore-previous-plan\"]'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39mjoin(out\u001b[33m,\u001b[39m\u001b[32m'en-large-1920-context-restored.png'\u001b[39m)})\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 46 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.transfer-save-tools summary'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m download\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'download'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m action(page\u001b[33m,\u001b[39m\u001b[32m'export'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m file\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m download\u001b[33m,\u001b[39mpath\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m file\u001b[33m.\u001b[39mpath()\u001b[33m;\u001b[39mexpect(\u001b[36mawait\u001b[39m file\u001b[33m.\u001b[39mfailure())\u001b[33m.\u001b[39mtoBeNull()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m text\u001b[33m=\u001b[39mreadFileSync(path\u001b[33m!\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'utf8'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.transfer-import'\u001b[39m)\u001b[33m.\u001b[39msetInputFiles({name\u001b[33m:\u001b[39m\u001b[32m'actual-nav05-draft.json'\u001b[39m\u001b[33m,\u001b[39mmimeType\u001b[33m:\u001b[39m\u001b[32m'application/json'\u001b[39m\u001b[33m,\u001b[39mbuffer\u001b[33m:\u001b[39m\u001b[33mBuffer\u001b[39m\u001b[33m.\u001b[39mfrom(text)})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForFunction(id\u001b[33m=>\u001b[39m(window \u001b[36mas\u001b[39m any)\u001b[33m.\u001b[39m__game\u001b[33m.\u001b[39mtransfer()\u001b[33m.\u001b[39mgetState()\u001b[33m.\u001b[39mcomparison\u001b[33m.\u001b[39mrequestId\u001b[33m>\u001b[39mid\u001b[33m,\u001b[39mcomparison\u001b[33m.\u001b[39mrequestId\u001b[33m,\u001b[39m{timeout\u001b[33m:\u001b[39m\u001b[35m60000\u001b[39m\u001b[33m,\u001b[39mpolling\u001b[33m:\u001b[39m\u001b[35m250\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m ready(page)\u001b[33m;\u001b[39mexpect(accepted(\u001b[36mawait\u001b[39m state(page)))\u001b[33m.\u001b[39mtoEqual(before)\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m state(page))\u001b[33m.\u001b[39mcomparison\u001b[33m.\u001b[39mpreviousPlan)\u001b[33m.\u001b[39mtoBeNull()\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m overlay(page))\u001b[33m.\u001b[39mpaths)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 47 |\u001b[39m  \u001b[36mawait\u001b[39m dragDate(page\u001b[33m,\u001b[39m\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m overlay(page))\u001b[33m.\u001b[39mvisible)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m launchedPlan\u001b[33m=\u001b[39m(\u001b[36mawait\u001b[39m state(page))\u001b[33m.\u001b[39mplan\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m action(page\u001b[33m,\u001b[39m\u001b[32m'launch'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForFunction(()\u001b[33m=>\u001b[39m\u001b[33m!\u001b[39m\u001b[33m!\u001b[39m(window \u001b[36mas\u001b[39m any)\u001b[33m.\u001b[39m__game\u001b[33m.\u001b[39mtransfer()\u001b[33m.\u001b[39mruntime\u001b[33m,\u001b[39m\u001b[36mnull\u001b[39m\u001b[33m,\u001b[39m{polling\u001b[33m:\u001b[39m\u001b[35m250\u001b[39m})\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m ready(page)\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m state(page))\u001b[33m.\u001b[39mplan)\u001b[33m.\u001b[39mtoEqual(launchedPlan)\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m state(page))\u001b[33m.\u001b[39mcomparison\u001b[33m.\u001b[39mstatus)\u001b[33m.\u001b[39mtoBe(\u001b[32m'empty'\u001b[39m)\u001b[33m;\u001b[39mexpect((\u001b[36mawait\u001b[39m overlay(page))\u001b[33m.\u001b[39mpaths)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m action(page\u001b[33m,\u001b[39m\u001b[32m'exit'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#transfer-experience'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 48 |\u001b[39m  writeFileSync(join(out\u001b[33m,\u001b[39m\u001b[32m'native-lifecycle.json'\u001b[39m)\u001b[33m,\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({before\u001b[33m,\u001b[39mcomparison\u001b[33m,\u001b[39mprior\u001b[33m,\u001b[39mlaunchedPlan\u001b[33m,\u001b[39mscope\u001b[33m:\u001b[39m\u001b[32m'Actual renderer resources, genuine native context recovery, exported/imported worker-validated plan and real launch. No runtime injection.'\u001b[39m}\u001b[33m,\u001b[39m\u001b[36mnull\u001b[39m\u001b[33m,\u001b[39m\u001b[35m2\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m 49 |\u001b[39m })\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\tests\\browser\\transfer-plan-comparison.spec.ts",
+                        "column": 613,
+                        "line": 46
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 14\u001b[39m\n\u001b[31m+ Received  +  4\u001b[39m\n\n\u001b[33m@@ -1,7 +1,9 @@\u001b[39m\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"craft\": Object {\u001b[22m\n\u001b[31m+     \"hazard\": \"none\",\u001b[39m\n\u001b[31m+     \"launchPackageId\": undefined,\u001b[39m\n\u001b[2m      \"missionId\": \"mars\",\u001b[22m\n\u001b[2m      \"name\": \"PATHFINDER-01\",\u001b[22m\n\u001b[2m      \"parts\": Array [\u001b[22m\n\u001b[2m        Object {\u001b[22m\n\u001b[2m          \"face\": \"px\",\u001b[22m\n\u001b[33m@@ -56,28 +58,16 @@\u001b[39m\n\u001b[2m        \"altitudeKm\": 600,\u001b[22m\n\u001b[2m        \"bPlaneAngleDeg\": 0,\u001b[22m\n\u001b[2m        \"burnTime\": 1200,\u001b[22m\n\u001b[2m        \"inclinationDeg\": 51.6,\u001b[22m\n\u001b[2m        \"normalMps\": 0,\u001b[22m\n\u001b[32m-       \"operations\": Array [\u001b[39m\n\u001b[32m-         Object {\u001b[39m\n\u001b[32m-           \"end\": 10400,\u001b[39m\n\u001b[32m-           \"id\": \"obs-1\",\u001b[39m\n\u001b[32m-           \"kind\": \"observe\",\u001b[39m\n\u001b[32m-           \"start\": 7200,\u001b[39m\n\u001b[32m-         },\u001b[39m\n\u001b[32m-         Object {\u001b[39m\n\u001b[32m-           \"end\": 17100,\u001b[39m\n\u001b[32m-           \"id\": \"down-1\",\u001b[39m\n\u001b[32m-           \"kind\": \"downlink\",\u001b[39m\n\u001b[32m-           \"start\": 10600,\u001b[39m\n\u001b[32m-         },\u001b[39m\n\u001b[32m-       ],\u001b[39m\n\u001b[31m+       \"operations\": Array [],\u001b[39m\n\u001b[2m        \"periapsisAltitudeKm\": 1000,\u001b[22m\n\u001b[2m        \"progradeMps\": 0,\u001b[22m\n\u001b[2m        \"radialMps\": 0,\u001b[22m\n\u001b[2m      },\u001b[22m\n\u001b[31m+     \"scienceTarget\": undefined,\u001b[39m\n\u001b[2m      \"seed\": 20261115,\u001b[22m\n\u001b[2m      \"version\": 1,\u001b[22m\n\u001b[2m    },\u001b[22m\n\u001b[2m    \"evaluation\": Object {\u001b[22m\n\u001b[2m      \"availableDeltaVMps\": 4323.226560902583,\u001b[22m\n\n  44 |  const extension=await page.evaluateHandle(()=>(window as any).__game.transfer().scene.renderer.getContext().getExtension('WEBGL_lose_context'));await extension.evaluate(x=>x.loseContext());await page.waitForFunction(()=>(window as any).__allContextDeletionAudit.contextLostNotifications>0);await extension.evaluate(x=>x.restoreContext());await page.waitForFunction(()=>(window as any).__allContextDeletionAudit.contexts.some((c:any)=>c.restores>0));await ready(page);await settled(page);await extension.dispose();\n  45 |  expect(await resources.evaluate(refs=>{const g=(window as any).__game.transfer().scene.previousPathGroup;return refs.every((r:any,i:number)=>{const o=g.children[i];return o===r.object&&o.geometry===r.geometry&&o.material===r.material&&o.geometry.getAttribute('position')===r.attribute&&o.geometry.getAttribute('position').array===r.array;});})).toBe(true);expect(await overlay(page)).toEqual(prior);expect(accepted(await state(page))).toEqual(before);await resources.dispose();await hit(page,'[data-transfer-action=\"restore-previous-plan\"]');await page.screenshot({path:join(out,'en-large-1920-context-restored.png')});\n> 46 |  await page.locator('.transfer-save-tools summary').click();const download=page.waitForEvent('download');await action(page,'export').click();const file=await download,path=await file.path();expect(await file.failure()).toBeNull();const text=readFileSync(path!,'utf8');await page.locator('.transfer-import').setInputFiles({name:'actual-nav05-draft.json',mimeType:'application/json',buffer:Buffer.from(text)});await page.waitForFunction(id=>(window as any).__game.transfer().getState().comparison.requestId>id,comparison.requestId,{timeout:60000,polling:250});await ready(page);expect(accepted(await state(page))).toEqual(before);expect((await state(page)).comparison.previousPlan).toBeNull();expect((await overlay(page)).paths).toHaveLength(0);\n     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ^\n  47 |  await dragDate(page,1);expect((await overlay(page)).visible).toBe(true);const launchedPlan=(await state(page)).plan;await action(page,'launch').click();await page.waitForFunction(()=>!!(window as any).__game.transfer().runtime,null,{polling:250});await ready(page);expect((await state(page)).plan).toEqual(launchedPlan);expect((await state(page)).comparison.status).toBe('empty');expect((await overlay(page)).paths).toHaveLength(0);await action(page,'exit').click();await expect(page.locator('#transfer-experience')).toHaveCount(0);\n  48 |  writeFileSync(join(out,'native-lifecycle.json'),JSON.stringify({before,comparison,prior,launchedPlan,scope:'Actual renderer resources, genuine native context recovery, exported/imported worker-validated plan and real launch. No runtime injection.'},null,2));\n  49 | });\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\tests\\browser\\transfer-plan-comparison.spec.ts:46:613"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T10:21:09.617Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\test-results\\transfer-plan-comparison-E-ccda7-resets-on-import-and-launch\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05\\tests\\browser\\transfer-plan-comparison.spec.ts",
+                    "column": 613,
+                    "line": 46
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a051eda28369453b5bd5-ab6cf04a0e911b999de1",
+          "file": "transfer-plan-comparison.spec.ts",
+          "line": 39,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-15T10:20:23.194Z",
+    "duration": 95005.80200000001,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

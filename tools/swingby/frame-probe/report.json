@@ -1,0 +1,57 @@
+{
+  "status": "PREREQUISITE PROBE ONLY",
+  "generatedAt": "2026-11-14T20:17:32.882Z",
+  "scope": "One600-second central-Mars trajectory at actual epoch in ICRF, reported TDB and elapsed integration clock. Not a Sun-frame ephemeris/exit-objective/20case acceptance result.",
+  "gmatRelease": "R2026a",
+  "executableSha256": "36c880ad6c3f5e69b2e7e90c9d9cec4086eced9c1073fc5b289966d54db15f5f",
+  "scriptSha256": "04c61ae2ae482695248684584c3b881387414753139c58e2a83e3be5a508c673",
+  "csvSha256": "74d7a97a6450dd22cf7238e43619bee88e20c098d8011897a398268f05e9c817",
+  "datasetId": "jpl-horizons-icrf-tdb-20260801-20280301-v1",
+  "sourceHashes": {
+    "earth": {
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%4010%27&START_TIME=%272026-08-01%27&STOP_TIME=%272028-03-01%27&STEP_SIZE=%276+h%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27FRAME%27&OUT_UNITS=%27KM-S%27&TIME_TYPE=%27TDB%27&VEC_TABLE=%272%27&VEC_CORR=%27NONE%27&CSV_FORMAT=%27YES%27&VEC_LABELS=%27YES%27&COMMAND=%27399%27",
+      "sha256": "785c43fe2189d1470b03ee33ccace2eafbe897dde7f7e09f9dee34b1fa7aa22e",
+      "ephemeris": "DE441",
+      "bodyId": 399
+    },
+    "mars": {
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%4010%27&START_TIME=%272026-08-01%27&STOP_TIME=%272028-03-01%27&STEP_SIZE=%276+h%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27FRAME%27&OUT_UNITS=%27KM-S%27&TIME_TYPE=%27TDB%27&VEC_TABLE=%272%27&VEC_CORR=%27NONE%27&CSV_FORMAT=%27YES%27&VEC_LABELS=%27YES%27&COMMAND=%27499%27",
+      "sha256": "959901a397605c0b2d1b0fae5799172fe927b16fd30bbbe3fbcf2ea4ed1ef2d4",
+      "ephemeris": "mar099; Sun origin DE441",
+      "bodyId": 499
+    },
+    "frame": "ICRF",
+    "origin": "Sun",
+    "timeScale": "TDB",
+    "aberration": "NONE",
+    "stepSeconds": 21600
+  },
+  "epochJdTdb": 2461617.366658694,
+  "epochGmatTdb": 31617.36665869411,
+  "flightElapsed": 22279679.311176598,
+  "initial": {
+    "positionKm": [
+      567821.6724235299,
+      -50830.42360301147,
+      -88996.00496055103
+    ],
+    "velocityKmS": [
+      -3.0022405329835578,
+      0.3062684481532595,
+      0.4875633795727301
+    ]
+  },
+  "mu": 42828.375214,
+  "rows": 11,
+  "maxPositionErrorM": 0.002080733503489897,
+  "maxVelocityErrorMps": 1.0772749075454323e-8,
+  "maxElapsedErrorS": 0.0000010547228157520294,
+  "maxTdbEpochErrorS": 0.0000010547228157520294,
+  "limits": {
+    "positionM": 10,
+    "velocityMps": 0.01,
+    "elapsedS": 0.001,
+    "tdbEpochS": 0.001
+  },
+  "pass": true
+}

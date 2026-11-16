@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="icon" href="data:,"/><title>Solar renderer component fixture</title><style>html,body,#host{margin:0;width:100%;height:100%;overflow:hidden;background:#000}#controls{position:absolute;z-index:2;top:12px;left:12px;display:flex;gap:8px}button{padding:10px;background:#102128;color:#ddd;border:1px solid #456}</style></head><body><div id="host"></div><div id="controls"><button id="chase">Chase</button><button id="instrument">Instrument</button><button id="advance">Advance encounter</button><button id="capture">Capture</button><button id="cruise">Cruise</button><button id="map">Map</button></div><script type="module">
+import {SolarScene} from '/src/solar/scene.ts';
+import {freshCampaign} from '/src/solar/campaign.ts';
+import {createEncounter,localEncounterFrame} from '/src/solar/encounter.ts';
+const renderer=new SolarScene(document.querySelector('#host'),{onBody(){}}),encounter=createEncounter('mars',8);
+renderer.setCraftDesign(freshCampaign().design);renderer.setEncounter('mars',true);renderer.setEncounterFrame('mars',localEncounterFrame(encounter,0),encounter.features);
+document.querySelector('#chase').onclick=()=>renderer.setViewMode('chase');document.querySelector('#instrument').onclick=()=>renderer.setViewMode('instrument');
+document.querySelector('#advance').onclick=()=>renderer.setEncounterFrame('mars',localEncounterFrame(encounter,encounter.halfWindowSeconds*.3),encounter.features);
+document.querySelector('#capture').onclick=async()=>{window.rendererFixture.capture=await renderer.captureInstrument();};
+document.querySelector('#cruise').onclick=()=>{renderer.setEncounter('mars',false);renderer.setFlightPosition([1.1,.4,0],[0,25,0]);renderer.setViewMode('chase');};
+document.querySelector('#map').onclick=()=>renderer.overview();
+window.rendererFixture={renderer,capture:null};let last=performance.now();function frame(now){renderer.render((now-last)/1000);last=now;requestAnimationFrame(frame)}requestAnimationFrame(frame);
+</script></body></html>

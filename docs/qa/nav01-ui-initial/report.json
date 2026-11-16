@@ -1,0 +1,1359 @@
+{
+  "before": {
+    "design": {
+      "version": 1,
+      "missionId": "earth",
+      "name": "AURORA-01",
+      "parts": [
+        {
+          "id": "solar-1",
+          "kind": "solar",
+          "face": "px",
+          "u": 0,
+          "v": 0,
+          "rotation": 0
+        },
+        {
+          "id": "science-1",
+          "kind": "camera",
+          "face": "nz",
+          "u": 0,
+          "v": 0,
+          "rotation": 0
+        },
+        {
+          "id": "antenna-1",
+          "kind": "antenna",
+          "face": "pz",
+          "u": 0,
+          "v": 0,
+          "rotation": 0
+        },
+        {
+          "id": "battery-1",
+          "kind": "battery",
+          "face": "py",
+          "u": -0.28,
+          "v": 0,
+          "rotation": 0
+        },
+        {
+          "id": "storage-1",
+          "kind": "storage",
+          "face": "py",
+          "u": 0.28,
+          "v": 0,
+          "rotation": 0
+        },
+        {
+          "id": "engine-1",
+          "kind": "engine",
+          "face": "ny",
+          "u": 0,
+          "v": 0,
+          "rotation": 0
+        }
+      ],
+      "plan": {
+        "altitudeKm": 600,
+        "inclinationDeg": 51.6,
+        "burnTime": 1200,
+        "progradeMps": 0,
+        "normalMps": 0,
+        "radialMps": 0,
+        "periapsisAltitudeKm": 1000,
+        "bPlaneAngleDeg": 0,
+        "operations": [
+          {
+            "id": "obs-1",
+            "kind": "observe",
+            "start": 300,
+            "end": 2300
+          },
+          {
+            "id": "down-1",
+            "kind": "downlink",
+            "start": 2300,
+            "end": 5300
+          },
+          {
+            "id": "obs-2",
+            "kind": "observe",
+            "start": 6000,
+            "end": 7800
+          },
+          {
+            "id": "down-2",
+            "kind": "downlink",
+            "start": 7800,
+            "end": 10800
+          }
+        ]
+      },
+      "seed": 20261115
+    },
+    "sim": null,
+    "mode": "plan",
+    "pending": false,
+    "acceptedRevision": 2,
+    "revision": 2,
+    "preview": {
+      "modelVersion": "1.3.0",
+      "scoreDefinitionId": "science60-navigation25-resources15-v1",
+      "simulationStatus": "complete",
+      "requirements": {
+        "targetPackets": 4,
+        "minimumQuality": 0.45,
+        "deadlineSeconds": 10800
+      },
+      "eventLogCoverage": "complete",
+      "evaluatedAt": 10800,
+      "status": "success",
+      "title": "임무 성공",
+      "scienceScore": 60,
+      "missionScore": 25,
+      "resourceScore": 7.222042411235075,
+      "score": 92,
+      "received": 16,
+      "required": 4,
+      "reasons": [
+        "필수 과학 자료를 기한 내 지구로 전달하고 항법 조건을 충족했습니다."
+      ],
+      "recommendations": [],
+      "budgetRemaining": 150,
+      "energyMinimumWh": 42.46210319497187,
+      "fuelRemainingKg": 6,
+      "timeline": [
+        {
+          "time": 0,
+          "code": "START",
+          "message": "탐사선이 초기 궤도에 투입되었습니다.",
+          "severity": "info"
+        },
+        {
+          "time": 300,
+          "code": "OPERATION",
+          "message": "관측 자세로 전환",
+          "severity": "info"
+        },
+        {
+          "time": 420,
+          "code": "CAPTURE",
+          "message": "고유 관측 사진 확보 · 품질 100",
+          "severity": "info"
+        },
+        {
+          "time": 600,
+          "code": "CAPTURE",
+          "message": "고유 관측 사진 확보 · 품질 100",
+          "severity": "info"
+        },
+        {
+          "time": 780,
+          "code": "CAPTURE",
+          "message": "고유 관측 사진 확보 · 품질 100",
+          "severity": "info"
+        },
+        {
+          "time": 960,
+          "code": "CAPTURE",
+          "message": "고유 관측 사진 확보 · 품질 100",
+          "severity": "info"
+        },
+        {
+          "time": 1140,
+          "code": "CAPTURE",
+          "message": "고유 관측 사진 확보 · 품질 100",
+          "severity": "info"
+        },
+        {
+          "time": 1320,
+          "code": "CAPTURE",
+          "message": "고유 관측 사진 확보 · 품질 100",
+          "severity": "info"
+        },
+        {
+          "time": 1500,
+          "code": "CAPTURE",
+          "message": "고유 관측 사진 확보 · 품질 100",
+          "severity": "info"
+        },
+        {
+          "time": 1680,
+          "code": "CAPTURE",
+          "message": "고유 관측 사진 확보 · 품질 100",
+          "severity": "info"
+        },
+        {
+          "time": 2135,
+          "code": "ECLIPSE_ENTER",
+          "message": "행성 그림자 진입 · 태양발전 중지",
+          "severity": "info"
+        },
+        {
+          "time": 2300,
+          "code": "OPERATION",
+          "message": "송신 자세로 전환",
+          "severity": "info"
+        },
+        {
+          "time": 4255,
+          "code": "ECLIPSE_EXIT",
+          "message": "행성 그림자 이탈 · 태양발전 회복",
+          "severity": "info"
+        },
+        {
+          "time": 4690,
+          "code": "RECEIVED",
+          "message": "지구 수신 완료 · 과학 자료 1/4",
+          "severity": "info"
+        },
+        {
+          "time": 4810,
+          "code": "RECEIVED",
+          "message": "지구 수신 완료 · 과학 자료 6/4",
+          "severity": "info"
+        },
+        {
+          "time": 4930,
+          "code": "RECEIVED",
+          "message": "지구 수신 완료 · 과학 자료 11/4",
+          "severity": "info"
+        },
+        {
+          "time": 5300,
+          "code": "OPERATION",
+          "message": "충전 자세로 전환",
+          "severity": "info"
+        },
+        {
+          "time": 6000,
+          "code": "OPERATION",
+          "message": "관측 자세로 전환",
+          "severity": "info"
+        },
+        {
+          "time": 6710,
+          "code": "CAPTURE",
+          "message": "고유 관측 사진 확보 · 품질 100",
+          "severity": "info"
+        },
+        {
+          "time": 6890,
+          "code": "CAPTURE",
+          "message": "고유 관측 사진 확보 · 품질 100",
+          "severity": "info"
+        },
+        {
+          "time": 7070,
+          "code": "CAPTURE",
+          "message": "고유 관측 사진 확보 · 품질 100",
+          "severity": "info"
+        },
+        {
+          "time": 7250,
+          "code": "CAPTURE",
+          "message": "고유 관측 사진 확보 · 품질 100",
+          "severity": "info"
+        },
+        {
+          "time": 7430,
+          "code": "CAPTURE",
+          "message": "고유 관측 사진 확보 · 품질 100",
+          "severity": "info"
+        },
+        {
+          "time": 7800,
+          "code": "OPERATION",
+          "message": "송신 자세로 전환",
+          "severity": "info"
+        },
+        {
+          "time": 7935,
+          "code": "ECLIPSE_ENTER",
+          "message": "행성 그림자 진입 · 태양발전 중지",
+          "severity": "info"
+        },
+        {
+          "time": 10060,
+          "code": "ECLIPSE_EXIT",
+          "message": "행성 그림자 이탈 · 태양발전 회복",
+          "severity": "info"
+        },
+        {
+          "time": 10785,
+          "code": "RECEIVED",
+          "message": "지구 수신 완료 · 과학 자료 16/4",
+          "severity": "info"
+        },
+        {
+          "time": 10800,
+          "code": "OPERATION",
+          "message": "충전 자세로 전환",
+          "severity": "info"
+        },
+        {
+          "time": 10800,
+          "code": "END",
+          "message": "임무 기한 도달 · 수신 자료와 항법 성과를 평가합니다.",
+          "severity": "info"
+        }
+      ],
+      "packets": [
+        {
+          "id": "earth:3:3",
+          "target": "3:3",
+          "capturedAt": 420,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 24000000,
+          "receivedBits": 24000000,
+          "receivedAt": 4690,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 20.140790989850846,
+            "lonDeg": 15.14428953505137
+          }
+        },
+        {
+          "id": "earth:4:3",
+          "target": "4:3",
+          "capturedAt": 510,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 24000000,
+          "receivedBits": 24000000,
+          "receivedAt": 4715,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 24.280781758488768,
+            "lonDeg": 18.8188813019176
+          }
+        },
+        {
+          "id": "earth:5:4",
+          "target": "5:4",
+          "capturedAt": 600,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 24000000,
+          "receivedBits": 24000000,
+          "receivedAt": 4740,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 28.306296341550368,
+            "lonDeg": 22.762762397396386
+          }
+        },
+        {
+          "id": "earth:5:5",
+          "target": "5:5",
+          "capturedAt": 690,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 24000000,
+          "receivedBits": 24000000,
+          "receivedAt": 4765,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 32.18530755250133,
+            "lonDeg": 27.040208777689827
+          }
+        },
+        {
+          "id": "earth:6:5",
+          "target": "6:5",
+          "capturedAt": 780,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 24000000,
+          "receivedBits": 24000000,
+          "receivedAt": 4785,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 35.879067415949926,
+            "lonDeg": 31.72166104654741
+          }
+        },
+        {
+          "id": "earth:7:6",
+          "target": "7:6",
+          "capturedAt": 870,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 24000000,
+          "receivedBits": 24000000,
+          "receivedAt": 4810,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 39.340605188357536,
+            "lonDeg": 36.88150993215618
+          }
+        },
+        {
+          "id": "earth:7:7",
+          "target": "7:7",
+          "capturedAt": 960,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 24000000,
+          "receivedBits": 24000000,
+          "receivedAt": 4835,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 42.513445618254416,
+            "lonDeg": 42.59261036725081
+          }
+        },
+        {
+          "id": "earth:8:8",
+          "target": "8:8",
+          "capturedAt": 1050,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 24000000,
+          "receivedBits": 24000000,
+          "receivedAt": 4860,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 45.33112050060121,
+            "lonDeg": 48.91579503795879
+          }
+        },
+        {
+          "id": "earth:8:9",
+          "target": "8:9",
+          "capturedAt": 1140,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 24000000,
+          "receivedBits": 24000000,
+          "receivedAt": 4885,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 47.71842709095533,
+            "lonDeg": 55.88306696140421
+          }
+        },
+        {
+          "id": "earth:8:11",
+          "target": "8:11",
+          "capturedAt": 1230,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 24000000,
+          "receivedBits": 24000000,
+          "receivedAt": 4905,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 49.5956676454593,
+            "lonDeg": 63.475403425513036
+          }
+        },
+        {
+          "id": "earth:8:12",
+          "target": "8:12",
+          "capturedAt": 1320,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 24000000,
+          "receivedBits": 24000000,
+          "receivedAt": 4930,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 50.88682140445671,
+            "lonDeg": 71.6010337259853
+          }
+        },
+        {
+          "id": "earth:9:13",
+          "target": "9:13",
+          "capturedAt": 1410,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 24000000,
+          "receivedBits": 24000000,
+          "receivedAt": 4955,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 51.531174921186526,
+            "lonDeg": 80.08601177651337
+          }
+        },
+        {
+          "id": "earth:9:15",
+          "target": "9:15",
+          "capturedAt": 1500,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 24000000,
+          "receivedBits": 24000000,
+          "receivedAt": 4980,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 51.49544787469814,
+            "lonDeg": 88.68976902534382
+          }
+        },
+        {
+          "id": "earth:8:16",
+          "target": "8:16",
+          "capturedAt": 1590,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 24000000,
+          "receivedBits": 24000000,
+          "receivedAt": 5005,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 50.78154157845982,
+            "lonDeg": 97.14763492848999
+          }
+        },
+        {
+          "id": "earth:8:18",
+          "target": "8:18",
+          "capturedAt": 1680,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 24000000,
+          "receivedBits": 24000000,
+          "receivedAt": 5025,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 49.42607502409824,
+            "lonDeg": 105.22439552592232
+          }
+        },
+        {
+          "id": "earth:7:3",
+          "target": "7:3",
+          "capturedAt": 6710,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 24000000,
+          "receivedBits": 24000000,
+          "receivedAt": 10785,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 40.74638669659337,
+            "lonDeg": 15.032058801723679
+          }
+        },
+        {
+          "id": "earth:7:4",
+          "target": "7:4",
+          "capturedAt": 6800,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 16000000,
+          "receivedBits": 16000000,
+          "receivedAt": null,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 43.77495262817679,
+            "lonDeg": 21.000588095653143
+          }
+        },
+        {
+          "id": "earth:8:5",
+          "target": "8:5",
+          "capturedAt": 6890,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 0,
+          "receivedBits": 0,
+          "receivedAt": null,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 46.41686430646025,
+            "lonDeg": 27.59973157421814
+          }
+        },
+        {
+          "id": "earth:8:6",
+          "target": "8:6",
+          "capturedAt": 6980,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 0,
+          "receivedBits": 0,
+          "receivedAt": null,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 48.59424549005559,
+            "lonDeg": 34.84241161099635
+          }
+        },
+        {
+          "id": "earth:8:7",
+          "target": "8:7",
+          "capturedAt": 7070,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 0,
+          "receivedBits": 0,
+          "receivedAt": null,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 50.22774268822588,
+            "lonDeg": 42.68053791103978
+          }
+        },
+        {
+          "id": "earth:9:8",
+          "target": "9:8",
+          "capturedAt": 7160,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 0,
+          "receivedBits": 0,
+          "receivedAt": null,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 51.246375920285715,
+            "lonDeg": 50.986871323989476
+          }
+        },
+        {
+          "id": "earth:9:10",
+          "target": "9:10",
+          "capturedAt": 7250,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 0,
+          "receivedBits": 0,
+          "receivedAt": null,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 51.599899479846854,
+            "lonDeg": 59.555132020550786
+          }
+        },
+        {
+          "id": "earth:9:11",
+          "target": "9:11",
+          "capturedAt": 7340,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 0,
+          "receivedBits": 0,
+          "receivedAt": null,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 51.269666068867004,
+            "lonDeg": 68.12796243896389
+          }
+        },
+        {
+          "id": "earth:8:13",
+          "target": "8:13",
+          "capturedAt": 7430,
+          "quality": 1,
+          "bits": 24000000,
+          "transmittedBits": 0,
+          "receivedBits": 0,
+          "receivedAt": null,
+          "kind": "image",
+          "observedPoint": {
+            "latDeg": 50.27311448345504,
+            "lonDeg": 76.44706885295898
+          }
+        }
+      ],
+      "design": {
+        "version": 1,
+        "missionId": "earth",
+        "name": "AURORA-01",
+        "parts": [
+          {
+            "id": "solar-1",
+            "kind": "solar",
+            "face": "px",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "science-1",
+            "kind": "camera",
+            "face": "nz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "antenna-1",
+            "kind": "antenna",
+            "face": "pz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "battery-1",
+            "kind": "battery",
+            "face": "py",
+            "u": -0.28,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "storage-1",
+            "kind": "storage",
+            "face": "py",
+            "u": 0.28,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "engine-1",
+            "kind": "engine",
+            "face": "ny",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          }
+        ],
+        "plan": {
+          "altitudeKm": 600,
+          "inclinationDeg": 51.6,
+          "burnTime": 1200,
+          "progradeMps": 0,
+          "normalMps": 0,
+          "radialMps": 0,
+          "periapsisAltitudeKm": 1000,
+          "bPlaneAngleDeg": 0,
+          "operations": [
+            {
+              "id": "obs-1",
+              "kind": "observe",
+              "start": 300,
+              "end": 2300
+            },
+            {
+              "id": "down-1",
+              "kind": "downlink",
+              "start": 2300,
+              "end": 5300
+            },
+            {
+              "id": "obs-2",
+              "kind": "observe",
+              "start": 6000,
+              "end": 7800
+            },
+            {
+              "id": "down-2",
+              "kind": "downlink",
+              "start": 7800,
+              "end": 10800
+            }
+          ]
+        },
+        "seed": 20261115
+      },
+      "commandHistory": []
+    },
+    "assetsReady": true,
+    "playing": false,
+    "forecast": null,
+    "forecastPending": false,
+    "stopAtTime": null,
+    "transferAssembly": false,
+    "swingbyAssembly": false,
+    "swingbyDraft": null,
+    "swingbyNumerics": {
+      "cruiseStepSeconds": 300,
+      "activeStepSeconds": 1
+    },
+    "swingbyEvaluation": null,
+    "swingby": null,
+    "deployment": null,
+    "transfer": null,
+    "previousResult": null,
+    "debrief": null,
+    "reviewContext": null,
+    "previewTime": 2100
+  },
+  "handles": [
+    {
+      "name": "earth-periapsis",
+      "screen": {
+        "x": 835.8208151683879,
+        "y": 431.8105224171435,
+        "visible": true
+      },
+      "hit": "CANVAS"
+    },
+    {
+      "name": "earth-apoapsis",
+      "screen": {
+        "x": 489.44401930550407,
+        "y": 304.7887926653752,
+        "visible": true
+      },
+      "hit": "CANVAS"
+    },
+    {
+      "name": "earth-plane",
+      "screen": {
+        "x": 877.237596223197,
+        "y": 377.8843606429797,
+        "visible": true
+      },
+      "hit": "CANVAS"
+    }
+  ],
+  "earth-apoapsis": {
+    "positions": {
+      "from": {
+        "x": 489.44401930550407,
+        "y": 304.7887926653752,
+        "visible": true
+      },
+      "to": {
+        "x": 482.8038953758698,
+        "y": 302.35375649268036,
+        "visible": true
+      }
+    },
+    "state": {
+      "design": {
+        "version": 1,
+        "missionId": "earth",
+        "name": "AURORA-01",
+        "parts": [
+          {
+            "id": "solar-1",
+            "kind": "solar",
+            "face": "px",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "science-1",
+            "kind": "camera",
+            "face": "nz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "antenna-1",
+            "kind": "antenna",
+            "face": "pz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "battery-1",
+            "kind": "battery",
+            "face": "py",
+            "u": -0.28,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "storage-1",
+            "kind": "storage",
+            "face": "py",
+            "u": 0.28,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "engine-1",
+            "kind": "engine",
+            "face": "ny",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          }
+        ],
+        "plan": {
+          "altitudeKm": 600,
+          "inclinationDeg": 51.6,
+          "burnTime": 1200,
+          "progradeMps": 0,
+          "normalMps": 0,
+          "radialMps": 0,
+          "periapsisAltitudeKm": 1000,
+          "bPlaneAngleDeg": 0,
+          "operations": [
+            {
+              "id": "obs-1",
+              "kind": "observe",
+              "start": 300,
+              "end": 2300
+            },
+            {
+              "id": "down-1",
+              "kind": "downlink",
+              "start": 2300,
+              "end": 5300
+            },
+            {
+              "id": "obs-2",
+              "kind": "observe",
+              "start": 6000,
+              "end": 7800
+            },
+            {
+              "id": "down-2",
+              "kind": "downlink",
+              "start": 7800,
+              "end": 10800
+            }
+          ],
+          "earthOrbit": {
+            "version": "earth-ellipse-rtn-1",
+            "apoapsisAltitudeKm": 949.9261280115586
+          }
+        },
+        "seed": 20261115
+      },
+      "sim": null,
+      "mode": "plan",
+      "pending": false,
+      "acceptedRevision": 16,
+      "revision": 16,
+      "preview": {
+        "modelVersion": "1.3.0+earth-ellipse-rtn-1",
+        "scoreDefinitionId": "science60-navigation25-resources15-v1",
+        "simulationStatus": "failed",
+        "requirements": {
+          "targetPackets": 4,
+          "minimumQuality": 0.45,
+          "deadlineSeconds": 10800
+        },
+        "eventLogCoverage": "complete",
+        "evaluatedAt": 0,
+        "status": "failed",
+        "title": "다음 설계를 위한 기록",
+        "scienceScore": 0,
+        "missionScore": 0,
+        "resourceScore": 9.961363636363636,
+        "score": 10,
+        "received": 0,
+        "required": 4,
+        "reasons": [
+          "유효 수신 자료 0/4개",
+          "필수 항법·안전 조건 미충족",
+          "공유 궤도 투입의 원지점 고도도 500~700 km 이내여야 합니다. 공유 궤도 투입은 원궤도만 지원합니다. 타원 궤도에는 전용 또는 대형 투입을 선택하세요."
+        ],
+        "recommendations": [
+          "관측기를 -Z 방향에 노출시키고 관측 회랑에 맞춰 작업 시간을 옮기세요.",
+          "궤도 고도와 기동 크기를 줄여 안전한 경로를 확보하세요."
+        ],
+        "budgetRemaining": 150,
+        "energyMinimumWh": 149.6,
+        "fuelRemainingKg": 6,
+        "timeline": [
+          {
+            "time": 0,
+            "code": "START",
+            "message": "탐사선이 초기 궤도에 투입되었습니다.",
+            "severity": "info"
+          }
+        ],
+        "packets": [],
+        "design": {
+          "version": 1,
+          "missionId": "earth",
+          "name": "AURORA-01",
+          "parts": [
+            {
+              "id": "solar-1",
+              "kind": "solar",
+              "face": "px",
+              "u": 0,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "science-1",
+              "kind": "camera",
+              "face": "nz",
+              "u": 0,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "antenna-1",
+              "kind": "antenna",
+              "face": "pz",
+              "u": 0,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "battery-1",
+              "kind": "battery",
+              "face": "py",
+              "u": -0.28,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "storage-1",
+              "kind": "storage",
+              "face": "py",
+              "u": 0.28,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "engine-1",
+              "kind": "engine",
+              "face": "ny",
+              "u": 0,
+              "v": 0,
+              "rotation": 0
+            }
+          ],
+          "plan": {
+            "altitudeKm": 600,
+            "inclinationDeg": 51.6,
+            "burnTime": 1200,
+            "progradeMps": 0,
+            "normalMps": 0,
+            "radialMps": 0,
+            "periapsisAltitudeKm": 1000,
+            "bPlaneAngleDeg": 0,
+            "operations": [
+              {
+                "id": "obs-1",
+                "kind": "observe",
+                "start": 300,
+                "end": 2300
+              },
+              {
+                "id": "down-1",
+                "kind": "downlink",
+                "start": 2300,
+                "end": 5300
+              },
+              {
+                "id": "obs-2",
+                "kind": "observe",
+                "start": 6000,
+                "end": 7800
+              },
+              {
+                "id": "down-2",
+                "kind": "downlink",
+                "start": 7800,
+                "end": 10800
+              }
+            ],
+            "earthOrbit": {
+              "version": "earth-ellipse-rtn-1",
+              "apoapsisAltitudeKm": 949.9261280115586
+            }
+          },
+          "seed": 20261115
+        },
+        "commandHistory": []
+      },
+      "assetsReady": true,
+      "playing": false,
+      "forecast": null,
+      "forecastPending": false,
+      "stopAtTime": null,
+      "transferAssembly": false,
+      "swingbyAssembly": false,
+      "swingbyDraft": null,
+      "swingbyNumerics": {
+        "cruiseStepSeconds": 300,
+        "activeStepSeconds": 1
+      },
+      "swingbyEvaluation": null,
+      "swingby": null,
+      "deployment": null,
+      "transfer": null,
+      "previousResult": null,
+      "debrief": null,
+      "reviewContext": null,
+      "previewTime": 2100
+    }
+  },
+  "earth-periapsis": {
+    "positions": {
+      "from": {
+        "x": 835.8225912754216,
+        "y": 431.80894959155427,
+        "visible": true
+      },
+      "to": {
+        "x": 829.394148966242,
+        "y": 429.4516133581529,
+        "visible": true
+      }
+    },
+    "state": {
+      "design": {
+        "version": 1,
+        "missionId": "earth",
+        "name": "AURORA-01",
+        "parts": [
+          {
+            "id": "solar-1",
+            "kind": "solar",
+            "face": "px",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "science-1",
+            "kind": "camera",
+            "face": "nz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "antenna-1",
+            "kind": "antenna",
+            "face": "pz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "battery-1",
+            "kind": "battery",
+            "face": "py",
+            "u": -0.28,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "storage-1",
+            "kind": "storage",
+            "face": "py",
+            "u": 0.28,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "engine-1",
+            "kind": "engine",
+            "face": "ny",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          }
+        ],
+        "plan": {
+          "altitudeKm": 399.9997014359296,
+          "inclinationDeg": 51.6,
+          "burnTime": 1200,
+          "progradeMps": 0,
+          "normalMps": 0,
+          "radialMps": 0,
+          "periapsisAltitudeKm": 1000,
+          "bPlaneAngleDeg": 0,
+          "operations": [
+            {
+              "id": "obs-1",
+              "kind": "observe",
+              "start": 300,
+              "end": 2300
+            },
+            {
+              "id": "down-1",
+              "kind": "downlink",
+              "start": 2300,
+              "end": 5300
+            },
+            {
+              "id": "obs-2",
+              "kind": "observe",
+              "start": 6000,
+              "end": 7800
+            },
+            {
+              "id": "down-2",
+              "kind": "downlink",
+              "start": 7800,
+              "end": 10800
+            }
+          ],
+          "earthOrbit": {
+            "version": "earth-ellipse-rtn-1",
+            "apoapsisAltitudeKm": 949.9261280115586
+          }
+        },
+        "seed": 20261115
+      },
+      "sim": null,
+      "mode": "plan",
+      "pending": false,
+      "acceptedRevision": 30,
+      "revision": 30,
+      "preview": {
+        "modelVersion": "1.3.0+earth-ellipse-rtn-1",
+        "scoreDefinitionId": "science60-navigation25-resources15-v1",
+        "simulationStatus": "failed",
+        "requirements": {
+          "targetPackets": 4,
+          "minimumQuality": 0.45,
+          "deadlineSeconds": 10800
+        },
+        "eventLogCoverage": "complete",
+        "evaluatedAt": 0,
+        "status": "failed",
+        "title": "다음 설계를 위한 기록",
+        "scienceScore": 0,
+        "missionScore": 0,
+        "resourceScore": 9.961363636363636,
+        "score": 10,
+        "received": 0,
+        "required": 4,
+        "reasons": [
+          "유효 수신 자료 0/4개",
+          "필수 항법·안전 조건 미충족",
+          "공유 궤도 투입의 초기 투입 고도는 500~700 km입니다. 공유 궤도 투입의 원지점 고도도 500~700 km 이내여야 합니다. 공유 궤도 투입은 원궤도만 지원합니다. 타원 궤도에는 전용 또는 대형 투입을 선택하세요."
+        ],
+        "recommendations": [
+          "관측기를 -Z 방향에 노출시키고 관측 회랑에 맞춰 작업 시간을 옮기세요.",
+          "궤도 고도와 기동 크기를 줄여 안전한 경로를 확보하세요."
+        ],
+        "budgetRemaining": 150,
+        "energyMinimumWh": 149.6,
+        "fuelRemainingKg": 6,
+        "timeline": [
+          {
+            "time": 0,
+            "code": "START",
+            "message": "탐사선이 초기 궤도에 투입되었습니다.",
+            "severity": "info"
+          }
+        ],
+        "packets": [],
+        "design": {
+          "version": 1,
+          "missionId": "earth",
+          "name": "AURORA-01",
+          "parts": [
+            {
+              "id": "solar-1",
+              "kind": "solar",
+              "face": "px",
+              "u": 0,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "science-1",
+              "kind": "camera",
+              "face": "nz",
+              "u": 0,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "antenna-1",
+              "kind": "antenna",
+              "face": "pz",
+              "u": 0,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "battery-1",
+              "kind": "battery",
+              "face": "py",
+              "u": -0.28,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "storage-1",
+              "kind": "storage",
+              "face": "py",
+              "u": 0.28,
+              "v": 0,
+              "rotation": 0
+            },
+            {
+              "id": "engine-1",
+              "kind": "engine",
+              "face": "ny",
+              "u": 0,
+              "v": 0,
+              "rotation": 0
+            }
+          ],
+          "plan": {
+            "altitudeKm": 399.9997014359296,
+            "inclinationDeg": 51.6,
+            "burnTime": 1200,
+            "progradeMps": 0,
+            "normalMps": 0,
+            "radialMps": 0,
+            "periapsisAltitudeKm": 1000,
+            "bPlaneAngleDeg": 0,
+            "operations": [
+              {
+                "id": "obs-1",
+                "kind": "observe",
+                "start": 300,
+                "end": 2300
+              },
+              {
+                "id": "down-1",
+                "kind": "downlink",
+                "start": 2300,
+                "end": 5300
+              },
+              {
+                "id": "obs-2",
+                "kind": "observe",
+                "start": 6000,
+                "end": 7800
+              },
+              {
+                "id": "down-2",
+                "kind": "downlink",
+                "start": 7800,
+                "end": 10800
+              }
+            ],
+            "earthOrbit": {
+              "version": "earth-ellipse-rtn-1",
+              "apoapsisAltitudeKm": 949.9261280115586
+            }
+          },
+          "seed": 20261115
+        },
+        "commandHistory": []
+      },
+      "assetsReady": true,
+      "playing": false,
+      "forecast": null,
+      "forecastPending": false,
+      "stopAtTime": null,
+      "transferAssembly": false,
+      "swingbyAssembly": false,
+      "swingbyDraft": null,
+      "swingbyNumerics": {
+        "cruiseStepSeconds": 300,
+        "activeStepSeconds": 1
+      },
+      "swingbyEvaluation": null,
+      "swingby": null,
+      "deployment": null,
+      "transfer": null,
+      "previousResult": null,
+      "debrief": null,
+      "reviewContext": null,
+      "previewTime": 2100
+    }
+  },
+  "errors": []
+}

@@ -1,0 +1,317 @@
+{
+  "createdAt": "2026-11-15T05:48:11.806740+00:00",
+  "status": "One scoped final retained-trail Edge integration case passed after one recorded harness-only rejection; not a clean first-attempt pass.",
+  "scope": "Actual UI Compact flight prefix, native resource ownership/context recovery and retained presentation data. Not a full-mission repetition or performance benchmark.",
+  "url": "http://127.0.0.1:5188/?qa",
+  "entrypoint": "assets/index-BA0mrQ_m.js",
+  "deploymentUI": "assets/deployment-ui-DOLz7QoT.js",
+  "deploymentWorker": "assets/deployment.worker-BIezmTdy.js",
+  "sourceIdentity": {
+    "all277ProductFilesExactAcrossRuns": true,
+    "all283IdentitiesExactWithinEachRun": true,
+    "soleBetweenRunChange": [
+      "tests/browser/deployment-trail-native.spec.ts"
+    ],
+    "sourceChangesFromV8b": [
+      "src/render/committed-orbit-trail.ts",
+      "src/render/deployment-scene.ts"
+    ],
+    "physicalWorkerByteIdenticalToV8b": true,
+    "servedHTMLExactlyMatchesDist": true
+  },
+  "runs": [
+    {
+      "candidate": "m8-trail-edge-r1",
+      "stats": {
+        "startTime": "2026-11-15T05:45:01.943Z",
+        "duration": 16582.016,
+        "expected": 0,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "all283IdentitiesExactBeforeAfter": true
+    },
+    {
+      "candidate": "m8-trail-edge-r1-closure",
+      "stats": {
+        "startTime": "2026-11-15T05:46:02.242Z",
+        "duration": 32496.290000000005,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "all283IdentitiesExactBeforeAfter": true
+    }
+  ],
+  "reports": [
+    {
+      "path": "tests/browser/artifacts/deployment-trail-native/m8-trail-edge-r1/report.json",
+      "status": "failed",
+      "browser": "157.0.4341.46",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "contexts": [
+        {
+          "id": 1,
+          "canvasId": "",
+          "generation": 0,
+          "created": 484,
+          "deletes": 108,
+          "restores": 0
+        },
+        {
+          "id": 2,
+          "canvasId": "",
+          "generation": 1,
+          "created": 1200,
+          "deletes": 888,
+          "restores": 1
+        }
+      ],
+      "warningsRetained": 1,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-BA0mrQ_m.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-trail-native/m8-trail-edge-r1-closure/report.json",
+      "status": "passed",
+      "browser": "157.0.4341.46",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "contexts": [
+        {
+          "id": 1,
+          "canvasId": "",
+          "generation": 0,
+          "created": 489,
+          "deletes": 108,
+          "restores": 0
+        },
+        {
+          "id": 2,
+          "canvasId": "",
+          "generation": 3,
+          "created": 1982,
+          "deletes": 1951,
+          "restores": 3
+        }
+      ],
+      "warningsRetained": 1,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-BA0mrQ_m.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    }
+  ],
+  "rejectedHarness": {
+    "source": "docs/qa/milestone-8/trail-edge-r1/rejected-harness.txt",
+    "cause": "First restore retained physical state, component pose, all owned objects and exact active buffer data/bounds; upload-dirty BufferAttribute.version changed44 to45. Harness incorrectly required that metadata to remain fixed.",
+    "correction": "Exclude only upload-dirty version from retained-state equality while preserving and reporting it. Keep exact Float32 bit/ownership/bounds/physical checks; no physics or path tolerance changed.",
+    "traces": [
+      {
+        "path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\m8-trail-edge-r1-traces\\deployment-trail-native-Ed-dc5ca-cement-and-resource-cleanup\\trace.zip",
+        "bytes": 19206584,
+        "sha256": "52b820aeed8908b305a62e544b019976485001298161fb15e14a7b6c1f6c4ade",
+        "inRepository": false
+      }
+    ]
+  },
+  "acceptedEvidence": {
+    "path": "tests/browser/artifacts/deployment-trail-native/m8-trail-edge-r1-closure/actual-trail-lifecycle-evidence.json",
+    "timeBeforeSeconds": 65,
+    "timeAfterSeconds": 74.25,
+    "actualVisibleSpeed": 1,
+    "nativeRestoreCycles": 3,
+    "actualComponentPoseExactEachRestore": true,
+    "physicalStateExactEachRestore": true,
+    "sameLineGeometryMaterialAttributeArray": true,
+    "activeFloat32Uint32BitsExactAgainstActualHistory": true,
+    "legacyZSignedZeroConvention": "(-y * kilometresToWorld) || 0 before Float32 storage, matching prior Three.setFromPoints",
+    "allocatedPointCapacity": 1024,
+    "hostActivePointCap": 720,
+    "activePointsBefore": 5,
+    "activePointsAfter": 20,
+    "attributeVersionsRecorded": {
+      "initial": 42,
+      "restored": [
+        43,
+        44,
+        45
+      ],
+      "advanced": 223
+    },
+    "nativeOrbitAndWheelUsed": true,
+    "realIndexedDBSavedRevision": 1,
+    "exitCleanup": {
+      "detached": true,
+      "hidden": true,
+      "sameGeometry": true,
+      "sameMaterial": true
+    },
+    "nativeBeforeExit": {
+      "errors": [],
+      "contexts": [
+        {
+          "id": 1,
+          "canvasId": "",
+          "generation": 0,
+          "created": 489,
+          "deletes": 108,
+          "restores": 0
+        },
+        {
+          "id": 2,
+          "canvasId": "",
+          "generation": 3,
+          "created": 1982,
+          "deletes": 1656,
+          "restores": 3
+        }
+      ],
+      "contextLostNotifications": 3
+    },
+    "nativeAfterExit": {
+      "errors": [],
+      "contexts": [
+        {
+          "id": 1,
+          "canvasId": "",
+          "generation": 0,
+          "created": 489,
+          "deletes": 108,
+          "restores": 0
+        },
+        {
+          "id": 2,
+          "canvasId": "",
+          "generation": 3,
+          "created": 1982,
+          "deletes": 1951,
+          "restores": 3
+        }
+      ],
+      "contextLostNotifications": 3
+    }
+  },
+  "validation": {
+    "applicationErrors": 0,
+    "nativeOwnershipErrors": 0,
+    "vendorShaderWarningsRetained": true,
+    "preflightTypeScript": "passed",
+    "visualReview": "actual-one-times-advanced-retained-trail.png: actual partial unfolding and1x indicator visible; no full completion claim."
+  },
+  "limits": [
+    "The case exercises5 to20 actual committed samples, not a near720-sample stress test or arbitrary allocation growth.",
+    "A1024-point12KiB Float32 buffer is allocated; only active count is bounded by the host720 history rule.",
+    "Restored attribute.version may advance to request GPU upload; CPU object identities and active values/bounds remain exact.",
+    "Earlier v8b full-mission and Chrome-to-Edge exact replay proofs remain separately scoped with the same physical Worker bytes.",
+    "One rejected raw trace ZIP stays outside Git. No additional tests or browsers will run during root successor performance measurements.",
+    "All QA-owned command sessions and browsers finished. Root preview5188 remains running."
+  ],
+  "files": [
+    {
+      "path": "docs/qa/milestone-8/trail-edge-r1/batch-results.json",
+      "bytes": 12342,
+      "sha256": "6bf9bf82de2e32ffa6335b6d0c941839554d543ae10db560fa00e244e0d910b1"
+    },
+    {
+      "path": "docs/qa/milestone-8/trail-edge-r1/rejected-harness.txt",
+      "bytes": 12198,
+      "sha256": "af5f975d3cb3a47d9ab7a67c1a6b35ca76b95542598c3a2fec9a4a9412eb507e"
+    },
+    {
+      "path": "docs/qa/milestone-8/trail-edge-r1/run.log",
+      "bytes": 3048,
+      "sha256": "53fdd70149b414e986de0be2b028a04694ededa1990c9ec8641fea125dbb3ccf"
+    },
+    {
+      "path": "docs/qa/milestone-8/trail-edge-r1/source-after.json",
+      "bytes": 46895,
+      "sha256": "ad78105ca54d9a42126d9b208c23c15f375e50fbd182d90f3cc7464be3de3792"
+    },
+    {
+      "path": "docs/qa/milestone-8/trail-edge-r1/source-before.json",
+      "bytes": 46895,
+      "sha256": "c97516cd5e52ccdf46466d979623cbd2a9ff42008bcb19dd1f93a4ca90ec9c2f"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-trail-native/m8-trail-edge-r1/failure.png",
+      "bytes": 187873,
+      "sha256": "a3652e69cdd38969344384b807fe2460798ff0466396f07fd9f85b1c4aa8568e"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-trail-native/m8-trail-edge-r1/report.json",
+      "bytes": 2085,
+      "sha256": "2c7819d76bb6eb0fcbf3fcf958a93c82685b131720d7347a52ce00512c9631dd"
+    },
+    {
+      "path": "docs/qa/milestone-8/trail-edge-r1-closure/batch-results.json",
+      "bytes": 4457,
+      "sha256": "366c21f9ceb5f520431a946e686f6333d24debc11465cad6fd08fa871ea1f789"
+    },
+    {
+      "path": "docs/qa/milestone-8/trail-edge-r1-closure/run.log",
+      "bytes": 385,
+      "sha256": "6d7f867bdb6af4420498969603642c69d1944e4841700d531ee66b60fdfd497f"
+    },
+    {
+      "path": "docs/qa/milestone-8/trail-edge-r1-closure/source-after.json",
+      "bytes": 46895,
+      "sha256": "2f442338b3fe1679724ab8ae7b32c9fe4d0fab379b37a133990ba6760457d798"
+    },
+    {
+      "path": "docs/qa/milestone-8/trail-edge-r1-closure/source-before.json",
+      "bytes": 46895,
+      "sha256": "462f962e42753a1d1861ae7d8388e48c920d20c73c0e2902afa75fe27ede7216"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-trail-native/m8-trail-edge-r1-closure/actual-advanced-source.json",
+      "bytes": 5894,
+      "sha256": "2672a09544d61ebd3e4b62b774276e01e77390b3fd4cce9331df6e9da4122605"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-trail-native/m8-trail-edge-r1-closure/actual-one-times-advanced-retained-trail.png",
+      "bytes": 269298,
+      "sha256": "d38db668632d49855e3e13eec2b8e868c920769de060ee961acee07ad5fb752a"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-trail-native/m8-trail-edge-r1-closure/actual-trail-lifecycle-evidence.json",
+      "bytes": 60211,
+      "sha256": "cbe3f3258c6e83e7d281bd3500c21c22250f9803726b33b98b02877690ad8bed"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-trail-native/m8-trail-edge-r1-closure/report.json",
+      "bytes": 2094,
+      "sha256": "c497c3cedf264c18d4aba456f1588842aa6af29eddc97c0323ef73b7fc9f0cde"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-trail-native/m8-trail-edge-r1-closure/three-restores-retained-trail.png",
+      "bytes": 187873,
+      "sha256": "a3652e69cdd38969344384b807fe2460798ff0466396f07fd9f85b1c4aa8568e"
+    },
+    {
+      "path": "tests/browser/deployment-trail-native.spec.ts",
+      "bytes": 12487,
+      "sha256": "e5c25e2ed6dbd1665889639d6ffd55f4bc8db317edd933318af1fa56c4711410"
+    },
+    {
+      "path": "tools/milestone8-trail-source.mjs",
+      "bytes": 1921,
+      "sha256": "91116ea3b52a973c82377932edbdf165aa065d6e94d71b600ae76b7134273909"
+    }
+  ]
+}

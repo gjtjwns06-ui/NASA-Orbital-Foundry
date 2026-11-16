@@ -1,0 +1,55 @@
+{
+  "status": "Rejected: one-pair hardware benefit below 10 percent material-benefit gate",
+  "baselineManifestSha256": "3bbe2195390abadf5da979916b0b20123b61199c21b1ffa55554adc6efadd3dc",
+  "bundleSha256": "b6586c557867d5a8f8e61aa7600b7a01dcaf8bbb1829b4621524e0d05a893115",
+  "files": [
+    {
+      "path": "compiled-worker.mjs",
+      "sha256": "b6586c557867d5a8f8e61aa7600b7a01dcaf8bbb1829b4621524e0d05a893115"
+    },
+    {
+      "path": "PROTOTYPE.md",
+      "sha256": "3efaeaae1cf0f2d00c64f46feb216a2ef8c8677d2f28f12c5d42f324bd780d35"
+    },
+    {
+      "path": "src/hardware/attitude.ts",
+      "sha256": "c9ff93cf671e005a18a882bdd7b4bea7c9b86e8936fe48afc074893b60fd1c3f"
+    },
+    {
+      "path": "src/hardware/resolve.ts",
+      "sha256": "bff7e8f627f0641e4e6cd74ecc34f5263bc7e0dc889d3509ec188819b70ad2a6"
+    },
+    {
+      "path": "src/transfer/compiled-craft.ts",
+      "sha256": "843a68f866b2e8856902611d88580ea3660cde5a44705ee935dcb01ec62e6fdb"
+    },
+    {
+      "path": "src/transfer/runtime.ts",
+      "sha256": "026132ac86a9dc0863cdc570d13679b63148413faa155ce2542ec6a053545216"
+    },
+    {
+      "path": "tests/transfer-cache-boundary.test.ts",
+      "sha256": "199730fa3be09ca8aefe2c663cc10fc9164a80f17d77fe8138435fda04eeefbf"
+    },
+    {
+      "path": "tests/transfer-cache-exact.test.ts",
+      "sha256": "98db1325baeb6d68341137779c5dd06d255a7b2087dc438cf72acccecc5a72e0"
+    },
+    {
+      "path": "tools/performance/benchmark.mjs",
+      "sha256": "7f809626ec998485b1bec74772df2b08dcb62b570a03fdc1f83c39a906feaf64"
+    },
+    {
+      "path": "tools/performance/integrity.ts",
+      "sha256": "6fb6e4411fed247f94c18ff5661dbe166ffe0b12a35e6c6721e64c30de03d6f9"
+    },
+    {
+      "path": "tools/performance/results-compiled-only-singlepair.json",
+      "sha256": "b87fb8e56713d9a8a0fd6784ef06ef3e16bee45668b729625631b6abe0986a54"
+    },
+    {
+      "path": "tools/performance/worker.ts",
+      "sha256": "bda5c84866ba8cc2f5d32ab82cd04a54666b8f82b574b962f87e3940457cf748"
+    }
+  ]
+}

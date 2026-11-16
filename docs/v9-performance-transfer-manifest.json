@@ -1,0 +1,42 @@
+{
+  "createdAt": "2026-11-15T09:41:29.280639+00:00",
+  "status": "PREPARED_ONLY_SYNTAX_VALIDATED",
+  "scope": "Five new V9 tools/config and two new V9 documents only. No product edits; no browser/GPU run.",
+  "files": [
+    {
+      "path": "docs/v9-integrated-performance-plan.md",
+      "bytes": 10377,
+      "sha256": "8db3b65beb7cbee53e37dbc3e0d0906ee99617c32633fefc5fc3e7cd05a13288"
+    },
+    {
+      "path": "docs/v9-performance-preparation.json",
+      "bytes": 4359,
+      "sha256": "89c648ba3c9275f76b0044ce52eeb3870b3be7c630620b82acaebd0ee7e51812"
+    },
+    {
+      "path": "tools/performance/v9-active-first-light.mjs",
+      "bytes": 41717,
+      "sha256": "c9e5e6d6b27740ecd8b56a84f2c05e3c68c7ae924543a61a4878bf18d1bd3a37"
+    },
+    {
+      "path": "tools/performance/v9-native-lifetime.mjs",
+      "bytes": 1478,
+      "sha256": "1c4beac48ca8f7cc03fa4b2702885bef2fd2b4fec653c08f22f1373f9e4326ae"
+    },
+    {
+      "path": "tools/performance/v9-run.ps1",
+      "bytes": 1696,
+      "sha256": "686603ec74c69e77eafcc083e2988ece89caf4c78d72c9624ebb2961d30f2122"
+    },
+    {
+      "path": "tools/performance/v9-scenario-contract.json",
+      "bytes": 3469,
+      "sha256": "d8664c052141ab5dbda96cf082012f3bddf4d3f5b06cb55b7788116ae5bbb79a"
+    },
+    {
+      "path": "tools/performance/v9-standard20.mjs",
+      "bytes": 18789,
+      "sha256": "dab5eaa121cdf4d6134cd2fb7c86ce0c0d625e937617c2167f2c607163f483ea"
+    }
+  ]
+}

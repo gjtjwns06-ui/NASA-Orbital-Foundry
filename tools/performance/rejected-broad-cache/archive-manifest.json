@@ -1,0 +1,63 @@
+{
+  "status": "Rejected: full forecast and strict replay slower in all three scenarios",
+  "baselineManifestSha256": "3bbe2195390abadf5da979916b0b20123b61199c21b1ffa55554adc6efadd3dc",
+  "bundleSha256": "12b67136546dcb1413f29214f2fce0bcd898b56b4b4133f26a073990cc01dcbe",
+  "files": [
+    {
+      "path": "compiled-worker.mjs",
+      "sha256": "12b67136546dcb1413f29214f2fce0bcd898b56b4b4133f26a073990cc01dcbe"
+    },
+    {
+      "path": "PROTOTYPE.md",
+      "sha256": "456d914a4a15ab54587a1332a5c95c9738295e205848e9e2a842040b0739fbc1"
+    },
+    {
+      "path": "src/hardware/attitude.ts",
+      "sha256": "c9ff93cf671e005a18a882bdd7b4bea7c9b86e8936fe48afc074893b60fd1c3f"
+    },
+    {
+      "path": "src/hardware/resolve.ts",
+      "sha256": "bff7e8f627f0641e4e6cd74ecc34f5263bc7e0dc889d3509ec188819b70ad2a6"
+    },
+    {
+      "path": "src/transfer/compiled-craft.ts",
+      "sha256": "0c0200e38c5d3e7f7c8c810ba5a28e1ac4a20a0c92bccdc58c82d9b27a68fedb"
+    },
+    {
+      "path": "src/transfer/immutable.ts",
+      "sha256": "d08f8f7812f7de49db37767f0fc18bcedc37ef2477c886cd27addb86164e5507"
+    },
+    {
+      "path": "src/transfer/runtime.ts",
+      "sha256": "79637bc7228bf926f0d9da919d1deb155ec9845c09f6c09eef22ad072542aaac"
+    },
+    {
+      "path": "src/transfer/state.ts",
+      "sha256": "4dd5febda2f09f581e71e2aff7c6e07171ac996b791b2a5f4a94e9e759694641"
+    },
+    {
+      "path": "tests/transfer-cache-boundary.test.ts",
+      "sha256": "199730fa3be09ca8aefe2c663cc10fc9164a80f17d77fe8138435fda04eeefbf"
+    },
+    {
+      "path": "tests/transfer-cache-exact.test.ts",
+      "sha256": "5759420f3e856bd8a4cd3c3e42a9947dfc973b5ad294af735692c13a7e6dc951"
+    },
+    {
+      "path": "tools/performance/benchmark.mjs",
+      "sha256": "cf4aaaeb00117ed0d5df96730fad97946307315240893b41ae43e135dfc54c24"
+    },
+    {
+      "path": "tools/performance/integrity.ts",
+      "sha256": "6fb6e4411fed247f94c18ff5661dbe166ffe0b12a35e6c6721e64c30de03d6f9"
+    },
+    {
+      "path": "tools/performance/results-approved-3round.json",
+      "sha256": "40760c4d0945ebd071ccca8bb1164176e81ab5f0b9df52f2f826db2dcacf2758"
+    },
+    {
+      "path": "tools/performance/worker.ts",
+      "sha256": "34f05e284a93a1db5cdc76a6dc9c7edba072f397199fbdfe4257e2f61c87a828"
+    }
+  ]
+}

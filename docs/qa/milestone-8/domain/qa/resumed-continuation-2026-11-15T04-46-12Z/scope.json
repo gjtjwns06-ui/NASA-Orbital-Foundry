@@ -1,0 +1,118 @@
+{
+  "status": "passed",
+  "reason": "Continue missing acceptance coverage after user pause; no repeat of two already passed source-matched expensive gates.",
+  "testFiles": [
+    "tests/deployment-clearance-lesson.test.ts",
+    "tests/deployment-clearance.test.ts",
+    "tests/deployment-convergence.test.ts",
+    "tests/deployment-craft.test.ts",
+    "tests/deployment-devices.test.ts",
+    "tests/deployment-drive-feasibility.test.ts",
+    "tests/deployment-dynamics.test.ts",
+    "tests/deployment-fixed-flight.test.ts",
+    "tests/deployment-flight-variants.test.ts",
+    "tests/deployment-kinematics.test.ts",
+    "tests/deployment-mechanism.test.ts",
+    "tests/deployment-mission.test.ts",
+    "tests/deployment-outage-boundaries.test.ts",
+    "tests/deployment-partition.test.ts",
+    "tests/deployment-recovery-replay.test.ts",
+    "tests/deployment-reference-dynamics.test.ts",
+    "tests/deployment-replay.test.ts",
+    "tests/deployment-runtime.test.ts"
+  ],
+  "excluded": {
+    "tests/deployment-recovery-convergence.test.ts": {
+      "cases": 1,
+      "evidence": "docs/qa/recovery-convergence-2026-11-14T23-46-54-595Z/report.json",
+      "priorReportedPassSeconds": 274.99
+    },
+    "tests/deployment-terminal-drain.test.ts": {
+      "cases": 3,
+      "evidence": "docs/qa/terminal-drain-2026-11-14T23-44-48-963Z/report.json",
+      "priorReportedPassSeconds": 115.83
+    }
+  },
+  "priorFullRun": "interrupted without terminal verdict",
+  "supersededResumeAttempt": "docs/qa/resumed-full-suite-2026-11-15T04-45-26Z/process-result.json",
+  "supersededResumeReason": "Root refined instruction to avoid repeating already established frozen-source gates; stopped after29.19s before any terminal test result.",
+  "productionFiles": [
+    {
+      "path": "src/deployment/clearance.ts",
+      "sha256": "dd6f8dd65a32043e683e9844a7188a06664128983fd98a290f8e758b92e5f690"
+    },
+    {
+      "path": "src/deployment/craft.ts",
+      "sha256": "cb2d0e589ef3640039c59caa538418f6ee2e52361024380fe5d266d44fdfbc16"
+    },
+    {
+      "path": "src/deployment/devices.ts",
+      "sha256": "b9693f16d2c5565dab3d30dc3a19cabdab3bddb1cb1114c10210ccd955b3573c"
+    },
+    {
+      "path": "src/deployment/drive-feasibility.ts",
+      "sha256": "3ec4e57381bbf0f710db7ed8fae882797ab2fc2c361b8a9bfbbc5bb217569e01"
+    },
+    {
+      "path": "src/deployment/environment.ts",
+      "sha256": "c54f302350a21009fa8d5af609dcf666be8e1b9390cdcc73fbeb713d857c18ca"
+    },
+    {
+      "path": "src/deployment/identity.ts",
+      "sha256": "357ad661c316a485793ebd9644f1fb038638de7fe1c5a28c6c6d46126730e943"
+    },
+    {
+      "path": "src/deployment/index.ts",
+      "sha256": "b3c2c05f7e0da478d2074043630aea928c62ad64190bc5af6195b128df2d6844"
+    },
+    {
+      "path": "src/deployment/kinematics.ts",
+      "sha256": "7cae3a5de631464ce1544b3d2a61a93802b69e941e3a6d79f15291fe70849877"
+    },
+    {
+      "path": "src/deployment/lessons.ts",
+      "sha256": "b9c3bec80b9fe034c7933da2284de2c4dadecba9384bf0fdfa3e81ea967f9c2f"
+    },
+    {
+      "path": "src/deployment/math.ts",
+      "sha256": "c772617c4f2a34114371f9d3b88775fa3df02e95a2e3fdc12c029680f4d97b67"
+    },
+    {
+      "path": "src/deployment/mechanism.ts",
+      "sha256": "8c558d11280dd385073b5d259fef9a6eb95f95127791d7817e16e7824b64584d"
+    },
+    {
+      "path": "src/deployment/momentum.ts",
+      "sha256": "ddff5498117277ba3a7339a289cd3a0ef4333a21b5cb94820f6eed37f99a4ced"
+    },
+    {
+      "path": "src/deployment/motion.ts",
+      "sha256": "1849b9490f25066f4598971acbdd501bb3578017db881ceafb866b1292735891"
+    },
+    {
+      "path": "src/deployment/persistence.ts",
+      "sha256": "454549781a9b88482ebd601cd7e64422a2bc7bf2c493921ffa018a349739e957"
+    },
+    {
+      "path": "src/deployment/plan.ts",
+      "sha256": "889275f219759083f37b6c08a002016e963d5f245679049e7e50e38b18a13e32"
+    },
+    {
+      "path": "src/deployment/power.ts",
+      "sha256": "7c808a0a87c5d2a843345cc99b677162b10471a9a19dabb49780e7f8f83a65f6"
+    },
+    {
+      "path": "src/deployment/runtime.ts",
+      "sha256": "e28a7ff09a957e1438299cfa85d0800b8b4119cc6c5a671008a486210782a7aa"
+    },
+    {
+      "path": "src/deployment/types.ts",
+      "sha256": "4d2fdfe9781a832f77bd2cc4eb3dc2c046ecb6c5f54ff409f75183717196a28b"
+    },
+    {
+      "path": "src/deployment/visibility.ts",
+      "sha256": "496fdac44d3f386922f56f3e3f38652b410d9d2f231d175b673201a9b2e65138"
+    }
+  ],
+  "terminalResult": "process-result.json"
+}

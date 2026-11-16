@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-11-15T06:05:28.536Z",
+  "baseCommit": "b0c0c5cc07c8e0f7f77e06fb1eef86c99a274586",
+  "model": "earth-ellipse-rtn-1",
+  "oracle": "Actual GMAT R2026a PrinceDormand78, independently authored initial Kepler elements and elliptic Kepler-equation RTN burn vectors",
+  "executableSha256": "36c880ad6c3f5e69b2e7e90c9d9cec4086eced9c1073fc5b289966d54db15f5f",
+  "sourceBefore": {
+    "src/sim/earth-orbit.ts": "c3dd7721dcc7c0cac5bce9276db17ccc5212bc29b1d4fc1cf3c5526286c3f76b",
+    "src/sim/physics.ts": "de7a46913a7f395ac7b412de8dc742b0a5b7064198a7b35088d11462f835a6d9",
+    "src/sim/types.ts": "1af8571b2990d532eae91f7005a5ec70ee8db2a219ceaeed297eba141c08df7e",
+    "src/sim/hazards.ts": "d5c7165c01ed7cb70b67fdca59d44ac4e80ba54a06e649a53bf8f6439c36bc02",
+    "src/sim/launch.ts": "817a0ccdeae92d1704378c016bee9719c1378960c07cbce8b6d8d922cdce15c1",
+    "src/sim/persistence.ts": "5c96a6d62bca79bcdf691e5fd72e31c1983fd8bf86e49f9ed95640d480212bda",
+    "src/sim/simulation.ts": "4d6a7eb76b5c300436fbc814eb02db1d5cee59e73bb1e410af05e3c4eafd8ad0",
+    "src/sim/index.ts": "ded6a9b3631fabbef9acd6bd7256420cd58ee330b288fdde8296ddbb4cba96e6",
+    "tools/nav01/validate-initial-orbit.mjs": "d0c094dd0faa728882786fb7cf28c0bb3eb0e605c0c7ff2d0b45a031ec6e6a98"
+  },
+  "tolerance": {
+    "maxPositionErrorKm": 0.01,
+    "maxVelocityErrorKmS": 0.00001,
+    "maxStopResidualSeconds": 0.001
+  },
+  "scope": "Earth central point mass, no J2/drag/SRP/third bodies/ephemerides; not launch insertion certification or full spacecraft resource validation.",
+  "cases": [
+    {
+      "id": "ellipse-zero-burn",
+      "pe": 400,
+      "ap": 900,
+      "inc": 51.6,
+      "burn": null,
+      "plan": {
+        "altitudeKm": 400,
+        "inclinationDeg": 51.6,
+        "burnTime": 1200,
+        "progradeMps": 0,
+        "radialMps": 0,
+        "normalMps": 0,
+        "periapsisAltitudeKm": 1000,
+        "bPlaneAngleDeg": 0,
+        "operations": [],
+        "earthOrbit": {
+          "version": "earth-ellipse-rtn-1",
+          "apoapsisAltitudeKm": 900
+        },
+        "maneuvers": []
+      },
+      "analyticBurn": null,
+      "sampleCount": 1441,
+      "maxPositionErrorKm": 0.00015434079407029353,
+      "maxVelocityErrorKmS": 1.7001391470840341e-7,
+      "maxStopResidualSeconds": 0.000024370383471250534,
+      "pass": true,
+      "runMs": 1992.6183999999998,
+      "scriptSha256": "60689db72bb57ba8252e21cef14a054f86bc510a2057c10e430bf8a4e5355407",
+      "csvSha256": "5249553b6a8ee675b718dc7e8ec7701ae2fbf13fe3b5c86b108496b54e4bb5f8",
+      "consoleSha256": "d7ae23bd5d1efa66c4f6fe80d2c9299d4a8dcb61b7399ab62e1ded46a14750ba"
+    },
+    {
+      "id": "ellipse-perigee-burn",
+      "pe": 400,
+      "ap": 900,
+      "inc": 51.6,
+      "burn": {
+        "time": 0,
+        "progradeMps": 80,
+        "radialMps": 0,
+        "normalMps": 15
+      },
+      "plan": {
+        "altitudeKm": 400,
+        "inclinationDeg": 51.6,
+        "burnTime": 1200,
+        "progradeMps": 0,
+        "radialMps": 0,
+        "normalMps": 0,
+        "periapsisAltitudeKm": 1000,
+        "bPlaneAngleDeg": 0,
+        "operations": [],
+        "earthOrbit": {
+          "version": "earth-ellipse-rtn-1",
+          "apoapsisAltitudeKm": 900
+        },
+        "maneuvers": [
+          {
+            "id": "ellipse-perigee-burn",
+            "time": 0,
+            "progradeMps": 80,
+            "radialMps": 0,
+            "normalMps": 15
+          }
+        ]
+      },
+      "analyticBurn": {
+        "R": [
+          1,
+          0,
+          0
+        ],
+        "T": [
+          0,
+          0.6211477802783103,
+          0.7836934573258398
+        ],
+        "N": [
+          0,
+          -0.7836934573258398,
+          0.6211477802783103
+        ],
+        "deltaKmS": [
+          0,
+          0.03793642056237722,
+          0.07201269329024185
+        ]
+      },
+      "sampleCount": 1441,
+      "maxPositionErrorKm": 0.00012524761438292313,
+      "maxVelocityErrorKmS": 1.3461541471629467e-7,
+      "maxStopResidualSeconds": 0.000017846468836069107,
+      "pass": true,
+      "runMs": 1851.1387999999997,
+      "scriptSha256": "193cbb18619c8f2348796df945b364a13f01c9ddd612094f437d0e8260cb1df6",
+      "csvSha256": "a0679ddd50485252e293f7c3ad770b55b6aaaf3c6eee164f5b1155fd166415b3",
+      "consoleSha256": "9359da3e42cbcda9f3d1347afd116619e75fc7775a92b1b522a4761c6722191e"
+    },
+    {
+      "id": "ellipse-off-apse-rtn",
+      "pe": 400,
+      "ap": 900,
+      "inc": 51.6,
+      "burn": {
+        "time": 1200,
+        "progradeMps": 60,
+        "radialMps": 35,
+        "normalMps": 12
+      },
+      "plan": {
+        "altitudeKm": 400,
+        "inclinationDeg": 51.6,
+        "burnTime": 1200,
+        "progradeMps": 0,
+        "radialMps": 0,
+        "normalMps": 0,
+        "periapsisAltitudeKm": 1000,
+        "bPlaneAngleDeg": 0,
+        "operations": [],
+        "earthOrbit": {
+          "version": "earth-ellipse-rtn-1",
+          "apoapsisAltitudeKm": 900
+        },
+        "maneuvers": [
+          {
+            "id": "ellipse-off-apse-rtn",
+            "time": 1200,
+            "progradeMps": 60,
+            "radialMps": 35,
+            "normalMps": 12
+          }
+        ]
+      },
+      "analyticBurn": {
+        "R": [
+          0.21419271363725764,
+          0.606731823357778,
+          0.7655050463254008
+        ],
+        "T": [
+          -0.9767914216580262,
+          0.13304532862757035,
+          0.167861428284386
+        ],
+        "N": [
+          0,
+          -0.7836934573258398,
+          0.6211477802783103
+        ],
+        "deltaKmS": [
+          -0.05111074032217756,
+          0.01981401204726637,
+          0.044318135681791916
+        ]
+      },
+      "sampleCount": 1441,
+      "maxPositionErrorKm": 0.00007343334921632967,
+      "maxVelocityErrorKmS": 7.867272267141021e-8,
+      "maxStopResidualSeconds": 0.00001405365765094757,
+      "pass": true,
+      "runMs": 1835.4302999999995,
+      "scriptSha256": "1e9f68c0c1325bbf3dadb5ce225c2ba9f87e10f43d94702005b29af675ee729b",
+      "csvSha256": "97e6ff6024352fa1d9278bbb78e908f137b04dce43f3234679538b3de1fd317e",
+      "consoleSha256": "588934b5417072418191ae8306c3f8e2cddb8fce602d6ce24d640f2aefa23e1c"
+    },
+    {
+      "id": "ellipse-range-extremes-polar",
+      "pe": 180,
+      "ap": 2000,
+      "inc": 97.6,
+      "burn": null,
+      "plan": {
+        "altitudeKm": 180,
+        "inclinationDeg": 97.6,
+        "burnTime": 1200,
+        "progradeMps": 0,
+        "radialMps": 0,
+        "normalMps": 0,
+        "periapsisAltitudeKm": 1000,
+        "bPlaneAngleDeg": 0,
+        "operations": [],
+        "earthOrbit": {
+          "version": "earth-ellipse-rtn-1",
+          "apoapsisAltitudeKm": 2000
+        },
+        "maneuvers": []
+      },
+      "analyticBurn": null,
+      "sampleCount": 1441,
+      "maxPositionErrorKm": 0.00017092836361239902,
+      "maxVelocityErrorKmS": 1.8998629749386538e-7,
+      "maxStopResidualSeconds": 0.00002123415470123291,
+      "pass": true,
+      "runMs": 1882.5152000000007,
+      "scriptSha256": "c749d9be357263c251775091487f20b7e51a8f348b97a9ea546d866787f2b8b4",
+      "csvSha256": "6c7b4ef9968ef833551256b334d03856b3ef38338616aae417a4b5b359249bde",
+      "consoleSha256": "4e9741d6c5ff8ac286ed76c192ce417dfdfcfecaaa4ee095efcdf9aa52f3b8e1"
+    }
+  ],
+  "pass": true,
+  "sourceAfter": {
+    "src/sim/earth-orbit.ts": "c3dd7721dcc7c0cac5bce9276db17ccc5212bc29b1d4fc1cf3c5526286c3f76b",
+    "src/sim/physics.ts": "de7a46913a7f395ac7b412de8dc742b0a5b7064198a7b35088d11462f835a6d9",
+    "src/sim/types.ts": "1af8571b2990d532eae91f7005a5ec70ee8db2a219ceaeed297eba141c08df7e",
+    "src/sim/hazards.ts": "d5c7165c01ed7cb70b67fdca59d44ac4e80ba54a06e649a53bf8f6439c36bc02",
+    "src/sim/launch.ts": "817a0ccdeae92d1704378c016bee9719c1378960c07cbce8b6d8d922cdce15c1",
+    "src/sim/persistence.ts": "5c96a6d62bca79bcdf691e5fd72e31c1983fd8bf86e49f9ed95640d480212bda",
+    "src/sim/simulation.ts": "4d6a7eb76b5c300436fbc814eb02db1d5cee59e73bb1e410af05e3c4eafd8ad0",
+    "src/sim/index.ts": "ded6a9b3631fabbef9acd6bd7256420cd58ee330b288fdde8296ddbb4cba96e6",
+    "tools/nav01/validate-initial-orbit.mjs": "d0c094dd0faa728882786fb7cf28c0bb3eb0e605c0c7ff2d0b45a031ec6e6a98"
+  },
+  "sourceUnchanged": true,
+  "finishedAt": "2026-11-15T06:05:36.113Z"
+}

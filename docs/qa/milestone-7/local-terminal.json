@@ -1,0 +1,20 @@
+{
+  "status": "LOCAL_FROZEN_PRODUCT_GATES_PASS",
+  "recordedAtUtc": "2026-11-14T23:18:32.886000+00:00",
+  "units": {
+    "files": 64,
+    "tests": 449,
+    "passed": 449,
+    "durationMs": 627417.2565917969,
+    "scope": "Single full main run, maxWorkers2; functional QA with concurrent work, not performance benchmark"
+  },
+  "productionBrowser": {
+    "chromeTargeted": 2,
+    "chromeM03Preservation": 1,
+    "chromeBuilderClosure": 1,
+    "edgeGenuineABJourney": 1,
+    "note": "Separate recorded batches, corrected builder completion assertion; original failure retained."
+  },
+  "deployment": "pending",
+  "originalSpecificationComplete": false
+}

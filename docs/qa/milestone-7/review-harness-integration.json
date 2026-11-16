@@ -1,0 +1,28 @@
+{
+  "createdAtUtc": "2026-11-14T23:10:25.819Z",
+  "files": {
+    "tests/browser/review/helpers.ts": {
+      "bytes": 11898,
+      "sha256": "b508e1e25e6bf7224c2d239ab061a912ce9d69a8369b196855609ae9cbc0ce6d"
+    },
+    "tests/browser/review/review-journey.spec.ts": {
+      "bytes": 7830,
+      "sha256": "8d4feb1844f707cb0e42c316980117cc59f8d05754236f2d50e39c288a9b1ac3"
+    },
+    "tests/browser/review/review-layout.spec.ts": {
+      "bytes": 11662,
+      "sha256": "7efeeb5bb220d4d93a6bf3c6663247f6536447b698b5f5a5c502ec1d2264f8cf"
+    },
+    "tests/browser/review/review-storage.spec.ts": {
+      "bytes": 4139,
+      "sha256": "d257291df7bdeb252b9094086bd7a788d790d18f47bf1b605114a72df9c4552a"
+    }
+  },
+  "dependencies": "Existing @playwright/test/esbuild/node types and tests/browser/native-gl-audit.ts; no copied production implementation.",
+  "config": "Existing testDir tests/browser discovers these recursively. Helpers enforce1280x720/action15s/retained-failure trace. Use --output per candidate to preserve earlier traces.",
+  "commands": {
+    "chrome": "PLAYWRIGHT_BASE_URL=http://127.0.0.1:5181 PLAYWRIGHT_BROWSER=chrome PLAYWRIGHT_QA_CANDIDATE=review-production7-chrome npx playwright test tests/browser/review/review-layout.spec.ts --grep \"en-large|late actual archive\" --workers=1 --output=tests/browser/artifacts/review/traces-production7-chrome",
+    "edge": "PLAYWRIGHT_BASE_URL=http://127.0.0.1:5181 PLAYWRIGHT_BROWSER=edge PLAYWRIGHT_QA_CANDIDATE=review-production7-edge npx playwright test tests/browser/review/review-journey.spec.ts --workers=1 --output=tests/browser/artifacts/review/traces-production7-edge"
+  },
+  "scope": "Use exact frozen corresponding repository source as cwd. Review fixture generation is in an isolated empty browser page; complete journey never imports a fixture before either flight."
+}

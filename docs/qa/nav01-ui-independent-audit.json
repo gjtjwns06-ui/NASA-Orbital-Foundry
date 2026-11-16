@@ -1,0 +1,94 @@
+{
+  "reviewedAt": "2026-11-15T09:25:43.559271+00:00",
+  "verdict": "PASS_SCOPED_CPU_CLOSURE_BROWSER_PENDING",
+  "scope": "Independent CPU-only production renderer/gesture audit. No browser, GPU, full-domain or GMAT rerun.",
+  "initialCPUReport": "docs/qa/nav01-render-contract-initial.json",
+  "initialPassed": 7,
+  "focusRegressionReport": "docs/qa/nav01-render-contract-focus-rejected.json",
+  "focusBatchPassed": 7,
+  "focusBatchFailed": 1,
+  "uniqueCases": 9,
+  "findings": [
+    {
+      "id": "NAV-UI-FOCUS-DURING-DRAG",
+      "status": "resolved-in-root-source-and-CPU-closure",
+      "effect": "F focusCraft changes camera while the active ray-based apsis drag remains; a subsequent pointer event can use a different projection.",
+      "fix": "Cancel an active new orbit gesture before camera focus/axis/reset changes, or disable such changes while held.",
+      "test": "cancels an active ray-constrained edit before the F focus command changes its camera",
+      "resolution": "Root cancels active new orbit gestures before focusCraft, viewAxis, flyCamera, setMode and resize camera/projection changes."
+    },
+    {
+      "id": "NAV-UI-CAMERA-INERTIA",
+      "status": "guard-verified-in-CPU-native-browser-pending",
+      "effect": "render still advances tween and calls OrbitControls.update while controls.enabled=false; the disabled flag alone does not establish camera immutability.",
+      "nextEvidence": "Check right-orbit then immediate handle drag and drag during a camera transition, with actual browser camera/plan observations.",
+      "resolution": "Actual onDown clears tween/follow without moving the current camera; render suppresses controls.update while the new drag is held and resumes normal updates after cleanup."
+    }
+  ],
+  "auditedFiles": {
+    "src/main.ts": "d8b2e654e336a7ca836106ecc2b421e6354d99f3e4662fe771b80c18108a6838",
+    "src/render/scene.ts": "3ea0f90a59eb92bdd2602255feb15a1e37e53e00fbc695f542082cd2a7d9afb9",
+    "src/render/orbit-manipulator.ts": "68b69ba7c507359063f964f45c97f853aa1cba1ec04f6087c5df91af81fd97db",
+    "tests/nav01-render-contract.test.ts": "fc13669286e53868ab5563e7f097540a11a779b638ec7e5e28b52df78fac232f"
+  },
+  "domainManifestSha256": "c0b0a0b812c2a247468e7e7fc7f0651ece954070d08f79135bd9f0dc5da7a153",
+  "domainSourcesMatchFrozen": [
+    {
+      "path": "src/sim/earth-orbit.ts",
+      "sameBytes": true
+    },
+    {
+      "path": "src/sim/types.ts",
+      "sameBytes": true
+    },
+    {
+      "path": "src/sim/index.ts",
+      "sameBytes": true
+    },
+    {
+      "path": "src/sim/physics.ts",
+      "sameBytes": true
+    },
+    {
+      "path": "src/sim/hazards.ts",
+      "sameBytes": true
+    },
+    {
+      "path": "src/sim/launch.ts",
+      "sameBytes": true
+    },
+    {
+      "path": "src/sim/persistence.ts",
+      "sameBytes": true
+    },
+    {
+      "path": "src/sim/simulation.ts",
+      "sameBytes": true
+    }
+  ],
+  "limitations": [
+    "Label rasterization and native pointer hit testing are not covered by the CPU constructor-free scene tests.",
+    "Main closure transaction rollback was source-reviewed; the CPU lifecycle test covers GameScene callback order rather than a browser-held UI transaction.",
+    "Seven passing cases repeated in the rejection batch are not seven additional unique tests.",
+    "No publication, performance or commercial-quality conclusion follows from this audit.",
+    "The ninth case invokes production onDown/render with a sentinel controls.update callback. It establishes the guard and camera invariance in CPU execution, not real native OrbitControls damping behavior."
+  ],
+  "typecheck": {
+    "command": "npm.cmd exec -- tsc --noEmit",
+    "exitCode": 0,
+    "afterNineCaseCameraClosure": true
+  },
+  "closureReports": [
+    {
+      "path": "docs/qa/nav01-render-contract-focus-closure.json",
+      "passed": 8,
+      "failed": 0
+    },
+    {
+      "path": "docs/qa/nav01-render-contract-camera-closure.json",
+      "passed": 9,
+      "failed": 0
+    }
+  ],
+  "previousAudit": "docs/qa/nav01-ui-independent-audit-rejected.json"
+}

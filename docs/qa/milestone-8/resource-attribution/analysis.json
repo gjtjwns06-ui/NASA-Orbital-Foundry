@@ -1,0 +1,413 @@
+{
+  "frozenUnchanged": true,
+  "pausedRuntimeUnchanged": true,
+  "nativeErrors": [],
+  "allNonTrailGeometryIdsStable": true,
+  "allNonTrailMaterialIdsStable": true,
+  "ownedCounts": [
+    {
+      "label": "paused-actual-plus60",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "paused-after-native-drag",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "paused-after-native-drag",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "paused-after-native-drag",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "paused-after-native-drag",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "paused-after-actual3seconds",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "worker-message-1",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "next-rAF-1",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "worker-message-2",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "next-rAF-2",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "worker-message-3",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "next-rAF-3",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "worker-message-4",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "next-rAF-4",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "worker-message-5",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "next-rAF-5",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "worker-message-6",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "next-rAF-6",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "worker-message-7",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "next-rAF-7",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "worker-message-8",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    },
+    {
+      "label": "next-rAF-8",
+      "g": 164,
+      "m": 42,
+      "objects": 297
+    }
+  ],
+  "native3secondChange": {
+    "Buffer": {
+      "created": 174,
+      "deleted": 174,
+      "liveBefore": 265,
+      "liveAfter": 265
+    },
+    "VertexArray": {
+      "created": 174,
+      "deleted": 174,
+      "liveBefore": 148,
+      "liveAfter": 148
+    },
+    "Program": {
+      "created": 174,
+      "deleted": 174,
+      "liveBefore": 12,
+      "liveAfter": 12
+    },
+    "Shader": {
+      "created": 348,
+      "deleted": 348,
+      "liveBefore": 0,
+      "liveAfter": 0
+    },
+    "Texture": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 11,
+      "liveAfter": 11
+    },
+    "Framebuffer": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 5,
+      "liveAfter": 5
+    },
+    "Renderbuffer": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 1,
+      "liveAfter": 1
+    }
+  },
+  "firstRebuildDeletion": {
+    "Buffer": {
+      "created": 0,
+      "deleted": 1,
+      "liveBefore": 265,
+      "liveAfter": 264
+    },
+    "VertexArray": {
+      "created": 0,
+      "deleted": 1,
+      "liveBefore": 148,
+      "liveAfter": 147
+    },
+    "Program": {
+      "created": 0,
+      "deleted": 1,
+      "liveBefore": 12,
+      "liveAfter": 11
+    },
+    "Shader": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 0,
+      "liveAfter": 0
+    },
+    "Texture": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 11,
+      "liveAfter": 11
+    },
+    "Framebuffer": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 5,
+      "liveAfter": 5
+    },
+    "Renderbuffer": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 1,
+      "liveAfter": 1
+    }
+  },
+  "firstUploadCreation": {
+    "Buffer": {
+      "created": 1,
+      "deleted": 0,
+      "liveBefore": 264,
+      "liveAfter": 265
+    },
+    "VertexArray": {
+      "created": 1,
+      "deleted": 0,
+      "liveBefore": 147,
+      "liveAfter": 148
+    },
+    "Program": {
+      "created": 1,
+      "deleted": 0,
+      "liveBefore": 11,
+      "liveAfter": 12
+    },
+    "Shader": {
+      "created": 2,
+      "deleted": 2,
+      "liveBefore": 0,
+      "liveAfter": 0
+    },
+    "Texture": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 11,
+      "liveAfter": 11
+    },
+    "Framebuffer": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 5,
+      "liveAfter": 5
+    },
+    "Renderbuffer": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 1,
+      "liveAfter": 1
+    }
+  },
+  "secondRebuildDeletion": {
+    "Buffer": {
+      "created": 0,
+      "deleted": 1,
+      "liveBefore": 265,
+      "liveAfter": 264
+    },
+    "VertexArray": {
+      "created": 0,
+      "deleted": 1,
+      "liveBefore": 148,
+      "liveAfter": 147
+    },
+    "Program": {
+      "created": 0,
+      "deleted": 1,
+      "liveBefore": 12,
+      "liveAfter": 11
+    },
+    "Shader": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 0,
+      "liveAfter": 0
+    },
+    "Texture": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 11,
+      "liveAfter": 11
+    },
+    "Framebuffer": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 5,
+      "liveAfter": 5
+    },
+    "Renderbuffer": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 1,
+      "liveAfter": 1
+    }
+  },
+  "secondUploadCreation": {
+    "Buffer": {
+      "created": 1,
+      "deleted": 0,
+      "liveBefore": 264,
+      "liveAfter": 265
+    },
+    "VertexArray": {
+      "created": 1,
+      "deleted": 0,
+      "liveBefore": 147,
+      "liveAfter": 148
+    },
+    "Program": {
+      "created": 1,
+      "deleted": 0,
+      "liveBefore": 11,
+      "liveAfter": 12
+    },
+    "Shader": {
+      "created": 2,
+      "deleted": 2,
+      "liveBefore": 0,
+      "liveAfter": 0
+    },
+    "Texture": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 11,
+      "liveAfter": 11
+    },
+    "Framebuffer": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 5,
+      "liveAfter": 5
+    },
+    "Renderbuffer": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 1,
+      "liveAfter": 1
+    }
+  },
+  "fixedPointDragChanges": {
+    "Buffer": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 265,
+      "liveAfter": 265
+    },
+    "VertexArray": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 148,
+      "liveAfter": 148
+    },
+    "Program": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 12,
+      "liveAfter": 12
+    },
+    "Shader": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 0,
+      "liveAfter": 0
+    },
+    "Texture": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 11,
+      "liveAfter": 11
+    },
+    "Framebuffer": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 5,
+      "liveAfter": 5
+    },
+    "Renderbuffer": {
+      "created": 0,
+      "deleted": 0,
+      "liveBefore": 1,
+      "liveAfter": 1
+    }
+  },
+  "trailGeometryIds": [
+    4609,
+    4789
+  ],
+  "trailMaterialIds": [
+    396,
+    576
+  ]
+}

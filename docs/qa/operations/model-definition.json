@@ -1,0 +1,272 @@
+{
+  "generatedAt": "2026-11-14T20:33:54.338Z",
+  "modelVersion": "transfer-3.0.0",
+  "saveVersion": 2,
+  "networkId": "omf-command-network-1.0.0",
+  "networkHash": "1eb4ebd04d12efb8ea2bf36e30a8b88c0ee198e504ca6efbc7d992fa8159fff6",
+  "files": {
+    "src/transfer/operations-types.ts": "4e9160a2cc4f7cedb2d1e29dc6b1719a3839784979b9a97fc29c427a504df1a4",
+    "src/transfer/operations-codes.ts": "154c6f71f30011382affb69e6b7712a63308597edb8a206ade8d0a7ba9689a8e",
+    "src/transfer/operations-codec.ts": "c920b2795606b887a0eaeb55a2bb70a8129c383fd04e40b50add4a9dc893cf4d",
+    "src/transfer/command-network.ts": "477034ed8c734bd0bd31da12d0990f3bafa0245f3b9b8a5a02eec9220ed06c00",
+    "src/transfer/command-link.ts": "00295ca1c4c1af53942540551575986b396234d63aa91d60b9314e0e719591bb",
+    "src/transfer/command-guards.ts": "647bd2c91bf62ca6c62c2f7a95af129ad02423e5f6aadeb1e49288674f8f3bce",
+    "src/transfer/command-transport.ts": "e6816f452a6000fb47061740640d6e06471621dbc3dcfc1b8c966ed00a35a6a8",
+    "src/transfer/operations.ts": "4325762f88a4e954b65e0f10b649c90338b6ba9e9b0c16e486919cbf3e69357c",
+    "src/transfer/runtime-v3.ts": "f7306504ccefd8ad5f272a127a0b07f0932e800f7825461d4877cce5e7a5dcb7",
+    "src/transfer/persistence-v2.ts": "c4b5ecc3ab4747372599baa33c2f7448a8cb65150b7d947b4029c742a47a5a2a",
+    "src/transfer/operations-lesson.ts": "f1ec4a42b34e58757c778befb778075b7d6d0837edc1e1f5bee51c85cdf846f1",
+    "src/transfer/engine.ts": "8d87f9b491998806d4d818dcab4a0753ed48a0f28804f46c20bd87006a37e05c",
+    "src/transfer/state.ts": "cdf807b9c880f7f9098c82a035cdc77157c31f592d3db44c3b24a09aeff733af",
+    "src/transfer/types.ts": "40e635e632a323a66c41857857487dc8e4dcbab528796cca6b9adba340765487",
+    "src/transfer/index.ts": "c5ca88fef4412abd1d49c8a01d8652172b1f6a9d0a3ff2b5c17b51cb1ac44715"
+  },
+  "trajectorySpeedCertificate": {
+    "certified": true,
+    "maximumSpacecraftSpeedKmS": 41.74854228772429,
+    "maximumStationSpeedKmS": 30.807471132508773
+  },
+  "lesson": {
+    "id": "iris-schedule-rescue-v1",
+    "initialOperations": [
+      {
+        "id": "command-listen",
+        "kind": "downlink",
+        "start": 22453200,
+        "end": 22460400
+      },
+      {
+        "id": "encounter-science",
+        "kind": "observe",
+        "start": 22460400,
+        "end": 22460500
+      },
+      {
+        "id": "science-return-1",
+        "kind": "downlink",
+        "start": 22465800,
+        "end": 22469400
+      },
+      {
+        "id": "science-return-2",
+        "kind": "downlink",
+        "start": 22476600,
+        "end": 22480200
+      },
+      {
+        "id": "science-return-3",
+        "kind": "downlink",
+        "start": 22487400,
+        "end": 22491000
+      },
+      {
+        "id": "science-return-4",
+        "kind": "downlink",
+        "start": 22498200,
+        "end": 22501800
+      },
+      {
+        "id": "science-return-5",
+        "kind": "downlink",
+        "start": 22509000,
+        "end": 22512600
+      },
+      {
+        "id": "science-return-6",
+        "kind": "downlink",
+        "start": 22519800,
+        "end": 22523400
+      },
+      {
+        "id": "science-return-7",
+        "kind": "downlink",
+        "start": 22530600,
+        "end": 22534200
+      },
+      {
+        "id": "science-return-8",
+        "kind": "downlink",
+        "start": 22541400,
+        "end": 22545000
+      },
+      {
+        "id": "science-return-9",
+        "kind": "downlink",
+        "start": 22552200,
+        "end": 22555800
+      },
+      {
+        "id": "science-return-10",
+        "kind": "downlink",
+        "start": 22563000,
+        "end": 22566600
+      },
+      {
+        "id": "science-return-11",
+        "kind": "downlink",
+        "start": 22573800,
+        "end": 22577400
+      },
+      {
+        "id": "science-return-12",
+        "kind": "downlink",
+        "start": 22584600,
+        "end": 22588200
+      },
+      {
+        "id": "science-return-13",
+        "kind": "downlink",
+        "start": 22595400,
+        "end": 22599000
+      },
+      {
+        "id": "science-return-14",
+        "kind": "downlink",
+        "start": 22606200,
+        "end": 22609800
+      },
+      {
+        "id": "science-return-15",
+        "kind": "downlink",
+        "start": 22617000,
+        "end": 22620600
+      },
+      {
+        "id": "science-return-16",
+        "kind": "downlink",
+        "start": 22627800,
+        "end": 22631400
+      }
+    ],
+    "replacement": {
+      "kind": "replace-schedule",
+      "baseRevision": 0,
+      "replaceFromSeconds": 22460400,
+      "operations": [
+        {
+          "id": "encounter-science",
+          "kind": "observe",
+          "start": 22460400,
+          "end": 22465800
+        },
+        {
+          "id": "science-return-1",
+          "kind": "downlink",
+          "start": 22465800,
+          "end": 22469400
+        },
+        {
+          "id": "science-return-2",
+          "kind": "downlink",
+          "start": 22476600,
+          "end": 22480200
+        },
+        {
+          "id": "science-return-3",
+          "kind": "downlink",
+          "start": 22487400,
+          "end": 22491000
+        },
+        {
+          "id": "science-return-4",
+          "kind": "downlink",
+          "start": 22498200,
+          "end": 22501800
+        },
+        {
+          "id": "science-return-5",
+          "kind": "downlink",
+          "start": 22509000,
+          "end": 22512600
+        },
+        {
+          "id": "science-return-6",
+          "kind": "downlink",
+          "start": 22519800,
+          "end": 22523400
+        },
+        {
+          "id": "science-return-7",
+          "kind": "downlink",
+          "start": 22530600,
+          "end": 22534200
+        },
+        {
+          "id": "science-return-8",
+          "kind": "downlink",
+          "start": 22541400,
+          "end": 22545000
+        },
+        {
+          "id": "science-return-9",
+          "kind": "downlink",
+          "start": 22552200,
+          "end": 22555800
+        },
+        {
+          "id": "science-return-10",
+          "kind": "downlink",
+          "start": 22563000,
+          "end": 22566600
+        },
+        {
+          "id": "science-return-11",
+          "kind": "downlink",
+          "start": 22573800,
+          "end": 22577400
+        },
+        {
+          "id": "science-return-12",
+          "kind": "downlink",
+          "start": 22584600,
+          "end": 22588200
+        },
+        {
+          "id": "science-return-13",
+          "kind": "downlink",
+          "start": 22595400,
+          "end": 22599000
+        },
+        {
+          "id": "science-return-14",
+          "kind": "downlink",
+          "start": 22606200,
+          "end": 22609800
+        },
+        {
+          "id": "science-return-15",
+          "kind": "downlink",
+          "start": 22617000,
+          "end": 22620600
+        },
+        {
+          "id": "science-return-16",
+          "kind": "downlink",
+          "start": 22627800,
+          "end": 22631400
+        }
+      ]
+    },
+    "listeningWindow": {
+      "start": 22453200,
+      "end": 22460400
+    },
+    "suggestedCommandAtSeconds": 22455800,
+    "expiry": 22460400
+  },
+  "gates": {
+    "activeStepsSeconds": [
+      1,
+      0.5,
+      0.25
+    ],
+    "cruiseStepsSeconds": [
+      300,
+      600
+    ],
+    "commandAckTimingSeconds": 0.05,
+    "attitudeDegrees": 0.05,
+    "marginDb": 0.1,
+    "energyWh": 0.1
+  }
+}

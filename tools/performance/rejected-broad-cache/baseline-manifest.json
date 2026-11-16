@@ -1,0 +1,235 @@
+{
+  "capturedFrom": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\src",
+  "description": "Source snapshot copied before prototype edits during candidate C freeze",
+  "createdAt": "2026-11-14T18:50:17.9023293Z",
+  "files": [
+    {
+      "path": "debrief.ts",
+      "sha256": "81089cea771741efb282debebf144e9addce1168070fe6662bb9fad37f30348b"
+    },
+    {
+      "path": "flight-advisor.ts",
+      "sha256": "430b7b47bbc929c3ead2e463a284292bf4bab7f7e493d7cba8ec9e927805331b"
+    },
+    {
+      "path": "forecast.worker.ts",
+      "sha256": "7a2681cb123c77b04fc635108948754d12b69669f3da757bcac41113de2159d2"
+    },
+    {
+      "path": "hardware-i18n.ts",
+      "sha256": "1a925f78099816539ab35e31dc69013de98cac3a6230e3b2a5496567810df41d"
+    },
+    {
+      "path": "hardware/acquisition.ts",
+      "sha256": "72a1f573a47bfa7bf2707a15ae50c539f32be5863c7ef8caa69ca9e80a1846b0"
+    },
+    {
+      "path": "hardware/attitude.ts",
+      "sha256": "caf2396c3f38c2ee3d1ad38fb62c3c95252adfe04d3bdf7789e3c9896897d5a1"
+    },
+    {
+      "path": "hardware/catalog.ts",
+      "sha256": "878dfd6b1d8ca047667fe6a30a82e76fc275804ada3dffe31d4502eb2a72ec79"
+    },
+    {
+      "path": "hardware/index.ts",
+      "sha256": "d911a2cc099a374b3b394c4a083e2e2d7e0365730a2c09482d81f4cbca979728"
+    },
+    {
+      "path": "hardware/presets.ts",
+      "sha256": "45a04cf9c3b30a64fdb69f0f9b068627a48fb8c592b25f6e4915a0a670345797"
+    },
+    {
+      "path": "hardware/resolve.ts",
+      "sha256": "1277087e6b054bb819285b05b72eaaf3cdf26d7c7876573f606f989c7b587543"
+    },
+    {
+      "path": "hardware/types.ts",
+      "sha256": "e8d2ba99375e3e5f98faa814409a4d798bb7b63d16e9b61c335e31429b073bf4"
+    },
+    {
+      "path": "i18n.ts",
+      "sha256": "dcf652af90dfc87303e84bcff91357b2edab353a66808121fa053c18b212015f"
+    },
+    {
+      "path": "main.ts",
+      "sha256": "947748185dc4f3149df60df3131351b21643861afac9cfa2d35cb2ba49edfee4"
+    },
+    {
+      "path": "preview.worker.ts",
+      "sha256": "faa32b6d57ecca0242aa26c31bcbdaba353ba30d835b9328ed936705da87f8e1"
+    },
+    {
+      "path": "render/control-room.ts",
+      "sha256": "a1e4bc10d093c6ebf8d16b2c127fc2bf21424236692d01b58fded7ab321b44b9"
+    },
+    {
+      "path": "render/inspection.ts",
+      "sha256": "59f0ece8a2d18f52cb2b064285e979b35c733ba22701fd441bc93190582399af"
+    },
+    {
+      "path": "render/parts.ts",
+      "sha256": "522ca94101ae9da01c04700bfae420b4544e5db3a14fb6a6efaf6be83f9102fd"
+    },
+    {
+      "path": "render/scene.ts",
+      "sha256": "9701e45817222f6611b9aa76d3ce8662c22cab214026c4c76b2e13b3ddf790f5"
+    },
+    {
+      "path": "render/stow.ts",
+      "sha256": "df55c89833cca1e578d7fcbac091bd8e1f096b411437957a09995e583334d282"
+    },
+    {
+      "path": "render/targets.ts",
+      "sha256": "7c30530c4cf38893bea3d0185f809872ba49de73551e7841fc40222219e7feaf"
+    },
+    {
+      "path": "render/transfer-scene.ts",
+      "sha256": "5324c9d58f464052736056a2d2cb2f1240fe374b44f76bf399ba92bf05dbd4e5"
+    },
+    {
+      "path": "sim/assembly.ts",
+      "sha256": "8ef747b8dc73baacab53a542b67ba32db91c3cd7d16256afac26e39da5c4b57c"
+    },
+    {
+      "path": "sim/attitude.ts",
+      "sha256": "65b17947182722b23a94ba601d127eeeb6dc26925b05d4529564a3aae19145dd"
+    },
+    {
+      "path": "sim/catalog.ts",
+      "sha256": "677ec4087b8cf8fea90a3585572dcf56868fc3ccfb47b0d4b2aa6f4ce24f8607"
+    },
+    {
+      "path": "sim/hazards.ts",
+      "sha256": "4e2557769946c62d6b57160fce9666b91619c5f196a96756a9279847259b37f0"
+    },
+    {
+      "path": "sim/index.ts",
+      "sha256": "f4fc8c6553d27e0a24e78bbd867ec08f694ee78f2f770da4bd5cd43ace5da17a"
+    },
+    {
+      "path": "sim/launch.ts",
+      "sha256": "23838eb690154ec192c0a2406d5d2c3ae81a810152b0d2ed495b9f8a32967fe3"
+    },
+    {
+      "path": "sim/persistence.ts",
+      "sha256": "a9bab8d46cf668c1c6d99f8b21f084bea81f71585decb6b40ef4fe0b6fb73169"
+    },
+    {
+      "path": "sim/physics.ts",
+      "sha256": "666fa2b79febf8ab1d7ba8bd04f061e80cd0acc250c1290951e7a9bc7f9694be"
+    },
+    {
+      "path": "sim/simulation.ts",
+      "sha256": "d3b2f74708013b4a052dcb9227a09818ca86759a3eea8f80636cd8af6991265a"
+    },
+    {
+      "path": "sim/targets.ts",
+      "sha256": "72fd8a5c19ef4d66d0eb73c9fcb64db49d8dcafc1ae867272d33a2adc658b06e"
+    },
+    {
+      "path": "sim/types.ts",
+      "sha256": "d3c9f427dbc0c1e3cd5c470250090abfa7269276f58fed3ea125b7f94e0e5edb"
+    },
+    {
+      "path": "style.css",
+      "sha256": "7b58a99503e1967cd54d79a4262d4671af8e7794992b8c88c9025803b473f578"
+    },
+    {
+      "path": "transfer-i18n.ts",
+      "sha256": "550afdaa14b41507d1bbf4a6860c5e699b661ef503f06d8069d6c4ef99921c06"
+    },
+    {
+      "path": "transfer-ui.css",
+      "sha256": "d35d7e4be00f1e3342d5efea931fcfa0a55c589b7a6aa1db8bc078b9c288b08e"
+    },
+    {
+      "path": "transfer-ui.ts",
+      "sha256": "267b1370ab402b2bd221601140f990e2eb4d35331a4b591c06a0f8994739f193"
+    },
+    {
+      "path": "transfer.worker.ts",
+      "sha256": "2bf67f1f5ff4258821c34b4e2d5f53982ddb240969a502834bae4de64c3d78d2"
+    },
+    {
+      "path": "transfer/data/earth.json",
+      "sha256": "3e851a9c9b3e7b41d84c4e7849a417609e6f25159e8c03f741dee65b6961cc64"
+    },
+    {
+      "path": "transfer/data/mars.json",
+      "sha256": "1c92638072744d778d6cce139e57a7d45bd03cc8be56d26a63ea8f6e2d9a97d7"
+    },
+    {
+      "path": "transfer/ephemeris.ts",
+      "sha256": "3abcd5a400cb7c64ca4f87e148ef144d59b8ea51611d758b64298a344af1475f"
+    },
+    {
+      "path": "transfer/immutable.ts",
+      "sha256": "fb00f45f34a79c34efd1f0fd96ededbaec3425824c6a8c0b5b56bdd6e71485d2"
+    },
+    {
+      "path": "transfer/index.ts",
+      "sha256": "d1183f7e71bf3947863275227ed55ae6c7ef66c36b737a37a91555d9ef3c9e7e"
+    },
+    {
+      "path": "transfer/math.ts",
+      "sha256": "479b13215239b256f51569e16fb6141b76025974ee7f22b4d208b635e2e6a632"
+    },
+    {
+      "path": "transfer/persistence.ts",
+      "sha256": "2e9d7e0e63b683d10d471d6a2446f2644699717d69407afc40f53c6af888f44c"
+    },
+    {
+      "path": "transfer/planning.ts",
+      "sha256": "f6d7160c90d8d7d7489eac760e1dd67c469e23b2705ef9be3f65d9eda0eb5226"
+    },
+    {
+      "path": "transfer/runtime.ts",
+      "sha256": "6fac6489e85492f4903b7f4f805877883959d64cfeb2a2212f7fdaeffdee1954"
+    },
+    {
+      "path": "transfer/state.ts",
+      "sha256": "fd6971cff0dd87c74431766cc349063ae9f74492cd0d1c352e8f63e96d4a45ab"
+    },
+    {
+      "path": "transfer/types.ts",
+      "sha256": "7b07515735005ae0ae518ae53dbc38576fa1a1d47d57616de815f9140221cc8d"
+    },
+    {
+      "path": "ui-analysis.ts",
+      "sha256": "22975602593c9e2ecfcb7dd7041c674e3dbb1ab88352c04d8e3d7ae47269952a"
+    },
+    {
+      "path": "ui-data.ts",
+      "sha256": "cefc3234797b7c35155d173d204b9ab944477e2dfbfe18ac6b2e2740fdbda78e"
+    },
+    {
+      "path": "ui-debrief.css",
+      "sha256": "517b7eba3639c6c06ca96a6f75988f29ab6fefe25de5e270b7b4e29efc32b6d3"
+    },
+    {
+      "path": "ui-debrief.ts",
+      "sha256": "7d8799f9a5feae5af228c120dd3d0d641384cbe1b0a18b874430bb8c5a1b5904"
+    },
+    {
+      "path": "ui-hardware.css",
+      "sha256": "813b6e082b0b27cc382431130b26422c4b3cfaa9ca096fa467654eb3c9627e3e"
+    },
+    {
+      "path": "ui-hardware.ts",
+      "sha256": "98c94a6d295b1c8fb0edd4b56a220da9fb16da856360b0a55e2767a722926c39"
+    },
+    {
+      "path": "ui-science-flow.css",
+      "sha256": "9aea0800d0ee67dcd3fd797ab8383f77cd8d696036959b7e4fa2bc5800ae1116"
+    },
+    {
+      "path": "ui-science-flow.ts",
+      "sha256": "16d0c175c5503321874e754a0fa97347570480237b24265e273bac25cc6441c8"
+    },
+    {
+      "path": "ui-science.ts",
+      "sha256": "c83eac3773999659e4c1ae7e9f7efe06c9a7ac11437dd28bc9d0785885a2bc74"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "date": "2026-11-14T17:31:22.692Z",
+  "browser": "157.0.8103.52",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "scripts": [
+    "http://127.0.0.1:4173/assets/index-as3YeZTu.js"
+  ],
+  "errors": [],
+  "picker": [
+    {
+      "mission": "earth",
+      "x": 258,
+      "y": 221.65625,
+      "width": 246,
+      "height": 325.671875,
+      "text": "01 / EARTH OBSERVATION\n푸른 행성의 기록\n\n지구의 북반구 육지와 해안선을 관측하고, 유효한 사진 네 장을 지상국으로 돌려보내세요.\n\n첫 탐사\n약 8–12분\n85 kg 이내"
+    },
+    {
+      "mission": "mars",
+      "x": 517,
+      "y": 221.65625,
+      "width": 246,
+      "height": 325.671875,
+      "text": "02 / MARS GRAVITY ASSIST\n붉은 행성의 도움닫기\n\n화성에 접근 중인 탐사선을 완성하고, 중력 도움으로 출구 궤적을 바꾸며 화성의 분광 자료를 지구로 전송하세요.\n\n중력도움 항법\n약 10–15분\n95 kg 이내"
+    },
+    {
+      "mission": "mission-transfer",
+      "x": 776,
+      "y": 221.65625,
+      "width": 246,
+      "height": 325.671875,
+      "text": "03 / EARTH TO MARS\n지구에서 화성까지\n\n움직이는 두 행성 사이의 만남을 설계하세요. 지구 탈출, 수개월의 순항, 화성 관측과 지구 수신까지 이어집니다.\n\nJPL EPHEMERIDES\n3 PHASES\n680 C"
+    }
+  ],
+  "solar": {
+    "handles": [
+      {
+        "kind": "departure",
+        "x": 791.8729364537662,
+        "y": 291.69342435365473,
+        "visible": true,
+        "jdTdb": 2461359.5,
+        "hit": "transfer-universe"
+      },
+      {
+        "kind": "arrival",
+        "x": 392.39580380200334,
+        "y": 439.91070202485884,
+        "visible": true,
+        "jdTdb": 2461619.5,
+        "hit": "transfer-universe"
+      }
+    ],
+    "legend": {
+      "x": 377.8828125,
+      "y": 530.953125,
+      "width": 524.234375,
+      "height": 35.046875,
+      "bottom": 566
+    },
+    "timeline": {
+      "x": 16,
+      "y": 581,
+      "width": 1248,
+      "height": 125,
+      "bottom": 706
+    },
+    "hint": {
+      "x": 503.1640625,
+      "y": 94,
+      "width": 273.671875,
+      "height": 53.59375,
+      "bottom": 147.59375
+    },
+    "labels": [
+      {
+        "text": "SUN",
+        "x": 621.140625,
+        "y": 336.5,
+        "width": 37.71875,
+        "height": 21,
+        "bottom": 357.5
+      },
+      {
+        "text": "EARTH",
+        "x": 765.421875,
+        "y": 292.46875,
+        "width": 50.21875,
+        "height": 21,
+        "bottom": 313.46875
+      },
+      {
+        "text": "MARS",
+        "x": 673.859375,
+        "y": 137.375,
+        "width": 46.09375,
+        "height": 21,
+        "bottom": 158.375
+      },
+      {
+        "text": "지구 출발 · 드래그",
+        "x": 738.5,
+        "y": 267.515625,
+        "width": 109.9375,
+        "height": 21,
+        "bottom": 288.515625
+      },
+      {
+        "text": "화성 도착 · 드래그",
+        "x": 335.09375,
+        "y": 418.71875,
+        "width": 109.9375,
+        "height": 21,
+        "bottom": 439.71875
+      }
+    ]
+  },
+  "mars": {
+    "preview": true,
+    "craftScreen": {
+      "x": 737.2508033264119,
+      "y": 409.4410193650249
+    },
+    "legend": "구간 미리 보기 · 화성 근접 · 행성·경로 동일 축척 · 탐사선 ×203,370 확대 · 기체 방향은 설명용"
+  },
+  "room": {
+    "camera": [
+      6.999999999999998,
+      5,
+      14
+    ],
+    "screenUV": [
+      0,
+      0,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1
+    ],
+    "advisor": {
+      "x": 485,
+      "y": 391,
+      "width": 310,
+      "height": 135,
+      "bottom": 526
+    },
+    "lazyLoadCheck": {
+      "requestedBefore": 0,
+      "requestedAfter": 1,
+      "errors": [],
+      "toastHidden": true
+    }
+  }
+}

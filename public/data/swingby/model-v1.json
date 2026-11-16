@@ -1,0 +1,120 @@
+{
+  "modelVersion": "swingby-1.0.0",
+  "scenarioId": "mars-exit-corridor-2027-v1",
+  "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+  "propulsionHash": "dca16c1db88e8a05dd82fb119bd8ba93ea47d9609ec18cfd960166bbe2a41c7b",
+  "hardwareCatalogHash": "25a47f24340365b5b52d62708ce987f7a90df4ee6559879b91464a2d24ae9a98",
+  "ephemeris": {
+    "datasetId": "jpl-horizons-icrf-tdb-20260801-20280301-v1",
+    "earthHash": "785c43fe2189d1470b03ee33ccace2eafbe897dde7f7e09f9dee34b1fa7aa22e",
+    "marsHash": "959901a397605c0b2d1b0fae5799172fe927b16fd30bbbe3fbcf2ea4ed1ef2d4"
+  },
+  "sourceFiles": [
+    {
+      "file": "src/flight/environment.ts",
+      "bytes": 4243,
+      "sha256": "b9b65babf4fe4aeed7f381b920423af648a18fd6fc7a550f6c5b4275fcfd3149"
+    },
+    {
+      "file": "src/flight/resources.ts",
+      "bytes": 9677,
+      "sha256": "17619a9f2392352fc39eabdd19b6a842e68af583e464e71b89b1f3dac7ec351a"
+    },
+    {
+      "file": "src/flight/data.ts",
+      "bytes": 2897,
+      "sha256": "9d7f555e5913e01d640bf9edb8001ff4cb0503a3636af701c565446b4f877965"
+    },
+    {
+      "file": "src/swingby/types.ts",
+      "bytes": 5147,
+      "sha256": "822dfd1bd64d0cdf3a148e0814dfacb5ee188e3ce9e2fc1753a1ef4d8d20c739"
+    },
+    {
+      "file": "src/swingby/conic.ts",
+      "bytes": 3558,
+      "sha256": "ad51769b2f7fba1ad588f45b1db9fc38d202dd937684c07b99ab0e4fee9713ec"
+    },
+    {
+      "file": "src/swingby/scenario.ts",
+      "bytes": 2878,
+      "sha256": "4f993848b0651e0f69026c776fc1f4909437791a71cf07b73ef834dba0dbeb90"
+    },
+    {
+      "file": "src/swingby/orbit.ts",
+      "bytes": 5815,
+      "sha256": "9ae2c66c47b0ff95e96b7a414f7dcf3e4e319577082dabb6f34fd08a54dc71f9"
+    },
+    {
+      "file": "src/swingby/propulsion.ts",
+      "bytes": 5312,
+      "sha256": "db7e175335f8f09d19581e07ec337b5cacb1fb41394dce367aafaa2743993564"
+    },
+    {
+      "file": "src/swingby/planning.ts",
+      "bytes": 7542,
+      "sha256": "a40bcdcb5ff1b1e87648ffa58c351ef94faf04f2975e9ed0a7c4c2b806abec19"
+    },
+    {
+      "file": "src/swingby/runtime.ts",
+      "bytes": 22223,
+      "sha256": "2b383107120a636256f4f81ae6f18b8a3f1ff905f9a6f39db16a684a3e8f4d0a"
+    },
+    {
+      "file": "src/swingby/persistence.ts",
+      "bytes": 8085,
+      "sha256": "801962a034a3523e3438c361e45886cd8588fb26c6b6aa12ad2d17c23bef09fd"
+    },
+    {
+      "file": "src/swingby/visual.ts",
+      "bytes": 3772,
+      "sha256": "0ec71b49fe99e75bdaea9394950085d50d64fa110a5e2097661c23ee904477f2"
+    },
+    {
+      "file": "src/swingby/index.ts",
+      "bytes": 245,
+      "sha256": "881868a7e71ef00d58d30c9011ba0b4dc0592be2d8d6b5898c55209c52d5880e"
+    },
+    {
+      "file": "src/transfer/state.ts",
+      "bytes": 3795,
+      "sha256": "4e920dd783fc7ddeb6960371c46ff52d7b048c644533492f91640635f2d8cb96"
+    },
+    {
+      "file": "src/transfer/runtime-v3.ts",
+      "bytes": 16762,
+      "sha256": "8701e2268cacead8619b6417fb9b9d3b7da36c474385cadd773d2f21ddfd72ae"
+    }
+  ],
+  "scope": "Actual-epoch local Mars patched conic. Authored CG-trim ideal impulse; no vendor thrust or full n-body claim. Domain evidence does not imply browser/publication acceptance.",
+  "units": {
+    "length": "km",
+    "velocity": "km/s",
+    "spacecraftDimensions": "m",
+    "mass": "kg",
+    "energy": "Wh",
+    "specificOrbitalEnergy": "km²/s²",
+    "time": "elapsed TDB seconds",
+    "frame": "ICRF"
+  },
+  "primaryReferences": [
+    {
+      "name": "JPL Horizons system",
+      "url": "https://ssd.jpl.nasa.gov/horizons/"
+    },
+    {
+      "name": "NASA GMAT",
+      "url": "https://software.nasa.gov/software/GSC-17177-1"
+    },
+    {
+      "name": "NASA Small Spacecraft Technology State of the Art",
+      "url": "https://www.nasa.gov/smallsat-institute/sst-soa/"
+    }
+  ],
+  "provenance": {
+    "carrier": "Original authored game geometry, mass and impulse assumptions; no flight qualification claim.",
+    "hardware": "Unchanged released hardware catalogue and per-field source evidence.",
+    "ephemeris": "Existing pinned Horizons source tables; hashes above.",
+    "gmat": "Independent24-case local-state oracle, including explicit ICRF→MJ2000 burn-frame conversion."
+  }
+}

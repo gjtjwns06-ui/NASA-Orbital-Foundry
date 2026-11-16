@@ -1,0 +1,28 @@
+{
+  "errors": [],
+  "roomReady": true,
+  "roomEnvironmentRegenerated": true,
+  "screenUV": [
+    0,
+    0,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1
+  ],
+  "canvasesAfterDispose": 0,
+  "comparison": {
+    "meanRGB": [
+      0.5358018663194445,
+      0.5268543836805556,
+      0.5603634982638889
+    ],
+    "maxRGB": [
+      4,
+      4,
+      6
+    ]
+  }
+}

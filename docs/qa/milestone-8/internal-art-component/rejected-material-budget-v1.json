@@ -1,0 +1,1 @@
+{"status":"rejected","gate":"five internal-art CPU tests","passed":4,"failed":1,"reason":"RF board used five material batches including the authoritative ivory bay foot; target remains four.","correction":"Reuse existing ivory coated-metal material for board shielding and the existing ivory ADCS hub; no extra material, no relaxed budget."}

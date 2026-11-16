@@ -1,0 +1,234 @@
+{
+  "status": "exact-byte-transfer-verified",
+  "createdAtUtc": "2026-11-15T05:04:08.566553+00:00",
+  "sourceWorkspace": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-deployment",
+  "destination": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\docs\\qa\\milestone-8\\domain",
+  "fileCount": 37,
+  "bytes": 1933574,
+  "sourceAndTestFilesCopiedByThisTask": false,
+  "scope": "Bounded domain documents and actual acceptance evidence only. Current production/tests/fixtures were copied by root separately. Original source-relative paths inside exact JSON are preserved; use this mapping to locate copied evidence.",
+  "files": [
+    {
+      "sourcePath": "docs/deployment-integration-manifest.json",
+      "destinationPath": "deployment-integration-manifest.json",
+      "bytes": 7332,
+      "sha256": "5bcdfb03b1d0d5a60800220b87946ac98a140cf3d15d483727f020ecda05142d"
+    },
+    {
+      "sourcePath": "docs/deployment-domain-final-acceptance.json",
+      "destinationPath": "deployment-domain-final-acceptance.json",
+      "bytes": 2785,
+      "sha256": "f20a8108cd818cd75ae0ceb545511778457de022f148d0e751a3e5a6f6b0dfb2"
+    },
+    {
+      "sourcePath": "docs/deployment-domain-acceptance.md",
+      "destinationPath": "deployment-domain-acceptance.md",
+      "bytes": 5245,
+      "sha256": "6afe6cde8ba99c44f29aa1ccb01a95293ed7e8383793ced034303c857c9298bb"
+    },
+    {
+      "sourcePath": "docs/deployment-terminal-handoff.md",
+      "destinationPath": "deployment-terminal-handoff.md",
+      "bytes": 2473,
+      "sha256": "dced5b1c3ef366b1922213b2a3e0c8802f7ca76bc1200f5dccb1f0f84bea6bb7"
+    },
+    {
+      "sourcePath": "docs/deployment-runtime-contract.md",
+      "destinationPath": "deployment-runtime-contract.md",
+      "bytes": 6406,
+      "sha256": "7c26f1b9970be72b4dc1ae448c65b81e89ead4c9cdd95634c91556205b2602d6"
+    },
+    {
+      "sourcePath": "docs/deployment-acceptance-plan.md",
+      "destinationPath": "deployment-acceptance-plan.md",
+      "bytes": 12391,
+      "sha256": "0d61691f12aa47c9d9239f5dc162d2c10f213581f0a5064e820a1cdee3ea4245"
+    },
+    {
+      "sourcePath": "docs/deployment-spec-row-audit.md",
+      "destinationPath": "deployment-spec-row-audit.md",
+      "bytes": 5195,
+      "sha256": "745ed9af86d964427c9884747b4cd29dcb2843fc8652e5b87d7618ce77b9e618"
+    },
+    {
+      "sourcePath": "docs/qa/resumed-continuation-2026-11-15T04-46-12Z/console.log",
+      "destinationPath": "qa/resumed-continuation-2026-11-15T04-46-12Z/console.log",
+      "bytes": 5333,
+      "sha256": "4cd1ed3cca820f99a42a0ed09e79125244c26d18c03a04d158a148a5b40fb016"
+    },
+    {
+      "sourcePath": "docs/qa/resumed-continuation-2026-11-15T04-46-12Z/main-dependency-line-endings.json",
+      "destinationPath": "qa/resumed-continuation-2026-11-15T04-46-12Z/main-dependency-line-endings.json",
+      "bytes": 3780,
+      "sha256": "30293ddeb861fc3911c56a9c227c9545eeb55874a8e37ea537f284c83f27a235"
+    },
+    {
+      "sourcePath": "docs/qa/resumed-continuation-2026-11-15T04-46-12Z/process-result.json",
+      "destinationPath": "qa/resumed-continuation-2026-11-15T04-46-12Z/process-result.json",
+      "bytes": 1326,
+      "sha256": "12cfea85b7a9ea1141b32f10b680e5bf289416e1345cdb9462b5b8d98973b3d4"
+    },
+    {
+      "sourcePath": "docs/qa/resumed-continuation-2026-11-15T04-46-12Z/retained-evidence-recheck.json",
+      "destinationPath": "qa/resumed-continuation-2026-11-15T04-46-12Z/retained-evidence-recheck.json",
+      "bytes": 566,
+      "sha256": "7d1db70aca07260003f9f17b3eaaf26a658158a50fb31226c01b3e3885de26e3"
+    },
+    {
+      "sourcePath": "docs/qa/resumed-continuation-2026-11-15T04-46-12Z/scope.json",
+      "destinationPath": "qa/resumed-continuation-2026-11-15T04-46-12Z/scope.json",
+      "bytes": 4567,
+      "sha256": "23171d5b347a2ed00220c5f866afe933c06a5629e68510a06e41eb66804acf3d"
+    },
+    {
+      "sourcePath": "docs/qa/resumed-continuation-2026-11-15T04-46-12Z/source-after.json",
+      "destinationPath": "qa/resumed-continuation-2026-11-15T04-46-12Z/source-after.json",
+      "bytes": 9290,
+      "sha256": "e68df1c027144112f428adc50755443b0d034b4e2536a4ff2f83e4b595f80842"
+    },
+    {
+      "sourcePath": "docs/qa/resumed-continuation-2026-11-15T04-46-12Z/vitest-results.json",
+      "destinationPath": "qa/resumed-continuation-2026-11-15T04-46-12Z/vitest-results.json",
+      "bytes": 29091,
+      "sha256": "c4c0e9a2418b6f9c7748f67c0b5081d11e4005a8b97507a874e94195873c8c2d"
+    },
+    {
+      "sourcePath": "docs/qa/resumed-full-suite-2026-11-15T04-45-26Z/console.log",
+      "destinationPath": "qa/resumed-full-suite-2026-11-15T04-45-26Z/console.log",
+      "bytes": 94,
+      "sha256": "e5d3d1253367ab6d594f889a2819e901db15c892b454bd900aa671ddd96849a9"
+    },
+    {
+      "sourcePath": "docs/qa/resumed-full-suite-2026-11-15T04-45-26Z/prior-interruption.json",
+      "destinationPath": "qa/resumed-full-suite-2026-11-15T04-45-26Z/prior-interruption.json",
+      "bytes": 3244,
+      "sha256": "3f98cb123eeea05a50978b4b0503c3587c0c5ecb8e11529e831de8b30d1685f1"
+    },
+    {
+      "sourcePath": "docs/qa/resumed-full-suite-2026-11-15T04-45-26Z/process-result.json",
+      "destinationPath": "qa/resumed-full-suite-2026-11-15T04-45-26Z/process-result.json",
+      "bytes": 522,
+      "sha256": "ac7e06803397e88223d08a9eb7f4b34e378ae98c4682751f1076a9cdd556425f"
+    },
+    {
+      "sourcePath": "docs/qa/resumed-full-suite-2026-11-15T04-45-26Z/source-before.json",
+      "destinationPath": "qa/resumed-full-suite-2026-11-15T04-45-26Z/source-before.json",
+      "bytes": 7094,
+      "sha256": "068a866446c958de1c1b73350b9d34f941d21c23e97c3cf9e938505c232f3532"
+    },
+    {
+      "sourcePath": "docs/qa/recovery-convergence-2026-11-14T23-46-54-595Z/profile-0-save.json",
+      "destinationPath": "qa/recovery-convergence-2026-11-14T23-46-54-595Z/profile-0-save.json",
+      "bytes": 127226,
+      "sha256": "9b66a9200c8a0e0f1409c60c306e5e1549c7d94832dc608f8c27817f85b26732"
+    },
+    {
+      "sourcePath": "docs/qa/recovery-convergence-2026-11-14T23-46-54-595Z/profile-1-save.json",
+      "destinationPath": "qa/recovery-convergence-2026-11-14T23-46-54-595Z/profile-1-save.json",
+      "bytes": 127224,
+      "sha256": "b197202e3df9447bbe9508aa8296ddf72e049726fafddc42257590071c1bcf76"
+    },
+    {
+      "sourcePath": "docs/qa/recovery-convergence-2026-11-14T23-46-54-595Z/profile-2-save.json",
+      "destinationPath": "qa/recovery-convergence-2026-11-14T23-46-54-595Z/profile-2-save.json",
+      "bytes": 127240,
+      "sha256": "51ce69b44fff7c109ccbac47bed4cab6e4873cf957b2e931adff547a4590ddf0"
+    },
+    {
+      "sourcePath": "docs/qa/recovery-convergence-2026-11-14T23-46-54-595Z/profile-3-save.json",
+      "destinationPath": "qa/recovery-convergence-2026-11-14T23-46-54-595Z/profile-3-save.json",
+      "bytes": 127225,
+      "sha256": "c10f3a0a25027469142a6e1b671690fd7c7b6b5036427bff0103335dca2360d8"
+    },
+    {
+      "sourcePath": "docs/qa/recovery-convergence-2026-11-14T23-46-54-595Z/report.json",
+      "destinationPath": "qa/recovery-convergence-2026-11-14T23-46-54-595Z/report.json",
+      "bytes": 124309,
+      "sha256": "050583e979162156b6fb2a2316c0b2772b03ddc314cbe55712df44d05202d4fd"
+    },
+    {
+      "sourcePath": "docs/qa/terminal-drain-2026-11-14T23-44-48-963Z/cutoff-save.json",
+      "destinationPath": "qa/terminal-drain-2026-11-14T23-44-48-963Z/cutoff-save.json",
+      "bytes": 126490,
+      "sha256": "4ddc5fd16fd3dcb51264b05cb40d055e0da1fc5eb93e63df71ce1284a2f25692"
+    },
+    {
+      "sourcePath": "docs/qa/terminal-drain-2026-11-14T23-44-48-963Z/drained-save.json",
+      "destinationPath": "qa/terminal-drain-2026-11-14T23-44-48-963Z/drained-save.json",
+      "bytes": 126717,
+      "sha256": "740d06804e49ec0bfaf4d20e1fc6f1cecc9aabcfb9a364530ed4725e33ba1147"
+    },
+    {
+      "sourcePath": "docs/qa/terminal-drain-2026-11-14T23-44-48-963Z/report.json",
+      "destinationPath": "qa/terminal-drain-2026-11-14T23-44-48-963Z/report.json",
+      "bytes": 187573,
+      "sha256": "318c38c0a25aab2f7706da055d8821d9b80dc9d809c834b2b2d948e28f1913e1"
+    },
+    {
+      "sourcePath": "docs/qa/convergence-2026-11-15T04-49-57-011Z/report.json",
+      "destinationPath": "qa/convergence-2026-11-15T04-49-57-011Z/report.json",
+      "bytes": 117623,
+      "sha256": "6613ccf015486b7869009ecf2e09448d37eb813bf8196ee2ce5a80f3455a2cd8"
+    },
+    {
+      "sourcePath": "docs/qa/clearance-repaired-flight-2026-11-15T04-50-51-293Z/report.json",
+      "destinationPath": "qa/clearance-repaired-flight-2026-11-15T04-50-51-293Z/report.json",
+      "bytes": 28872,
+      "sha256": "958a63e4c9b66faebb82cab9505c1dec14b2fcb5bc8e543115e7ebfe250674da"
+    },
+    {
+      "sourcePath": "docs/qa/clearance-repaired-flight-2026-11-15T04-50-51-293Z/save.json",
+      "destinationPath": "qa/clearance-repaired-flight-2026-11-15T04-50-51-293Z/save.json",
+      "bytes": 126738,
+      "sha256": "485dcecf5dc96ec9d88cda3265f040a2c31cf1ab1c1fd9f9ef6f94e80698ea7f"
+    },
+    {
+      "sourcePath": "docs/qa/interrupted-reversed-flight-2026-11-15T04-53-39-577Z/report.json",
+      "destinationPath": "qa/interrupted-reversed-flight-2026-11-15T04-53-39-577Z/report.json",
+      "bytes": 29977,
+      "sha256": "335666c54ab3f6d854d9001379d4e482ef098414899e5389e443edced8ea6039"
+    },
+    {
+      "sourcePath": "docs/qa/interrupted-reversed-flight-2026-11-15T04-53-39-577Z/save.json",
+      "destinationPath": "qa/interrupted-reversed-flight-2026-11-15T04-53-39-577Z/save.json",
+      "bytes": 127552,
+      "sha256": "c512a1a98cd9983096a71e0a0f39b5b2f4171042ca5ceb794305496820778ea0"
+    },
+    {
+      "sourcePath": "docs/qa/eps-overdraw-flight-2026-11-15T04-53-44-108Z/report.json",
+      "destinationPath": "qa/eps-overdraw-flight-2026-11-15T04-53-44-108Z/report.json",
+      "bytes": 3415,
+      "sha256": "279fd589b30219f54e8851b2eeb7e413fe24986c3a4c43907c243f4561589aba"
+    },
+    {
+      "sourcePath": "docs/qa/eps-overdraw-flight-2026-11-15T04-53-44-108Z/save.json",
+      "destinationPath": "qa/eps-overdraw-flight-2026-11-15T04-53-44-108Z/save.json",
+      "bytes": 4814,
+      "sha256": "e340f948ebc90ee0a99cb203f3cab4fecab86bddc35a032fc7d32d9f38671d32"
+    },
+    {
+      "sourcePath": "docs/qa/mission-2026-11-15T04-59-34-736Z/compact-save.json",
+      "destinationPath": "qa/mission-2026-11-15T04-59-34-736Z/compact-save.json",
+      "bytes": 126580,
+      "sha256": "93f6d6a4c2e06312c58a354662bc38e13b0d3fe9ac337d8340c0a311b9cdae89"
+    },
+    {
+      "sourcePath": "docs/qa/mission-2026-11-15T04-59-34-736Z/compact.json",
+      "destinationPath": "qa/mission-2026-11-15T04-59-34-736Z/compact.json",
+      "bytes": 35960,
+      "sha256": "be9e9e3427e4dea309c0e66dc7c74d69a383b95ff1d55edd7d77c61d81185e4b"
+    },
+    {
+      "sourcePath": "docs/qa/fixed-2026-11-15T05-01-01-375Z/result.json",
+      "destinationPath": "qa/fixed-2026-11-15T05-01-01-375Z/result.json",
+      "bytes": 25795,
+      "sha256": "b5ed3e44d994a8badb7acc6e11bd28f7b627fdb3f680c97ebe984951e885435b"
+    },
+    {
+      "sourcePath": "docs/qa/fixed-2026-11-15T05-01-01-375Z/save.json",
+      "destinationPath": "qa/fixed-2026-11-15T05-01-01-375Z/save.json",
+      "bytes": 125510,
+      "sha256": "ca9a1d8e388b9847c6db945343c37d1476e5ac536f5cc01714a2ab30b3d1cbcb"
+    }
+  ]
+}

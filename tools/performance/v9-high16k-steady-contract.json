@@ -1,0 +1,59 @@
+{
+  "status": "PREPARED_STATIC_ONLY_NOT_SYNTAX_CHECKED_NOT_RUN",
+  "contractId": "actual-prefix-retained-history-v1",
+  "sourceHarness": "tools/performance/v9-active-first-light.mjs",
+  "sourceRawSha256": "5fa4b4c17b8833d898d8e6f93b6c0e2ad89d7d1ce57304e875a25d27b5293df7",
+  "successor": "tools/performance/v9-high16k-steady.mjs",
+  "successorSha256": "657d9ccc771db785b22360c5df30f0ced1377969edb429a4864dda4da462eb0f",
+  "artifact": "v9-firstlight-high16k-steady",
+  "prefix": {
+    "genuineNativeResumePause": true,
+    "speed": 1,
+    "target": "max(5, initialPhysicalTime+1)",
+    "maximumPhysicalTime": 10,
+    "minimumActualAdvanceSeconds": 1,
+    "maximumWallSeconds": 15,
+    "pollingMs": 250,
+    "noRuntimeInjection": true
+  },
+  "warmup": {
+    "pausedSeconds": 10,
+    "runtimeHashUnchanged": true,
+    "realCompressedEarth": [
+      16384,
+      8192,
+      15
+    ],
+    "ownedFinishMaps": 4,
+    "uploadedHistoryPointsMin": 2
+  },
+  "measurement": {
+    "minimumSeconds": 120,
+    "maximumSeconds": 121,
+    "minimumFps": 60,
+    "maximumP99Ms": 33.3,
+    "minimumPhysicalAdvanceSeconds": 115,
+    "physicalLeadMaxSeconds": 0.25,
+    "speed": 1,
+    "rightDrags": 12,
+    "wheels": 12,
+    "nativeAllocations": 0,
+    "nativeDeletions": 0,
+    "exactNativeLifetimeCountersAndLiveIds": true,
+    "exactHistoryObjectGeometryMaterialAttributeArrayIdentity": true,
+    "exactNonHistoryGeometryMaterialProgramIdentity": true,
+    "exactGpuCountsAndProgramIds": true,
+    "workerFK": true,
+    "actualMechanismsMoveAndConsumeEnergy": true
+  },
+  "commandsAfterLeaseRelease": [
+    "node --check tools/performance/v9-high16k-steady.mjs",
+    "$env:PERF_ISOLATED='1'",
+    "$env:PLAYWRIGHT_BASE_URL='http://127.0.0.1:5191'",
+    "$env:PLAYWRIGHT_QA_CANDIDATE='v9-high-steady-r1'",
+    "$env:PLAYWRIGHT_BROWSER='chrome'",
+    "node tools/performance/v9-high16k-steady.mjs"
+  ],
+  "noExistingHarnessOrReportChanged": true,
+  "noSyntaxTestOrBrowserExecuted": true
+}

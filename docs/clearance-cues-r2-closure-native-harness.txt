@@ -1,0 +1,47 @@
+import {test as base,expect,type Page} from '@playwright/test';
+import {mkdirSync,readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {join} from 'node:path';
+import {installNativeDeletionAudit} from './native-gl-audit';
+
+const candidate=process.env.PLAYWRIGHT_QA_CANDIDATE||'clearance-cues-unfrozen';
+if(!/^[a-z0-9-]+$/.test(candidate))throw Error('Invalid candidate');
+const out=join(process.cwd(),'tests/browser/artifacts/deployment-clearance-cues',candidate);mkdirSync(out,{recursive:true});
+const frozen=JSON.parse(readFileSync('docs/clearance-cues-r2-closure-freeze.json','utf8').replace(/^\uFEFF/,''));
+const hashes=()=>frozen.files.map((file:{path:string;sha256:string})=>({path:file.path,sha256:createHash('sha256').update(readFileSync(file.path)).digest('hex')}));
+const test=base.extend<{audit:void}>({audit:[async({page},use,info)=>{
+ const before=hashes(),errors:string[]=[],warnings:string[]=[];expect(before).toEqual(frozen.files);await installNativeDeletionAudit(page);
+ page.on('pageerror',e=>errors.push(e.stack||e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());if(m.type()==='warning')warnings.push(m.text());});page.on('response',r=>{if(r.status()>=400&&!r.url().endsWith('/favicon.ico'))errors.push(`${r.status()} ${r.url()}`);});
+ await use();const native=await page.evaluate(()=>(window as any).__allContextDeletionAudit).catch(()=>null),after=hashes();
+ const name=info.title.replace(/[^a-z0-9]+/gi,'-').toLowerCase(),graphicsFailures=warnings.filter(w=>/INVALID_OPERATION|does not belong to this context|too many errors/.test(w));
+ const checksPassed=errors.length===0&&graphicsFailures.length===0&&native?.contexts?.length>0&&native.errors.length===0&&JSON.stringify(before)===JSON.stringify(after);
+ writeFileSync(join(out,name+'.json'),JSON.stringify({candidate,title:info.title,status:info.status==='passed'&&!checksPassed?'failed':info.status,browser:page.context().browser()?.version(),url:page.url(),viewport:page.viewportSize(),before,after,errors,warnings,native,scripts:await page.locator('script[src]').evaluateAll(es=>es.map(e=>(e as HTMLScriptElement).src)).catch(()=>[]),scope:'Native input and actual Worker outcomes. No injected craft, witness, runtime, success or camera; no performance claim.'},null,2));
+ if(info.status!==info.expectedStatus)await page.screenshot({path:join(out,name+'-failure.png')}).catch(()=>{});
+ expect(after).toEqual(before);expect(errors).toEqual([]);expect(native?.contexts?.length).toBeGreaterThan(0);expect(native?.errors??[]).toEqual([]);expect(graphicsFailures).toEqual([]);
+},{auto:true}]});
+test.setTimeout(120000);test.use({actionTimeout:12000});
+const state=(p:Page)=>p.evaluate(()=>(window as any).__game.deployment().getState());
+const camera=(p:Page)=>p.evaluate(()=>(window as any).__game.deployment().scene.qa.getCamera());
+const control=(p:Page,a:string)=>p.locator(`[data-deployment-action="${a}"]`).first();
+const ready=(p:Page)=>p.waitForFunction(()=>{const s=(window as any).__game.deployment()?.getState();return s&&!s.pending&&!s.busy&&!s.restoring&&!s.saving&&!s.closing;},null,{polling:250,timeout:60000});
+async function open(p:Page,language:'ko'|'en'='ko',scale:'normal'|'large'='normal'){
+ await p.goto('/?qa');await p.waitForFunction(()=>Boolean((window as any).__game?.getState().assetsReady),null,{polling:250});
+ if(language==='en')await p.locator('[data-action="language"]').click();
+ await p.locator('[data-action="settings"]').click();await p.locator('#ui-scale').selectOption(scale);await p.locator('#motion').selectOption('reduced');await p.locator('[data-action="close-modal"]').click();
+ await p.locator('[data-action="missions"]').click();await p.locator('[data-action="mission-deployment"]').click();await ready(p);
+}
+async function witness(p:Page,inspect=true){
+ if(inspect)await control(p,'sweep').click();await expect(p.locator('.deployment-clearance-cue:not([hidden])')).toHaveCount(2);
+ const s=await state(p),w=s.preview.report.firstWitness??s.preview.report.firstUncertainWitness;
+ const facts=await p.locator('.deployment-clearance-cue button').evaluateAll(es=>es.map(el=>{const b=el as HTMLButtonElement,r=b.getBoundingClientRect(),dot=b.parentElement!.querySelector('.deployment-cue-dot')!.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return {data:{...b.dataset},text:b.textContent,rect:{left:r.left,top:r.top,right:r.right,bottom:r.bottom},anchor:{x:dot.x+dot.width/2,y:dot.y+dot.height/2},hit:b===hit||b.contains(hit)};}));
+ const projections=await p.evaluate(()=>{const d=(window as any).__game.deployment(),s=d.getState();return d.scene.getClearanceCues(s.draft.inputHash,s.preview.requestId);});
+ for(const [i,f]of facts.entries()){const expected=i===0?w.a:w.b;expect(f.data.partId).toBe(expected.partId);expect(f.data.linkId).toBe(expected.linkId);expect(f.data.boxId).toBe(expected.boxId);expect(f.data.sourceId).toBe(s.draft.inputHash);expect(f.data.requestId).toBe(s.preview.requestId);expect(f.hit).toBe(true);expect(f.anchor.x).toBeCloseTo(projections.points[i].x,1);expect(f.anchor.y).toBeCloseTo(projections.points[i].y,1);expect(f.rect.left).toBeGreaterThanOrEqual(projections.bounds.left);expect(f.rect.right).toBeLessThanOrEqual(projections.bounds.right);expect(f.rect.bottom).toBeLessThanOrEqual(projections.bounds.bottom);}
+ writeFileSync(join(out,`witness-${p.viewportSize()!.width}-${s.preview.requestId}.json`),JSON.stringify({facts,projections,witness:w},null,2));return s;
+}
+test('English resize preserves fresh projection then context preset and flight clear cues',async({page})=>{
+ await page.setViewportSize({width:1920,height:1080});await open(page,'en','large');const original=await witness(page);await page.screenshot({path:join(out,'en-large-1920-witness.png')});
+ await page.setViewportSize({width:1600,height:900});const resized=await witness(page,false);expect(resized.preview.requestId).toBe(original.preview.requestId);expect(resized.preview.sourceId).toBe(original.preview.sourceId);expect(resized.preview.geometry).toEqual(original.preview.geometry);expect(resized.craft).toEqual(original.craft);expect(resized.plan).toEqual(original.plan);expect(resized.runtime).toBeNull();await page.screenshot({path:join(out,'en-large-1600-reprojected.png')});
+ const loss=await page.evaluate(()=>{const canvas=(window as any).__game.deployment().scene.qa.canvas,gl=canvas.getContext('webgl2'),ext=gl?.getExtension('WEBGL_lose_context');if(!ext)return false;(window as any).__clearanceContextRestore=()=>ext.restoreContext();ext.loseContext();return true;});expect(loss).toBe(true);
+ await expect(page.locator('.deployment-clearance-cues')).toBeHidden();await page.waitForFunction(()=>(window as any).__game.deployment().getState().scene.contextLost,null,{polling:250});await page.evaluate(()=>(window as any).__clearanceContextRestore());await page.waitForFunction(()=>!(window as any).__game.deployment().getState().scene.contextLost,null,{polling:250});await ready(page);await expect(page.locator('.deployment-clearance-cues')).toBeHidden();
+ await witness(page);await control(page,'variants').click();await control(page,'preset:compact').click();await ready(page);await expect(page.locator('.deployment-clearance-cues')).toBeHidden();await control(page,'launch').click();await page.waitForFunction(()=>(window as any).__game.deployment().getState().runtime?.time>0,null,{polling:250});await control(page,'play').click();await ready(page);await expect(page.locator('.deployment-clearance-cues')).toBeHidden();expect(await page.locator('.deployment-clearance-cue button').evaluateAll(es=>es.every(e=>e.getClientRects().length===0))).toBe(true);await page.screenshot({path:join(out,'live-flight-no-cues.png')});
+});

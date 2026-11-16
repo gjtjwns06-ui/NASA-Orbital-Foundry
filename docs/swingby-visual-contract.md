@@ -1,0 +1,45 @@
+# Isolated swingby visual slice — incomplete, not integrated
+
+This sibling contains a render-only prototype. Production source and published gameplay remain separate. Work paused for the production 9A/9B WebGL generation-lifetime defect before any browser rendering of this prototype. No visual-quality, input-usability or GPU-performance result is claimed yet.
+
+## Modules and ownership
+
+- `src/render/swingby-objective.ts`: owns a Mars-position-frame group and a separate **heliocentric velocity-space inset** group. Supplied ICRF coordinates map consistently to Three `[x,z,-y]`. `setSnapshot`, `setDisplayFrame`, `setAimDisplay`, `setVelocityDisplay`, `setEditing`, `pickAim`, `beginAimDrag`, `updateAimDrag`, `endAimDrag`, `getAimWorldPosition`, `getLabelDTOs`, `getResourceCounts`, `dispose` are the integration surface.
+- `src/render/swingby-carrier.ts`: reversible `new SwingbyCarrier(existingEngineObject, profile)`. Hides and later restores original children without disposing their resources. `setThrustDirection(localUnitVector)`, `getState`, `dispose`. It does not modify the released catalogue or legacy bell. Both assembly and flight can attach this same adapter to their real engine object.
+- `src/render/swingby-scene.ts`: standalone Mars-only renderer composed from existing spacecraft factories, camera controller, texture cache, objective and carrier. It consumes actual runtime position/attitude/time/Sun-direction DTOs and caller-sampled paths; it does not propagate an orbit or fabricate a `FullTransferSolution`. Constructor `(container, callbacks, {quality,reducedMotion})`; `setCraft`, `setSnapshot`, `setCarrierProfile`, `setInspection`, `getInspectionState`, `focusInspectionPart`, `setInspectionViewport`, `focusOverview`, `setVelocityViewport`, `setEditing`, `getAimScreen`, `getPartScreen`, `setQuality`, `setReducedMotion`, `render`, `resize`, `dispose`.
+
+The wrapper is authored and typechecks but **has not run in a browser**. The exact production 9B `context-resources.ts` helper is now adopted for its world/inset scene registrations, inactive maps and explicit owned-target retirement. Actual-scene interaction, clipping, panel-fit and recovery/disposal checks remain pending; adopting source code is not a browser proof.
+
+Its actual-state DTO is `{timeSeconds, positionKm, attitudeQuaternion, sunDirectionICRF, marsSurfaceRotationRad, objective, engine?:{partId,thrustDirectionBody}}`. Position is Mars-relative ICRF kilometres; attitude maps body to ICRF. The engine body vector is converted through the actual part mount before moving the nozzle. Planet surface rotation is explicitly a display convention, not an IAU body-fixed targeting model. Objective display epoch must match the actual spacecraft epoch.
+
+Finite physical contact/inside-surface terminal states are accepted unchanged. The camera exits inspection and reports it unavailable within a 20 m camera-clearance margin, while the actual position remains visible/occluded naturally in the overview. This margin is not a mission collision or success threshold. The first-entry `planet-inspection-direction.ts` helper is shared with the separately tested 9C composition candidate; scene geometry never moves a planet to improve framing.
+
+## Physical truth in the overlay
+
+`SwingbyObjectiveSnapshot` carries immutable scenario identity/revision, one actual display epoch, fixed aim-plane center/orthonormal axes, physical aim X/Y kilometres, caller-sampled reference/predicted/flown paths, planned/recorded correction vector and predicted/achieved exit records. An achieved exit or actual burn before its stated event time is rejected. Pending prediction is muted, invalid prediction is hidden, and supplied recorded history remains distinct.
+
+Ray dragging intersects the fixed plane. The result is `{xKm,yKm,revision,scenarioId}` only. It neither teleports periapsis nor runs a shooting solver, clamps to an accepted-looking solution, changes physics or awards success. Cancel returns no committed value. Parent UI owns accepted revision checks, solver debounce, undo and launch gating. The plane is explicitly an **inbound aim plane**, not an asymptotic B-plane.
+
+The velocity target cone is displayed in a separate inset rather than at a physical exit point. Its label DTO preserves the physical tolerance, energy interval, predicted/achieved values and angular magnification. Angles exceeding the display cap are explicitly flagged. This geometry is explanatory; pass/fail values come from the supplied domain record.
+
+## Agreed authored carrier geometry
+
+The domain/render owners agreed to a fixed annulus at local `[0,0,0.07] m`, outer radius `0.18 m`, inner radius `0.07 m`, thickness `0.04 m`, and pivot `[0,0,0.12] m`. The scenario-only moving bell extends `0..0.46 m` from its pivot, maximum mouth radius `0.10 m`, neck radius `0.025 m`; nominal thrust is local `−Z`, maximum gimbal `10°`. The fixed annulus adds the separately disclosed `0.4 kg` at its declared centroid and authored game cost. The narrower bell stays within the old `2.8 kg` engine assembly proxy; it is not manufacturer CAD or a measured density distribution.
+
+All geometry remains within the shared engine envelope centered `[0,0,0.30] m`, half-size `[0.19,0.19,0.30] m`. The current renderer consumes the exact profile fields rather than assuming a scale. Out-of-domain gimbal requests preserve the last accepted orientation. Legacy rendering is untouched on attachment removal.
+
+## Current CPU evidence and remaining gate
+
+`vitest run tests/swingby-carrier.test.ts tests/swingby-objective.test.ts tests/swingby-scene-state.test.ts`: **19/19 passed**, and sibling `tsc --noEmit` passed. Tests cover physical-plane projection, transformed-parent pointer rays, cancel/no mutation, future-event rejection, magnification disclosure, malformed inputs, stable overlay resource identities through 100 snapshots, every carrier vertex at 300 permitted gimbal directions, rejected-angle rollback, exact restoration of borrowed stock children, actual-state epoch/unit validation and unchanged terminal-contact rendering inputs. An initial carrier test timed out because it created an assertion for every vertex; the same vertex checks now accumulate one Boolean per angle and finish without loosening the geometric condition. [Exact source/test hashes](swingby-visual-manifest.json) identify this snapshot.
+
+Next: run the wrapper against the actual domain/UI in the coordinated integration workspace; inspect real Mars overview/aim/inspection/inset images and pointer actions at 1280×720; measure actual resources and repeat restore→path rebuild→carrier replacement→exit. Source-review caveats: `getPartScreen` currently projects a component's bounds center rather than searching for its visible first ray-hit surface; no browser test has yet established narrow target accessibility, inset framing or these new rendered assets' quality. No main merge until those checks and root visual review.
+# Standalone browser closure
+
+The isolated wrapper was exercised in Chrome157.0.8103.52 at1280×720 in normal and large UI fixture layouts. It imports the actual candidate domain's declared initial runtime and solved trajectories. Real pointer aim commits call that domain solver; Escape preserves the previous plan. Actual visible hardware is selected and focused through mouse click/double-click. Three native WebGL loss/restore cycles each return through overview and inspection; final renderer disposal is included. The runtime remains exactly at its declared initial state.
+
+`docs/qa/swingby-wrapper/report.json` records a passing run with zero page/HTTP errors and zero native invalid deletions. Nine existing compiler/PMREM warnings remain recorded. The detail map loads once, stays4096×2048 and survives the cycles. The captured actual trim is7.7995207556°; resource counters at the final inspected frame are86 geometries,9 textures and19 programs. These counters are not a performance benchmark or a repeated-rebuild memory convergence measurement.
+
+Actual screenshots `aim-normal-1280x720.png`, `aim-large-1280x720.png`, `craft-normal-1280x720.png` and `craft-restored-three-times.png` were visually inspected. The physical aim plane now faces the viewer along its real normal and its target stays in the available central area. The renderer shows the real eight-component craft and authored carrier. The initial Mars body is naturally tiny/occluded at this actual epoch; the fixture does not invent a nearby background planet. A remaining visual refinement is to tighten the velocity inset camera: its tolerance rim is currently only about15px. The builder adapter has separate CPU geometry/ownership proof and still needs the integrated assembly/browser case.
+
+This is renderer-only evidence from a candidate domain snapshot, not a full mission, worker, science-convergence, final production or commercial-quality claim. An earlier fixture run failed on a missing favicon request; the harness now references the existing favicon and the strict no-HTTP-error check passes. Production source was not changed.
+

@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "generator": "tools/gmat/validate.mjs",
+  "generatedAtUtc": "2026-11-14T16:21:05.666Z",
+  "gmatRelease": "R2026a",
+  "executableSha256": "36c880ad6c3f5e69b2e7e90c9d9cec4086eced9c1073fc5b289966d54db15f5f",
+  "epoch": {
+    "value": "2026-11-15T00:00:00.000",
+    "scale": "TAI"
+  },
+  "model": "central-body point mass only; no J2, drag, SRP, third-body gravity or relativity",
+  "axes": "MJ2000Eq, right-handed X/Y equatorial plane and Z north; central-body-relative origin",
+  "units": {
+    "position": "km",
+    "velocity": "km/s",
+    "time": "s",
+    "mu": "km^3/s^2"
+  },
+  "sampleSeconds": 60,
+  "tolerance": {
+    "maxPositionErrorKm": 0.01,
+    "maxVelocityErrorKmS": 0.00001
+  },
+  "limitations": [
+    "Mars cases validate a local idealized unpowered flyby, not an Earth-to-Mars transfer.",
+    "No real Sun/Earth/Mars ephemeris, navigation covariance, launch window, spacecraft resource or communications validation.",
+    "Mars asymptotic Sun-relative comparison uses an educational prescribed planet velocity in the game, not GMAT ephemerides."
+  ],
+  "cases": [
+    {
+      "id": "earth-reference",
+      "body": "Earth",
+      "duration": 86400,
+      "plan": {
+        "altitudeKm": 600,
+        "inclinationDeg": 51.6,
+        "burnTime": 1200,
+        "progradeMps": 0,
+        "radialMps": 0,
+        "normalMps": 0,
+        "periapsisAltitudeKm": 1000,
+        "bPlaneAngleDeg": 0,
+        "operations": []
+      },
+      "origin": "Earth",
+      "frame": "EarthMJ2000Eq",
+      "mu": 398600.4418,
+      "initialState": {
+        "positionKm": [
+          6978.137,
+          0,
+          0
+        ],
+        "velocityKmS": [
+          0,
+          4.694551196680529,
+          5.923049513710372
+        ]
+      },
+      "sampleCount": 1441,
+      "maxPositionErrorKm": 0.00004612243581454802,
+      "maxVelocityErrorKmS": 4.995419278111936e-8,
+      "pass": true,
+      "runMs": 1787,
+      "scriptSha256": "f853c93d46636d1cd4041b00ca615df331578ae1333589ea2c9c9ea69d4bb33b",
+      "csvSha256": "6a2e35b55368d0ee3b3349b5ea3ed935318fc315efaa8501cf9c7e4aa5e33573"
+    },
+    {
+      "id": "earth-low-inclination",
+      "body": "Earth",
+      "duration": 86400,
+      "plan": {
+        "altitudeKm": 400,
+        "inclinationDeg": 28.5,
+        "burnTime": 1200,
+        "progradeMps": 0,
+        "radialMps": 0,
+        "normalMps": 0,
+        "periapsisAltitudeKm": 1000,
+        "bPlaneAngleDeg": 0,
+        "operations": []
+      },
+      "origin": "Earth",
+      "frame": "EarthMJ2000Eq",
+      "mu": 398600.4418,
+      "initialState": {
+        "positionKm": [
+          6778.137,
+          0,
+          0
+        ],
+        "velocityKmS": [
+          0,
+          6.7392601539915375,
+          3.6591197119559156
+        ]
+      },
+      "sampleCount": 1441,
+      "maxPositionErrorKm": 0.0000805513513722771,
+      "maxVelocityErrorKmS": 9.113311899070663e-8,
+      "pass": true,
+      "runMs": 1627,
+      "scriptSha256": "d0934407de9e3fa1f69aeb9bc17b05cd5effefdfa2e39b0b8e758228d1c79177",
+      "csvSha256": "03bbe9c0d1a5907b1880eb57f01b7d5bb7a7a0eeea322be5b5c30c2990f1edc8"
+    },
+    {
+      "id": "earth-polar",
+      "body": "Earth",
+      "duration": 86400,
+      "plan": {
+        "altitudeKm": 900,
+        "inclinationDeg": 97.6,
+        "burnTime": 1200,
+        "progradeMps": 0,
+        "radialMps": 0,
+        "normalMps": 0,
+        "periapsisAltitudeKm": 1000,
+        "bPlaneAngleDeg": 0,
+        "operations": []
+      },
+      "origin": "Earth",
+      "frame": "EarthMJ2000Eq",
+      "mu": 398600.4418,
+      "initialState": {
+        "positionKm": [
+          7278.137,
+          0,
+          0
+        ],
+        "velocityKmS": [
+          0,
+          -0.9787582591546199,
+          7.3354519561398615
+        ]
+      },
+      "sampleCount": 1441,
+      "maxPositionErrorKm": 0.00017324344258688376,
+      "maxVelocityErrorKmS": 1.7615525184593743e-7,
+      "pass": true,
+      "runMs": 1668,
+      "scriptSha256": "5e9a74d40106edcea9b29e640be012947fe1b75e7ca8676660820e2c3d030133",
+      "csvSha256": "1751f3ca43c6a1031420f516b60a7a5dde3c11fd7445fd52e6bace2c38dd2c1e"
+    },
+    {
+      "id": "earth-three-axis-burn",
+      "body": "Earth",
+      "duration": 86400,
+      "plan": {
+        "altitudeKm": 600,
+        "inclinationDeg": 51.6,
+        "burnTime": 1200,
+        "progradeMps": 80,
+        "radialMps": 20,
+        "normalMps": 15,
+        "periapsisAltitudeKm": 1000,
+        "bPlaneAngleDeg": 0,
+        "operations": []
+      },
+      "origin": "Earth",
+      "frame": "EarthMJ2000Eq",
+      "mu": 398600.4418,
+      "initialState": {
+        "positionKm": [
+          6978.137,
+          0,
+          0
+        ],
+        "velocityKmS": [
+          0,
+          4.694551196680529,
+          5.923049513710372
+        ]
+      },
+      "sampleCount": 1441,
+      "maxPositionErrorKm": 0.00019822517095236328,
+      "maxVelocityErrorKmS": 2.093666925177053e-7,
+      "pass": true,
+      "runMs": 1616,
+      "scriptSha256": "ba09e2311c54ea4751656c589ecd1b462ca200e9a9afee7a5b40b61a495d2b35",
+      "csvSha256": "392b6f9ccfd4324ca5517fe9571843894ff1a8db15ccb3b140a047b234083803"
+    },
+    {
+      "id": "mars-reference",
+      "body": "Mars",
+      "duration": 18000,
+      "plan": {
+        "altitudeKm": 600,
+        "inclinationDeg": 51.6,
+        "burnTime": 1200,
+        "progradeMps": 0,
+        "radialMps": 0,
+        "normalMps": 0,
+        "periapsisAltitudeKm": 1000,
+        "bPlaneAngleDeg": 0,
+        "operations": []
+      },
+      "origin": "Mars",
+      "frame": "MarsMJ2000Eq",
+      "mu": 42828.375214,
+      "initialState": {
+        "positionKm": [
+          -40094.53317118295,
+          6336.005399534381,
+          0
+        ],
+        "velocityKmS": [
+          4.255558876593338,
+          -0.02006804422991729,
+          0
+        ]
+      },
+      "sampleCount": 301,
+      "maxPositionErrorKm": 0.000029419464591073004,
+      "maxVelocityErrorKmS": 1.8044978167194422e-9,
+      "pass": true,
+      "runMs": 627,
+      "scriptSha256": "4ab0aa8550dafc7242d993fddcce1e5436ed036d616ed2004558c5232a755dea",
+      "csvSha256": "9f3a196ceb6ef08dd0e02482a29970c75c24521778ef9c1a9d5b38c96c069700"
+    },
+    {
+      "id": "mars-low-tilted",
+      "body": "Mars",
+      "duration": 18000,
+      "plan": {
+        "altitudeKm": 600,
+        "inclinationDeg": 51.6,
+        "burnTime": 1200,
+        "progradeMps": 0,
+        "radialMps": 0,
+        "normalMps": 0,
+        "periapsisAltitudeKm": 500,
+        "bPlaneAngleDeg": 45,
+        "operations": []
+      },
+      "origin": "Mars",
+      "frame": "MarsMJ2000Eq",
+      "mu": 42828.375214,
+      "initialState": {
+        "positionKm": [
+          -40094.53317118295,
+          6336.005399534391,
+          -9.094947017729282e-13
+        ],
+        "velocityKmS": [
+          4.227946913348838,
+          -0.24515374461727404,
+          -0.4177901601949669
+        ]
+      },
+      "sampleCount": 301,
+      "maxPositionErrorKm": 0.000023947982449867678,
+      "maxVelocityErrorKmS": 9.087110605201472e-9,
+      "pass": true,
+      "runMs": 663,
+      "scriptSha256": "def938b8100f98ee654c49bcd9905291c766fdb2604fb352d79efc4f219cfe47",
+      "csvSha256": "8c1acf6e128e238ce75786c6109e24968fe072f49be228cf2fe7da49286b684e"
+    },
+    {
+      "id": "mars-high-polar",
+      "body": "Mars",
+      "duration": 18000,
+      "plan": {
+        "altitudeKm": 600,
+        "inclinationDeg": 51.6,
+        "burnTime": 1200,
+        "progradeMps": 0,
+        "radialMps": 0,
+        "normalMps": 0,
+        "periapsisAltitudeKm": 2500,
+        "bPlaneAngleDeg": 90,
+        "operations": []
+      },
+      "origin": "Mars",
+      "frame": "MarsMJ2000Eq",
+      "mu": 42828.375214,
+      "initialState": {
+        "positionKm": [
+          -40094.533171182964,
+          6336.005399534391,
+          9.094947017729282e-13
+        ],
+        "velocityKmS": [
+          4.128150866999174,
+          -0.6523579180165733,
+          -0.8018626095825946
+        ]
+      },
+      "sampleCount": 301,
+      "maxPositionErrorKm": 0.0000256450331883197,
+      "maxVelocityErrorKmS": 3.5001172606616344e-9,
+      "pass": true,
+      "runMs": 688,
+      "scriptSha256": "7ddc06a4e175482738eacde5019e1a4a3067cae3811e315d69a97d9d64be514d",
+      "csvSha256": "a6b2297d425e5150cf3dd57d27f5619d15ba9b7cd7ca5434b5a17b0f9417b711"
+    },
+    {
+      "id": "mars-distant-tilted",
+      "body": "Mars",
+      "duration": 18000,
+      "plan": {
+        "altitudeKm": 600,
+        "inclinationDeg": 51.6,
+        "burnTime": 1200,
+        "progradeMps": 0,
+        "radialMps": 0,
+        "normalMps": 0,
+        "periapsisAltitudeKm": 6000,
+        "bPlaneAngleDeg": -45,
+        "operations": []
+      },
+      "origin": "Mars",
+      "frame": "MarsMJ2000Eq",
+      "mu": 42828.375214,
+      "initialState": {
+        "positionKm": [
+          -40094.53317118293,
+          6336.005399534388,
+          3.410605131648481e-12
+        ],
+        "velocityKmS": [
+          4.1724046034247735,
+          0.17064230713957274,
+          0.8198201674058855
+        ]
+      },
+      "sampleCount": 301,
+      "maxPositionErrorKm": 0.00006628491572052423,
+      "maxVelocityErrorKmS": 2.5921059575580762e-9,
+      "pass": true,
+      "runMs": 648,
+      "scriptSha256": "5f59564e21ff2dd56883669031e797b1630bf53902d73ae2310d2525e465a032",
+      "csvSha256": "44c3aaccc970a97e29ac96a706da190a5ee283674394f737b931fc5b2aa7c010"
+    }
+  ],
+  "pass": true
+}

@@ -1,0 +1,1877 @@
+{
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'Failed to load resource: the server responded with a status of 404 (Not Found)'\n+ ]\n- []\n",
+  "errors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "warnings": [
+    "THREE.WebGLProgram: Program Info Log: (221,91-147): warning X4122: sum of 0.996094 and -2.98545e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(207,10-73): warning X4008: floating point division by zero\n(207,10-73): warning X4008: floating point division by zero\n(207,10-73): warning X4008: floating point division by zero"
+  ],
+  "shots": [
+    {
+      "filename": "1280-before-whole.png",
+      "camera": {
+        "position": [
+          5.533258078904221,
+          5.547197354456168,
+          6.812318803352272
+        ],
+        "target": [
+          0.10999999999999997,
+          1.4,
+          0.1130000000000001
+        ],
+        "quaternion": [
+          -0.20960547755263964,
+          0.32537814485344296,
+          0.07420665400076441,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 9.56513703593197,
+          "distance": 9.56513703593197,
+          "minDistance": 1.5626020515793522,
+          "maxDistance": 66.9559592515238,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -1.6552987834527035,
+          "right": 1.6552987834527035,
+          "top": 1.6552987834527035,
+          "bottom": -1.6552987834527035,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.005296956107048651
+        }
+      },
+      "render": {
+        "calls": 149,
+        "triangles": 203764,
+        "memory": {
+          "geometries": 82,
+          "textures": 4
+        },
+        "programs": 4,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": null,
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "filename": "1280-before-bay.png",
+      "camera": {
+        "position": [
+          5.533258078904221,
+          5.547197354456168,
+          6.812318803352272
+        ],
+        "target": [
+          0.10999999999999997,
+          1.4,
+          0.1130000000000001
+        ],
+        "quaternion": [
+          -0.20960547755263964,
+          0.32537814485344296,
+          0.07420665400076441,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 9.56513703593197,
+          "distance": 9.56513703593197,
+          "minDistance": 1.5626020515793522,
+          "maxDistance": 66.9559592515238,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -1.6552987834527035,
+          "right": 1.6552987834527035,
+          "top": 1.6552987834527035,
+          "bottom": -1.6552987834527035,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.005296956107048651
+        }
+      },
+      "render": {
+        "calls": 150,
+        "triangles": 203764,
+        "memory": {
+          "geometries": 83,
+          "textures": 4
+        },
+        "programs": 5,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": "battery",
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "filename": "1280-before-battery.png",
+      "camera": {
+        "position": [
+          0.04568960738797834,
+          1.9043508762378658,
+          0.7270283385380908
+        ],
+        "target": [
+          -0.3,
+          1.6400000000000001,
+          0.3
+        ],
+        "quaternion": [
+          -0.20960547755263964,
+          0.32537814485344296,
+          0.07420665400076441,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 0.6097014780516644,
+          "distance": 0.6097014780516644,
+          "minDistance": 0.09960346379519137,
+          "maxDistance": 4.267910346361651,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -0.10551214385083832,
+          "right": 0.10551214385083832,
+          "top": 0.10551214385083832,
+          "bottom": -0.10551214385083832,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00033763886032268264
+        }
+      },
+      "render": {
+        "calls": 77,
+        "triangles": 178256,
+        "memory": {
+          "geometries": 83,
+          "textures": 4
+        },
+        "programs": 5,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": "battery",
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "filename": "1280-before-radio.png",
+      "camera": {
+        "position": [
+          0.8509766275521256,
+          2.081335068128096,
+          0.9806181869761552
+        ],
+        "target": [
+          0.3,
+          1.66,
+          0.3
+        ],
+        "quaternion": [
+          -0.20960547755263978,
+          0.32537814485344285,
+          0.07420665400076444,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 0.9717713723844363,
+          "distance": 0.9717713723844358,
+          "minDistance": 0.1587527637554698,
+          "maxDistance": 6.802399606691054,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -0.1681703005884214,
+          "right": 0.1681703005884214,
+          "top": 0.1681703005884214,
+          "bottom": -0.1681703005884214,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.0005381449618829485
+        }
+      },
+      "render": {
+        "calls": 107,
+        "triangles": 189392,
+        "memory": {
+          "geometries": 83,
+          "textures": 4
+        },
+        "programs": 5,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": "radio",
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "filename": "1280-before-adcs.png",
+      "camera": {
+        "position": [
+          0.41977614452796286,
+          1.9785052869919717,
+          0.2185470020639541
+        ],
+        "target": [
+          0,
+          1.6575,
+          -0.3
+        ],
+        "quaternion": [
+          -0.20960547755263978,
+          0.32537814485344285,
+          0.07420665400076444,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 0.7403697718985249,
+          "distance": 0.7403697718985248,
+          "minDistance": 0.12095,
+          "maxDistance": 5.1825884032896745,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -0.12812500000000002,
+          "right": 0.12812500000000002,
+          "top": 0.12812500000000002,
+          "bottom": -0.12812500000000002,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00041000000000000005
+        }
+      },
+      "render": {
+        "calls": 52,
+        "triangles": 162608,
+        "memory": {
+          "geometries": 83,
+          "textures": 4
+        },
+        "programs": 5,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": "adcs",
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "filename": "1280-before-recorder.png",
+      "camera": {
+        "position": [
+          0.06515516951941908,
+          1.914236306103085,
+          0.2510740329357529
+        ],
+        "target": [
+          -0.3,
+          1.6349999999999998,
+          -0.20000000000000004
+        ],
+        "quaternion": [
+          -0.20960547755263964,
+          0.32537814485344285,
+          0.0742066540007644,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 0.644033380859856,
+          "distance": 0.644033380859856,
+          "minDistance": 0.10521207155074935,
+          "maxDistance": 4.508233666018992,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -0.11145346562579381,
+          "right": 0.11145346562579381,
+          "top": 0.11145346562579381,
+          "bottom": -0.11145346562579381,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.0003566510900025402
+        }
+      },
+      "render": {
+        "calls": 51,
+        "triangles": 170348,
+        "memory": {
+          "geometries": 83,
+          "textures": 4
+        },
+        "programs": 5,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": "recorder",
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "filename": "1280-before-controller.png",
+      "camera": {
+        "position": [
+          0.6541745436017578,
+          1.9058393568719323,
+          0.23750973033158304
+        ],
+        "target": [
+          0.3,
+          1.6349999999999998,
+          -0.20000000000000004
+        ],
+        "quaternion": [
+          -0.20960547755263975,
+          0.3253781448534429,
+          0.07420665400076444,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 0.5789770905111173,
+          "distance": 0.6246665740225981,
+          "minDistance": 0.09458419529710026,
+          "maxDistance": 4.052839633577822,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -0.10019512213675875,
+          "right": 0.10019512213675875,
+          "top": 0.10019512213675875,
+          "bottom": -0.10019512213675875,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00032062439083762803
+        }
+      },
+      "render": {
+        "calls": 56,
+        "triangles": 163532,
+        "memory": {
+          "geometries": 83,
+          "textures": 4
+        },
+        "programs": 5,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": "controller",
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "variant": "before",
+      "nativeAudit": {
+        "errors": [],
+        "contexts": [
+          {
+            "id": 1,
+            "canvasId": "",
+            "generation": 0,
+            "created": 521,
+            "deletes": 511,
+            "restores": 0
+          }
+        ],
+        "contextLostNotifications": 0
+      }
+    },
+    {
+      "filename": "1280-after-whole.png",
+      "camera": {
+        "position": [
+          5.533258078904221,
+          5.547197354456168,
+          6.812318803352272
+        ],
+        "target": [
+          0.10999999999999997,
+          1.4,
+          0.1130000000000001
+        ],
+        "quaternion": [
+          -0.20960547755263964,
+          0.32537814485344296,
+          0.07420665400076441,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 9.56513703593197,
+          "distance": 9.56513703593197,
+          "minDistance": 1.5626020515793522,
+          "maxDistance": 66.9559592515238,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -1.6552987834527035,
+          "right": 1.6552987834527035,
+          "top": 1.6552987834527035,
+          "bottom": -1.6552987834527035,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.005296956107048651
+        }
+      },
+      "render": {
+        "calls": 139,
+        "triangles": 204468,
+        "memory": {
+          "geometries": 77,
+          "textures": 4
+        },
+        "programs": 4,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": null,
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "filename": "1280-after-bay.png",
+      "camera": {
+        "position": [
+          5.533258078904221,
+          5.547197354456168,
+          6.812318803352272
+        ],
+        "target": [
+          0.10999999999999997,
+          1.4,
+          0.1130000000000001
+        ],
+        "quaternion": [
+          -0.20960547755263964,
+          0.32537814485344296,
+          0.07420665400076441,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 9.56513703593197,
+          "distance": 9.56513703593197,
+          "minDistance": 1.5626020515793522,
+          "maxDistance": 66.9559592515238,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -1.6552987834527035,
+          "right": 1.6552987834527035,
+          "top": 1.6552987834527035,
+          "bottom": -1.6552987834527035,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.005296956107048651
+        }
+      },
+      "render": {
+        "calls": 140,
+        "triangles": 204468,
+        "memory": {
+          "geometries": 78,
+          "textures": 4
+        },
+        "programs": 5,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": "battery",
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "filename": "1280-after-battery.png",
+      "camera": {
+        "position": [
+          0.04568960738797834,
+          1.9043508762378658,
+          0.7270283385380908
+        ],
+        "target": [
+          -0.3,
+          1.6400000000000001,
+          0.3
+        ],
+        "quaternion": [
+          -0.20960547755263964,
+          0.32537814485344296,
+          0.07420665400076441,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 0.6097014780516644,
+          "distance": 0.6097014780516644,
+          "minDistance": 0.09960346379519137,
+          "maxDistance": 4.267910346361651,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -0.10551214385083832,
+          "right": 0.10551214385083832,
+          "top": 0.10551214385083832,
+          "bottom": -0.10551214385083832,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00033763886032268264
+        }
+      },
+      "render": {
+        "calls": 74,
+        "triangles": 178432,
+        "memory": {
+          "geometries": 78,
+          "textures": 4
+        },
+        "programs": 5,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": "battery",
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "filename": "1280-after-radio.png",
+      "camera": {
+        "position": [
+          0.8509766275521256,
+          2.081335068128096,
+          0.9806181869761552
+        ],
+        "target": [
+          0.3,
+          1.66,
+          0.3
+        ],
+        "quaternion": [
+          -0.20960547755263978,
+          0.32537814485344285,
+          0.07420665400076444,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 0.9717713723844363,
+          "distance": 0.9717713723844358,
+          "minDistance": 0.1587527637554698,
+          "maxDistance": 6.802399606691054,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -0.1681703005884214,
+          "right": 0.1681703005884214,
+          "top": 0.1681703005884214,
+          "bottom": -0.1681703005884214,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.0005381449618829485
+        }
+      },
+      "render": {
+        "calls": 101,
+        "triangles": 189720,
+        "memory": {
+          "geometries": 78,
+          "textures": 4
+        },
+        "programs": 5,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": "radio",
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "filename": "1280-after-adcs.png",
+      "camera": {
+        "position": [
+          0.41977614452796286,
+          1.9785052869919717,
+          0.2185470020639541
+        ],
+        "target": [
+          0,
+          1.6575,
+          -0.3
+        ],
+        "quaternion": [
+          -0.20960547755263978,
+          0.32537814485344285,
+          0.07420665400076444,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 0.7403697718985249,
+          "distance": 0.7403697718985248,
+          "minDistance": 0.12095,
+          "maxDistance": 5.1825884032896745,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -0.12812500000000002,
+          "right": 0.12812500000000002,
+          "top": 0.12812500000000002,
+          "bottom": -0.12812500000000002,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00041000000000000005
+        }
+      },
+      "render": {
+        "calls": 48,
+        "triangles": 163520,
+        "memory": {
+          "geometries": 78,
+          "textures": 4
+        },
+        "programs": 5,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": "adcs",
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "filename": "1280-after-recorder.png",
+      "camera": {
+        "position": [
+          0.06515516951941908,
+          1.914236306103085,
+          0.2510740329357529
+        ],
+        "target": [
+          -0.3,
+          1.6349999999999998,
+          -0.20000000000000004
+        ],
+        "quaternion": [
+          -0.20960547755263964,
+          0.32537814485344285,
+          0.0742066540007644,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 0.644033380859856,
+          "distance": 0.644033380859856,
+          "minDistance": 0.10521207155074935,
+          "maxDistance": 4.508233666018992,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -0.11145346562579381,
+          "right": 0.11145346562579381,
+          "top": 0.11145346562579381,
+          "bottom": -0.11145346562579381,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.0003566510900025402
+        }
+      },
+      "render": {
+        "calls": 48,
+        "triangles": 171800,
+        "memory": {
+          "geometries": 78,
+          "textures": 4
+        },
+        "programs": 5,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": "recorder",
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "filename": "1280-after-controller.png",
+      "camera": {
+        "position": [
+          0.6541745436017578,
+          1.9058393568719323,
+          0.23750973033158304
+        ],
+        "target": [
+          0.3,
+          1.6349999999999998,
+          -0.20000000000000004
+        ],
+        "quaternion": [
+          -0.20960547755263975,
+          0.3253781448534429,
+          0.07420665400076444,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 0.5789770905111173,
+          "distance": 0.6246665740225981,
+          "minDistance": 0.09458419529710026,
+          "maxDistance": 4.052839633577822,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -0.10019512213675875,
+          "right": 0.10019512213675875,
+          "top": 0.10019512213675875,
+          "bottom": -0.10019512213675875,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00032062439083762803
+        }
+      },
+      "render": {
+        "calls": 54,
+        "triangles": 164516,
+        "memory": {
+          "geometries": 78,
+          "textures": 4
+        },
+        "programs": 5,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": "controller",
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "variant": "after",
+      "nativeAudit": {
+        "errors": [],
+        "contexts": [
+          {
+            "id": 1,
+            "canvasId": "",
+            "generation": 3,
+            "created": 1975,
+            "deletes": 1944,
+            "restores": 3
+          }
+        ],
+        "contextLostNotifications": 3
+      }
+    },
+    {
+      "filename": "1920-before-whole.png",
+      "camera": {
+        "position": [
+          4.123422991227695,
+          4.469088169762355,
+          5.070757812693035
+        ],
+        "target": [
+          0.10999999999999997,
+          1.4,
+          0.1130000000000001
+        ],
+        "quaternion": [
+          -0.20960547755263967,
+          0.32537814485344296,
+          0.07420665400076443,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 7.078575338979524,
+          "distance": 7.078575338979526,
+          "minDistance": 1.5626020515793522,
+          "maxDistance": 49.55002737285667,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -1.6552987834527035,
+          "right": 1.6552987834527035,
+          "top": 1.6552987834527035,
+          "bottom": -1.6552987834527035,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.005296956107048651
+        }
+      },
+      "render": {
+        "calls": 149,
+        "triangles": 203764,
+        "memory": {
+          "geometries": 82,
+          "textures": 4
+        },
+        "programs": 4,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": null,
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "filename": "1920-before-bay.png",
+      "camera": {
+        "position": [
+          4.123422991227695,
+          4.469088169762353,
+          5.070757812693035
+        ],
+        "target": [
+          0.10999999999999997,
+          1.4,
+          0.1130000000000001
+        ],
+        "quaternion": [
+          -0.20960547755263959,
+          0.32537814485344296,
+          0.07420665400076439,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 7.078575338979524,
+          "distance": 7.078575338979526,
+          "minDistance": 1.5626020515793522,
+          "maxDistance": 49.55002737285667,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -1.6552987834527035,
+          "right": 1.6552987834527035,
+          "top": 1.6552987834527035,
+          "bottom": -1.6552987834527035,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.005296956107048651
+        }
+      },
+      "render": {
+        "calls": 150,
+        "triangles": 203764,
+        "memory": {
+          "geometries": 83,
+          "textures": 4
+        },
+        "programs": 5,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": "battery",
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "size": {
+        "width": 1920,
+        "height": 1080
+      },
+      "variant": "before",
+      "nativeAudit": {
+        "errors": [],
+        "contexts": [
+          {
+            "id": 1,
+            "canvasId": "",
+            "generation": 0,
+            "created": 521,
+            "deletes": 511,
+            "restores": 0
+          }
+        ],
+        "contextLostNotifications": 0
+      }
+    },
+    {
+      "filename": "1920-after-whole.png",
+      "camera": {
+        "position": [
+          4.123422991227695,
+          4.469088169762355,
+          5.070757812693035
+        ],
+        "target": [
+          0.10999999999999997,
+          1.4,
+          0.1130000000000001
+        ],
+        "quaternion": [
+          -0.20960547755263967,
+          0.32537814485344296,
+          0.07420665400076443,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 7.078575338979524,
+          "distance": 7.078575338979526,
+          "minDistance": 1.5626020515793522,
+          "maxDistance": 49.55002737285667,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -1.6552987834527035,
+          "right": 1.6552987834527035,
+          "top": 1.6552987834527035,
+          "bottom": -1.6552987834527035,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.005296956107048651
+        }
+      },
+      "render": {
+        "calls": 139,
+        "triangles": 204468,
+        "memory": {
+          "geometries": 77,
+          "textures": 4
+        },
+        "programs": 4,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": null,
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "filename": "1920-after-bay.png",
+      "camera": {
+        "position": [
+          4.123422991227695,
+          4.469088169762353,
+          5.070757812693035
+        ],
+        "target": [
+          0.10999999999999997,
+          1.4,
+          0.1130000000000001
+        ],
+        "quaternion": [
+          -0.20960547755263959,
+          0.32537814485344296,
+          0.07420665400076439,
+          0.9190690828951177
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "unchanged-default-art-study|workshop",
+          "displayScale": 1,
+          "fitDistance": 7.078575338979524,
+          "distance": 7.078575338979526,
+          "minDistance": 1.5626020515793522,
+          "maxDistance": 49.55002737285667,
+          "conservativeSurfaceClearance": null,
+          "displayEnvelopeRadius": 1.4538418070753092,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 205
+          }
+        },
+        "shadow": {
+          "left": -1.6552987834527035,
+          "right": 1.6552987834527035,
+          "top": 1.6552987834527035,
+          "bottom": -1.6552987834527035,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.005296956107048651
+        }
+      },
+      "render": {
+        "calls": 140,
+        "triangles": 204468,
+        "memory": {
+          "geometries": 78,
+          "textures": 4
+        },
+        "programs": 5,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 4096,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 0.75,
+          "craftSunIntensity": 3
+        }
+      },
+      "scene": {
+        "mode": "workshop",
+        "sourceId": "unchanged-default-art-study",
+        "timeSeconds": null,
+        "frame": null,
+        "epochTai": null,
+        "geometryRevision": 0,
+        "selectedPartId": "battery",
+        "selectedJointId": null,
+        "preview": {
+          "acceptedRequestId": null,
+          "acceptedSourceId": null,
+          "pending": null,
+          "kind": null,
+          "visible": false
+        },
+        "placementActive": false,
+        "contextLost": false,
+        "visible": true,
+        "workshopEditable": false,
+        "display": {
+          "metresToWorld": 1,
+          "kilometresToWorld": 0.0004703567828662194,
+          "craftExaggerated": false,
+          "physicalStructuralOriginKm": null
+        }
+      }
+    },
+    {
+      "size": {
+        "width": 1920,
+        "height": 1080
+      },
+      "variant": "after",
+      "nativeAudit": {
+        "errors": [],
+        "contexts": [
+          {
+            "id": 1,
+            "canvasId": "",
+            "generation": 0,
+            "created": 496,
+            "deletes": 486,
+            "restores": 0
+          }
+        ],
+        "contextLostNotifications": 0
+      }
+    }
+  ]
+}

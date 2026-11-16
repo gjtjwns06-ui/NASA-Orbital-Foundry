@@ -1,0 +1,130 @@
+import {expect,test,type Page} from '@playwright/test';
+import {mkdirSync,writeFileSync} from 'node:fs';
+import {resolve,join} from 'node:path';
+import {aimRegion,expose} from './voyage-helpers';
+
+const out=resolve('tests/browser/artifacts/solar-assist-navigation');mkdirSync(out,{recursive:true});
+test.setTimeout(240000);test.use({viewport:{width:1440,height:900}});
+const pageErrors=new WeakMap<Page,string[]>();
+test.beforeEach(async({page})=>{const errors:string[]=[];pageErrors.set(page,errors);page.on('pageerror',error=>errors.push(error.message));});
+test.afterEach(async({page},info)=>{writeFileSync(join(out,info.title.includes('physically matched')?'navigation-ui-errors.json':'assist-voyage-ui-errors.json'),JSON.stringify({test:info.title,status:info.status,errors:pageErrors.get(page)??[]},null,2));});
+const button=(page:Page,action:string)=>page.locator(`[data-solar-action="${action}"]`).first();
+// Read-only instrumentation. All route/campaign changes use actual native UI.
+const state=(page:Page)=>page.evaluate(()=>(window as any).__game.solar().getState());
+
+test('a physically matched assist can be compared, selected, edited, undone and retained through the workshop',async({page})=>{
+ const errors=pageErrors.get(page)!;
+ await page.goto('/?qa');await page.locator('[data-action="solar-campaign"]').click();
+ await expect(page.locator('.solar-experience')).toBeVisible({timeout:45000});
+ for(let i=0;i<3;i++)await button(page,'story').click();
+ await page.locator('.solar-destinations [data-solar-body="saturn"]').click();
+ const original=await state(page);
+ await button(page,'assist').click();
+ await expect(page.locator('.solar-assist-comparison')).toBeVisible({timeout:20000});
+ await expect(page.locator('.solar-assist-option')).toHaveCount(2);
+ const whileChoosing=await state(page);
+ expect(whileChoosing.assist).toBeNull();
+ expect(whileChoosing.campaign.departureJd).toBe(original.campaign.departureJd);
+ expect(whileChoosing.campaign.flightDays).toBe(original.campaign.flightDays);
+ await page.screenshot({path:join(out,'fuel-time-comparison.png')});
+ await button(page,'assist-apply').click();
+ const selected=await state(page);
+ expect(selected.assist?.request.assist).toBe('jupiter');
+ expect(selected.assist?.request.target).toBe('saturn');
+ expect(selected.assist.unpowered).toBe(true);
+ expect(Math.abs(selected.assist.speedMismatchKmS)).toBeLessThan(1e-5);
+ await expect(page.locator('.solar-route-summary')).toContainText('목성');
+ const handle=page.locator('[data-route-drag="arrival"]');await handle.focus();await page.keyboard.press('ArrowLeft');
+ expect((await state(page)).assist).toBeNull();
+ await button(page,'undo').click();
+ expect((await state(page)).assist.request.encounterJdTdb).toBe(selected.assist.request.encounterJdTdb);
+ // A cancelled real pointer drag must restore the complete physically matched plan.
+ const box=await handle.boundingBox();expect(box).not.toBeNull();
+ await page.mouse.move(box!.x+box!.width/2,box!.y+20);await page.mouse.down();
+ await page.mouse.move(box!.x+box!.width/2+55,box!.y+20,{steps:12});
+ expect((await state(page)).assist).toBeNull();await page.keyboard.press('Escape');await page.mouse.up();
+ expect((await state(page)).assist.request.encounterJdTdb).toBe(selected.assist.request.encounterJdTdb);
+ await button(page,'build').click();await expect(page.locator('.solar-experience')).toHaveCount(0);
+ await page.locator('.assembly-flightbar [data-action="solar-campaign"]').click();
+ await expect(page.locator('.solar-objective h1')).toHaveText('토성');
+ expect((await state(page)).assist.request.encounterJdTdb).toBe(selected.assist.request.encounterJdTdb);
+ await page.screenshot({path:join(out,'selected-assist-route.png')});
+ await button(page,'direct').click();const direct=await state(page);
+ expect(direct.assist).toBeNull();expect(direct.campaign.departureJd).toBe(original.campaign.departureJd);
+ expect(direct.campaign.flightDays).toBe(original.campaign.flightDays);
+ await button(page,'undo').click();expect((await state(page)).assist.request.assist).toBe('jupiter');
+ writeFileSync(join(out,'navigation-result.json'),JSON.stringify({browser:page.context().browser()?.version(),errors,assist:selected.assist.request,totalPropulsiveDeltaVMps:selected.assist.totalPropulsiveDeltaVMps,checks:['comparison preserves current map','physical unpowered match','select actual two-leg route','keyboard date edit switches to direct','Undo restores assist','Escape cancels actual pointer drag','workshop return preserves and revalidates assist','direct restore retains earlier route']},null,2));
+ expect(errors).toEqual([]);
+});
+
+test('the built probe flies through Jupiter, returns actual two-band Saturn observations and can replan',async({page})=>{
+ const errors=pageErrors.get(page)!;
+ const voyage=(action:string)=>page.locator(`[data-voyage="${action}"]`).first();
+ await page.goto('/?qa');await page.locator('[data-action="solar-campaign"]').click();
+ await expect(page.locator('.solar-experience')).toBeVisible({timeout:45000});
+ for(let i=0;i<3;i++)await button(page,'story').click();
+ await page.locator('.solar-destinations [data-solar-body="saturn"]').click();
+ await button(page,'build').click();await expect(page.locator('.solar-experience')).toHaveCount(0);
+ await page.waitForFunction(()=>{const g=(window as any).__game;return g&&!g.scene.tween&&!g.getState().pending;},null,{timeout:30000});
+ await page.locator('[data-part="spectrometer"]').focus();await page.keyboard.press('Enter');
+ await expect(page.locator('.keyboard-placement')).toBeVisible();
+ await page.locator('[data-kb-field="face"]').selectOption('nx');
+ await expect(page.locator('[data-kb-command="confirm"]')).toBeEnabled();await page.locator('[data-kb-command="confirm"]').click();
+ await page.locator('.assembly-flightbar [data-action="solar-campaign"]').click();
+ await expect(page.locator('.solar-objective h1')).toHaveText('토성');
+ await button(page,'assist').click();await expect(page.locator('.solar-assist-comparison')).toBeVisible({timeout:20000});
+ await button(page,'assist-apply').click();await expect(button(page,'launch')).toBeEnabled();
+ const plan=await state(page);expect(plan.campaign.design.parts.some((part:any)=>part.kind==='spectrometer'&&part.face==='nx')).toBe(true);
+ await button(page,'launch').click();await expect(page.locator('.solar-voyage-ui')).toBeVisible();
+ await expect(page.locator('.solar-hud')).toBeHidden();
+ await voyage('view:map').click();await expect.poll(async()=>(await state(page)).voyage.view).toBe('map');
+ await voyage('warp').click();await expect.poll(async()=>(await state(page)).voyage.phase).toBe('swingby');
+ await voyage('view:chase').click();await page.screenshot({path:join(out,'actual-jupiter-flyby.png')});
+ await expect.poll(async()=>(await state(page)).voyage.phase,{timeout:25000}).toBe('flight');
+ await voyage('warp').click();await expect(page.locator('.voyage-event')).toBeVisible();
+ await voyage('safe-choice').click();await voyage('warp').click();
+ await expect.poll(async()=>(await state(page)).voyage.phase).toBe('encounter');
+ const arrival=await state(page);expect(arrival.voyage.operations.target).toBe('saturn');
+ expect(arrival.voyage.operations.sensor).toBe('spectrometer');expect(arrival.voyage.flybySeen).toBe(true);
+ expect(arrival.voyage.incidentResolved).toBe(true);expect(arrival.voyage.frame.altitudeKm).toBeGreaterThan(0);
+ await page.screenshot({path:join(out,'actual-saturn-arrival.png')});
+ await voyage('exit').click();await expect(page.locator('.solar-experience')).toHaveCount(0);
+ await page.locator('[data-action="solar-campaign"]').click();await expect(page.locator('.solar-voyage-ui')).toBeVisible();
+ const restored=await state(page);expect(restored.voyage.phase).toBe('encounter');expect(restored.voyage.paused).toBe(true);
+ expect(restored.assist.request.encounterJdTdb).toBe(plan.assist.request.encounterJdTdb);
+ await voyage('pause').click();await voyage('view:instrument').click();
+ await expect.poll(async()=>(await state(page)).voyage.operations.stabilized).toBe(true);
+ // Saturn's deflected local approach initially hides the boundary region behind
+ // the limb. Let the real approach bring it into line of sight before aiming.
+ await expect.poll(async()=>(await state(page)).voyage.featureScreens[2]?.visible,{timeout:80000}).toBe(true);
+ await aimRegion(page,2);await page.mouse.move(720,450);await page.mouse.wheel(0,-3000);await aimRegion(page,2);
+ await expect.poll(async()=>(await state(page)).voyage.pose.fovDeg).toBe(6);
+ writeFileSync(join(out,'saturn-after-aim.json'),JSON.stringify((await state(page)).voyage,null,2));
+ // Actual approach must put the selected region inside the spectrometer's
+ // footprint. Neither zoom nor test automation invents spatial resolution.
+ await expect.poll(async()=>{const s=(await state(page)).voyage,r=s.operations.encounter.features.find((feature:any)=>feature.id===s.exposure.featureId);return !!r&&s.exposure.footprintKm<=r.radiusKm*3;},{timeout:80000}).toBe(true);
+ await voyage('band:visible').click();await expose(page);
+ await expect.poll(async()=>(await state(page)).voyage.operations.records.filter((r:any)=>r.valid&&r.band==='visible').length).toBe(1);
+ await voyage('band:nir').click();await expose(page);
+ await expect.poll(async()=>(await state(page)).voyage.summary.ready).toBe(true);
+ const acquired=await state(page),pair=acquired.voyage.summary.spectralPair;
+ expect(pair).toHaveLength(2);expect(pair[0].featureId).toBe(pair[1].featureId);
+ expect(acquired.voyage.summary.spectralRatio).toBeGreaterThan(0);
+ expect(acquired.voyage.summary.spectralRatioUncertainty).toBeGreaterThan(0);
+ await page.screenshot({path:join(out,'saturn-two-band-observations.png')});
+ await voyage('send').click();await expect(page.locator('.solar-discovery-card')).toHaveCount(0);
+ await expect(page.locator('.solar-discovery-card')).toBeVisible({timeout:30000});
+ await expect(page.locator('.solar-spectral-receipt')).toContainText('NIR / VIS');
+ const discovery=(await state(page)).campaign.discoveries.find((d:any)=>d.body==='saturn');
+ expect(discovery.science.instrument).toBe('spectrometer');expect(discovery.science.samples).toHaveLength(2);
+ expect(discovery.science.samples.every((s:any)=>typeof s.reflectanceEstimate==='number'&&typeof s.reflectanceUncertainty==='number')).toBe(true);
+ await button(page,'journal').click();await expect(page.locator('.solar-drawer .solar-spectral-receipt')).toBeVisible();
+ await page.screenshot({path:join(out,'saturn-received-spectrum.png')});await button(page,'panel-close').click();
+ // Start another real voyage, then exercise the explicit abandonment/replan path.
+ await button(page,'map').click();await button(page,'launch').click();await voyage('pause').click();
+ await voyage('replan').click();await expect(page.locator('.solar-voyage-ui')).toHaveCount(0);
+ await expect(page.locator('.solar-objective h1')).toHaveText('토성');await expect(page.locator('.solar-hud')).toBeVisible();
+ expect(await page.evaluate(()=>localStorage.getItem('orbital-solar-active-journey-v2'))).toBeNull();
+ writeFileSync(join(out,'actual-assist-voyage.json'),JSON.stringify({browser:page.context().browser()?.version(),errors,request:plan.assist.request,arrivedBody:arrival.voyage.operations.target,flybySeen:arrival.voyage.flybySeen,instrument:arrival.voyage.operations.sensor,incidentResolved:arrival.voyage.incidentResolved,resumedPhase:restored.voyage.phase,spectralRatio:acquired.voyage.summary.spectralRatio,spectralRatioUncertainty:acquired.voyage.summary.spectralRatioUncertainty,discovery,replanned:true,claim:'Native controls only: mounted instrument, both exposures, matching feature, actual transmission and reception, save/resume and replan.'},(key,value)=>key==='image'?`JPEG ${value.length} characters`:value,2));
+ expect(errors).toEqual([]);
+});

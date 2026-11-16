@@ -1,0 +1,10 @@
+{
+  "status": "copied-exact-three-files-host-enabled",
+  "source": "orbital-foundry-next-deployment-camera",
+  "files": {
+    "src/render/deployment-scene.ts": "a30331d542c587b63eeec9ffb47578841d2a99c3771b0ffd1d7c988a0de6ed57",
+    "src/render/deployment-scene-types.ts": "407ecaa33d4a95a1d3ac9965daa7d23dc5f16ea9815bf4d0ffdda3d193e8351c",
+    "src/render/orbital-inspection-follow.ts": "0d2ff215102a4efb2c3464a3a5e16b9ad3a74dfad94982b07d04a1d10ec41055"
+  },
+  "scope": "Component evidence pending integrated production browser regression."
+}

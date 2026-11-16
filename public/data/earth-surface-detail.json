@@ -1,0 +1,82 @@
+{
+  "source": {
+    "url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/july/world.200407.3x21600x10800.jpg",
+    "page": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/",
+    "credit": "NASA Earth Observatory / Reto Stöckli",
+    "date": "July 2004 historical monthly composite",
+    "width": 21600,
+    "height": 10800,
+    "bytes": 21125326,
+    "sha256": "dea8b4dc8a4f93f5f8bce0c8c85a508a178e7901e9ed8e6bf86e6ce7ef6d61e2"
+  },
+  "rights": "NASA Images and Media Usage Guidelines; credit NASA Earth Observatory; no endorsement. Not labelled CC0.",
+  "rightsUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "sourceLimitationsUrl": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/",
+  "encoder": {
+    "name": "Khronos KTX-Software toktx",
+    "version": "4.4.2",
+    "distributionUrl": "https://github.com/KhronosGroup/KTX-Software/releases/download/v4.4.2/KTX-Software-4.4.2-Windows-x64.exe",
+    "sha256": "d6de473e340d1ad643146945c49b223e3ec7bc7a8a48b3f5f7698690f8eca5d5"
+  },
+  "processing": {
+    "pillow": "12.3.0",
+    "resize": "LANCZOS downsampling to exact 2:1 dimensions; opaque RGB; no sharpening, recolouring, generated noise, or added geographic content",
+    "encoding": "ETC1S KTX2 qlevel255 clevel1; sRGB; full generated mip chain; baked lower-left orientation for the accepted sphere UVs; 4 CPU threads"
+  },
+  "outputs": [
+    {
+      "file": "assets/textures/earth-bmng-july2004-8k.ktx2",
+      "width": 8192,
+      "height": 4096,
+      "bytes": 2682779,
+      "sha256": "754427060f3910d6cead0a443468013c69aa8585ebfd5e885187b2d8f9ae1fd8",
+      "resampledPngSha256": "7b5d39f1b03d59f320453701edc7bed9763f5b39cde6a247cbb758236dbc65e8",
+      "command": [
+        "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-earth-detail\\research\\encoder\\ktx-4.4.2\\bin\\toktx.exe",
+        "--t2",
+        "--encode",
+        "etc1s",
+        "--qlevel",
+        "255",
+        "--clevel",
+        "1",
+        "--threads",
+        "4",
+        "--genmipmap",
+        "--assign_oetf",
+        "srgb",
+        "--lower_left_maps_to_s0t0",
+        "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-earth-detail\\public\\assets\\textures\\earth-bmng-july2004-8k.ktx2",
+        "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-earth-detail\\research\\source\\earth-bmng-july2004-8k.png"
+      ],
+      "elapsedSeconds": 37.07525580000947
+    },
+    {
+      "file": "assets/textures/earth-bmng-july2004-16k.ktx2",
+      "width": 16384,
+      "height": 8192,
+      "bytes": 10062327,
+      "sha256": "dae2a97d896170340f0df8331475145b1ac9e567e4726e3403583a02d5995f92",
+      "resampledPngSha256": "4dd5bc5b047f2a9522e6172eac00b01ad9de65b41c429adcf775a43b284892b0",
+      "command": [
+        "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-earth-detail\\research\\encoder\\ktx-4.4.2\\bin\\toktx.exe",
+        "--t2",
+        "--encode",
+        "etc1s",
+        "--qlevel",
+        "255",
+        "--clevel",
+        "1",
+        "--threads",
+        "4",
+        "--genmipmap",
+        "--assign_oetf",
+        "srgb",
+        "--lower_left_maps_to_s0t0",
+        "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-earth-detail\\public\\assets\\textures\\earth-bmng-july2004-16k.ktx2",
+        "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-earth-detail\\research\\source\\earth-bmng-july2004-16k.png"
+      ],
+      "elapsedSeconds": 146.33461530000204
+    }
+  ]
+}

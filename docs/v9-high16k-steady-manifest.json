@@ -1,0 +1,30 @@
+{
+  "createdAt": "2026-11-15T09:59:56.514066+00:00",
+  "status": "STATIC_PREPARATION_ONLY_NO_SYNTAX_TEST_BUILD_BROWSER",
+  "files": [
+    {
+      "path": "tools/performance/v9-high16k-steady.mjs",
+      "bytes": 45217,
+      "sha256": "657d9ccc771db785b22360c5df30f0ced1377969edb429a4864dda4da462eb0f"
+    },
+    {
+      "path": "tools/performance/v9-high16k-steady-contract.json",
+      "bytes": 2029,
+      "sha256": "2f1b91b59e9400f2d0d3639b1dd29b698ade951dff7f7b1643885de9ed3e8576"
+    },
+    {
+      "path": "docs/v9-high16k-steady-contract.md",
+      "bytes": 4170,
+      "sha256": "ff6b42c070a150afaa1a6cbe19c6717e875d00ad90935dcbe7e784d581d9a1d6"
+    }
+  ],
+  "staticDelta": [
+    "New high-only artifact; previous harnesses and failed reports untouched.",
+    "Genuine native 1x prefix >=1 physical second to T5..10, <=15 wall seconds, 250ms light observation.",
+    "Uploaded actual-history baseline; strict zero measured native allocations/deletions and exact GPU resources.",
+    "Existing numerical/FK/mechanism/visual/input/error gates unchanged.",
+    "Startup/first-upload claim replaced explicitly, not forced to pass.",
+    "Bounded v8 control instructions bind main cwd/source/dist without changing port guard."
+  ],
+  "validationPending": "Root-owned syntax check and native run only after sole profiling/performance lease ends; port5191 must serve intended product for each run."
+}

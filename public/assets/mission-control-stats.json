@@ -1,0 +1,48 @@
+{
+  "file": "mission-control.glb",
+  "triangles": 51571,
+  "meshObjects": 27,
+  "materials": 27,
+  "bytes": 3019548,
+  "sha256": "fc166790eadcb735d7f9517fc53c9ed00692d0a68c6d254133cb44910efc918e",
+  "coordinates": "glTF Y-up, metres",
+  "sizeMetres": [
+    20.3,
+    7.8,
+    18.4
+  ],
+  "front": "+Z open",
+  "camera": [
+    7,
+    5,
+    14
+  ],
+  "lookAt": [
+    0,
+    2.8,
+    -2.5
+  ],
+  "mainScreen": {
+    "name": "MainScreen",
+    "center": [
+      0,
+      4.6,
+      -7.535
+    ],
+    "size": [
+      8.8,
+      4.95
+    ],
+    "frontNormal": [
+      0,
+      0,
+      1
+    ],
+    "uvOrigin": "glTF image convention; invert V once for WebGLRenderTarget",
+    "aspect": 1.7777777777777777
+  },
+  "originalGeometry": true,
+  "placeholder": "Static rendered NASA Blue Marble Earth plus original standby typography; not live telemetry",
+  "earthSourceAssetSha256": "7a1ed50d144364f6c23a2a277bb990014f07d79488b74daf8ae0c897185c9b5b",
+  "notes": "Optional lazy-loaded environment; no changes to launch campus, hangar, texture files, or app code."
+}

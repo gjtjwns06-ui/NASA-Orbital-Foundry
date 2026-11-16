@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "Final isolated domain candidate; not a global app or browser acceptance claim.",
+  "command": "npx.cmd vitest run tests/swingby-runtime.test.ts tests/swingby-conic.test.ts tests/swingby-propulsion.test.ts tests/swingby-visual.test.ts tests/swingby-historical.test.ts tests/operations-journal-audit.test.ts tests/operations-link.test.ts tests/operations-guards.test.ts tests/operations-save.test.ts tests/operations-released-compatibility.test.ts --maxWorkers=1",
+  "startedAtLocal": "2026-11-15T06:42:38+09:00",
+  "filesPassed": 10,
+  "testsPassed": 56,
+  "testsFailed": 0,
+  "durationSeconds": 149.39,
+  "testBodySeconds": 145.95,
+  "historicalWholeCheckpointsExactlyEqual": 52,
+  "typecheck": { "command": "npx.cmd tsc --noEmit", "exitCode": 0 },
+  "timingClassification": "Correctness execution duration under concurrent correctness jobs; not an isolated performance benchmark."
+}

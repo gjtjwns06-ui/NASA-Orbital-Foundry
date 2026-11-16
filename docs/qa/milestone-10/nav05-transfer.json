@@ -1,0 +1,42 @@
+{
+  "base": "0a7932fb212ce0ddfb08e2dbca82b4a184578882",
+  "threeExistingProdFilesUnchangedBetweenV8AndV9": true,
+  "source": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05",
+  "files": [
+    {
+      "path": "src/transfer-ui.ts",
+      "sha256": "a56b025402d0c68d3b9f97e3194da713635bb09c4f3ef4a7718b00ec3117a57b",
+      "bytes": 82883
+    },
+    {
+      "path": "src/transfer-ui.css",
+      "sha256": "3d2d21ad858b91bf1691da651f74dc24ad44c45590f6454657cadb5c16eeb869",
+      "bytes": 14376
+    },
+    {
+      "path": "src/render/transfer-scene.ts",
+      "sha256": "65d5bb2a870b74a57e476f30845fdc4e26230c0750404e7c0e948da86e91da0b",
+      "bytes": 71617
+    },
+    {
+      "path": "src/transfer-plan-comparison.ts",
+      "sha256": "0178aa3e1b7bb32552d02d8740cc273f3e0bdb53c4114750a0d9e5fa6d94723c",
+      "bytes": 8077
+    },
+    {
+      "path": "tests/transfer-plan-comparison.test.ts",
+      "sha256": "8afe35f0447e5cb5f9180f09001fb79bd8b180ca575dd08d897bac3828056d8f",
+      "bytes": 10170
+    },
+    {
+      "path": "tests/browser/transfer-plan-comparison.spec.ts",
+      "sha256": "03fadc86bc625aa9f9fdb4a1d9587c50bf014c8e00de1171d0a6a16307c18e19",
+      "bytes": 12365
+    },
+    {
+      "path": "tools/nav05-source.mjs",
+      "sha256": "06ce993aa55c69ba8f3cde654541f76deaac5ca860c03796b80a5475696e296f",
+      "bytes": 1916
+    }
+  ]
+}

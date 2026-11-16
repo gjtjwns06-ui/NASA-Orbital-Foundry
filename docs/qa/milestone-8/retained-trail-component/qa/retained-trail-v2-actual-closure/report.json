@@ -1,0 +1,64 @@
+{
+  "status": "pass",
+  "scope": "Actual UI closure only; matched component gates are retained in v1 failure report.",
+  "durationMs": 17630,
+  "browser": "157.0.8103.52",
+  "sources": {
+    "src/render/deployment-scene.ts": "96fb848cf5961f7f54bedd78617bab4a5b06278cea478287e2ab3ecebc35f07a",
+    "src/render/committed-orbit-trail.ts": "8f0faa19d2b95832d3f74f4889ab850f43417ccdaaa084c22a8e050f8bf91ce3",
+    "docs/deployment-scene-baseline.ts.txt": "a978cdaf3da76d4156bf94a552b1e0c11d33224a4aa444898842da591e3509a2"
+  },
+  "shots": [],
+  "checks": [
+    {
+      "actualLive": {
+        "time": 5,
+        "trail": {
+          "geometry": "c9329e5a-7d68-4db3-9cd8-65d546fca561",
+          "material": "a5e9d05d-57a7-40d8-bfc7-d10789a15893",
+          "count": 2,
+          "capacity": 1024,
+          "visible": true,
+          "positions": [
+            3.2822141647338867,
+            0,
+            0,
+            3.282166004180908,
+            0.01392966415733099,
+            -0.011040516197681427
+          ]
+        },
+        "exactPhysicalAfterThreeRestores": true,
+        "runtimeSha256": "5e03c13e0da6e2da042d0cfc499d69819c29516f540a1eaac41af611ba7ed726"
+      }
+    },
+    {
+      "native": {
+        "errors": [],
+        "contexts": [
+          {
+            "id": 1,
+            "canvasId": "",
+            "generation": 0,
+            "created": 489,
+            "deletes": 108,
+            "restores": 0
+          },
+          {
+            "id": 2,
+            "canvasId": "",
+            "generation": 3,
+            "created": 1982,
+            "deletes": 1951,
+            "restores": 3
+          }
+        ],
+        "contextLostNotifications": 3
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "THREE.WebGLProgram: Program Info Log: (221,91-147): warning X4122: sum of 0.996094 and -2.98545e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(207,10-73): warning X4008: floating point division by zero\n(207,10-73): warning X4008: floating point division by zero\n(207,10-73): warning X4008: floating point division by zero"
+  ]
+}

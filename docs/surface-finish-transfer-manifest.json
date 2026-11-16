@@ -1,0 +1,306 @@
+{
+  "createdAt": "2026-11-15T09:33:58.364644+00:00",
+  "candidate": "surface-v1",
+  "base": "orbital-foundry-next-earth-detail",
+  "baseManifestSha256": "30dd776c9edd73e2dbf62e957ec34ca0ee41ee597876360212d4746d926e2ed7",
+  "scope": "Exactly four product files. Original procedural shading and per-view resource ownership only. Default flat pending root review. No whole-tree merge.",
+  "productFiles": [
+    {
+      "path": "src/render/deployment-surface-finish.ts",
+      "sha256": "4c5f0f13eff3b3bdbf1cce77a937905d6d1c8e076db1ff3b60653a0ea80e3cdc",
+      "bytes": 5454
+    },
+    {
+      "path": "src/render/deployment-view.ts",
+      "sha256": "6fb065f30417368c4ddaa2992bd8422f29c4260b85abce0e4d267aee4dad8ad0",
+      "bytes": 11515
+    },
+    {
+      "path": "src/render/deployment-scene.ts",
+      "sha256": "7677e91ea88fd5656511103a8edef431c3f71d0618798c280a8cb93e014294a5",
+      "bytes": 39017
+    },
+    {
+      "path": "src/render/deployment-scene-types.ts",
+      "sha256": "68da5ac1e98a19578217a02b73ef195f788706ffe32addf65f27ed81f4726642",
+      "bytes": 4192
+    }
+  ],
+  "supportFiles": [
+    {
+      "path": "tests/deployment-surface-finish.test.ts",
+      "sha256": "2b5c05b18adf2c3b430e1145d5eb9ae5e2886801a8dc8984a469db2da6046a51",
+      "bytes": 6587
+    },
+    {
+      "path": "tools/surface-finish.html",
+      "sha256": "0b623ffc4eaff99168db083d14186754f02eccca5e592bfab714034ccdd8a113",
+      "bytes": 1770
+    },
+    {
+      "path": "tools/surface-finish.ts",
+      "sha256": "5230b208dec317839ceba88169ddd6fb61b08c7aede0f9514aa6b6896549a1ee",
+      "bytes": 3099
+    },
+    {
+      "path": "tools/check-surface-finish.mjs",
+      "sha256": "d0c8c240543f2fcb3ef8e6d8015dfd339daf338994f6849c8625f1a357500816",
+      "bytes": 9513
+    },
+    {
+      "path": "tools/native-gl-audit.ts",
+      "sha256": "831ed787cd2864170b34b942158b0c2d538f3ca0ca94d64ca4dbbae4bd0e8909",
+      "bytes": 2271
+    },
+    {
+      "path": "docs/surface-finish-design.md",
+      "sha256": "832ec90b503fa79a0f4f76bf764b7193b7812081c6753f59938d1370315b4a25",
+      "bytes": 3553
+    },
+    {
+      "path": "docs/surface-finish-handoff.md",
+      "sha256": "5d065cde401b4533619664f9deee033d598bb4593915bde5e566e6560f73e5c9",
+      "bytes": 4092
+    },
+    {
+      "path": "docs/surface-finish-production.diff",
+      "sha256": "a7f9d3385a0f58db30706ff6d56bc562c0b7e515029b88569357f5948c4c9e45",
+      "bytes": 21839
+    },
+    {
+      "path": "docs/actual-camera-fixture.json",
+      "sha256": "4a744ee2c294435dad3759cd20862d5163b294459e707c1cc5fe5dbd875ae054",
+      "bytes": 143734
+    },
+    {
+      "path": "docs/actual-camera-input.json",
+      "sha256": "c77564f6bba8a410aae27063b832a5f931f95cc2cf46897405e5e415babe9fc8",
+      "bytes": 126787
+    }
+  ],
+  "proofFiles": [
+    {
+      "path": "docs/surface-finish-unit-r1-failed.json",
+      "sha256": "a0784d854ebaf430e8924767f27dd9a8f2290ea646b655f8367bbb182ec97263",
+      "bytes": 4846
+    },
+    {
+      "path": "docs/surface-finish-unit-r2.json",
+      "sha256": "8e037ddb0da7c8f4c8199db2c58fc0f835fd8b5346d5e27378bd85ab71d693df",
+      "bytes": 3441
+    },
+    {
+      "path": "docs/qa/surface-v1/1280-t0-flat.png",
+      "sha256": "51c8991232e14f8dd25873b7ed7c45eaa227ea316fe19ca708364529db1c7246",
+      "bytes": 178918
+    },
+    {
+      "path": "docs/qa/surface-v1/1280-t0-textured.png",
+      "sha256": "a5ac7802e163e2ef57e4a01ba67282b7248a2afee8d852122cdcfcbb33279907",
+      "bytes": 200675
+    },
+    {
+      "path": "docs/qa/surface-v1/1280-t1385-flat.png",
+      "sha256": "38219df4aac3e306f51b21a8e3f5aeddc3e29860840954d274da023d3d907815",
+      "bytes": 739752
+    },
+    {
+      "path": "docs/qa/surface-v1/1280-t1385-textured.png",
+      "sha256": "e32276fb1878135d548152a92eda859b4a271e5f6e5e11d4bbefc6edc72a48f0",
+      "bytes": 764084
+    },
+    {
+      "path": "docs/qa/surface-v1/1280-t240-flat.png",
+      "sha256": "e39d6c91296705f8661635289b0ab00cc2eae90e4ee005113f4db35c3d89c2ea",
+      "bytes": 435253
+    },
+    {
+      "path": "docs/qa/surface-v1/1280-t240-textured.png",
+      "sha256": "831bd8540beb395bbed071422c81e550e85aeea1794af041123e7f6474b61643",
+      "bytes": 441808
+    },
+    {
+      "path": "docs/qa/surface-v1/1280-t600-flat.png",
+      "sha256": "8f5280e27587cea4cd3125ce8de947d79deea3fa4042eb9a6c6feb3e1d980c2c",
+      "bytes": 482822
+    },
+    {
+      "path": "docs/qa/surface-v1/1280-t600-textured.png",
+      "sha256": "eb2b572ffafb13fbd8a29380fca1e2cff79605af8c80d76dad3997888e40b8ec",
+      "bytes": 488598
+    },
+    {
+      "path": "docs/qa/surface-v1/1280-working-faces-flat.png",
+      "sha256": "257bd9a42c2af10fcae824fdd181f77dba3300a617dfdb94355040ad6c8b2956",
+      "bytes": 500028
+    },
+    {
+      "path": "docs/qa/surface-v1/1280-working-faces-textured.png",
+      "sha256": "7246e305425f3dfd0f03ac09bc54b0f60c2a1d4e82516fde911aba5ac7233b21",
+      "bytes": 514607
+    },
+    {
+      "path": "docs/qa/surface-v1/1920-t0-flat.png",
+      "sha256": "c8a88738b116776c3bd20608851e51ac08139dceb882b53c693224f358dd82ab",
+      "bytes": 330252
+    },
+    {
+      "path": "docs/qa/surface-v1/1920-t0-textured.png",
+      "sha256": "cce2621b87327040f30f66df62b9d860c9f457de221d28bb559d5dc03f100c58",
+      "bytes": 403640
+    },
+    {
+      "path": "docs/qa/surface-v1/1920-t1385-flat.png",
+      "sha256": "3f4a8bfc59e6b7c12e48823a3a064b9309439c8838ea423975c27b043df32d5b",
+      "bytes": 1537833
+    },
+    {
+      "path": "docs/qa/surface-v1/1920-t1385-textured.png",
+      "sha256": "e0692d21f842a6091f1ca6587d66ea61ed91aab4c051ca3b9724a0f9e131feaa",
+      "bytes": 1617255
+    },
+    {
+      "path": "docs/qa/surface-v1/1920-t240-flat.png",
+      "sha256": "68af8203e10485e1093bcb3f16b3c3e086826735276115d630ee81828467c39b",
+      "bytes": 857791
+    },
+    {
+      "path": "docs/qa/surface-v1/1920-t240-textured.png",
+      "sha256": "e31bdbeb689586f8f48d89eff2bd711dcad58960a3015ce6659ea0fc4b581735",
+      "bytes": 881894
+    },
+    {
+      "path": "docs/qa/surface-v1/1920-t600-flat.png",
+      "sha256": "0d69c1c938e0b001607baf9a058bd85420b9a9027f953a117470a813b788806f",
+      "bytes": 961264
+    },
+    {
+      "path": "docs/qa/surface-v1/1920-t600-textured.png",
+      "sha256": "e159c056c5e6f8f7bee2754ed2443c27d15850f62fbc61184491b5d03d927f95",
+      "bytes": 987747
+    },
+    {
+      "path": "docs/qa/surface-v1/1920-working-faces-flat.png",
+      "sha256": "eac22c6c31cdb37619e4b6575cfa67657fc1ad0f8f1e52371ffe1c8cec2c171f",
+      "bytes": 1110816
+    },
+    {
+      "path": "docs/qa/surface-v1/1920-working-faces-textured.png",
+      "sha256": "7069b35ee97b7df8a92ce3240b7034e2bd28e62d4dea9e9c8ecf113b3ca550ac",
+      "bytes": 1161972
+    },
+    {
+      "path": "docs/qa/surface-v1/actual-ui-flat.png",
+      "sha256": "6424f5e801b5f1d1a9cb74e641ae90ff251af8cce3bd5afe7c8f1e2964423481",
+      "bytes": 482983
+    },
+    {
+      "path": "docs/qa/surface-v1/actual-ui-textured.png",
+      "sha256": "428056f4345efbd76340cfb556e69e54c3fc55ba877769e4bca7f4c8f9aed285",
+      "bytes": 505474
+    },
+    {
+      "path": "docs/qa/surface-v1/real-orbit-zoom-textured.png",
+      "sha256": "da9d29ae3da42d952e6d4f399a508cca696f3f18e5ac80be042135d9bb8637be",
+      "bytes": 716834
+    },
+    {
+      "path": "docs/qa/surface-v1/report.json",
+      "sha256": "591c4ace8232f816e7493652aa8a78cf7048fdf8866a5648e00e8f3d75826f94",
+      "bytes": 73041
+    },
+    {
+      "path": "docs/qa/surface-v1/three-restores-textured.png",
+      "sha256": "7246e305425f3dfd0f03ac09bc54b0f60c2a1d4e82516fde911aba5ac7233b21",
+      "bytes": 514607
+    }
+  ],
+  "preservedEarthFiles": [
+    {
+      "path": "src/render/earth-surface-detail.ts",
+      "sha256": "b5da4230c23c1eae799712f27c95316b9568692df503f8b7bd59ca454cc9e933",
+      "byteIdenticalToEarthCandidate": true
+    },
+    {
+      "path": "public/assets/textures/earth-bmng-july2004-8k.ktx2",
+      "sha256": "754427060f3910d6cead0a443468013c69aa8585ebfd5e885187b2d8f9ae1fd8",
+      "byteIdenticalToEarthCandidate": true
+    },
+    {
+      "path": "public/assets/textures/earth-bmng-july2004-16k.ktx2",
+      "sha256": "dae2a97d896170340f0df8331475145b1ac9e567e4726e3403583a02d5995f92",
+      "byteIdenticalToEarthCandidate": true
+    },
+    {
+      "path": "public/assets/basis/basis_transcoder.js",
+      "sha256": "8478b5b6d6b74e7d3082b89f6417321d8d1dc0307f2b30d4484bb11b441696a1",
+      "byteIdenticalToEarthCandidate": true
+    },
+    {
+      "path": "public/assets/basis/basis_transcoder.wasm",
+      "sha256": "6cf17dc889352c42e9acf8897107978d127005fe3386c36a0e3845e27967630a",
+      "byteIdenticalToEarthCandidate": true
+    },
+    {
+      "path": "public/assets/basis/README.md",
+      "sha256": "930b11bbbb742b2525491b0964f0462d63d8b21383c0623ec4c98c43d53723c6",
+      "byteIdenticalToEarthCandidate": true
+    },
+    {
+      "path": "public/assets/basis/LICENSE",
+      "sha256": "065fcf48d6af21c0b75e23be5ed5753aee75c892e1c2cf178fa6736305614a5c",
+      "byteIdenticalToEarthCandidate": true
+    },
+    {
+      "path": "public/data/earth-surface-detail.json",
+      "sha256": "73726ec26765be49c04cffece7dc944380137b8fc88d0e35d9c80e974989d25c",
+      "byteIdenticalToEarthCandidate": true
+    },
+    {
+      "path": "src/render/committed-orbit-trail.ts",
+      "sha256": "8f0faa19d2b95832d3f74f4889ab850f43417ccdaaa084c22a8e050f8bf91ce3",
+      "byteIdenticalToEarthCandidate": true
+    },
+    {
+      "path": "src/render/deployment-internal-art.ts",
+      "sha256": "871e1fd9f910db321a84d5327e867fa5550f66de649472f8eb8454f54c564622",
+      "byteIdenticalToEarthCandidate": true
+    },
+    {
+      "path": "src/render/deployment-link-meshes.ts",
+      "sha256": "51db499646e104023466013a4fbdae736b0995d46dff516385309c4613ccb6e1",
+      "byteIdenticalToEarthCandidate": true
+    },
+    {
+      "path": "src/render/orbital-inspection-follow.ts",
+      "sha256": "0d2ff215102a4efb2c3464a3a5e16b9ad3a74dfad94982b07d04a1d10ec41055",
+      "byteIdenticalToEarthCandidate": true
+    },
+    {
+      "path": "src/render/working-face-direction.ts",
+      "sha256": "39cb00a30088c95b1287297bea792d9aa7bc3a7f4fb787f55834da1fdfc3f47e",
+      "byteIdenticalToEarthCandidate": true
+    },
+    {
+      "path": "src/render/lazy-surface-texture.ts",
+      "sha256": "15355346f1c1076e52e21e7a7369cb2c5bbe44add7888c9f04994b30219ed3e4",
+      "byteIdenticalToEarthCandidate": true
+    }
+  ],
+  "evidence": {
+    "nativeStatus": "pass",
+    "durationMs": 116710,
+    "browserErrorCount": 0,
+    "browserWarningEntries": 1,
+    "cpuFinal": "7/7 pass; surface-finish-unit-r2.json",
+    "earlierRejectedAttempt": "surface-finish-unit-r1-failed.json retained; expensive test assertion loop only",
+    "typecheck": "tsc --noEmit exit 0",
+    "scriptSyntax": "node --check tools/check-surface-finish.mjs exit 0",
+    "noFpsClaim": true,
+    "noCommercialParityClaim": true,
+    "productHashesFrozenDuringBrowserRun": true
+  },
+  "enablement": "After visual acceptance, pass surfaceFinish: textured in First Light UI DeploymentScene options; retain default flat for unrelated consumers.",
+  "ownership": "Four lazy DataTextures per DeploymentView; retain across style toggles; include inactive cache in native context retirement; dispose on source replacement/final exit.",
+  "gpuLease": "Released. All owned Chrome/Vite5194 processes closed."
+}

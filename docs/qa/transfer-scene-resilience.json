@@ -1,0 +1,84 @@
+{
+  "errors": [],
+  "memory": [
+    {
+      "geometries": 115,
+      "textures": 9
+    },
+    {
+      "geometries": 120,
+      "textures": 9
+    },
+    {
+      "geometries": 115,
+      "textures": 9
+    },
+    {
+      "geometries": 120,
+      "textures": 9
+    },
+    {
+      "geometries": 115,
+      "textures": 9
+    },
+    {
+      "geometries": 120,
+      "textures": 9
+    },
+    {
+      "geometries": 115,
+      "textures": 9
+    },
+    {
+      "geometries": 120,
+      "textures": 9
+    },
+    {
+      "geometries": 115,
+      "textures": 9
+    },
+    {
+      "geometries": 120,
+      "textures": 9
+    },
+    {
+      "geometries": 115,
+      "textures": 9
+    },
+    {
+      "geometries": 120,
+      "textures": 9
+    }
+  ],
+  "dateHandlesDisabled": true,
+  "lossCount": 1,
+  "restored": true,
+  "resources": {
+    "geometries": 115,
+    "textures": 8
+  },
+  "preview": true,
+  "canvasesAfterDispose": 0,
+  "restorationVisualRecheck": {
+    "date": "2026-11-14T17:26:28.384Z",
+    "errors": [],
+    "lossCount": 1,
+    "restored": true,
+    "resources": {
+      "geometries": 106,
+      "textures": 6
+    }
+  },
+  "restorationImageComparison": {
+    "meanChannelDifference": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "maximumChannelDifference": [
+      0,
+      0,
+      0
+    ]
+  }
+}

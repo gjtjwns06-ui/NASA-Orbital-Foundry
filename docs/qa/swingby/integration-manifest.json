@@ -1,0 +1,339 @@
+{
+  "generatedAt": "2026-11-14T21:47:13.717Z",
+  "status": "DOMAIN_GATES_PASS_UI_PENDING",
+  "modelVersion": "swingby-1.0.0",
+  "scenarioId": "mars-exit-corridor-2027-v1",
+  "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+  "propulsionHash": "dca16c1db88e8a05dd82fb119bd8ba93ea47d9609ec18cfd960166bbe2a41c7b",
+  "productionFiles": [
+    {
+      "file": "src/flight/environment.ts",
+      "bytes": 4243,
+      "sha256": "b9b65babf4fe4aeed7f381b920423af648a18fd6fc7a550f6c5b4275fcfd3149"
+    },
+    {
+      "file": "src/flight/resources.ts",
+      "bytes": 9677,
+      "sha256": "17619a9f2392352fc39eabdd19b6a842e68af583e464e71b89b1f3dac7ec351a"
+    },
+    {
+      "file": "src/flight/data.ts",
+      "bytes": 2897,
+      "sha256": "9d7f555e5913e01d640bf9edb8001ff4cb0503a3636af701c565446b4f877965"
+    },
+    {
+      "file": "src/swingby/types.ts",
+      "bytes": 5147,
+      "sha256": "822dfd1bd64d0cdf3a148e0814dfacb5ee188e3ce9e2fc1753a1ef4d8d20c739"
+    },
+    {
+      "file": "src/swingby/conic.ts",
+      "bytes": 3558,
+      "sha256": "ad51769b2f7fba1ad588f45b1db9fc38d202dd937684c07b99ab0e4fee9713ec"
+    },
+    {
+      "file": "src/swingby/scenario.ts",
+      "bytes": 2878,
+      "sha256": "4f993848b0651e0f69026c776fc1f4909437791a71cf07b73ef834dba0dbeb90"
+    },
+    {
+      "file": "src/swingby/orbit.ts",
+      "bytes": 5815,
+      "sha256": "9ae2c66c47b0ff95e96b7a414f7dcf3e4e319577082dabb6f34fd08a54dc71f9"
+    },
+    {
+      "file": "src/swingby/propulsion.ts",
+      "bytes": 5312,
+      "sha256": "db7e175335f8f09d19581e07ec337b5cacb1fb41394dce367aafaa2743993564"
+    },
+    {
+      "file": "src/swingby/planning.ts",
+      "bytes": 7542,
+      "sha256": "a40bcdcb5ff1b1e87648ffa58c351ef94faf04f2975e9ed0a7c4c2b806abec19"
+    },
+    {
+      "file": "src/swingby/runtime.ts",
+      "bytes": 22223,
+      "sha256": "2b383107120a636256f4f81ae6f18b8a3f1ff905f9a6f39db16a684a3e8f4d0a"
+    },
+    {
+      "file": "src/swingby/persistence.ts",
+      "bytes": 8085,
+      "sha256": "801962a034a3523e3438c361e45886cd8588fb26c6b6aa12ad2d17c23bef09fd"
+    },
+    {
+      "file": "src/swingby/visual.ts",
+      "bytes": 3772,
+      "sha256": "0ec71b49fe99e75bdaea9394950085d50d64fa110a5e2097661c23ee904477f2"
+    },
+    {
+      "file": "src/swingby/index.ts",
+      "bytes": 245,
+      "sha256": "881868a7e71ef00d58d30c9011ba0b4dc0592be2d8d6b5898c55209c52d5880e"
+    },
+    {
+      "file": "src/transfer/state.ts",
+      "bytes": 3795,
+      "sha256": "4e920dd783fc7ddeb6960371c46ff52d7b048c644533492f91640635f2d8cb96"
+    },
+    {
+      "file": "src/transfer/runtime-v3.ts",
+      "bytes": 16762,
+      "sha256": "8701e2268cacead8619b6417fb9b9d3b7da36c474385cadd773d2f21ddfd72ae"
+    }
+  ],
+  "testFiles": [
+    {
+      "file": "tests/swingby-conic.test.ts",
+      "bytes": 5028,
+      "sha256": "671dfd58860f3b3bfaf6d949ef74b7722d3bddbb6b3dba1fb7ba13d75ab56219"
+    },
+    {
+      "file": "tests/swingby-propulsion.test.ts",
+      "bytes": 3150,
+      "sha256": "2ac09948cc9e20002d9d0961c2241ea6f7e62605cef8bd20d82f8dbe6b9ba5d2"
+    },
+    {
+      "file": "tests/swingby-runtime.test.ts",
+      "bytes": 7677,
+      "sha256": "d62f1076a86234a32e133268455e2f160442a5fcb5618ca43acb6b79936ea83e"
+    },
+    {
+      "file": "tests/swingby-visual.test.ts",
+      "bytes": 2504,
+      "sha256": "46038ec08d52c305db3bd65f280c35b2697106133b568adb98a0c847c3d7fa94"
+    },
+    {
+      "file": "tests/swingby-historical.test.ts",
+      "bytes": 2063,
+      "sha256": "a29e0cb7589a2f36bb320ab02734b7050b6282cc38a3a13daa1e4a419985f384"
+    }
+  ],
+  "fixtureFiles": [
+    {
+      "file": "tests/fixtures/swingby-gmat/oracle-v2.json",
+      "bytes": 186660,
+      "sha256": "e17f0368dd8d6938520c4992013183efe0bf1476b520ea2ac1f449babceeadf3"
+    },
+    {
+      "file": "tests/fixtures/swingby-historical/manifest.json",
+      "bytes": 6142,
+      "sha256": "18dbd9a83b647138ffcab0148d35c8ea4e33cb0facfff7c88ba4e00e86f382c9"
+    },
+    {
+      "file": "tests/fixtures/swingby-historical/checkpoints.bin",
+      "bytes": 818688,
+      "sha256": "ce2810bda5d37f4a8d60c7c74e6dcd0a82177162d0c9bc2252fa12025ae63b97"
+    },
+    {
+      "file": "tests/fixtures/swingby-historical/pre-extraction-engine.mjs",
+      "bytes": 858544,
+      "sha256": "b79a2a56398db0ede2a7e599e3f4b1babf213864fab8055003a3257f9a1cf2db"
+    }
+  ],
+  "tools": [
+    {
+      "file": "tools/swingby/capture-historical.mjs",
+      "bytes": 1846,
+      "sha256": "b2677a08056e12bcf7ce8ed1c0a7eb989a26366668865b37dcae03d0626ecfc5"
+    },
+    {
+      "file": "tools/swingby/historical-cases.ts",
+      "bytes": 3297,
+      "sha256": "779bfb8045eba1e5d9ca612215a093eec570667af07a2788e09034ea1dc18372"
+    },
+    {
+      "file": "tools/swingby/verify-convergence.mjs",
+      "bytes": 2917,
+      "sha256": "924e0a455391ddaf13b44b92adb0f5b55b6b7d6f9e5335885438b34f3fae6bd2"
+    },
+    {
+      "file": "tools/swingby/verify-flight.mjs",
+      "bytes": 3849,
+      "sha256": "909fcf3bd60d15ef7a73a62eecb385b1df157e556c2c2a35b7ce4fd6838b687a"
+    },
+    {
+      "file": "tools/swingby/freeze-evidence.mjs",
+      "bytes": 5665,
+      "sha256": "a22c6bbdd7afd4e848dc29ce82c6fc3d03a1106c884e772cd680fdf30df93bec"
+    }
+  ],
+  "publicFiles": [
+    {
+      "file": "public/data/swingby/scenario-v1.json",
+      "bytes": 2121,
+      "sha256": "416b3929434961bac9e9cdce67ac65a57292c8eca7d9ba0fdff6627c365d9f69"
+    },
+    {
+      "file": "public/data/swingby/propulsion-v1.json",
+      "bytes": 920,
+      "sha256": "ab2ef8f3504a52c7bc04f7f44f1404bcc237aa4e47b48c1836e94d6fea72541a"
+    },
+    {
+      "file": "public/data/swingby/model-v1.json",
+      "bytes": 4183,
+      "sha256": "bc1597a6078b2eb3f7244385dd06f4421a441220ae02c53ae5a1b898df476bb7"
+    }
+  ],
+  "evidenceFiles": [
+    {
+      "file": "docs/qa/swingby/convergence.json",
+      "bytes": 298548,
+      "sha256": "9e6a36b28cc52104a90897f9096ea85915f12cf1520ee3e612139ac0ae2b03b9"
+    },
+    {
+      "file": "docs/qa/swingby/flight-acceptance.json",
+      "bytes": 173374,
+      "sha256": "d1684612baa701fc418f85ba51047d1389a08035cce01135aeb4c3dcc7cec1d2"
+    },
+    {
+      "file": "docs/qa/swingby/extraction-exact.json",
+      "bytes": 324,
+      "sha256": "87a09120821cf075f59190a2a876b1dc95e33d2784b9f00f8d4d614abcef7bf3"
+    },
+    {
+      "file": "docs/qa/swingby/focused-tests.json",
+      "bytes": 918,
+      "sha256": "8d032fdb03f17576eb3b263ae5063223d1038c7293634d9a1b22a2328f5315f4"
+    }
+  ],
+  "documents": [
+    "docs/swingby-model.md",
+    "docs/swingby-implementation-status.md"
+  ],
+  "documentFiles": [
+    {
+      "file": "docs/swingby-model.md",
+      "bytes": 10981,
+      "sha256": "f02ee894a434fdd74c7eca4a6e2786cab8967eb73ff9408e544d48e1581a8d6b"
+    },
+    {
+      "file": "docs/swingby-implementation-status.md",
+      "bytes": 9010,
+      "sha256": "31f517334643fbeded57d590e4ad6ea2ae59a18c1bb1e03181215a6fad8cc76e"
+    }
+  ],
+  "rejectedArchiveFiles": [
+    {
+      "file": "tools/swingby/rejected-convergence-v1/README.md",
+      "bytes": 863,
+      "sha256": "1bc580cc785f10db81de77d957bb517d39cb2692b2c901ae3afa7910d8e19500"
+    },
+    {
+      "file": "tools/swingby/rejected-convergence-v1/flight/data.ts",
+      "bytes": 2866,
+      "sha256": "ee417119b7d3b8bec122143d86cb16dc83009ab65c2080490d779c7aa8485c6a"
+    },
+    {
+      "file": "tools/swingby/rejected-convergence-v1/flight/environment.ts",
+      "bytes": 4243,
+      "sha256": "b9b65babf4fe4aeed7f381b920423af648a18fd6fc7a550f6c5b4275fcfd3149"
+    },
+    {
+      "file": "tools/swingby/rejected-convergence-v1/flight/resources.ts",
+      "bytes": 9677,
+      "sha256": "17619a9f2392352fc39eabdd19b6a842e68af583e464e71b89b1f3dac7ec351a"
+    },
+    {
+      "file": "tools/swingby/rejected-convergence-v1/manifest.json",
+      "bytes": 2280,
+      "sha256": "33bceb6ad3f9ea371f31d977dbef513b99fd6aec701fda29e6d2b297688cbb9f"
+    },
+    {
+      "file": "tools/swingby/rejected-convergence-v1/report.json",
+      "bytes": 297004,
+      "sha256": "f501e98262a7618d3641e48df94916e2de7f76ec915e7ded599727bafcc1e507"
+    },
+    {
+      "file": "tools/swingby/rejected-convergence-v1/swingby/conic.ts",
+      "bytes": 3558,
+      "sha256": "ad51769b2f7fba1ad588f45b1db9fc38d202dd937684c07b99ab0e4fee9713ec"
+    },
+    {
+      "file": "tools/swingby/rejected-convergence-v1/swingby/index.ts",
+      "bytes": 219,
+      "sha256": "bc090c881a7c8e33718ee5905652f6faff61043f2e161ddcba28028807fae05f"
+    },
+    {
+      "file": "tools/swingby/rejected-convergence-v1/swingby/orbit.ts",
+      "bytes": 5815,
+      "sha256": "9ae2c66c47b0ff95e96b7a414f7dcf3e4e319577082dabb6f34fd08a54dc71f9"
+    },
+    {
+      "file": "tools/swingby/rejected-convergence-v1/swingby/persistence.ts",
+      "bytes": 8085,
+      "sha256": "801962a034a3523e3438c361e45886cd8588fb26c6b6aa12ad2d17c23bef09fd"
+    },
+    {
+      "file": "tools/swingby/rejected-convergence-v1/swingby/planning.ts",
+      "bytes": 7542,
+      "sha256": "a40bcdcb5ff1b1e87648ffa58c351ef94faf04f2975e9ed0a7c4c2b806abec19"
+    },
+    {
+      "file": "tools/swingby/rejected-convergence-v1/swingby/propulsion.ts",
+      "bytes": 5312,
+      "sha256": "db7e175335f8f09d19581e07ec337b5cacb1fb41394dce367aafaa2743993564"
+    },
+    {
+      "file": "tools/swingby/rejected-convergence-v1/swingby/runtime.ts",
+      "bytes": 18738,
+      "sha256": "e4feb137f8e9d07aa9f1dcad6aa5d143fbf14d120fae05417a7d0561cd88449d"
+    },
+    {
+      "file": "tools/swingby/rejected-convergence-v1/swingby/scenario.ts",
+      "bytes": 2878,
+      "sha256": "4f993848b0651e0f69026c776fc1f4909437791a71cf07b73ef834dba0dbeb90"
+    },
+    {
+      "file": "tools/swingby/rejected-convergence-v1/swingby/types.ts",
+      "bytes": 5147,
+      "sha256": "822dfd1bd64d0cdf3a148e0814dfacb5ee188e3ce9e2fc1753a1ef4d8d20c739"
+    },
+    {
+      "file": "tools/swingby/rejected-convergence-v1/verify-convergence.mjs",
+      "bytes": 2917,
+      "sha256": "924e0a455391ddaf13b44b92adb0f5b55b6b7d6f9e5335885438b34f3fae6bd2"
+    },
+    {
+      "file": "tools/swingby/rejected-exposure-boundary-v1/README.md",
+      "bytes": 897,
+      "sha256": "4d471a37a25c2dd922c55655329c90e0cf69c746fd101f7de8aa0e74b7fcf213"
+    },
+    {
+      "file": "tools/swingby/rejected-exposure-boundary-v1/convergence-before-boundary-fix.json",
+      "bytes": 298548,
+      "sha256": "9e5b1a83e3a943dba1e0abd52c5338613ee57a60e96b2732c88a761f186296cb"
+    },
+    {
+      "file": "tools/swingby/rejected-exposure-boundary-v1/data.ts",
+      "bytes": 2866,
+      "sha256": "ee417119b7d3b8bec122143d86cb16dc83009ab65c2080490d779c7aa8485c6a"
+    },
+    {
+      "file": "tools/swingby/rejected-exposure-boundary-v1/failure.txt",
+      "bytes": 300,
+      "sha256": "0b86d56c719128c265efbf3008ba228d58edc44a45c4f8978b1f4c56a7130a12"
+    },
+    {
+      "file": "tools/swingby/rejected-exposure-boundary-v1/flight-before-boundary-fix.json",
+      "bytes": 173378,
+      "sha256": "d81685e65b0694c68323f686aa4723214149b3b88d7f22677a1559c82140c39d"
+    },
+    {
+      "file": "tools/swingby/rejected-exposure-boundary-v1/manifest.json",
+      "bytes": 1030,
+      "sha256": "90125074e254fcfc1a11adf8f93c144b9eea2ffef3afd4cd66265a99e15705bb"
+    },
+    {
+      "file": "tools/swingby/rejected-exposure-boundary-v1/runtime.ts",
+      "bytes": 21918,
+      "sha256": "eeba22f186763b74d7ad533f38582ea6cbeb7f014c328fc74e7add5e1f75d7d3"
+    },
+    {
+      "file": "tools/swingby/rejected-exposure-boundary-v1/swingby-runtime.test.ts",
+      "bytes": 7677,
+      "sha256": "d62f1076a86234a32e133268455e2f160442a5fcb5618ca43acb6b79936ea83e"
+    }
+  ],
+  "scope": "Only listed production files are authorized integration payload. Original sim/hardware/transfer1/2 source unchanged. Worker/UI/render acceptance remains separate."
+}

@@ -1,0 +1,14 @@
+{
+  "reason": "Preserve exact candidate static bytes. All mismatches are line-ending only; compiler JavaScript, CSS, fonts and binary assets already match.",
+  "files": [
+    "index.html",
+    "public/data/hardware-catalog-v2.json",
+    "public/data/hardware-thumbnails-v3.json",
+    "public/data/gmat/validation-summary.json",
+    "public/data/transfer/gmat-research-summary.json",
+    "public/data/transfer/interpolation-report.json",
+    "public/data/transfer/model.md",
+    "public/assets/fonts/Barlow-OFL.txt"
+  ],
+  "earlierCopied": "public/favicon.svg"
+}

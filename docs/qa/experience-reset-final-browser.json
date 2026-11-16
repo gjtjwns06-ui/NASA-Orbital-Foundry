@@ -1,0 +1,430 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/browser/solar-expedition.spec.ts",
+      "tests/browser/experience-reset-assembly.spec.ts",
+      "tests/browser/transfer-date-recovery.spec.ts",
+      "tests/browser/solar-controls.spec.ts",
+      "tests/browser/solar-second-destination.spec.ts",
+      "--reporter=json",
+      "--output=test-results-experience-reset-final"
+    ],
+    "configFile": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\playwright.config.ts",
+    "rootDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry/test-results-experience-reset-final",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\test-results-experience-reset-final",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser",
+        "snapshotDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5188",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "headless": true,
+          "launchOptions": {
+            "executablePath": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+            "args": [
+              "--disable-background-timer-throttling"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "experience-reset-assembly.spec.ts",
+      "file": "experience-reset-assembly.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "fresh entry exposes exploration and contextual assembly without false camera selection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8901,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T12:14:50.780Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "2bafdc431a5cd03bacb8-236489868e21d5e0bc5f",
+          "file": "experience-reset-assembly.spec.ts",
+          "line": 14,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "solar-controls.spec.ts",
+      "file": "solar-controls.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "English first keyboard edit exposes Undo; Escape cancels a pointer route edit and leaves dragging usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7290,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T12:15:00.732Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "solar-controls-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo1MTg4LyIsCiAgImJyb3dzZXIiOiAiMTU3LjAuNDM0MS40NiIsCiAgInZpZXdwb3J0IjogewogICAgIndpZHRoIjogMTQ0MCwKICAgICJoZWlnaHQiOiA5MDAKICB9LAogICJlcnJvcnMiOiBbXSwKICAiY2hlY2tzIjogWwogICAgIkZpcnN0IGtleWJvYXJkIGVkaXQgY2hhbmdlcyBkYXRlIGFuZCBleHBvc2VzIFVuZG8gd2hpbGUgcmV0YWluaW5nIGhhbmRsZSBmb2N1cyIsCiAgICAiRmlyc3Qga2V5Ym9hcmQgVW5kbyByZXN0b3JlcyBkZXBhcnR1cmUsIGFycml2YWwgYW5kIGNvbXB1dGVkIGZ1ZWwiLAogICAgIkVzY2FwZSByZXN0b3JlcyBhbGwgcm91dGUgcmVhZG91dHMgYmVmb3JlIHJlbGVhc2luZyB0aGUgcG9pbnRlciIsCiAgICAiQSBuZXcgcG9pbnRlciBkcmFnIGFmdGVyIGNhbmNlbGxhdGlvbiBjb21taXRzIGEgZGlmZmVyZW50IHJvdXRlIiwKICAgICJVbmRvIGFmdGVyIHRoZSBzZWNvbmQgcG9pbnRlciBkcmFnIHJlc3RvcmVzIHRoZSBvcmlnaW5hbCByb3V0ZSIKICBdLAogICJwb2ludGVyVGFyZ2V0cyI6IFsKICAgIHsKICAgICAgImJveCI6IHsKICAgICAgICAieCI6IDg0My40Mjk2ODc1LAogICAgICAgICJ5IjogMzczLjU2MjUsCiAgICAgICAgIndpZHRoIjogNzEuMjk2ODc1LAogICAgICAgICJoZWlnaHQiOiAxMDAKICAgICAgfSwKICAgICAgInBvaW50IjogewogICAgICAgICJ4IjogODc5LjA3ODEyNSwKICAgICAgICAieSI6IDQyMy41NjI1CiAgICAgIH0sCiAgICAgICJoaXQiOiB7CiAgICAgICAgImtpbmQiOiAiYXJyaXZhbCIsCiAgICAgICAgImFjdGl2ZVRhZyI6ICJCT0RZIgogICAgICB9CiAgICB9LAogICAgewogICAgICAiYm94IjogewogICAgICAgICJ4IjogODQzLjQyOTY4NzUsCiAgICAgICAgInkiOiAzNzMuNTYyNSwKICAgICAgICAid2lkdGgiOiA3MS4yOTY4NzUsCiAgICAgICAgImhlaWdodCI6IDEwMAogICAgICB9LAogICAgICAicG9pbnQiOiB7CiAgICAgICAgIngiOiA4NzkuMDc4MTI1LAogICAgICAgICJ5IjogNDIzLjU2MjUKICAgICAgfSwKICAgICAgImhpdCI6IHsKICAgICAgICAia2luZCI6ICJhcnJpdmFsIiwKICAgICAgICAiYWN0aXZlVGFnIjogIkJPRFkiCiAgICAgIH0KICAgIH0KICBdLAogICJzY3JpcHRzIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NTE4OC9hc3NldHMvaW5kZXgtRDJhUDVRamguanMiCiAgXSwKICAiY2xhaW0iOiAiTmF0aXZlIFVJIHJlZ3Jlc3Npb24gb25seTsgbm8gaGlkZGVuIGdhbWUtc3RhdGUgc2V0dXAgb3IgZ2FtZS1mdW4gY2VydGlmaWNhdGlvbi4iCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8de7261bc3fce3ee22b-c18761d69b0aece8bfae",
+          "file": "solar-controls.spec.ts",
+          "line": 16,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "solar-expedition.spec.ts",
+      "file": "solar-expedition.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a real first expedition: story, responsive route drag, own craft, observation, return and discovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22737,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T12:15:08.209Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b2f9ab4c0665a7f3d2f-628db5f4ca486ca14ca6",
+          "file": "solar-expedition.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "multiple destination routes and compact viewport remain operable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5348,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T12:15:30.968Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b2f9ab4c0665a7f3d2f-f5bf092e42ae9d3b551d",
+          "file": "solar-expedition.spec.ts",
+          "line": 69,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "solar-second-destination.spec.ts",
+      "file": "solar-second-destination.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Venus requires and uses an actually installed spectrometer before returning a new discovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16141,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T12:15:36.382Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "00ad7fd1a130371bab08-d4ba7ceb56930994808c",
+          "file": "solar-second-destination.spec.ts",
+          "line": 12,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "transfer-date-recovery.spec.ts",
+      "file": "transfer-date-recovery.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "ko: the reported 80-day arrival has an explicit date repair, not a retry loop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17905,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T12:15:52.582Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6286ab17fd8ea6364fc6-364a4a013671f1e33cc9",
+          "file": "transfer-date-recovery.spec.ts",
+          "line": 11,
+          "column": 3
+        },
+        {
+          "title": "en: the reported 80-day arrival has an explicit date repair, not a retry loop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17282,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T12:16:10.519Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6286ab17fd8ea6364fc6-ff53435f794343313182",
+          "file": "transfer-date-recovery.spec.ts",
+          "line": 11,
+          "column": 3
+        },
+        {
+          "title": "a rejected old saved date can open a valid draft without rewriting that saved file",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17458,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T12:16:27.849Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6286ab17fd8ea6364fc6-277c265db40e8afc270d",
+          "file": "transfer-date-recovery.spec.ts",
+          "line": 71,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-15T12:14:49.196Z",
+    "duration": 116808.119,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

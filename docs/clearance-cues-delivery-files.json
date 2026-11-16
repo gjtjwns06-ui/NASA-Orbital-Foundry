@@ -1,0 +1,227 @@
+{
+  "schema": "feature-delivery-allowlist-v1",
+  "feature": "clearance-cues",
+  "sourceWorktree": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-clearance-cues",
+  "base": "0a7932f",
+  "productionCandidate": "clearance-cues-r2",
+  "existingTransferManifest": {
+    "path": "docs/clearance-cues-transfer-manifest.json",
+    "sha256": "0e15e8347f694a7706e1eefeb4476b4b19f798a09489153636d40595869d5bb5",
+    "unchanged": true
+  },
+  "scope": "Exact five production files, active feature tests, their existing native audit helper, only clearance-cues documents and raw artifacts",
+  "existingHelperPolicy": "native-gl-audit.ts is unchanged baseline support. Verify identity at integration; do not overwrite a divergent helper without review.",
+  "self": {
+    "path": "docs/clearance-cues-delivery-files.json",
+    "includedInFiles": false,
+    "reason": "A file cannot include its own final hash. Copy this manifest itself separately and use its externally reported SHA256."
+  },
+  "count": 34,
+  "totalBytes": null,
+  "files": [
+    {
+      "path": "src/deployment-ui.ts",
+      "category": "production",
+      "bytes": 59593,
+      "sha256": "0bfc11ab4efda1882951497fc09602bdc27db38eb6d8fc53985acb29e00c29bc"
+    },
+    {
+      "path": "src/deployment-ui.css",
+      "category": "production",
+      "bytes": 15138,
+      "sha256": "c1e911b68b7a8a1cc2892eafa350f9099b4cfef22ee3dfdcce2c16b5e1be4735"
+    },
+    {
+      "path": "src/render/deployment-view.ts",
+      "category": "production",
+      "bytes": 12742,
+      "sha256": "98b99c3227b82c4e17ff20138a71f6dcdc8026c14862e775fe0720cd93b454d9"
+    },
+    {
+      "path": "src/render/deployment-scene.ts",
+      "category": "production",
+      "bytes": 40365,
+      "sha256": "293539c9f6c3f35d9cd1a29ab9f76d24971830950f31c889bb19a9fa0d83244d"
+    },
+    {
+      "path": "src/render/clearance-cue-layout.ts",
+      "category": "production",
+      "bytes": 2174,
+      "sha256": "4f1e1e2cacf9051b2a7a9c55e326dc60e0c594852fafded091c5b4de40555332"
+    },
+    {
+      "path": "tests/deployment-clearance-cues.test.ts",
+      "category": "active-test",
+      "bytes": 7243,
+      "sha256": "841157d710fa1c7cf4ac4de37f7a8f149b0d3c269e65cddd96396c5fd01a61a7"
+    },
+    {
+      "path": "tests/browser/deployment-clearance-cues.spec.ts",
+      "category": "active-test",
+      "bytes": 10215,
+      "sha256": "52e0cbe0c67600943f8ab40f7c7bbbd71a4e9bf9eb8037a13a227ad8a8bda107"
+    },
+    {
+      "path": "tests/browser/native-gl-audit.ts",
+      "category": "existing-test-helper",
+      "bytes": 2301,
+      "sha256": "fb6c180498f2be920d88cf46690529801a8eb7ba2bec1c119698af0da52f2276"
+    },
+    {
+      "path": "docs/clearance-cues-acceptance.md",
+      "category": "feature-document",
+      "bytes": 4135,
+      "sha256": "09974c456011ae9734d1a38d7557b8c20a51bcb86ac96c092fb12b9ae3cebfd3"
+    },
+    {
+      "path": "docs/clearance-cues-final-source-freeze.json",
+      "category": "feature-document",
+      "bytes": 1543,
+      "sha256": "e4b22e77330869ed828fef9bad96df7b5f33a01318801e2a0bc407980e09ef42"
+    },
+    {
+      "path": "docs/clearance-cues-prospective-acceptance.md",
+      "category": "feature-document",
+      "bytes": 2516,
+      "sha256": "fb5f9cafd5f80a71b01ed0cc96b961106b62bca7e2388490bc7c84b6faafdb52"
+    },
+    {
+      "path": "docs/clearance-cues-r1-receipt.json",
+      "category": "feature-document",
+      "bytes": 322,
+      "sha256": "ab0f5aff27fc6bb714756b858e007b36b528efecf9be6c6aebcd1e26f8f09f4b"
+    },
+    {
+      "path": "docs/clearance-cues-r1-source-freeze.json",
+      "category": "feature-document",
+      "bytes": 1256,
+      "sha256": "72cc34d033934c58154662d03515c5f3d5aa5dbe7bcd5f8857e1ef99f1577da4"
+    },
+    {
+      "path": "docs/clearance-cues-r2-build-freeze.json",
+      "category": "feature-document",
+      "bytes": 5796,
+      "sha256": "bee36f870d53b2df74b33367b871d2f49dee61b565e34bc296e686a8b681cc5e"
+    },
+    {
+      "path": "docs/clearance-cues-r2-closure-freeze.json",
+      "category": "feature-document",
+      "bytes": 1729,
+      "sha256": "55adb2d6c9753d5c33913e79d0d4d915903401572122c2a6fa734aa10ced38c3"
+    },
+    {
+      "path": "docs/clearance-cues-r2-closure-native-harness.txt",
+      "category": "feature-document",
+      "bytes": 7765,
+      "sha256": "cabe1417271fa643997744a1d66afbf004430658ed76c2dd7d8cf49f7faac7cb"
+    },
+    {
+      "path": "docs/clearance-cues-r2-native-harness.txt",
+      "category": "feature-document",
+      "bytes": 9817,
+      "sha256": "128385fd44901dcdeb504236085c00a838e5beff20f4e09ae40fa13068e57e91"
+    },
+    {
+      "path": "docs/clearance-cues-r2-source-freeze.json",
+      "category": "feature-document",
+      "bytes": 1469,
+      "sha256": "e0b7f87e2cae17f0fe0da1e39f738f831631bdddaf7f8f6b304502485bc3f793"
+    },
+    {
+      "path": "docs/clearance-cues-transfer-manifest.json",
+      "category": "feature-document",
+      "bytes": 1371,
+      "sha256": "0e15e8347f694a7706e1eefeb4476b4b19f798a09489153636d40595869d5bb5"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-clearance-cues/clearance-cues-r2-closure/en-large-1600-reprojected.png",
+      "category": "raw-artifact",
+      "bytes": 378257,
+      "sha256": "03540388004d5a10e50ee159c714b773115b5b7d6284ebd0d477c26cea67b8a3"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-clearance-cues/clearance-cues-r2-closure/en-large-1920-witness.png",
+      "category": "raw-artifact",
+      "bytes": 527554,
+      "sha256": "aa9f0b6660c17862890aa5249343f663124646d0bc85a66de5a601f717df94d2"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-clearance-cues/clearance-cues-r2-closure/english-resize-preserves-fresh-projection-then-context-preset-and-flight-clear-cues.json",
+      "category": "raw-artifact",
+      "bytes": 4445,
+      "sha256": "495f4a85fa13734e051537de3ce3d1195837a4a2114a5df4b6c60df707948e3a"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-clearance-cues/clearance-cues-r2-closure/live-flight-no-cues.png",
+      "category": "raw-artifact",
+      "bytes": 342360,
+      "sha256": "37eaf3e519ce9e2874985e05edfbdb03e25e51be2ac28c3823dff74c8c9e15ce"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-clearance-cues/clearance-cues-r2-closure/witness-1600-1.json",
+      "category": "raw-artifact",
+      "bytes": 2640,
+      "sha256": "1e5840222cff7ff345ac2e18974e883632794ffd04b03680c2b28027d9f8c67b"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-clearance-cues/clearance-cues-r2-closure/witness-1600-2.json",
+      "category": "raw-artifact",
+      "bytes": 2640,
+      "sha256": "264ce3ba11e7f1dec606a8ee359e6cbee62d732c72466ac82671a03e6c35fc2f"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-clearance-cues/clearance-cues-r2-closure/witness-1920-1.json",
+      "category": "raw-artifact",
+      "bytes": 2649,
+      "sha256": "9ac865a26f5c10bc47946862cb9fd03f686faff9e2273f0d90167e2b74e5cf1d"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-clearance-cues/clearance-cues-r2/en-large-1920-witness.png",
+      "category": "raw-artifact",
+      "bytes": 527554,
+      "sha256": "aa9f0b6660c17862890aa5249343f663124646d0bc85a66de5a601f717df94d2"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-clearance-cues/clearance-cues-r2/english-large-labels-resize-cleanup-context-loss-and-live-flight-exclusion-failure.png",
+      "category": "raw-artifact",
+      "bytes": 378232,
+      "sha256": "12a2b6e0769aa0d758074270862264a68426b3a6840196a71de48bd045c12e8b"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-clearance-cues/clearance-cues-r2/english-large-labels-resize-cleanup-context-loss-and-live-flight-exclusion.json",
+      "category": "raw-artifact",
+      "bytes": 4871,
+      "sha256": "be767d2647bf72426b9914e4d17e50baa5272d1791100e8d20f78a51d38bdfba"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-clearance-cues/clearance-cues-r2/ko-1280-witness.png",
+      "category": "raw-artifact",
+      "bytes": 253076,
+      "sha256": "adb83d26f4b3aab28c9e82370572b5546d18a9021d03be00ec36cd4d964bc4a6"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-clearance-cues/clearance-cues-r2/korean-witness-selection-explicit-close-native-repair-and-fresh-undo.json",
+      "category": "raw-artifact",
+      "bytes": 4084,
+      "sha256": "dd1cb41a76e1c346288645c63f40b31ceba881baf79650ef7b5e33a14e9e2650"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-clearance-cues/clearance-cues-r2/witness-1280-1.json",
+      "category": "raw-artifact",
+      "bytes": 2661,
+      "sha256": "d958e168f700980a0aa7658551c76edfd93b2fe1c92bbe642ba90f1850f7dadd"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-clearance-cues/clearance-cues-r2/witness-1280-21.json",
+      "category": "raw-artifact",
+      "bytes": 2664,
+      "sha256": "b3dc836f0a2aa5d49c346d72f2085f95e9d5487e621909175103679de77f707e"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-clearance-cues/clearance-cues-r2/witness-1920-1.json",
+      "category": "raw-artifact",
+      "bytes": 2649,
+      "sha256": "9ac865a26f5c10bc47946862cb9fd03f686faff9e2273f0d90167e2b74e5cf1d"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "failedLocalCommit": "c41cd13ad969bd159dc89780a897a223ec79c0cd",
+  "localBackupRef": "backup/v6-trace-package",
+  "serverLimitBytes": 67108864,
+  "rejectedPushBytes": 133040348,
+  "cause": "Five renamed raw trace ZIPs bypassed the narrower trace.zip ignore rule.",
+  "resolution": "Keep raw ZIPs locally with SHA manifests; remove only Git index entries and amend the unpublished commit. No force push, application or static output change.",
+  "excludedTrackedZipPaths": [
+    "tests/browser/artifacts/builder-focus-drag/focus-drag-after/builder-focus-drag-en-larg-a6e91-uses-its-actual-mount-plane.trace.zip",
+    "tests/browser/artifacts/builder-focus-drag/focus-drag-after/builder-focus-drag-en-norm-01ab6-uses-its-actual-mount-plane.trace.zip",
+    "tests/browser/artifacts/builder-focus-drag/focus-drag-after/builder-focus-drag-ko-larg-5bb96-uses-its-actual-mount-plane.trace.zip",
+    "tests/browser/artifacts/builder-focus-drag/focus-drag-after/builder-focus-drag-ko-norm-9c8a9-uses-its-actual-mount-plane.trace.zip",
+    "tests/browser/artifacts/swingby-builder/builder-integration-v1/raycaster-harness-failure.trace.zip"
+  ]
+}

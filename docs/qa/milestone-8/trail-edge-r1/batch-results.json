@@ -1,0 +1,190 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/browser/deployment-trail-native.spec.ts",
+      "--trace=retain-on-failure",
+      "--output=C:/Users/gjtjw/Desktop/NASA_apps_challenge/m8-trail-edge-r1-traces",
+      "--reporter=list,json"
+    ],
+    "configFile": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\playwright.config.ts",
+    "rootDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/m8-trail-edge-r1-traces",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\m8-trail-edge-r1-traces",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser",
+        "snapshotDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5188",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "headless": true,
+          "launchOptions": {
+            "executablePath": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+            "args": [
+              "--disable-background-timer-throttling"
+            ]
+          },
+          "trace": "retain-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "deployment-trail-native.spec.ts",
+      "file": "deployment-trail-native.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Edge retained actual trail survives three native restores advancement and resource cleanup",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 13356,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[33m@@ -65,8 +65,8 @@\u001b[39m\n\u001b[2m      ],\u001b[22m\n\u001b[2m      \"radius\": 0.11551017106106282,\u001b[22m\n\u001b[2m    },\u001b[22m\n\u001b[2m    \"start\": 0,\u001b[22m\n\u001b[2m    \"usage\": 35048,\u001b[22m\n\u001b[32m-   \"version\": 44,\u001b[39m\n\u001b[31m+   \"version\": 45,\u001b[39m\n\u001b[2m    \"visible\": true,\u001b[22m\n\u001b[2m  }\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[33m@@ -65,8 +65,8 @@\u001b[39m\n\u001b[2m      ],\u001b[22m\n\u001b[2m      \"radius\": 0.11551017106106282,\u001b[22m\n\u001b[2m    },\u001b[22m\n\u001b[2m    \"start\": 0,\u001b[22m\n\u001b[2m    \"usage\": 35048,\u001b[22m\n\u001b[32m-   \"version\": 44,\u001b[39m\n\u001b[31m+   \"version\": 45,\u001b[39m\n\u001b[2m    \"visible\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-trail-native.spec.ts:59:102",
+                    "location": {
+                      "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-trail-native.spec.ts",
+                      "column": 102,
+                      "line": 59
+                    },
+                    "snippet": " \u001b[90m 57 |\u001b[39m   \u001b[36mawait\u001b[39m ext\u001b[33m.\u001b[39mevaluate(e\u001b[33m=>\u001b[39me\u001b[33m.\u001b[39mrestoreContext())\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForFunction(()\u001b[33m=>\u001b[39m\u001b[33m!\u001b[39m(window \u001b[36mas\u001b[39m any)\u001b[33m.\u001b[39m__game\u001b[33m.\u001b[39mdeployment()\u001b[33m.\u001b[39mgetState()\u001b[33m.\u001b[39mscene\u001b[33m.\u001b[39mcontextLost)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m ready(page)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m250\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m ext\u001b[33m.\u001b[39mdispose()\u001b[33m;\u001b[39m\n \u001b[90m 58 |\u001b[39m   s\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m state(page)\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m currentTrail\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m trail(ref)\u001b[33m,\u001b[39mcurrentPose\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m pose(page)\u001b[33m,\u001b[39mnative\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39m(window \u001b[36mas\u001b[39m any)\u001b[33m.\u001b[39m__allContextDeletionAudit)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 59 |\u001b[39m   expect(physical(s))\u001b[33m.\u001b[39mtoEqual(initial)\u001b[33m;\u001b[39mexpect(currentPose)\u001b[33m.\u001b[39mtoEqual(initialPose)\u001b[33m;\u001b[39mexpect(currentTrail)\u001b[33m.\u001b[39mtoEqual(initialTrail)\u001b[33m;\u001b[39massertTrail(currentTrail\u001b[33m,\u001b[39ms)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 60 |\u001b[39m   expect(native\u001b[33m.\u001b[39merrors)\u001b[33m.\u001b[39mtoEqual([])\u001b[33m;\u001b[39mexpect(native\u001b[33m.\u001b[39mcontexts\u001b[33m.\u001b[39mreduce((n\u001b[33m:\u001b[39mnumber\u001b[33m,\u001b[39mc\u001b[33m:\u001b[39many)\u001b[33m=>\u001b[39mn\u001b[33m+\u001b[39mc\u001b[33m.\u001b[39mrestores\u001b[33m,\u001b[39m\u001b[35m0\u001b[39m))\u001b[33m.\u001b[39mtoBe(i\u001b[33m+\u001b[39m\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39mrestores\u001b[33m.\u001b[39mpush({cycle\u001b[33m:\u001b[39mi\u001b[33m+\u001b[39m\u001b[35m1\u001b[39m\u001b[33m,\u001b[39mtime\u001b[33m:\u001b[39ms\u001b[33m.\u001b[39mruntime\u001b[33m.\u001b[39mtime\u001b[33m,\u001b[39mphysicalExact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39mposeExact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39mtrail\u001b[33m:\u001b[39mcurrentTrail\u001b[33m,\u001b[39mnative})\u001b[33m;\u001b[39m\n \u001b[90m 61 |\u001b[39m  }\n \u001b[90m 62 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39mjoin(out\u001b[33m,\u001b[39m\u001b[32m'three-restores-retained-trail.png'\u001b[39m)})\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-trail-native.spec.ts",
+                        "column": 102,
+                        "line": 59
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 1\u001b[39m\n\n\u001b[33m@@ -65,8 +65,8 @@\u001b[39m\n\u001b[2m      ],\u001b[22m\n\u001b[2m      \"radius\": 0.11551017106106282,\u001b[22m\n\u001b[2m    },\u001b[22m\n\u001b[2m    \"start\": 0,\u001b[22m\n\u001b[2m    \"usage\": 35048,\u001b[22m\n\u001b[32m-   \"version\": 44,\u001b[39m\n\u001b[31m+   \"version\": 45,\u001b[39m\n\u001b[2m    \"visible\": true,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  57 |   await ext.evaluate(e=>e.restoreContext());await page.waitForFunction(()=>!(window as any).__game.deployment().getState().scene.contextLost);await ready(page);await page.waitForTimeout(250);await ext.dispose();\n  58 |   s=await state(page);const currentTrail=await trail(ref),currentPose=await pose(page),native=await page.evaluate(()=>(window as any).__allContextDeletionAudit);\n> 59 |   expect(physical(s)).toEqual(initial);expect(currentPose).toEqual(initialPose);expect(currentTrail).toEqual(initialTrail);assertTrail(currentTrail,s);\n     |                                                                                                      ^\n  60 |   expect(native.errors).toEqual([]);expect(native.contexts.reduce((n:number,c:any)=>n+c.restores,0)).toBe(i+1);restores.push({cycle:i+1,time:s.runtime.time,physicalExact:true,poseExact:true,trail:currentTrail,native});\n  61 |  }\n  62 |  await page.screenshot({path:join(out,'three-restores-retained-trail.png')});\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-trail-native.spec.ts:59:102"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T05:45:02.609Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\m8-trail-edge-r1-traces\\deployment-trail-native-Ed-dc5ca-cement-and-resource-cleanup\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\m8-trail-edge-r1-traces\\deployment-trail-native-Ed-dc5ca-cement-and-resource-cleanup\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\deployment-trail-native.spec.ts",
+                    "column": 102,
+                    "line": 59
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5f97efb1768e92088a72-9fc4114f40512bda0924",
+          "file": "deployment-trail-native.spec.ts",
+          "line": 48,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-15T05:45:01.943Z",
+    "duration": 16582.016,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

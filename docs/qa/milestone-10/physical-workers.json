@@ -1,0 +1,29 @@
+{
+  "unchangedFromV9": true,
+  "files": [
+    {
+      "path": "dist/assets/deployment.worker-pnFV-DFf.js",
+      "sha256": "e58ead0347a0145af9a133167acd45dd2ebfa3da533d43be95fa722a039659ec"
+    },
+    {
+      "path": "dist/assets/forecast.worker-BOq_7-Hd.js",
+      "sha256": "dd816465c27f222fb41f6f946e2d915222970f60f820e0c89bffa8c9979ab958"
+    },
+    {
+      "path": "dist/assets/preview.worker-CkVnPFfo.js",
+      "sha256": "417cf5e354ff8788aad203821c630ef8eb4412dc3a2324b404f2b76e49f52fe5"
+    },
+    {
+      "path": "dist/assets/review.worker-BoLKL8-R.js",
+      "sha256": "6ab6d7be0530d7d7d747903842a9ad4bcbb65c0ed5587718a80449ec39c09a28"
+    },
+    {
+      "path": "dist/assets/swingby.worker-D95WMzCs.js",
+      "sha256": "bfa6c916202c1ef5c741d1d719d3e932e689094ced16b121b5ee01f31a6aaa6a"
+    },
+    {
+      "path": "dist/assets/transfer.worker-xBEW4vhK.js",
+      "sha256": "6650792bcf9c100126aaced3467ffcb09de67ef4373236cf9fb61faf4a59915b"
+    }
+  ]
+}

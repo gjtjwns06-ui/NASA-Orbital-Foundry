@@ -1,0 +1,571 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-15",
+  "purpose": "제조사 원문·조건·단위를 보존하는 출처 카드. 기존 1.3 모델과 별도 hardware-2.0.0 모델의 적용 범위를 구별한다. RF 출력, DC 소비전력, 저장 에너지, 게임 크레딧은 서로 다른 값이다.",
+  "provenance": "manufacturer-published specifications cross-referenced with NASA 2026 State-of-the-Art tables; not independently tested or NASA certified",
+  "pricePolicy": "가격 미공개: null. 게임 예산 포인트는 실제 구매 가격이 아니다.",
+  "records": [
+    {
+      "id": "gomspace-tsp45w",
+      "manufacturer": "GomSpace",
+      "product": "NanoPower TSP-45W",
+      "category": "solar-array",
+      "relatedGameKinds": [
+        "solar",
+        "solarLarge"
+      ],
+      "priceUsd": null,
+      "specifications": [
+        {
+          "key": "massTotalKg",
+          "value": 0.885,
+          "unit": "kg",
+          "qualifier": "manufacturer total mass",
+          "rawValue": 885,
+          "rawUnit": "g",
+          "sourceId": "manufacturer-page",
+          "locator": "Technical insights > Mass and Dimensions"
+        },
+        {
+          "key": "massDeployedStructureKg",
+          "value": 0.65,
+          "unit": "kg",
+          "qualifier": "deployed mass, a separate manufacturer category; not mass lost on deployment",
+          "rawValue": 650,
+          "rawUnit": "g",
+          "sourceId": "manufacturer-page",
+          "locator": "Technical insights > Mass and Dimensions"
+        },
+        {
+          "key": "powerPerWingW",
+          "value": 45,
+          "unit": "W",
+          "qualifier": "up to; beginning of life",
+          "condition": "Manufacturer states approximately 1 W/cell at solar flux 1367 W/m² and approximately 45 W per array; orientation, temperature and degradation must not be ignored.",
+          "sourceId": "manufacturer-page",
+          "locator": "Panel release; Technical insights > Power Production"
+        },
+        {
+          "key": "stowedDimensionsMm",
+          "value": [
+            330,
+            208,
+            9
+          ],
+          "unit": "mm",
+          "qualifier": "stowed configuration",
+          "sourceId": "manufacturer-page",
+          "locator": "Technical insights > Mass and Dimensions"
+        }
+      ],
+      "sources": [
+        {
+          "id": "nasa-sst",
+          "type": "NASA table",
+          "url": "https://www.nasa.gov/smallsat-institute/sst-soa/power-subsystems/",
+          "locator": "2026 Chapter 3, Table 3-2, GomSpace NanoPower TSP Per wing row",
+          "notes": "NASA lists 45 W/wing and 60 W/kg. Do not combine that specific-power number with a differently scoped current mass to infer a new mass."
+        },
+        {
+          "id": "manufacturer-page",
+          "type": "manufacturer product page",
+          "url": "https://gomspace.com/product/nanopower-tsp-45w/",
+          "locator": "Panel release; Technical insights > Power Production, Mass and Dimensions",
+          "retrievedOn": "2026-11-15"
+        },
+        {
+          "id": "manufacturer-datasheet",
+          "type": "linked manufacturer datasheet",
+          "url": "https://gomspace.com/wp-content/uploads/2025/09/Datasheet-NanoPower-TSP_45W.pdf",
+          "locator": "DS 1038993 revision 3.3, 24 May 2024",
+          "notes": "Linked primary datasheet identified; final numerical extraction above uses readable current manufacturer HTML, not unverified PDF table cells."
+        }
+      ],
+      "limitations": [
+        "Mass category boundaries and SADA/HDRM/harness inclusions need configuration confirmation before flight design.",
+        "45 W is peak wing power, not orbit-averaged power and not continuous output during eclipse.",
+        "Tracking-drive consumption is not supplied as a verified scalar in this record; keep unknown rather than zero.",
+        "Game model 1.1 uses published 0.885 kg and 45 W for its solar module; its mesh, mounting footprint and credits are pedagogic assumptions. The large module is a derived six-wing assembly (6 × 0.885 kg + assumed 0.40 kg mount, 6 × 45 W), not a manufacturer-verified integrated product."
+      ]
+    },
+    {
+      "id": "gomspace-bpx100",
+      "manufacturer": "GomSpace",
+      "product": "NanoPower BPX 100 Wh, 4S-2P configuration",
+      "category": "battery",
+      "relatedGameKinds": [
+        "battery"
+      ],
+      "priceUsd": null,
+      "specifications": [
+        {
+          "key": "massKg",
+          "value": 0.5,
+          "unit": "kg",
+          "rawValue": 500,
+          "rawUnit": "g",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "PDF p.17 / printed p.13, Table 7.1"
+        },
+        {
+          "key": "nominalEnergyWh",
+          "value": 100,
+          "unit": "Wh",
+          "qualifier": "nominal rating",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "PDF p.5 / printed p.1, §1.2; PDF p.6 / printed p.2 configuration table"
+        },
+        {
+          "key": "recommendedRangeEnergyWh",
+          "value": 86,
+          "unit": "Wh",
+          "qualifier": "headline recommended-operating-range value; document has additional voltage-dependent table values",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "PDF p.5 / printed p.1, §1.2"
+        },
+        {
+          "key": "nominalVoltageV",
+          "value": 14.4,
+          "unit": "V",
+          "condition": "4S-2P eight-cell configuration",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "PDF p.6 / printed p.2, §1.3 configuration table"
+        },
+        {
+          "key": "nominalCapacityAh",
+          "value": 7,
+          "unit": "Ah",
+          "condition": "4S-2P eight-cell configuration; 3500 mAh nominal cells",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "PDF p.6 / printed p.2, §1.3 configuration table"
+        },
+        {
+          "key": "heaterPowerW",
+          "value": 6,
+          "unit": "W",
+          "qualifier": "heater active; not continuous idle draw",
+          "condition": "16 V 4S-2P configuration",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "PDF p.13 / printed p.9, Table 6.1"
+        },
+        {
+          "key": "maxConnectorDischargeCurrentA",
+          "value": 6,
+          "unit": "A",
+          "qualifier": "four power pins with specified derating; not a promise of unlimited battery discharge capability",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "PDF p.8 / printed p.4, Table 2.2"
+        },
+        {
+          "key": "dimensionsMm",
+          "value": [
+            93,
+            86,
+            41
+          ],
+          "unit": "mm",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "PDF p.17 / printed p.13, Table 7.1"
+        }
+      ],
+      "sources": [
+        {
+          "id": "nasa-sst",
+          "type": "NASA table",
+          "url": "https://www.nasa.gov/smallsat-institute/sst-soa/power-subsystems/",
+          "locator": "2026 Chapter 3, Table 3-5, NanoPower BPX 3000mA 4S-2P row",
+          "notes": "NASA row is the 3000 mAh-cell configuration with 6.0 Ah; the current 100 Wh datasheet is a different 3500 mAh nominal-cell configuration. Values are not merged."
+        },
+        {
+          "id": "manufacturer-datasheet",
+          "type": "manufacturer datasheet",
+          "url": "https://gomspace.com/wp-content/uploads/2025/09/gs-ds-nanopower-BPX-100-Wh-1076870-1.1.0.pdf",
+          "revision": "DS 1076870 1.1.0",
+          "publishedOn": "2026-04-21",
+          "locator": "PDF pp.5,6,8,13,17 / printed pp.1,2,4,9,13"
+        },
+        {
+          "id": "manufacturer-page",
+          "type": "manufacturer product page",
+          "url": "https://gomspace.com/product/nanopower-bpx/",
+          "notes": "Landing page still contains 6 Ah/3 Ah values next to 3500 mAh-cell text. This record prioritizes the identified datasheet configuration table."
+        }
+      ],
+      "limitations": [
+        "The 100 Wh name is stored energy, not watts of power.",
+        "100 Wh nominal is not automatically usable energy: recommended range and mission temperature/discharge policy matter.",
+        "Datasheet §1.2 states86 Wh in recommended range; Table2.2 additionally lists87 and89 Wh at specified voltage ranges. This unresolved internal discrepancy is preserved; no average is invented.",
+        "This record does not estimate price, cycle life, charge efficiency or heater duty cycle.",
+        "Firmware/bus and raw-battery protection requirements remain outside the educational module."
+      ]
+    },
+    {
+      "id": "gomspace-ax100u",
+      "manufacturer": "GomSpace",
+      "product": "NanoCom AX100U",
+      "category": "radio",
+      "relatedGameKinds": [
+        "radio"
+      ],
+      "priceUsd": null,
+      "specifications": [
+        {
+          "key": "massKg",
+          "value": 0.0245,
+          "unit": "kg",
+          "rawValue": 24.5,
+          "rawUnit": "g",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "PDF p.4, §2.1"
+        },
+        {
+          "key": "supplyVoltageV",
+          "value": 3.3,
+          "unit": "V",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "PDF p.11, §7 Electrical Characteristics"
+        },
+        {
+          "key": "txCurrentTypicalA",
+          "value": 0.8,
+          "unit": "A",
+          "condition": "maximum PCL, +25°C",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "PDF p.11, §7, Itx nominal temp row"
+        },
+        {
+          "key": "txDcPowerTypicalW",
+          "value": 2.64,
+          "unit": "W",
+          "provenance": "derived",
+          "formula": "3.3 V × 0.800 A",
+          "condition": "maximum PCL, +25°C; calculated DC supply consumption, not RF output",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "Derived from PDF p.11, §7"
+        },
+        {
+          "key": "rxCurrentTypicalA",
+          "value": 0.055,
+          "unit": "A",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "PDF p.11, §7, Irx row"
+        },
+        {
+          "key": "rxDcPowerTypicalW",
+          "value": 0.1815,
+          "unit": "W",
+          "provenance": "derived",
+          "formula": "3.3 V × 0.055 A",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "Derived from PDF p.11, §7"
+        },
+        {
+          "key": "rfOutputTypicalDbm",
+          "value": 30,
+          "unit": "dBm",
+          "condition": "RF connector; table range29–31dBm",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "PDF p.12, §8.1, Pout row"
+        },
+        {
+          "key": "rfOutputTypicalW",
+          "value": 1,
+          "unit": "W",
+          "provenance": "derived",
+          "formula": "10^((30dBm−30)/10)",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "Derived from PDF p.12, §8.1"
+        },
+        {
+          "key": "signalRateMaxBps",
+          "value": 38400,
+          "unit": "bit/s",
+          "condition": "capable signal bit rate; within25kHz bandwidth stated maximum is19200bit/s",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "PDF p.12, §8.1, SBRTX2 and SBRTX rows"
+        },
+        {
+          "key": "dimensionsMm",
+          "value": [
+            65,
+            40,
+            6.5
+          ],
+          "unit": "mm",
+          "sourceId": "manufacturer-datasheet",
+          "locator": "PDF p.4, §2.1"
+        }
+      ],
+      "sources": [
+        {
+          "id": "nasa-sst",
+          "type": "NASA table",
+          "url": "https://www.nasa.gov/smallsat-institute/sst-soa/soa-communications/",
+          "locator": "2026 Chapter9 Table9-3, GomSpace NanoCom AX100 row",
+          "notes": "NASA lists24.5g,0.1–38.4kbps and30dBm. Its dimension entry65×40×70mm appears inconsistent with primary65×40×6.5mm; primary datasheet dimensions are retained."
+        },
+        {
+          "id": "manufacturer-datasheet",
+          "type": "manufacturer datasheet",
+          "url": "https://gomspace.com/wp-content/uploads/2025/09/gs-ds-nanocom-ax100.pdf",
+          "revision": "DS1013823 rev3.7",
+          "publishedOn": "2019-11-29",
+          "locator": "PDF pp.4,6,11,12"
+        },
+        {
+          "id": "manufacturer-page",
+          "type": "manufacturer product page",
+          "url": "https://gomspace.com/product/nanocom-ax100/",
+          "locator": "Technical insights; Downloadable data",
+          "retrievedOn": "2026-11-15"
+        }
+      ],
+      "limitations": [
+        "Radio board only; antenna, harness, mounting and other electronics must be budgeted separately.",
+        "UHF430–440MHz variant includes excluded frequency windows specified on datasheetp.6; not all frequencies in range are interchangeable.",
+        "38,400bit/s is a signal-rate capability, not guaranteed payload throughput or a Mars-to-Earth downlink rate.",
+        "RF output1W and DC consumption2.64W are different fields.",
+        "Legacy 1.3 does not use this radio. Hardware 2.0 uses the UHF board plus an authored 75 g carrier; TX/RX power is typical, framing/coding/voltage tolerance/port drivers are explicit game assumptions."
+      ]
+    },
+    {
+      "id": "isispace-sband-patch",
+      "manufacturer": "ISISPACE",
+      "product": "S-Band Patch Antenna",
+      "category": "passive-antenna",
+      "relatedGameKinds": [
+        "antenna"
+      ],
+      "priceUsd": null,
+      "specifications": [
+        {
+          "key": "massKg",
+          "value": 0.06,
+          "unit": "kg",
+          "comparison": "lt",
+          "rawValue": 60,
+          "rawUnit": "g",
+          "sourceId": "manufacturer-page",
+          "locator": "Product Specification > Mass"
+        },
+        {
+          "key": "frequencyRangeMHz",
+          "value": [
+            2200,
+            2290
+          ],
+          "unit": "MHz",
+          "sourceId": "manufacturer-page",
+          "locator": "Product Specification > Frequency Range"
+        },
+        {
+          "key": "boresightGainDbic",
+          "value": 6.5,
+          "unit": "dBic",
+          "condition": "centre frequency; RHCP",
+          "sourceId": "manufacturer-page",
+          "locator": "Product Specification > Gain in boresight (centre frequency)"
+        },
+        {
+          "key": "halfPowerBeamWidthDeg",
+          "value": 100,
+          "unit": "deg",
+          "sourceId": "manufacturer-page",
+          "locator": "Product Specification > Half Power Beam Width"
+        },
+        {
+          "key": "powerHandlingW",
+          "value": 2,
+          "unit": "W",
+          "qualifier": "RF power handling, NOT DC power draw",
+          "sourceId": "manufacturer-page",
+          "locator": "Product Specification > Power handling"
+        },
+        {
+          "key": "diameterMm",
+          "value": 80,
+          "unit": "mm",
+          "sourceId": "manufacturer-page",
+          "locator": "Product Specification > Dimensions"
+        },
+        {
+          "key": "heightWithoutConnectorMm",
+          "value": 5,
+          "unit": "mm",
+          "sourceId": "manufacturer-page",
+          "locator": "Product Specification > Dimensions"
+        }
+      ],
+      "sources": [
+        {
+          "id": "nasa-sst",
+          "type": "NASA table",
+          "url": "https://www.nasa.gov/smallsat-institute/sst-soa/soa-communications/",
+          "locator": "2026 Chapter9 Table9-2, ISISPACE S-Band Patch Antenna row",
+          "notes": "NASA table lists50g and gain6.5 under dBi heading; current manufacturer gives<60g and6.5dBic. Preserve manufacturer bound and polarization-referenced unit; do not silently relabel as dBi."
+        },
+        {
+          "id": "manufacturer-page",
+          "type": "manufacturer product page",
+          "url": "https://isispace.nl/product/s-band-patch-antenna/",
+          "locator": "Product Specification table",
+          "retrievedOn": "2026-11-15"
+        }
+      ],
+      "limitations": [
+        "This is a passive antenna, not a radio or power amplifier.",
+        "2W is allowable RF power handling, not electricity consumed by the passive patch.",
+        "Current manufacturer mass is an upper bound; do not display60g as an exact mass.",
+        "The NASA table's earlier50g and current manufacturer<60g are kept as separate source statements.",
+        "Gain/beamwidth alone do not guarantee a link; range, pointing, polarization, losses, receiver noise and data rate still matter."
+      ]
+    },
+    {
+      "id": "jpl-iris22",
+      "manufacturer": "NASA/JPL",
+      "product": "Iris V2.2 small spacecraft transponder",
+      "category": "radio",
+      "relatedGameKinds": [
+        "radio"
+      ],
+      "priceUsd": null,
+      "specifications": [
+        {
+          "key": "electronicsMassKg",
+          "value": 1.105,
+          "unit": "kg",
+          "formula": "0.875 stack + 0.150 SSPA + 0.080 LNA",
+          "sourceId": "manufacturer-brochure"
+        },
+        {
+          "key": "supplyRangeV",
+          "value": [
+            9,
+            28
+          ],
+          "unit": "V",
+          "sourceId": "manufacturer-brochure"
+        },
+        {
+          "key": "rxPowerW",
+          "value": 9.1,
+          "unit": "W",
+          "condition": "12 V table RX row; not the inconsistent prose headline",
+          "sourceId": "manufacturer-brochure"
+        },
+        {
+          "key": "txPowerW",
+          "value": 25,
+          "unit": "W",
+          "condition": "12 V table TX row",
+          "sourceId": "manufacturer-brochure"
+        },
+        {
+          "key": "rxTxPowerW",
+          "value": 29,
+          "unit": "W",
+          "condition": "12 V simultaneous RX/TX table row",
+          "sourceId": "manufacturer-brochure"
+        },
+        {
+          "key": "rfPowerW",
+          "value": 3.8,
+          "unit": "W",
+          "condition": "conservative brochure headline; separate 4 W BOL table value retained as discrepancy",
+          "sourceId": "manufacturer-brochure"
+        },
+        {
+          "key": "interfaces",
+          "value": [
+            "SPI",
+            "SpaceWire"
+          ],
+          "unit": "protocol",
+          "sourceId": "manufacturer-brochure"
+        }
+      ],
+      "sources": [
+        {
+          "id": "manufacturer-brochure",
+          "type": "JPL technical brochure",
+          "url": "https://scienceandtechnology.jpl.nasa.gov/sites/default/files/documents/Brochure_Iris_Transponder_V2.2_SEP_2022.pdf",
+          "revision": "V2.2 September 2022",
+          "locator": "Mass, electrical and operating-mode tables; source inconsistencies disclosed"
+        }
+      ],
+      "limitations": [
+        "Game mass 1.225 kg includes 0.120 kg authored harness/carrier. All enclosure dimensions are authored.",
+        "35 W reserved port capacity is distinct from selected 25 W transmit draw. Headline/prose 34 W, 10.3 W RX and 35 W values are not silently merged.",
+        "Selected signal modes, 80% payload efficiency, coding threshold, drivers and ground network are authored assumptions. Not a DSN service guarantee."
+      ]
+    },
+    {
+      "id": "bct-xact2026",
+      "manufacturer": "Blue Canyon Technologies",
+      "product": "XACT-15 / XACT-50 ADCS",
+      "category": "attitude-control",
+      "relatedGameKinds": [
+        "adcs"
+      ],
+      "priceUsd": null,
+      "specifications": [
+        {
+          "key": "massKg",
+          "value": [
+            0.89,
+            1.23
+          ],
+          "unit": "kg",
+          "condition": "XACT-15 / XACT-50",
+          "sourceId": "manufacturer-datasheet"
+        },
+        {
+          "key": "maximumTorqueNm",
+          "value": [
+            0.005,
+            0.006
+          ],
+          "unit": "N m",
+          "condition": "XACT-15 / XACT-50",
+          "sourceId": "manufacturer-datasheet"
+        },
+        {
+          "key": "momentumNms",
+          "value": [
+            0.015,
+            0.05
+          ],
+          "unit": "N m s",
+          "condition": "per axis; XACT-15 / XACT-50",
+          "sourceId": "manufacturer-datasheet"
+        },
+        {
+          "key": "supplyVoltageV",
+          "value": 12,
+          "unit": "V",
+          "sourceId": "manufacturer-datasheet"
+        },
+        {
+          "key": "interface",
+          "value": "RS-422",
+          "unit": "protocol",
+          "sourceId": "manufacturer-datasheet"
+        }
+      ],
+      "sources": [
+        {
+          "id": "manufacturer-datasheet",
+          "type": "manufacturer datasheet",
+          "url": "https://www.bluecanyontech.com/wp-content/uploads/ADCS-2026.pdf",
+          "revision": "1/2026",
+          "locator": "PDF p.2 mechanical, electrical, torque and momentum table"
+        }
+      ],
+      "limitations": [
+        "Game carriers add 0.05 kg per unit. DC idle/slew power and control software are authored assumptions.",
+        "Published example slew rates refer to specified small CubeSats, not this metre-scale spacecraft. Game slew derives from its own box inertia and wheel limits."
+      ]
+    }
+  ],
+  "licensePolicy": "Public specifications are cited factual references, not a license to redistribute manufacturer artwork, CAD, trademarks or entire PDFs. All game meshes and proxy envelopes are original authored approximations."
+}

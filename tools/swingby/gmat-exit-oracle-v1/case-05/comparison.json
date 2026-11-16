@@ -1,0 +1,239 @@
+{
+  "caseId": "case-05",
+  "xMps": 0,
+  "yMps": 1.5,
+  "deltaVelocityKmS": [
+    -0.00015775668947539323,
+    0.0006161784459144488,
+    -0.001358468604611906
+  ],
+  "pass": false,
+  "scriptSha256": "9604f5925935dad3d643eee3f1ee0a851965ebad478b190909989e8ac2b5cf01",
+  "csvSha256": "fcaef7a078cdc77514decccc28ae9dfb4cd3f0e65276ddd369c21eb79a42a49b",
+  "samples": [
+    {
+      "name": "start",
+      "elapsed": 0,
+      "tdbModJulian": 31617.858318673447,
+      "tdbElapsedSeconds": 0,
+      "state": {
+        "positionKm": [
+          440153.29982438684,
+          -37808.39413296431,
+          -68263.51721821725
+        ],
+        "velocityKmS": [
+          -3.0091832714976308,
+          0.3068773802042486,
+          0.48864582950475466
+        ]
+      },
+      "fuelKg": 0.25,
+      "totalMassKg": 54.364999999999995,
+      "positionErrorM": 0.000012808893035087623,
+      "velocityErrorMps": 3.0282846668030173e-12
+    },
+    {
+      "name": "node-minus-1",
+      "elapsed": 3598.9999995566905,
+      "tdbModJulian": 31617.89997376602,
+      "tdbElapsedSeconds": 3598.999998299405,
+      "state": {
+        "positionKm": [
+          429321.8595275581,
+          -36703.82325593382,
+          -66504.66544458643
+        ],
+        "velocityKmS": [
+          -3.0099620346712017,
+          0.30694411662102183,
+          0.4887665365629186
+        ]
+      },
+      "fuelKg": 0.25,
+      "totalMassKg": 54.364999999999995,
+      "positionErrorM": 0.011707752609496124,
+      "velocityErrorMps": 7.843053921032547e-8
+    },
+    {
+      "name": "before-burn",
+      "elapsed": 3599.999999476131,
+      "tdbModJulian": 31617.899985340093,
+      "tdbElapsedSeconds": 3599.9999982188456,
+      "state": {
+        "positionKm": [
+          429318.8495654166,
+          -36703.51631179452,
+          -66504.17667803541
+        ],
+        "velocityKmS": [
+          -3.0099622565357933,
+          0.306944135588779,
+          0.48876657093116016
+        ]
+      },
+      "fuelKg": 0.25,
+      "totalMassKg": 54.364999999999995,
+      "positionErrorM": 0.011785518568149935,
+      "velocityErrorMps": 7.845225334242315e-8
+    },
+    {
+      "name": "after-burn",
+      "elapsed": 3599.999999476131,
+      "tdbModJulian": 31617.899985340093,
+      "tdbElapsedSeconds": 3599.9999982188456,
+      "state": {
+        "positionKm": [
+          429318.8495654166,
+          -36703.51631179452,
+          -66504.17667803541
+        ],
+        "velocityKmS": [
+          -3.010120012898266,
+          0.30756031411967655,
+          0.4874081023271213
+        ]
+      },
+      "fuelKg": 0.21385753759872522,
+      "totalMassKg": 54.32885753759872,
+      "positionErrorM": 0.01178808829417219,
+      "velocityErrorMps": 3.5839288411342317e-7
+    },
+    {
+      "name": "node-plus-1",
+      "elapsed": 3600.9999993955716,
+      "tdbModJulian": 31617.899996914166,
+      "tdbElapsedSeconds": 3600.999998138286,
+      "state": {
+        "positionKm": [
+          429315.83944529295,
+          -36703.2087514773,
+          -66503.68926992081
+        ],
+        "velocityKmS": [
+          -3.010120234765979,
+          0.3075603330876753,
+          0.4874081366958336
+        ]
+      },
+      "fuelKg": 0.21385753759872522,
+      "totalMassKg": 54.32885753759872,
+      "positionErrorM": 0.01187339011145458,
+      "velocityErrorMps": 3.583860740585589e-7
+    },
+    {
+      "name": "periapsis",
+      "elapsed": 141841.66973009706,
+      "tdbModJulian": 31619.50000466521,
+      "tdbElapsedSeconds": 141841.6696882923,
+      "state": {
+        "positionKm": [
+          -1642.5500164031982,
+          3681.2678166925907,
+          1743.7240102663636
+        ],
+        "velocityKmS": [
+          -4.933992764865688,
+          -2.0675793321370897,
+          -0.2827377756355105
+        ]
+      },
+      "fuelKg": 0.21385753759872522,
+      "totalMassKg": 54.32885753759872,
+      "positionErrorM": 0.13494248978203693,
+      "velocityErrorMps": 0.00005135522546156657
+    },
+    {
+      "name": "outward-exit",
+      "elapsed": 171402.44796745246,
+      "tdbModJulian": 31619.842143302118,
+      "tdbElapsedSeconds": 171402.44791716104,
+      "state": {
+        "positionKm": [
+          -65577.36824303865,
+          -72062.11467122287,
+          -22509.11822911352
+        ],
+        "velocityKmS": [
+          -1.897729204704695,
+          -2.4141534655479973,
+          -0.789664864668298
+        ]
+      },
+      "fuelKg": 0.21385753759872522,
+      "totalMassKg": 54.32885753759872,
+      "positionErrorM": 0.2785447974769912,
+      "velocityErrorMps": 0.000007991331001308272
+    },
+    {
+      "name": "outward-patch",
+      "elapsed": 326163.76033510314,
+      "tdbModJulian": 31621.633362194745,
+      "tdbElapsedSeconds": 326163.7602401781,
+      "state": {
+        "positionKm": [
+          -350702.6150455773,
+          -435769.1008581519,
+          -141569.65260460973
+        ],
+        "velocityKmS": [
+          -1.8257870653335022,
+          -2.3301253084642646,
+          -0.7628798921772546
+        ]
+      },
+      "fuelKg": 0.21385753759872522,
+      "totalMassKg": 54.32885753759872,
+      "positionErrorM": 1.2280200369814798,
+      "velocityErrorMps": 0.000006368047605749267
+    }
+  ],
+  "errors": {
+    "maxPositionM": 1.2280200369814798,
+    "maxVelocityMps": 0.00005135522546156657,
+    "periapsisAltitudeKm": 0.000015360596080427058,
+    "exitTimeS": 0.000029824906960129738,
+    "patchTimeS": 0.000058238860219717026,
+    "exitSpeedRelative": 3.017560395591798e-10,
+    "exitDirectionDeg": 8.303919066703585e-9,
+    "exitEnergyKm2S2": 1.72071509041416e-7,
+    "fuelKg": 0,
+    "burnPositionJumpM": 0,
+    "burnVectorErrorMps": 3.3786555056220446e-7
+  },
+  "periapsisAltitudeKm": 1002.5697533830435,
+  "clears250Km": true,
+  "gmatSolar": {
+    "positionKm": [
+      -166136813.31960687,
+      -151490546.4457209,
+      -64996851.61929866
+    ],
+    "velocityKmS": [
+      16.075066276804957,
+      -15.988609582286939,
+      -7.500693067673291
+    ],
+    "energyKm2S2": -281.89475352661043,
+    "directionErrorDeg": 0.06153139243922765,
+    "directionPassed": true,
+    "energyPassed": true
+  },
+  "analyticSolar": {
+    "positionKm": [
+      -166136813.31942922,
+      -151490546.4458294,
+      -64996851.619468436
+    ],
+    "velocityKmS": [
+      16.075066282186842,
+      -15.988609585235938,
+      -7.500693072796562
+    ],
+    "energyKm2S2": -281.8947533545389,
+    "directionErrorDeg": 0.06153140033601388,
+    "directionPassed": true,
+    "energyPassed": true
+  },
+  "expectedFuelUsedKg": 0.036142462401274784
+}

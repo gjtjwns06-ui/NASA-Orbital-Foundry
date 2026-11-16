@@ -1,0 +1,14 @@
+{
+  "completedAt": "2026-11-14T20:43:46.3111282Z",
+  "nodeVersion": "v24.14.0",
+  "vitestVersion": "4.1.12",
+  "exitCode": 0,
+  "testFilesPassed": 1,
+  "testsPassed": 10,
+  "testsFailed": 0,
+  "durationSeconds": 29.3,
+  "testDurationSeconds": 28.38,
+  "sourceManifestSha256": "4f1d90df89c38b6f66f1a03ce54ca865e1778127f1452bf29107c224c355eda8",
+  "sourceFilesChangedDuringRun": [],
+  "scope": "Eight released-worker regressions plus two runtime3 command/preview/idempotency/replay-cancellation tests. Actual production entry bundled into worker_threads. Prepared decision checkpoint comes from genuine elapsed runtime and is independently replayed by the worker; not browser or full UI acceptance."
+}

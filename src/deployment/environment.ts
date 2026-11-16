@@ -1,0 +1,15 @@
+import {circularState,C_KM_S,EARTH_RADIUS_KM,groundPosition,isEclipsed,SUN_DIRECTION} from '../sim/physics';
+import {add,cross,dot,freeze,length,scale,sub,unit} from './math';
+import type {Vec3} from './types';
+/** Educational spherical rotating Earth/station network inherited from M01;
+ * these coordinates are NOT a real network commitment or IERS/UT1 ephemeris. */
+export const COMMISSIONING_ENVIRONMENT=freeze({epoch:'2026-11-15 00:00:00 TAI',frame:'EarthMJ2000Eq',altitudeKm:600,inclinationDeg:51.6,durationSeconds:10800,sunDirection:[...SUN_DIRECTION] as Vec3,earthRotationRadS:7.2921159e-5,groundMinimumElevationDeg:5,stations:[{id:'station-a',latDeg:35,lonDeg:75},{id:'station-b',latDeg:-35,lonDeg:-60},{id:'station-c',latDeg:35,lonDeg:-140},{id:'station-d',latDeg:-25,lonDeg:130},{id:'station-e',latDeg:30,lonDeg:-15}]});
+export interface CommissioningEnvironment {timeSeconds:number;positionKm:Vec3;velocityKmS:Vec3;sunDirection:Vec3;eclipse:boolean;ground:{id:string;positionKm:Vec3;direction:Vec3;rangeKm:number;elevationDeg:number;visible:boolean}[]}
+export function commissioningEnvironmentAt(time:number):CommissioningEnvironment {const e=COMMISSIONING_ENVIRONMENT,s=circularState(e.altitudeKm,e.inclinationDeg,time);return {timeSeconds:time,...s,sunDirection:[...e.sunDirection],eclipse:isEclipsed(s.positionKm,EARTH_RADIUS_KM,e.sunDirection),ground:e.stations.map(g=>{const p=groundPosition(g.latDeg,g.lonDeg,time),relative=sub(p,s.positionKm),elevation=Math.asin(dot(unit(scale(relative,-1)),unit(p)))*180/Math.PI;return {id:g.id,positionKm:p,direction:unit(relative),rangeKm:length(relative),elevationDeg:elevation,visible:elevation>e.groundMinimumElevationDeg};})};}
+export function groundReceiverAt(stationId:string,time:number):Vec3 {const g=COMMISSIONING_ENVIRONMENT.stations.find(g=>g.id===stationId);if(!g)throw new Error('UNKNOWN_STATION');return groundPosition(g.latDeg,g.lonDeg,time);}
+/** Moving-station light time. The emitted position is fixed at its emission
+ * epoch; only the receiver is advanced during the photon flight. */
+export function commissioningArrival(emittedAt:number,emitterPositionKm:Vec3,stationId:string):number {let arrival=emittedAt+length(sub(groundReceiverAt(stationId,emittedAt),emitterPositionKm))/C_KM_S;for(let i=0;i<12;i++){const next=emittedAt+length(sub(groundReceiverAt(stationId,arrival),emitterPositionKm))/C_KM_S;if(Math.abs(next-arrival)<1e-10)return next;arrival=next;}return arrival;}
+/** Eclipse boundaries are pinned once, rather than skipped by a high warp.
+ * The fixed circular orbit/Sun model has at most two crossings per orbit. */
+export function commissioningEclipseEvents():number[]{const end=COMMISSIONING_ENVIRONMENT.durationSeconds,events:number[]=[];let previous=false;for(let time=0;time<=end;time+=30){const now=commissioningEnvironmentAt(time).eclipse;if(time&&now!==previous){let a=time-30,b=time;for(let i=0;i<40;i++){const m=(a+b)/2;if(commissioningEnvironmentAt(m).eclipse===previous)a=m;else b=m;}events.push(b);}previous=now;}return events;}

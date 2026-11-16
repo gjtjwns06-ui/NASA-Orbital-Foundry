@@ -1,0 +1,28 @@
+[
+  {
+    "path": "public/assets/textures/earth-bmng-july2004-8k.ktx2",
+    "width": 8192,
+    "height": 4096,
+    "levels": 14,
+    "vkFormat": 0,
+    "supercompressionScheme": 1,
+    "keyValue": {
+      "KTXorientation": "ru",
+      "KTXwriter": "toktx v4.4.2 / libktx v4.4.2",
+      "KTXwriterScParams": "--encode etc1s --qlevel 255 --clevel 1"
+    }
+  },
+  {
+    "path": "public/assets/textures/earth-bmng-july2004-16k.ktx2",
+    "width": 16384,
+    "height": 8192,
+    "levels": 15,
+    "vkFormat": 0,
+    "supercompressionScheme": 1,
+    "keyValue": {
+      "KTXorientation": "ru",
+      "KTXwriter": "toktx v4.4.2 / libktx v4.4.2",
+      "KTXwriterScParams": "--encode etc1s --qlevel 255 --clevel 1"
+    }
+  }
+]

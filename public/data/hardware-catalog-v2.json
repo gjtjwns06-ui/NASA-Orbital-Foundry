@@ -1,0 +1,2680 @@
+{
+  "schemaVersion": 1,
+  "hashAlgorithm": "SHA-256 of JSON.stringify(content), UTF-8, property order as stored",
+  "sha256": "25a47f24340365b5b52d62708ce987f7a90df4ee6559879b91464a2d24ae9a98",
+  "content": {
+    "version": "hardware-2.0.0",
+    "buses": {
+      "surveyor-l18-v1": {
+        "batteryWh": 0,
+        "storageBits": 256000000,
+        "ispS": 230,
+        "halfSize": [
+          0.65,
+          0.8,
+          0.65
+        ],
+        "conversionEfficiency": 0.94,
+        "id": "surveyor-l18-v1",
+        "name": "서베이어 L18",
+        "nameEn": "Surveyor L18",
+        "description": "낮은 질량과 소비전력 · 저전력 UHF 관측 임무",
+        "massKg": 18,
+        "cost": 90,
+        "fuelKg": 4,
+        "basePowerW": 8,
+        "chargeLimitW": 40,
+        "dischargeLimitW": 70,
+        "bay": {
+          "min": [
+            -0.43,
+            0.18,
+            -0.43
+          ],
+          "max": [
+            0.43,
+            0.7,
+            0.43
+          ],
+          "mountY": 0.22
+        },
+        "rails": [
+          {
+            "id": "3v3",
+            "voltageV": 3.3,
+            "minimumV": 3.234,
+            "maximumV": 3.366,
+            "maxPowerW": 10
+          },
+          {
+            "id": "5v",
+            "voltageV": 5,
+            "minimumV": 4.75,
+            "maximumV": 5.25,
+            "maxPowerW": 25
+          },
+          {
+            "id": "12v",
+            "voltageV": 12,
+            "minimumV": 11.4,
+            "maximumV": 12.6,
+            "maxPowerW": 15
+          }
+        ],
+        "dataPorts": [
+          {
+            "id": "can-0",
+            "interface": "CAN",
+            "rateBps": 1000000,
+            "drivers": [
+              "ax100"
+            ]
+          },
+          {
+            "id": "can-1",
+            "interface": "CAN",
+            "rateBps": 1000000,
+            "drivers": [
+              "ax100"
+            ]
+          },
+          {
+            "id": "spi-0",
+            "interface": "SPI",
+            "rateBps": 10000000,
+            "drivers": [
+              "camera-wide",
+              "recorder"
+            ]
+          },
+          {
+            "id": "spi-1",
+            "interface": "SPI",
+            "rateBps": 10000000,
+            "drivers": [
+              "camera-wide",
+              "recorder"
+            ]
+          },
+          {
+            "id": "spi-2",
+            "interface": "SPI",
+            "rateBps": 10000000,
+            "drivers": [
+              "camera-wide",
+              "recorder"
+            ]
+          },
+          {
+            "id": "adcs",
+            "interface": "RS422",
+            "rateBps": 115200,
+            "drivers": [
+              "adcs"
+            ]
+          }
+        ],
+        "totalPowerW": 70,
+        "mpptGroups": 2,
+        "solarLimitW": 120
+      },
+      "pathfinder-d35-v1": {
+        "batteryWh": 0,
+        "storageBits": 256000000,
+        "ispS": 230,
+        "halfSize": [
+          0.65,
+          0.8,
+          0.65
+        ],
+        "conversionEfficiency": 0.94,
+        "id": "pathfinder-d35-v1",
+        "name": "패스파인더 D35",
+        "nameEn": "Pathfinder D35",
+        "description": "고전력 탑재체 · 심우주 데이터 연결",
+        "massKg": 35,
+        "cost": 120,
+        "fuelKg": 6,
+        "basePowerW": 14,
+        "chargeLimitW": 80,
+        "dischargeLimitW": 150,
+        "bay": {
+          "min": [
+            -0.6,
+            0.18,
+            -0.6
+          ],
+          "max": [
+            0.6,
+            0.75,
+            0.6
+          ],
+          "mountY": 0.22
+        },
+        "rails": [
+          {
+            "id": "3v3",
+            "voltageV": 3.3,
+            "minimumV": 3.234,
+            "maximumV": 3.366,
+            "maxPowerW": 15
+          },
+          {
+            "id": "5v",
+            "voltageV": 5,
+            "minimumV": 4.75,
+            "maximumV": 5.25,
+            "maxPowerW": 40
+          },
+          {
+            "id": "12v",
+            "voltageV": 12,
+            "minimumV": 11.4,
+            "maximumV": 12.6,
+            "maxPowerW": 90
+          }
+        ],
+        "dataPorts": [
+          {
+            "id": "can-0",
+            "interface": "CAN",
+            "rateBps": 1000000,
+            "drivers": [
+              "ax100"
+            ]
+          },
+          {
+            "id": "can-1",
+            "interface": "CAN",
+            "rateBps": 1000000,
+            "drivers": [
+              "ax100"
+            ]
+          },
+          {
+            "id": "spi-0",
+            "interface": "SPI",
+            "rateBps": 10000000,
+            "drivers": [
+              "camera-wide",
+              "recorder",
+              "iris22"
+            ]
+          },
+          {
+            "id": "spi-1",
+            "interface": "SPI",
+            "rateBps": 10000000,
+            "drivers": [
+              "camera-wide",
+              "recorder",
+              "iris22"
+            ]
+          },
+          {
+            "id": "spi-2",
+            "interface": "SPI",
+            "rateBps": 10000000,
+            "drivers": [
+              "camera-wide",
+              "recorder",
+              "iris22"
+            ]
+          },
+          {
+            "id": "spi-3",
+            "interface": "SPI",
+            "rateBps": 10000000,
+            "drivers": [
+              "camera-wide",
+              "recorder",
+              "iris22"
+            ]
+          },
+          {
+            "id": "adcs",
+            "interface": "RS422",
+            "rateBps": 115200,
+            "drivers": [
+              "adcs"
+            ]
+          },
+          {
+            "id": "spw-0",
+            "interface": "SpaceWire",
+            "rateBps": 50000000,
+            "drivers": [
+              "camera-precision",
+              "spectrometer",
+              "recorder",
+              "iris22"
+            ]
+          },
+          {
+            "id": "spw-1",
+            "interface": "SpaceWire",
+            "rateBps": 50000000,
+            "drivers": [
+              "camera-precision",
+              "spectrometer",
+              "recorder",
+              "iris22"
+            ]
+          },
+          {
+            "id": "spw-2",
+            "interface": "SpaceWire",
+            "rateBps": 50000000,
+            "drivers": [
+              "camera-precision",
+              "spectrometer",
+              "recorder",
+              "iris22"
+            ]
+          },
+          {
+            "id": "spw-3",
+            "interface": "SpaceWire",
+            "rateBps": 50000000,
+            "drivers": [
+              "camera-precision",
+              "spectrometer",
+              "recorder",
+              "iris22"
+            ]
+          },
+          {
+            "id": "spw-4",
+            "interface": "SpaceWire",
+            "rateBps": 50000000,
+            "drivers": [
+              "camera-precision",
+              "spectrometer",
+              "recorder",
+              "iris22"
+            ]
+          }
+        ],
+        "totalPowerW": 150,
+        "mpptGroups": 12,
+        "solarLimitW": 360
+      }
+    },
+    "models": {
+      "tsp45-fixed-v2": {
+        "modelId": "tsp45-fixed-v2",
+        "kind": "solar",
+        "name": "TSP-45W 고정 날개",
+        "nameEn": "TSP-45W fixed wing",
+        "massKg": 0.885,
+        "cost": 34,
+        "idlePowerW": 0,
+        "activePowerW": 0,
+        "geometry": {
+          "id": "three-panel-wing",
+          "mountFootprint": [
+            0.12,
+            0.16
+          ],
+          "deployedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.025
+              ],
+              "half": [
+                0.045,
+                0.045,
+                0.025
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.22
+              ],
+              "half": [
+                0.035,
+                0.035,
+                0.2
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.378
+              ],
+              "half": [
+                0.014,
+                0.47,
+                0.012
+              ]
+            },
+            {
+              "center": [
+                0,
+                -0.32,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                0,
+                0.32,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            }
+          ],
+          "stowedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.025
+              ],
+              "half": [
+                0.045,
+                0.045,
+                0.025
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.08
+              ],
+              "half": [
+                0.165,
+                0.104,
+                0.025
+              ]
+            }
+          ],
+          "apertures": [
+            {
+              "center": [
+                0,
+                -0.32,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.3333333333333333
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.3333333333333333
+            },
+            {
+              "center": [
+                0,
+                0.32,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.3333333333333333
+            }
+          ],
+          "render": {
+            "family": "solar",
+            "size": [
+              0.208,
+              0.94,
+              0.43
+            ],
+            "variant": "three-panel-wing"
+          }
+        },
+        "footprint": [
+          0.12,
+          0.16
+        ],
+        "depth": 0.43,
+        "category": "전력",
+        "description": "명시된 제조사 참조값과 학습용 통합 가정을 사용합니다. 크레딧은 실제 가격이 아닙니다.",
+        "source": "https://gomspace.com/wp-content/uploads/2025/09/Datasheet-NanoPower-TSP_45W.pdf",
+        "provenance": "manufacturer-published",
+        "color": "#77b6b2",
+        "maxCount": 4,
+        "evidence": [
+          {
+            "sourceId": "gomspace-tsp45w",
+            "fields": [
+              "massKg",
+              "outputW"
+            ],
+            "condition": "BOL,1367W/m²; fixed orientation and authored mount."
+          }
+        ],
+        "outputW": 45,
+        "solar": {
+          "mpptGroups": 1
+        },
+        "sourceId": "gomspace-tsp45w",
+        "sourceFields": [
+          "massKg",
+          "outputW"
+        ]
+      },
+      "tsp45-sixwing-v2": {
+        "modelId": "tsp45-sixwing-v2",
+        "kind": "solarLarge",
+        "name": "6날개 전력 어레이",
+        "nameEn": "Six-wing array",
+        "massKg": 5.71,
+        "cost": 52,
+        "idlePowerW": 0,
+        "activePowerW": 0,
+        "geometry": {
+          "id": "sixwing",
+          "mountFootprint": [
+            0.12,
+            0.16
+          ],
+          "deployedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.025
+              ],
+              "half": [
+                0.045,
+                0.045,
+                0.025
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.22
+              ],
+              "half": [
+                0.035,
+                0.035,
+                0.2
+              ]
+            },
+            {
+              "center": [
+                0,
+                -0.5,
+                0.36
+              ],
+              "half": [
+                0.59,
+                0.016,
+                0.016
+              ]
+            },
+            {
+              "center": [
+                0,
+                0.5,
+                0.36
+              ],
+              "half": [
+                0.59,
+                0.016,
+                0.016
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.36
+              ],
+              "half": [
+                0.016,
+                0.52,
+                0.016
+              ]
+            },
+            {
+              "center": [
+                -0.48,
+                -0.5,
+                0.378
+              ],
+              "half": [
+                0.014,
+                0.47,
+                0.012
+              ]
+            },
+            {
+              "center": [
+                -0.48,
+                0.5,
+                0.378
+              ],
+              "half": [
+                0.014,
+                0.47,
+                0.012
+              ]
+            },
+            {
+              "center": [
+                0,
+                -0.5,
+                0.378
+              ],
+              "half": [
+                0.014,
+                0.47,
+                0.012
+              ]
+            },
+            {
+              "center": [
+                0,
+                0.5,
+                0.378
+              ],
+              "half": [
+                0.014,
+                0.47,
+                0.012
+              ]
+            },
+            {
+              "center": [
+                0.48,
+                -0.5,
+                0.378
+              ],
+              "half": [
+                0.014,
+                0.47,
+                0.012
+              ]
+            },
+            {
+              "center": [
+                0.48,
+                0.5,
+                0.378
+              ],
+              "half": [
+                0.014,
+                0.47,
+                0.012
+              ]
+            },
+            {
+              "center": [
+                -0.48,
+                -0.8200000000000001,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                -0.48,
+                -0.5,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                -0.48,
+                -0.18,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                -0.48,
+                0.18,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                -0.48,
+                0.5,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                -0.48,
+                0.8200000000000001,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                0,
+                -0.8200000000000001,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                0,
+                -0.5,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                0,
+                -0.18,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                0,
+                0.18,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                0,
+                0.5,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                0,
+                0.8200000000000001,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                0.48,
+                -0.8200000000000001,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                0.48,
+                -0.5,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                0.48,
+                -0.18,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                0.48,
+                0.18,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                0.48,
+                0.5,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                0.48,
+                0.8200000000000001,
+                0.4
+              ],
+              "half": [
+                0.104,
+                0.15,
+                0.008
+              ]
+            }
+          ],
+          "stowedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.025
+              ],
+              "half": [
+                0.045,
+                0.045,
+                0.025
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.11
+              ],
+              "half": [
+                0.165,
+                0.104,
+                0.055
+              ]
+            }
+          ],
+          "apertures": [
+            {
+              "center": [
+                -0.48,
+                -0.8200000000000001,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                -0.48,
+                -0.5,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                -0.48,
+                -0.18,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                -0.48,
+                0.18,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                -0.48,
+                0.5,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                -0.48,
+                0.8200000000000001,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                0,
+                -0.8200000000000001,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                0,
+                -0.5,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                0,
+                -0.18,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                0,
+                0.18,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                0,
+                0.5,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                0,
+                0.8200000000000001,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                0.48,
+                -0.8200000000000001,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                0.48,
+                -0.5,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                0.48,
+                -0.18,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                0.48,
+                0.18,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                0.48,
+                0.5,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            },
+            {
+              "center": [
+                0.48,
+                0.8200000000000001,
+                0.41000000000000003
+              ],
+              "width": 0.208,
+              "height": 0.3,
+              "normal": [
+                0,
+                0,
+                1
+              ],
+              "powerFraction": 0.05555555555555555
+            }
+          ],
+          "render": {
+            "family": "solar",
+            "size": [
+              1.168,
+              1.94,
+              0.43
+            ],
+            "variant": "sixwing"
+          }
+        },
+        "footprint": [
+          0.12,
+          0.16
+        ],
+        "depth": 0.43,
+        "category": "전력",
+        "description": "명시된 제조사 참조값과 학습용 통합 가정을 사용합니다. 크레딧은 실제 가격이 아닙니다.",
+        "source": "https://www.nasa.gov/smallsat-institute/sst-soa/",
+        "provenance": "derived-assembly",
+        "color": "#77b6b2",
+        "maxCount": 4,
+        "evidence": [
+          {
+            "sourceId": "gomspace-tsp45w",
+            "fields": [
+              "massKg",
+              "outputW"
+            ],
+            "condition": "6×0.885kg+0.4kg authored bracket;6×45W; independent18panel apertures."
+          }
+        ],
+        "outputW": 270,
+        "solar": {
+          "mpptGroups": 6
+        },
+        "sourceId": "gomspace-tsp45w",
+        "assumedMountMassKg": 0.4
+      },
+      "bpx100-4s2p-v2": {
+        "modelId": "bpx100-4s2p-v2",
+        "kind": "battery",
+        "name": "BPX 100 Wh 배터리",
+        "nameEn": "BPX 100 Wh",
+        "massKg": 0.5,
+        "cost": 28,
+        "idlePowerW": 0.1,
+        "activePowerW": 0.1,
+        "geometry": {
+          "id": "bpx100",
+          "mountFootprint": [
+            0.11,
+            0.1
+          ],
+          "deployedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.03
+              ],
+              "half": [
+                0.055,
+                0.05,
+                0.03
+              ]
+            }
+          ],
+          "stowedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.03
+              ],
+              "half": [
+                0.055,
+                0.05,
+                0.03
+              ]
+            }
+          ],
+          "apertures": [],
+          "render": {
+            "family": "electronics",
+            "size": [
+              0.11,
+              0.1,
+              0.06
+            ],
+            "variant": "bpx100"
+          }
+        },
+        "footprint": [
+          0.11,
+          0.1
+        ],
+        "depth": 0.06,
+        "category": "전력",
+        "description": "명시된 제조사 참조값과 학습용 통합 가정을 사용합니다. 크레딧은 실제 가격이 아닙니다.",
+        "source": "https://www.nasa.gov/smallsat-institute/sst-soa/",
+        "provenance": "manufacturer-published",
+        "color": "#77b6b2",
+        "maxCount": 3,
+        "evidence": [
+          {
+            "sourceId": "gomspace-bpx100",
+            "fields": [
+              "massKg",
+              "capacityWh"
+            ],
+            "condition": "4S2P;86Wh usable;carrier geometry and EPS25/60W policy authored."
+          }
+        ],
+        "internal": true,
+        "capacityWh": 86,
+        "nominalCapacityWh": 100,
+        "chargeLimitW": 25,
+        "dischargeLimitW": 60,
+        "sourceId": "gomspace-bpx100"
+      },
+      "bpx100-dual-v2": {
+        "modelId": "bpx100-dual-v2",
+        "kind": "battery",
+        "name": "이중 BPX 배터리",
+        "nameEn": "Dual BPX bank",
+        "massKg": 1.1,
+        "cost": 44,
+        "idlePowerW": 0.2,
+        "activePowerW": 0.2,
+        "geometry": {
+          "id": "bpx-dual",
+          "mountFootprint": [
+            0.22,
+            0.1
+          ],
+          "deployedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.035
+              ],
+              "half": [
+                0.11,
+                0.05,
+                0.035
+              ]
+            }
+          ],
+          "stowedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.035
+              ],
+              "half": [
+                0.11,
+                0.05,
+                0.035
+              ]
+            }
+          ],
+          "apertures": [],
+          "render": {
+            "family": "electronics",
+            "size": [
+              0.22,
+              0.1,
+              0.07
+            ],
+            "variant": "bpx-dual"
+          }
+        },
+        "footprint": [
+          0.22,
+          0.1
+        ],
+        "depth": 0.07,
+        "category": "전력",
+        "description": "명시된 제조사 참조값과 학습용 통합 가정을 사용합니다. 크레딧은 실제 가격이 아닙니다.",
+        "source": "https://www.nasa.gov/smallsat-institute/sst-soa/",
+        "provenance": "derived-assembly",
+        "color": "#77b6b2",
+        "maxCount": 2,
+        "evidence": [
+          {
+            "sourceId": "gomspace-bpx100",
+            "fields": [
+              "massKg",
+              "capacityWh"
+            ],
+            "condition": "Two86Wh packs plus0.1kg isolation controller;not uncontrolled direct parallel."
+          }
+        ],
+        "internal": true,
+        "capacityWh": 172,
+        "nominalCapacityWh": 200,
+        "chargeLimitW": 50,
+        "dischargeLimitW": 120,
+        "sourceId": "gomspace-bpx100"
+      },
+      "wide-mono-v2": {
+        "modelId": "wide-mono-v2",
+        "kind": "camera",
+        "name": "광역 관측 카메라",
+        "nameEn": "Wide-field camera",
+        "massKg": 1.6,
+        "cost": 45,
+        "idlePowerW": 1,
+        "activePowerW": 18,
+        "geometry": {
+          "id": "wide-camera",
+          "mountFootprint": [
+            0.22,
+            0.22
+          ],
+          "deployedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.025
+              ],
+              "half": [
+                0.045,
+                0.045,
+                0.025
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.175
+              ],
+              "half": [
+                0.11,
+                0.11,
+                0.125
+              ]
+            }
+          ],
+          "stowedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.025
+              ],
+              "half": [
+                0.045,
+                0.045,
+                0.025
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.175
+              ],
+              "half": [
+                0.11,
+                0.11,
+                0.125
+              ]
+            }
+          ],
+          "apertures": [
+            {
+              "center": [
+                0,
+                0,
+                0.302
+              ],
+              "width": 0.154,
+              "height": 0.154,
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            }
+          ],
+          "render": {
+            "family": "instrument",
+            "size": [
+              0.22,
+              0.22,
+              0.25
+            ],
+            "variant": "wide-camera"
+          }
+        },
+        "footprint": [
+          0.22,
+          0.22
+        ],
+        "depth": 0.25,
+        "category": "과학",
+        "description": "명시된 제조사 참조값과 학습용 통합 가정을 사용합니다. 크레딧은 실제 가격이 아닙니다.",
+        "source": "https://www.nasa.gov/smallsat-institute/sst-soa/",
+        "provenance": "game-assumption",
+        "color": "#77b6b2",
+        "maxCount": 2,
+        "evidence": [],
+        "electrical": {
+          "minimumV": 4.7,
+          "maximumV": 5.3,
+          "peakW": 20
+        },
+        "data": {
+          "interfaces": [
+            "SPI"
+          ],
+          "driver": "camera-wide",
+          "maxRateBps": 10000000
+        },
+        "optics": {
+          "halfAngleDeg": 12,
+          "pixelsAcross": 1024,
+          "bitsPerFrame": 10485760,
+          "exposureSeconds": 0.005,
+          "kind": "image",
+          "ifovRad": 0.00040906154343617096
+        }
+      },
+      "narrow-mono-v2": {
+        "modelId": "narrow-mono-v2",
+        "kind": "camera",
+        "name": "정밀 관측 카메라",
+        "nameEn": "Precision camera",
+        "massKg": 3.2,
+        "cost": 70,
+        "idlePowerW": 2,
+        "activePowerW": 42,
+        "geometry": {
+          "id": "narrow-camera",
+          "mountFootprint": [
+            0.3,
+            0.3
+          ],
+          "deployedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.025
+              ],
+              "half": [
+                0.045,
+                0.045,
+                0.025
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.28
+              ],
+              "half": [
+                0.15,
+                0.15,
+                0.23
+              ]
+            }
+          ],
+          "stowedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.025
+              ],
+              "half": [
+                0.045,
+                0.045,
+                0.025
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.28
+              ],
+              "half": [
+                0.15,
+                0.15,
+                0.23
+              ]
+            }
+          ],
+          "apertures": [
+            {
+              "center": [
+                0,
+                0,
+                0.512
+              ],
+              "width": 0.21,
+              "height": 0.21,
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            }
+          ],
+          "render": {
+            "family": "instrument",
+            "size": [
+              0.3,
+              0.3,
+              0.46
+            ],
+            "variant": "narrow-camera"
+          }
+        },
+        "footprint": [
+          0.3,
+          0.3
+        ],
+        "depth": 0.46,
+        "category": "과학",
+        "description": "명시된 제조사 참조값과 학습용 통합 가정을 사용합니다. 크레딧은 실제 가격이 아닙니다.",
+        "source": "https://www.nasa.gov/smallsat-institute/sst-soa/",
+        "provenance": "game-assumption",
+        "color": "#77b6b2",
+        "maxCount": 2,
+        "evidence": [],
+        "electrical": {
+          "minimumV": 11.2,
+          "maximumV": 12.8,
+          "peakW": 45
+        },
+        "data": {
+          "interfaces": [
+            "SpaceWire"
+          ],
+          "driver": "camera-precision",
+          "maxRateBps": 50000000
+        },
+        "optics": {
+          "halfAngleDeg": 4,
+          "pixelsAcross": 4096,
+          "bitsPerFrame": 201326592,
+          "exposureSeconds": 0.001,
+          "kind": "image",
+          "ifovRad": 0.00003408846195301425,
+          "regionReadout": {
+            "precision": 1024,
+            "survey": 512
+          }
+        }
+      },
+      "mars-spectra-v2": {
+        "modelId": "mars-spectra-v2",
+        "kind": "spectrometer",
+        "name": "화성 분광 관측기",
+        "nameEn": "Mars spectrometer",
+        "massKg": 4.6,
+        "cost": 92,
+        "idlePowerW": 3,
+        "activePowerW": 56,
+        "geometry": {
+          "id": "spectrometer",
+          "mountFootprint": [
+            0.36,
+            0.28
+          ],
+          "deployedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.025
+              ],
+              "half": [
+                0.045,
+                0.045,
+                0.025
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.22499999999999998
+              ],
+              "half": [
+                0.18,
+                0.14,
+                0.175
+              ]
+            }
+          ],
+          "stowedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.025
+              ],
+              "half": [
+                0.045,
+                0.045,
+                0.025
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.22499999999999998
+              ],
+              "half": [
+                0.18,
+                0.14,
+                0.175
+              ]
+            }
+          ],
+          "apertures": [
+            {
+              "center": [
+                0,
+                0,
+                0.40199999999999997
+              ],
+              "width": 0.252,
+              "height": 0.196,
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            }
+          ],
+          "render": {
+            "family": "instrument",
+            "size": [
+              0.36,
+              0.28,
+              0.35
+            ],
+            "variant": "spectrometer"
+          }
+        },
+        "footprint": [
+          0.36,
+          0.28
+        ],
+        "depth": 0.35,
+        "category": "과학",
+        "description": "명시된 제조사 참조값과 학습용 통합 가정을 사용합니다. 크레딧은 실제 가격이 아닙니다.",
+        "source": "https://www.nasa.gov/smallsat-institute/sst-soa/",
+        "provenance": "game-assumption",
+        "color": "#77b6b2",
+        "maxCount": 2,
+        "evidence": [],
+        "electrical": {
+          "minimumV": 11.2,
+          "maximumV": 12.8,
+          "peakW": 60
+        },
+        "data": {
+          "interfaces": [
+            "SpaceWire"
+          ],
+          "driver": "spectrometer",
+          "maxRateBps": 50000000
+        },
+        "optics": {
+          "halfAngleDeg": 28,
+          "pixelsAcross": 1,
+          "bitsPerFrame": 1600000,
+          "exposureSeconds": 15,
+          "kind": "spectrum",
+          "ifovRad": 0.001
+        }
+      },
+      "ax100u-carrier-v1": {
+        "modelId": "ax100u-carrier-v1",
+        "kind": "radio",
+        "name": "AX100U 무전기",
+        "nameEn": "AX100U radio",
+        "massKg": 0.0995,
+        "cost": 18,
+        "idlePowerW": 0.1815,
+        "activePowerW": 2.64,
+        "geometry": {
+          "id": "ax100",
+          "mountFootprint": [
+            0.12,
+            0.09
+          ],
+          "deployedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.0225
+              ],
+              "half": [
+                0.06,
+                0.045,
+                0.0225
+              ]
+            }
+          ],
+          "stowedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.0225
+              ],
+              "half": [
+                0.06,
+                0.045,
+                0.0225
+              ]
+            }
+          ],
+          "apertures": [],
+          "render": {
+            "family": "electronics",
+            "size": [
+              0.12,
+              0.09,
+              0.045
+            ],
+            "variant": "ax100"
+          }
+        },
+        "footprint": [
+          0.12,
+          0.09
+        ],
+        "depth": 0.045,
+        "category": "통신",
+        "description": "명시된 제조사 참조값과 학습용 통합 가정을 사용합니다. 크레딧은 실제 가격이 아닙니다.",
+        "source": "https://gomspace.com/wp-content/uploads/2025/09/gs-ds-nanocom-ax100.pdf",
+        "provenance": "derived-assembly",
+        "color": "#77b6b2",
+        "maxCount": 2,
+        "evidence": [
+          {
+            "sourceId": "gomspace-ax100u",
+            "fields": [
+              "massKg",
+              "idlePowerW",
+              "activePowerW",
+              "radio.rfPowerW"
+            ],
+            "condition": "24.5g board+75g authored carrier;3.3V×55/800mA typical25°C;1W RF,38.4kbps signal;0.75payload fraction authored."
+          }
+        ],
+        "internal": true,
+        "electrical": {
+          "minimumV": 3.2,
+          "maximumV": 3.4,
+          "peakW": 3.3
+        },
+        "data": {
+          "interfaces": [
+            "CAN"
+          ],
+          "driver": "ax100",
+          "maxRateBps": 1000000
+        },
+        "radio": {
+          "band": "UHF",
+          "frequencyHz": 435000000,
+          "rfPowerW": 1,
+          "signalModesBps": [
+            1200,
+            4800,
+            9600,
+            19200,
+            38400
+          ],
+          "payloadFraction": 0.75,
+          "ebNoDb": 7.8
+        },
+        "sourceId": "gomspace-ax100u"
+      },
+      "iris22-carrier-v1": {
+        "modelId": "iris22-carrier-v1",
+        "kind": "radio",
+        "name": "Iris V2.2 송수신기",
+        "nameEn": "Iris V2.2 transponder",
+        "massKg": 1.225,
+        "cost": 36,
+        "idlePowerW": 9.1,
+        "activePowerW": 25,
+        "geometry": {
+          "id": "iris22",
+          "mountFootprint": [
+            0.18,
+            0.16
+          ],
+          "deployedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.05
+              ],
+              "half": [
+                0.09,
+                0.08,
+                0.05
+              ]
+            }
+          ],
+          "stowedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.05
+              ],
+              "half": [
+                0.09,
+                0.08,
+                0.05
+              ]
+            }
+          ],
+          "apertures": [],
+          "render": {
+            "family": "electronics",
+            "size": [
+              0.18,
+              0.16,
+              0.1
+            ],
+            "variant": "iris22"
+          }
+        },
+        "footprint": [
+          0.18,
+          0.16
+        ],
+        "depth": 0.1,
+        "category": "통신",
+        "description": "명시된 제조사 참조값과 학습용 통합 가정을 사용합니다. 크레딧은 실제 가격이 아닙니다.",
+        "source": "https://scienceandtechnology.jpl.nasa.gov/sites/default/files/documents/Brochure_Iris_Transponder_V2.2_SEP_2022.pdf",
+        "provenance": "derived-assembly",
+        "color": "#77b6b2",
+        "maxCount": 2,
+        "evidence": [
+          {
+            "sourceId": "jpl-iris22",
+            "fields": [
+              "massKg",
+              "idlePowerW",
+              "activePowerW",
+              "radio.rfPowerW"
+            ],
+            "condition": "875+150+80g electronics+120g authored harness;12V table9.1/25W;35W port reservation;3.8W RF conservative. Source internally inconsistent;game modes/coding explicit."
+          }
+        ],
+        "internal": true,
+        "electrical": {
+          "minimumV": 9,
+          "maximumV": 28,
+          "peakW": 35
+        },
+        "data": {
+          "interfaces": [
+            "SpaceWire",
+            "SPI"
+          ],
+          "driver": "iris22",
+          "maxRateBps": 10000000
+        },
+        "radio": {
+          "band": "X",
+          "frequencyHz": 8400000000,
+          "rfPowerW": 3.8,
+          "signalModesBps": [
+            512,
+            2048,
+            8192,
+            32768,
+            131072,
+            524288,
+            2097152
+          ],
+          "payloadFraction": 0.8,
+          "ebNoDb": 4.5
+        },
+        "sourceId": "jpl-iris22"
+      },
+      "uhf-dipole-pair-v1": {
+        "modelId": "uhf-dipole-pair-v1",
+        "kind": "antenna",
+        "name": "UHF 교차 다이폴",
+        "nameEn": "UHF crossed dipoles",
+        "massKg": 0.2,
+        "cost": 12,
+        "idlePowerW": 0,
+        "activePowerW": 0,
+        "geometry": {
+          "id": "crossed-dipole",
+          "mountFootprint": [
+            0.12,
+            0.12
+          ],
+          "deployedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.025
+              ],
+              "half": [
+                0.045,
+                0.045,
+                0.025
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.08
+              ],
+              "half": [
+                0.18,
+                0.008,
+                0.008
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.1
+              ],
+              "half": [
+                0.008,
+                0.18,
+                0.008
+              ]
+            }
+          ],
+          "stowedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.025
+              ],
+              "half": [
+                0.045,
+                0.045,
+                0.025
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.07
+              ],
+              "half": [
+                0.065,
+                0.065,
+                0.025
+              ]
+            }
+          ],
+          "apertures": [
+            {
+              "center": [
+                0,
+                0,
+                0.115
+              ],
+              "width": 0.12,
+              "height": 0.12,
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            }
+          ],
+          "render": {
+            "family": "antenna",
+            "size": [
+              0.36,
+              0.36,
+              0.12
+            ],
+            "variant": "crossed-dipole"
+          }
+        },
+        "footprint": [
+          0.12,
+          0.12
+        ],
+        "depth": 0.12,
+        "category": "통신",
+        "description": "명시된 제조사 참조값과 학습용 통합 가정을 사용합니다. 크레딧은 실제 가격이 아닙니다.",
+        "source": "https://www.nasa.gov/smallsat-institute/sst-soa/",
+        "provenance": "game-assumption",
+        "color": "#77b6b2",
+        "maxCount": 2,
+        "evidence": [],
+        "antenna": {
+          "band": "UHF",
+          "peakGainDbi": 2.15,
+          "pattern": "crossed-dipole",
+          "halfPowerAngleDeg": 90
+        }
+      },
+      "xband-reflector-1m-v1": {
+        "modelId": "xband-reflector-1m-v1",
+        "kind": "antenna",
+        "name": "1 m X대역 반사판",
+        "nameEn": "1 m X-band reflector",
+        "massKg": 1.1,
+        "cost": 28,
+        "idlePowerW": 0,
+        "activePowerW": 0,
+        "geometry": {
+          "id": "reflector-1m",
+          "mountFootprint": [
+            0.16,
+            0.16
+          ],
+          "deployedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.025
+              ],
+              "half": [
+                0.045,
+                0.045,
+                0.025
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.16
+              ],
+              "half": [
+                0.045,
+                0.045,
+                0.12
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.32
+              ],
+              "half": [
+                0.5,
+                0.5,
+                0.13
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.66
+              ],
+              "half": [
+                0.035,
+                0.035,
+                0.035
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.52
+              ],
+              "half": [
+                0.012,
+                0.012,
+                0.14
+              ]
+            }
+          ],
+          "stowedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.025
+              ],
+              "half": [
+                0.045,
+                0.045,
+                0.025
+              ]
+            },
+            {
+              "center": [
+                0,
+                0,
+                0.16
+              ],
+              "half": [
+                0.25,
+                0.25,
+                0.12
+              ]
+            }
+          ],
+          "apertures": [
+            {
+              "center": [
+                0,
+                0,
+                0.46
+              ],
+              "width": 0.75,
+              "height": 0.75,
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            }
+          ],
+          "render": {
+            "family": "antenna",
+            "size": [
+              1,
+              1,
+              0.7
+            ],
+            "variant": "reflector-1m"
+          }
+        },
+        "footprint": [
+          0.16,
+          0.16
+        ],
+        "depth": 0.7,
+        "category": "통신",
+        "description": "명시된 제조사 참조값과 학습용 통합 가정을 사용합니다. 크레딧은 실제 가격이 아닙니다.",
+        "source": "https://www.nasa.gov/smallsat-institute/sst-soa/",
+        "provenance": "game-assumption",
+        "color": "#77b6b2",
+        "maxCount": 2,
+        "evidence": [],
+        "antenna": {
+          "band": "X",
+          "peakGainDbi": 36.295796011504194,
+          "pattern": "reflector",
+          "halfPowerAngleDeg": 1.25
+        }
+      },
+      "xact15-carrier-v1": {
+        "modelId": "xact15-carrier-v1",
+        "kind": "adcs",
+        "name": "XACT-15 자세제어",
+        "nameEn": "XACT-15 attitude unit",
+        "massKg": 0.94,
+        "cost": 20,
+        "idlePowerW": 3,
+        "activePowerW": 6,
+        "geometry": {
+          "id": "xact15",
+          "mountFootprint": [
+            0.12,
+            0.12
+          ],
+          "deployedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.035
+              ],
+              "half": [
+                0.06,
+                0.06,
+                0.035
+              ]
+            }
+          ],
+          "stowedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.035
+              ],
+              "half": [
+                0.06,
+                0.06,
+                0.035
+              ]
+            }
+          ],
+          "apertures": [],
+          "render": {
+            "family": "electronics",
+            "size": [
+              0.12,
+              0.12,
+              0.07
+            ],
+            "variant": "xact15"
+          }
+        },
+        "footprint": [
+          0.12,
+          0.12
+        ],
+        "depth": 0.07,
+        "category": "자세",
+        "description": "명시된 제조사 참조값과 학습용 통합 가정을 사용합니다. 크레딧은 실제 가격이 아닙니다.",
+        "source": "https://www.bluecanyontech.com/wp-content/uploads/ADCS-2026.pdf",
+        "provenance": "derived-assembly",
+        "color": "#77b6b2",
+        "maxCount": 1,
+        "evidence": [
+          {
+            "sourceId": "bct-xact2026",
+            "fields": [
+              "massKg",
+              "adcs.torqueNm",
+              "adcs.momentumNms"
+            ],
+            "condition": "0.89kg+0.05kg mount;5mNm and15mNms/axis;DC power/control driver authored;no vendor fullvehicle slew claim."
+          }
+        ],
+        "internal": true,
+        "electrical": {
+          "minimumV": 11.2,
+          "maximumV": 12.8,
+          "peakW": 6
+        },
+        "data": {
+          "interfaces": [
+            "RS422"
+          ],
+          "driver": "adcs",
+          "maxRateBps": 115200
+        },
+        "adcs": {
+          "torqueNm": 0.005,
+          "momentumNms": 0.015,
+          "slewPowerW": 6
+        },
+        "sourceId": "bct-xact2026"
+      },
+      "xact50-carrier-v1": {
+        "modelId": "xact50-carrier-v1",
+        "kind": "adcs",
+        "name": "XACT-50 자세제어",
+        "nameEn": "XACT-50 attitude unit",
+        "massKg": 1.28,
+        "cost": 28,
+        "idlePowerW": 4,
+        "activePowerW": 8,
+        "geometry": {
+          "id": "xact50",
+          "mountFootprint": [
+            0.12,
+            0.12
+          ],
+          "deployedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.0475
+              ],
+              "half": [
+                0.06,
+                0.06,
+                0.0475
+              ]
+            }
+          ],
+          "stowedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.0475
+              ],
+              "half": [
+                0.06,
+                0.06,
+                0.0475
+              ]
+            }
+          ],
+          "apertures": [],
+          "render": {
+            "family": "electronics",
+            "size": [
+              0.12,
+              0.12,
+              0.095
+            ],
+            "variant": "xact50"
+          }
+        },
+        "footprint": [
+          0.12,
+          0.12
+        ],
+        "depth": 0.095,
+        "category": "자세",
+        "description": "명시된 제조사 참조값과 학습용 통합 가정을 사용합니다. 크레딧은 실제 가격이 아닙니다.",
+        "source": "https://www.bluecanyontech.com/wp-content/uploads/ADCS-2026.pdf",
+        "provenance": "derived-assembly",
+        "color": "#77b6b2",
+        "maxCount": 1,
+        "evidence": [
+          {
+            "sourceId": "bct-xact2026",
+            "fields": [
+              "massKg",
+              "adcs.torqueNm",
+              "adcs.momentumNms"
+            ],
+            "condition": "1.23kg+0.05kg mount;6mNm and50mNms/axis;DC power/control driver authored."
+          }
+        ],
+        "internal": true,
+        "electrical": {
+          "minimumV": 11.2,
+          "maximumV": 12.8,
+          "peakW": 8
+        },
+        "data": {
+          "interfaces": [
+            "RS422"
+          ],
+          "driver": "adcs",
+          "maxRateBps": 115200
+        },
+        "adcs": {
+          "torqueNm": 0.006,
+          "momentumNms": 0.05,
+          "slewPowerW": 8
+        },
+        "sourceId": "bct-xact2026"
+      },
+      "chemical230-v2": {
+        "modelId": "chemical230-v2",
+        "kind": "engine",
+        "name": "230 s 보정 추진기",
+        "nameEn": "230 s maneuver thruster",
+        "massKg": 2.8,
+        "cost": 48,
+        "idlePowerW": 0,
+        "activePowerW": 4,
+        "geometry": {
+          "id": "chemical-engine",
+          "mountFootprint": [
+            0.38,
+            0.38
+          ],
+          "deployedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.3
+              ],
+              "half": [
+                0.19,
+                0.19,
+                0.3
+              ]
+            }
+          ],
+          "stowedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.3
+              ],
+              "half": [
+                0.19,
+                0.19,
+                0.3
+              ]
+            }
+          ],
+          "apertures": [],
+          "render": {
+            "family": "instrument",
+            "size": [
+              0.38,
+              0.38,
+              0.6
+            ],
+            "variant": "chemical-engine"
+          }
+        },
+        "footprint": [
+          0.38,
+          0.38
+        ],
+        "depth": 0.6,
+        "category": "추진",
+        "description": "명시된 제조사 참조값과 학습용 통합 가정을 사용합니다. 크레딧은 실제 가격이 아닙니다.",
+        "source": "https://www.nasa.gov/smallsat-institute/sst-soa/",
+        "provenance": "game-assumption",
+        "color": "#77b6b2",
+        "maxCount": 1,
+        "evidence": [],
+        "electrical": {
+          "minimumV": 4.7,
+          "maximumV": 5.3,
+          "peakW": 4
+        },
+        "ispS": 230
+      },
+      "recorder-1p6-v2": {
+        "modelId": "recorder-1p6-v2",
+        "kind": "storage",
+        "name": "1.6 Gbit 기록장치",
+        "nameEn": "1.6 Gbit recorder",
+        "massKg": 0.9,
+        "cost": 20,
+        "idlePowerW": 0.7,
+        "activePowerW": 0.7,
+        "geometry": {
+          "id": "recorder-small",
+          "mountFootprint": [
+            0.13,
+            0.1
+          ],
+          "deployedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.025
+              ],
+              "half": [
+                0.065,
+                0.05,
+                0.025
+              ]
+            }
+          ],
+          "stowedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.025
+              ],
+              "half": [
+                0.065,
+                0.05,
+                0.025
+              ]
+            }
+          ],
+          "apertures": [],
+          "render": {
+            "family": "electronics",
+            "size": [
+              0.13,
+              0.1,
+              0.05
+            ],
+            "variant": "recorder-small"
+          }
+        },
+        "footprint": [
+          0.13,
+          0.1
+        ],
+        "depth": 0.05,
+        "category": "통신",
+        "description": "명시된 제조사 참조값과 학습용 통합 가정을 사용합니다. 크레딧은 실제 가격이 아닙니다.",
+        "source": "https://www.nasa.gov/smallsat-institute/sst-soa/",
+        "provenance": "game-assumption",
+        "color": "#77b6b2",
+        "maxCount": 2,
+        "evidence": [],
+        "internal": true,
+        "electrical": {
+          "minimumV": 3.2,
+          "maximumV": 3.4,
+          "peakW": 0.7
+        },
+        "data": {
+          "interfaces": [
+            "SPI"
+          ],
+          "driver": "recorder",
+          "maxRateBps": 10000000
+        },
+        "capacityBits": 1600000000,
+        "recorder": {
+          "writeRateBps": 10000000,
+          "readRateBps": 10000000
+        }
+      },
+      "recorder-8-v2": {
+        "modelId": "recorder-8-v2",
+        "kind": "storage",
+        "name": "8 Gbit 기록장치",
+        "nameEn": "8 Gbit recorder",
+        "massKg": 1.6,
+        "cost": 28,
+        "idlePowerW": 1.8,
+        "activePowerW": 1.8,
+        "geometry": {
+          "id": "recorder-large",
+          "mountFootprint": [
+            0.18,
+            0.13
+          ],
+          "deployedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.035
+              ],
+              "half": [
+                0.09,
+                0.065,
+                0.035
+              ]
+            }
+          ],
+          "stowedBoxes": [
+            {
+              "center": [
+                0,
+                0,
+                0.035
+              ],
+              "half": [
+                0.09,
+                0.065,
+                0.035
+              ]
+            }
+          ],
+          "apertures": [],
+          "render": {
+            "family": "electronics",
+            "size": [
+              0.18,
+              0.13,
+              0.07
+            ],
+            "variant": "recorder-large"
+          }
+        },
+        "footprint": [
+          0.18,
+          0.13
+        ],
+        "depth": 0.07,
+        "category": "통신",
+        "description": "명시된 제조사 참조값과 학습용 통합 가정을 사용합니다. 크레딧은 실제 가격이 아닙니다.",
+        "source": "https://www.nasa.gov/smallsat-institute/sst-soa/",
+        "provenance": "game-assumption",
+        "color": "#77b6b2",
+        "maxCount": 2,
+        "evidence": [],
+        "internal": true,
+        "electrical": {
+          "minimumV": 3.2,
+          "maximumV": 3.4,
+          "peakW": 1.8
+        },
+        "data": {
+          "interfaces": [
+            "SpaceWire"
+          ],
+          "driver": "recorder",
+          "maxRateBps": 50000000
+        },
+        "capacityBits": 8000000000,
+        "recorder": {
+          "writeRateBps": 50000000,
+          "readRateBps": 50000000
+        }
+      }
+    },
+    "transferBudget": 760,
+    "legacyTransferBudget": 680
+  }
+}

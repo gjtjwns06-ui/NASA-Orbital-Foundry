@@ -1,0 +1,9 @@
+{
+  "command": "npx.cmd tsc --noEmit",
+  "exitCode": 0,
+  "stdout": "",
+  "stderr": "",
+  "wallTimeSeconds": 7.1603447,
+  "toolChunkId": "1996a0",
+  "scope": "Product scene/helper and CPU tests on accepted candidate; isolated later browser tool files are not in tsconfig include."
+}

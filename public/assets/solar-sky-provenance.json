@@ -1,0 +1,23 @@
+{
+  "file": "assets/textures/nasa-star-map-2020-4k.webp",
+  "sourcePage": "https://svs.gsfc.nasa.gov/4851/",
+  "sourceUrl": "https://svs.gsfc.nasa.gov/vis/a000000/a004800/a004851/starmap_2020_4k.exr",
+  "credit": "NASA/Goddard Space Flight Center Scientific Visualization Studio; Ernie Wright. Gaia DR2: ESA/Gaia/DPAC.",
+  "sourceDescription": "Deep Star Maps 2020, celestial ICRF/J2000 plate carree star catalogue rendering, released 2020-09-09. No constellation overlays.",
+  "sourceSha256": "69b841cd048c2ef35543eb1c5819b322530e78aa4b0cab97ec1de3ef56a4ddcd",
+  "sourceBytes": 35997085,
+  "processing": {
+    "exposure": 1.4,
+    "toneMap": "Reinhard x/(1+x), linear to IEC sRGB; full 4096x2048 retained; WebP quality 91 method 6",
+    "openexrVersion": "3.5.4",
+    "script": "tools/prepare-solar-sky.py"
+  },
+  "width": 4096,
+  "height": 2048,
+  "sha256": "9e83eba0fa348dc734281fafc7d969fa0d9293279e01b8fafa5c143e2aeeb531",
+  "bytes": 2803768,
+  "usage": "NASA educational/informational media usage guidelines; source credits retained; no endorsement; third-party Gaia data credited.",
+  "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "reviewedOn": "2026-11-15",
+  "limitations": "Display exposure, sky orientation and planet brightness are artistic. The background does not provide a calibrated astrometric or photometric instrument. All nearby worlds, spacecraft, ray intersections and camera motion use 3D geometry."
+}

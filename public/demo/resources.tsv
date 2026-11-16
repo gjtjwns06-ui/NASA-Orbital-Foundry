@@ -1,0 +1,71 @@
+Section	Link Text	Link URL	Use
+NASA Data	JPL Approximate Positions of the Planets	https://ssd.jpl.nasa.gov/planets/approx_pos.html	Approximate elements for the eight-planet Solar System map; Earth entry is the Earth-Moon barycenter approximation.
+NASA Data	JPL Horizons API	https://ssd-api.jpl.nasa.gov/doc/horizons.html	Bundled Earth and Mars vectors in the separate Earth-Mars transfer mode; not the source of every new campaign route.
+NASA Data	NASA GMAT - General Mission Analysis Tool	https://sourceforge.net/projects/gmat/	R2026a executed for selected central-gravity numerical comparisons during development; not embedded in the browser.
+NASA Data	NASA GMAT source and documentation	https://github.com/nasa/GMAT	Console, coordinate-system, epoch, burn and report documentation used in verification tools.
+NASA Data	Design and Develop Science Missions	https://www.nasa.gov/wp-content/uploads/2025/04/250323-design-and-develop-science-mission.pdf	Science objective to design, verification and operations workflow reference.
+NASA Data	CubeSat 101 - Basic Concepts and Processes	https://www.nasa.gov/wp-content/uploads/2017/03/nasa_csli_cubesat_101_508.pdf	Subsystem integration, mass, center of gravity, inertia and operational testing reference; 2017 edition, not current universal launch rules.
+NASA Data	Small Spacecraft Technology State of the Art	https://www.nasa.gov/smallsat-institute/sst-soa/	Subsystem research and source discovery.
+NASA Data	Small Spacecraft Technology - Power	https://www.nasa.gov/smallsat-institute/sst-soa/power-subsystems/	Published power-system references; original manufacturer specifications separately cited.
+NASA Data	Small Spacecraft Technology - Communications	https://www.nasa.gov/smallsat-institute/sst-soa/soa-communications/	Communications technology and hardware references.
+NASA Data	JPL Iris Transponder V2.2 Brochure	https://scienceandtechnology.jpl.nasa.gov/sites/default/files/documents/Brochure_Iris_Transponder_V2.2_SEP_2022.pdf	Selected Iris transponder specifications; game carriers and meshes are original approximations.
+NASA Data	Goddard Mission Design Lab	https://etd.gsfc.nasa.gov/capabilities/integrated-design-center/mission-design-lab/	Multidisciplinary design and trade-study workflow reference.
+NASA Data	JPL Concept Maturity Levels	https://dataverse.jpl.nasa.gov/api/access/datafile/50237?format=original&gbrecs=true	Planning reference for iterative concept development; not a mission-success probability model.
+NASA Data	NASA Mission Viz	https://github.com/nasa/mission-viz	Research reference for separating calculated trajectories from web visualization; not used as the game engine.
+NASA Data	Webb Build It Yourself Game	https://science.nasa.gov/mission/webb/game-build-it-yourself/	Game-design research connecting science objectives with instrument choices.
+NASA Data	Basics of Space Flight - Gravity Assist Primer	https://science.nasa.gov/learn/basics-of-space-flight/primer/	Planet-relative versus Sun-relative velocity and gravity-assist explanation.
+NASA Data	Recent Improvements to the Copernicus Trajectory Design and Optimization System	https://ntrs.nasa.gov/api/citations/20120001856/downloads/20120001856.pdf	Gravity-assist geometry/parameterization research; Copernicus software itself is not bundled or executed.
+NASA Data	Basics of Space Flight - Onboard Systems	https://science.nasa.gov/learn/basics-of-space-flight/chapter11-2/	Attitude, pointing and onboard system design reference.
+NASA Data	Basics of Space Flight - Science Instruments	https://science.nasa.gov/learn/basics-of-space-flight/chapter12-1/	Imaging and wavelength-dependent observations reference; game spectral responses are synthetic.
+NASA Data	Basics of Space Flight - Cruise Phase	https://science.nasa.gov/learn/basics-of-space-flight/chapter15-1/	Onboard sequences and deep-space operations reference.
+NASA Data	NASA Software Engineering Handbook - Safe Mode	https://swehb.nasa.gov/pages/viewpage.action?pageId=133235173	Safe-mode recovery design reference; incident frequency and timing are authored.
+NASA Data	PDS New Horizons LORRI KEM1 Raw Data	https://pds.nasa.gov/ds-view/pds/viewProfile.jsp?dsid=NH-A-LORRI-2-KEM1-V6.0	Instrument documentation reference for exposure and smear, not a source of in-game observation images.
+NASA Data	Blue Marble Next Generation - Base Map	https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/	Historical July 2004 Earth color maps, including converted detail textures. Credit NASA Earth Observatory / Reto Stockli.
+NASA Data	Earth at Night - Black Marble Flat Maps	https://science.nasa.gov/earth/earth-observatory/earth-at-night/maps/	Historical 2016 night-light map. Credit NASA Earth Observatory / Black Marble team.
+NASA Data	NASA SVS 3837 - Water Cycle / GEOS-5 Clouds	https://svs.gsfc.nasa.gov/3837/	Cloud model frame clouds.0350.tif converted to the illustrative transparent cloud layer; not current weather.
+NASA Data	NASA Mars 3D Resource / Texture	https://science.nasa.gov/3d-resources/mars/	NASA/JPL-Caltech Viking/USGS Mars overview texture.
+NASA Data	NASA Trek Mars Tile API	https://trek.nasa.gov/tiles/apidoc/trekAPI.html?body=mars	NASA/USGS Viking MDIM2.1 map tiles used for the 4K Mars surface derivative.
+NASA Data	NASA SVS 4851 - Deep Star Maps 2020	https://svs.gsfc.nasa.gov/4851/	4K celestial map converted from EXR to WebP. Credit NASA/Goddard SVS / Ernie Wright; ESA/Gaia/DPAC and source catalogs credited by SVS.
+NASA Data	NASA Images and Media Usage Guidelines	https://www.nasa.gov/nasa-brand-center/images-and-media/	Attribution and media-use policy consulted; use does not imply NASA endorsement.
+NASA Data	NASA Systems Engineering - Concept of Operations	https://www.nasa.gov/reference/appendix-s-concept-of-operations-annotated-outline/	Planning reference for normal and contingency operations.
+NASA Data	NASA Systems Engineering - Writing Requirements	https://www.nasa.gov/reference/appendix-c-how-to-write-a-good-requirement/	Requirements and acceptance-criteria planning reference.
+NASA Data	NASA Systems Engineering - Requirements Verification Matrix	https://www.nasa.gov/reference/appendix-d-requirements-verification-matrix/	Traceability and verification planning reference.
+Space Agency Partner & Other Data	USGS Mars Viking Colorized Global Mosaic 232m	https://astrogeology.usgs.gov/search/map/mars_viking_colorized_global_mosaic_232m	Underlying NASA/USGS/Ames Viking MDIM2.1 product used through NASA Trek.
+Space Agency Partner & Other Data	ESA Gaia Data Release 2	https://www.cosmos.esa.int/web/gaia/dr2	Underlying catalog attribution through NASA Deep Star Maps 2020; no separate Gaia catalog ingestion.
+Space Agency Partner & Other Data	GomSpace NanoPower TSP 45W	https://gomspace.com/product/nanopower-tsp-45w/	Published solar-panel specifications; no manufacturer CAD or artwork redistributed.
+Space Agency Partner & Other Data	GomSpace NanoPower TSP 45W Data Sheet	https://gomspace.com/wp-content/uploads/2025/09/Datasheet-NanoPower-TSP_45W.pdf	Source for selected mass, size and electrical values.
+Space Agency Partner & Other Data	GomSpace NanoPower BPX	https://gomspace.com/product/nanopower-bpx/	Battery hardware reference.
+Space Agency Partner & Other Data	GomSpace NanoPower BPX 100 Wh Data Sheet	https://gomspace.com/wp-content/uploads/2025/09/gs-ds-nanopower-BPX-100-Wh-1076870-1.1.0.pdf	Published battery mass, configuration and capacity values; usable capacity and carriers are game assumptions.
+Space Agency Partner & Other Data	GomSpace NanoCom AX100	https://gomspace.com/product/nanocom-ax100/	UHF communications hardware reference.
+Space Agency Partner & Other Data	GomSpace NanoCom AX100 Data Sheet	https://gomspace.com/wp-content/uploads/2025/09/gs-ds-nanocom-ax100.pdf	Published radio specifications.
+Space Agency Partner & Other Data	ISISPACE S-band Patch Antenna	https://isispace.nl/product/s-band-patch-antenna/	Selected antenna specifications; original game geometry.
+Space Agency Partner & Other Data	Blue Canyon Technologies ADCS Data Sheet	https://www.bluecanyontech.com/wp-content/uploads/ADCS-2026.pdf	XACT-15 / XACT-50 mass, wheel torque and momentum references; not a validated real spacecraft control system.
+Space Agency Partner & Other Data	Three.js	https://threejs.org/	Browser 3D rendering and loaders; MIT license.
+Space Agency Partner & Other Data	TypeScript	https://www.typescriptlang.org/	Application and simulation implementation language/toolchain.
+Space Agency Partner & Other Data	Vite	https://vite.dev/	Development and production bundling.
+Space Agency Partner & Other Data	Lucide	https://lucide.dev/	Interface icons; ISC license.
+Space Agency Partner & Other Data	Blender	https://www.blender.org/	Original procedural spacecraft/environment modeling and export.
+Space Agency Partner & Other Data	Python	https://www.python.org/	Asset authoring and conversion scripts.
+Space Agency Partner & Other Data	Node.js	https://nodejs.org/	Build, asset and verification tooling.
+Space Agency Partner & Other Data	Playwright	https://playwright.dev/	Browser interaction verification and gameplay capture automation.
+Space Agency Partner & Other Data	Vitest	https://vitest.dev/	Model and state regression tests.
+Space Agency Partner & Other Data	Khronos KTX Software	https://github.com/KhronosGroup/KTX-Software	KTX2 Earth texture conversion tooling.
+Space Agency Partner & Other Data	Basis Universal	https://github.com/BinomialLLC/basis_universal	Texture transcoder distributed with Three.js loader; included Apache-2.0 license.
+Space Agency Partner & Other Data	Barlow Typeface	https://github.com/jpt/barlow	Bundled font family; SIL Open Font License.
+Space Agency Partner & Other Data	IBM Plex Typeface	https://github.com/IBM/plex	Bundled IBM Plex Sans KR; SIL Open Font License.
+Space Agency Partner & Other Data	OpenEXR	https://openexr.com/	Reading the NASA EXR star map for deterministic conversion.
+Space Agency Partner & Other Data	Pillow	https://python-pillow.github.io/	Image conversion in asset tooling.
+Space Agency Partner & Other Data	OpenAI ChatGPT / Codex	https://openai.com/codex/	SI-assisted planning, code/scripts, tests, debugging and text; no generative AI API required during gameplay.
+Space Agency Partner & Other Data	Juno: New Origins - Official Release Notes	https://www.simplerockets.com/Releases/View/220866	Interaction research for orbit manipulation; no code, meshes or UI assets copied.
+Space Agency Partner & Other Data	Mars Horizon - Auroch Digital	https://aurochdigital.com/marshorizonvideogame	Visual and mission-flow research; no game assets copied.
+Space Agency Partner & Other Data	Solar Smash - Paradyme	https://paradyme.games/	Direct interaction and celestial presentation research; no game assets copied.
+Space Agency Partner & Other Data	Outer Wilds - Mobius Digital	https://www.mobiusdigitalgames.com/outer-wilds.html	Curiosity-driven exploration and instrument feedback research; no game assets copied.
+Space Agency Partner & Other Data	Elite Dangerous - Frontier Official Announcements	https://store.steampowered.com/news/posts/?appgroupname=Elite%3A+Dangerous&appids=359320&enddate=1760615315&feed=steam_community_announcements	Exploration workflow research: broad survey to detailed investigation; no assets copied.
+Space Agency Partner & Other Data	To the Moon - Freebird Games	https://freebirdgames.com/games/to-the-moon/	Narrative motivation research; no story text or assets copied.
+Space Agency Partner & Other Data	Kerbal Space Program Official KSPedia Manual	https://static-files.kerbalspaceprogram.com/pd/KSPedia-XB1.pdf	Maneuver-node interaction research; no assets or code copied.
+Space Agency Partner & Other Data	Terra Invicta - Official Publisher Wiki, Fleets	https://wiki.hoodedhorse.com/Terra_Invicta/Fleets	Arrival time versus delta-v tradeoff interaction research; no assets or code copied.
+Space Agency Partner & Other Data	Children of a Dead Earth - Developer Orbital Mechanics Article	https://childrenofadeadearth.wordpress.com/2016/05/17/fun-with-orbital-mechanics/	Orbital-mechanics gameplay research; no assets or code copied.
+Space Agency Partner & Other Data	MDN Web Workers API	https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers	Browser computation architecture reference.
+Space Agency Partner & Other Data	MDN Browser Storage Quotas	https://developer.mozilla.org/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria	Save persistence and quota failure handling reference.
+Space Agency Partner & Other Data	FFmpeg	https://ffmpeg.org/	Editing and H.264 encoding of the actual gameplay demonstration.
+Space Agency Partner & Other Data	ImageIO FFmpeg	https://github.com/imageio/imageio-ffmpeg	Packaged FFmpeg executable used by the local video editing script.

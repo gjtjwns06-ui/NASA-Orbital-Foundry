@@ -1,0 +1,57 @@
+{
+  "errors": [],
+  "result": [
+    {
+      "size": {
+        "width": 1440,
+        "height": 900
+      },
+      "handles": [
+        {
+          "kind": "departure",
+          "x": 947.6192366079343,
+          "y": 347.62566677798833,
+          "visible": true,
+          "jdTdb": 2461359.5,
+          "element": "transfer-universe"
+        },
+        {
+          "kind": "arrival",
+          "x": 349.69633270532086,
+          "y": 569.5101959913269,
+          "visible": true,
+          "jdTdb": 2461619.5,
+          "element": "transfer-universe"
+        }
+      ]
+    },
+    {
+      "size": {
+        "width": 1280,
+        "height": 720
+      },
+      "handles": [
+        {
+          "kind": "departure",
+          "x": 822.0953892863475,
+          "y": 278.1005334223907,
+          "visible": true,
+          "jdTdb": 2461359.5,
+          "element": "transfer-universe"
+        },
+        {
+          "kind": "arrival",
+          "x": 343.75706616425657,
+          "y": 455.60815679306154,
+          "visible": true,
+          "jdTdb": 2461619.5,
+          "element": "transfer-universe"
+        }
+      ]
+    }
+  ],
+  "scripts": [
+    "http://127.0.0.1:4173/assets/index-b9Cs6prz.js"
+  ],
+  "date": "2026-11-14T17:22:27.703Z"
+}

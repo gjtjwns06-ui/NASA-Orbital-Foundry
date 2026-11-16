@@ -1,0 +1,17 @@
+{
+  "scope": "Pre-first-run metadata clarification only",
+  "numericalGatesChanged": false,
+  "reason": "Unrelated user desktop browsers are present and must remain untouched; machine-wide isolation is not claimed.",
+  "files": [
+    {
+      "path": "tools/performance/v9-standard20.mjs",
+      "beforeSha256": "dab5eaa121cdf4d6134cd2fb7c86ce0c0d625e937617c2167f2c607163f483ea",
+      "afterSha256": "fa36d50088ec18676f09e811b5e2836b26c029f78eb63757838ac01335326a71"
+    },
+    {
+      "path": "tools/performance/v9-active-first-light.mjs",
+      "beforeSha256": "c9e5e6d6b27740ecd8b56a84f2c05e3c68c7ae924543a61a4878bf18d1bd3a37",
+      "afterSha256": "86ced1f280bf47baa7d14fc28d0f80bedf428f2e1cd7191e817ae4599dc32b57"
+    }
+  ]
+}

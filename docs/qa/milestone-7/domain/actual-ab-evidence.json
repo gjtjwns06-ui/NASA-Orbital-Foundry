@@ -1,0 +1,258 @@
+{
+  "integrity": {
+    "files": 41,
+    "manifestSha256": "f79626ffcba1206bb22a7e7706abcf6d3a7088bc6fc4daec656dbe6e935e7988"
+  },
+  "A": {
+    "sourceHash": "f62498ba7192bff90a72ad58dffc1282ae9b01166c14917afaaae446eb77e26e",
+    "result": {
+      "status": "partial",
+      "score": 75,
+      "received": 5,
+      "required": 3,
+      "energyMinimumWh": 83.47711427419455,
+      "fuelRemainingKg": 0.25,
+      "totalCost": 472,
+      "budgetRemaining": 288,
+      "navigation": {
+        "directionErrorDeg": 0.24610554442966964,
+        "specificEnergyKm2S2": -281.961965318096,
+        "directionPassed": false,
+        "energyPassed": true,
+        "minimumAltitudeKm": 999.9999999999482
+      }
+    },
+    "evaluation": {
+      "committedTimeSeconds": 326162.9554585013,
+      "final": true,
+      "completionPolicyId": "swingby-1.0.0:actual-patch-exit-or-deadline-or-physical-failure",
+      "stopReason": "SUPPORTED_ENCOUNTER_END"
+    },
+    "burn": {
+      "id": "correction",
+      "time": 3600,
+      "status": "skipped",
+      "reasons": [
+        "BURN_ATTITUDE"
+      ],
+      "before": {
+        "positionKm": [
+          429318.84956555546,
+          -36703.51631162845,
+          -66504.17666674826
+        ],
+        "velocityKmS": [
+          -3.009962256548486,
+          0.30694413558878453,
+          0.4887665708537383
+        ]
+      },
+      "after": {
+        "positionKm": [
+          429318.84956555546,
+          -36703.51631162845,
+          -66504.17666674826
+        ],
+        "velocityKmS": [
+          -3.009962256548486,
+          0.30694413558878453,
+          0.4887665708537383
+        ]
+      },
+      "attitudeQuaternion": [
+        0.4271975312232724,
+        0.058615280555444654,
+        0.4093181137237963,
+        0.8040679075673528
+      ],
+      "requestedDeltaVMps": [
+        -0.21033381433707052,
+        0.8216223240612465,
+        -1.8112715747387023
+      ],
+      "actualDeltaVMps": [
+        0,
+        0,
+        0
+      ],
+      "fuelBeforeKg": 0.25,
+      "fuelUsedKg": 0,
+      "fuelAfterKg": 0.25,
+      "centerOfMassM": [
+        0.10748527307808443,
+        -0.04433040259139284,
+        -0.05522882468103426
+      ],
+      "thrustDirectionBody": [
+        0.11998032689232914,
+        0.9908602864328784,
+        -0.061649119450027254
+      ],
+      "gimbalAngleDeg": 7.752383630974053,
+      "pointingErrorDeg": 114.90370961682245,
+      "angularRateDegS": 0.035696292143832374
+    }
+  },
+  "B": {
+    "sourceHash": "4b5f728512fd89103e9cece6294c50211d9c132680fa251e18a31aafb91862f9",
+    "result": {
+      "status": "success",
+      "score": 95,
+      "received": 12,
+      "required": 3,
+      "energyMinimumWh": 120.76772039153677,
+      "fuelRemainingKg": 0.20181534064266565,
+      "totalCost": 480,
+      "budgetRemaining": 280,
+      "navigation": {
+        "directionErrorDeg": 0.000001321436450167183,
+        "specificEnergyKm2S2": -281.8899229514153,
+        "directionPassed": true,
+        "energyPassed": true,
+        "minimumAltitudeKm": 1004.5747528252914
+      }
+    },
+    "evaluation": {
+      "committedTimeSeconds": 326164.3881802467,
+      "final": true,
+      "completionPolicyId": "swingby-1.0.0:actual-patch-exit-or-deadline-or-physical-failure",
+      "stopReason": "SUPPORTED_ENCOUNTER_END"
+    },
+    "burn": {
+      "id": "correction",
+      "time": 3600,
+      "status": "fired",
+      "reasons": [],
+      "before": {
+        "positionKm": [
+          429318.84956555546,
+          -36703.51631162845,
+          -66504.17666674826
+        ],
+        "velocityKmS": [
+          -3.009962256548486,
+          0.30694413558878453,
+          0.4887665708537383
+        ]
+      },
+      "after": {
+        "positionKm": [
+          429318.8495655551,
+          -36703.51631162854,
+          -66504.17666674833
+        ],
+        "velocityKmS": [
+          -3.0101725903628203,
+          0.3077657579128459,
+          0.48695529927899983
+        ]
+      },
+      "attitudeQuaternion": [
+        -0.47690878197118197,
+        -0.248849453355418,
+        0.29878962430141776,
+        0.7882618369890115
+      ],
+      "requestedDeltaVMps": [
+        -0.21033381433707052,
+        0.8216223240612465,
+        -1.8112715747387023
+      ],
+      "actualDeltaVMps": [
+        -0.2103338143370708,
+        0.8216223240612464,
+        -1.8112715747387025
+      ],
+      "fuelBeforeKg": 0.25,
+      "fuelUsedKg": 0.04818465935733436,
+      "fuelAfterKg": 0.20181534064266565,
+      "centerOfMassM": [
+        0.10818894285005995,
+        -0.042164076151935966,
+        -0.05613422704668218
+      ],
+      "thrustDirectionBody": [
+        0.1204582568863472,
+        0.9907489756152175,
+        -0.06250020532206388
+      ],
+      "gimbalAngleDeg": 7.7995207555628046,
+      "pointingErrorDeg": 9.83532217479511e-15,
+      "angularRateDegS": 0
+    }
+  },
+  "comparison": {
+    "beforeRunId": "A-weak-adcs",
+    "afterRunId": "B-adcs-replaced",
+    "compatibility": {
+      "mode": "controlled",
+      "evaluationBasis": "same-terminal-policy",
+      "blockers": [],
+      "changedContext": [],
+      "allowScoreDelta": true,
+      "allowMetricDelta": true,
+      "allowCommonFrameOverlay": true
+    },
+    "changes": [
+      {
+        "kind": "hardware",
+        "before": {
+          "kind": "adcs",
+          "modelId": "xact15-carrier-v1",
+          "face": "py",
+          "uMeters": 0.22,
+          "vMeters": 0.2,
+          "rotationDeg": 0
+        },
+        "after": null,
+        "mapping": "semantic",
+        "targets": [
+          {
+            "kind": "part-family",
+            "partKind": "adcs"
+          }
+        ]
+      },
+      {
+        "kind": "hardware",
+        "before": null,
+        "after": {
+          "kind": "adcs",
+          "modelId": "xact50-carrier-v1",
+          "face": "py",
+          "uMeters": 0.22,
+          "vMeters": 0.2,
+          "rotationDeg": 0
+        },
+        "mapping": "semantic",
+        "targets": [
+          {
+            "kind": "part",
+            "partId": "adcs-1",
+            "signature": {
+              "kind": "adcs",
+              "modelId": "xact50-carrier-v1",
+              "face": "py",
+              "uMeters": 0.22,
+              "vMeters": 0.2,
+              "rotationDeg": 0
+            }
+          }
+        ]
+      }
+    ],
+    "deltas": {
+      "received": 7,
+      "energyMinimumWh": 37.29060611734222,
+      "fuelRemainingKg": -0.04818465935733435,
+      "totalCost": 8,
+      "budgetRemaining": -8,
+      "score": 20,
+      "observedDurationSeconds": 1.43272174539743
+    },
+    "warning": {
+      "ko": "관찰 기간과 변경된 모든 조건을 함께 보세요. 결과 차이만으로 한 부품이 유일한 원인임을 입증하지 않습니다.",
+      "en": "Read the observation durations and all changed conditions together. A result difference alone does not establish one component as the sole cause."
+    }
+  }
+}

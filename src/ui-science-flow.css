@@ -1,0 +1,32 @@
+.science-flow{margin:12px 0;padding:12px 0;border-top:1px solid rgba(150,206,207,.15);color:var(--text,#d8e5e7)}
+.science-flow-heading{display:flex;justify-content:space-between;align-items:baseline;gap:7px;margin-bottom:10px}
+.science-flow-heading>strong{font-size:10px;line-height:1.4;font-weight:600}
+.science-flow-heading>span{color:#83dec9;font-size:9px;white-space:nowrap}
+.science-flow-stages{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:3px;text-align:center;margin-bottom:9px}
+.science-flow-stages>div{display:grid;grid-template-columns:auto auto;justify-content:center;gap:1px 4px;position:relative}
+.science-flow-stages>div:not(:last-child):after{content:'›';position:absolute;right:-4px;top:5px;color:#70868d}
+.science-flow-stages strong{font-size:13px;font-variant-numeric:tabular-nums;font-weight:600}
+.science-flow-stages small{grid-column:1/-1;font-size:8px;color:#a6b8bf;white-space:nowrap}
+.science-flow-stages>div>span{font-size:12px;color:#91a8b5}
+.science-flow-stages [data-science-stage=received]>span{color:#80dcc2}
+.science-flow-packets{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px}
+.science-packet{position:relative;border:1px solid rgba(132,163,176,.25);background:rgba(5,23,31,.55);border-radius:4px;min-width:0;padding:5px 5px 7px;display:grid;grid-template-columns:12px 1fr;gap:2px 3px;overflow:hidden}
+.science-packet>strong{font-size:10px;font-variant-numeric:tabular-nums;font-weight:500;text-align:right;color:#c9d6da}
+.science-packet>small{font-size:8px;line-height:1.2;grid-column:1/-1;white-space:nowrap;color:#a5b9c2}
+.science-packet-mark{font-size:11px;line-height:1;color:#91a7b4}
+.science-packet[data-status=transmitting]{border-color:#d6b570;background:rgba(103,80,36,.14)}
+.science-packet[data-status=transmitting] .science-packet-mark{color:#f0cc83}
+.science-packet[data-status=inflight]{border-color:#8ca8d1;background:rgba(57,83,128,.12)}
+.science-packet[data-status=inflight] .science-packet-mark{color:#b0c8ef}
+.science-packet[data-status=received]{border-color:#64bba5;background:rgba(35,109,90,.15)}
+.science-packet[data-status=received] .science-packet-mark{color:#8ce7cb}
+.science-packet-progress{position:absolute;bottom:0;left:0;right:0;height:3px;background:rgba(100,128,142,.12)}
+.science-packet-progress i{position:absolute;left:0;top:0;height:100%}
+.science-packet-sent{background:#8badd3}
+.science-packet-received{background:#86dfc2}
+.science-flow-bytes{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px;margin-top:8px;font-size:8px;color:#9db3bd;font-variant-numeric:tabular-nums}
+.science-flow-next{font-size:9px!important;line-height:1.55!important;color:#c3d2d7!important;margin:8px 0 0!important;overflow-wrap:anywhere}
+.science-flow-footnote,.science-flow-overflow{font-size:8px!important;line-height:1.4!important;color:#829aa5!important;margin:4px 0 0!important}
+.large-ui .science-flow-heading>strong,.large-ui .science-flow-next{font-size:11px!important}
+.large-ui .science-packet>small,.large-ui .science-flow-stages small,.large-ui .science-flow-bytes{font-size:9px}
+@media(max-width:1000px){.science-flow-heading{flex-wrap:wrap}.science-flow-packets{grid-template-columns:repeat(3,minmax(0,1fr))}}

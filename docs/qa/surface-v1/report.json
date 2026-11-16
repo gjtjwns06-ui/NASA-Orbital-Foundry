@@ -1,0 +1,2543 @@
+{
+  "status": "pass",
+  "candidate": "surface-v1",
+  "durationMs": 116710,
+  "browser": "157.0.8103.52",
+  "scope": "Matched visual, actual replay and resource-lifetime proof. CPU work may occur; no isolated FPS claim. Product default remains flat pending review.",
+  "sourcesBefore": {
+    "src/render/deployment-surface-finish.ts": "4c5f0f13eff3b3bdbf1cce77a937905d6d1c8e076db1ff3b60653a0ea80e3cdc",
+    "src/render/deployment-view.ts": "6fb065f30417368c4ddaa2992bd8422f29c4260b85abce0e4d267aee4dad8ad0",
+    "src/render/deployment-scene.ts": "7677e91ea88fd5656511103a8edef431c3f71d0618798c280a8cb93e014294a5",
+    "src/render/deployment-scene-types.ts": "68da5ac1e98a19578217a02b73ef195f788706ffe32addf65f27ed81f4726642",
+    "src/render/deployment-link-meshes.ts": "51db499646e104023466013a4fbdae736b0995d46dff516385309c4613ccb6e1",
+    "src/render/deployment-chassis-art.ts": "14817f22d8f7cd0bd0b4063354019493225360b3a2b352644833cb98bc35fe80",
+    "src/render/deployment-internal-art.ts": "871e1fd9f910db321a84d5327e867fa5550f66de649472f8eb8454f54c564622",
+    "src/render/earth-surface-detail.ts": "b5da4230c23c1eae799712f27c95316b9568692df503f8b7bd59ca454cc9e933"
+  },
+  "sourcesAfter": {
+    "src/render/deployment-surface-finish.ts": "4c5f0f13eff3b3bdbf1cce77a937905d6d1c8e076db1ff3b60653a0ea80e3cdc",
+    "src/render/deployment-view.ts": "6fb065f30417368c4ddaa2992bd8422f29c4260b85abce0e4d267aee4dad8ad0",
+    "src/render/deployment-scene.ts": "7677e91ea88fd5656511103a8edef431c3f71d0618798c280a8cb93e014294a5",
+    "src/render/deployment-scene-types.ts": "68da5ac1e98a19578217a02b73ef195f788706ffe32addf65f27ed81f4726642",
+    "src/render/deployment-link-meshes.ts": "51db499646e104023466013a4fbdae736b0995d46dff516385309c4613ccb6e1",
+    "src/render/deployment-chassis-art.ts": "14817f22d8f7cd0bd0b4063354019493225360b3a2b352644833cb98bc35fe80",
+    "src/render/deployment-internal-art.ts": "871e1fd9f910db321a84d5327e867fa5550f66de649472f8eb8454f54c564622",
+    "src/render/earth-surface-detail.ts": "b5da4230c23c1eae799712f27c95316b9568692df503f8b7bd59ca454cc9e933"
+  },
+  "shots": [
+    {
+      "name": "1280-t0-flat.png",
+      "camera": {
+        "position": [
+          3.325184889214555,
+          0.06951358289179763,
+          -0.001267887334816071
+        ],
+        "target": [
+          3.283250608108516,
+          -0.0001800383440947276,
+          -0.0012678873348160736
+        ],
+        "quaternion": [
+          -0.34800751819037107,
+          0.6155410362298996,
+          0.34800751819037107,
+          0.6155410362298995
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.010221487774373756,
+          "fitDistance": 0.08133685986594465,
+          "distance": 0.0813368598659446,
+          "minDistance": 0.01647413398737081,
+          "maxDistance": 0.218479441701728,
+          "conservativeSurfaceClearance": 0.2822140697197315,
+          "displayEnvelopeRadius": 0.0155010752553102,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.01745141312221484,
+          "right": 0.01745141312221484,
+          "top": 0.01745141312221484,
+          "bottom": -0.01745141312221484,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00005584452199108749
+        }
+      },
+      "finish": {
+        "style": "flat",
+        "cachedTextures": 0,
+        "size": 0,
+        "cpuBytes": 0,
+        "estimatedMipBytes": 0,
+        "disposed": false
+      },
+      "textures": [],
+      "render": {
+        "calls": 110,
+        "triangles": 93116,
+        "memory": {
+          "geometries": 57,
+          "textures": 8
+        },
+        "programs": 8,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "9491e954a8749cbd70c87568f46121adcf4a092e75e1dd4757ebdebabe24a443"
+    },
+    {
+      "name": "1280-t0-textured.png",
+      "camera": {
+        "position": [
+          3.325184889214555,
+          0.06951358289179763,
+          -0.001267887334816071
+        ],
+        "target": [
+          3.283250608108516,
+          -0.0001800383440947276,
+          -0.0012678873348160736
+        ],
+        "quaternion": [
+          -0.34800751819037107,
+          0.6155410362298996,
+          0.34800751819037107,
+          0.6155410362298995
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.010221487774373756,
+          "fitDistance": 0.08133685986594465,
+          "distance": 0.0813368598659446,
+          "minDistance": 0.01647413398737081,
+          "maxDistance": 0.218479441701728,
+          "conservativeSurfaceClearance": 0.2822140697197315,
+          "displayEnvelopeRadius": 0.0155010752553102,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.01745141312221484,
+          "right": 0.01745141312221484,
+          "top": 0.01745141312221484,
+          "bottom": -0.01745141312221484,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00005584452199108749
+        }
+      },
+      "finish": {
+        "style": "textured",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "e02faaeb-9608-4040-834b-346532583678",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "951b9f8a-5fd3-4258-90ca-8f9414bf33ac",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "08d68fd3-a9cc-494c-889a-767d8de50a85",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "edeaae52-c2e5-4e06-805f-9d2a44f896c1",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 110,
+        "triangles": 93116,
+        "memory": {
+          "geometries": 57,
+          "textures": 12
+        },
+        "programs": 9,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "9491e954a8749cbd70c87568f46121adcf4a092e75e1dd4757ebdebabe24a443"
+    },
+    {
+      "name": "1280-t240-flat.png",
+      "camera": {
+        "position": [
+          3.2010102026279466,
+          0.7420173575695292,
+          -0.5300233048760429
+        ],
+        "target": [
+          3.173025780763939,
+          0.6609800690430683,
+          -0.5241543423129589
+        ],
+        "quaternion": [
+          -0.3795769592587656,
+          0.6245554427365857,
+          0.43560830859023375,
+          0.5254495527023813
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.008033834534158209,
+          "fitDistance": 0.08593378101975112,
+          "distance": 0.08593378101975101,
+          "minDistance": 0.01740520380174528,
+          "maxDistance": 0.21903128681807235,
+          "conservativeSurfaceClearance": 0.28221406971973106,
+          "displayEnvelopeRadius": 0.015501075255310174,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.01843771589167932,
+          "right": 0.01843771589167932,
+          "top": 0.01843771589167932,
+          "bottom": -0.01843771589167932,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.000048203007204949256
+        }
+      },
+      "finish": {
+        "style": "flat",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "e02faaeb-9608-4040-834b-346532583678",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "951b9f8a-5fd3-4258-90ca-8f9414bf33ac",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "08d68fd3-a9cc-494c-889a-767d8de50a85",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "edeaae52-c2e5-4e06-805f-9d2a44f896c1",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 110,
+        "triangles": 93116,
+        "memory": {
+          "geometries": 57,
+          "textures": 12
+        },
+        "programs": 9,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.017501078160000003,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "554d6940e036ded1c040aaa71459dd600f73c788c04f5d612a02e6b29d788379"
+    },
+    {
+      "name": "1280-t240-textured.png",
+      "camera": {
+        "position": [
+          3.2010102026279466,
+          0.7420173575695292,
+          -0.5300233048760429
+        ],
+        "target": [
+          3.173025780763939,
+          0.6609800690430683,
+          -0.5241543423129589
+        ],
+        "quaternion": [
+          -0.3795769592587656,
+          0.6245554427365857,
+          0.43560830859023375,
+          0.5254495527023813
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.008033834534158209,
+          "fitDistance": 0.08593378101975112,
+          "distance": 0.08593378101975101,
+          "minDistance": 0.01740520380174528,
+          "maxDistance": 0.21903128681807235,
+          "conservativeSurfaceClearance": 0.28221406971973106,
+          "displayEnvelopeRadius": 0.015501075255310174,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.01843771589167932,
+          "right": 0.01843771589167932,
+          "top": 0.01843771589167932,
+          "bottom": -0.01843771589167932,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.000048203007204949256
+        }
+      },
+      "finish": {
+        "style": "textured",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "e02faaeb-9608-4040-834b-346532583678",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "951b9f8a-5fd3-4258-90ca-8f9414bf33ac",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "08d68fd3-a9cc-494c-889a-767d8de50a85",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "edeaae52-c2e5-4e06-805f-9d2a44f896c1",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 110,
+        "triangles": 93116,
+        "memory": {
+          "geometries": 57,
+          "textures": 12
+        },
+        "programs": 9,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.017501078160000003,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "554d6940e036ded1c040aaa71459dd600f73c788c04f5d612a02e6b29d788379"
+    },
+    {
+      "name": "1280-t600-flat.png",
+      "camera": {
+        "position": [
+          2.6146655260642406,
+          1.6416517169440232,
+          -1.2430744418645578
+        ],
+        "target": [
+          2.614306958552537,
+          1.5562381364674658,
+          -1.233730189262823
+        ],
+        "quaternion": [
+          -0.4147887739398924,
+          0.6183246831615729,
+          0.5528035561116975,
+          0.3742099511729247
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.008032914451623177,
+          "fitDistance": 0.08592393937181209,
+          "distance": 0.08592393937181206,
+          "minDistance": 0.01740321045423873,
+          "maxDistance": 0.21902135956448657,
+          "conservativeSurfaceClearance": 0.2822140697197315,
+          "displayEnvelopeRadius": 0.015501075255310198,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.018435604294744418,
+          "right": 0.018435604294744418,
+          "top": 0.018435604294744418,
+          "bottom": -0.018435604294744418,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00004819748670973906
+        }
+      },
+      "finish": {
+        "style": "flat",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "e02faaeb-9608-4040-834b-346532583678",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "951b9f8a-5fd3-4258-90ca-8f9414bf33ac",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "08d68fd3-a9cc-494c-889a-767d8de50a85",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "edeaae52-c2e5-4e06-805f-9d2a44f896c1",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 110,
+        "triangles": 93116,
+        "memory": {
+          "geometries": 57,
+          "textures": 12
+        },
+        "programs": 9,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.0437526954,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "f77c66d639d1358489ea062ca665d423fc1c3afda7a327760d23c71437f74868"
+    },
+    {
+      "name": "1280-t600-textured.png",
+      "camera": {
+        "position": [
+          2.6146655260642406,
+          1.6416517169440232,
+          -1.2430744418645578
+        ],
+        "target": [
+          2.614306958552537,
+          1.5562381364674658,
+          -1.233730189262823
+        ],
+        "quaternion": [
+          -0.4147887739398924,
+          0.6183246831615729,
+          0.5528035561116975,
+          0.3742099511729247
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.008032914451623177,
+          "fitDistance": 0.08592393937181209,
+          "distance": 0.08592393937181206,
+          "minDistance": 0.01740321045423873,
+          "maxDistance": 0.21902135956448657,
+          "conservativeSurfaceClearance": 0.2822140697197315,
+          "displayEnvelopeRadius": 0.015501075255310198,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.018435604294744418,
+          "right": 0.018435604294744418,
+          "top": 0.018435604294744418,
+          "bottom": -0.018435604294744418,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00004819748670973906
+        }
+      },
+      "finish": {
+        "style": "textured",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "e02faaeb-9608-4040-834b-346532583678",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "951b9f8a-5fd3-4258-90ca-8f9414bf33ac",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "08d68fd3-a9cc-494c-889a-767d8de50a85",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "edeaae52-c2e5-4e06-805f-9d2a44f896c1",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 110,
+        "triangles": 93116,
+        "memory": {
+          "geometries": 57,
+          "textures": 12
+        },
+        "programs": 9,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.0437526954,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "f77c66d639d1358489ea062ca665d423fc1c3afda7a327760d23c71437f74868"
+    },
+    {
+      "name": "1280-t1385-flat.png",
+      "camera": {
+        "position": [
+          0.17857832509403182,
+          2.6322522292383668,
+          -2.0275291899919723
+        ],
+        "target": [
+          0.23300226605270985,
+          2.566020605122415,
+          -2.0333883686597063
+        ],
+        "quaternion": [
+          -0.43610537382624864,
+          0.5250875698722245,
+          0.7308081003186894,
+          0.003829803407250172
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.00803291445162319,
+          "fitDistance": 0.08592393937181224,
+          "distance": 0.08592393937181216,
+          "minDistance": 0.01740321045423876,
+          "maxDistance": 0.2190213595644869,
+          "conservativeSurfaceClearance": 0.28221406971973195,
+          "displayEnvelopeRadius": 0.015501075255310224,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.018435604294744452,
+          "right": 0.018435604294744452,
+          "top": 0.018435604294744452,
+          "bottom": -0.018435604294744452,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00004819748670973915
+        }
+      },
+      "finish": {
+        "style": "flat",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "e02faaeb-9608-4040-834b-346532583678",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "951b9f8a-5fd3-4258-90ca-8f9414bf33ac",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "08d68fd3-a9cc-494c-889a-767d8de50a85",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "edeaae52-c2e5-4e06-805f-9d2a44f896c1",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 111,
+        "triangles": 93284,
+        "memory": {
+          "geometries": 58,
+          "textures": 12
+        },
+        "programs": 10,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.10099629417763138,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "e6a39e9e619763c5c45168cb85945c9188efbe088a5e49d4768a91d0e4db9dd1"
+    },
+    {
+      "name": "1280-t1385-textured.png",
+      "camera": {
+        "position": [
+          0.17857832509403182,
+          2.6322522292383668,
+          -2.0275291899919723
+        ],
+        "target": [
+          0.23300226605270985,
+          2.566020605122415,
+          -2.0333883686597063
+        ],
+        "quaternion": [
+          -0.43610537382624864,
+          0.5250875698722245,
+          0.7308081003186894,
+          0.003829803407250172
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.00803291445162319,
+          "fitDistance": 0.08592393937181224,
+          "distance": 0.08592393937181216,
+          "minDistance": 0.01740321045423876,
+          "maxDistance": 0.2190213595644869,
+          "conservativeSurfaceClearance": 0.28221406971973195,
+          "displayEnvelopeRadius": 0.015501075255310224,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.018435604294744452,
+          "right": 0.018435604294744452,
+          "top": 0.018435604294744452,
+          "bottom": -0.018435604294744452,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00004819748670973915
+        }
+      },
+      "finish": {
+        "style": "textured",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "e02faaeb-9608-4040-834b-346532583678",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "951b9f8a-5fd3-4258-90ca-8f9414bf33ac",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "08d68fd3-a9cc-494c-889a-767d8de50a85",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "edeaae52-c2e5-4e06-805f-9d2a44f896c1",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 111,
+        "triangles": 93284,
+        "memory": {
+          "geometries": 58,
+          "textures": 12
+        },
+        "programs": 10,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.10099629417763138,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "e6a39e9e619763c5c45168cb85945c9188efbe088a5e49d4768a91d0e4db9dd1"
+    },
+    {
+      "name": "1280-working-faces-flat.png",
+      "camera": {
+        "position": [
+          0.2649401438933709,
+          2.5569851078467485,
+          -2.1126427382880575
+        ],
+        "target": [
+          0.23300226605270985,
+          2.566020605122415,
+          -2.0333883686597063
+        ],
+        "quaternion": [
+          -0.0854645901373504,
+          0.9766703180689116,
+          -0.06995022353469692,
+          0.18416802073995311
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.00803291445162319,
+          "fitDistance": 0.08592393937181224,
+          "distance": 0.08592393937181231,
+          "minDistance": 0.01740321045423876,
+          "maxDistance": 0.2190213595644869,
+          "conservativeSurfaceClearance": 0.28221406971973195,
+          "displayEnvelopeRadius": 0.015501075255310224,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.018435604294744452,
+          "right": 0.018435604294744452,
+          "top": 0.018435604294744452,
+          "bottom": -0.018435604294744452,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00004819748670973915
+        }
+      },
+      "finish": {
+        "style": "flat",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "e02faaeb-9608-4040-834b-346532583678",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "951b9f8a-5fd3-4258-90ca-8f9414bf33ac",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "08d68fd3-a9cc-494c-889a-767d8de50a85",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "edeaae52-c2e5-4e06-805f-9d2a44f896c1",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 111,
+        "triangles": 93284,
+        "memory": {
+          "geometries": 58,
+          "textures": 12
+        },
+        "programs": 10,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.10099629417763138,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "e6a39e9e619763c5c45168cb85945c9188efbe088a5e49d4768a91d0e4db9dd1"
+    },
+    {
+      "name": "1280-working-faces-textured.png",
+      "camera": {
+        "position": [
+          0.2649401438933709,
+          2.5569851078467485,
+          -2.1126427382880575
+        ],
+        "target": [
+          0.23300226605270985,
+          2.566020605122415,
+          -2.0333883686597063
+        ],
+        "quaternion": [
+          -0.0854645901373504,
+          0.9766703180689116,
+          -0.06995022353469692,
+          0.18416802073995311
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.00803291445162319,
+          "fitDistance": 0.08592393937181224,
+          "distance": 0.08592393937181231,
+          "minDistance": 0.01740321045423876,
+          "maxDistance": 0.2190213595644869,
+          "conservativeSurfaceClearance": 0.28221406971973195,
+          "displayEnvelopeRadius": 0.015501075255310224,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.018435604294744452,
+          "right": 0.018435604294744452,
+          "top": 0.018435604294744452,
+          "bottom": -0.018435604294744452,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00004819748670973915
+        }
+      },
+      "finish": {
+        "style": "textured",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "e02faaeb-9608-4040-834b-346532583678",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "951b9f8a-5fd3-4258-90ca-8f9414bf33ac",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "08d68fd3-a9cc-494c-889a-767d8de50a85",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "edeaae52-c2e5-4e06-805f-9d2a44f896c1",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 111,
+        "triangles": 93284,
+        "memory": {
+          "geometries": 58,
+          "textures": 12
+        },
+        "programs": 10,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.10099629417763138,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "e6a39e9e619763c5c45168cb85945c9188efbe088a5e49d4768a91d0e4db9dd1"
+    },
+    {
+      "name": "three-restores-textured.png",
+      "camera": {
+        "position": [
+          0.2649401438933709,
+          2.5569851078467485,
+          -2.1126427382880575
+        ],
+        "target": [
+          0.23300226605270985,
+          2.566020605122415,
+          -2.0333883686597063
+        ],
+        "quaternion": [
+          -0.0854645901373504,
+          0.9766703180689116,
+          -0.06995022353469692,
+          0.18416802073995311
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.00803291445162319,
+          "fitDistance": 0.08592393937181224,
+          "distance": 0.08592393937181231,
+          "minDistance": 0.01740321045423876,
+          "maxDistance": 0.2190213595644869,
+          "conservativeSurfaceClearance": 0.28221406971973195,
+          "displayEnvelopeRadius": 0.015501075255310224,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.018435604294744452,
+          "right": 0.018435604294744452,
+          "top": 0.018435604294744452,
+          "bottom": -0.018435604294744452,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00004819748670973915
+        }
+      },
+      "finish": {
+        "style": "textured",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "e02faaeb-9608-4040-834b-346532583678",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 4,
+          "bytes": 262144
+        },
+        {
+          "uuid": "951b9f8a-5fd3-4258-90ca-8f9414bf33ac",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 4,
+          "bytes": 262144
+        },
+        {
+          "uuid": "08d68fd3-a9cc-494c-889a-767d8de50a85",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 4,
+          "bytes": 262144
+        },
+        {
+          "uuid": "edeaae52-c2e5-4e06-805f-9d2a44f896c1",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 4,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 111,
+        "triangles": 93284,
+        "memory": {
+          "geometries": 58,
+          "textures": 11
+        },
+        "programs": 8,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.10099629417763138,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "e6a39e9e619763c5c45168cb85945c9188efbe088a5e49d4768a91d0e4db9dd1"
+    },
+    {
+      "name": "real-orbit-zoom-textured.png",
+      "camera": {
+        "position": [
+          0.30087539664382656,
+          2.5917224095882583,
+          -2.071656500114645
+        ],
+        "target": [
+          0.23300226605270985,
+          2.566020605122415,
+          -2.0333883686597063
+        ],
+        "quaternion": [
+          -0.1755712470067726,
+          0.8380822596314047,
+          0.07998673971128871,
+          0.5102891188198746
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.00803291445162319,
+          "fitDistance": 0.08592393937181224,
+          "distance": 0.08204751363747545,
+          "minDistance": 0.01740321045423876,
+          "maxDistance": 0.2190213595644869,
+          "conservativeSurfaceClearance": 0.28221406971973195,
+          "displayEnvelopeRadius": 0.015501075255310224,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.018435604294744452,
+          "right": 0.018435604294744452,
+          "top": 0.018435604294744452,
+          "bottom": -0.018435604294744452,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00004819748670973915
+        }
+      },
+      "finish": {
+        "style": "textured",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "e02faaeb-9608-4040-834b-346532583678",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 4,
+          "bytes": 262144
+        },
+        {
+          "uuid": "951b9f8a-5fd3-4258-90ca-8f9414bf33ac",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 4,
+          "bytes": 262144
+        },
+        {
+          "uuid": "08d68fd3-a9cc-494c-889a-767d8de50a85",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 4,
+          "bytes": 262144
+        },
+        {
+          "uuid": "edeaae52-c2e5-4e06-805f-9d2a44f896c1",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 4,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 111,
+        "triangles": 93284,
+        "memory": {
+          "geometries": 58,
+          "textures": 11
+        },
+        "programs": 8,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.10099629417763138,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "e6a39e9e619763c5c45168cb85945c9188efbe088a5e49d4768a91d0e4db9dd1"
+    },
+    {
+      "name": "1920-t0-flat.png",
+      "camera": {
+        "position": [
+          3.327248170431375,
+          0.06833428408048932,
+          -0.0015415996352009804
+        ],
+        "target": [
+          3.283474376655643,
+          -0.0002189051329382384,
+          -0.001541599635200983
+        ],
+        "quaternion": [
+          -0.3397870481716674,
+          0.6201167324744472,
+          0.3397870481716674,
+          0.6201167324744471
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.012428108863846134,
+          "fitDistance": 0.08133685986594463,
+          "distance": 0.08133685986594467,
+          "minDistance": 0.020030580200461674,
+          "maxDistance": 0.2181237713299791,
+          "conservativeSurfaceClearance": 0.2822140697197315,
+          "displayEnvelopeRadius": 0.01884745694874832,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.021218834958116183,
+          "right": 0.021218834958116183,
+          "top": 0.021218834958116183,
+          "bottom": -0.021218834958116183,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00006790027186597178
+        }
+      },
+      "finish": {
+        "style": "flat",
+        "cachedTextures": 0,
+        "size": 0,
+        "cpuBytes": 0,
+        "estimatedMipBytes": 0,
+        "disposed": false
+      },
+      "textures": [],
+      "render": {
+        "calls": 110,
+        "triangles": 93116,
+        "memory": {
+          "geometries": 57,
+          "textures": 8
+        },
+        "programs": 8,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "9491e954a8749cbd70c87568f46121adcf4a092e75e1dd4757ebdebabe24a443"
+    },
+    {
+      "name": "1920-t0-textured.png",
+      "camera": {
+        "position": [
+          3.327248170431375,
+          0.06833428408048932,
+          -0.0015415996352009804
+        ],
+        "target": [
+          3.283474376655643,
+          -0.0002189051329382384,
+          -0.001541599635200983
+        ],
+        "quaternion": [
+          -0.3397870481716674,
+          0.6201167324744472,
+          0.3397870481716674,
+          0.6201167324744471
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.012428108863846134,
+          "fitDistance": 0.08133685986594463,
+          "distance": 0.08133685986594467,
+          "minDistance": 0.020030580200461674,
+          "maxDistance": 0.2181237713299791,
+          "conservativeSurfaceClearance": 0.2822140697197315,
+          "displayEnvelopeRadius": 0.01884745694874832,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.021218834958116183,
+          "right": 0.021218834958116183,
+          "top": 0.021218834958116183,
+          "bottom": -0.021218834958116183,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00006790027186597178
+        }
+      },
+      "finish": {
+        "style": "textured",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "45eb6679-e98d-44da-9c77-e401705b6232",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "33dbc6bf-fabf-412f-ab19-ad5556d8eb24",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "238eb41a-ac9f-473e-89c9-670df9f294d7",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "c8bac3e4-9b6b-4717-b766-ee1f10a45476",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 110,
+        "triangles": 93116,
+        "memory": {
+          "geometries": 57,
+          "textures": 12
+        },
+        "programs": 9,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "9491e954a8749cbd70c87568f46121adcf4a092e75e1dd4757ebdebabe24a443"
+    },
+    {
+      "name": "1920-t240-flat.png",
+      "camera": {
+        "position": [
+          3.203363211163892,
+          0.7411979606690862,
+          -0.5303866946402723
+        ],
+        "target": [
+          3.173257907186552,
+          0.6609492314069358,
+          -0.5241877556510097
+        ],
+        "quaternion": [
+          -0.37255234650168323,
+          0.6302958544189977,
+          0.42726014963598324,
+          0.5304532491665522
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.009768183691905075,
+          "fitDistance": 0.08593378101975112,
+          "distance": 0.08593378101975117,
+          "minDistance": 0.02116264994102308,
+          "maxDistance": 0.21879474911064084,
+          "conservativeSurfaceClearance": 0.28221406971973106,
+          "displayEnvelopeRadius": 0.01884745694874829,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.022418061378202417,
+          "right": 0.022418061378202417,
+          "top": 0.022418061378202417,
+          "bottom": -0.022418061378202417,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00005860910215143045
+        }
+      },
+      "finish": {
+        "style": "flat",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "45eb6679-e98d-44da-9c77-e401705b6232",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "33dbc6bf-fabf-412f-ab19-ad5556d8eb24",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "238eb41a-ac9f-473e-89c9-670df9f294d7",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "c8bac3e4-9b6b-4717-b766-ee1f10a45476",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 110,
+        "triangles": 93116,
+        "memory": {
+          "geometries": 57,
+          "textures": 12
+        },
+        "programs": 9,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.017501078160000003,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "554d6940e036ded1c040aaa71459dd600f73c788c04f5d612a02e6b29d788379"
+    },
+    {
+      "name": "1920-t240-textured.png",
+      "camera": {
+        "position": [
+          3.203363211163892,
+          0.7411979606690862,
+          -0.5303866946402723
+        ],
+        "target": [
+          3.173257907186552,
+          0.6609492314069358,
+          -0.5241877556510097
+        ],
+        "quaternion": [
+          -0.37255234650168323,
+          0.6302958544189977,
+          0.42726014963598324,
+          0.5304532491665522
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.009768183691905075,
+          "fitDistance": 0.08593378101975112,
+          "distance": 0.08593378101975117,
+          "minDistance": 0.02116264994102308,
+          "maxDistance": 0.21879474911064084,
+          "conservativeSurfaceClearance": 0.28221406971973106,
+          "displayEnvelopeRadius": 0.01884745694874829,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.022418061378202417,
+          "right": 0.022418061378202417,
+          "top": 0.022418061378202417,
+          "bottom": -0.022418061378202417,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.00005860910215143045
+        }
+      },
+      "finish": {
+        "style": "textured",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "45eb6679-e98d-44da-9c77-e401705b6232",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "33dbc6bf-fabf-412f-ab19-ad5556d8eb24",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "238eb41a-ac9f-473e-89c9-670df9f294d7",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "c8bac3e4-9b6b-4717-b766-ee1f10a45476",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 110,
+        "triangles": 93116,
+        "memory": {
+          "geometries": 57,
+          "textures": 12
+        },
+        "programs": 9,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.017501078160000003,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "554d6940e036ded1c040aaa71459dd600f73c788c04f5d612a02e6b29d788379"
+    },
+    {
+      "name": "1920-t600-flat.png",
+      "camera": {
+        "position": [
+          2.617018200310893,
+          1.6414893624937636,
+          -1.2439591453272034
+        ],
+        "target": [
+          2.614541186163239,
+          1.5562082537543,
+          -1.233765017103027
+        ],
+        "quaternion": [
+          -0.40977326115688145,
+          0.6256249088010783,
+          0.5445279230161114,
+          0.3796955214171698
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.0097670649813845,
+          "fitDistance": 0.08592393937181209,
+          "distance": 0.08592393937181211,
+          "minDistance": 0.021160226268426518,
+          "maxDistance": 0.21878267875542373,
+          "conservativeSurfaceClearance": 0.2822140697197315,
+          "displayEnvelopeRadius": 0.018847456948748318,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.022415493928417924,
+          "right": 0.022415493928417924,
+          "top": 0.022415493928417924,
+          "bottom": -0.022415493928417924,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.000058602389888307
+        }
+      },
+      "finish": {
+        "style": "flat",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "45eb6679-e98d-44da-9c77-e401705b6232",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "33dbc6bf-fabf-412f-ab19-ad5556d8eb24",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "238eb41a-ac9f-473e-89c9-670df9f294d7",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "c8bac3e4-9b6b-4717-b766-ee1f10a45476",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 110,
+        "triangles": 93116,
+        "memory": {
+          "geometries": 57,
+          "textures": 12
+        },
+        "programs": 9,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.0437526954,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "f77c66d639d1358489ea062ca665d423fc1c3afda7a327760d23c71437f74868"
+    },
+    {
+      "name": "1920-t600-textured.png",
+      "camera": {
+        "position": [
+          2.617018200310893,
+          1.6414893624937636,
+          -1.2439591453272034
+        ],
+        "target": [
+          2.614541186163239,
+          1.5562082537543,
+          -1.233765017103027
+        ],
+        "quaternion": [
+          -0.40977326115688145,
+          0.6256249088010783,
+          0.5445279230161114,
+          0.3796955214171698
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.0097670649813845,
+          "fitDistance": 0.08592393937181209,
+          "distance": 0.08592393937181211,
+          "minDistance": 0.021160226268426518,
+          "maxDistance": 0.21878267875542373,
+          "conservativeSurfaceClearance": 0.2822140697197315,
+          "displayEnvelopeRadius": 0.018847456948748318,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.022415493928417924,
+          "right": 0.022415493928417924,
+          "top": 0.022415493928417924,
+          "bottom": -0.022415493928417924,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.000058602389888307
+        }
+      },
+      "finish": {
+        "style": "textured",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "45eb6679-e98d-44da-9c77-e401705b6232",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "33dbc6bf-fabf-412f-ab19-ad5556d8eb24",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "238eb41a-ac9f-473e-89c9-670df9f294d7",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "c8bac3e4-9b6b-4717-b766-ee1f10a45476",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 110,
+        "triangles": 93116,
+        "memory": {
+          "geometries": 57,
+          "textures": 12
+        },
+        "programs": 9,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.0437526954,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "f77c66d639d1358489ea062ca665d423fc1c3afda7a327760d23c71437f74868"
+    },
+    {
+      "name": "1920-t1385-flat.png",
+      "camera": {
+        "position": [
+          0.17988558860787374,
+          2.633297770832511,
+          -2.0292232645848456
+        ],
+        "target": [
+          0.23323041230009983,
+          2.5660641486937004,
+          -2.0333333979782795
+        ],
+        "quaternion": [
+          -0.4360158179070001,
+          0.5347643678243861,
+          0.7237572151150651,
+          0.00963177082160561
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.009767064981384518,
+          "fitDistance": 0.08592393937181224,
+          "distance": 0.08592393937181224,
+          "minDistance": 0.021160226268426556,
+          "maxDistance": 0.21878267875542406,
+          "conservativeSurfaceClearance": 0.28221406971973195,
+          "displayEnvelopeRadius": 0.018847456948748353,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.022415493928417962,
+          "right": 0.022415493928417962,
+          "top": 0.022415493928417962,
+          "bottom": -0.022415493928417962,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.000058602389888307104
+        }
+      },
+      "finish": {
+        "style": "flat",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "45eb6679-e98d-44da-9c77-e401705b6232",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "33dbc6bf-fabf-412f-ab19-ad5556d8eb24",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "238eb41a-ac9f-473e-89c9-670df9f294d7",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "c8bac3e4-9b6b-4717-b766-ee1f10a45476",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 111,
+        "triangles": 93284,
+        "memory": {
+          "geometries": 58,
+          "textures": 12
+        },
+        "programs": 10,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.10099629417763138,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "e6a39e9e619763c5c45168cb85945c9188efbe088a5e49d4768a91d0e4db9dd1"
+    },
+    {
+      "name": "1920-t1385-textured.png",
+      "camera": {
+        "position": [
+          0.17988558860787374,
+          2.633297770832511,
+          -2.0292232645848456
+        ],
+        "target": [
+          0.23323041230009983,
+          2.5660641486937004,
+          -2.0333333979782795
+        ],
+        "quaternion": [
+          -0.4360158179070001,
+          0.5347643678243861,
+          0.7237572151150651,
+          0.00963177082160561
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.009767064981384518,
+          "fitDistance": 0.08592393937181224,
+          "distance": 0.08592393937181224,
+          "minDistance": 0.021160226268426556,
+          "maxDistance": 0.21878267875542406,
+          "conservativeSurfaceClearance": 0.28221406971973195,
+          "displayEnvelopeRadius": 0.018847456948748353,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.022415493928417962,
+          "right": 0.022415493928417962,
+          "top": 0.022415493928417962,
+          "bottom": -0.022415493928417962,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.000058602389888307104
+        }
+      },
+      "finish": {
+        "style": "textured",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "45eb6679-e98d-44da-9c77-e401705b6232",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "33dbc6bf-fabf-412f-ab19-ad5556d8eb24",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "238eb41a-ac9f-473e-89c9-670df9f294d7",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "c8bac3e4-9b6b-4717-b766-ee1f10a45476",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 111,
+        "triangles": 93284,
+        "memory": {
+          "geometries": 58,
+          "textures": 12
+        },
+        "programs": 10,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.10099629417763138,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "e6a39e9e619763c5c45168cb85945c9188efbe088a5e49d4768a91d0e4db9dd1"
+    },
+    {
+      "name": "1920-working-faces-flat.png",
+      "camera": {
+        "position": [
+          0.2648342252259669,
+          2.559262283469252,
+          -2.112944056782149
+        ],
+        "target": [
+          0.23323041230009983,
+          2.5660641486937004,
+          -2.0333333979782795
+        ],
+        "quaternion": [
+          -0.08790734899093366,
+          0.9775145455271085,
+          -0.05694960274061053,
+          0.18301462789625106
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.009767064981384518,
+          "fitDistance": 0.08592393937181224,
+          "distance": 0.08592393937181228,
+          "minDistance": 0.021160226268426556,
+          "maxDistance": 0.21878267875542406,
+          "conservativeSurfaceClearance": 0.28221406971973195,
+          "displayEnvelopeRadius": 0.018847456948748353,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.022415493928417962,
+          "right": 0.022415493928417962,
+          "top": 0.022415493928417962,
+          "bottom": -0.022415493928417962,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.000058602389888307104
+        }
+      },
+      "finish": {
+        "style": "flat",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "45eb6679-e98d-44da-9c77-e401705b6232",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "33dbc6bf-fabf-412f-ab19-ad5556d8eb24",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "238eb41a-ac9f-473e-89c9-670df9f294d7",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "c8bac3e4-9b6b-4717-b766-ee1f10a45476",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 111,
+        "triangles": 93284,
+        "memory": {
+          "geometries": 58,
+          "textures": 12
+        },
+        "programs": 10,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.10099629417763138,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "e6a39e9e619763c5c45168cb85945c9188efbe088a5e49d4768a91d0e4db9dd1"
+    },
+    {
+      "name": "1920-working-faces-textured.png",
+      "camera": {
+        "position": [
+          0.2648342252259669,
+          2.559262283469252,
+          -2.112944056782149
+        ],
+        "target": [
+          0.23323041230009983,
+          2.5660641486937004,
+          -2.0333333979782795
+        ],
+        "quaternion": [
+          -0.08790734899093366,
+          0.9775145455271085,
+          -0.05694960274061053,
+          0.18301462789625106
+        ],
+        "inspection": {
+          "enabled": true,
+          "frameKey": "actual-repaired-camera-replay|craft",
+          "displayScale": 0.009767064981384518,
+          "fitDistance": 0.08592393937181224,
+          "distance": 0.08592393937181228,
+          "minDistance": 0.021160226268426556,
+          "maxDistance": 0.21878267875542406,
+          "conservativeSurfaceClearance": 0.28221406971973195,
+          "displayEnvelopeRadius": 0.018847456948748353,
+          "viewport": {
+            "left": 248,
+            "right": 248,
+            "top": 170,
+            "bottom": 120
+          }
+        },
+        "shadow": {
+          "left": -0.022415493928417962,
+          "right": 0.022415493928417962,
+          "top": 0.022415493928417962,
+          "bottom": -0.022415493928417962,
+          "mapSize": [
+            2048,
+            2048
+          ],
+          "bias": -0.000015,
+          "normalBias": 0.000058602389888307104
+        }
+      },
+      "finish": {
+        "style": "textured",
+        "cachedTextures": 4,
+        "size": 256,
+        "cpuBytes": 1048576,
+        "estimatedMipBytes": 1398096,
+        "disposed": false
+      },
+      "textures": [
+        {
+          "uuid": "45eb6679-e98d-44da-9c77-e401705b6232",
+          "name": "Original spacecraft surface · foil creases",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "33dbc6bf-fabf-412f-ab19-ad5556d8eb24",
+          "name": "Original spacecraft surface · foil roughness",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "238eb41a-ac9f-473e-89c9-670df9f294d7",
+          "name": "Original spacecraft surface · aluminum grain",
+          "version": 1,
+          "bytes": 262144
+        },
+        {
+          "uuid": "c8bac3e4-9b6b-4717-b766-ee1f10a45476",
+          "name": "Original spacecraft surface · aluminum roughness",
+          "version": 1,
+          "bytes": 262144
+        }
+      ],
+      "render": {
+        "calls": 111,
+        "triangles": 93284,
+        "memory": {
+          "geometries": 58,
+          "textures": 12
+        },
+        "programs": 10,
+        "quality": "high",
+        "passes": 2,
+        "workshop": {
+          "loaded": true,
+          "decorativeOnly": true
+        },
+        "planet": {
+          "mapWidth": 16384,
+          "radius": 3,
+          "rotation": 0.10099629417763138,
+          "planetSunIntensity": 2.6,
+          "craftSunIntensity": 3
+        }
+      },
+      "physicalSha256": "e6a39e9e619763c5c45168cb85945c9188efbe088a5e49d4768a91d0e4db9dd1"
+    }
+  ],
+  "checks": [
+    {
+      "scope": "component-1280",
+      "time": 0,
+      "physicalAndCameraExact": true,
+      "calls": 110,
+      "triangles": 93116,
+      "textureDelta": 4
+    },
+    {
+      "scope": "component-1280",
+      "time": 240,
+      "physicalAndCameraExact": true,
+      "calls": 110,
+      "triangles": 93116,
+      "textureDelta": 0
+    },
+    {
+      "scope": "component-1280",
+      "time": 600,
+      "physicalAndCameraExact": true,
+      "calls": 110,
+      "triangles": 93116,
+      "textureDelta": 0
+    },
+    {
+      "scope": "component-1280",
+      "time": 1385,
+      "physicalAndCameraExact": true,
+      "calls": 111,
+      "triangles": 93284,
+      "textureDelta": 0
+    },
+    {
+      "scope": "component-1280",
+      "threeNativeRestores": true,
+      "inactiveMapsReactivated": true,
+      "actualOrbitWheel": true,
+      "sourceReplacementOwnsFreshMaps": true
+    },
+    {
+      "scope": "component-1280",
+      "native": {
+        "errors": [],
+        "contexts": [
+          {
+            "id": 1,
+            "canvasId": "",
+            "generation": 3,
+            "created": 1986,
+            "deletes": 1955,
+            "restores": 3
+          }
+        ],
+        "contextLostNotifications": 3
+      }
+    },
+    {
+      "scope": "component-1920",
+      "time": 0,
+      "physicalAndCameraExact": true,
+      "calls": 110,
+      "triangles": 93116,
+      "textureDelta": 4
+    },
+    {
+      "scope": "component-1920",
+      "time": 240,
+      "physicalAndCameraExact": true,
+      "calls": 110,
+      "triangles": 93116,
+      "textureDelta": 0
+    },
+    {
+      "scope": "component-1920",
+      "time": 600,
+      "physicalAndCameraExact": true,
+      "calls": 110,
+      "triangles": 93116,
+      "textureDelta": 0
+    },
+    {
+      "scope": "component-1920",
+      "time": 1385,
+      "physicalAndCameraExact": true,
+      "calls": 111,
+      "triangles": 93284,
+      "textureDelta": 0
+    },
+    {
+      "scope": "component-1920",
+      "native": {
+        "errors": [],
+        "contexts": [
+          {
+            "id": 1,
+            "canvasId": "",
+            "generation": 0,
+            "created": 443,
+            "deletes": 433,
+            "restores": 0
+          }
+        ],
+        "contextLostNotifications": 0
+      }
+    },
+    {
+      "scope": "actual-ui",
+      "strictActualReplay": true,
+      "physicalAndCameraExact": true,
+      "appearanceApiOnly": true,
+      "runtimeSha256": "c4579802ec6c545bdd40190899b99fcefcf7110b0b6af6ad316b33a5f7ddf208",
+      "before": {
+        "finish": {
+          "style": "flat",
+          "cachedTextures": 0,
+          "size": 0,
+          "cpuBytes": 0,
+          "estimatedMipBytes": 0,
+          "disposed": false
+        },
+        "render": {
+          "calls": 111,
+          "triangles": 93284,
+          "memory": {
+            "geometries": 83,
+            "textures": 8
+          },
+          "programs": 12,
+          "quality": "high",
+          "passes": 2,
+          "workshop": {
+            "loaded": true,
+            "decorativeOnly": true
+          },
+          "planet": {
+            "mapWidth": 16384,
+            "radius": 3,
+            "rotation": 0.10099629417763138,
+            "planetSunIntensity": 2.6,
+            "craftSunIntensity": 3
+          }
+        }
+      },
+      "after": {
+        "finish": {
+          "style": "textured",
+          "cachedTextures": 4,
+          "size": 256,
+          "cpuBytes": 1048576,
+          "estimatedMipBytes": 1398096,
+          "disposed": false
+        },
+        "render": {
+          "calls": 111,
+          "triangles": 93284,
+          "memory": {
+            "geometries": 83,
+            "textures": 12
+          },
+          "programs": 13,
+          "quality": "high",
+          "passes": 2,
+          "workshop": {
+            "loaded": true,
+            "decorativeOnly": true
+          },
+          "planet": {
+            "mapWidth": 16384,
+            "radius": 3,
+            "rotation": 0.10099629417763138,
+            "planetSunIntensity": 2.6,
+            "craftSunIntensity": 3
+          }
+        }
+      }
+    },
+    {
+      "scope": "actual-ui",
+      "native": {
+        "errors": [],
+        "contexts": [
+          {
+            "id": 1,
+            "canvasId": "",
+            "generation": 0,
+            "created": 484,
+            "deletes": 108,
+            "restores": 0
+          },
+          {
+            "id": 2,
+            "canvasId": "",
+            "generation": 1,
+            "created": 1256,
+            "deletes": 1239,
+            "restores": 1
+          }
+        ],
+        "contextLostNotifications": 1
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "scope": "component-1280",
+      "message": "THREE.WebGLProgram: Program Info Log: (221,91-147): warning X4122: sum of 0.996094 and -2.98545e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(207,10-73): warning X4008: floating point division by zero\n(207,10-73): warning X4008: floating point division by zero\n(207,10-73): warning X4008: floating point division by zero"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "command": "npx.cmd tsc --noEmit",
+  "cwd": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-deployment-working-faces",
+  "exitCode": 0,
+  "stdout": "",
+  "stderr": "",
+  "wallTimeSeconds": 5.13862,
+  "toolChunkId": "3c3066",
+  "receiptWrittenAt": "2026-11-15T05:22:17.311155+00:00",
+  "scope": "Executed on exact accepted candidate sources before proof packaging; no browser started."
+}

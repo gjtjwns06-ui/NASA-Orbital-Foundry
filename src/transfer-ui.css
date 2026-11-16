@@ -1,0 +1,678 @@
+#transfer-experience {
+  position: fixed;
+  inset: 0;
+  z-index: 35;
+  background: #020812;
+  color: #e2e9de;
+  font-family: var(--body, Arial, sans-serif);
+}
+.transfer-viewport {
+  position: absolute;
+  inset: 0;
+}
+.transfer-viewport canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.transfer-ui {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.transfer-ui button,
+.transfer-ui input,
+.transfer-ui select,
+.transfer-ui details {
+  pointer-events: auto;
+}
+.transfer-topbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  border-bottom: 1px solid #678e9444;
+  background: #0b202be8;
+  gap: 20px;
+}
+.transfer-brand {
+  font: 24px var(--display, Arial);
+  letter-spacing: 3px;
+}
+.transfer-brand small {
+  display: block;
+  font-size: 7px;
+  letter-spacing: 3px;
+  margin-top: 3px;
+}
+.transfer-topbar > span {
+  font-size: 12px;
+  color: #bdd5ce;
+  letter-spacing: 1px;
+}
+.transfer-topbar > div {
+  display: flex;
+  gap: 7px;
+}
+.transfer-ui button {
+  border: 1px solid #71958b66;
+  background: #17343c;
+  color: #c7dfd3;
+  padding: 9px 12px;
+  border-radius: 4px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.transfer-ui button:hover {
+  background: #2a534c;
+}
+.transfer-ui button.active {
+  background: #3b6556;
+  color: #c9ffe1;
+  border-color: #80d3ad;
+}
+.transfer-ui button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.transfer-left,
+.transfer-right {
+  position: absolute;
+  top: 96px;
+  bottom: 165px;
+  width: 258px;
+  background: linear-gradient(150deg, #112c37ef, #091c29ed);
+  border: 1px solid #71969a44;
+  border-radius: 7px;
+  padding: 20px;
+  overflow: auto;
+  pointer-events: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #4c8079 #102830;
+  box-shadow: 0 14px 45px #0003;
+}
+.transfer-left {
+  left: 24px;
+}
+.transfer-right {
+  right: 24px;
+}
+.transfer-eyebrow {
+  color: #7fb7a9;
+  font-size: 8px;
+  letter-spacing: 2px;
+  margin: 0 0 11px;
+}
+.transfer-ui h2 {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin: 0 0 14px;
+  color: #edf0df;
+}
+.transfer-ui h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #b4eacb;
+}
+.transfer-ui p {
+  font-size: 11px;
+  color: #a8c1c6;
+  line-height: 1.8;
+  margin: 10px 0;
+}
+.transfer-ui label {
+  display: block;
+  font-size: 10px;
+  color: #a9c1c5;
+  margin: 14px 0;
+}
+.transfer-ui label > b {
+  float: right;
+  font-size: 10px;
+  font-weight: 500;
+  color: #a9e4ca;
+}
+.transfer-ui input[type="date"],
+.transfer-ui select {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 7px;
+  background: #071d29;
+  border: 1px solid #4c737d99;
+  color: #dbebe1;
+  padding: 9px;
+  border-radius: 4px;
+  font: 12px var(--body, Arial);
+}
+.transfer-ui input[type="date"] {
+  color-scheme: dark;
+}
+.transfer-ui input[type="range"] {
+  width: 100%;
+  margin: 10px 0 0;
+  accent-color: #86cdb4;
+}
+.transfer-metric {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid #62848c22;
+  font-size: 10px;
+}
+.transfer-metric > span {
+  color: #95b1b7;
+}
+.transfer-metric strong {
+  font-weight: 500;
+  text-align: right;
+  color: #e0e9d5;
+  white-space: nowrap;
+}
+.transfer-ui .transfer-primary {
+  background: #b0d9a8;
+  color: #143a35;
+  border: 1px solid #cfedbb;
+  font-weight: 600;
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+}
+.transfer-ui .transfer-primary:hover {
+  background: #c8e8b9;
+}
+.transfer-ui .transfer-secondary {
+  width: 100%;
+  margin-top: 8px;
+}
+.transfer-divider {
+  height: 1px;
+  background: #6f979255;
+  margin: 17px 0;
+}
+.transfer-science-count {
+  font: 48px var(--display, Arial);
+  color: #d4edbf;
+  line-height: 1;
+}
+.transfer-science-count span {
+  font-size: 18px;
+  color: #638e86;
+  padding-left: 10px;
+}
+.transfer-bar {
+  height: 4px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #294653;
+  margin: 11px 0;
+}
+.transfer-bar i {
+  height: 100%;
+  display: block;
+  background: #8ad1b1;
+  transition: width 0.3s;
+}
+.transfer-ui p.transfer-warning {
+  font-size: 10px;
+  border-left: 2px solid #bda46e;
+  padding-left: 9px;
+  color: #cfbd91;
+}
+.transfer-ui p.transfer-warning.error {
+  border-color: #dc8f7d;
+  color: #e2b2a3;
+}
+.transfer-model-note {
+  font-size: 9px !important;
+  color: #799a9d !important;
+}
+.transfer-ui details {
+  margin: 17px 0 0;
+  border-top: 1px solid #62848c44;
+  padding-top: 12px;
+}
+.transfer-ui summary {
+  font-size: 10px;
+  color: #9bc1b7;
+  cursor: pointer;
+}
+.transfer-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: 10px;
+}
+.transfer-row .transfer-primary {
+  margin: 0;
+}
+.transfer-row button {
+  flex: 1;
+}
+.transfer-clock {
+  font: 27px var(--display);
+  color: #d9e7c8;
+  margin: 5px 0;
+}
+.transfer-speed {
+  display: flex;
+  gap: 5px;
+  margin: 14px 0;
+}
+.transfer-speed button {
+  flex: 1;
+  padding: 7px 4px;
+  font-size: 9px;
+}
+.transfer-ui small {
+  font-size: 9px;
+  line-height: 1.7;
+  color: #82a3a8;
+}
+.transfer-reason {
+  padding: 8px 10px;
+  background: #36595022;
+  border: 1px solid #62878344;
+  border-radius: 4px;
+}
+.transfer-hint {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: calc(100% - 630px);
+  text-align: center;
+  font-size: 10px;
+  color: #bfd7d1;
+  line-height: 1.7;
+  pointer-events: none;
+  background: #061724a6;
+  padding: 10px 16px;
+  border-radius: 5px;
+}
+.transfer-hint small {
+  display: block;
+  font-size: 8px;
+  margin-top: 3px;
+  color: #70969e;
+}
+.transfer-error {
+  position: absolute;
+  left: 50%;
+  top: 185px;
+  transform: translateX(-50%);
+  width: 370px;
+  max-width: calc(100% - 650px);
+  border: 1px solid #ce927a88;
+  background: #462d29e8;
+  color: #f5c6a8;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 11px;
+  line-height: 1.7;
+  pointer-events: auto;
+}
+.transfer-error button {
+  display: block;
+  margin-top: 10px;
+}
+.transfer-timeline {
+  position: absolute;
+  bottom: 18px;
+  left: 24px;
+  right: 24px;
+  height: 128px;
+  background: #0e2733ef;
+  border: 1px solid #6c919155;
+  border-radius: 6px;
+  padding: 13px 18px;
+  box-sizing: border-box;
+  pointer-events: auto;
+}
+.transfer-timeline-title {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 9px;
+}
+.transfer-timeline-title > strong {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.transfer-timeline-title > div {
+  display: flex;
+  gap: 4px;
+}
+.transfer-timeline-title button {
+  font-size: 9px;
+  padding: 5px 8px;
+}
+.transfer-timeline-title > small {
+  margin-left: auto;
+  font-size: 9px;
+}
+.transfer-op-track {
+  height: 30px;
+  position: relative;
+  background:
+    repeating-linear-gradient(90deg, #41667766 0 1px, transparent 1px 10%),
+    #142f3d;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.transfer-op {
+  position: absolute;
+  top: 2px;
+  height: 26px;
+  border-radius: 3px;
+  background: #9bc9b8;
+  color: #173c34;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  min-width: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 1px solid #c7edbe;
+  box-sizing: border-box;
+}
+.transfer-op.downlink {
+  background: #779fc2;
+  border-color: #adcbeb;
+  color: #0d2941;
+}
+.transfer-op.charge {
+  background: #d1b473;
+  border-color: #f3d48e;
+  color: #3e321a;
+}
+.transfer-op-edge {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 9px;
+  background: #ffffff33;
+  cursor: ew-resize;
+}
+.transfer-peri-line,
+.transfer-time-line {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: #f4e1b3;
+  pointer-events: none;
+}
+.transfer-time-line {
+  background: #a2ffd1;
+  width: 3px;
+}
+.transfer-time-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  color: #92b1ba;
+  margin: 5px 0;
+}
+.transfer-timeline > small {
+  font-size: 8px;
+}
+.transfer-packet-list {
+  max-height: 230px;
+  overflow: auto;
+  scrollbar-width: thin;
+}
+.transfer-packet {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 10px;
+  margin: 6px 0;
+  background: #213b4866;
+  border: 1px solid #7499a344;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.transfer-packet > strong {
+  font: 19px var(--display);
+  color: #85a4ad;
+}
+.transfer-packet > span {
+  font-size: 10px;
+  color: #b7ccd0;
+}
+.transfer-packet small {
+  display: block;
+  font-size: 8px;
+  margin-top: 3px;
+}
+.transfer-packet.received {
+  border-color: #80ba9d77;
+  background: #345f4544;
+}
+.transfer-packet.received > strong {
+  color: #b0ddba;
+}
+.transfer-packet > i {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background:
+    linear-gradient(
+      to right,
+      #b6dda7 0 var(--received),
+      transparent var(--received) 100%
+    ),
+    linear-gradient(
+      to right,
+      #6b9abe 0 var(--sent),
+      transparent var(--sent) 100%
+    );
+}
+.transfer-event {
+  font-size: 9px !important;
+  border-left: 1px solid #6f9a8d66;
+  padding-left: 9px;
+}
+.transfer-event b {
+  display: block;
+  font-size: 8px;
+  color: #95c7ae;
+  font-weight: 500;
+}
+@media (max-width: 1300px) {
+  .transfer-left,
+  .transfer-right {
+    width: 224px;
+    padding: 16px;
+    top: 90px;
+    bottom: 155px;
+  }
+  .transfer-left {
+    left: 16px;
+  }
+  .transfer-right {
+    right: 16px;
+  }
+  .transfer-hint {
+    max-width: calc(100% - 560px);
+    top: 94px;
+  }
+  .transfer-topbar {
+    padding: 0 20px;
+    height: 72px;
+    gap: 12px;
+  }
+  .transfer-topbar > span {
+    font-size: 10px;
+  }
+  .transfer-topbar > div {
+    gap: 4px;
+  }
+  .transfer-topbar button {
+    padding: 8px;
+  }
+  .transfer-ui h2 {
+    font-size: 16px;
+  }
+  .transfer-ui p {
+    font-size: 10px;
+  }
+  .transfer-metric {
+    padding: 7px 0;
+  }
+  .transfer-timeline {
+    left: 16px;
+    right: 16px;
+    bottom: 14px;
+    height: 125px;
+  }
+  .transfer-timeline-title {
+    gap: 12px;
+  }
+  .transfer-error {
+    max-width: calc(100% - 570px);
+  }
+  .transfer-ui label {
+    margin: 11px 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .transfer-bar i,
+  .transfer-ui button {
+    transition: none;
+  }
+}
+
+.transfer-hint {
+  top: 84px;
+  padding: 7px 12px;
+  font-size: 9px;
+  line-height: 1.45;
+}
+.transfer-hint small {
+  font-size: 8px;
+  margin-top: 2px;
+}
+@media (max-width: 1300px) {
+  .transfer-hint {
+    top: 80px;
+  }
+}
+.transfer-save-tools small {
+  display: block;
+  margin-top: 8px;
+}
+.transfer-ui a {
+  color: #9ccebf;
+  font-size: 10px;
+  pointer-events: auto;
+}
+body.large-ui .transfer-ui p,
+body.large-ui .transfer-ui label,
+body.large-ui .transfer-metric,
+body.large-ui .transfer-ui button,
+body.large-ui .transfer-ui summary,
+body.large-ui .transfer-ui a {
+  font-size: 12px;
+}
+body.large-ui .transfer-ui h2 {
+  font-size: 19px;
+}
+body.large-ui .transfer-ui small,
+body.large-ui .transfer-ui label > b,
+body.large-ui .transfer-hint,
+body.large-ui .transfer-event,
+body.large-ui .transfer-timeline-title > strong,
+body.large-ui .transfer-time-labels {
+  font-size: 11px !important;
+}
+body.large-ui .transfer-timeline {
+  height: 149px;
+}
+body.large-ui .transfer-left,
+body.large-ui .transfer-right {
+  bottom: 181px;
+}
+body.large-ui .transfer-timeline-title {
+  flex-wrap: wrap;
+  gap: 6px 14px;
+}
+body.large-ui .transfer-timeline-title > small {
+  margin-left: auto;
+}
+body.large-ui .transfer-speed {
+  flex-wrap: wrap;
+}
+body.large-ui .transfer-packet > span {
+  font-size: 12px;
+}
+
+.transfer-inspection-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin-top: 7px;
+  pointer-events: auto;
+}
+.transfer-inspection-controls [data-inspection-part-name] {
+  color: #e2eee4;
+  font-size: 11px;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+.transfer-inspection-controls button {
+  min-height: 28px;
+  padding: 4px 9px;
+  font-size: 10px;
+}
+.transfer-result {
+  border-bottom: 1px solid #6f969444;
+  padding-bottom: 18px;
+  margin-bottom: 14px;
+}
+.transfer-result.success h2 {
+  color: #b7dfa6;
+}
+.transfer-result > .transfer-primary {
+  width: 100%;
+  margin: 9px 0;
+}
+.transfer-result + .transfer-packet-list {
+  margin-top: 16px;
+}
+.completed-command-history {
+  margin-top: 18px;
+}
+.transfer-plan-comparison{padding-bottom:18px;margin-bottom:20px;border-bottom:1px solid #799d8c66}
+.transfer-plan-comparison h2{margin-bottom:7px}
+.transfer-plan-comparison .transfer-comparison-key{font-size:10px;color:#ddb47b;margin:0 0 10px}
+.transfer-plan-comparison>button{width:100%;margin:0 0 6px}
+.transfer-plan-comparison .transfer-comparison-status{font-size:11px;line-height:1.5;color:#c3d6d1;min-height:32px;margin:8px 0}
+.transfer-plan-comparison[data-comparison-status="infeasible"] .transfer-comparison-status,.transfer-plan-comparison[data-comparison-status="unlaunchable"] .transfer-comparison-status,.transfer-plan-comparison[data-comparison-status="flight-failed"] .transfer-comparison-status{color:#ffc08a}
+.transfer-comparison-row{padding:6px 0;border-bottom:1px solid #62848c22;font-size:10px}
+.transfer-comparison-row>div{display:flex;align-items:baseline;justify-content:space-between;gap:6px}
+.transfer-comparison-row>div:first-child{color:#9eb8bb;margin-bottom:5px}
+.transfer-comparison-row b{font-weight:500;color:#d7e6de;text-align:right}
+.transfer-comparison-values>span{color:#dfb77d;font-variant-numeric:tabular-nums}
+.transfer-comparison-values>strong{color:#a9e3cf;font-weight:500;font-variant-numeric:tabular-nums;text-align:right}
+.transfer-comparison-values>i{color:#76969c;font-style:normal}
+.transfer-plan-comparison .transfer-comparison-deadline{font-size:10px;line-height:1.5;color:#92afb5;margin:10px 0 0}
+body.large-ui .transfer-comparison-row{font-size:11px}

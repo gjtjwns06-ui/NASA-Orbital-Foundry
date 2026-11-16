@@ -1,0 +1,242 @@
+{
+  "capturedAt": "2026-11-14T20:43:28.9497125Z",
+  "command": "npx.cmd vitest run tests/transfer-worker-contract.test.ts --maxWorkers=1",
+  "scope": "Actual bundled production Worker in Node worker_threads; real v3 decision checkpoint prepared by elapsed physics, independently replayed in worker. No browser/GPU or performance claim.",
+  "files": [
+    {
+      "path": "package-lock.json",
+      "bytes": 54567,
+      "sha256": "73f5da1c9564a61824fdb0a1b597f17f0ec37cd58d4b86c48953413ad840f387"
+    },
+    {
+      "path": "package.json",
+      "bytes": 578,
+      "sha256": "06b7926fd3f9fe5f65e1db5ffbf2ed123d91de6752c3d8b488d6c8826903ed49"
+    },
+    {
+      "path": "src/hardware/acquisition.ts",
+      "bytes": 1632,
+      "sha256": "72a1f573a47bfa7bf2707a15ae50c539f32be5863c7ef8caa69ca9e80a1846b0"
+    },
+    {
+      "path": "src/hardware/attitude.ts",
+      "bytes": 1594,
+      "sha256": "caf2396c3f38c2ee3d1ad38fb62c3c95252adfe04d3bdf7789e3c9896897d5a1"
+    },
+    {
+      "path": "src/hardware/catalog.ts",
+      "bytes": 13495,
+      "sha256": "878dfd6b1d8ca047667fe6a30a82e76fc275804ada3dffe31d4502eb2a72ec79"
+    },
+    {
+      "path": "src/hardware/index.ts",
+      "bytes": 165,
+      "sha256": "d911a2cc099a374b3b394c4a083e2e2d7e0365730a2c09482d81f4cbca979728"
+    },
+    {
+      "path": "src/hardware/presets.ts",
+      "bytes": 3632,
+      "sha256": "45a04cf9c3b30a64fdb69f0f9b068627a48fb8c592b25f6e4915a0a670345797"
+    },
+    {
+      "path": "src/hardware/resolve.ts",
+      "bytes": 15790,
+      "sha256": "1277087e6b054bb819285b05b72eaaf3cdf26d7c7876573f606f989c7b587543"
+    },
+    {
+      "path": "src/hardware/types.ts",
+      "bytes": 3165,
+      "sha256": "e8d2ba99375e3e5f98faa814409a4d798bb7b63d16e9b61c335e31429b073bf4"
+    },
+    {
+      "path": "src/sim/assembly.ts",
+      "bytes": 17633,
+      "sha256": "8ef747b8dc73baacab53a542b67ba32db91c3cd7d16256afac26e39da5c4b57c"
+    },
+    {
+      "path": "src/sim/attitude.ts",
+      "bytes": 1953,
+      "sha256": "65b17947182722b23a94ba601d127eeeb6dc26925b05d4529564a3aae19145dd"
+    },
+    {
+      "path": "src/sim/catalog.ts",
+      "bytes": 8462,
+      "sha256": "677ec4087b8cf8fea90a3585572dcf56868fc3ccfb47b0d4b2aa6f4ce24f8607"
+    },
+    {
+      "path": "src/sim/hazards.ts",
+      "bytes": 3153,
+      "sha256": "4e2557769946c62d6b57160fce9666b91619c5f196a96756a9279847259b37f0"
+    },
+    {
+      "path": "src/sim/index.ts",
+      "bytes": 276,
+      "sha256": "f4fc8c6553d27e0a24e78bbd867ec08f694ee78f2f770da4bd5cd43ace5da17a"
+    },
+    {
+      "path": "src/sim/launch.ts",
+      "bytes": 9292,
+      "sha256": "23838eb690154ec192c0a2406d5d2c3ae81a810152b0d2ed495b9f8a32967fe3"
+    },
+    {
+      "path": "src/sim/persistence.ts",
+      "bytes": 14383,
+      "sha256": "a9bab8d46cf668c1c6d99f8b21f084bea81f71585decb6b40ef4fe0b6fb73169"
+    },
+    {
+      "path": "src/sim/physics.ts",
+      "bytes": 10419,
+      "sha256": "666fa2b79febf8ab1d7ba8bd04f061e80cd0acc250c1290951e7a9bc7f9694be"
+    },
+    {
+      "path": "src/sim/simulation.ts",
+      "bytes": 30277,
+      "sha256": "d3b2f74708013b4a052dcb9227a09818ca86759a3eea8f80636cd8af6991265a"
+    },
+    {
+      "path": "src/sim/targets.ts",
+      "bytes": 10910,
+      "sha256": "72fd8a5c19ef4d66d0eb73c9fcb64db49d8dcafc1ae867272d33a2adc658b06e"
+    },
+    {
+      "path": "src/sim/types.ts",
+      "bytes": 7480,
+      "sha256": "d3c9f427dbc0c1e3cd5c470250090abfa7269276f58fed3ea125b7f94e0e5edb"
+    },
+    {
+      "path": "src/transfer-control.ts",
+      "bytes": 1386,
+      "sha256": "3d6c29460182963114044e878677de6e68297f710c38d6d4bc3eeff208d529ef"
+    },
+    {
+      "path": "src/transfer-worker-controller.ts",
+      "bytes": 12737,
+      "sha256": "71302f459ae4557cee467fdd9e23b3679baa34207204b2b1e5351da7b558f696"
+    },
+    {
+      "path": "src/transfer.worker.ts",
+      "bytes": 39,
+      "sha256": "0434542f32e0be83af607ed526c9e551e971225ffa12b117cc04349943348c11"
+    },
+    {
+      "path": "src/transfer/command-guards.ts",
+      "bytes": 11979,
+      "sha256": "647bd2c91bf62ca6c62c2f7a95af129ad02423e5f6aadeb1e49288674f8f3bce"
+    },
+    {
+      "path": "src/transfer/command-link.ts",
+      "bytes": 12198,
+      "sha256": "00295ca1c4c1af53942540551575986b396234d63aa91d60b9314e0e719591bb"
+    },
+    {
+      "path": "src/transfer/command-network.ts",
+      "bytes": 2956,
+      "sha256": "477034ed8c734bd0bd31da12d0990f3bafa0245f3b9b8a5a02eec9220ed06c00"
+    },
+    {
+      "path": "src/transfer/command-transport.ts",
+      "bytes": 9845,
+      "sha256": "e6816f452a6000fb47061740640d6e06471621dbc3dcfc1b8c966ed00a35a6a8"
+    },
+    {
+      "path": "src/transfer/data/earth.json",
+      "bytes": 287125,
+      "sha256": "3e851a9c9b3e7b41d84c4e7849a417609e6f25159e8c03f741dee65b6961cc64"
+    },
+    {
+      "path": "src/transfer/data/mars.json",
+      "bytes": 288165,
+      "sha256": "1c92638072744d778d6cce139e57a7d45bd03cc8be56d26a63ea8f6e2d9a97d7"
+    },
+    {
+      "path": "src/transfer/engine.ts",
+      "bytes": 9271,
+      "sha256": "8d87f9b491998806d4d818dcab4a0753ed48a0f28804f46c20bd87006a37e05c"
+    },
+    {
+      "path": "src/transfer/ephemeris.ts",
+      "bytes": 2245,
+      "sha256": "3abcd5a400cb7c64ca4f87e148ef144d59b8ea51611d758b64298a344af1475f"
+    },
+    {
+      "path": "src/transfer/immutable.ts",
+      "bytes": 386,
+      "sha256": "fb00f45f34a79c34efd1f0fd96ededbaec3425824c6a8c0b5b56bdd6e71485d2"
+    },
+    {
+      "path": "src/transfer/index.ts",
+      "bytes": 191,
+      "sha256": "c5ca88fef4412abd1d49c8a01d8652172b1f6a9d0a3ff2b5c17b51cb1ac44715"
+    },
+    {
+      "path": "src/transfer/math.ts",
+      "bytes": 13898,
+      "sha256": "479b13215239b256f51569e16fb6141b76025974ee7f22b4d208b635e2e6a632"
+    },
+    {
+      "path": "src/transfer/operations-codec.ts",
+      "bytes": 3208,
+      "sha256": "c920b2795606b887a0eaeb55a2bb70a8129c383fd04e40b50add4a9dc893cf4d"
+    },
+    {
+      "path": "src/transfer/operations-codes.ts",
+      "bytes": 3808,
+      "sha256": "154c6f71f30011382affb69e6b7712a63308597edb8a206ade8d0a7ba9689a8e"
+    },
+    {
+      "path": "src/transfer/operations-lesson.ts",
+      "bytes": 1653,
+      "sha256": "f1ec4a42b34e58757c778befb778075b7d6d0837edc1e1f5bee51c85cdf846f1"
+    },
+    {
+      "path": "src/transfer/operations-types.ts",
+      "bytes": 7115,
+      "sha256": "4e9160a2cc4f7cedb2d1e29dc6b1719a3839784979b9a97fc29c427a504df1a4"
+    },
+    {
+      "path": "src/transfer/operations.ts",
+      "bytes": 22258,
+      "sha256": "4325762f88a4e954b65e0f10b649c90338b6ba9e9b0c16e486919cbf3e69357c"
+    },
+    {
+      "path": "src/transfer/persistence-v2.ts",
+      "bytes": 14255,
+      "sha256": "c4b5ecc3ab4747372599baa33c2f7448a8cb65150b7d947b4029c742a47a5a2a"
+    },
+    {
+      "path": "src/transfer/persistence.ts",
+      "bytes": 9003,
+      "sha256": "2e9d7e0e63b683d10d471d6a2446f2644699717d69407afc40f53c6af888f44c"
+    },
+    {
+      "path": "src/transfer/planning.ts",
+      "bytes": 10382,
+      "sha256": "f6d7160c90d8d7d7489eac760e1dd67c469e23b2705ef9be3f65d9eda0eb5226"
+    },
+    {
+      "path": "src/transfer/runtime-v3.ts",
+      "bytes": 26247,
+      "sha256": "f7306504ccefd8ad5f272a127a0b07f0932e800f7825461d4877cce5e7a5dcb7"
+    },
+    {
+      "path": "src/transfer/runtime.ts",
+      "bytes": 23740,
+      "sha256": "6fac6489e85492f4903b7f4f805877883959d64cfeb2a2212f7fdaeffdee1954"
+    },
+    {
+      "path": "src/transfer/state.ts",
+      "bytes": 7325,
+      "sha256": "cdf807b9c880f7f9098c82a035cdc77157c31f592d3db44c3b24a09aeff733af"
+    },
+    {
+      "path": "src/transfer/types.ts",
+      "bytes": 4037,
+      "sha256": "40e635e632a323a66c41857857487dc8e4dcbab528796cca6b9adba340765487"
+    },
+    {
+      "path": "tests/transfer-worker-contract.test.ts",
+      "bytes": 17713,
+      "sha256": "900700ca44e835f14181ae63a86133fe0c1a49a4f9690496fd9448a38495801e"
+    }
+  ]
+}

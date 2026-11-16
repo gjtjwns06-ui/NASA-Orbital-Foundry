@@ -1,0 +1,274 @@
+.mission-debrief {
+  border-top: 1px solid #85a5ad35;
+  margin-top: 23px;
+  padding-top: 20px;
+}
+.result-science-details {
+  margin: 17px 0;
+  border-top: 1px solid #85a5ad35;
+  padding-top: 14px;
+}
+.result-science-details > summary {
+  color: #bad4cb;
+  font-size: 12px;
+  cursor: pointer;
+}
+.result-science-details .requirements-table {
+  margin-top: 12px;
+}
+body.large-ui .result-science-details > summary {
+  font-size: 14px;
+}
+body.large-ui .debrief-diagnostic h4 {
+  font-size: 15px;
+}
+body.large-ui .debrief-diagnostic p,
+body.large-ui .debrief-actions button,
+body.large-ui .debrief-limits p,
+body.large-ui .debrief-change-values,
+body.large-ui .review-context {
+  font-size: 13px;
+}
+.debrief-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 13px;
+}
+.debrief-heading h3 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+.debrief-heading > span {
+  font-size: 9px;
+  color: #9dbbc3;
+  white-space: nowrap;
+  padding-top: 4px;
+}
+.debrief-transport {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin: 13px 0 17px;
+}
+.debrief-transport > div {
+  border: 1px solid #7b9eaa35;
+  border-radius: 5px;
+  padding: 10px;
+  background: #19343b70;
+}
+.debrief-transport span {
+  display: block;
+  font-size: 9px;
+  color: #9ebbc3;
+  line-height: 1.5;
+}
+.debrief-transport strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 21px;
+  color: #d8e6d7;
+}
+.debrief-transport > div:last-child strong {
+  color: #a3dbc4;
+}
+.debrief-diagnostics {
+  display: grid;
+  gap: 10px;
+}
+.debrief-diagnostic {
+  border: 1px solid #789aa342;
+  border-left: 3px solid #9dcabc;
+  border-radius: 5px;
+  padding: 13px;
+  background: #112a33;
+}
+.debrief-diagnostic.warning {
+  border-left-color: #e5bd79;
+}
+.debrief-diagnostic.error {
+  border-left-color: #db927e;
+}
+.debrief-diagnostic-top {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.debrief-diagnostic h4 {
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.5;
+}
+.debrief-diagnostic-top > span {
+  font-size: 8px;
+  letter-spacing: 0.5px;
+  color: #aac8c4;
+  white-space: nowrap;
+  padding-top: 3px;
+}
+.debrief-diagnostic p {
+  font-size: 11px;
+  line-height: 1.7;
+  margin: 8px 0;
+  color: #b7cbd0;
+}
+.debrief-evidence {
+  font-size: 9px;
+  color: #d0b98c;
+  margin-top: 10px;
+}
+.debrief-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 10px;
+}
+.debrief-actions button {
+  font-size: 10px;
+  padding: 8px 10px;
+  min-height: 32px;
+}
+.debrief-actions button span {
+  margin-left: 4px;
+}
+.debrief-comparison {
+  margin-top: 18px;
+  border: 1px solid #8aa4aa40;
+  border-radius: 6px;
+  padding: 14px;
+}
+.debrief-comparison > summary {
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.debrief-comparison > summary > b {
+  float: right;
+  color: #bfdb96;
+}
+.debrief-comparison > .small-note {
+  margin-top: 11px;
+}
+.debrief-delta-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  margin: 12px 0;
+}
+.debrief-delta-metrics > span {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 10px;
+  color: #adc7ce;
+  padding: 8px;
+  background: #223c414f;
+}
+.debrief-delta-metrics b {
+  color: #d6e7de;
+}
+.debrief-comparison-blocked {
+  border-left: 2px solid #d1af79;
+  padding: 8px 11px;
+  margin-top: 13px;
+}
+.debrief-comparison-blocked strong {
+  font-size: 11px;
+  color: #e2c99d;
+}
+.debrief-comparison-blocked p {
+  font-size: 10px;
+  color: #b5c9cd;
+  margin: 5px 0;
+}
+.debrief-changes > article {
+  border-top: 1px solid #8ca8ad25;
+  padding: 12px 0;
+}
+.debrief-change-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.debrief-change-title > strong {
+  font-size: 11px;
+}
+.debrief-change-title .text-btn {
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+.debrief-change-values {
+  display: grid;
+  grid-template-columns: 1fr 16px 1fr;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 10px;
+  line-height: 1.6;
+  color: #c4d5d8;
+}
+.debrief-change-values small {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #8daab3;
+}
+.debrief-change-values i {
+  font-style: normal;
+  color: #91bdad;
+  align-self: center;
+}
+.debrief-limits {
+  margin-top: 12px;
+  color: #8ba7b0;
+  font-size: 10px;
+}
+.debrief-limits summary {
+  cursor: pointer;
+}
+.debrief-limits p {
+  font-size: 10px;
+  line-height: 1.6;
+}
+.review-context {
+  border-left: 2px solid #dfb86d;
+  background: #bf9a4820;
+  padding: 10px 12px;
+  margin: 0 0 12px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.review-context > strong {
+  display: block;
+  color: #e2c387;
+  font-size: 10px;
+}
+.review-context .text-btn {
+  font-size: 10px;
+  margin: 6px 0 0;
+  padding: 0;
+}
+@media (max-width: 720px) {
+  .debrief-heading {
+    display: block;
+  }
+  .debrief-heading > span {
+    display: block;
+    margin: 6px 0;
+  }
+  .debrief-transport {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .debrief-delta-metrics {
+    grid-template-columns: 1fr;
+  }
+  .debrief-change-values {
+    grid-template-columns: 1fr;
+  }
+  .debrief-change-values i {
+    display: none;
+  }
+}

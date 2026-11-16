@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-15T06:06:56.120Z",
+  "baseCommit": "b0c0c5cc07c8e0f7f77e06fb1eef86c99a274586",
+  "worktree": "orbital-foundry-next-nav01",
+  "branch": "codex/nav01-domain",
+  "sources": [
+    "src/sim/earth-orbit.ts",
+    "src/sim/types.ts",
+    "src/sim/index.ts",
+    "src/sim/physics.ts",
+    "src/sim/hazards.ts",
+    "src/sim/launch.ts",
+    "src/sim/persistence.ts",
+    "src/sim/simulation.ts"
+  ],
+  "sourceReceipt": "GMAT sourceBefore/sourceAfter matched; no product source edits occurred between oracle and focused regression.",
+  "oracleSourceMatches": [
+    {
+      "file": "src/sim/earth-orbit.ts",
+      "oracleSha256": "c3dd7721dcc7c0cac5bce9276db17ccc5212bc29b1d4fc1cf3c5526286c3f76b",
+      "currentSha256": "c3dd7721dcc7c0cac5bce9276db17ccc5212bc29b1d4fc1cf3c5526286c3f76b"
+    },
+    {
+      "file": "src/sim/types.ts",
+      "oracleSha256": "1af8571b2990d532eae91f7005a5ec70ee8db2a219ceaeed297eba141c08df7e",
+      "currentSha256": "1af8571b2990d532eae91f7005a5ec70ee8db2a219ceaeed297eba141c08df7e"
+    },
+    {
+      "file": "src/sim/index.ts",
+      "oracleSha256": "ded6a9b3631fabbef9acd6bd7256420cd58ee330b288fdde8296ddbb4cba96e6",
+      "currentSha256": "ded6a9b3631fabbef9acd6bd7256420cd58ee330b288fdde8296ddbb4cba96e6"
+    },
+    {
+      "file": "src/sim/physics.ts",
+      "oracleSha256": "de7a46913a7f395ac7b412de8dc742b0a5b7064198a7b35088d11462f835a6d9",
+      "currentSha256": "de7a46913a7f395ac7b412de8dc742b0a5b7064198a7b35088d11462f835a6d9"
+    },
+    {
+      "file": "src/sim/hazards.ts",
+      "oracleSha256": "d5c7165c01ed7cb70b67fdca59d44ac4e80ba54a06e649a53bf8f6439c36bc02",
+      "currentSha256": "d5c7165c01ed7cb70b67fdca59d44ac4e80ba54a06e649a53bf8f6439c36bc02"
+    },
+    {
+      "file": "src/sim/launch.ts",
+      "oracleSha256": "817a0ccdeae92d1704378c016bee9719c1378960c07cbce8b6d8d922cdce15c1",
+      "currentSha256": "817a0ccdeae92d1704378c016bee9719c1378960c07cbce8b6d8d922cdce15c1"
+    },
+    {
+      "file": "src/sim/persistence.ts",
+      "oracleSha256": "5c96a6d62bca79bcdf691e5fd72e31c1983fd8bf86e49f9ed95640d480212bda",
+      "currentSha256": "5c96a6d62bca79bcdf691e5fd72e31c1983fd8bf86e49f9ed95640d480212bda"
+    },
+    {
+      "file": "src/sim/simulation.ts",
+      "oracleSha256": "4d6a7eb76b5c300436fbc814eb02db1d5cee59e73bb1e410af05e3c4eafd8ad0",
+      "currentSha256": "4d6a7eb76b5c300436fbc814eb02db1d5cee59e73bb1e410af05e3c4eafd8ad0"
+    }
+  ],
+  "allOracleSourceMatches": true,
+  "focusedTests": {
+    "count": 71,
+    "passed": 71,
+    "failed": 0,
+    "files": [
+      {
+        "file": "tests/hardware-legacy-replay.test.ts",
+        "count": 6,
+        "status": "passed"
+      },
+      {
+        "file": "tests/nav01-earth-orbit.test.ts",
+        "count": 25,
+        "status": "passed"
+      },
+      {
+        "file": "tests/sim-engine.test.ts",
+        "count": 16,
+        "status": "passed"
+      },
+      {
+        "file": "tests/sim-hazards.test.ts",
+        "count": 6,
+        "status": "passed"
+      },
+      {
+        "file": "tests/sim-launch.test.ts",
+        "count": 7,
+        "status": "passed"
+      },
+      {
+        "file": "tests/sim-maneuvers.test.ts",
+        "count": 5,
+        "status": "passed"
+      },
+      {
+        "file": "tests/sim-target-integration.test.ts",
+        "count": 6,
+        "status": "passed"
+      }
+    ]
+  },
+  "gmat": {
+    "cases": 4,
+    "samples": 5764,
+    "pass": true,
+    "maxPositionErrorKm": 0.00017092836361239902,
+    "maxVelocityErrorKmS": 1.8998629749386538e-7
+  },
+  "files": [
+    {
+      "file": "docs/nav01-domain-acceptance.md",
+      "bytes": 5492,
+      "sha256": "bb3371ad671195fec35a2e39606bdf84b2c398c91eef2e4c0f71bb0e0e3bc273"
+    },
+    {
+      "file": "docs/nav01-domain-unit-r1.json",
+      "bytes": 10291,
+      "sha256": "573604cd70b40bef1fd074337ab5c215d8f4419b8e154c679da0ad84d24d84e8"
+    },
+    {
+      "file": "docs/nav01-focused-regression-r1.json",
+      "bytes": 27100,
+      "sha256": "e49427fd4ad72208c8b07d0d324f01dbaafbe6cc2429a736069d3559a2b21797"
+    },
+    {
+      "file": "src/sim/earth-orbit.ts",
+      "bytes": 4196,
+      "sha256": "c3dd7721dcc7c0cac5bce9276db17ccc5212bc29b1d4fc1cf3c5526286c3f76b"
+    },
+    {
+      "file": "src/sim/hazards.ts",
+      "bytes": 3317,
+      "sha256": "d5c7165c01ed7cb70b67fdca59d44ac4e80ba54a06e649a53bf8f6439c36bc02"
+    },
+    {
+      "file": "src/sim/index.ts",
+      "bytes": 318,
+      "sha256": "ded6a9b3631fabbef9acd6bd7256420cd58ee330b288fdde8296ddbb4cba96e6"
+    },
+    {
+      "file": "src/sim/launch.ts",
+      "bytes": 10917,
+      "sha256": "817a0ccdeae92d1704378c016bee9719c1378960c07cbce8b6d8d922cdce15c1"
+    },
+    {
+      "file": "src/sim/persistence.ts",
+      "bytes": 15857,
+      "sha256": "5c96a6d62bca79bcdf691e5fd72e31c1983fd8bf86e49f9ed95640d480212bda"
+    },
+    {
+      "file": "src/sim/physics.ts",
+      "bytes": 11536,
+      "sha256": "de7a46913a7f395ac7b412de8dc742b0a5b7064198a7b35088d11462f835a6d9"
+    },
+    {
+      "file": "src/sim/simulation.ts",
+      "bytes": 30363,
+      "sha256": "4d6a7eb76b5c300436fbc814eb02db1d5cee59e73bb1e410af05e3c4eafd8ad0"
+    },
+    {
+      "file": "src/sim/types.ts",
+      "bytes": 7827,
+      "sha256": "1af8571b2990d532eae91f7005a5ec70ee8db2a219ceaeed297eba141c08df7e"
+    },
+    {
+      "file": "tests/fixtures/nav01/legacy-circular-b0c0c5c.json",
+      "bytes": 14119,
+      "sha256": "56efc4f948db55a226dc8e954726cbe60f1b7abb68e0bac22a396704b7689169"
+    },
+    {
+      "file": "tests/nav01-earth-orbit.test.ts",
+      "bytes": 10576,
+      "sha256": "6bf29618eeb64cd892cd5c6bf743e2d1c57f0f31254b505e50fc93fe66c5803a"
+    },
+    {
+      "file": "tools/nav01/evidence/r1/ellipse-off-apse-rtn.console.txt",
+      "bytes": 64607,
+      "sha256": "588934b5417072418191ae8306c3f8e2cddb8fce602d6ce24d640f2aefa23e1c"
+    },
+    {
+      "file": "tools/nav01/evidence/r1/ellipse-off-apse-rtn.csv",
+      "bytes": 196805,
+      "sha256": "97e6ff6024352fa1d9278bbb78e908f137b04dce43f3234679538b3de1fd317e"
+    },
+    {
+      "file": "tools/nav01/evidence/r1/ellipse-off-apse-rtn.script",
+      "bytes": 312652,
+      "sha256": "1e9f68c0c1325bbf3dadb5ce225c2ba9f87e10f43d94702005b29af675ee729b"
+    },
+    {
+      "file": "tools/nav01/evidence/r1/ellipse-perigee-burn.console.txt",
+      "bytes": 64607,
+      "sha256": "9359da3e42cbcda9f3d1347afd116619e75fc7775a92b1b522a4761c6722191e"
+    },
+    {
+      "file": "tools/nav01/evidence/r1/ellipse-perigee-burn.csv",
+      "bytes": 196820,
+      "sha256": "a0679ddd50485252e293f7c3ad770b55b6aaaf3c6eee164f5b1155fd166415b3"
+    },
+    {
+      "file": "tools/nav01/evidence/r1/ellipse-perigee-burn.script",
+      "bytes": 312649,
+      "sha256": "193cbb18619c8f2348796df945b364a13f01c9ddd612094f437d0e8260cb1df6"
+    },
+    {
+      "file": "tools/nav01/evidence/r1/ellipse-range-extremes-polar.console.txt",
+      "bytes": 64593,
+      "sha256": "4e9741d6c5ff8ac286ed76c192ce417dfdfcfecaaa4ee095efcdf9aa52f3b8e1"
+    },
+    {
+      "file": "tools/nav01/evidence/r1/ellipse-range-extremes-polar.csv",
+      "bytes": 197997,
+      "sha256": "6c7b4ef9968ef833551256b334d03856b3ef38338616aae417a4b5b359249bde"
+    },
+    {
+      "file": "tools/nav01/evidence/r1/ellipse-range-extremes-polar.script",
+      "bytes": 312386,
+      "sha256": "c749d9be357263c251775091487f20b7e51a8f348b97a9ea546d866787f2b8b4"
+    },
+    {
+      "file": "tools/nav01/evidence/r1/ellipse-zero-burn.console.txt",
+      "bytes": 64582,
+      "sha256": "d7ae23bd5d1efa66c4f6fe80d2c9299d4a8dcb61b7399ab62e1ded46a14750ba"
+    },
+    {
+      "file": "tools/nav01/evidence/r1/ellipse-zero-burn.csv",
+      "bytes": 196783,
+      "sha256": "5249553b6a8ee675b718dc7e8ec7701ae2fbf13fe3b5c86b108496b54e4bb5f8"
+    },
+    {
+      "file": "tools/nav01/evidence/r1/ellipse-zero-burn.script",
+      "bytes": 312376,
+      "sha256": "60689db72bb57ba8252e21cef14a054f86bc510a2057c10e430bf8a4e5355407"
+    },
+    {
+      "file": "tools/nav01/evidence/r1/startup.txt",
+      "bytes": 11957,
+      "sha256": "e3d5d1c1f206991af8bebe9d81062f0818c59a1be97f24a0c71e73059c853c7f"
+    },
+    {
+      "file": "tools/nav01/evidence/r1/summary.json",
+      "bytes": 8286,
+      "sha256": "690afd4c124e269b05d33692428328d95f1de1db88f43394237b582682c89cb6"
+    },
+    {
+      "file": "tools/nav01/validate-initial-orbit.mjs",
+      "bytes": 8449,
+      "sha256": "d0c094dd0faa728882786fb7cf28c0bb3eb0e605c0c7ff2d0b45a031ec6e6a98"
+    }
+  ]
+}

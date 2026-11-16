@@ -1,0 +1,347 @@
+{
+  "metadata": {
+    "createdAt": "2026-11-14T19:46:43.900Z",
+    "node": "v24.14.0",
+    "os": "win32 10.0.26200",
+    "cpu": "Intel(R) Core(TM) Ultra 5 226V",
+    "logicalCpus": 8,
+    "totalMemoryBytes": 16687779840,
+    "powerProfile": "���� ����ǥ GUID: ab6534a3-bc02-4c44-94d1-a8535b2eb070  (SAMSUNG MODE)",
+    "rounds": 1,
+    "scenarios": [
+      "legacy-balanced",
+      "hardware-balanced"
+    ],
+    "steps": [
+      600
+    ],
+    "restore": true,
+    "bundleHash": "b6586c557867d5a8f8e61aa7600b7a01dcaf8bbb1829b4621524e0d05a893115",
+    "baseline": {
+      "files": 57,
+      "manifestSha256": "3bbe2195390abadf5da979916b0b20123b61199c21b1ffa55554adc6efadd3dc"
+    },
+    "optimization": "hardware-compiled-constants-only",
+    "policy": "One new worker per variant/case/round; alternating original/optimized order. Both engines bundled identically. Startup includes both imports. Compute starts after ready. Cold model caches; repeated query uses original uncached environment in BOTH variants. No warm checkpoint reuse implemented. Heap delta is not peak memory."
+  },
+  "results": [
+    {
+      "type": "result",
+      "variant": "original",
+      "scenario": "legacy-balanced",
+      "step": 600,
+      "restore": true,
+      "inputHash": "2c2521e64d6beb20210a0d977901d7f39b7d94fe7761a90c607bd2e905e3c9a0",
+      "stateHash": "b889885e6fd890d7807363df01b86249c26a86fc1b62c5797396193e38b2093d",
+      "resultHash": "7e52736f07f541aeaa473fe56d2e4b904cb14603a5774bef35613d45675d81d7",
+      "queryHash": "ba70de8137d67ed9dd809182af20443bc145b0bb861d6d45236e377c0028d819",
+      "publicTelemetryHash": "09097544464b3138cebcda1cda1f80165ab832dcd9d8dfd5328667b6115f91e1",
+      "restoredHash": "b889885e6fd890d7807363df01b86249c26a86fc1b62c5797396193e38b2093d",
+      "solveMs": 5.755800000000022,
+      "constructMs": 6.525600000000054,
+      "forecastMs": 2042.6718,
+      "warmQueryMs": 26.97880000000032,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 5.079600000000028,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 3.1323999999999614,
+      "restoreMs": 1979.408,
+      "heapDeltaBytes": 9566448,
+      "cacheEntries": null,
+      "optimization": "hardware-compiled-constants-only",
+      "ticks": 50777,
+      "status": "success",
+      "received": 3,
+      "energyWh": 176,
+      "energyMinimumWh": 3.5663307866490306,
+      "startupMs": 47.65289999999993,
+      "round": 0
+    },
+    {
+      "type": "result",
+      "variant": "optimized",
+      "scenario": "legacy-balanced",
+      "step": 600,
+      "restore": true,
+      "inputHash": "2c2521e64d6beb20210a0d977901d7f39b7d94fe7761a90c607bd2e905e3c9a0",
+      "stateHash": "b889885e6fd890d7807363df01b86249c26a86fc1b62c5797396193e38b2093d",
+      "resultHash": "7e52736f07f541aeaa473fe56d2e4b904cb14603a5774bef35613d45675d81d7",
+      "queryHash": "ba70de8137d67ed9dd809182af20443bc145b0bb861d6d45236e377c0028d819",
+      "publicTelemetryHash": "09097544464b3138cebcda1cda1f80165ab832dcd9d8dfd5328667b6115f91e1",
+      "restoredHash": "b889885e6fd890d7807363df01b86249c26a86fc1b62c5797396193e38b2093d",
+      "solveMs": 5.103500000000167,
+      "constructMs": 6.609000000000378,
+      "forecastMs": 1994.5074000000004,
+      "warmQueryMs": 25.67119999999977,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 3.785899999999856,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 2.9866000000001804,
+      "restoreMs": 1893.6414999999988,
+      "heapDeltaBytes": 13060704,
+      "cacheEntries": null,
+      "optimization": "hardware-compiled-constants-only",
+      "ticks": 50777,
+      "status": "success",
+      "received": 3,
+      "energyWh": 176,
+      "energyMinimumWh": 3.5663307866490306,
+      "startupMs": 43.77599999999984,
+      "round": 0
+    },
+    {
+      "type": "result",
+      "variant": "original",
+      "scenario": "hardware-balanced",
+      "step": 600,
+      "restore": true,
+      "inputHash": "d45de7feff2da31c147529b552348276a24fb71d7c2a92b2e824cbb13ef76f6c",
+      "stateHash": "d9a3442ac10ea2ca7cd3a35f497d19170b116567a26e784890dabd05ff34cd9c",
+      "resultHash": "0422402873489202650abd3b9bdad92a953260f5a55b0ff4367051597dbee121",
+      "queryHash": "ba70de8137d67ed9dd809182af20443bc145b0bb861d6d45236e377c0028d819",
+      "publicTelemetryHash": "67da6f5993e99d3b97379f797cdb77d19411a05d9802dfd50905e60ac84cb4bb",
+      "restoredHash": "d9a3442ac10ea2ca7cd3a35f497d19170b116567a26e784890dabd05ff34cd9c",
+      "solveMs": 5.069499999999607,
+      "constructMs": 10.222599999999147,
+      "forecastMs": 26695.054200000006,
+      "warmQueryMs": 26.179199999998673,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 11.193799999993644,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 3.6656999999977415,
+      "restoreMs": 27038.410799999998,
+      "heapDeltaBytes": 47159288,
+      "cacheEntries": null,
+      "optimization": "hardware-compiled-constants-only",
+      "ticks": 90388,
+      "status": "success",
+      "received": 12,
+      "energyWh": 172,
+      "energyMinimumWh": 81.26247315914229,
+      "startupMs": 45.1974999999984,
+      "round": 0
+    },
+    {
+      "type": "result",
+      "variant": "optimized",
+      "scenario": "hardware-balanced",
+      "step": 600,
+      "restore": true,
+      "inputHash": "d45de7feff2da31c147529b552348276a24fb71d7c2a92b2e824cbb13ef76f6c",
+      "stateHash": "d9a3442ac10ea2ca7cd3a35f497d19170b116567a26e784890dabd05ff34cd9c",
+      "resultHash": "0422402873489202650abd3b9bdad92a953260f5a55b0ff4367051597dbee121",
+      "queryHash": "ba70de8137d67ed9dd809182af20443bc145b0bb861d6d45236e377c0028d819",
+      "publicTelemetryHash": "67da6f5993e99d3b97379f797cdb77d19411a05d9802dfd50905e60ac84cb4bb",
+      "restoredHash": "d9a3442ac10ea2ca7cd3a35f497d19170b116567a26e784890dabd05ff34cd9c",
+      "solveMs": 4.8902000000016415,
+      "constructMs": 10.50499999999738,
+      "forecastMs": 25475.398400000005,
+      "warmQueryMs": 32.944799999997485,
+      "warmQueryIterations": 2000,
+      "warmPublicTelemetryMs": 11.649499999999534,
+      "warmPublicTelemetryIterations": 200,
+      "serializationMs": 4.471900000004098,
+      "restoreMs": 25241.617799999993,
+      "heapDeltaBytes": 33794592,
+      "cacheEntries": null,
+      "optimization": "hardware-compiled-constants-only",
+      "ticks": 90388,
+      "status": "success",
+      "received": 12,
+      "energyWh": 172,
+      "energyMinimumWh": 81.26247315914229,
+      "startupMs": 44.943499999993946,
+      "round": 0
+    }
+  ],
+  "summaries": [
+    {
+      "scenario": "legacy-balanced",
+      "step": 600,
+      "variant": "original",
+      "metrics": {
+        "startupMs": {
+          "median": 47.65289999999993,
+          "min": 47.65289999999993,
+          "max": 47.65289999999993
+        },
+        "solveMs": {
+          "median": 5.755800000000022,
+          "min": 5.755800000000022,
+          "max": 5.755800000000022
+        },
+        "constructMs": {
+          "median": 6.525600000000054,
+          "min": 6.525600000000054,
+          "max": 6.525600000000054
+        },
+        "forecastMs": {
+          "median": 2042.6718,
+          "min": 2042.6718,
+          "max": 2042.6718
+        },
+        "warmQueryMs": {
+          "median": 26.97880000000032,
+          "min": 26.97880000000032,
+          "max": 26.97880000000032
+        },
+        "warmPublicTelemetryMs": {
+          "median": 5.079600000000028,
+          "min": 5.079600000000028,
+          "max": 5.079600000000028
+        },
+        "serializationMs": {
+          "median": 3.1323999999999614,
+          "min": 3.1323999999999614,
+          "max": 3.1323999999999614
+        },
+        "restoreMs": {
+          "median": 1979.408,
+          "min": 1979.408,
+          "max": 1979.408
+        }
+      }
+    },
+    {
+      "scenario": "legacy-balanced",
+      "step": 600,
+      "variant": "optimized",
+      "metrics": {
+        "startupMs": {
+          "median": 43.77599999999984,
+          "min": 43.77599999999984,
+          "max": 43.77599999999984
+        },
+        "solveMs": {
+          "median": 5.103500000000167,
+          "min": 5.103500000000167,
+          "max": 5.103500000000167
+        },
+        "constructMs": {
+          "median": 6.609000000000378,
+          "min": 6.609000000000378,
+          "max": 6.609000000000378
+        },
+        "forecastMs": {
+          "median": 1994.5074000000004,
+          "min": 1994.5074000000004,
+          "max": 1994.5074000000004
+        },
+        "warmQueryMs": {
+          "median": 25.67119999999977,
+          "min": 25.67119999999977,
+          "max": 25.67119999999977
+        },
+        "warmPublicTelemetryMs": {
+          "median": 3.785899999999856,
+          "min": 3.785899999999856,
+          "max": 3.785899999999856
+        },
+        "serializationMs": {
+          "median": 2.9866000000001804,
+          "min": 2.9866000000001804,
+          "max": 2.9866000000001804
+        },
+        "restoreMs": {
+          "median": 1893.6414999999988,
+          "min": 1893.6414999999988,
+          "max": 1893.6414999999988
+        }
+      }
+    },
+    {
+      "scenario": "hardware-balanced",
+      "step": 600,
+      "variant": "original",
+      "metrics": {
+        "startupMs": {
+          "median": 45.1974999999984,
+          "min": 45.1974999999984,
+          "max": 45.1974999999984
+        },
+        "solveMs": {
+          "median": 5.069499999999607,
+          "min": 5.069499999999607,
+          "max": 5.069499999999607
+        },
+        "constructMs": {
+          "median": 10.222599999999147,
+          "min": 10.222599999999147,
+          "max": 10.222599999999147
+        },
+        "forecastMs": {
+          "median": 26695.054200000006,
+          "min": 26695.054200000006,
+          "max": 26695.054200000006
+        },
+        "warmQueryMs": {
+          "median": 26.179199999998673,
+          "min": 26.179199999998673,
+          "max": 26.179199999998673
+        },
+        "warmPublicTelemetryMs": {
+          "median": 11.193799999993644,
+          "min": 11.193799999993644,
+          "max": 11.193799999993644
+        },
+        "serializationMs": {
+          "median": 3.6656999999977415,
+          "min": 3.6656999999977415,
+          "max": 3.6656999999977415
+        },
+        "restoreMs": {
+          "median": 27038.410799999998,
+          "min": 27038.410799999998,
+          "max": 27038.410799999998
+        }
+      }
+    },
+    {
+      "scenario": "hardware-balanced",
+      "step": 600,
+      "variant": "optimized",
+      "metrics": {
+        "startupMs": {
+          "median": 44.943499999993946,
+          "min": 44.943499999993946,
+          "max": 44.943499999993946
+        },
+        "solveMs": {
+          "median": 4.8902000000016415,
+          "min": 4.8902000000016415,
+          "max": 4.8902000000016415
+        },
+        "constructMs": {
+          "median": 10.50499999999738,
+          "min": 10.50499999999738,
+          "max": 10.50499999999738
+        },
+        "forecastMs": {
+          "median": 25475.398400000005,
+          "min": 25475.398400000005,
+          "max": 25475.398400000005
+        },
+        "warmQueryMs": {
+          "median": 32.944799999997485,
+          "min": 32.944799999997485,
+          "max": 32.944799999997485
+        },
+        "warmPublicTelemetryMs": {
+          "median": 11.649499999999534,
+          "min": 11.649499999999534,
+          "max": 11.649499999999534
+        },
+        "serializationMs": {
+          "median": 4.471900000004098,
+          "min": 4.471900000004098,
+          "max": 4.471900000004098
+        },
+        "restoreMs": {
+          "median": 25241.617799999993,
+          "min": 25241.617799999993,
+          "max": 25241.617799999993
+        }
+      }
+    }
+  ]
+}

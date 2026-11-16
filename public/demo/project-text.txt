@@ -1,0 +1,45 @@
+PROJECT NAME
+Orbital Foundry: Build, Navigate, Discover
+
+SUMMARY
+Orbital Foundry is a browser-based 3D game that turns space mission design into an expedition players can build and experience. Beginning with a fictional asteroid investigation, players assemble a spacecraft, balance mass, budget, power and communications, and shape routes across the Solar System. They compare direct transfers with gravity assists, respond to onboard faults, and look through their own spacecraft's instruments to collect observations. Photographs become discoveries only when observing and transmission conditions are met. NASA and JPL resources inform the mission workflow, hardware references, planetary positions and space imagery. Our goal is to make engineering trade-offs visible and memorable: every component, departure date and operational decision changes what the mission can achieve. The game connects hands-on creation, scientific reasoning and the wonder of exploration in one playable learning experience.
+
+PROJECT DETAILS
+What we built
+Orbital Foundry is an interactive 3D space mission design game for desktop web browsers. Players become the designers and operators of a small exploration spacecraft. A fictional asteroid investigation supplies an immediate reason to build, launch and observe. The map contains all eight planets and an authored asteroid, with expeditions departing Earth for destinations across the Solar System.
+
+How it works
+Players place equipment directly on a 3D spacecraft rather than completing a list of numeric inputs. Hardware choices and placement affect the design's mass, budget, power, pointing and communication capabilities. The spacecraft they build appears in the expedition.
+
+On the Solar System map, players choose a destination and drag departure and arrival handles. The calculated route and resource implications update with the plan. A gravity-assist search compares a single planetary flyby with direct-route opportunities, exposing the trade between propellant and flight time. It checks encounter speed and turning geometry rather than awarding an arbitrary fuel discount.
+
+During the voyage, players switch between the route map, an external spacecraft view and the mounted instrument view. An authored star-reference fault asks them to recover safely or preserve the observation window and stabilize later. Close encounters involve aiming, field of view, exposure, tracking, power, heat and limited observing time. Cameras collect global and detailed views; spectrometers compare two bands over the same region. A picture can be kept even when it does not qualify as scientific data. Accepted observations must be transmitted, and the game accounts for one-way light travel before reporting receipt on Earth. Players can reopen and download their photographs.
+
+Why it matters
+Space engineering is a network of connected decisions. A powerful instrument is useful only if the spacecraft can carry, power, point and communicate with it. The game makes those connections visible through immediate 3D feedback and consequences. Its intended audience includes curious beginners, students and educators seeking an approachable introduction to mission design. We aim to encourage experimentation and systems thinking; formal classroom learning gains have not yet been measured.
+
+NASA data and scientific grounding
+NASA mission-design guidance, CubeSat 101 and the Small Spacecraft Technology State of the Art report informed the workflow and subsystem references. Manufacturer data sheets provide selected published hardware specifications; game costs, proxy geometry and other assumptions are identified separately. JPL approximate planetary elements drive the Solar System map. The separate Earth-Mars transfer mode uses bundled JPL Horizons vector samples. NASA Blue Marble, Black Marble, cloud-model imagery, Mars maps and Deep Star Maps 2020 provide credited visual resources.
+
+GMAT R2026a was executed during development to compare selected central-gravity propagation cases with independent numerical integration. These checks establish agreement for those defined cases; they do not certify the entire game or validate every new Solar System route. The main expedition uses educational two-body and single-assist approximations. Encounter time and display scales are adapted for play. ASTER-7, operational incidents, synthetic surface reflectance and carrier parameters are authored game content. Two-band measurements are not chemical identification or real spacecraft observations.
+
+Creativity and implementation
+The central creative idea is a continuous connection between building, navigating and discovering: the player's own assembled spacecraft becomes their viewpoint in space. Mouse manipulation, visible trajectory changes, onboard decisions and a personal photo journal make engineering choices tangible. The software uses TypeScript, Three.js/WebGL, HTML/CSS, Vite, browser workers and local persistence. Original modular spacecraft and environments were created with procedural Three.js and Blender/Python workflows. Vitest and Playwright were used for model checks and actual browser interaction tests, including capture, download, save/resume and mission completion.
+
+SI / AI USE — DISCLOSURE TEXT
+OpenAI ChatGPT/Codex was used throughout development for brainstorming, requirements and game-flow design, writing and revising source code, procedural asset scripts, test automation, debugging, research assistance, interface/story text and submission drafting. The author directed the goals and revisions; generated implementation was checked through source review, numerical tests and browser execution. Published NASA/JPL data and credited imagery were kept distinct from authored assumptions and synthetic gameplay values. The shipped spacecraft and environment assets were produced with original procedural geometry/scripts, and hardware thumbnails were rendered from those models. No image-generation or video-generation model was used for these assets. The demonstration is an edited recording of the running game, not a generated video. The game does not call a generative AI API during play. This project is not an official NASA product or NASA-certified mission simulator.
+
+SI OPTION SELECTION NOTE (not text to paste into Project Details)
+Select the available options corresponding to code generation/assistance and text, ideation or design assistance. Do not select "I did not use SI". Exact dropdown labels were not visible in the supplied screenshot. If an option includes AI-assisted procedural visual creation, include it because asset-generation code was AI-assisted; do not describe NASA textures as AI-generated. The demonstration should visibly disclose "Actual gameplay | SI-assisted development". No AI-generated narration is required.
+
+PROJECT URL
+https://orbital-foundry-mission-lab.gjtjwns06.chatgpt.site
+Public access enabled on 2026-11-15. An unauthenticated HTTP request using a browser User-Agent returned the game HTML with status 200.
+
+PROJECT DEMONSTRATION URL
+https://orbital-foundry-mission-lab.gjtjwns06.chatgpt.site/demo/
+Direct MP4: https://orbital-foundry-mission-lab.gjtjwns06.chatgpt.site/demo/orbital-foundry-demo.mp4
+29-second actual gameplay recording with English captions. Public accessibility is checked before handoff.
+
+NASA DATA / SPACE AGENCY PARTNER & OTHER DATA
+Copy each Link Text and Link URL from resources.tsv into the matching section. The Use column explains exactly how the source was used. Research-only references are explicitly marked, rather than represented as shipped code or data.

@@ -1,0 +1,1062 @@
+{
+  "generatedAt": "2026-11-14T22:20:50.323Z",
+  "lessonId": "iris-schedule-rescue-v1",
+  "modelVersion": "transfer-3.0.0",
+  "networkHash": "1eb4ebd04d12efb8ea2bf36e30a8b88c0ee198e504ca6efbc7d992fa8159fff6",
+  "listeningWindow": {
+    "start": 22453200,
+    "end": 22460400
+  },
+  "suggestedCommandAtSeconds": 22455800,
+  "replaceFromSeconds": 22460400,
+  "runs": [
+    {
+      "numerics": {
+        "cruiseStepSeconds": 600,
+        "activeStepSeconds": 1
+      },
+      "status": "success",
+      "received": 12,
+      "packetIds": [
+        "mars-spectrum:-11",
+        "mars-spectrum:-10",
+        "mars-spectrum:-9",
+        "mars-spectrum:-8",
+        "mars-spectrum:-7",
+        "mars-spectrum:-6",
+        "mars-spectrum:-5",
+        "mars-spectrum:-4",
+        "mars-spectrum:-3",
+        "mars-spectrum:-2",
+        "mars-spectrum:-1",
+        "mars-spectrum:0"
+      ],
+      "minimumWh": 68.57028475443775,
+      "finalWh": 172,
+      "attitudeComparisonDeg": 0,
+      "marginDifferenceDb": 0,
+      "command": {
+        "id": "schedule-1",
+        "queueSequence": 1,
+        "issuedAtSeconds": 22455800,
+        "envelope": {
+          "commandId": "schedule-1",
+          "expiresAtSeconds": 22460400,
+          "payload": {
+            "kind": "replace-schedule",
+            "baseRevision": 0,
+            "replaceFromSeconds": 22460400,
+            "operations": [
+              {
+                "id": "encounter-science",
+                "kind": "observe",
+                "start": 22460400,
+                "end": 22465800
+              },
+              {
+                "id": "science-return-1",
+                "kind": "downlink",
+                "start": 22465800,
+                "end": 22469400
+              },
+              {
+                "id": "science-return-2",
+                "kind": "downlink",
+                "start": 22476600,
+                "end": 22480200
+              },
+              {
+                "id": "science-return-3",
+                "kind": "downlink",
+                "start": 22487400,
+                "end": 22491000
+              },
+              {
+                "id": "science-return-4",
+                "kind": "downlink",
+                "start": 22498200,
+                "end": 22501800
+              },
+              {
+                "id": "science-return-5",
+                "kind": "downlink",
+                "start": 22509000,
+                "end": 22512600
+              },
+              {
+                "id": "science-return-6",
+                "kind": "downlink",
+                "start": 22519800,
+                "end": 22523400
+              },
+              {
+                "id": "science-return-7",
+                "kind": "downlink",
+                "start": 22530600,
+                "end": 22534200
+              },
+              {
+                "id": "science-return-8",
+                "kind": "downlink",
+                "start": 22541400,
+                "end": 22545000
+              },
+              {
+                "id": "science-return-9",
+                "kind": "downlink",
+                "start": 22552200,
+                "end": 22555800
+              },
+              {
+                "id": "science-return-10",
+                "kind": "downlink",
+                "start": 22563000,
+                "end": 22566600
+              },
+              {
+                "id": "science-return-11",
+                "kind": "downlink",
+                "start": 22573800,
+                "end": 22577400
+              },
+              {
+                "id": "science-return-12",
+                "kind": "downlink",
+                "start": 22584600,
+                "end": 22588200
+              },
+              {
+                "id": "science-return-13",
+                "kind": "downlink",
+                "start": 22595400,
+                "end": 22599000
+              },
+              {
+                "id": "science-return-14",
+                "kind": "downlink",
+                "start": 22606200,
+                "end": 22609800
+              },
+              {
+                "id": "science-return-15",
+                "kind": "downlink",
+                "start": 22617000,
+                "end": 22620600
+              },
+              {
+                "id": "science-return-16",
+                "kind": "downlink",
+                "start": 22627800,
+                "end": 22631400
+              }
+            ]
+          }
+        },
+        "canonicalBytes": "{\"commandId\":\"schedule-1\",\"expiresAtSeconds\":22460400,\"payload\":{\"baseRevision\":0,\"kind\":\"replace-schedule\",\"operations\":[{\"end\":22465800,\"id\":\"encounter-science\",\"kind\":\"observe\",\"start\":22460400},{\"end\":22469400,\"id\":\"science-return-1\",\"kind\":\"downlink\",\"start\":22465800},{\"end\":22480200,\"id\":\"science-return-2\",\"kind\":\"downlink\",\"start\":22476600},{\"end\":22491000,\"id\":\"science-return-3\",\"kind\":\"downlink\",\"start\":22487400},{\"end\":22501800,\"id\":\"science-return-4\",\"kind\":\"downlink\",\"start\":22498200},{\"end\":22512600,\"id\":\"science-return-5\",\"kind\":\"downlink\",\"start\":22509000},{\"end\":22523400,\"id\":\"science-return-6\",\"kind\":\"downlink\",\"start\":22519800},{\"end\":22534200,\"id\":\"science-return-7\",\"kind\":\"downlink\",\"start\":22530600},{\"end\":22545000,\"id\":\"science-return-8\",\"kind\":\"downlink\",\"start\":22541400},{\"end\":22555800,\"id\":\"science-return-9\",\"kind\":\"downlink\",\"start\":22552200},{\"end\":22566600,\"id\":\"science-return-10\",\"kind\":\"downlink\",\"start\":22563000},{\"end\":22577400,\"id\":\"science-return-11\",\"kind\":\"downlink\",\"start\":22573800},{\"end\":22588200,\"id\":\"science-return-12\",\"kind\":\"downlink\",\"start\":22584600},{\"end\":22599000,\"id\":\"science-return-13\",\"kind\":\"downlink\",\"start\":22595400},{\"end\":22609800,\"id\":\"science-return-14\",\"kind\":\"downlink\",\"start\":22606200},{\"end\":22620600,\"id\":\"science-return-15\",\"kind\":\"downlink\",\"start\":22617000},{\"end\":22631400,\"id\":\"science-return-16\",\"kind\":\"downlink\",\"start\":22627800}],\"replaceFromSeconds\":22460400}}",
+        "payloadHash": "5dcc093e5bdfac3effe79ccf3c7a8f0731d4a7e35626b335fbc849b9ca4a6ded",
+        "payloadBytes": 1453,
+        "frameBits": 12136,
+        "attempts": [
+          {
+            "id": "schedule-1:try:1",
+            "attempt": 1,
+            "queuedSequence": 1,
+            "queuedAtSeconds": 22455800,
+            "queueDeadlineSeconds": 22460400,
+            "status": "delivered",
+            "stationId": "G2",
+            "eirpDbW": 109.4,
+            "firstBit": {
+              "emittedAtSeconds": 22455800,
+              "arrivesAtSeconds": 22456688.573747255,
+              "emitterPositionKm": [
+                95632760.0985239,
+                -108208265.18680303,
+                -46908861.44700666
+              ],
+              "receiverPositionKm": [
+                -166705173.32558995,
+                -150913079.56102052,
+                -64727907.00918903
+              ]
+            },
+            "lastBit": {
+              "emittedAtSeconds": 22455847.40625,
+              "arrivesAtSeconds": 22456735.982217953,
+              "emitterPositionKm": [
+                95633845.08791934,
+                -108207468.28103565,
+                -46908509.608818546
+              ],
+              "receiverPositionKm": [
+                -166704487.8384321,
+                -150913711.85169116,
+                -64728201.00268292
+              ]
+            },
+            "plannedTransmitEndSeconds": 22455847.40625,
+            "emittedBits": 12136,
+            "arrivedBits": 12136,
+            "totalBits": 12136,
+            "emissionValid": true,
+            "receptionValid": true,
+            "truthFailureCode": null,
+            "attentionAtSeconds": 22458224.558185905,
+            "groundAttentionExpired": true
+          }
+        ],
+        "acknowledgements": [
+          {
+            "id": "schedule-1:ack:1",
+            "commandId": "schedule-1",
+            "attempt": 1,
+            "decision": {
+              "commandId": "schedule-1",
+              "attempt": 1,
+              "payloadHash": "5dcc093e5bdfac3effe79ccf3c7a8f0731d4a7e35626b335fbc849b9ca4a6ded",
+              "status": "installed",
+              "revision": 1,
+              "decidedAtSeconds": 22456735.982217953,
+              "installedAtSeconds": 22456735.982217953,
+              "duplicate": false,
+              "scheduleHash": "bf54db31231b1a9c2c301686e0e490bac2638e8188d38516241ded603d2b7041",
+              "reasonCode": "COMMAND_INSTALLED"
+            },
+            "status": "delivered",
+            "stationId": "G2",
+            "firstBit": {
+              "emittedAtSeconds": 22456735.982217953,
+              "arrivesAtSeconds": 22457624.710847523,
+              "emitterPositionKm": [
+                -166704487.8384321,
+                -150913711.85169116,
+                -64728201.00268292
+              ],
+              "receiverPositionKm": [
+                95674551.74408875,
+                -108177556.8378798,
+                -46895315.953026354
+              ]
+            },
+            "lastBit": {
+              "emittedAtSeconds": 22456745.982217953,
+              "arrivesAtSeconds": 22457634.711317446,
+              "emitterPositionKm": [
+                -166704343.26225248,
+                -150913845.22405902,
+                -64728263.014418796
+              ],
+              "receiverPositionKm": [
+                95674780.94548972,
+                -108177388.33366752,
+                -46895241.69946594
+              ]
+            },
+            "plannedTransmitEndSeconds": 22456745.982217953,
+            "payloadRateBps": 409.6,
+            "emittedBits": 4096,
+            "totalBits": 4096,
+            "receivedAtSeconds": 22457634.711317446,
+            "failureCode": null
+          }
+        ]
+      },
+      "installation": {
+        "commandId": "schedule-1",
+        "attempt": 1,
+        "payloadHash": "5dcc093e5bdfac3effe79ccf3c7a8f0731d4a7e35626b335fbc849b9ca4a6ded",
+        "revision": 1,
+        "installedAtSeconds": 22456735.982217953,
+        "replaceFromSeconds": 22460400,
+        "scheduleHash": "bf54db31231b1a9c2c301686e0e490bac2638e8188d38516241ded603d2b7041"
+      },
+      "ackReceivedAt": 22457634.711317446
+    },
+    {
+      "numerics": {
+        "cruiseStepSeconds": 600,
+        "activeStepSeconds": 0.5
+      },
+      "status": "success",
+      "received": 12,
+      "packetIds": [
+        "mars-spectrum:-11",
+        "mars-spectrum:-10",
+        "mars-spectrum:-9",
+        "mars-spectrum:-8",
+        "mars-spectrum:-7",
+        "mars-spectrum:-6",
+        "mars-spectrum:-5",
+        "mars-spectrum:-4",
+        "mars-spectrum:-3",
+        "mars-spectrum:-2",
+        "mars-spectrum:-1",
+        "mars-spectrum:0"
+      ],
+      "minimumWh": 68.56647171952665,
+      "finalWh": 172,
+      "attitudeComparisonDeg": 0,
+      "marginDifferenceDb": 0,
+      "command": {
+        "id": "schedule-1",
+        "queueSequence": 1,
+        "issuedAtSeconds": 22455800,
+        "envelope": {
+          "commandId": "schedule-1",
+          "expiresAtSeconds": 22460400,
+          "payload": {
+            "kind": "replace-schedule",
+            "baseRevision": 0,
+            "replaceFromSeconds": 22460400,
+            "operations": [
+              {
+                "id": "encounter-science",
+                "kind": "observe",
+                "start": 22460400,
+                "end": 22465800
+              },
+              {
+                "id": "science-return-1",
+                "kind": "downlink",
+                "start": 22465800,
+                "end": 22469400
+              },
+              {
+                "id": "science-return-2",
+                "kind": "downlink",
+                "start": 22476600,
+                "end": 22480200
+              },
+              {
+                "id": "science-return-3",
+                "kind": "downlink",
+                "start": 22487400,
+                "end": 22491000
+              },
+              {
+                "id": "science-return-4",
+                "kind": "downlink",
+                "start": 22498200,
+                "end": 22501800
+              },
+              {
+                "id": "science-return-5",
+                "kind": "downlink",
+                "start": 22509000,
+                "end": 22512600
+              },
+              {
+                "id": "science-return-6",
+                "kind": "downlink",
+                "start": 22519800,
+                "end": 22523400
+              },
+              {
+                "id": "science-return-7",
+                "kind": "downlink",
+                "start": 22530600,
+                "end": 22534200
+              },
+              {
+                "id": "science-return-8",
+                "kind": "downlink",
+                "start": 22541400,
+                "end": 22545000
+              },
+              {
+                "id": "science-return-9",
+                "kind": "downlink",
+                "start": 22552200,
+                "end": 22555800
+              },
+              {
+                "id": "science-return-10",
+                "kind": "downlink",
+                "start": 22563000,
+                "end": 22566600
+              },
+              {
+                "id": "science-return-11",
+                "kind": "downlink",
+                "start": 22573800,
+                "end": 22577400
+              },
+              {
+                "id": "science-return-12",
+                "kind": "downlink",
+                "start": 22584600,
+                "end": 22588200
+              },
+              {
+                "id": "science-return-13",
+                "kind": "downlink",
+                "start": 22595400,
+                "end": 22599000
+              },
+              {
+                "id": "science-return-14",
+                "kind": "downlink",
+                "start": 22606200,
+                "end": 22609800
+              },
+              {
+                "id": "science-return-15",
+                "kind": "downlink",
+                "start": 22617000,
+                "end": 22620600
+              },
+              {
+                "id": "science-return-16",
+                "kind": "downlink",
+                "start": 22627800,
+                "end": 22631400
+              }
+            ]
+          }
+        },
+        "canonicalBytes": "{\"commandId\":\"schedule-1\",\"expiresAtSeconds\":22460400,\"payload\":{\"baseRevision\":0,\"kind\":\"replace-schedule\",\"operations\":[{\"end\":22465800,\"id\":\"encounter-science\",\"kind\":\"observe\",\"start\":22460400},{\"end\":22469400,\"id\":\"science-return-1\",\"kind\":\"downlink\",\"start\":22465800},{\"end\":22480200,\"id\":\"science-return-2\",\"kind\":\"downlink\",\"start\":22476600},{\"end\":22491000,\"id\":\"science-return-3\",\"kind\":\"downlink\",\"start\":22487400},{\"end\":22501800,\"id\":\"science-return-4\",\"kind\":\"downlink\",\"start\":22498200},{\"end\":22512600,\"id\":\"science-return-5\",\"kind\":\"downlink\",\"start\":22509000},{\"end\":22523400,\"id\":\"science-return-6\",\"kind\":\"downlink\",\"start\":22519800},{\"end\":22534200,\"id\":\"science-return-7\",\"kind\":\"downlink\",\"start\":22530600},{\"end\":22545000,\"id\":\"science-return-8\",\"kind\":\"downlink\",\"start\":22541400},{\"end\":22555800,\"id\":\"science-return-9\",\"kind\":\"downlink\",\"start\":22552200},{\"end\":22566600,\"id\":\"science-return-10\",\"kind\":\"downlink\",\"start\":22563000},{\"end\":22577400,\"id\":\"science-return-11\",\"kind\":\"downlink\",\"start\":22573800},{\"end\":22588200,\"id\":\"science-return-12\",\"kind\":\"downlink\",\"start\":22584600},{\"end\":22599000,\"id\":\"science-return-13\",\"kind\":\"downlink\",\"start\":22595400},{\"end\":22609800,\"id\":\"science-return-14\",\"kind\":\"downlink\",\"start\":22606200},{\"end\":22620600,\"id\":\"science-return-15\",\"kind\":\"downlink\",\"start\":22617000},{\"end\":22631400,\"id\":\"science-return-16\",\"kind\":\"downlink\",\"start\":22627800}],\"replaceFromSeconds\":22460400}}",
+        "payloadHash": "5dcc093e5bdfac3effe79ccf3c7a8f0731d4a7e35626b335fbc849b9ca4a6ded",
+        "payloadBytes": 1453,
+        "frameBits": 12136,
+        "attempts": [
+          {
+            "id": "schedule-1:try:1",
+            "attempt": 1,
+            "queuedSequence": 1,
+            "queuedAtSeconds": 22455800,
+            "queueDeadlineSeconds": 22460400,
+            "status": "delivered",
+            "stationId": "G2",
+            "eirpDbW": 109.4,
+            "firstBit": {
+              "emittedAtSeconds": 22455800,
+              "arrivesAtSeconds": 22456688.573747255,
+              "emitterPositionKm": [
+                95632760.0985239,
+                -108208265.18680303,
+                -46908861.44700666
+              ],
+              "receiverPositionKm": [
+                -166705173.32558995,
+                -150913079.56102052,
+                -64727907.00918903
+              ]
+            },
+            "lastBit": {
+              "emittedAtSeconds": 22455847.40625,
+              "arrivesAtSeconds": 22456735.982217953,
+              "emitterPositionKm": [
+                95633845.08791934,
+                -108207468.28103565,
+                -46908509.608818546
+              ],
+              "receiverPositionKm": [
+                -166704487.8384321,
+                -150913711.85169116,
+                -64728201.00268292
+              ]
+            },
+            "plannedTransmitEndSeconds": 22455847.40625,
+            "emittedBits": 12136,
+            "arrivedBits": 12136,
+            "totalBits": 12136,
+            "emissionValid": true,
+            "receptionValid": true,
+            "truthFailureCode": null,
+            "attentionAtSeconds": 22458224.558185905,
+            "groundAttentionExpired": true
+          }
+        ],
+        "acknowledgements": [
+          {
+            "id": "schedule-1:ack:1",
+            "commandId": "schedule-1",
+            "attempt": 1,
+            "decision": {
+              "commandId": "schedule-1",
+              "attempt": 1,
+              "payloadHash": "5dcc093e5bdfac3effe79ccf3c7a8f0731d4a7e35626b335fbc849b9ca4a6ded",
+              "status": "installed",
+              "revision": 1,
+              "decidedAtSeconds": 22456735.982217953,
+              "installedAtSeconds": 22456735.982217953,
+              "duplicate": false,
+              "scheduleHash": "bf54db31231b1a9c2c301686e0e490bac2638e8188d38516241ded603d2b7041",
+              "reasonCode": "COMMAND_INSTALLED"
+            },
+            "status": "delivered",
+            "stationId": "G2",
+            "firstBit": {
+              "emittedAtSeconds": 22456735.982217953,
+              "arrivesAtSeconds": 22457624.710847523,
+              "emitterPositionKm": [
+                -166704487.8384321,
+                -150913711.85169116,
+                -64728201.00268292
+              ],
+              "receiverPositionKm": [
+                95674551.74408875,
+                -108177556.8378798,
+                -46895315.953026354
+              ]
+            },
+            "lastBit": {
+              "emittedAtSeconds": 22456745.982217953,
+              "arrivesAtSeconds": 22457634.711317446,
+              "emitterPositionKm": [
+                -166704343.26225248,
+                -150913845.22405902,
+                -64728263.014418796
+              ],
+              "receiverPositionKm": [
+                95674780.94548972,
+                -108177388.33366752,
+                -46895241.69946594
+              ]
+            },
+            "plannedTransmitEndSeconds": 22456745.982217953,
+            "payloadRateBps": 409.6,
+            "emittedBits": 4096,
+            "totalBits": 4096,
+            "receivedAtSeconds": 22457634.711317446,
+            "failureCode": null
+          }
+        ]
+      },
+      "installation": {
+        "commandId": "schedule-1",
+        "attempt": 1,
+        "payloadHash": "5dcc093e5bdfac3effe79ccf3c7a8f0731d4a7e35626b335fbc849b9ca4a6ded",
+        "revision": 1,
+        "installedAtSeconds": 22456735.982217953,
+        "replaceFromSeconds": 22460400,
+        "scheduleHash": "bf54db31231b1a9c2c301686e0e490bac2638e8188d38516241ded603d2b7041"
+      },
+      "ackReceivedAt": 22457634.711317446
+    },
+    {
+      "numerics": {
+        "cruiseStepSeconds": 600,
+        "activeStepSeconds": 0.25
+      },
+      "status": "success",
+      "received": 12,
+      "packetIds": [
+        "mars-spectrum:-11",
+        "mars-spectrum:-10",
+        "mars-spectrum:-9",
+        "mars-spectrum:-8",
+        "mars-spectrum:-7",
+        "mars-spectrum:-6",
+        "mars-spectrum:-5",
+        "mars-spectrum:-4",
+        "mars-spectrum:-3",
+        "mars-spectrum:-2",
+        "mars-spectrum:-1",
+        "mars-spectrum:0"
+      ],
+      "minimumWh": 68.56479991549571,
+      "finalWh": 172,
+      "attitudeComparisonDeg": 0,
+      "marginDifferenceDb": 0,
+      "command": {
+        "id": "schedule-1",
+        "queueSequence": 1,
+        "issuedAtSeconds": 22455800,
+        "envelope": {
+          "commandId": "schedule-1",
+          "expiresAtSeconds": 22460400,
+          "payload": {
+            "kind": "replace-schedule",
+            "baseRevision": 0,
+            "replaceFromSeconds": 22460400,
+            "operations": [
+              {
+                "id": "encounter-science",
+                "kind": "observe",
+                "start": 22460400,
+                "end": 22465800
+              },
+              {
+                "id": "science-return-1",
+                "kind": "downlink",
+                "start": 22465800,
+                "end": 22469400
+              },
+              {
+                "id": "science-return-2",
+                "kind": "downlink",
+                "start": 22476600,
+                "end": 22480200
+              },
+              {
+                "id": "science-return-3",
+                "kind": "downlink",
+                "start": 22487400,
+                "end": 22491000
+              },
+              {
+                "id": "science-return-4",
+                "kind": "downlink",
+                "start": 22498200,
+                "end": 22501800
+              },
+              {
+                "id": "science-return-5",
+                "kind": "downlink",
+                "start": 22509000,
+                "end": 22512600
+              },
+              {
+                "id": "science-return-6",
+                "kind": "downlink",
+                "start": 22519800,
+                "end": 22523400
+              },
+              {
+                "id": "science-return-7",
+                "kind": "downlink",
+                "start": 22530600,
+                "end": 22534200
+              },
+              {
+                "id": "science-return-8",
+                "kind": "downlink",
+                "start": 22541400,
+                "end": 22545000
+              },
+              {
+                "id": "science-return-9",
+                "kind": "downlink",
+                "start": 22552200,
+                "end": 22555800
+              },
+              {
+                "id": "science-return-10",
+                "kind": "downlink",
+                "start": 22563000,
+                "end": 22566600
+              },
+              {
+                "id": "science-return-11",
+                "kind": "downlink",
+                "start": 22573800,
+                "end": 22577400
+              },
+              {
+                "id": "science-return-12",
+                "kind": "downlink",
+                "start": 22584600,
+                "end": 22588200
+              },
+              {
+                "id": "science-return-13",
+                "kind": "downlink",
+                "start": 22595400,
+                "end": 22599000
+              },
+              {
+                "id": "science-return-14",
+                "kind": "downlink",
+                "start": 22606200,
+                "end": 22609800
+              },
+              {
+                "id": "science-return-15",
+                "kind": "downlink",
+                "start": 22617000,
+                "end": 22620600
+              },
+              {
+                "id": "science-return-16",
+                "kind": "downlink",
+                "start": 22627800,
+                "end": 22631400
+              }
+            ]
+          }
+        },
+        "canonicalBytes": "{\"commandId\":\"schedule-1\",\"expiresAtSeconds\":22460400,\"payload\":{\"baseRevision\":0,\"kind\":\"replace-schedule\",\"operations\":[{\"end\":22465800,\"id\":\"encounter-science\",\"kind\":\"observe\",\"start\":22460400},{\"end\":22469400,\"id\":\"science-return-1\",\"kind\":\"downlink\",\"start\":22465800},{\"end\":22480200,\"id\":\"science-return-2\",\"kind\":\"downlink\",\"start\":22476600},{\"end\":22491000,\"id\":\"science-return-3\",\"kind\":\"downlink\",\"start\":22487400},{\"end\":22501800,\"id\":\"science-return-4\",\"kind\":\"downlink\",\"start\":22498200},{\"end\":22512600,\"id\":\"science-return-5\",\"kind\":\"downlink\",\"start\":22509000},{\"end\":22523400,\"id\":\"science-return-6\",\"kind\":\"downlink\",\"start\":22519800},{\"end\":22534200,\"id\":\"science-return-7\",\"kind\":\"downlink\",\"start\":22530600},{\"end\":22545000,\"id\":\"science-return-8\",\"kind\":\"downlink\",\"start\":22541400},{\"end\":22555800,\"id\":\"science-return-9\",\"kind\":\"downlink\",\"start\":22552200},{\"end\":22566600,\"id\":\"science-return-10\",\"kind\":\"downlink\",\"start\":22563000},{\"end\":22577400,\"id\":\"science-return-11\",\"kind\":\"downlink\",\"start\":22573800},{\"end\":22588200,\"id\":\"science-return-12\",\"kind\":\"downlink\",\"start\":22584600},{\"end\":22599000,\"id\":\"science-return-13\",\"kind\":\"downlink\",\"start\":22595400},{\"end\":22609800,\"id\":\"science-return-14\",\"kind\":\"downlink\",\"start\":22606200},{\"end\":22620600,\"id\":\"science-return-15\",\"kind\":\"downlink\",\"start\":22617000},{\"end\":22631400,\"id\":\"science-return-16\",\"kind\":\"downlink\",\"start\":22627800}],\"replaceFromSeconds\":22460400}}",
+        "payloadHash": "5dcc093e5bdfac3effe79ccf3c7a8f0731d4a7e35626b335fbc849b9ca4a6ded",
+        "payloadBytes": 1453,
+        "frameBits": 12136,
+        "attempts": [
+          {
+            "id": "schedule-1:try:1",
+            "attempt": 1,
+            "queuedSequence": 1,
+            "queuedAtSeconds": 22455800,
+            "queueDeadlineSeconds": 22460400,
+            "status": "delivered",
+            "stationId": "G2",
+            "eirpDbW": 109.4,
+            "firstBit": {
+              "emittedAtSeconds": 22455800,
+              "arrivesAtSeconds": 22456688.573747255,
+              "emitterPositionKm": [
+                95632760.0985239,
+                -108208265.18680303,
+                -46908861.44700666
+              ],
+              "receiverPositionKm": [
+                -166705173.32558995,
+                -150913079.56102052,
+                -64727907.00918903
+              ]
+            },
+            "lastBit": {
+              "emittedAtSeconds": 22455847.40625,
+              "arrivesAtSeconds": 22456735.982217953,
+              "emitterPositionKm": [
+                95633845.08791934,
+                -108207468.28103565,
+                -46908509.608818546
+              ],
+              "receiverPositionKm": [
+                -166704487.8384321,
+                -150913711.85169116,
+                -64728201.00268292
+              ]
+            },
+            "plannedTransmitEndSeconds": 22455847.40625,
+            "emittedBits": 12136,
+            "arrivedBits": 12136,
+            "totalBits": 12136,
+            "emissionValid": true,
+            "receptionValid": true,
+            "truthFailureCode": null,
+            "attentionAtSeconds": 22458224.558185905,
+            "groundAttentionExpired": true
+          }
+        ],
+        "acknowledgements": [
+          {
+            "id": "schedule-1:ack:1",
+            "commandId": "schedule-1",
+            "attempt": 1,
+            "decision": {
+              "commandId": "schedule-1",
+              "attempt": 1,
+              "payloadHash": "5dcc093e5bdfac3effe79ccf3c7a8f0731d4a7e35626b335fbc849b9ca4a6ded",
+              "status": "installed",
+              "revision": 1,
+              "decidedAtSeconds": 22456735.982217953,
+              "installedAtSeconds": 22456735.982217953,
+              "duplicate": false,
+              "scheduleHash": "bf54db31231b1a9c2c301686e0e490bac2638e8188d38516241ded603d2b7041",
+              "reasonCode": "COMMAND_INSTALLED"
+            },
+            "status": "delivered",
+            "stationId": "G2",
+            "firstBit": {
+              "emittedAtSeconds": 22456735.982217953,
+              "arrivesAtSeconds": 22457624.710847523,
+              "emitterPositionKm": [
+                -166704487.8384321,
+                -150913711.85169116,
+                -64728201.00268292
+              ],
+              "receiverPositionKm": [
+                95674551.74408875,
+                -108177556.8378798,
+                -46895315.953026354
+              ]
+            },
+            "lastBit": {
+              "emittedAtSeconds": 22456745.982217953,
+              "arrivesAtSeconds": 22457634.711317446,
+              "emitterPositionKm": [
+                -166704343.26225248,
+                -150913845.22405902,
+                -64728263.014418796
+              ],
+              "receiverPositionKm": [
+                95674780.94548972,
+                -108177388.33366752,
+                -46895241.69946594
+              ]
+            },
+            "plannedTransmitEndSeconds": 22456745.982217953,
+            "payloadRateBps": 409.6,
+            "emittedBits": 4096,
+            "totalBits": 4096,
+            "receivedAtSeconds": 22457634.711317446,
+            "failureCode": null
+          }
+        ]
+      },
+      "installation": {
+        "commandId": "schedule-1",
+        "attempt": 1,
+        "payloadHash": "5dcc093e5bdfac3effe79ccf3c7a8f0731d4a7e35626b335fbc849b9ca4a6ded",
+        "revision": 1,
+        "installedAtSeconds": 22456735.982217953,
+        "replaceFromSeconds": 22460400,
+        "scheduleHash": "bf54db31231b1a9c2c301686e0e490bac2638e8188d38516241ded603d2b7041"
+      },
+      "ackReceivedAt": 22457634.711317446
+    },
+    {
+      "numerics": {
+        "cruiseStepSeconds": 300,
+        "activeStepSeconds": 1
+      },
+      "status": "success",
+      "received": 12,
+      "packetIds": [
+        "mars-spectrum:-11",
+        "mars-spectrum:-10",
+        "mars-spectrum:-9",
+        "mars-spectrum:-8",
+        "mars-spectrum:-7",
+        "mars-spectrum:-6",
+        "mars-spectrum:-5",
+        "mars-spectrum:-4",
+        "mars-spectrum:-3",
+        "mars-spectrum:-2",
+        "mars-spectrum:-1",
+        "mars-spectrum:0"
+      ],
+      "minimumWh": 68.57028475443784,
+      "finalWh": 172,
+      "attitudeComparisonDeg": 0,
+      "marginDifferenceDb": 0,
+      "command": {
+        "id": "schedule-1",
+        "queueSequence": 1,
+        "issuedAtSeconds": 22455800,
+        "envelope": {
+          "commandId": "schedule-1",
+          "expiresAtSeconds": 22460400,
+          "payload": {
+            "kind": "replace-schedule",
+            "baseRevision": 0,
+            "replaceFromSeconds": 22460400,
+            "operations": [
+              {
+                "id": "encounter-science",
+                "kind": "observe",
+                "start": 22460400,
+                "end": 22465800
+              },
+              {
+                "id": "science-return-1",
+                "kind": "downlink",
+                "start": 22465800,
+                "end": 22469400
+              },
+              {
+                "id": "science-return-2",
+                "kind": "downlink",
+                "start": 22476600,
+                "end": 22480200
+              },
+              {
+                "id": "science-return-3",
+                "kind": "downlink",
+                "start": 22487400,
+                "end": 22491000
+              },
+              {
+                "id": "science-return-4",
+                "kind": "downlink",
+                "start": 22498200,
+                "end": 22501800
+              },
+              {
+                "id": "science-return-5",
+                "kind": "downlink",
+                "start": 22509000,
+                "end": 22512600
+              },
+              {
+                "id": "science-return-6",
+                "kind": "downlink",
+                "start": 22519800,
+                "end": 22523400
+              },
+              {
+                "id": "science-return-7",
+                "kind": "downlink",
+                "start": 22530600,
+                "end": 22534200
+              },
+              {
+                "id": "science-return-8",
+                "kind": "downlink",
+                "start": 22541400,
+                "end": 22545000
+              },
+              {
+                "id": "science-return-9",
+                "kind": "downlink",
+                "start": 22552200,
+                "end": 22555800
+              },
+              {
+                "id": "science-return-10",
+                "kind": "downlink",
+                "start": 22563000,
+                "end": 22566600
+              },
+              {
+                "id": "science-return-11",
+                "kind": "downlink",
+                "start": 22573800,
+                "end": 22577400
+              },
+              {
+                "id": "science-return-12",
+                "kind": "downlink",
+                "start": 22584600,
+                "end": 22588200
+              },
+              {
+                "id": "science-return-13",
+                "kind": "downlink",
+                "start": 22595400,
+                "end": 22599000
+              },
+              {
+                "id": "science-return-14",
+                "kind": "downlink",
+                "start": 22606200,
+                "end": 22609800
+              },
+              {
+                "id": "science-return-15",
+                "kind": "downlink",
+                "start": 22617000,
+                "end": 22620600
+              },
+              {
+                "id": "science-return-16",
+                "kind": "downlink",
+                "start": 22627800,
+                "end": 22631400
+              }
+            ]
+          }
+        },
+        "canonicalBytes": "{\"commandId\":\"schedule-1\",\"expiresAtSeconds\":22460400,\"payload\":{\"baseRevision\":0,\"kind\":\"replace-schedule\",\"operations\":[{\"end\":22465800,\"id\":\"encounter-science\",\"kind\":\"observe\",\"start\":22460400},{\"end\":22469400,\"id\":\"science-return-1\",\"kind\":\"downlink\",\"start\":22465800},{\"end\":22480200,\"id\":\"science-return-2\",\"kind\":\"downlink\",\"start\":22476600},{\"end\":22491000,\"id\":\"science-return-3\",\"kind\":\"downlink\",\"start\":22487400},{\"end\":22501800,\"id\":\"science-return-4\",\"kind\":\"downlink\",\"start\":22498200},{\"end\":22512600,\"id\":\"science-return-5\",\"kind\":\"downlink\",\"start\":22509000},{\"end\":22523400,\"id\":\"science-return-6\",\"kind\":\"downlink\",\"start\":22519800},{\"end\":22534200,\"id\":\"science-return-7\",\"kind\":\"downlink\",\"start\":22530600},{\"end\":22545000,\"id\":\"science-return-8\",\"kind\":\"downlink\",\"start\":22541400},{\"end\":22555800,\"id\":\"science-return-9\",\"kind\":\"downlink\",\"start\":22552200},{\"end\":22566600,\"id\":\"science-return-10\",\"kind\":\"downlink\",\"start\":22563000},{\"end\":22577400,\"id\":\"science-return-11\",\"kind\":\"downlink\",\"start\":22573800},{\"end\":22588200,\"id\":\"science-return-12\",\"kind\":\"downlink\",\"start\":22584600},{\"end\":22599000,\"id\":\"science-return-13\",\"kind\":\"downlink\",\"start\":22595400},{\"end\":22609800,\"id\":\"science-return-14\",\"kind\":\"downlink\",\"start\":22606200},{\"end\":22620600,\"id\":\"science-return-15\",\"kind\":\"downlink\",\"start\":22617000},{\"end\":22631400,\"id\":\"science-return-16\",\"kind\":\"downlink\",\"start\":22627800}],\"replaceFromSeconds\":22460400}}",
+        "payloadHash": "5dcc093e5bdfac3effe79ccf3c7a8f0731d4a7e35626b335fbc849b9ca4a6ded",
+        "payloadBytes": 1453,
+        "frameBits": 12136,
+        "attempts": [
+          {
+            "id": "schedule-1:try:1",
+            "attempt": 1,
+            "queuedSequence": 1,
+            "queuedAtSeconds": 22455800,
+            "queueDeadlineSeconds": 22460400,
+            "status": "delivered",
+            "stationId": "G2",
+            "eirpDbW": 109.4,
+            "firstBit": {
+              "emittedAtSeconds": 22455800,
+              "arrivesAtSeconds": 22456688.573747255,
+              "emitterPositionKm": [
+                95632760.0985239,
+                -108208265.18680303,
+                -46908861.44700666
+              ],
+              "receiverPositionKm": [
+                -166705173.32558995,
+                -150913079.56102052,
+                -64727907.00918903
+              ]
+            },
+            "lastBit": {
+              "emittedAtSeconds": 22455847.40625,
+              "arrivesAtSeconds": 22456735.982217953,
+              "emitterPositionKm": [
+                95633845.08791934,
+                -108207468.28103565,
+                -46908509.608818546
+              ],
+              "receiverPositionKm": [
+                -166704487.8384321,
+                -150913711.85169116,
+                -64728201.00268292
+              ]
+            },
+            "plannedTransmitEndSeconds": 22455847.40625,
+            "emittedBits": 12136,
+            "arrivedBits": 12136,
+            "totalBits": 12136,
+            "emissionValid": true,
+            "receptionValid": true,
+            "truthFailureCode": null,
+            "attentionAtSeconds": 22458224.558185905,
+            "groundAttentionExpired": true
+          }
+        ],
+        "acknowledgements": [
+          {
+            "id": "schedule-1:ack:1",
+            "commandId": "schedule-1",
+            "attempt": 1,
+            "decision": {
+              "commandId": "schedule-1",
+              "attempt": 1,
+              "payloadHash": "5dcc093e5bdfac3effe79ccf3c7a8f0731d4a7e35626b335fbc849b9ca4a6ded",
+              "status": "installed",
+              "revision": 1,
+              "decidedAtSeconds": 22456735.982217953,
+              "installedAtSeconds": 22456735.982217953,
+              "duplicate": false,
+              "scheduleHash": "bf54db31231b1a9c2c301686e0e490bac2638e8188d38516241ded603d2b7041",
+              "reasonCode": "COMMAND_INSTALLED"
+            },
+            "status": "delivered",
+            "stationId": "G2",
+            "firstBit": {
+              "emittedAtSeconds": 22456735.982217953,
+              "arrivesAtSeconds": 22457624.710847523,
+              "emitterPositionKm": [
+                -166704487.8384321,
+                -150913711.85169116,
+                -64728201.00268292
+              ],
+              "receiverPositionKm": [
+                95674551.74408875,
+                -108177556.8378798,
+                -46895315.953026354
+              ]
+            },
+            "lastBit": {
+              "emittedAtSeconds": 22456745.982217953,
+              "arrivesAtSeconds": 22457634.711317446,
+              "emitterPositionKm": [
+                -166704343.26225248,
+                -150913845.22405902,
+                -64728263.014418796
+              ],
+              "receiverPositionKm": [
+                95674780.94548972,
+                -108177388.33366752,
+                -46895241.69946594
+              ]
+            },
+            "plannedTransmitEndSeconds": 22456745.982217953,
+            "payloadRateBps": 409.6,
+            "emittedBits": 4096,
+            "totalBits": 4096,
+            "receivedAtSeconds": 22457634.711317446,
+            "failureCode": null
+          }
+        ]
+      },
+      "installation": {
+        "commandId": "schedule-1",
+        "attempt": 1,
+        "payloadHash": "5dcc093e5bdfac3effe79ccf3c7a8f0731d4a7e35626b335fbc849b9ca4a6ded",
+        "revision": 1,
+        "installedAtSeconds": 22456735.982217953,
+        "replaceFromSeconds": 22460400,
+        "scheduleHash": "bf54db31231b1a9c2c301686e0e490bac2638e8188d38516241ded603d2b7041"
+      },
+      "ackReceivedAt": 22457634.711317446
+    }
+  ]
+}

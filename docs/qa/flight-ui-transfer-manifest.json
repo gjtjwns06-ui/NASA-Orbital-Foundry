@@ -1,0 +1,410 @@
+{
+  "capturedAt": "2026-11-15T09:41:35.973489+00:00",
+  "sourceWorktree": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-flight-ui",
+  "baseCommit": "b0c0c5cc07c8e0f7f77e06fb1eef86c99a274586",
+  "scope": "Explicit transfer allowlist only. Does not include dist, renderer, model, assets, dependencies, unrelated source, or the manifest itself. Rebuild and verify integrated bytes.",
+  "files": [
+    {
+      "path": "src/deployment-ui.ts",
+      "kind": "production",
+      "bytes": 54252,
+      "sha256": "c1c76ee25b48370c25fbc7911ec2de26a7374ed73ab46cf5802f9cf8f56c324a"
+    },
+    {
+      "path": "src/deployment-ui.css",
+      "kind": "production",
+      "bytes": 13508,
+      "sha256": "cc5654c0347a7aa400c87db11430ac732bc7c4a7e39096afa1d5252ef536f502"
+    },
+    {
+      "path": "tests/deployment-flight-presentation.test.ts",
+      "kind": "supporting-proof",
+      "bytes": 1930,
+      "sha256": "3388ba53de6b74bed38161f8a87195dc381e702d2abca02a365ddfaca42eba39"
+    },
+    {
+      "path": "tests/browser/deployment-flight-ui.spec.ts",
+      "kind": "supporting-proof",
+      "bytes": 15670,
+      "sha256": "b9c8ac77b39a62fb2fb7661649fac15f5ad545a7366bb2d02f067a77805e5910"
+    },
+    {
+      "path": "tools/flight-ui-source.mjs",
+      "kind": "supporting-proof",
+      "bytes": 2051,
+      "sha256": "17f9d2faf144df411e50859f0dec14e6ee7d5ee26b322ff279471bfe6e803615"
+    },
+    {
+      "path": "docs/qa/flight-ui-acceptance.md",
+      "kind": "supporting-proof",
+      "bytes": 7610,
+      "sha256": "bf5b8b908918c5b81c93c164a0616474559e8eaa120c92c55f63b7065e314836"
+    },
+    {
+      "path": "docs/qa/flight-ui-r1/flight-facts-cpu-idle.json",
+      "kind": "supporting-proof",
+      "bytes": 1933,
+      "sha256": "8f8f9b3cf69de86e9f7603c4142069a1b0ecb4623ee50377009dcdbf310ec05e"
+    },
+    {
+      "path": "docs/qa/flight-ui-r1/flight-facts-cpu.json",
+      "kind": "supporting-proof",
+      "bytes": 6170,
+      "sha256": "7140607fc8d70d9ad487d9d4032ea41160f3389108bcb19bf9a15049134e24e4"
+    },
+    {
+      "path": "docs/qa/flight-ui-r1/frozen-after.json",
+      "kind": "supporting-proof",
+      "bytes": 47298,
+      "sha256": "be9b555c34b801bf1684bd9bca077698087453152d537cf5dd88323f9012cf8e"
+    },
+    {
+      "path": "docs/qa/flight-ui-r1/frozen-before.json",
+      "kind": "supporting-proof",
+      "bytes": 47298,
+      "sha256": "afd8914f60b8182ec56e8de4996c8d4d284ee61fca1d7f0f1f9838c4c00d5738"
+    },
+    {
+      "path": "docs/qa/flight-ui-r1/playwright-report.json",
+      "kind": "supporting-proof",
+      "bytes": 17527,
+      "sha256": "3996d4d9378d1dc2cdcfc9a2e850000c2980e852210b01d838ee97739efb4898"
+    },
+    {
+      "path": "docs/qa/flight-ui-r1/rejected-harness.ts.txt",
+      "kind": "supporting-proof",
+      "bytes": 13049,
+      "sha256": "e9fbc67e790f1de3e944550c4d516ed03519c7d6e19e7b3c3b967a135c2ff8c3"
+    },
+    {
+      "path": "docs/qa/flight-ui-r1/terminal-timeout-error-context.md",
+      "kind": "supporting-proof",
+      "bytes": 22252,
+      "sha256": "f2500328b9e7c61946a0fe678202fc9118683339602504bbe0c5a42484644085"
+    },
+    {
+      "path": "docs/qa/flight-ui-r2/frozen-after.json",
+      "kind": "supporting-proof",
+      "bytes": 47298,
+      "sha256": "34874f4df660bc6f0984aa350f22968f9bcf284ead65e8790d7c6c76da12e4f6"
+    },
+    {
+      "path": "docs/qa/flight-ui-r2/frozen-before.json",
+      "kind": "supporting-proof",
+      "bytes": 47298,
+      "sha256": "dcbe9ee81e74ea0cbf6081d63d8a5146bb9b70fdb11b39229b6cf169672894fa"
+    },
+    {
+      "path": "docs/qa/flight-ui-r2/playwright-report.json",
+      "kind": "supporting-proof",
+      "bytes": 6682,
+      "sha256": "7bf4a0177fc886094f48c76c45ad08ca89297c7995be702794136ea4143d6264"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/actual-mesh-selection-details-focus-flight-lock-and-repaint-recovery.json",
+      "kind": "supporting-proof",
+      "bytes": 1526,
+      "sha256": "9a6b92f18b190bde4c74dc38cf969185504203ae9550b0240fd06c2b4f4e17d7"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/actual-selected-part-focused.png",
+      "kind": "supporting-proof",
+      "bytes": 340581,
+      "sha256": "cba46c28212e777c92de19f39ad468e488d995f10c2d8365e7e5b1917901be25"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/actual-terminal-replay-displays-compact-truthful-objective-beside-baseline-failure.png",
+      "kind": "supporting-proof",
+      "bytes": 233036,
+      "sha256": "83652c762ca946599c074074911b7bb491e69e740d01e97b0a8190ac63935837"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/actual-terminal-replay-displays-compact-truthful-objective-beside-baseline.json",
+      "kind": "supporting-proof",
+      "bytes": 1532,
+      "sha256": "28ec0b1cac7a135233b7d8c7231d560ceab97b67d6a08e32fcf54d27cd66e7c2"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/en-large-1280-closed.png",
+      "kind": "supporting-proof",
+      "bytes": 202783,
+      "sha256": "73a6877fa8b22651e6a2fce630097d0a7135fd34ab471ef29b1ee6df0f70d162"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/en-large-1280-observations.json",
+      "kind": "supporting-proof",
+      "bytes": 17116,
+      "sha256": "1050851b5b7e9a038aeed599a61c3339cdfd8a45738d7fdb5c037e5da2f58f75"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/en-large-1280-open.png",
+      "kind": "supporting-proof",
+      "bytes": 203253,
+      "sha256": "01c1c9afd79be8b494a3579e987d379d0ec08c4e065cae439a87e23b8f810ea8"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/en-large-1920-closed.png",
+      "kind": "supporting-proof",
+      "bytes": 362707,
+      "sha256": "821ec2da3cfda00fa0f1d263013810104b18a78f4dbf35e73f126750f111c5bf"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/en-large-1920-observations.json",
+      "kind": "supporting-proof",
+      "bytes": 17123,
+      "sha256": "9dbb755949dc592e0e2c2739c0dc24a57669193b7fe1e05ed7868ac2ceeddb9d"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/en-large-1920-open.png",
+      "kind": "supporting-proof",
+      "bytes": 361310,
+      "sha256": "fae188ca04d5a98e54d9d0e15ce1f6938751a22814ac03cefc80abf74a48ade2"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/en-normal-1280-closed.png",
+      "kind": "supporting-proof",
+      "bytes": 202372,
+      "sha256": "44b6a86d44f59dbc883d4747faefcbbdec30c3612147c80b4425c3ef16bc7443"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/en-normal-1280-observations.json",
+      "kind": "supporting-proof",
+      "bytes": 17119,
+      "sha256": "3748d2929df1aa79151d6cf180d1a2d7a3de66ed8a3d307efc821b383076cf20"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/en-normal-1280-open.png",
+      "kind": "supporting-proof",
+      "bytes": 204844,
+      "sha256": "e245245cb0aead151240715a8acf39a9983cf1c36146161c4dc1909412fc0282"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/en-normal-1920-closed.png",
+      "kind": "supporting-proof",
+      "bytes": 363686,
+      "sha256": "3d02a2da8b66969f530e4fb39ff8fd0ee174f43b5416c0056073720b45a6df6f"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/en-normal-1920-observations.json",
+      "kind": "supporting-proof",
+      "bytes": 17125,
+      "sha256": "b8eee05e0fa3d1f884eab6f5a581bcd417033830d3beb561cb0640fd283b6bd4"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/en-normal-1920-open.png",
+      "kind": "supporting-proof",
+      "bytes": 361316,
+      "sha256": "790fadecb4eb8c66d002e1e7b5f393a4e3b43f0905caf68f047a0d717a2504db"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/flight-drawer-en-large-1280.json",
+      "kind": "supporting-proof",
+      "bytes": 1484,
+      "sha256": "43e8fddb735995061014f067bbe1f36125ad6665ee47662a941c9c557b7b637f"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/flight-drawer-en-large-1920.json",
+      "kind": "supporting-proof",
+      "bytes": 701,
+      "sha256": "d9869585d81ddd6dc781ba9fba70fa2ab285d833e6abc7db78a496781d370e85"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/flight-drawer-en-normal-1280.json",
+      "kind": "supporting-proof",
+      "bytes": 2267,
+      "sha256": "ba2d14f6de11bf1b3cc514a1f7daa178b0a413aee569c36ebef1566dfb45a011"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/flight-drawer-en-normal-1920.json",
+      "kind": "supporting-proof",
+      "bytes": 702,
+      "sha256": "3b8f8d4c5d47342f37fc2e250bf752ce1d9e4df4b8779c5aea8283d7a698553b"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/flight-drawer-ko-large-1280.json",
+      "kind": "supporting-proof",
+      "bytes": 700,
+      "sha256": "1fc46bec43e91f36cad6573d883cc3e407a52c47302014a11ae11a064f3d6b1c"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/flight-drawer-ko-large-1920.json",
+      "kind": "supporting-proof",
+      "bytes": 2267,
+      "sha256": "b12b78bf17d7e37fa04a0a8723a2d647d1d3666e23fe65f98bb54383f5f367da"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/flight-drawer-ko-normal-1280.json",
+      "kind": "supporting-proof",
+      "bytes": 1485,
+      "sha256": "3fe5b63e9d2e27b7b9cc4527045960535e1adee5d6c9f7608c95934c0e5a6667"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/flight-drawer-ko-normal-1920.json",
+      "kind": "supporting-proof",
+      "bytes": 702,
+      "sha256": "b7068aa7a76fdbd2a0a8556073fcac8c693d4b5e14b9f44d7aaded11e4e07fa6"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/ko-large-1280-closed.png",
+      "kind": "supporting-proof",
+      "bytes": 191118,
+      "sha256": "ed7384e27a49042ad2e6d28002a965c5870cced625abb6fe334ff926a467c9e0"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/ko-large-1280-observations.json",
+      "kind": "supporting-proof",
+      "bytes": 17110,
+      "sha256": "e5b1cc516871224b30ca0ee0ad7215ca9443930302fb1980ec4ebf554541ec06"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/ko-large-1280-open.png",
+      "kind": "supporting-proof",
+      "bytes": 191917,
+      "sha256": "4029380e80dc62a8206b0b96a53f6bd43f7706bf5b20e7f836399ca01a4dc7cf"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/ko-large-1920-closed.png",
+      "kind": "supporting-proof",
+      "bytes": 352363,
+      "sha256": "f956c4f2065256f089762bc39177f0f5e4c321de40c820a59c545e7a07a796a8"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/ko-large-1920-observations.json",
+      "kind": "supporting-proof",
+      "bytes": 17117,
+      "sha256": "64c85bc6f3f45a9b84b020ec9ddd9609433aefa24152a0ae123e49de0863dbef"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/ko-large-1920-open.png",
+      "kind": "supporting-proof",
+      "bytes": 349630,
+      "sha256": "4bd9f7fa6861ec29872695fc82187ac759317576f90d2720233086092c754007"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/ko-normal-1280-closed.png",
+      "kind": "supporting-proof",
+      "bytes": 192237,
+      "sha256": "01f66cfc47f4ea74c8073db6600943bb7e41ba5424203d3dc5a573d52dab2ef6"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/ko-normal-1280-observations.json",
+      "kind": "supporting-proof",
+      "bytes": 17119,
+      "sha256": "b98e1c86a0d89a9f4584f3a6aa6077977a5c118513d97636baee124bda228cbf"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/ko-normal-1280-open.png",
+      "kind": "supporting-proof",
+      "bytes": 194863,
+      "sha256": "f0256c18211d348f224aedac09dfa5c689db24a5fb007a4d72dc8501071c738a"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/ko-normal-1920-closed.png",
+      "kind": "supporting-proof",
+      "bytes": 354722,
+      "sha256": "04e40ea325fb375a4d303c95fc1ebfd4f49a30521ecefcbb9f65c5fbcda102d2"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/ko-normal-1920-observations.json",
+      "kind": "supporting-proof",
+      "bytes": 17125,
+      "sha256": "956d373bfe92cec8f4339c822ff35b7c188834dbf5e85c04f237a2202ed23df0"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/ko-normal-1920-open.png",
+      "kind": "supporting-proof",
+      "bytes": 351523,
+      "sha256": "95d2cc2a20efed56c75bc70a5b6d8610f4ebee6603f9ea12801bf0a070f9aeec"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/mesh-focus-and-flight-lock.json",
+      "kind": "supporting-proof",
+      "bytes": 55427,
+      "sha256": "b24254ea0f694c024a3f1a4445258bf3fb28ed8fb7e49569bc010955129e5ed0"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r1/terminal-baseline-v8.png",
+      "kind": "supporting-proof",
+      "bytes": 311965,
+      "sha256": "54c5533a1f2036c04c22482081d62f3ee8d9930f0821583b26e287ae302f3ccd"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r2/en-large-1280-closed.png",
+      "kind": "supporting-proof",
+      "bytes": 202783,
+      "sha256": "73a6877fa8b22651e6a2fce630097d0a7135fd34ab471ef29b1ee6df0f70d162"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r2/en-large-1280-observations.json",
+      "kind": "supporting-proof",
+      "bytes": 17116,
+      "sha256": "1050851b5b7e9a038aeed599a61c3339cdfd8a45738d7fdb5c037e5da2f58f75"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r2/en-large-1280-open.png",
+      "kind": "supporting-proof",
+      "bytes": 203253,
+      "sha256": "01c1c9afd79be8b494a3579e987d379d0ec08c4e065cae439a87e23b8f810ea8"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r2/flight-drawer-en-large-1280.json",
+      "kind": "supporting-proof",
+      "bytes": 1484,
+      "sha256": "02e8d8b72fad8bc74d1bc36a672d6fec5addd483268356db8b7f7f9f82b6227f"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r2/terminal-baseline-actual-saved-flight-replay.json",
+      "kind": "supporting-proof",
+      "bytes": 717,
+      "sha256": "dc580d24d2811204b1d622554a27690dc7724156586a75858ea3006edac7f54f"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r2/terminal-baseline-physical.json",
+      "kind": "supporting-proof",
+      "bytes": 232779,
+      "sha256": "457d41be9a2d1a98e5d6db6b8221db202a5f2ac38efa811a73ebd380a8c285d8"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r2/terminal-baseline-v8.png",
+      "kind": "supporting-proof",
+      "bytes": 311965,
+      "sha256": "54c5533a1f2036c04c22482081d62f3ee8d9930f0821583b26e287ae302f3ccd"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r2/terminal-before-after-physical.json",
+      "kind": "supporting-proof",
+      "bytes": 463019,
+      "sha256": "15c86b97ecb6b2ba5298264f561dbafa7a817efa26943b96e6c9653ff0d0acf1"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r2/terminal-cancel-responsive.json",
+      "kind": "supporting-proof",
+      "bytes": 10655,
+      "sha256": "8441ddfe9c430a71abafefa3d884db34850e7624f2358f95da30d43523587b58"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r2/terminal-candidate-visible-cancel-responsive-camera-and-unchanged-actual-replay.json",
+      "kind": "supporting-proof",
+      "bytes": 753,
+      "sha256": "7ef0ccfcfa2f32960c0faf820df521791f59524cdbb5e916e739ba0b55cf4157"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r2/terminal-compact-ui.png",
+      "kind": "supporting-proof",
+      "bytes": 327552,
+      "sha256": "2678a85e2d75236cc0c22e29d3683d561304260f9c8d92181b80244f6310cead"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r2/terminal-restoring-visible-cancel.png",
+      "kind": "supporting-proof",
+      "bytes": 187710,
+      "sha256": "33e7c9a0f180b81b36d58a4c0014c58c8b8f84d663099234e96843ecbc31b163"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-flight-ui/flight-ui-r2/terminal-selected-wing.png",
+      "kind": "supporting-proof",
+      "bytes": 328840,
+      "sha256": "f42a64eaccc18db35c9d0314d69cef8006c6a0c977f4bbe435d1b53bf0774ed0"
+    }
+  ]
+}

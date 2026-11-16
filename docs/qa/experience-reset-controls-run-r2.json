@@ -1,0 +1,156 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/browser/solar-controls.spec.ts",
+      "--reporter=json",
+      "--output=test-results-solar-controls-r2"
+    ],
+    "configFile": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\playwright.config.ts",
+    "rootDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry/test-results-solar-controls-r2",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\test-results-solar-controls-r2",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser",
+        "snapshotDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5188",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "headless": true,
+          "launchOptions": {
+            "executablePath": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+            "args": [
+              "--disable-background-timer-throttling"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "solar-controls.spec.ts",
+      "file": "solar-controls.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "English first keyboard edit exposes Undo; Escape cancels a pointer route edit and leaves dragging usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13724,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T12:13:06.341Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "solar-controls-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo1MTg4LyIsCiAgImJyb3dzZXIiOiAiMTU3LjAuNDM0MS40NiIsCiAgInZpZXdwb3J0IjogewogICAgIndpZHRoIjogMTQ0MCwKICAgICJoZWlnaHQiOiA5MDAKICB9LAogICJlcnJvcnMiOiBbXSwKICAiY2hlY2tzIjogWwogICAgIkZpcnN0IGtleWJvYXJkIGVkaXQgY2hhbmdlcyBkYXRlIGFuZCBleHBvc2VzIFVuZG8gd2hpbGUgcmV0YWluaW5nIGhhbmRsZSBmb2N1cyIsCiAgICAiRmlyc3Qga2V5Ym9hcmQgVW5kbyByZXN0b3JlcyBkZXBhcnR1cmUsIGFycml2YWwgYW5kIGNvbXB1dGVkIGZ1ZWwiLAogICAgIkVzY2FwZSByZXN0b3JlcyBhbGwgcm91dGUgcmVhZG91dHMgYmVmb3JlIHJlbGVhc2luZyB0aGUgcG9pbnRlciIsCiAgICAiQSBuZXcgcG9pbnRlciBkcmFnIGFmdGVyIGNhbmNlbGxhdGlvbiBjb21taXRzIGEgZGlmZmVyZW50IHJvdXRlIiwKICAgICJVbmRvIGFmdGVyIHRoZSBzZWNvbmQgcG9pbnRlciBkcmFnIHJlc3RvcmVzIHRoZSBvcmlnaW5hbCByb3V0ZSIKICBdLAogICJwb2ludGVyVGFyZ2V0cyI6IFsKICAgIHsKICAgICAgImJveCI6IHsKICAgICAgICAieCI6IDg0My40Mjk2ODc1LAogICAgICAgICJ5IjogMzczLjU2MjUsCiAgICAgICAgIndpZHRoIjogNzEuMjk2ODc1LAogICAgICAgICJoZWlnaHQiOiAxMDAKICAgICAgfSwKICAgICAgInBvaW50IjogewogICAgICAgICJ4IjogODc5LjA3ODEyNSwKICAgICAgICAieSI6IDQyMy41NjI1CiAgICAgIH0sCiAgICAgICJoaXQiOiB7CiAgICAgICAgImtpbmQiOiAiYXJyaXZhbCIsCiAgICAgICAgImFjdGl2ZVRhZyI6ICJCT0RZIgogICAgICB9CiAgICB9LAogICAgewogICAgICAiYm94IjogewogICAgICAgICJ4IjogODQzLjQyOTY4NzUsCiAgICAgICAgInkiOiAzNzMuNTYyNSwKICAgICAgICAid2lkdGgiOiA3MS4yOTY4NzUsCiAgICAgICAgImhlaWdodCI6IDEwMAogICAgICB9LAogICAgICAicG9pbnQiOiB7CiAgICAgICAgIngiOiA4NzkuMDc4MTI1LAogICAgICAgICJ5IjogNDIzLjU2MjUKICAgICAgfSwKICAgICAgImhpdCI6IHsKICAgICAgICAia2luZCI6ICJhcnJpdmFsIiwKICAgICAgICAiYWN0aXZlVGFnIjogIkJPRFkiCiAgICAgIH0KICAgIH0KICBdLAogICJzY3JpcHRzIjogWwogICAgImh0dHA6Ly8xMjcuMC4wLjE6NTE4OC9hc3NldHMvaW5kZXgtRDJhUDVRamguanMiCiAgXSwKICAiY2xhaW0iOiAiTmF0aXZlIFVJIHJlZ3Jlc3Npb24gb25seTsgbm8gaGlkZGVuIGdhbWUtc3RhdGUgc2V0dXAgb3IgZ2FtZS1mdW4gY2VydGlmaWNhdGlvbi4iCn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e8de7261bc3fce3ee22b-c18761d69b0aece8bfae",
+          "file": "solar-controls.spec.ts",
+          "line": 16,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-15T12:13:05.589Z",
+    "duration": 16423.525,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

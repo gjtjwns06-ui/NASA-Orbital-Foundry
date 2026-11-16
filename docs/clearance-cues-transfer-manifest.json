@@ -1,0 +1,37 @@
+{
+  "candidate": "clearance-cues-final",
+  "base": "0a7932f",
+  "verdict": "Scoped candidate accepted for root integration review",
+  "productionUnchangedSinceR2Native": true,
+  "buildUnchanged": true,
+  "productionFiles": [
+    {
+      "path": "src/deployment-ui.ts",
+      "sha256": "0bfc11ab4efda1882951497fc09602bdc27db38eb6d8fc53985acb29e00c29bc"
+    },
+    {
+      "path": "src/deployment-ui.css",
+      "sha256": "c1e911b68b7a8a1cc2892eafa350f9099b4cfef22ee3dfdcce2c16b5e1be4735"
+    },
+    {
+      "path": "src/render/deployment-view.ts",
+      "sha256": "98b99c3227b82c4e17ff20138a71f6dcdc8026c14862e775fe0720cd93b454d9"
+    },
+    {
+      "path": "src/render/deployment-scene.ts",
+      "sha256": "293539c9f6c3f35d9cd1a29ab9f76d24971830950f31c889bb19a9fa0d83244d"
+    },
+    {
+      "path": "src/render/clearance-cue-layout.ts",
+      "sha256": "4f1e1e2cacf9051b2a7a9c55e326dc60e0c594852fafded091c5b4de40555332"
+    }
+  ],
+  "finalSourceFreeze": "docs/clearance-cues-final-source-freeze.json",
+  "acceptance": "docs/clearance-cues-acceptance.md",
+  "cpu": "4/4 PASS",
+  "native": "KO R2 PASS; original EN R2 FAIL retained; corrected EN closure PASS",
+  "historicalHarnessesByteExact": true,
+  "combinedActiveRunnerRepeated": false,
+  "nativeLease": "Released; Playwright owned browser closed",
+  "performanceClaim": false
+}

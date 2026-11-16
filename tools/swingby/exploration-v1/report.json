@@ -1,0 +1,68 @@
+{
+  "status": "REJECTED PROPAGATION ADAPTER",
+  "scope": "Long inbound-to-periapsis universal-variable propagation differs from the accepted analytic hyperbola. Do not use initial-unchecked-report.json to select a scenario or goal. Existing transfer local phases use hyperbolicLocalStateAt; no production source was changed.",
+  "nodeTime": 22325758.73338245,
+  "nodeJdTdb": 2461617.89998534,
+  "initial": {
+    "positionKm": [
+      429318.8495655557,
+      -36703.516311628395,
+      -66504.17666674832
+    ],
+    "velocityKmS": [
+      -3.0099622565484885,
+      0.30694413558878475,
+      0.48876657085373904
+    ]
+  },
+  "baselineChecks": [
+    {
+      "fraction": 0,
+      "dt": 0,
+      "positionErrorM": 0,
+      "velocityErrorMps": 0,
+      "propagatedAltitudeKm": 432597.458768324,
+      "referenceAltitudeKm": 432597.458768324
+    },
+    {
+      "fraction": 0.25,
+      "dt": 34560.31665438786,
+      "positionErrorM": 1.2769253789726824e-7,
+      "velocityErrorMps": 1.2412670766236365e-13,
+      "propagatedAltitudeKm": 326537.47142621496,
+      "referenceAltitudeKm": 326537.47142621485
+    },
+    {
+      "fraction": 0.5,
+      "dt": 69120.63330877572,
+      "positionErrorM": 9.317772109982395e-8,
+      "velocityErrorMps": 4.775249788392736e-13,
+      "propagatedAltitudeKm": 220001.7239070031,
+      "referenceAltitudeKm": 220001.723907003
+    },
+    {
+      "fraction": 0.75,
+      "dt": 103680.94996316358,
+      "positionErrorM": 6.35606018828408e-8,
+      "velocityErrorMps": 4.710277376051325e-13,
+      "propagatedAltitudeKm": 112377.28282091107,
+      "referenceAltitudeKm": 112377.28282091102
+    },
+    {
+      "fraction": 1,
+      "dt": 138241.26661755145,
+      "positionErrorM": 1079598315.4337742,
+      "velocityErrorMps": 3134.709115884379,
+      "propagatedAltitudeKm": 1071819.601988494,
+      "referenceAltitudeKm": 999.9999999999991
+    },
+    {
+      "fraction": 1.25,
+      "dt": 172801.5832719393,
+      "positionErrorM": 6418733685900510000,
+      "velocityErrorMps": 194.3052957160893,
+      "propagatedAltitudeKm": 6418733685949152,
+      "referenceAltitudeKm": 112377.282820911
+    }
+  ]
+}

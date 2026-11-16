@@ -1,0 +1,18 @@
+{
+  "url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/july/world.200407.3x21600x10800.jpg",
+  "method": "HEAD",
+  "statusCode": 200,
+  "contentType": [
+    "image/jpeg"
+  ],
+  "contentLength": [
+    "21125326"
+  ],
+  "etag": [
+    "\"14258ce-627e3daab9000\""
+  ],
+  "lastModified": [
+    "Wed, 27 Nov 2024 12:10:40 GMT"
+  ],
+  "scope": "Metadata only; no image body downloaded or decoded."
+}

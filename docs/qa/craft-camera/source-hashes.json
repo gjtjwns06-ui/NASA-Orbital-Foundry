@@ -1,0 +1,18 @@
+[
+  {
+    "Path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-camera\\src\\render\\craft-camera.ts",
+    "Hash": "7B9292B1CB0303BEA79F7E912FBACEC35A5E7583C0698D9A7CC7893FDFD3B85C"
+  },
+  {
+    "Path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-camera\\src\\render\\transfer-scene.ts",
+    "Hash": "1BD9E7F195F95DAD496A9E7F10A55F1C3741ACB0F6CD7392ECA659598F9D7E0C"
+  },
+  {
+    "Path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-camera\\tests\\craft-camera.test.ts",
+    "Hash": "754C0D610953B7AE5F757279E71A017BA1A6E37F94A3428BE5EE3D4674828A15"
+  },
+  {
+    "Path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-camera\\tools\\camera-visual.mjs",
+    "Hash": "C252A84E0B3D62AE3DED69B2904CA080B753BD1104D04B5523617020E24359E1"
+  }
+]

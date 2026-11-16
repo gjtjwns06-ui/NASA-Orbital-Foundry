@@ -1,0 +1,185 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/browser/solar-controls.spec.ts",
+      "--reporter=json",
+      "--output=test-results-solar-controls-r1"
+    ],
+    "configFile": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\playwright.config.ts",
+    "rootDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry/test-results-solar-controls-r1",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\test-results-solar-controls-r1",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser",
+        "snapshotDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5188",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "headless": true,
+          "launchOptions": {
+            "executablePath": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+            "args": [
+              "--disable-background-timer-throttling"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "solar-controls.spec.ts",
+      "file": "solar-controls.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "English first keyboard edit exposes Undo; Escape cancels a pointer route edit and leaves dragging usable",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 23326,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"arrival\": \"2028-03-17\",\u001b[39m\n\u001b[31m+   \"arrival\": \"2027-11-05\",\u001b[39m\n\u001b[2m    \"departure\": \"2026-11-15\",\u001b[22m\n\u001b[32m-   \"fuel\": \"932 / 6,500 kg\",\u001b[39m\n\u001b[31m+   \"fuel\": \"1,552 / 6,500 kg\",\u001b[39m\n\u001b[2m  }\u001b[22m\n\nCall Log:\n- Timeout 15000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"arrival\": \"2028-03-17\",\u001b[39m\n\u001b[31m+   \"arrival\": \"2027-11-05\",\u001b[39m\n\u001b[2m    \"departure\": \"2026-11-15\",\u001b[22m\n\u001b[32m-   \"fuel\": \"932 / 6,500 kg\",\u001b[39m\n\u001b[31m+   \"fuel\": \"1,552 / 6,500 kg\",\u001b[39m\n\u001b[2m  }\u001b[22m\n\nCall Log:\n- Timeout 15000ms exceeded while waiting on the predicate\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\solar-controls.spec.ts:72:42",
+                    "location": {
+                      "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\solar-controls.spec.ts",
+                      "column": 42,
+                      "line": 72
+                    },
+                    "snippet": " \u001b[90m 70 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39m join(artifacts\u001b[33m,\u001b[39m \u001b[32m'en-before-pointer-cancel.png'\u001b[39m)})\u001b[33m;\u001b[39m\n \u001b[90m 71 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Escape'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 72 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m dates(page))\u001b[33m.\u001b[39mtoEqual(initial)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 73 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mup()\u001b[33m;\u001b[39m\n \u001b[90m 74 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-route-drag].dragging'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 75 |\u001b[39m     checks\u001b[33m.\u001b[39mpush(\u001b[32m'Escape restores all route readouts before releasing the pointer'\u001b[39m)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\solar-controls.spec.ts",
+                        "column": 42,
+                        "line": 72
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"arrival\": \"2028-03-17\",\u001b[39m\n\u001b[31m+   \"arrival\": \"2027-11-05\",\u001b[39m\n\u001b[2m    \"departure\": \"2026-11-15\",\u001b[22m\n\u001b[32m-   \"fuel\": \"932 / 6,500 kg\",\u001b[39m\n\u001b[31m+   \"fuel\": \"1,552 / 6,500 kg\",\u001b[39m\n\u001b[2m  }\u001b[22m\n\nCall Log:\n- Timeout 15000ms exceeded while waiting on the predicate\n\n  70 |     await page.screenshot({path: join(artifacts, 'en-before-pointer-cancel.png')});\n  71 |     await page.keyboard.press('Escape');\n> 72 |     await expect.poll(() => dates(page)).toEqual(initial);\n     |                                          ^\n  73 |     await page.mouse.up();\n  74 |     await expect(page.locator('[data-route-drag].dragging')).toHaveCount(0);\n  75 |     checks.push('Escape restores all route readouts before releasing the pointer');\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\solar-controls.spec.ts:72:42"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T12:11:08.056Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "solar-controls-evidence",
+                      "contentType": "application/json",
+                      "body": "ewogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo1MTg4LyIsCiAgImJyb3dzZXIiOiAiMTU3LjAuNDM0MS40NiIsCiAgInZpZXdwb3J0IjogewogICAgIndpZHRoIjogMTQ0MCwKICAgICJoZWlnaHQiOiA5MDAKICB9LAogICJlcnJvcnMiOiBbXSwKICAiY2hlY2tzIjogWwogICAgIkZpcnN0IGtleWJvYXJkIGVkaXQgY2hhbmdlcyBkYXRlIGFuZCBleHBvc2VzIFVuZG8gd2hpbGUgcmV0YWluaW5nIGhhbmRsZSBmb2N1cyIsCiAgICAiRmlyc3Qga2V5Ym9hcmQgVW5kbyByZXN0b3JlcyBkZXBhcnR1cmUsIGFycml2YWwgYW5kIGNvbXB1dGVkIGZ1ZWwiCiAgXSwKICAicG9pbnRlclRhcmdldHMiOiBbCiAgICB7CiAgICAgICJib3giOiB7CiAgICAgICAgIngiOiA4NDMuNDI5Njg3NSwKICAgICAgICAieSI6IDM3My41NjI1LAogICAgICAgICJ3aWR0aCI6IDcxLjI5Njg3NSwKICAgICAgICAiaGVpZ2h0IjogMTAwCiAgICAgIH0sCiAgICAgICJwb2ludCI6IHsKICAgICAgICAieCI6IDg3OS4wNzgxMjUsCiAgICAgICAgInkiOiA0MjMuNTYyNQogICAgICB9LAogICAgICAiaGl0IjogewogICAgICAgICJraW5kIjogImFycml2YWwiLAogICAgICAgICJhY3RpdmVUYWciOiAiQk9EWSIKICAgICAgfQogICAgfQogIF0sCiAgInNjcmlwdHMiOiBbCiAgICAiaHR0cDovLzEyNy4wLjAuMTo1MTg4L2Fzc2V0cy9pbmRleC1CakY0aGVydS5qcyIKICBdLAogICJjbGFpbSI6ICJOYXRpdmUgVUkgcmVncmVzc2lvbiBvbmx5OyBubyBoaWRkZW4gZ2FtZS1zdGF0ZSBzZXR1cCBvciBnYW1lLWZ1biBjZXJ0aWZpY2F0aW9uLiIKfQ=="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\test-results-solar-controls-r1\\solar-controls-English-fir-a1472--and-leaves-dragging-usable\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tests\\browser\\solar-controls.spec.ts",
+                    "column": 42,
+                    "line": 72
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e8de7261bc3fce3ee22b-c18761d69b0aece8bfae",
+          "file": "solar-controls.spec.ts",
+          "line": 16,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-15T12:11:07.350Z",
+    "duration": 26053.184999999998,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

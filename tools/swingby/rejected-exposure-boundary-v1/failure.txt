@@ -1,0 +1,1 @@
+Real initial-state regression: a powered15s exposure ending exactly at observe.end was cancelled; expected1 completed packet, observed0. vitest swingby-runtime.test.ts -t "ending exactly" failed2026-11-15 06:41:15 KST,7.58s. Earlier generic missions passed but did not cover this schedule boundary.

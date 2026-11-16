@@ -1,0 +1,94 @@
+import * as THREE from 'three';
+import {RoundedBoxGeometry} from 'three/addons/geometries/RoundedBoxGeometry.js';
+import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
+import type {ApertureDefinition,JointDefinition,LocalBox,MechanismTopology,RigidLinkDefinition} from '../deployment/types';
+import {createDeploymentChassis} from './deployment-chassis-art';
+
+/** All materials belong to one articulated view. No document, bitmap, global
+ * factory pool or vendor CAD is used by these original bounded details. */
+export function deploymentPalette(){
+ const p={
+  ivory:new THREE.MeshStandardMaterial({color:0xd9e4df,metalness:.38,roughness:.36}),
+  frame:new THREE.MeshStandardMaterial({color:0x889a9f,metalness:.82,roughness:.28}),
+  dark:new THREE.MeshStandardMaterial({color:0x122c36,metalness:.45,roughness:.4}),
+  surfaceDark:new THREE.MeshStandardMaterial({color:0x122c36,metalness:.45,roughness:.4}),
+  gold:new THREE.MeshStandardMaterial({color:0xd4af63,metalness:.73,roughness:.42}),
+  // Solid insulation must not inherit the RF face's polygon depth offset:
+  // grazing side faces otherwise pull through neighbouring shell surfaces.
+  foil:new THREE.MeshStandardMaterial({color:0xd4af63,metalness:.73,roughness:.42}),
+  pcb:new THREE.MeshStandardMaterial({color:0x166b69,metalness:.25,roughness:.48}),
+  solar:new THREE.MeshStandardMaterial({color:0x173f72,metalness:.68,roughness:.25}),
+  cell:new THREE.MeshStandardMaterial({color:0x285f9d,metalness:.62,roughness:.24}),
+ };
+ for(const [m,offset] of [[p.surfaceDark,-1],[p.solar,-1],[p.cell,-2],[p.gold,-2]] as const){m.polygonOffset=true;m.polygonOffsetFactor=offset;m.polygonOffsetUnits=offset;}
+ return p;
+}
+export type DeploymentPalette=ReturnType<typeof deploymentPalette>;
+const v=(a:readonly number[])=>new THREE.Vector3(a[0],a[1],a[2]);
+const q=(a:readonly number[]|undefined)=>a?new THREE.Quaternion(a[0],a[1],a[2],a[3]):new THREE.Quaternion();
+function put(group:THREE.Group,geometry:THREE.BufferGeometry,material:THREE.Material,box:LocalBox,position=new THREE.Vector3(),rotation=new THREE.Quaternion()){
+ const mesh=new THREE.Mesh(geometry,material);mesh.position.copy(position).applyQuaternion(q(box.quaternion)).add(v(box.centerM));mesh.quaternion.copy(q(box.quaternion)).multiply(rotation);mesh.castShadow=mesh.receiveShadow=true;mesh.userData.proxyBoxId=box.id;group.add(mesh);return mesh;
+}
+function block(group:THREE.Group,box:LocalBox,material:THREE.Material,half=box.halfM,position=new THREE.Vector3(),bevel=true){
+ const radius=bevel?Math.min(...half)*.24:0,geometry=radius>0?new RoundedBoxGeometry(half[0]*2,half[1]*2,half[2]*2,2,radius):new THREE.BoxGeometry(half[0]*2,half[1]*2,half[2]*2);
+ return put(group,geometry,material,box,position);
+}
+function aperturePose(a:ApertureDefinition){return new THREE.Quaternion().setFromRotationMatrix(new THREE.Matrix4().makeBasis(v(a.tangentU),v(a.tangentV),v(a.normal)));}
+function face(group:THREE.Group,a:ApertureDefinition,material:THREE.Material,width=a.widthM,height=a.heightM,x=0,y=0){
+ const mesh=new THREE.Mesh(new THREE.PlaneGeometry(width,height),material);mesh.position.copy(v(a.centerM)).addScaledVector(v(a.tangentU),x).addScaledVector(v(a.tangentV),y);mesh.quaternion.copy(aperturePose(a));mesh.userData.proxyBoxId=a.emittingBoxId;mesh.receiveShadow=true;group.add(mesh);
+}
+function panelSurface(group:THREE.Group,a:ApertureDefinition,p:DeploymentPalette){
+ if(a.kind==='optical'){face(group,a,p.surfaceDark);return;}
+ // The full declared aperture remains visible; cell/patch grids are an
+ // original appearance convention, not a second active-area or RF model.
+ face(group,a,a.kind==='solar'?p.solar:p.surfaceDark);
+ const rows=a.kind==='solar'?4:8,columns=Math.max(2,Math.round(a.widthM/a.heightM*rows)),dx=a.widthM/columns,dy=a.heightM/rows;
+ for(let row=0;row<rows;row++)for(let col=0;col<columns;col++){
+  const x=-a.widthM/2+dx*(col+.5),y=-a.heightM/2+dy*(row+.5);
+  face(group,a,a.kind==='solar'?p.cell:p.gold,dx*(a.kind==='solar'?.91:.70),dy*(a.kind==='solar'?.91:.70),x,y);
+ }
+}
+function localAxis(box:LocalBox,link:RigidLinkDefinition,joint:JointDefinition){
+ const axis=v(joint.axisParent);if(link.id===joint.childLinkId)axis.applyQuaternion(q(joint.restQuaternion).invert());return axis.applyQuaternion(q(box.quaternion).invert()).normalize();
+}
+function bearing(group:THREE.Group,box:LocalBox,link:RigidLinkDefinition,joint:JointDefinition,p:DeploymentPalette){
+ const axis=localAxis(box,link,joint),components=axis.toArray().map(Math.abs),i=components.indexOf(Math.max(...components));
+ // Oblique future profiles retain their exact housing; do not manufacture a
+ // different pin axis or guess an unprovided radial envelope.
+ if(components[i]<1-1e-8){block(group,box,p.frame);return;}
+ const other=[0,1,2].filter(n=>n!==i),radius=Math.min(...other.map(n=>box.halfM[n])),length=box.halfM[i]*2,align=new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0,1,0),axis);
+ if(box.renderRole==='pin'){put(group,new THREE.CylinderGeometry(radius,radius,length,16,1),p.gold,box,new THREE.Vector3(),align);return;}
+ // Full declared housing bridges the shorter support column. A simple
+ // cylinder would leave an unjustified gap above the exact support box.
+ block(group,box,box.renderRole==='parent-bearing'?p.ivory:p.frame);const facing=new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0,0,1),axis);
+ for(const sign of [-1,1]){const rotation=sign===1?facing:facing.clone().multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1,0,0),Math.PI));put(group,new THREE.RingGeometry(radius*.60,radius*.92,16),p.surfaceDark,box,axis.clone().multiplyScalar(sign*length/2),rotation);}
+}
+function electronics(group:THREE.Group,box:LocalBox,p:DeploymentPalette){
+ const [x,y,z]=box.halfM;block(group,box,p.dark,[x,y,z*.825],new THREE.Vector3(0,0,-z*.175));
+ // Inset carrier and chips remain inside the authoritative proxy; these are
+ // original generic electronics, not representations of a vendor board.
+ block(group,box,p.pcb,[x*.91,y*.91,z*.06],new THREE.Vector3(0,0,z*.80));
+ for(const sx of [-1,1])for(const sy of [-1,1])block(group,box,p.frame,[x*.05,y*.05,z*.025],new THREE.Vector3(sx*x*.8,sy*y*.8,z*.875),false);
+ block(group,box,p.dark,[x*.28,y*.35,z*.08],new THREE.Vector3(-x*.16,0,z*.90));
+ block(group,box,p.gold,[x*.09,y*.55,z*.045],new THREE.Vector3(x*.65,0,z*.90),false);
+}
+function mergeByMaterial(group:THREE.Group){
+ const buckets=new Map<THREE.Material,THREE.BufferGeometry[]>();group.updateMatrixWorld(true);
+ for(const child of [...group.children])if(child instanceof THREE.Mesh){const geometry=(child.geometry.index?child.geometry.toNonIndexed():child.geometry.clone()).applyMatrix4(child.matrix),material=child.material as THREE.Material;if(!buckets.has(material))buckets.set(material,[]);buckets.get(material)!.push(geometry);child.geometry.dispose();group.remove(child);}
+ for(const [material,geometries] of buckets){const merged=mergeGeometries(geometries,false);geometries.forEach(g=>g.dispose());if(!merged)throw new Error('Deployment geometry attributes cannot be merged.');const mesh=new THREE.Mesh(merged,material);mesh.castShadow=mesh.receiveShadow=true;group.add(mesh);}
+}
+export function createDeploymentLink(link:RigidLinkDefinition,topology:MechanismTopology,p:DeploymentPalette){
+ const group=new THREE.Group();group.name=link.id;group.userData={partId:link.partId,linkId:link.id,originalProceduralArt:true,physicalUnits:'metres'};
+ for(const box of link.boxes){
+  const joint=box.jointId?topology.joints.find(j=>j.id===box.jointId):undefined;
+  if(['pin','parent-bearing','child-bearing'].includes(box.renderRole??'')&&joint)bearing(group,box,link,joint,p);
+  else if(box.renderRole==='electronics')electronics(group,box,p);
+  else if(box.renderRole==='bus'){
+   const detail=createDeploymentChassis(box,p);
+   if(detail)while(detail.children.length)group.add(detail.children[0]);else block(group,box,p.gold);
+  }
+  else block(group,box,box.renderRole==='panel-substrate'?p.frame:box.renderRole==='support'&&box.jointId?p.frame:p.ivory);
+ }
+ for(const aperture of link.apertures)panelSurface(group,aperture,p);
+ mergeByMaterial(group);return group;
+}

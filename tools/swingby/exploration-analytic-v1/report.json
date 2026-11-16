@@ -1,0 +1,908 @@
+{
+  "status": "EXPLORATORY ONLY",
+  "method": "Cartesian to osculating hyperbola + accepted analytic local propagator",
+  "generatedAt": "2026-11-14T20:40:00.460Z",
+  "scope": "Actual-epoch local impulse sensitivity with frozen Horizons Mars positions. Not independent numerical validation, a frozen exit target, a propulsion/ADCS feasibility check, or actual science-return gameplay.",
+  "datasetId": "jpl-horizons-icrf-tdb-20260801-20280301-v1",
+  "sourceHashes": {
+    "earth": {
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%4010%27&START_TIME=%272026-08-01%27&STOP_TIME=%272028-03-01%27&STEP_SIZE=%276+h%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27FRAME%27&OUT_UNITS=%27KM-S%27&TIME_TYPE=%27TDB%27&VEC_TABLE=%272%27&VEC_CORR=%27NONE%27&CSV_FORMAT=%27YES%27&VEC_LABELS=%27YES%27&COMMAND=%27399%27",
+      "sha256": "785c43fe2189d1470b03ee33ccace2eafbe897dde7f7e09f9dee34b1fa7aa22e",
+      "ephemeris": "DE441",
+      "bodyId": 399
+    },
+    "mars": {
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%4010%27&START_TIME=%272026-08-01%27&STOP_TIME=%272028-03-01%27&STEP_SIZE=%276+h%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27FRAME%27&OUT_UNITS=%27KM-S%27&TIME_TYPE=%27TDB%27&VEC_TABLE=%272%27&VEC_CORR=%27NONE%27&CSV_FORMAT=%27YES%27&VEC_LABELS=%27YES%27&COMMAND=%27499%27",
+      "sha256": "959901a397605c0b2d1b0fae5799172fe927b16fd30bbbe3fbcf2ea4ed1ef2d4",
+      "ephemeris": "mar099; Sun origin DE441",
+      "bodyId": 499
+    },
+    "frame": "ICRF",
+    "origin": "Sun",
+    "timeScale": "TDB",
+    "aberration": "NONE",
+    "stepSeconds": 21600
+  },
+  "nodeTime": 22325758.73338245,
+  "nodeJdTdb": 2461617.89998534,
+  "initial": {
+    "positionKm": [
+      429318.8495655557,
+      -36703.516311628395,
+      -66504.17666674832
+    ],
+    "velocityKmS": [
+      -3.0099622565484885,
+      0.30694413558878475,
+      0.48876657085373904
+    ]
+  },
+  "baselineChecks": [
+    {
+      "fraction": 0,
+      "dt": 0,
+      "positionErrorM": 4.880860748016398e-7,
+      "velocityErrorMps": 3.2334947784230956e-12,
+      "propagatedAltitudeKm": 432597.45876832365,
+      "referenceAltitudeKm": 432597.458768324
+    },
+    {
+      "fraction": 0.25,
+      "dt": 34560.31665438786,
+      "positionErrorM": 2.404370991550721e-7,
+      "velocityErrorMps": 3.2373044937690958e-12,
+      "propagatedAltitudeKm": 326537.4714262146,
+      "referenceAltitudeKm": 326537.47142621485
+    },
+    {
+      "fraction": 0.5,
+      "dt": 69120.63330877572,
+      "positionErrorM": 9.822542779147625e-8,
+      "velocityErrorMps": 3.7238012298709094e-12,
+      "propagatedAltitudeKm": 220001.72390700292,
+      "referenceAltitudeKm": 220001.723907003
+    },
+    {
+      "fraction": 0.75,
+      "dt": 103680.94996316358,
+      "positionErrorM": 3.749942721349417e-8,
+      "velocityErrorMps": 4.213000162292041e-12,
+      "propagatedAltitudeKm": 112377.28282091104,
+      "referenceAltitudeKm": 112377.28282091102
+    },
+    {
+      "fraction": 1,
+      "dt": 138241.26661755145,
+      "positionErrorM": 1.6253846590164443e-7,
+      "velocityErrorMps": 7.16511353766496e-11,
+      "propagatedAltitudeKm": 1000.0000000000209,
+      "referenceAltitudeKm": 999.9999999999991
+    },
+    {
+      "fraction": 1.25,
+      "dt": 172801.5832719393,
+      "positionErrorM": 3.083495554225678e-7,
+      "velocityErrorMps": 6.560657218687886e-12,
+      "propagatedAltitudeKm": 112377.28282091083,
+      "referenceAltitudeKm": 112377.282820911
+    }
+  ],
+  "basis": {
+    "xAxis": [
+      0.1562129374280655,
+      0.9062145631889668,
+      0.39290289340284285
+    ],
+    "yAxis": [
+      -0.10517112631692882,
+      0.4107856306096325,
+      -0.9056457364079372
+    ],
+    "along": [
+      -0.9821082182577061,
+      0.1001515409211235,
+      0.15947763630615536
+    ]
+  },
+  "exitRadiusKm": 100000,
+  "rows": [
+    {
+      "xMps": 0,
+      "yMps": 0,
+      "deltaVMps": 0,
+      "periapsisElapsedSeconds": 22464000.000000015,
+      "periapsisAltitudeKm": 1000.00000000002,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22493560.416928098,
+      "exitJdTdb": 2461619.842134455,
+      "exitRadiusKm": 99999.99999995103,
+      "outwardRadialSpeedKmS": 3.161923913191038,
+      "localExit": {
+        "positionKm": [
+          -65797.70401947896,
+          -71159.90364252977,
+          -24635.954605842377
+        ],
+        "velocityKmS": [
+          -1.9050953574989977,
+          -2.38408176696071,
+          -0.860143736408727
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166137047.39359602,
+        -151489633.85852227,
+        -64998973.32583679
+      ],
+      "heliocentricVelocityKmS": [
+        16.067698808176228,
+        -15.958539083458202,
+        -7.571172454233149
+      ],
+      "specificEnergyKm2S2": -281.96196531809665,
+      "baselineDirectionDifferenceDeg": 0,
+      "baselineEnergyDifferenceKm2S2": 0
+    },
+    {
+      "xMps": -2,
+      "yMps": 0,
+      "deltaVMps": 2,
+      "periapsisElapsedSeconds": 22463959.398845576,
+      "periapsisAltitudeKm": 754.7723525043166,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22493484.374129746,
+      "exitJdTdb": 2461619.8412543302,
+      "exitRadiusKm": 99999.99999994847,
+      "outwardRadialSpeedKmS": 3.162560977484712,
+      "localExit": {
+        "positionKm": [
+          -62986.17100796572,
+          -73225.44642197879,
+          -25899.348602752703
+        ],
+        "velocityKmS": [
+          -1.8176869578447272,
+          -2.438822105883684,
+          -0.8951236222646568
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166135602.55716658,
+        -151490667.15704587,
+        -64999726.392484196
+      ],
+      "heliocentricVelocityKmS": [
+        16.154976306032427,
+        -16.013398775892828,
+        -7.606203555052353
+      ],
+      "specificEnergyKm2S2": -279.4133403906189,
+      "baselineDirectionDifferenceDeg": 0.05403412213391318,
+      "baselineEnergyDifferenceKm2S2": 2.5486249274777606
+    },
+    {
+      "xMps": 2,
+      "yMps": 0,
+      "deltaVMps": 2,
+      "periapsisElapsedSeconds": 22464039.754984748,
+      "periapsisAltitudeKm": 1247.6495011233637,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22493634.617470734,
+      "exitJdTdb": 2461619.8429932576,
+      "exitRadiusKm": 99999.9999999246,
+      "outwardRadialSpeedKmS": 3.1612639416404824,
+      "localExit": {
+        "positionKm": [
+          -68390.0525553702,
+          -69102.5336543561,
+          -23401.721176170002
+        ],
+        "velocityKmS": [
+          -1.9858926213103332,
+          -2.329585769450206,
+          -0.8260424198565062
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166138306.14666805,
+        -151488583.71604428,
+        -64998237.05239311
+      ],
+      "heliocentricVelocityKmS": [
+        15.98702927404616,
+        -15.90392662297403,
+        -7.537021163003212
+      ],
+      "specificEnergyKm2S2": -284.38288867989115,
+      "baselineDirectionDifferenceDeg": 0.043889846960728035,
+      "baselineEnergyDifferenceKm2S2": -2.4209233617945074
+    },
+    {
+      "xMps": -5,
+      "yMps": 0,
+      "deltaVMps": 5,
+      "periapsisElapsedSeconds": 22463896.930024613,
+      "periapsisAltitudeKm": 391.933845738065,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22493366.894949496,
+      "exitJdTdb": 2461619.8398946174,
+      "exitRadiusKm": 100000.00000002336,
+      "outwardRadialSpeedKmS": 3.1634736529599548,
+      "localExit": {
+        "positionKm": [
+          -58314.89672532814,
+          -76315.84675516261,
+          -27843.569346646633
+        ],
+        "velocityKmS": [
+          -1.6728740870558436,
+          -2.5206863481715764,
+          -0.9490727385189373
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166133042.68485105,
+        -151492162.81633392,
+        -65000882.19637444
+      ],
+      "heliocentricVelocityKmS": [
+        16.29958694388651,
+        -16.09544740639179,
+        -7.660231792750835
+      ],
+      "specificEnergyKm2S2": -275.33832940093305,
+      "baselineDirectionDifferenceDeg": 0.15725494798764034,
+      "baselineEnergyDifferenceKm2S2": 6.623635917163597
+    },
+    {
+      "xMps": 5,
+      "yMps": 0,
+      "deltaVMps": 5,
+      "periapsisElapsedSeconds": 22464097.79588962,
+      "periapsisAltitudeKm": 1623.2565064593264,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22493742.453746304,
+      "exitJdTdb": 2461619.8442413625,
+      "exitRadiusKm": 100000.00000005735,
+      "outwardRadialSpeedKmS": 3.160231001684533,
+      "localExit": {
+        "positionKm": [
+          -71906.67492640915,
+          -66049.26779433052,
+          -21608.43180038766
+        ],
+        "velocityKmS": [
+          -2.0958776986551566,
+          -2.248829259988933,
+          -0.7766402459946313
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166139884.6261929,
+        -151486994.2473278,
+        -64997167.446009226
+      ],
+      "heliocentricVelocityKmS": [
+        15.877229825984928,
+        -15.823000855058325,
+        -7.487546359641867
+      ],
+      "specificEnergyKm2S2": -287.7881569834216,
+      "baselineDirectionDifferenceDeg": 0.09347034727808164,
+      "baselineEnergyDifferenceKm2S2": -5.826191665324927
+    },
+    {
+      "xMps": -10,
+      "yMps": 0,
+      "deltaVMps": 10,
+      "periapsisElapsedSeconds": 22463788.800459813,
+      "periapsisAltitudeKm": -197.40607685264376,
+      "intersectsBody": true,
+      "clearsIllustrative250Km": false,
+      "exitElapsedSeconds": 22493162.318819527,
+      "exitJdTdb": 2461619.8375268383,
+      "exitRadiusKm": 100000.00000001823,
+      "outwardRadialSpeedKmS": 3.164880431303214,
+      "localExit": {
+        "positionKm": [
+          -49137.61427730865,
+          -81322.17611492924,
+          -31180.098381347532
+        ],
+        "velocityKmS": [
+          -1.3894881530798475,
+          -2.6527339803627945,
+          -1.04187645231123
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166127542.10269424,
+        -151494392.0409264,
+        -65002845.76844751
+      ],
+      "heliocentricVelocityKmS": [
+        16.582620708470152,
+        -16.227816122843436,
+        -7.753173284290391
+      ],
+      "specificEnergyKm2S2": -267.8340177007279,
+      "baselineDirectionDifferenceDeg": 0.402476550172477,
+      "baselineEnergyDifferenceKm2S2": 14.127947617368761
+    },
+    {
+      "xMps": 10,
+      "yMps": 0,
+      "deltaVMps": 10,
+      "periapsisElapsedSeconds": 22464190.31593252,
+      "periapsisAltitudeKm": 2258.942673569408,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22493912.999686535,
+      "exitJdTdb": 2461619.846215274,
+      "exitRadiusKm": 99999.99999994367,
+      "outwardRadialSpeedKmS": 3.158394688206511,
+      "localExit": {
+        "positionKm": [
+          -76907.54938026189,
+          -61094.43998360346,
+          -18780.262282545144
+        ],
+        "velocityKmS": [
+          -2.2532813233519513,
+          -2.1182777485173263,
+          -0.6991452624252252
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166141820.23461133,
+        -151484354.41691017,
+        -64995483.78466839
+      ],
+      "heliocentricVelocityKmS": [
+        15.720119775666083,
+        -15.69218165244444,
+        -7.409936508470662
+      ],
+      "specificEnergyKm2S2": -292.91172239639354,
+      "baselineDirectionDifferenceDeg": 0.14187891182776427,
+      "baselineEnergyDifferenceKm2S2": -10.949757078296898
+    },
+    {
+      "xMps": -20,
+      "yMps": 0,
+      "deltaVMps": 20,
+      "periapsisElapsedSeconds": 22463560.15947843,
+      "periapsisAltitudeKm": -1300.3917753562073,
+      "intersectsBody": true,
+      "clearsIllustrative250Km": false,
+      "exitElapsedSeconds": 22492725.605115555,
+      "exitJdTdb": 2461619.8324722815,
+      "exitRadiusKm": 99999.99999998035,
+      "outwardRadialSpeedKmS": 3.167265846336469,
+      "localExit": {
+        "positionKm": [
+          -24213.193231417077,
+          -89386.70218599208,
+          -37732.46275883523
+        ],
+        "velocityKmS": [
+          -0.6241316352728115,
+          -2.857698329188893,
+          -1.223724397568494
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166110466.18372568,
+        -151496527.99292335,
+        -65006467.15330323
+      ],
+      "heliocentricVelocityKmS": [
+        17.34722542187736,
+        -16.433465872607243,
+        -7.935315334789628
+      ],
+      "specificEnergyKm2S2": -250.09897940551753,
+      "baselineDirectionDifferenceDeg": 1.2899014372480782,
+      "baselineEnergyDifferenceKm2S2": 31.86298591257912
+    },
+    {
+      "xMps": 20,
+      "yMps": 0,
+      "deltaVMps": 20,
+      "periapsisElapsedSeconds": 22464360.089908514,
+      "periapsisAltitudeKm": 3559.3729537748595,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22494220.732105847,
+      "exitJdTdb": 2461619.8497769916,
+      "exitRadiusKm": 100000.00000000405,
+      "outwardRadialSpeedKmS": 3.1542908340057707,
+      "localExit": {
+        "positionKm": [
+          -84400.13813989144,
+          -51850.31890631284,
+          -13717.183066566946
+        ],
+        "velocityKmS": [
+          -2.49267545930977,
+          -1.8772776506632072,
+          -0.5620312419045111
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166143781.74421808,
+        -151479287.35137865,
+        -64992485.801378354
+      ],
+      "heliocentricVelocityKmS": [
+        15.48125535367382,
+        -15.45069852043294,
+        -7.272615214881007
+      ],
+      "specificEnergyKm2S2": -301.41311489635285,
+      "baselineDirectionDifferenceDeg": 0.1616302772322093,
+      "baselineEnergyDifferenceKm2S2": -19.451149578256206
+    },
+    {
+      "xMps": 0,
+      "yMps": -2,
+      "deltaVMps": 2,
+      "periapsisElapsedSeconds": 22464000.71644572,
+      "periapsisAltitudeKm": 1004.5679183236989,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22493561.775520876,
+      "exitJdTdb": 2461619.8421501797,
+      "exitRadiusKm": 99999.99999994595,
+      "outwardRadialSpeedKmS": 3.1619125223442044,
+      "localExit": {
+        "positionKm": [
+          -66164.90114428232,
+          -69799.60832719537,
+          -27390.15395952818
+        ],
+        "velocityKmS": [
+          -1.917174655084715,
+          -2.339212271247675,
+          -0.9516368697917642
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166137390.17301568,
+        -151488292.00536156,
+        -65001736.642743215
+      ],
+      "heliocentricVelocityKmS": [
+        16.055621849294734,
+        -15.913667455346983,
+        -7.662664672597019
+      ],
+      "specificEnergyKm2S2": -282.1737868381695,
+      "baselineDirectionDifferenceDeg": 0.245349103683289,
+      "baselineEnergyDifferenceKm2S2": -0.21182152007287414
+    },
+    {
+      "xMps": 0,
+      "yMps": 2,
+      "deltaVMps": 2,
+      "periapsisElapsedSeconds": 22464000.71644572,
+      "periapsisAltitudeKm": 1004.5679183237062,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22493561.775520876,
+      "exitJdTdb": 2461619.8421501797,
+      "exitRadiusKm": 99999.99999994585,
+      "outwardRadialSpeedKmS": 3.161912522344201,
+      "localExit": {
+        "positionKm": [
+          -65514.57817581958,
+          -72339.69076289039,
+          -21790.116722105606
+        ],
+        "velocityKmS": [
+          -1.8956014270453494,
+          -2.4234746766699766,
+          -0.7658662816216378
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166136739.8500472,
+        -151490832.08779722,
+        -64996136.605505794
+      ],
+      "heliocentricVelocityKmS": [
+        16.0771950773341,
+        -15.997929860769286,
+        -7.476894084426893
+      ],
+      "specificEnergyKm2S2": -281.8898540956981,
+      "baselineDirectionDifferenceDeg": 0.24610554442765414,
+      "baselineEnergyDifferenceKm2S2": 0.07211122239851875
+    },
+    {
+      "xMps": 0,
+      "yMps": -5,
+      "deltaVMps": 5,
+      "periapsisElapsedSeconds": 22464004.464979175,
+      "periapsisAltitudeKm": 1028.511735740416,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22493568.88251362,
+      "exitJdTdb": 2461619.8422324364,
+      "exitRadiusKm": 99999.99999991654,
+      "outwardRadialSpeedKmS": 3.161852719724966,
+      "localExit": {
+        "positionKm": [
+          -66867.134187669,
+          -67442.4033681897,
+          -31309.880124873853
+        ],
+        "velocityKmS": [
+          -1.9399532814786031,
+          -2.2622971454199368,
+          -1.08245061388842
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166137964.6736713,
+        -151486031.27377385,
+        -65005704.0640465
+      ],
+      "heliocentricVelocityKmS": [
+        16.032855456978794,
+        -15.836741174647742,
+        -7.7934736301011895
+      ],
+      "specificEnergyKm2S2": -282.7492634798684,
+      "baselineDirectionDifferenceDeg": 0.6092392742804399,
+      "baselineEnergyDifferenceKm2S2": -0.7872981617717301
+    },
+    {
+      "xMps": 0,
+      "yMps": 5,
+      "deltaVMps": 5,
+      "periapsisElapsedSeconds": 22464004.464979175,
+      "periapsisAltitudeKm": 1028.5117357404188,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22493568.88251362,
+      "exitJdTdb": 2461619.8422324364,
+      "exitRadiusKm": 99999.99999991656,
+      "outwardRadialSpeedKmS": 3.1618527197249695,
+      "localExit": {
+        "positionKm": [
+          -65250.91037050939,
+          -73755.17706557827,
+          -17392.313009725298
+        ],
+        "velocityKmS": [
+          -1.886310812560846,
+          -2.4718181061010718,
+          -0.6205265576662954
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166136348.44985414,
+        -151492344.04747126,
+        -64991786.49693135
+      ],
+      "heliocentricVelocityKmS": [
+        16.08649792589655,
+        -16.046262135328877,
+        -7.331549573879065
+      ],
+      "specificEnergyKm2S2": -282.04325465802094,
+      "baselineDirectionDifferenceDeg": 0.6139467016058564,
+      "baselineEnergyDifferenceKm2S2": -0.08128933992429666
+    },
+    {
+      "xMps": 0,
+      "yMps": -10,
+      "deltaVMps": 10,
+      "periapsisElapsedSeconds": 22464017.679863844,
+      "periapsisAltitudeKm": 1113.5140307764532,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22493593.919078343,
+      "exitJdTdb": 2461619.8425222114,
+      "exitRadiusKm": 99999.99999994706,
+      "outwardRadialSpeedKmS": 3.161639129712059,
+      "localExit": {
+        "positionKm": [
+          -68406.19336031794,
+          -62774.69252632271,
+          -37147.41832437148
+        ],
+        "velocityKmS": [
+          -1.9892773229834169,
+          -2.111680111890466,
+          -1.2793608862678887
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166139053.75505367,
+        -151481703.419782,
+        -65011709.62294531
+      ],
+      "heliocentricVelocityKmS": [
+        15.9835745137645,
+        -15.68608484454352,
+        -7.99036704018422
+      ],
+      "specificEnergyKm2S2": -284.35972509988653,
+      "baselineDirectionDifferenceDeg": 1.1948541218850421,
+      "baselineEnergyDifferenceKm2S2": -2.397759781789887
+    },
+    {
+      "xMps": 0,
+      "yMps": 10,
+      "deltaVMps": 10,
+      "periapsisElapsedSeconds": 22464017.679863844,
+      "periapsisAltitudeKm": 1113.5140307764577,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22493593.919078343,
+      "exitJdTdb": 2461619.8425222114,
+      "exitRadiusKm": 99999.99999994694,
+      "outwardRadialSpeedKmS": 3.1616391297120536,
+      "localExit": {
+        "positionKm": [
+          -65240.58120931358,
+          -75139.18865045035,
+          -9887.815350843794
+        ],
+        "velocityKmS": [
+          -1.8840190261712388,
+          -2.522806219854627,
+          -0.372964510496017
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166135888.14290264,
+        -151494067.91590616,
+        -64984450.01997178
+      ],
+      "heliocentricVelocityKmS": [
+        16.08883281057668,
+        -16.09721095250768,
+        -7.083970664412348
+      ],
+      "specificEnergyKm2S2": -282.9743691967254,
+      "baselineDirectionDifferenceDeg": 1.213398688505131,
+      "baselineEnergyDifferenceKm2S2": -1.0124038786287315
+    },
+    {
+      "xMps": 0,
+      "yMps": -20,
+      "deltaVMps": 20,
+      "periapsisElapsedSeconds": 22464068.007269282,
+      "periapsisAltitudeKm": 1445.9078498945546,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22493688.999775887,
+      "exitJdTdb": 2461619.8436226826,
+      "exitRadiusKm": 100000.00000001141,
+      "outwardRadialSpeedKmS": 3.160784625325223,
+      "localExit": {
+        "positionKm": [
+          -72535.22624422226,
+          -51544.68998883216,
+          -45626.59189175714
+        ],
+        "velocityKmS": [
+          -2.120469908924764,
+          -1.7529374040318488,
+          -1.5761660010582883
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166141473.90854573,
+        -151471764.07426313,
+        -65020826.88073461
+      ],
+      "heliocentricVelocityKmS": [
+        15.852545600334047,
+        -15.327192900007816,
+        -8.287108116943386
+      ],
+      "specificEnergyKm2S2": -289.6008484413602,
+      "baselineDirectionDifferenceDeg": 2.232499834617872,
+      "baselineEnergyDifferenceKm2S2": -7.638883123263554
+    },
+    {
+      "xMps": 0,
+      "yMps": 20,
+      "deltaVMps": 20,
+      "periapsisElapsedSeconds": 22464068.007269282,
+      "periapsisAltitudeKm": 1445.9078498945582,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22493688.999775887,
+      "exitJdTdb": 2461619.8436226826,
+      "exitRadiusKm": 100000.00000001167,
+      "outwardRadialSpeedKmS": 3.1607846253252334,
+      "localExit": {
+        "positionKm": [
+          -66692.6921314227,
+          -74364.91778265053,
+          4684.423064287574
+        ],
+        "velocityKmS": [
+          -1.9247719509618246,
+          -2.5173098310093125,
+          0.10902105987319102
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166135631.37443295,
+        -151494584.30205697,
+        -64970515.865778565
+      ],
+      "heliocentricVelocityKmS": [
+        16.04824355829699,
+        -16.09156532698528,
+        -6.601921056011908
+      ],
+      "specificEnergyKm2S2": -287.02508654849055,
+      "baselineDirectionDifferenceDeg": 2.3024207273408113,
+      "baselineEnergyDifferenceKm2S2": -5.063121230393904
+    },
+    {
+      "xMps": -10,
+      "yMps": -10,
+      "deltaVMps": 14.142135623730951,
+      "periapsisElapsedSeconds": 22463812.668798894,
+      "periapsisAltitudeKm": -66.83455456749152,
+      "intersectsBody": true,
+      "clearsIllustrative250Km": false,
+      "exitElapsedSeconds": 22493208.200477336,
+      "exitJdTdb": 2461619.8380578756,
+      "exitRadiusKm": 99999.99999993897,
+      "outwardRadialSpeedKmS": 3.164595913880416,
+      "localExit": {
+        "positionKm": [
+          -53194.5978829504,
+          -69757.29308567086,
+          -48002.65427472551
+        ],
+        "velocityKmS": [
+          -1.5175961630850474,
+          -2.283901849814553,
+          -1.5918466214447982
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166130774.49491054,
+        -151483450.00308707,
+        -65019976.24884331
+      ],
+      "heliocentricVelocityKmS": [
+        16.454591682313435,
+        -15.85891198129067,
+        -8.30311255342629
+      ],
+      "specificEnergyKm2S2": -271.45242286310884,
+      "baselineDirectionDifferenceDeg": 1.6896797704937219,
+      "baselineEnergyDifferenceKm2S2": 10.509542454987809
+    },
+    {
+      "xMps": -10,
+      "yMps": 10,
+      "deltaVMps": 14.142135623730951,
+      "periapsisElapsedSeconds": 22463812.668798894,
+      "periapsisAltitudeKm": -66.83455456748607,
+      "intersectsBody": true,
+      "clearsIllustrative250Km": false,
+      "exitElapsedSeconds": 22493208.200477336,
+      "exitJdTdb": 2461619.8380578756,
+      "exitRadiusKm": 99999.99999993907,
+      "outwardRadialSpeedKmS": 3.164595913880419,
+      "localExit": {
+        "positionKm": [
+          -48900.9569247213,
+          -86527.73256278085,
+          -11029.411107499818
+        ],
+        "velocityKmS": [
+          -1.378126136460235,
+          -2.828654814288557,
+          -0.3908474556772373
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166126480.8539523,
+        -151500220.4425642,
+        -64983003.00567609
+      ],
+      "heliocentricVelocityKmS": [
+        16.59406170893825,
+        -16.403664945764675,
+        -7.102113387658729
+      ],
+      "specificEnergyKm2S2": -269.617002563492,
+      "baselineDirectionDifferenceDeg": 1.5624033652371918,
+      "baselineEnergyDifferenceKm2S2": 12.344962754604637
+    },
+    {
+      "xMps": 10,
+      "yMps": -10,
+      "deltaVMps": 14.142135623730951,
+      "periapsisElapsedSeconds": 22464203.641631853,
+      "periapsisAltitudeKm": 2358.724310484944,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22493937.7904814,
+      "exitJdTdb": 2461619.8465022044,
+      "exitRadiusKm": 100000.00000001778,
+      "outwardRadialSpeedKmS": 3.1581095864810007,
+      "localExit": {
+        "positionKm": [
+          -78662.04924119556,
+          -54926.2377659238,
+          -28202.666789870847
+        ],
+        "velocityKmS": [
+          -2.3115659741197447,
+          -1.913111024760891,
+          -1.024670871173528
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166143129.15944028,
+        -151478522.7217778,
+        -65005072.55466981
+      ],
+      "heliocentricVelocityKmS": [
+        15.661877798892142,
+        -15.486976016330937,
+        -7.735445419708681
+      ],
+      "specificEnergyKm2S2": -294.5601297903255,
+      "baselineDirectionDifferenceDeg": 0.8732717846493042,
+      "baselineEnergyDifferenceKm2S2": -12.59816447222886
+    },
+    {
+      "xMps": 10,
+      "yMps": 10,
+      "deltaVMps": 14.142135623730951,
+      "periapsisElapsedSeconds": 22464203.641631853,
+      "periapsisAltitudeKm": 2358.7243104849404,
+      "intersectsBody": false,
+      "clearsIllustrative250Km": true,
+      "exitElapsedSeconds": 22493937.7904814,
+      "exitJdTdb": 2461619.8465022044,
+      "exitRadiusKm": 100000.00000001764,
+      "outwardRadialSpeedKmS": 3.1581095864809985,
+      "localExit": {
+        "positionKm": [
+          -76295.34299303498,
+          -64170.304580313925,
+          -7822.572955774873
+        ],
+        "velocityKmS": [
+          -2.2305378718184854,
+          -2.229596939351378,
+          -0.32692465557033845
+        ]
+      },
+      "heliocentricPositionKm": [
+        -166140762.4531921,
+        -151487766.78859216,
+        -64984692.46083571
+      ],
+      "heliocentricVelocityKmS": [
+        15.742905901193401,
+        -15.803461930921424,
+        -7.037699204105491
+      ],
+      "specificEnergyKm2S2": -293.4935430198601,
+      "baselineDirectionDifferenceDeg": 1.0180394524645764,
+      "baselineEnergyDifferenceKm2S2": -11.531577701763467
+    }
+  ]
+}

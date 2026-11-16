@@ -1,0 +1,11 @@
+{
+  "status": "retained-evidence-rechecked",
+  "scope": "Read-only verification of retained source hashes and all recovery report acceptance assertions; not new physics execution or a new terminal Vitest result.",
+  "releasedDependencyCount": 19,
+  "releasedDependencyMismatches": [],
+  "recoveryReport": "docs/qa/recovery-convergence-2026-11-14T23-46-54-595Z/report.json",
+  "recoveryAllStoredCriteriaPass": true,
+  "recoveryProfiles": 4,
+  "terminalReport": "docs/qa/terminal-drain-2026-11-14T23-44-48-963Z/report.json",
+  "terminalSourceExact": true
+}

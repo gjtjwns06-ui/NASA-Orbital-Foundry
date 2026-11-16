@@ -1,0 +1,15 @@
+{
+  "test": "ko-normal 1280x720 controls remain reachable through actual hardware flight and transfer planning",
+  "status": "passed",
+  "browser": "157.0.8103.52",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "url": "http://127.0.0.1:4173/?qa",
+  "errors": [],
+  "scripts": [
+    "http://127.0.0.1:4173/assets/index-CNPUcqf4.js"
+  ],
+  "scope": "Four explicit language/scale combinations; selected pointer targets, no claim of complete keyboard or font-glyph accessibility."
+}

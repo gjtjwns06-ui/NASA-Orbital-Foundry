@@ -1,0 +1,5526 @@
+{
+  "generatedAt": "2026-11-14T21:45:46.632Z",
+  "scope": "Actual initial-state integrations only; functional durations are not performance claims.",
+  "pass": true,
+  "scenario": {
+    "id": "mars-exit-corridor-2027-v1",
+    "modelVersion": "swingby-1.0.0",
+    "status": "candidate",
+    "epochJdTdb": 2461617.8583186734,
+    "frame": "ICRF",
+    "timeScale": "TDB",
+    "initial": {
+      "positionKm": [
+        440153.29982437415,
+        -37808.39413296271,
+        -68263.51721821795
+      ],
+      "velocityKmS": [
+        -3.00918327149763,
+        0.30687738020424615,
+        0.4886458295047531
+      ]
+    },
+    "initialFuelKg": 0.25,
+    "correctionSeconds": 3600,
+    "controlX": [
+      0.1562129374280655,
+      0.9062145631889668,
+      0.39290289340284285
+    ],
+    "controlY": [
+      -0.10517112631692882,
+      0.4107856306096325,
+      -0.9056457364079372
+    ],
+    "aimPlane": {
+      "centerKm": [
+        29724.873634099986,
+        3629.2071239122934,
+        -1805.7527761393378
+      ],
+      "normal": [
+        -0.9821082182577061,
+        0.1001515409211235,
+        0.15947763630615536
+      ],
+      "xAxis": [
+        0.1562129374280655,
+        0.9062145631889668,
+        0.39290289340284285
+      ],
+      "yAxis": [
+        -0.10517112631692882,
+        0.4107856306096325,
+        -0.9056457364079372
+      ]
+    },
+    "control": {
+      "maxAxisMps": 7,
+      "maxMagnitudeMps": 8,
+      "solverVersion": "bounded-aim-newton-1",
+      "aimResidualKm": 0.01
+    },
+    "exit": {
+      "radiusKm": 100000,
+      "targetDirection": [
+        0.673214250772534,
+        -0.6698951100191053,
+        -0.31308643236216177
+      ],
+      "toleranceDeg": 0.12,
+      "energyRangeKm2S2": [
+        -284.5,
+        -279.5
+      ]
+    },
+    "safetyAltitudeKm": 250,
+    "patchRadiusKm": 577000,
+    "deadlineSeconds": 345600,
+    "science": {
+      "targetPackets": 3,
+      "minimumQuality": 0.4,
+      "captureIntervalS": 120,
+      "uniqueBinS": 300
+    },
+    "ephemeris": {
+      "datasetId": "jpl-horizons-icrf-tdb-20260801-20280301-v1",
+      "earthHash": "785c43fe2189d1470b03ee33ccace2eafbe897dde7f7e09f9dee34b1fa7aa22e",
+      "marsHash": "959901a397605c0b2d1b0fae5799172fe927b16fd30bbbe3fbcf2ea4ed1ef2d4"
+    },
+    "propulsionProfileId": "cg-trim-impulse-v1",
+    "propulsionHash": "dca16c1db88e8a05dd82fb119bd8ba93ea47d9609ec18cfd960166bbe2a41c7b",
+    "hash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091"
+  },
+  "propulsion": {
+    "id": "cg-trim-impulse-v1",
+    "provenance": "game-assumption",
+    "engineModelId": "chemical230-v2",
+    "carrierMassKg": 0.4,
+    "carrierCost": 12,
+    "maximumGimbalDeg": 10,
+    "prepareLeadSeconds": 1800,
+    "valveLeadSeconds": 60,
+    "pointingToleranceDeg": 0.1,
+    "angularRateToleranceDegS": 0.01,
+    "geometry": {
+      "envelope": {
+        "center": [
+          0,
+          0,
+          0.3
+        ],
+        "half": [
+          0.19,
+          0.19,
+          0.3
+        ]
+      },
+      "annulus": {
+        "center": [
+          0,
+          0,
+          0.07
+        ],
+        "outerRadiusM": 0.18,
+        "innerRadiusM": 0.07,
+        "thicknessM": 0.04
+      },
+      "pivot": [
+        0,
+        0,
+        0.12
+      ],
+      "nominalThrust": [
+        0,
+        0,
+        -1
+      ],
+      "bell": {
+        "lengthM": 0.46,
+        "mouthRadiusM": 0.1,
+        "neckRadiusM": 0.025
+      }
+    },
+    "hash": "dca16c1db88e8a05dd82fb119bd8ba93ea47d9609ec18cfd960166bbe2a41c7b"
+  },
+  "checks": [
+    {
+      "name": "full-flight-exit-and-packets-strict-replay",
+      "pass": true,
+      "chunks": 61
+    },
+    {
+      "name": "forged-achieved-exit-rejected",
+      "pass": true
+    },
+    {
+      "name": "actual-economy-fuel-saving",
+      "pass": true
+    }
+  ],
+  "runs": [
+    {
+      "name": "baseline",
+      "pass": true,
+      "craft": {
+        "version": 1,
+        "missionId": "mars",
+        "name": "PATHFINDER-H2",
+        "parts": [
+          {
+            "id": "solar-1",
+            "kind": "solarLarge",
+            "modelId": "tsp45-sixwing-v2",
+            "face": "px",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "science-1",
+            "kind": "spectrometer",
+            "modelId": "mars-spectra-v2",
+            "face": "nz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "antenna-1",
+            "kind": "antenna",
+            "modelId": "xband-reflector-1m-v1",
+            "face": "pz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "radio-1",
+            "kind": "radio",
+            "modelId": "iris22-carrier-v1",
+            "face": "py",
+            "u": -0.22,
+            "v": 0.2,
+            "rotation": 0
+          },
+          {
+            "id": "battery-1",
+            "kind": "battery",
+            "modelId": "bpx100-dual-v2",
+            "face": "py",
+            "u": -0.22,
+            "v": -0.22,
+            "rotation": 0
+          },
+          {
+            "id": "storage-1",
+            "kind": "storage",
+            "modelId": "recorder-1p6-v2",
+            "face": "py",
+            "u": 0.22,
+            "v": -0.22,
+            "rotation": 0
+          },
+          {
+            "id": "adcs-1",
+            "kind": "adcs",
+            "modelId": "xact50-carrier-v1",
+            "face": "py",
+            "u": 0.22,
+            "v": 0.2,
+            "rotation": 0
+          },
+          {
+            "id": "engine-1",
+            "kind": "engine",
+            "modelId": "chemical230-v2",
+            "face": "ny",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          }
+        ],
+        "plan": {
+          "altitudeKm": 600,
+          "inclinationDeg": 51.6,
+          "burnTime": 1200,
+          "progradeMps": 0,
+          "normalMps": 0,
+          "radialMps": 0,
+          "periapsisAltitudeKm": 1000,
+          "bPlaneAngleDeg": 0,
+          "operations": [
+            {
+              "id": "obs-1",
+              "kind": "observe",
+              "start": 7200,
+              "end": 10400
+            },
+            {
+              "id": "down-1",
+              "kind": "downlink",
+              "start": 10600,
+              "end": 17100
+            }
+          ]
+        },
+        "seed": 20261115,
+        "hardwareVersion": "hardware-2.0.0",
+        "busId": "pathfinder-d35-v1",
+        "activeRadioId": "radio-1"
+      },
+      "plan": {
+        "version": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "aim": {
+          "xKm": 0.006937822771334368,
+          "yKm": 248.73329086937196
+        },
+        "operations": [
+          {
+            "id": "encounter-science",
+            "kind": "observe",
+            "start": 138241.26661755153,
+            "end": 143641.26661755153
+          },
+          {
+            "id": "science-return-1",
+            "kind": "downlink",
+            "start": 143641.26661755153,
+            "end": 147241.26661755153
+          },
+          {
+            "id": "science-return-2",
+            "kind": "downlink",
+            "start": 154441.26661755153,
+            "end": 158041.26661755153
+          },
+          {
+            "id": "science-return-3",
+            "kind": "downlink",
+            "start": 165241.26661755153,
+            "end": 168841.26661755153
+          },
+          {
+            "id": "science-return-4",
+            "kind": "downlink",
+            "start": 176041.26661755153,
+            "end": 179641.26661755153
+          },
+          {
+            "id": "science-return-5",
+            "kind": "downlink",
+            "start": 186841.26661755153,
+            "end": 190441.26661755153
+          },
+          {
+            "id": "science-return-6",
+            "kind": "downlink",
+            "start": 197641.26661755153,
+            "end": 201241.26661755153
+          },
+          {
+            "id": "science-return-7",
+            "kind": "downlink",
+            "start": 208441.26661755153,
+            "end": 212041.26661755153
+          },
+          {
+            "id": "science-return-8",
+            "kind": "downlink",
+            "start": 219241.26661755153,
+            "end": 222841.26661755153
+          },
+          {
+            "id": "science-return-9",
+            "kind": "downlink",
+            "start": 230041.26661755153,
+            "end": 233641.26661755153
+          },
+          {
+            "id": "science-return-10",
+            "kind": "downlink",
+            "start": 240841.26661755153,
+            "end": 244441.26661755153
+          },
+          {
+            "id": "science-return-11",
+            "kind": "downlink",
+            "start": 251641.26661755153,
+            "end": 255241.26661755153
+          },
+          {
+            "id": "science-return-12",
+            "kind": "downlink",
+            "start": 262441.26661755156,
+            "end": 266041.26661755156
+          },
+          {
+            "id": "science-return-13",
+            "kind": "downlink",
+            "start": 273241.26661755156,
+            "end": 276841.26661755156
+          },
+          {
+            "id": "science-return-14",
+            "kind": "downlink",
+            "start": 284041.26661755156,
+            "end": 287641.26661755156
+          },
+          {
+            "id": "science-return-15",
+            "kind": "downlink",
+            "start": 294841.26661755156,
+            "end": 298441.26661755156
+          },
+          {
+            "id": "science-return-16",
+            "kind": "downlink",
+            "start": 305641.26661755156,
+            "end": 309241.26661755156
+          }
+        ]
+      },
+      "evaluation": {
+        "launchable": true,
+        "issues": [],
+        "loadedMassKg": 54.364999999999995,
+        "initialFuelKg": 0.25,
+        "requiredFuelKg": 0.04818465935733436,
+        "availableDeltaVMps": 10.396079890725943,
+        "carrierMassKg": 0.4,
+        "carrierCost": 12,
+        "totalCost": 480,
+        "budget": 760,
+        "gimbalAngleDeg": 7.7995207555628046,
+        "enginePartId": "engine-1"
+      },
+      "result": {
+        "modelVersion": "swingby-1.0.0",
+        "scoreDefinitionId": "swingby-exit-1",
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "simulationStatus": "complete",
+        "evaluatedAt": 326164.3881802467,
+        "status": "success",
+        "score": 95,
+        "received": 12,
+        "required": 3,
+        "requirements": [
+          {
+            "id": "direction",
+            "status": "passed",
+            "actual": 0.000001321436450167183,
+            "limit": 0.12
+          },
+          {
+            "id": "energy",
+            "status": "passed",
+            "actual": -281.8899229514153,
+            "range": [
+              -284.5,
+              -279.5
+            ]
+          },
+          {
+            "id": "safety",
+            "status": "passed",
+            "actual": 1004.5747528252914,
+            "limit": 250
+          },
+          {
+            "id": "science",
+            "status": "passed",
+            "actual": 12,
+            "limit": 3
+          }
+        ],
+        "reasons": [],
+        "elapsedSeconds": 326164.3881802467,
+        "energyMinimumWh": 120.76772039153677,
+        "fuelRemainingKg": 0.20181534064266565,
+        "totalCost": 480,
+        "budgetRemaining": 280,
+        "burn": {
+          "id": "correction",
+          "time": 3600,
+          "status": "fired",
+          "reasons": [],
+          "before": {
+            "positionKm": [
+              429318.84956555546,
+              -36703.51631162845,
+              -66504.17666674826
+            ],
+            "velocityKmS": [
+              -3.009962256548486,
+              0.30694413558878453,
+              0.4887665708537383
+            ]
+          },
+          "after": {
+            "positionKm": [
+              429318.8495655551,
+              -36703.51631162854,
+              -66504.17666674833
+            ],
+            "velocityKmS": [
+              -3.0101725903628203,
+              0.3077657579128459,
+              0.48695529927899983
+            ]
+          },
+          "attitudeQuaternion": [
+            -0.47690878197118197,
+            -0.248849453355418,
+            0.29878962430141776,
+            0.7882618369890115
+          ],
+          "requestedDeltaVMps": [
+            -0.21033381433707052,
+            0.8216223240612465,
+            -1.8112715747387023
+          ],
+          "actualDeltaVMps": [
+            -0.2103338143370708,
+            0.8216223240612464,
+            -1.8112715747387025
+          ],
+          "fuelBeforeKg": 0.25,
+          "fuelUsedKg": 0.04818465935733436,
+          "fuelAfterKg": 0.20181534064266565,
+          "centerOfMassM": [
+            0.10818894285005995,
+            -0.042164076151935966,
+            -0.05613422704668218
+          ],
+          "thrustDirectionBody": [
+            0.1204582568863472,
+            0.9907489756152175,
+            -0.06250020532206388
+          ],
+          "gimbalAngleDeg": 7.7995207555628046,
+          "pointingErrorDeg": 9.83532217479511e-15,
+          "angularRateDegS": 0
+        },
+        "achievedExit": {
+          "time": 171403.04422020866,
+          "jdTdb": 2461619.842150204,
+          "localPositionKm": [
+            -65514.65310425329,
+            -72339.6327741574,
+            -21790.083954161586
+          ],
+          "localVelocityKmS": [
+            -1.8956037583528338,
+            -2.423473140634921,
+            -0.7658653719482721
+          ],
+          "heliocentricPositionKm": [
+            -166136739.88737434,
+            -151490832.0582079,
+            -64996136.58677814
+          ],
+          "heliocentricVelocityKmS": [
+            16.077192749630523,
+            -15.997928321451084,
+            -7.476893173344615
+          ],
+          "outwardRadialSpeedKmS": 3.161912504355068,
+          "energyKm2S2": -281.8899229514153,
+          "directionErrorDeg": 0.000001321436450167183,
+          "directionPassed": true,
+          "energyPassed": true
+        },
+        "packets": [
+          {
+            "id": "mars-spectrum:-11",
+            "capturedAt": 138710.61581420898,
+            "readyAt": 138725.775814209,
+            "bits": 1600000,
+            "quality": 0.40000000103793554,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 158029.76225446467
+          },
+          {
+            "id": "mars-spectrum:-10",
+            "capturedAt": 138845.775814209,
+            "readyAt": 138860.935814209,
+            "bits": 1600000,
+            "quality": 0.4200187702580085,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999993,
+            "receivedAt": 177590.60144037122
+          },
+          {
+            "id": "mars-spectrum:-9",
+            "capturedAt": 139141.98417675195,
+            "readyAt": 139157.14417675196,
+            "bits": 1600000,
+            "quality": 0.4719876017153793,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999993,
+            "receivedAt": 189291.10416285056
+          },
+          {
+            "id": "mars-spectrum:-8",
+            "capturedAt": 139441.98417675195,
+            "readyAt": 139457.14417675196,
+            "bits": 1600000,
+            "quality": 0.5393179704109621,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 200931.5973435043
+          },
+          {
+            "id": "mars-spectrum:-7",
+            "capturedAt": 139741.98417675195,
+            "readyAt": 139757.14417675196,
+            "bits": 1600000,
+            "quality": 0.6283903917413157,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 212572.09307732177
+          },
+          {
+            "id": "mars-spectrum:-6",
+            "capturedAt": 140041.98417675195,
+            "readyAt": 140057.14417675196,
+            "bits": 1600000,
+            "quality": 0.7507866353106294,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 232012.9230314611
+          },
+          {
+            "id": "mars-spectrum:-5",
+            "capturedAt": 140341.98417675195,
+            "readyAt": 140357.14417675196,
+            "bits": 1600000,
+            "quality": 0.9269494107593246,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 243653.42061039415
+          },
+          {
+            "id": "mars-spectrum:-4",
+            "capturedAt": 140641.98417675195,
+            "readyAt": 140657.14417675196,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 255293.91030208382
+          },
+          {
+            "id": "mars-spectrum:-3",
+            "capturedAt": 140941.98417675195,
+            "readyAt": 140957.14417675196,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 266934.4085870957
+          },
+          {
+            "id": "mars-spectrum:-2",
+            "capturedAt": 141241.98417675195,
+            "readyAt": 141257.14417675196,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 286315.23130426015
+          },
+          {
+            "id": "mars-spectrum:-1",
+            "capturedAt": 141541.98417675195,
+            "readyAt": 141557.14417675196,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 297955.72466006805
+          },
+          {
+            "id": "mars-spectrum:0",
+            "capturedAt": 141841.98417675195,
+            "readyAt": 141857.14417675196,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 309596.22271975427
+          }
+        ],
+        "events": [
+          {
+            "time": 0,
+            "code": "SCENARIO_START",
+            "message": "Declared actual-epoch local encounter begins; no prior flight is simulated.",
+            "severity": "info",
+            "reasonCode": "SCENARIO_START"
+          },
+          {
+            "time": 3600,
+            "code": "CORRECTION_FIRED",
+            "message": "Actual attitude-directed impulse applied and fuel charged.",
+            "severity": "info",
+            "reasonCode": "CORRECTION_FIRED"
+          },
+          {
+            "time": 138725.775814209,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 138860.935814209,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139157.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139457.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139757.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140057.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140357.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140657.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140957.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141257.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141557.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141841.98417675195,
+            "code": "PERIAPSIS",
+            "message": "The actual closest approach was recorded.",
+            "severity": "info",
+            "reasonCode": "PERIAPSIS"
+          },
+          {
+            "time": 141857.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 158029.76225446467,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 171403.04422020866,
+            "code": "EXIT_MEASURED",
+            "message": "Actual outward crossing recorded direction and specific energy.",
+            "severity": "info",
+            "reasonCode": "EXIT_MEASURED"
+          },
+          {
+            "time": 177590.60144037122,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 189291.10416285056,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 200931.5973435043,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 212572.09307732177,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 232012.9230314611,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 243653.42061039415,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 255293.91030208382,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 266934.4085870957,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 286315.23130426015,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 297955.72466006805,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 309596.22271975427,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 326164.3881802467,
+            "code": "MARS_PATCH_EXIT",
+            "message": "The supported local encounter has ended.",
+            "severity": "info",
+            "reasonCode": "MARS_PATCH_EXIT"
+          }
+        ]
+      },
+      "functionalWallMs": 20297.86
+    },
+    {
+      "name": "lower",
+      "pass": true,
+      "craft": {
+        "version": 1,
+        "missionId": "mars",
+        "name": "PATHFINDER-H2",
+        "parts": [
+          {
+            "id": "solar-1",
+            "kind": "solarLarge",
+            "modelId": "tsp45-sixwing-v2",
+            "face": "px",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "science-1",
+            "kind": "spectrometer",
+            "modelId": "mars-spectra-v2",
+            "face": "nz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "antenna-1",
+            "kind": "antenna",
+            "modelId": "xband-reflector-1m-v1",
+            "face": "pz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "radio-1",
+            "kind": "radio",
+            "modelId": "iris22-carrier-v1",
+            "face": "py",
+            "u": -0.22,
+            "v": 0.2,
+            "rotation": 0
+          },
+          {
+            "id": "battery-1",
+            "kind": "battery",
+            "modelId": "bpx100-dual-v2",
+            "face": "py",
+            "u": -0.22,
+            "v": -0.22,
+            "rotation": 0
+          },
+          {
+            "id": "storage-1",
+            "kind": "storage",
+            "modelId": "recorder-1p6-v2",
+            "face": "py",
+            "u": 0.22,
+            "v": -0.22,
+            "rotation": 0
+          },
+          {
+            "id": "adcs-1",
+            "kind": "adcs",
+            "modelId": "xact50-carrier-v1",
+            "face": "py",
+            "u": 0.22,
+            "v": 0.2,
+            "rotation": 0
+          },
+          {
+            "id": "engine-1",
+            "kind": "engine",
+            "modelId": "chemical230-v2",
+            "face": "ny",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          }
+        ],
+        "plan": {
+          "altitudeKm": 600,
+          "inclinationDeg": 51.6,
+          "burnTime": 1200,
+          "progradeMps": 0,
+          "normalMps": 0,
+          "radialMps": 0,
+          "periapsisAltitudeKm": 1000,
+          "bPlaneAngleDeg": 0,
+          "operations": [
+            {
+              "id": "obs-1",
+              "kind": "observe",
+              "start": 7200,
+              "end": 10400
+            },
+            {
+              "id": "down-1",
+              "kind": "downlink",
+              "start": 10600,
+              "end": 17100
+            }
+          ]
+        },
+        "seed": 20261115,
+        "hardwareVersion": "hardware-2.0.0",
+        "busId": "pathfinder-d35-v1",
+        "activeRadioId": "radio-1"
+      },
+      "plan": {
+        "version": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "aim": {
+          "xKm": -124.57036891935694,
+          "yKm": 248.7253345880618
+        },
+        "operations": [
+          {
+            "id": "encounter-science",
+            "kind": "observe",
+            "start": 138241.26661755153,
+            "end": 143641.26661755153
+          },
+          {
+            "id": "science-return-1",
+            "kind": "downlink",
+            "start": 143641.26661755153,
+            "end": 147241.26661755153
+          },
+          {
+            "id": "science-return-2",
+            "kind": "downlink",
+            "start": 154441.26661755153,
+            "end": 158041.26661755153
+          },
+          {
+            "id": "science-return-3",
+            "kind": "downlink",
+            "start": 165241.26661755153,
+            "end": 168841.26661755153
+          },
+          {
+            "id": "science-return-4",
+            "kind": "downlink",
+            "start": 176041.26661755153,
+            "end": 179641.26661755153
+          },
+          {
+            "id": "science-return-5",
+            "kind": "downlink",
+            "start": 186841.26661755153,
+            "end": 190441.26661755153
+          },
+          {
+            "id": "science-return-6",
+            "kind": "downlink",
+            "start": 197641.26661755153,
+            "end": 201241.26661755153
+          },
+          {
+            "id": "science-return-7",
+            "kind": "downlink",
+            "start": 208441.26661755153,
+            "end": 212041.26661755153
+          },
+          {
+            "id": "science-return-8",
+            "kind": "downlink",
+            "start": 219241.26661755153,
+            "end": 222841.26661755153
+          },
+          {
+            "id": "science-return-9",
+            "kind": "downlink",
+            "start": 230041.26661755153,
+            "end": 233641.26661755153
+          },
+          {
+            "id": "science-return-10",
+            "kind": "downlink",
+            "start": 240841.26661755153,
+            "end": 244441.26661755153
+          },
+          {
+            "id": "science-return-11",
+            "kind": "downlink",
+            "start": 251641.26661755153,
+            "end": 255241.26661755153
+          },
+          {
+            "id": "science-return-12",
+            "kind": "downlink",
+            "start": 262441.26661755156,
+            "end": 266041.26661755156
+          },
+          {
+            "id": "science-return-13",
+            "kind": "downlink",
+            "start": 273241.26661755156,
+            "end": 276841.26661755156
+          },
+          {
+            "id": "science-return-14",
+            "kind": "downlink",
+            "start": 284041.26661755156,
+            "end": 287641.26661755156
+          },
+          {
+            "id": "science-return-15",
+            "kind": "downlink",
+            "start": 294841.26661755156,
+            "end": 298441.26661755156
+          },
+          {
+            "id": "science-return-16",
+            "kind": "downlink",
+            "start": 305641.26661755156,
+            "end": 309241.26661755156
+          }
+        ]
+      },
+      "evaluation": {
+        "launchable": true,
+        "issues": [],
+        "loadedMassKg": 54.364999999999995,
+        "initialFuelKg": 0.25,
+        "requiredFuelKg": 0.05386921254366772,
+        "availableDeltaVMps": 10.396079890725943,
+        "carrierMassKg": 0.4,
+        "carrierCost": 12,
+        "totalCost": 480,
+        "budget": 760,
+        "gimbalAngleDeg": 7.7995207555628046,
+        "enginePartId": "engine-1"
+      },
+      "result": {
+        "modelVersion": "swingby-1.0.0",
+        "scoreDefinitionId": "swingby-exit-1",
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "simulationStatus": "complete",
+        "evaluatedAt": 326123.8375221134,
+        "status": "success",
+        "score": 95,
+        "received": 12,
+        "required": 3,
+        "requirements": [
+          {
+            "id": "direction",
+            "status": "passed",
+            "actual": 0.02464145654860378,
+            "limit": 0.12
+          },
+          {
+            "id": "energy",
+            "status": "passed",
+            "actual": -280.6310816441291,
+            "range": [
+              -284.5,
+              -279.5
+            ]
+          },
+          {
+            "id": "safety",
+            "status": "passed",
+            "actual": 881.701737973237,
+            "limit": 250
+          },
+          {
+            "id": "science",
+            "status": "passed",
+            "actual": 12,
+            "limit": 3
+          }
+        ],
+        "reasons": [],
+        "elapsedSeconds": 326123.8375221134,
+        "energyMinimumWh": 121.01029705986168,
+        "fuelRemainingKg": 0.19613078745633228,
+        "totalCost": 480,
+        "budgetRemaining": 280,
+        "burn": {
+          "id": "correction",
+          "time": 3600,
+          "status": "fired",
+          "reasons": [],
+          "before": {
+            "positionKm": [
+              429318.84956555546,
+              -36703.51631162845,
+              -66504.17666674826
+            ],
+            "velocityKmS": [
+              -3.009962256548486,
+              0.30694413558878453,
+              0.4887665708537383
+            ]
+          },
+          "after": {
+            "positionKm": [
+              429318.8495655556,
+              -36703.516311628424,
+              -66504.1766667482
+            ],
+            "velocityKmS": [
+              -3.0103288117385434,
+              0.3068594922868453,
+              0.4865623764875331
+            ]
+          },
+          "attitudeQuaternion": [
+            -0.6364203201853761,
+            -0.14982666225876498,
+            0.36296043757966606,
+            0.6639132986192692
+          ],
+          "requestedDeltaVMps": [
+            -0.3665551900565074,
+            -0.08464330193893044,
+            -2.2041943662046894
+          ],
+          "actualDeltaVMps": [
+            -0.3665551900565076,
+            -0.08464330193893009,
+            -2.20419436620469
+          ],
+          "fuelBeforeKg": 0.25,
+          "fuelUsedKg": 0.05386921254366772,
+          "fuelAfterKg": 0.19613078745633228,
+          "centerOfMassM": [
+            0.10818894285005995,
+            -0.042164076151935966,
+            -0.05613422704668218
+          ],
+          "thrustDirectionBody": [
+            0.1204582568863472,
+            0.9907489756152175,
+            -0.06250020532206388
+          ],
+          "gimbalAngleDeg": 7.7995207555628046,
+          "pointingErrorDeg": 1.0808773494265516e-14,
+          "angularRateDegS": 0
+        },
+        "achievedExit": {
+          "time": 171365.2932976414,
+          "jdTdb": 2461619.8417132716,
+          "localPositionKm": [
+            -64129.9690211423,
+            -73407.98932529907,
+            -22329.67031919891
+          ],
+          "localVelocityKmS": [
+            -1.8525343347131167,
+            -2.4519227847651006,
+            -0.7805623846050156
+          ],
+          "heliocentricPositionKm": [
+            -166136033.6922419,
+            -151491387.96503538,
+            -64996422.82497523
+          ],
+          "heliocentricVelocityKmS": [
+            16.12019718803144,
+            -16.026437217996552,
+            -7.491615611403741
+          ],
+          "outwardRadialSpeedKmS": 3.1622339181804637,
+          "energyKm2S2": -280.6310816441291,
+          "directionErrorDeg": 0.02464145654860378,
+          "directionPassed": true,
+          "energyPassed": true
+        },
+        "packets": [
+          {
+            "id": "mars-spectrum:-11",
+            "capturedAt": 138691.37133026123,
+            "readyAt": 138706.53133026123,
+            "bits": 1600000,
+            "quality": 0.400000000468609,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 157969.75795498875
+          },
+          {
+            "id": "mars-spectrum:-10",
+            "capturedAt": 138826.53133026123,
+            "readyAt": 138841.69133026124,
+            "bits": 1600000,
+            "quality": 0.42005810717209013,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 169670.25502585463
+          },
+          {
+            "id": "mars-spectrum:-9",
+            "capturedAt": 139121.80939412798,
+            "readyAt": 139136.96939412798,
+            "bits": 1600000,
+            "quality": 0.4722369691380677,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999993,
+            "receivedAt": 189111.0907696789
+          },
+          {
+            "id": "mars-spectrum:-8",
+            "capturedAt": 139421.80939412798,
+            "readyAt": 139436.96939412798,
+            "bits": 1600000,
+            "quality": 0.5401314577560603,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 200751.58273543697
+          },
+          {
+            "id": "mars-spectrum:-7",
+            "capturedAt": 139721.80939412798,
+            "readyAt": 139736.96939412798,
+            "bits": 1600000,
+            "quality": 0.630298829158184,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 212392.07708817415
+          },
+          {
+            "id": "mars-spectrum:-6",
+            "capturedAt": 140021.80939412798,
+            "readyAt": 140036.96939412798,
+            "bits": 1600000,
+            "quality": 0.7549255520044784,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999993,
+            "receivedAt": 231712.89968999426
+          },
+          {
+            "id": "mars-spectrum:-5",
+            "capturedAt": 140321.80939412798,
+            "readyAt": 140336.96939412798,
+            "bits": 1600000,
+            "quality": 0.9359551164153016,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 243353.39619979291
+          },
+          {
+            "id": "mars-spectrum:-4",
+            "capturedAt": 140621.80939412798,
+            "readyAt": 140636.96939412798,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 254993.88423173074
+          },
+          {
+            "id": "mars-spectrum:-3",
+            "capturedAt": 140921.80939412798,
+            "readyAt": 140936.96939412798,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 266634.38123070606
+          },
+          {
+            "id": "mars-spectrum:-2",
+            "capturedAt": 141221.80939412798,
+            "readyAt": 141236.96939412798,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 286015.2018089893
+          },
+          {
+            "id": "mars-spectrum:-1",
+            "capturedAt": 141521.80939412798,
+            "readyAt": 141536.96939412798,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 297595.6912927574
+          },
+          {
+            "id": "mars-spectrum:0",
+            "capturedAt": 141821.80939412798,
+            "readyAt": 141836.96939412798,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 309236.1876812212
+          }
+        ],
+        "events": [
+          {
+            "time": 0,
+            "code": "SCENARIO_START",
+            "message": "Declared actual-epoch local encounter begins; no prior flight is simulated.",
+            "severity": "info",
+            "reasonCode": "SCENARIO_START"
+          },
+          {
+            "time": 3600,
+            "code": "CORRECTION_FIRED",
+            "message": "Actual attitude-directed impulse applied and fuel charged.",
+            "severity": "info",
+            "reasonCode": "CORRECTION_FIRED"
+          },
+          {
+            "time": 138706.53133026123,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 138841.69133026124,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139136.96939412798,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139436.96939412798,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139736.96939412798,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140036.96939412798,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140336.96939412798,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140636.96939412798,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140936.96939412798,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141236.96939412798,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141536.96939412798,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141821.80939412798,
+            "code": "PERIAPSIS",
+            "message": "The actual closest approach was recorded.",
+            "severity": "info",
+            "reasonCode": "PERIAPSIS"
+          },
+          {
+            "time": 141836.96939412798,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 157969.75795498875,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 169670.25502585463,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 171365.2932976414,
+            "code": "EXIT_MEASURED",
+            "message": "Actual outward crossing recorded direction and specific energy.",
+            "severity": "info",
+            "reasonCode": "EXIT_MEASURED"
+          },
+          {
+            "time": 189111.0907696789,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 200751.58273543697,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 212392.07708817415,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 231712.89968999426,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 243353.39619979291,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 254993.88423173074,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 266634.38123070606,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 286015.2018089893,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 297595.6912927574,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 309236.1876812212,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 326123.8375221134,
+            "code": "MARS_PATCH_EXIT",
+            "message": "The supported local encounter has ended.",
+            "severity": "info",
+            "reasonCode": "MARS_PATCH_EXIT"
+          }
+        ]
+      },
+      "functionalWallMs": 18393.788799999995
+    },
+    {
+      "name": "higher",
+      "pass": true,
+      "craft": {
+        "version": 1,
+        "missionId": "mars",
+        "name": "PATHFINDER-H2",
+        "parts": [
+          {
+            "id": "solar-1",
+            "kind": "solarLarge",
+            "modelId": "tsp45-sixwing-v2",
+            "face": "px",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "science-1",
+            "kind": "spectrometer",
+            "modelId": "mars-spectra-v2",
+            "face": "nz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "antenna-1",
+            "kind": "antenna",
+            "modelId": "xband-reflector-1m-v1",
+            "face": "pz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "radio-1",
+            "kind": "radio",
+            "modelId": "iris22-carrier-v1",
+            "face": "py",
+            "u": -0.22,
+            "v": 0.2,
+            "rotation": 0
+          },
+          {
+            "id": "battery-1",
+            "kind": "battery",
+            "modelId": "bpx100-dual-v2",
+            "face": "py",
+            "u": -0.22,
+            "v": -0.22,
+            "rotation": 0
+          },
+          {
+            "id": "storage-1",
+            "kind": "storage",
+            "modelId": "recorder-1p6-v2",
+            "face": "py",
+            "u": 0.22,
+            "v": -0.22,
+            "rotation": 0
+          },
+          {
+            "id": "adcs-1",
+            "kind": "adcs",
+            "modelId": "xact50-carrier-v1",
+            "face": "py",
+            "u": 0.22,
+            "v": 0.2,
+            "rotation": 0
+          },
+          {
+            "id": "engine-1",
+            "kind": "engine",
+            "modelId": "chemical230-v2",
+            "face": "ny",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          }
+        ],
+        "plan": {
+          "altitudeKm": 600,
+          "inclinationDeg": 51.6,
+          "burnTime": 1200,
+          "progradeMps": 0,
+          "normalMps": 0,
+          "radialMps": 0,
+          "periapsisAltitudeKm": 1000,
+          "bPlaneAngleDeg": 0,
+          "operations": [
+            {
+              "id": "obs-1",
+              "kind": "observe",
+              "start": 7200,
+              "end": 10400
+            },
+            {
+              "id": "down-1",
+              "kind": "downlink",
+              "start": 10600,
+              "end": 17100
+            }
+          ]
+        },
+        "seed": 20261115,
+        "hardwareVersion": "hardware-2.0.0",
+        "busId": "pathfinder-d35-v1",
+        "activeRadioId": "radio-1"
+      },
+      "plan": {
+        "version": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "aim": {
+          "xKm": 124.59534281414822,
+          "yKm": 248.7413614981949
+        },
+        "operations": [
+          {
+            "id": "encounter-science",
+            "kind": "observe",
+            "start": 138241.26661755153,
+            "end": 143641.26661755153
+          },
+          {
+            "id": "science-return-1",
+            "kind": "downlink",
+            "start": 143641.26661755153,
+            "end": 147241.26661755153
+          },
+          {
+            "id": "science-return-2",
+            "kind": "downlink",
+            "start": 154441.26661755153,
+            "end": 158041.26661755153
+          },
+          {
+            "id": "science-return-3",
+            "kind": "downlink",
+            "start": 165241.26661755153,
+            "end": 168841.26661755153
+          },
+          {
+            "id": "science-return-4",
+            "kind": "downlink",
+            "start": 176041.26661755153,
+            "end": 179641.26661755153
+          },
+          {
+            "id": "science-return-5",
+            "kind": "downlink",
+            "start": 186841.26661755153,
+            "end": 190441.26661755153
+          },
+          {
+            "id": "science-return-6",
+            "kind": "downlink",
+            "start": 197641.26661755153,
+            "end": 201241.26661755153
+          },
+          {
+            "id": "science-return-7",
+            "kind": "downlink",
+            "start": 208441.26661755153,
+            "end": 212041.26661755153
+          },
+          {
+            "id": "science-return-8",
+            "kind": "downlink",
+            "start": 219241.26661755153,
+            "end": 222841.26661755153
+          },
+          {
+            "id": "science-return-9",
+            "kind": "downlink",
+            "start": 230041.26661755153,
+            "end": 233641.26661755153
+          },
+          {
+            "id": "science-return-10",
+            "kind": "downlink",
+            "start": 240841.26661755153,
+            "end": 244441.26661755153
+          },
+          {
+            "id": "science-return-11",
+            "kind": "downlink",
+            "start": 251641.26661755153,
+            "end": 255241.26661755153
+          },
+          {
+            "id": "science-return-12",
+            "kind": "downlink",
+            "start": 262441.26661755156,
+            "end": 266041.26661755156
+          },
+          {
+            "id": "science-return-13",
+            "kind": "downlink",
+            "start": 273241.26661755156,
+            "end": 276841.26661755156
+          },
+          {
+            "id": "science-return-14",
+            "kind": "downlink",
+            "start": 284041.26661755156,
+            "end": 287641.26661755156
+          },
+          {
+            "id": "science-return-15",
+            "kind": "downlink",
+            "start": 294841.26661755156,
+            "end": 298441.26661755156
+          },
+          {
+            "id": "science-return-16",
+            "kind": "downlink",
+            "start": 305641.26661755156,
+            "end": 309241.26661755156
+          }
+        ]
+      },
+      "evaluation": {
+        "launchable": true,
+        "issues": [],
+        "loadedMassKg": 54.364999999999995,
+        "initialFuelKg": 0.25,
+        "requiredFuelKg": 0.0538692125446938,
+        "availableDeltaVMps": 10.396079890725943,
+        "carrierMassKg": 0.4,
+        "carrierCost": 12,
+        "totalCost": 480,
+        "budget": 760,
+        "gimbalAngleDeg": 7.7995207555628046,
+        "enginePartId": "engine-1"
+      },
+      "result": {
+        "modelVersion": "swingby-1.0.0",
+        "scoreDefinitionId": "swingby-exit-1",
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "simulationStatus": "complete",
+        "evaluatedAt": 326204.5114277425,
+        "status": "success",
+        "score": 95,
+        "received": 12,
+        "required": 3,
+        "requirements": [
+          {
+            "id": "direction",
+            "status": "passed",
+            "actual": 0.0220370951878792,
+            "limit": 0.12
+          },
+          {
+            "id": "energy",
+            "status": "passed",
+            "actual": -283.116723551389,
+            "range": [
+              -284.5,
+              -279.5
+            ]
+          },
+          {
+            "id": "safety",
+            "status": "passed",
+            "actual": 1128.040642771558,
+            "limit": 250
+          },
+          {
+            "id": "science",
+            "status": "passed",
+            "actual": 12,
+            "limit": 3
+          }
+        ],
+        "reasons": [],
+        "elapsedSeconds": 326204.5114277425,
+        "energyMinimumWh": 120.48342215748231,
+        "fuelRemainingKg": 0.1961307874553062,
+        "totalCost": 480,
+        "budgetRemaining": 280,
+        "burn": {
+          "id": "correction",
+          "time": 3600,
+          "status": "fired",
+          "reasons": [],
+          "before": {
+            "positionKm": [
+              429318.84956555546,
+              -36703.51631162845,
+              -66504.17666674826
+            ],
+            "velocityKmS": [
+              -3.009962256548486,
+              0.30694413558878453,
+              0.4887665708537383
+            ]
+          },
+          "after": {
+            "positionKm": [
+              429318.84956555546,
+              -36703.51631162854,
+              -66504.17666674827
+            ],
+            "velocityKmS": [
+              -3.0100163858636817,
+              0.30867192141324495,
+              0.48734818227434584
+            ]
+          },
+          "attitudeQuaternion": [
+            -0.30345244775593977,
+            -0.2945222823345042,
+            0.18908415931145348,
+            0.886239481098018
+          ],
+          "requestedDeltaVMps": [
+            -0.0541293151971288,
+            1.7277858244601187,
+            -1.418388579392265
+          ],
+          "actualDeltaVMps": [
+            -0.05412931519712893,
+            1.7277858244601185,
+            -1.4183885793922653
+          ],
+          "fuelBeforeKg": 0.25,
+          "fuelUsedKg": 0.0538692125446938,
+          "fuelAfterKg": 0.1961307874553062,
+          "centerOfMassM": [
+            0.10818894285005995,
+            -0.042164076151935966,
+            -0.05613422704668218
+          ],
+          "thrustDirectionBody": [
+            0.1204582568863472,
+            0.9907489756152175,
+            -0.06250020532206388
+          ],
+          "gimbalAngleDeg": 7.7995207555628046,
+          "pointingErrorDeg": 1.008330205293374e-14,
+          "angularRateDegS": 0
+        },
+        "achievedExit": {
+          "time": 171440.33176787192,
+          "jdTdb": 2461619.8425817727,
+          "localPositionKm": [
+            -66844.23154443441,
+            -71274.71836637668,
+            -21254.72255823932
+          ],
+          "localVelocityKmS": [
+            -1.9370108928901355,
+            -2.3951265627824494,
+            -0.7512948749195403
+          ],
+          "heliocentricPositionKm": [
+            -166137399.30312884,
+            -151490273.3008404,
+            -64995851.462676525
+          ],
+          "heliocentricVelocityKmS": [
+            16.035849802416056,
+            -15.96952321826852,
+            -7.462297562894872
+          ],
+          "outwardRadialSpeedKmS": 3.1615853996842866,
+          "energyKm2S2": -283.116723551389,
+          "directionErrorDeg": 0.0220370951878792,
+          "directionPassed": true,
+          "energyPassed": true
+        },
+        "packets": [
+          {
+            "id": "mars-spectrum:-11",
+            "capturedAt": 138730.29084014893,
+            "readyAt": 138745.45084014893,
+            "bits": 1600000,
+            "quality": 0.4000000008606634,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 158149.76900559917
+          },
+          {
+            "id": "mars-spectrum:-10",
+            "capturedAt": 138865.45084014893,
+            "readyAt": 138880.61084014893,
+            "bits": 1600000,
+            "quality": 0.419943186397499,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 177830.61564619956
+          },
+          {
+            "id": "mars-spectrum:-9",
+            "capturedAt": 139161.9458663341,
+            "readyAt": 139177.1058663341,
+            "bits": 1600000,
+            "quality": 0.4716008780115876,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 189531.11994055283
+          },
+          {
+            "id": "mars-spectrum:-8",
+            "capturedAt": 139461.9458663341,
+            "readyAt": 139477.1058663341,
+            "bits": 1600000,
+            "quality": 0.5383177157976875,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 201231.61677717947
+          },
+          {
+            "id": "mars-spectrum:-7",
+            "capturedAt": 139761.9458663341,
+            "readyAt": 139777.1058663341,
+            "bits": 1600000,
+            "quality": 0.6262236392906207,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 212932.1163969056
+          },
+          {
+            "id": "mars-spectrum:-6",
+            "capturedAt": 140061.9458663341,
+            "readyAt": 140077.1058663341,
+            "bits": 1600000,
+            "quality": 0.7462915510154795,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999988,
+            "receivedAt": 232372.9485119777
+          },
+          {
+            "id": "mars-spectrum:-5",
+            "capturedAt": 140361.9458663341,
+            "readyAt": 140377.1058663341,
+            "bits": 1600000,
+            "quality": 0.9174907386803574,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 244013.447040881
+          },
+          {
+            "id": "mars-spectrum:-4",
+            "capturedAt": 140661.9458663341,
+            "readyAt": 140677.1058663341,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 255653.93839848757
+          },
+          {
+            "id": "mars-spectrum:-3",
+            "capturedAt": 140961.9458663341,
+            "readyAt": 140977.1058663341,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 275094.7728292297
+          },
+          {
+            "id": "mars-spectrum:-2",
+            "capturedAt": 141261.9458663341,
+            "readyAt": 141277.1058663341,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999993,
+            "receivedAt": 286795.26772183867
+          },
+          {
+            "id": "mars-spectrum:-1",
+            "capturedAt": 141561.9458663341,
+            "readyAt": 141577.1058663341,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 298435.7623738962
+          },
+          {
+            "id": "mars-spectrum:0",
+            "capturedAt": 141861.9458663341,
+            "readyAt": 141877.1058663341,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 310076.2621587119
+          }
+        ],
+        "events": [
+          {
+            "time": 0,
+            "code": "SCENARIO_START",
+            "message": "Declared actual-epoch local encounter begins; no prior flight is simulated.",
+            "severity": "info",
+            "reasonCode": "SCENARIO_START"
+          },
+          {
+            "time": 3600,
+            "code": "CORRECTION_FIRED",
+            "message": "Actual attitude-directed impulse applied and fuel charged.",
+            "severity": "info",
+            "reasonCode": "CORRECTION_FIRED"
+          },
+          {
+            "time": 138745.45084014893,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 138880.61084014893,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139177.1058663341,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139477.1058663341,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139777.1058663341,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140077.1058663341,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140377.1058663341,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140677.1058663341,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140977.1058663341,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141277.1058663341,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141577.1058663341,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141861.9458663341,
+            "code": "PERIAPSIS",
+            "message": "The actual closest approach was recorded.",
+            "severity": "info",
+            "reasonCode": "PERIAPSIS"
+          },
+          {
+            "time": 141877.1058663341,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 158149.76900559917,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 171440.33176787192,
+            "code": "EXIT_MEASURED",
+            "message": "Actual outward crossing recorded direction and specific energy.",
+            "severity": "info",
+            "reasonCode": "EXIT_MEASURED"
+          },
+          {
+            "time": 177830.61564619956,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 189531.11994055283,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 201231.61677717947,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 212932.1163969056,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 232372.9485119777,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 244013.447040881,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 255653.93839848757,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 275094.7728292297,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 286795.26772183867,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 298435.7623738962,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 310076.2621587119,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 326204.5114277425,
+            "code": "MARS_PATCH_EXIT",
+            "message": "The supported local encounter has ended.",
+            "severity": "info",
+            "reasonCode": "MARS_PATCH_EXIT"
+          }
+        ]
+      },
+      "functionalWallMs": 20819.935899999997
+    },
+    {
+      "name": "economy",
+      "pass": true,
+      "craft": {
+        "version": 1,
+        "missionId": "mars",
+        "name": "PATHFINDER-H2",
+        "parts": [
+          {
+            "id": "solar-1",
+            "kind": "solarLarge",
+            "modelId": "tsp45-sixwing-v2",
+            "face": "px",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "science-1",
+            "kind": "spectrometer",
+            "modelId": "mars-spectra-v2",
+            "face": "nz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "antenna-1",
+            "kind": "antenna",
+            "modelId": "xband-reflector-1m-v1",
+            "face": "pz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "radio-1",
+            "kind": "radio",
+            "modelId": "iris22-carrier-v1",
+            "face": "py",
+            "u": -0.22,
+            "v": 0.2,
+            "rotation": 0
+          },
+          {
+            "id": "battery-1",
+            "kind": "battery",
+            "modelId": "bpx100-dual-v2",
+            "face": "py",
+            "u": -0.22,
+            "v": -0.22,
+            "rotation": 0
+          },
+          {
+            "id": "storage-1",
+            "kind": "storage",
+            "modelId": "recorder-1p6-v2",
+            "face": "py",
+            "u": 0.22,
+            "v": -0.22,
+            "rotation": 0
+          },
+          {
+            "id": "adcs-1",
+            "kind": "adcs",
+            "modelId": "xact50-carrier-v1",
+            "face": "py",
+            "u": 0.22,
+            "v": 0.2,
+            "rotation": 0
+          },
+          {
+            "id": "engine-1",
+            "kind": "engine",
+            "modelId": "chemical230-v2",
+            "face": "ny",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          }
+        ],
+        "plan": {
+          "altitudeKm": 600,
+          "inclinationDeg": 51.6,
+          "burnTime": 1200,
+          "progradeMps": 0,
+          "normalMps": 0,
+          "radialMps": 0,
+          "periapsisAltitudeKm": 1000,
+          "bPlaneAngleDeg": 0,
+          "operations": [
+            {
+              "id": "obs-1",
+              "kind": "observe",
+              "start": 7200,
+              "end": 10400
+            },
+            {
+              "id": "down-1",
+              "kind": "downlink",
+              "start": 10600,
+              "end": 17100
+            }
+          ]
+        },
+        "seed": 20261115,
+        "hardwareVersion": "hardware-2.0.0",
+        "busId": "pathfinder-d35-v1",
+        "activeRadioId": "radio-1"
+      },
+      "plan": {
+        "version": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "aim": {
+          "xKm": 0.0039025775401597684,
+          "yKm": 186.54988376889315
+        },
+        "operations": [
+          {
+            "id": "encounter-science",
+            "kind": "observe",
+            "start": 138241.26661755153,
+            "end": 143641.26661755153
+          },
+          {
+            "id": "science-return-1",
+            "kind": "downlink",
+            "start": 143641.26661755153,
+            "end": 147241.26661755153
+          },
+          {
+            "id": "science-return-2",
+            "kind": "downlink",
+            "start": 154441.26661755153,
+            "end": 158041.26661755153
+          },
+          {
+            "id": "science-return-3",
+            "kind": "downlink",
+            "start": 165241.26661755153,
+            "end": 168841.26661755153
+          },
+          {
+            "id": "science-return-4",
+            "kind": "downlink",
+            "start": 176041.26661755153,
+            "end": 179641.26661755153
+          },
+          {
+            "id": "science-return-5",
+            "kind": "downlink",
+            "start": 186841.26661755153,
+            "end": 190441.26661755153
+          },
+          {
+            "id": "science-return-6",
+            "kind": "downlink",
+            "start": 197641.26661755153,
+            "end": 201241.26661755153
+          },
+          {
+            "id": "science-return-7",
+            "kind": "downlink",
+            "start": 208441.26661755153,
+            "end": 212041.26661755153
+          },
+          {
+            "id": "science-return-8",
+            "kind": "downlink",
+            "start": 219241.26661755153,
+            "end": 222841.26661755153
+          },
+          {
+            "id": "science-return-9",
+            "kind": "downlink",
+            "start": 230041.26661755153,
+            "end": 233641.26661755153
+          },
+          {
+            "id": "science-return-10",
+            "kind": "downlink",
+            "start": 240841.26661755153,
+            "end": 244441.26661755153
+          },
+          {
+            "id": "science-return-11",
+            "kind": "downlink",
+            "start": 251641.26661755153,
+            "end": 255241.26661755153
+          },
+          {
+            "id": "science-return-12",
+            "kind": "downlink",
+            "start": 262441.26661755156,
+            "end": 266041.26661755156
+          },
+          {
+            "id": "science-return-13",
+            "kind": "downlink",
+            "start": 273241.26661755156,
+            "end": 276841.26661755156
+          },
+          {
+            "id": "science-return-14",
+            "kind": "downlink",
+            "start": 284041.26661755156,
+            "end": 287641.26661755156
+          },
+          {
+            "id": "science-return-15",
+            "kind": "downlink",
+            "start": 294841.26661755156,
+            "end": 298441.26661755156
+          },
+          {
+            "id": "science-return-16",
+            "kind": "downlink",
+            "start": 305641.26661755156,
+            "end": 309241.26661755156
+          }
+        ]
+      },
+      "evaluation": {
+        "launchable": true,
+        "issues": [],
+        "loadedMassKg": 54.364999999999995,
+        "initialFuelKg": 0.25,
+        "requiredFuelKg": 0.03614248342135964,
+        "availableDeltaVMps": 10.396079890725943,
+        "carrierMassKg": 0.4,
+        "carrierCost": 12,
+        "totalCost": 480,
+        "budget": 760,
+        "gimbalAngleDeg": 7.7995207555628046,
+        "enginePartId": "engine-1"
+      },
+      "result": {
+        "modelVersion": "swingby-1.0.0",
+        "scoreDefinitionId": "swingby-exit-1",
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "simulationStatus": "complete",
+        "evaluatedAt": 326163.76155507704,
+        "status": "success",
+        "score": 96,
+        "received": 12,
+        "required": 3,
+        "requirements": [
+          {
+            "id": "direction",
+            "status": "passed",
+            "actual": 0.061531227472301296,
+            "limit": 0.12
+          },
+          {
+            "id": "energy",
+            "status": "passed",
+            "actual": -281.89479201865623,
+            "range": [
+              -284.5,
+              -279.5
+            ]
+          },
+          {
+            "id": "safety",
+            "status": "passed",
+            "actual": 1002.5735745750299,
+            "limit": 250
+          },
+          {
+            "id": "science",
+            "status": "passed",
+            "actual": 12,
+            "limit": 3
+          }
+        ],
+        "reasons": [],
+        "elapsedSeconds": 326163.76155507704,
+        "energyMinimumWh": 120.15388384100024,
+        "fuelRemainingKg": 0.21385751657864036,
+        "totalCost": 480,
+        "budgetRemaining": 280,
+        "burn": {
+          "id": "correction",
+          "time": 3600,
+          "status": "fired",
+          "reasons": [],
+          "before": {
+            "positionKm": [
+              429318.84956555546,
+              -36703.51631162845,
+              -66504.17666674826
+            ],
+            "velocityKmS": [
+              -3.009962256548486,
+              0.30694413558878453,
+              0.4887665708537383
+            ]
+          },
+          "after": {
+            "positionKm": [
+              429318.8495655551,
+              -36703.51631162851,
+              -66504.17666674824
+            ],
+            "velocityKmS": [
+              -3.010120008468923,
+              0.3075603425911735,
+              0.4874081136848035
+            ]
+          },
+          "attitudeQuaternion": [
+            -0.47691125789712835,
+            -0.24884832088203168,
+            0.2987910154709123,
+            0.7882601692074979
+          ],
+          "requestedDeltaVMps": [
+            -0.15775192043920538,
+            0.6162070023886207,
+            -1.3584571689348799
+          ],
+          "actualDeltaVMps": [
+            -0.15775192043920536,
+            0.6162070023886207,
+            -1.3584571689348803
+          ],
+          "fuelBeforeKg": 0.25,
+          "fuelUsedKg": 0.03614248342135964,
+          "fuelAfterKg": 0.21385751657864036,
+          "centerOfMassM": [
+            0.10818894285005995,
+            -0.042164076151935966,
+            -0.05613422704668218
+          ],
+          "thrustDirectionBody": [
+            0.1204582568863472,
+            0.9907489756152175,
+            -0.06250020532206388
+          ],
+          "gimbalAngleDeg": 7.7995207555628046,
+          "pointingErrorDeg": 3.578124016646456e-15,
+          "angularRateDegS": 0
+        },
+        "achievedExit": {
+          "time": 171402.44911591674,
+          "jdTdb": 2461619.842143316,
+          "localPositionKm": [
+            -65577.41012608638,
+            -72062.08233325664,
+            -22509.099736550692
+          ],
+          "localVelocityKmS": [
+            -1.897730508128632,
+            -2.4141526089721888,
+            -0.7896643521868675
+          ],
+          "heliocentricPositionKm": [
+            -166136813.34051996,
+            -151490546.42922106,
+            -64996851.60863626
+          ],
+          "heliocentricVelocityKmS": [
+            16.075064975389097,
+            -15.988608723878855,
+            -7.500692554405133
+          ],
+          "outwardRadialSpeedKmS": 3.16191749574911,
+          "energyKm2S2": -281.89479201865623,
+          "directionErrorDeg": 0.061531227472301296,
+          "directionPassed": true,
+          "energyPassed": true
+        },
+        "packets": [
+          {
+            "id": "mars-spectrum:-11",
+            "capturedAt": 138710.3117904663,
+            "readyAt": 138725.4717904663,
+            "bits": 1600000,
+            "quality": 0.4000000001517638,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 158029.76237190826
+          },
+          {
+            "id": "mars-spectrum:-10",
+            "capturedAt": 138845.4717904663,
+            "readyAt": 138860.63179046632,
+            "bits": 1600000,
+            "quality": 0.4200441012817889,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999993,
+            "receivedAt": 177590.60170246146
+          },
+          {
+            "id": "mars-spectrum:-9",
+            "capturedAt": 139141.67033990336,
+            "readyAt": 139156.83033990336,
+            "bits": 1600000,
+            "quality": 0.4719927827315498,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999993,
+            "receivedAt": 189231.10190375318
+          },
+          {
+            "id": "mars-spectrum:-8",
+            "capturedAt": 139441.67033990336,
+            "readyAt": 139456.83033990336,
+            "bits": 1600000,
+            "quality": 0.5393327212895107,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 200871.59522492636
+          },
+          {
+            "id": "mars-spectrum:-7",
+            "capturedAt": 139741.67033990336,
+            "readyAt": 139756.83033990336,
+            "bits": 1600000,
+            "quality": 0.6284235225014582,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 212512.09103984392
+          },
+          {
+            "id": "mars-spectrum:-6",
+            "capturedAt": 140041.67033990336,
+            "readyAt": 140056.83033990336,
+            "bits": 1600000,
+            "quality": 0.7508568250189247,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 231892.91858507332
+          },
+          {
+            "id": "mars-spectrum:-5",
+            "capturedAt": 140341.67033990336,
+            "readyAt": 140356.83033990336,
+            "bits": 1600000,
+            "quality": 0.9270995295197291,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999993,
+            "receivedAt": 243533.41636024977
+          },
+          {
+            "id": "mars-spectrum:-4",
+            "capturedAt": 140641.67033990336,
+            "readyAt": 140656.83033990336,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 255173.90600904016
+          },
+          {
+            "id": "mars-spectrum:-3",
+            "capturedAt": 140941.67033990336,
+            "readyAt": 140956.83033990336,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 266814.4043985079
+          },
+          {
+            "id": "mars-spectrum:-2",
+            "capturedAt": 141241.67033990336,
+            "readyAt": 141256.83033990336,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 286195.2272847746
+          },
+          {
+            "id": "mars-spectrum:-1",
+            "capturedAt": 141541.67033990336,
+            "readyAt": 141556.83033990336,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 297835.72071532323
+          },
+          {
+            "id": "mars-spectrum:0",
+            "capturedAt": 141841.67033990336,
+            "readyAt": 141856.83033990336,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 309476.2187409639
+          }
+        ],
+        "events": [
+          {
+            "time": 0,
+            "code": "SCENARIO_START",
+            "message": "Declared actual-epoch local encounter begins; no prior flight is simulated.",
+            "severity": "info",
+            "reasonCode": "SCENARIO_START"
+          },
+          {
+            "time": 3600,
+            "code": "CORRECTION_FIRED",
+            "message": "Actual attitude-directed impulse applied and fuel charged.",
+            "severity": "info",
+            "reasonCode": "CORRECTION_FIRED"
+          },
+          {
+            "time": 138725.4717904663,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 138860.63179046632,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139156.83033990336,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139456.83033990336,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139756.83033990336,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140056.83033990336,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140356.83033990336,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140656.83033990336,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140956.83033990336,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141256.83033990336,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141556.83033990336,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141841.67033990336,
+            "code": "PERIAPSIS",
+            "message": "The actual closest approach was recorded.",
+            "severity": "info",
+            "reasonCode": "PERIAPSIS"
+          },
+          {
+            "time": 141856.83033990336,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 158029.76237190826,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 171402.44911591674,
+            "code": "EXIT_MEASURED",
+            "message": "Actual outward crossing recorded direction and specific energy.",
+            "severity": "info",
+            "reasonCode": "EXIT_MEASURED"
+          },
+          {
+            "time": 177590.60170246146,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 189231.10190375318,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 200871.59522492636,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 212512.09103984392,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 231892.91858507332,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 243533.41636024977,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 255173.90600904016,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 266814.4043985079,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 286195.2272847746,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 297835.72071532323,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 309476.2187409639,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 326163.76155507704,
+            "code": "MARS_PATCH_EXIT",
+            "message": "The supported local encounter has ended.",
+            "severity": "info",
+            "reasonCode": "MARS_PATCH_EXIT"
+          }
+        ]
+      },
+      "functionalWallMs": 23975.734999999986
+    },
+    {
+      "name": "science-craft",
+      "pass": true,
+      "craft": {
+        "version": 1,
+        "missionId": "mars",
+        "name": "PATHFINDER-H2",
+        "parts": [
+          {
+            "id": "solar-1",
+            "kind": "solarLarge",
+            "modelId": "tsp45-sixwing-v2",
+            "face": "px",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "science-1",
+            "kind": "spectrometer",
+            "modelId": "mars-spectra-v2",
+            "face": "nz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "antenna-1",
+            "kind": "antenna",
+            "modelId": "xband-reflector-1m-v1",
+            "face": "pz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "radio-1",
+            "kind": "radio",
+            "modelId": "iris22-carrier-v1",
+            "face": "py",
+            "u": -0.22,
+            "v": 0.2,
+            "rotation": 0
+          },
+          {
+            "id": "battery-1",
+            "kind": "battery",
+            "modelId": "bpx100-dual-v2",
+            "face": "py",
+            "u": -0.22,
+            "v": -0.22,
+            "rotation": 0
+          },
+          {
+            "id": "storage-1",
+            "kind": "storage",
+            "modelId": "recorder-8-v2",
+            "face": "py",
+            "u": 0.22,
+            "v": -0.22,
+            "rotation": 0
+          },
+          {
+            "id": "adcs-1",
+            "kind": "adcs",
+            "modelId": "xact50-carrier-v1",
+            "face": "py",
+            "u": 0.22,
+            "v": 0.2,
+            "rotation": 0
+          },
+          {
+            "id": "engine-1",
+            "kind": "engine",
+            "modelId": "chemical230-v2",
+            "face": "ny",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          }
+        ],
+        "plan": {
+          "altitudeKm": 600,
+          "inclinationDeg": 51.6,
+          "burnTime": 1200,
+          "progradeMps": 0,
+          "normalMps": 0,
+          "radialMps": 0,
+          "periapsisAltitudeKm": 1000,
+          "bPlaneAngleDeg": 0,
+          "operations": [
+            {
+              "id": "obs-1",
+              "kind": "observe",
+              "start": 7200,
+              "end": 10400
+            },
+            {
+              "id": "down-1",
+              "kind": "downlink",
+              "start": 10600,
+              "end": 17100
+            }
+          ]
+        },
+        "seed": 20261115,
+        "hardwareVersion": "hardware-2.0.0",
+        "busId": "pathfinder-d35-v1",
+        "activeRadioId": "radio-1"
+      },
+      "plan": {
+        "version": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "aim": {
+          "xKm": 0.006937822771334368,
+          "yKm": 248.73329086937196
+        },
+        "operations": [
+          {
+            "id": "encounter-science",
+            "kind": "observe",
+            "start": 138241.26661755153,
+            "end": 143641.26661755153
+          },
+          {
+            "id": "science-return-1",
+            "kind": "downlink",
+            "start": 143641.26661755153,
+            "end": 147241.26661755153
+          },
+          {
+            "id": "science-return-2",
+            "kind": "downlink",
+            "start": 154441.26661755153,
+            "end": 158041.26661755153
+          },
+          {
+            "id": "science-return-3",
+            "kind": "downlink",
+            "start": 165241.26661755153,
+            "end": 168841.26661755153
+          },
+          {
+            "id": "science-return-4",
+            "kind": "downlink",
+            "start": 176041.26661755153,
+            "end": 179641.26661755153
+          },
+          {
+            "id": "science-return-5",
+            "kind": "downlink",
+            "start": 186841.26661755153,
+            "end": 190441.26661755153
+          },
+          {
+            "id": "science-return-6",
+            "kind": "downlink",
+            "start": 197641.26661755153,
+            "end": 201241.26661755153
+          },
+          {
+            "id": "science-return-7",
+            "kind": "downlink",
+            "start": 208441.26661755153,
+            "end": 212041.26661755153
+          },
+          {
+            "id": "science-return-8",
+            "kind": "downlink",
+            "start": 219241.26661755153,
+            "end": 222841.26661755153
+          },
+          {
+            "id": "science-return-9",
+            "kind": "downlink",
+            "start": 230041.26661755153,
+            "end": 233641.26661755153
+          },
+          {
+            "id": "science-return-10",
+            "kind": "downlink",
+            "start": 240841.26661755153,
+            "end": 244441.26661755153
+          },
+          {
+            "id": "science-return-11",
+            "kind": "downlink",
+            "start": 251641.26661755153,
+            "end": 255241.26661755153
+          },
+          {
+            "id": "science-return-12",
+            "kind": "downlink",
+            "start": 262441.26661755156,
+            "end": 266041.26661755156
+          },
+          {
+            "id": "science-return-13",
+            "kind": "downlink",
+            "start": 273241.26661755156,
+            "end": 276841.26661755156
+          },
+          {
+            "id": "science-return-14",
+            "kind": "downlink",
+            "start": 284041.26661755156,
+            "end": 287641.26661755156
+          },
+          {
+            "id": "science-return-15",
+            "kind": "downlink",
+            "start": 294841.26661755156,
+            "end": 298441.26661755156
+          },
+          {
+            "id": "science-return-16",
+            "kind": "downlink",
+            "start": 305641.26661755156,
+            "end": 309241.26661755156
+          }
+        ]
+      },
+      "evaluation": {
+        "launchable": true,
+        "issues": [],
+        "loadedMassKg": 55.065,
+        "initialFuelKg": 0.25,
+        "requiredFuelKg": 0.04880508171639137,
+        "availableDeltaVMps": 10.263621186687649,
+        "carrierMassKg": 0.4,
+        "carrierCost": 12,
+        "totalCost": 488,
+        "budget": 760,
+        "gimbalAngleDeg": 7.7468862665880875,
+        "enginePartId": "engine-1"
+      },
+      "result": {
+        "modelVersion": "swingby-1.0.0",
+        "scoreDefinitionId": "swingby-exit-1",
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "simulationStatus": "complete",
+        "evaluatedAt": 326164.3881802467,
+        "status": "success",
+        "score": 95,
+        "received": 12,
+        "required": 3,
+        "requirements": [
+          {
+            "id": "direction",
+            "status": "passed",
+            "actual": 0.000001321436450167183,
+            "limit": 0.12
+          },
+          {
+            "id": "energy",
+            "status": "passed",
+            "actual": -281.8899229514153,
+            "range": [
+              -284.5,
+              -279.5
+            ]
+          },
+          {
+            "id": "safety",
+            "status": "passed",
+            "actual": 1004.5747528252914,
+            "limit": 250
+          },
+          {
+            "id": "science",
+            "status": "passed",
+            "actual": 12,
+            "limit": 3
+          }
+        ],
+        "reasons": [],
+        "elapsedSeconds": 326164.3881802467,
+        "energyMinimumWh": 119.6686764029286,
+        "fuelRemainingKg": 0.20119491828360864,
+        "totalCost": 488,
+        "budgetRemaining": 272,
+        "burn": {
+          "id": "correction",
+          "time": 3600,
+          "status": "fired",
+          "reasons": [],
+          "before": {
+            "positionKm": [
+              429318.84956555546,
+              -36703.51631162845,
+              -66504.17666674826
+            ],
+            "velocityKmS": [
+              -3.009962256548486,
+              0.30694413558878453,
+              0.4887665708537383
+            ]
+          },
+          "after": {
+            "positionKm": [
+              429318.8495655551,
+              -36703.51631162854,
+              -66504.17666674833
+            ],
+            "velocityKmS": [
+              -3.0101725903628203,
+              0.3077657579128459,
+              0.48695529927899983
+            ]
+          },
+          "attitudeQuaternion": [
+            -0.4787013807298142,
+            -0.24919515388505653,
+            0.29867204440631256,
+            0.7871097593460052
+          ],
+          "requestedDeltaVMps": [
+            -0.21033381433707052,
+            0.8216223240612465,
+            -1.8112715747387023
+          ],
+          "actualDeltaVMps": [
+            -0.21033381433707077,
+            0.8216223240612467,
+            -1.8112715747387027
+          ],
+          "fuelBeforeKg": 0.25,
+          "fuelUsedKg": 0.04880508171639137,
+          "fuelAfterKg": 0.20119491828360864,
+          "centerOfMassM": [
+            0.10961031286740228,
+            -0.038223009170979726,
+            -0.052623939950837674
+          ],
+          "thrustDirectionBody": [
+            0.12151792365556699,
+            0.9908732243840124,
+            -0.058340787012777624
+          ],
+          "gimbalAngleDeg": 7.7468862665880875,
+          "pointingErrorDeg": 6.8400414748910815e-15,
+          "angularRateDegS": 0
+        },
+        "achievedExit": {
+          "time": 171403.04422020866,
+          "jdTdb": 2461619.842150204,
+          "localPositionKm": [
+            -65514.65310425329,
+            -72339.6327741574,
+            -21790.083954161586
+          ],
+          "localVelocityKmS": [
+            -1.8956037583528338,
+            -2.423473140634921,
+            -0.7658653719482721
+          ],
+          "heliocentricPositionKm": [
+            -166136739.88737434,
+            -151490832.0582079,
+            -64996136.58677814
+          ],
+          "heliocentricVelocityKmS": [
+            16.077192749630523,
+            -15.997928321451084,
+            -7.476893173344615
+          ],
+          "outwardRadialSpeedKmS": 3.161912504355068,
+          "energyKm2S2": -281.8899229514153,
+          "directionErrorDeg": 0.000001321436450167183,
+          "directionPassed": true,
+          "energyPassed": true
+        },
+        "packets": [
+          {
+            "id": "mars-spectrum:-11",
+            "capturedAt": 138710.61581420898,
+            "readyAt": 138725.647814209,
+            "bits": 1600000,
+            "quality": 0.40000000103793554,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 158029.76225446467
+          },
+          {
+            "id": "mars-spectrum:-10",
+            "capturedAt": 138845.647814209,
+            "readyAt": 138860.679814209,
+            "bits": 1600000,
+            "quality": 0.4200087878077617,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999993,
+            "receivedAt": 177590.60144037122
+          },
+          {
+            "id": "mars-spectrum:-9",
+            "capturedAt": 139141.98417675195,
+            "readyAt": 139157.01617675196,
+            "bits": 1600000,
+            "quality": 0.4719876017153793,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 189291.10416285056
+          },
+          {
+            "id": "mars-spectrum:-8",
+            "capturedAt": 139441.98417675195,
+            "readyAt": 139457.01617675196,
+            "bits": 1600000,
+            "quality": 0.5393179704109621,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 200931.5973435043
+          },
+          {
+            "id": "mars-spectrum:-7",
+            "capturedAt": 139741.98417675195,
+            "readyAt": 139757.01617675196,
+            "bits": 1600000,
+            "quality": 0.6283903917413157,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 212632.09562985078
+          },
+          {
+            "id": "mars-spectrum:-6",
+            "capturedAt": 140041.98417675195,
+            "readyAt": 140057.01617675196,
+            "bits": 1600000,
+            "quality": 0.7507866353106294,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 232012.9230314611
+          },
+          {
+            "id": "mars-spectrum:-5",
+            "capturedAt": 140341.98417675195,
+            "readyAt": 140357.01617675196,
+            "bits": 1600000,
+            "quality": 0.9269494107593246,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 243653.42061039415
+          },
+          {
+            "id": "mars-spectrum:-4",
+            "capturedAt": 140641.98417675195,
+            "readyAt": 140657.01617675196,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 255293.91030208382
+          },
+          {
+            "id": "mars-spectrum:-3",
+            "capturedAt": 140941.98417675195,
+            "readyAt": 140957.01617675196,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 266934.4085870957
+          },
+          {
+            "id": "mars-spectrum:-2",
+            "capturedAt": 141241.98417675195,
+            "readyAt": 141257.01617675196,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 286375.2338367683
+          },
+          {
+            "id": "mars-spectrum:-1",
+            "capturedAt": 141541.98417675195,
+            "readyAt": 141557.01617675196,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 298015.7271968795
+          },
+          {
+            "id": "mars-spectrum:0",
+            "capturedAt": 141841.98417675195,
+            "readyAt": 141857.01617675196,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 309656.2253153675
+          }
+        ],
+        "events": [
+          {
+            "time": 0,
+            "code": "SCENARIO_START",
+            "message": "Declared actual-epoch local encounter begins; no prior flight is simulated.",
+            "severity": "info",
+            "reasonCode": "SCENARIO_START"
+          },
+          {
+            "time": 3600,
+            "code": "CORRECTION_FIRED",
+            "message": "Actual attitude-directed impulse applied and fuel charged.",
+            "severity": "info",
+            "reasonCode": "CORRECTION_FIRED"
+          },
+          {
+            "time": 138725.647814209,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 138860.679814209,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139157.01617675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139457.01617675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139757.01617675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140057.01617675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140357.01617675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140657.01617675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140957.01617675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141257.01617675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141557.01617675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141841.98417675195,
+            "code": "PERIAPSIS",
+            "message": "The actual closest approach was recorded.",
+            "severity": "info",
+            "reasonCode": "PERIAPSIS"
+          },
+          {
+            "time": 141857.01617675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 158029.76225446467,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 171403.04422020866,
+            "code": "EXIT_MEASURED",
+            "message": "Actual outward crossing recorded direction and specific energy.",
+            "severity": "info",
+            "reasonCode": "EXIT_MEASURED"
+          },
+          {
+            "time": 177590.60144037122,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 189291.10416285056,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 200931.5973435043,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 212632.09562985078,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 232012.9230314611,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 243653.42061039415,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 255293.91030208382,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 266934.4085870957,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 286375.2338367683,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 298015.7271968795,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 309656.2253153675,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 326164.3881802467,
+            "code": "MARS_PATCH_EXIT",
+            "message": "The supported local encounter has ended.",
+            "severity": "info",
+            "reasonCode": "MARS_PATCH_EXIT"
+          }
+        ]
+      },
+      "functionalWallMs": 19239.48079999999
+    },
+    {
+      "name": "starter",
+      "pass": true,
+      "craft": {
+        "version": 1,
+        "missionId": "mars",
+        "name": "PATHFINDER-H2",
+        "parts": [
+          {
+            "id": "solar-1",
+            "kind": "solarLarge",
+            "modelId": "tsp45-sixwing-v2",
+            "face": "px",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "science-1",
+            "kind": "spectrometer",
+            "modelId": "mars-spectra-v2",
+            "face": "nz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "antenna-1",
+            "kind": "antenna",
+            "modelId": "xband-reflector-1m-v1",
+            "face": "pz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "radio-1",
+            "kind": "radio",
+            "modelId": "iris22-carrier-v1",
+            "face": "py",
+            "u": -0.22,
+            "v": 0.2,
+            "rotation": 0
+          },
+          {
+            "id": "battery-1",
+            "kind": "battery",
+            "modelId": "bpx100-dual-v2",
+            "face": "py",
+            "u": -0.22,
+            "v": -0.22,
+            "rotation": 0
+          },
+          {
+            "id": "storage-1",
+            "kind": "storage",
+            "modelId": "recorder-1p6-v2",
+            "face": "py",
+            "u": 0.22,
+            "v": -0.22,
+            "rotation": 0
+          },
+          {
+            "id": "adcs-1",
+            "kind": "adcs",
+            "modelId": "xact50-carrier-v1",
+            "face": "py",
+            "u": 0.22,
+            "v": 0.2,
+            "rotation": 0
+          },
+          {
+            "id": "engine-1",
+            "kind": "engine",
+            "modelId": "chemical230-v2",
+            "face": "ny",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          }
+        ],
+        "plan": {
+          "altitudeKm": 600,
+          "inclinationDeg": 51.6,
+          "burnTime": 1200,
+          "progradeMps": 0,
+          "normalMps": 0,
+          "radialMps": 0,
+          "periapsisAltitudeKm": 1000,
+          "bPlaneAngleDeg": 0,
+          "operations": [
+            {
+              "id": "obs-1",
+              "kind": "observe",
+              "start": 7200,
+              "end": 10400
+            },
+            {
+              "id": "down-1",
+              "kind": "downlink",
+              "start": 10600,
+              "end": 17100
+            }
+          ]
+        },
+        "seed": 20261115,
+        "hardwareVersion": "hardware-2.0.0",
+        "busId": "pathfinder-d35-v1",
+        "activeRadioId": "radio-1"
+      },
+      "plan": {
+        "version": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "aim": {
+          "xKm": 1.1834992525851465e-11,
+          "yKm": 3.1101246616615038e-12
+        },
+        "operations": [
+          {
+            "id": "encounter-science",
+            "kind": "observe",
+            "start": 138241.26661755153,
+            "end": 143641.26661755153
+          },
+          {
+            "id": "science-return-1",
+            "kind": "downlink",
+            "start": 143641.26661755153,
+            "end": 147241.26661755153
+          },
+          {
+            "id": "science-return-2",
+            "kind": "downlink",
+            "start": 154441.26661755153,
+            "end": 158041.26661755153
+          },
+          {
+            "id": "science-return-3",
+            "kind": "downlink",
+            "start": 165241.26661755153,
+            "end": 168841.26661755153
+          },
+          {
+            "id": "science-return-4",
+            "kind": "downlink",
+            "start": 176041.26661755153,
+            "end": 179641.26661755153
+          },
+          {
+            "id": "science-return-5",
+            "kind": "downlink",
+            "start": 186841.26661755153,
+            "end": 190441.26661755153
+          },
+          {
+            "id": "science-return-6",
+            "kind": "downlink",
+            "start": 197641.26661755153,
+            "end": 201241.26661755153
+          },
+          {
+            "id": "science-return-7",
+            "kind": "downlink",
+            "start": 208441.26661755153,
+            "end": 212041.26661755153
+          },
+          {
+            "id": "science-return-8",
+            "kind": "downlink",
+            "start": 219241.26661755153,
+            "end": 222841.26661755153
+          },
+          {
+            "id": "science-return-9",
+            "kind": "downlink",
+            "start": 230041.26661755153,
+            "end": 233641.26661755153
+          },
+          {
+            "id": "science-return-10",
+            "kind": "downlink",
+            "start": 240841.26661755153,
+            "end": 244441.26661755153
+          },
+          {
+            "id": "science-return-11",
+            "kind": "downlink",
+            "start": 251641.26661755153,
+            "end": 255241.26661755153
+          },
+          {
+            "id": "science-return-12",
+            "kind": "downlink",
+            "start": 262441.26661755156,
+            "end": 266041.26661755156
+          },
+          {
+            "id": "science-return-13",
+            "kind": "downlink",
+            "start": 273241.26661755156,
+            "end": 276841.26661755156
+          },
+          {
+            "id": "science-return-14",
+            "kind": "downlink",
+            "start": 284041.26661755156,
+            "end": 287641.26661755156
+          },
+          {
+            "id": "science-return-15",
+            "kind": "downlink",
+            "start": 294841.26661755156,
+            "end": 298441.26661755156
+          },
+          {
+            "id": "science-return-16",
+            "kind": "downlink",
+            "start": 305641.26661755156,
+            "end": 309241.26661755156
+          }
+        ]
+      },
+      "evaluation": {
+        "launchable": true,
+        "issues": [],
+        "loadedMassKg": 54.364999999999995,
+        "initialFuelKg": 0.25,
+        "requiredFuelKg": 0,
+        "availableDeltaVMps": 10.396079890725943,
+        "carrierMassKg": 0.4,
+        "carrierCost": 12,
+        "totalCost": 480,
+        "budget": 760,
+        "gimbalAngleDeg": 7.7995207555628046,
+        "enginePartId": "engine-1"
+      },
+      "result": {
+        "modelVersion": "swingby-1.0.0",
+        "scoreDefinitionId": "swingby-exit-1",
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "simulationStatus": "complete",
+        "evaluatedAt": 326162.9554585013,
+        "status": "partial",
+        "score": 75,
+        "received": 12,
+        "required": 3,
+        "requirements": [
+          {
+            "id": "direction",
+            "status": "failed",
+            "actual": 0.24610554442966964,
+            "limit": 0.12
+          },
+          {
+            "id": "energy",
+            "status": "passed",
+            "actual": -281.961965318096,
+            "range": [
+              -284.5,
+              -279.5
+            ]
+          },
+          {
+            "id": "safety",
+            "status": "passed",
+            "actual": 999.9999999999482,
+            "limit": 250
+          },
+          {
+            "id": "science",
+            "status": "passed",
+            "actual": 12,
+            "limit": 3
+          }
+        ],
+        "reasons": [
+          "direction"
+        ],
+        "elapsedSeconds": 326162.9554585013,
+        "energyMinimumWh": 81.1637049826961,
+        "fuelRemainingKg": 0.25,
+        "totalCost": 480,
+        "budgetRemaining": 280,
+        "burn": {
+          "id": "correction",
+          "time": 3600,
+          "status": "no-op",
+          "reasons": [],
+          "before": {
+            "positionKm": [
+              429318.84956555546,
+              -36703.51631162845,
+              -66504.17666674826
+            ],
+            "velocityKmS": [
+              -3.009962256548486,
+              0.30694413558878453,
+              0.4887665708537383
+            ]
+          },
+          "after": {
+            "positionKm": [
+              429318.84956555546,
+              -36703.51631162845,
+              -66504.17666674826
+            ],
+            "velocityKmS": [
+              -3.009962256548486,
+              0.30694413558878453,
+              0.4887665708537383
+            ]
+          },
+          "attitudeQuaternion": [
+            0.8072283530122796,
+            0.2265193938689526,
+            0.2973248771527477,
+            0.45680331404273833
+          ],
+          "requestedDeltaVMps": [
+            0,
+            0,
+            0
+          ],
+          "actualDeltaVMps": [
+            0,
+            0,
+            0
+          ],
+          "fuelBeforeKg": 0.25,
+          "fuelUsedKg": 0,
+          "fuelAfterKg": 0.25,
+          "centerOfMassM": [
+            0.10818894285005995,
+            -0.042164076151935966,
+            -0.05613422704668218
+          ],
+          "thrustDirectionBody": [
+            0.1204582568863472,
+            0.9907489756152175,
+            -0.06250020532206388
+          ],
+          "gimbalAngleDeg": 7.7995207555628046,
+          "pointingErrorDeg": 0,
+          "angularRateDegS": 0
+        },
+        "achievedExit": {
+          "time": 171401.6835456627,
+          "jdTdb": 2461619.842134455,
+          "localPositionKm": [
+            -65797.70401950771,
+            -71159.90364256722,
+            -24635.954605856234
+          ],
+          "localVelocityKmS": [
+            -1.9050953574989307,
+            -2.384081766960677,
+            -0.8601437364087267
+          ],
+          "heliocentricPositionKm": [
+            -166137047.39359605,
+            -151489633.8585223,
+            -64998973.32583681
+          ],
+          "heliocentricVelocityKmS": [
+            16.067698808176296,
+            -15.958539083458168,
+            -7.571172454233149
+          ],
+          "outwardRadialSpeedKmS": 3.161923913192529,
+          "energyKm2S2": -281.961965318096,
+          "directionErrorDeg": 0.24610554442966964,
+          "directionPassed": false,
+          "energyPassed": true
+        },
+        "packets": [
+          {
+            "id": "mars-spectrum:-11",
+            "capturedAt": 138709.92095184326,
+            "readyAt": 138725.08095184327,
+            "bits": 1600000,
+            "quality": 0.40000000082989834,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 158089.76528634632
+          },
+          {
+            "id": "mars-spectrum:-10",
+            "capturedAt": 138845.08095184327,
+            "readyAt": 138860.24095184327,
+            "bits": 1600000,
+            "quality": 0.4200766777843465,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999993,
+            "receivedAt": 177530.59999979683
+          },
+          {
+            "id": "mars-spectrum:-9",
+            "capturedAt": 139141.26661755145,
+            "readyAt": 139156.42661755145,
+            "bits": 1600000,
+            "quality": 0.4719993929399683,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 189171.10041931263
+          },
+          {
+            "id": "mars-spectrum:-8",
+            "capturedAt": 139441.26661755145,
+            "readyAt": 139456.42661755145,
+            "bits": 1600000,
+            "quality": 0.5393516205334019,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 200751.5915191581
+          },
+          {
+            "id": "mars-spectrum:-7",
+            "capturedAt": 139741.26661755145,
+            "readyAt": 139756.42661755145,
+            "bits": 1600000,
+            "quality": 0.6284660331322297,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 212392.08760010483
+          },
+          {
+            "id": "mars-spectrum:-6",
+            "capturedAt": 140041.26661755145,
+            "readyAt": 140056.42661755145,
+            "bits": 1600000,
+            "quality": 0.7509469607758597,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 231712.9130497213
+          },
+          {
+            "id": "mars-spectrum:-5",
+            "capturedAt": 140341.26661755145,
+            "readyAt": 140356.42661755145,
+            "bits": 1600000,
+            "quality": 0.9272924279136656,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 243293.40876840035
+          },
+          {
+            "id": "mars-spectrum:-4",
+            "capturedAt": 140641.26661755145,
+            "readyAt": 140656.42661755145,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 254873.8958781624
+          },
+          {
+            "id": "mars-spectrum:-3",
+            "capturedAt": 140941.26661755145,
+            "readyAt": 140956.42661755145,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 266514.3945886358
+          },
+          {
+            "id": "mars-spectrum:-2",
+            "capturedAt": 141241.26661755145,
+            "readyAt": 141256.42661755145,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999993,
+            "receivedAt": 285835.21546613454
+          },
+          {
+            "id": "mars-spectrum:-1",
+            "capturedAt": 141541.26661755145,
+            "readyAt": 141556.42661755145,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999993,
+            "receivedAt": 297415.70660264883
+          },
+          {
+            "id": "mars-spectrum:0",
+            "capturedAt": 141841.26661755145,
+            "readyAt": 141856.42661755145,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 308996.20188759733
+          }
+        ],
+        "events": [
+          {
+            "time": 0,
+            "code": "SCENARIO_START",
+            "message": "Declared actual-epoch local encounter begins; no prior flight is simulated.",
+            "severity": "info",
+            "reasonCode": "SCENARIO_START"
+          },
+          {
+            "time": 3600,
+            "code": "CORRECTION_NOOP",
+            "message": "Zero correction; the original physical trajectory continues.",
+            "severity": "info",
+            "reasonCode": "CORRECTION_NOOP"
+          },
+          {
+            "time": 138725.08095184327,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 138860.24095184327,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139156.42661755145,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139456.42661755145,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139756.42661755145,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140056.42661755145,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140356.42661755145,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140656.42661755145,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140956.42661755145,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141256.42661755145,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141556.42661755145,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141841.26661755145,
+            "code": "PERIAPSIS",
+            "message": "The actual closest approach was recorded.",
+            "severity": "info",
+            "reasonCode": "PERIAPSIS"
+          },
+          {
+            "time": 141856.42661755145,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 158089.76528634632,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 171401.6835456627,
+            "code": "EXIT_MEASURED",
+            "message": "Actual outward crossing recorded direction and specific energy.",
+            "severity": "info",
+            "reasonCode": "EXIT_MEASURED"
+          },
+          {
+            "time": 177530.59999979683,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 189171.10041931263,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 200751.5915191581,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 212392.08760010483,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 231712.9130497213,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 243293.40876840035,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 254873.8958781624,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 266514.3945886358,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 285835.21546613454,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 297415.70660264883,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 308996.20188759733,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 326162.9554585013,
+            "code": "MARS_PATCH_EXIT",
+            "message": "The supported local encounter has ended.",
+            "severity": "info",
+            "reasonCode": "MARS_PATCH_EXIT"
+          }
+        ]
+      },
+      "functionalWallMs": 14986.486200000014
+    },
+    {
+      "name": "energy-only-negative",
+      "pass": true,
+      "craft": {
+        "version": 1,
+        "missionId": "mars",
+        "name": "PATHFINDER-H2",
+        "parts": [
+          {
+            "id": "solar-1",
+            "kind": "solarLarge",
+            "modelId": "tsp45-sixwing-v2",
+            "face": "px",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "science-1",
+            "kind": "spectrometer",
+            "modelId": "mars-spectra-v2",
+            "face": "nz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "antenna-1",
+            "kind": "antenna",
+            "modelId": "xband-reflector-1m-v1",
+            "face": "pz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "radio-1",
+            "kind": "radio",
+            "modelId": "iris22-carrier-v1",
+            "face": "py",
+            "u": -0.22,
+            "v": 0.2,
+            "rotation": 0
+          },
+          {
+            "id": "battery-1",
+            "kind": "battery",
+            "modelId": "bpx100-dual-v2",
+            "face": "py",
+            "u": -0.22,
+            "v": -0.22,
+            "rotation": 0
+          },
+          {
+            "id": "storage-1",
+            "kind": "storage",
+            "modelId": "recorder-1p6-v2",
+            "face": "py",
+            "u": 0.22,
+            "v": -0.22,
+            "rotation": 0
+          },
+          {
+            "id": "adcs-1",
+            "kind": "adcs",
+            "modelId": "xact50-carrier-v1",
+            "face": "py",
+            "u": 0.22,
+            "v": 0.2,
+            "rotation": 0
+          },
+          {
+            "id": "engine-1",
+            "kind": "engine",
+            "modelId": "chemical230-v2",
+            "face": "ny",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          }
+        ],
+        "plan": {
+          "altitudeKm": 600,
+          "inclinationDeg": 51.6,
+          "burnTime": 1200,
+          "progradeMps": 0,
+          "normalMps": 0,
+          "radialMps": 0,
+          "periapsisAltitudeKm": 1000,
+          "bPlaneAngleDeg": 0,
+          "operations": [
+            {
+              "id": "obs-1",
+              "kind": "observe",
+              "start": 7200,
+              "end": 10400
+            },
+            {
+              "id": "down-1",
+              "kind": "downlink",
+              "start": 10600,
+              "end": 17100
+            }
+          ]
+        },
+        "seed": 20261115,
+        "hardwareVersion": "hardware-2.0.0",
+        "busId": "pathfinder-d35-v1",
+        "activeRadioId": "radio-1"
+      },
+      "plan": {
+        "version": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "aim": {
+          "xKm": -249.1367318178357,
+          "yKm": 248.71749331313865
+        },
+        "operations": [
+          {
+            "id": "encounter-science",
+            "kind": "observe",
+            "start": 138241.26661755153,
+            "end": 143641.26661755153
+          },
+          {
+            "id": "science-return-1",
+            "kind": "downlink",
+            "start": 143641.26661755153,
+            "end": 147241.26661755153
+          },
+          {
+            "id": "science-return-2",
+            "kind": "downlink",
+            "start": 154441.26661755153,
+            "end": 158041.26661755153
+          },
+          {
+            "id": "science-return-3",
+            "kind": "downlink",
+            "start": 165241.26661755153,
+            "end": 168841.26661755153
+          },
+          {
+            "id": "science-return-4",
+            "kind": "downlink",
+            "start": 176041.26661755153,
+            "end": 179641.26661755153
+          },
+          {
+            "id": "science-return-5",
+            "kind": "downlink",
+            "start": 186841.26661755153,
+            "end": 190441.26661755153
+          },
+          {
+            "id": "science-return-6",
+            "kind": "downlink",
+            "start": 197641.26661755153,
+            "end": 201241.26661755153
+          },
+          {
+            "id": "science-return-7",
+            "kind": "downlink",
+            "start": 208441.26661755153,
+            "end": 212041.26661755153
+          },
+          {
+            "id": "science-return-8",
+            "kind": "downlink",
+            "start": 219241.26661755153,
+            "end": 222841.26661755153
+          },
+          {
+            "id": "science-return-9",
+            "kind": "downlink",
+            "start": 230041.26661755153,
+            "end": 233641.26661755153
+          },
+          {
+            "id": "science-return-10",
+            "kind": "downlink",
+            "start": 240841.26661755153,
+            "end": 244441.26661755153
+          },
+          {
+            "id": "science-return-11",
+            "kind": "downlink",
+            "start": 251641.26661755153,
+            "end": 255241.26661755153
+          },
+          {
+            "id": "science-return-12",
+            "kind": "downlink",
+            "start": 262441.26661755156,
+            "end": 266041.26661755156
+          },
+          {
+            "id": "science-return-13",
+            "kind": "downlink",
+            "start": 273241.26661755156,
+            "end": 276841.26661755156
+          },
+          {
+            "id": "science-return-14",
+            "kind": "downlink",
+            "start": 284041.26661755156,
+            "end": 287641.26661755156
+          },
+          {
+            "id": "science-return-15",
+            "kind": "downlink",
+            "start": 294841.26661755156,
+            "end": 298441.26661755156
+          },
+          {
+            "id": "science-return-16",
+            "kind": "downlink",
+            "start": 305641.26661755156,
+            "end": 309241.26661755156
+          }
+        ]
+      },
+      "evaluation": {
+        "launchable": true,
+        "issues": [],
+        "loadedMassKg": 54.364999999999995,
+        "initialFuelKg": 0.25,
+        "requiredFuelKg": 0.06813081760616133,
+        "availableDeltaVMps": 10.396079890725943,
+        "carrierMassKg": 0.4,
+        "carrierCost": 12,
+        "totalCost": 480,
+        "budget": 760,
+        "gimbalAngleDeg": 7.7995207555628046,
+        "enginePartId": "engine-1"
+      },
+      "result": {
+        "modelVersion": "swingby-1.0.0",
+        "scoreDefinitionId": "swingby-exit-1",
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "simulationStatus": "complete",
+        "evaluatedAt": 326082.8678744751,
+        "status": "partial",
+        "score": 74,
+        "received": 12,
+        "required": 3,
+        "requirements": [
+          {
+            "id": "direction",
+            "status": "passed",
+            "actual": 0.05205466562897632,
+            "limit": 0.12
+          },
+          {
+            "id": "energy",
+            "status": "failed",
+            "actual": -279.3396693480874,
+            "range": [
+              -284.5,
+              -279.5
+            ]
+          },
+          {
+            "id": "safety",
+            "status": "passed",
+            "actual": 759.4675290816112,
+            "limit": 250
+          },
+          {
+            "id": "science",
+            "status": "passed",
+            "actual": 12,
+            "limit": 3
+          }
+        ],
+        "reasons": [
+          "energy"
+        ],
+        "elapsedSeconds": 326082.8678744751,
+        "energyMinimumWh": 107.9091816981112,
+        "fuelRemainingKg": 0.18186918239383867,
+        "totalCost": 480,
+        "budgetRemaining": 280,
+        "burn": {
+          "id": "correction",
+          "time": 3600,
+          "status": "fired",
+          "reasons": [],
+          "before": {
+            "positionKm": [
+              429318.84956555546,
+              -36703.51631162845,
+              -66504.17666674826
+            ],
+            "velocityKmS": [
+              -3.009962256548486,
+              0.30694413558878453,
+              0.4887665708537383
+            ]
+          },
+          "after": {
+            "positionKm": [
+              429318.849565555,
+              -36703.516311628686,
+              -66504.17666674839
+            ],
+            "velocityKmS": [
+              -3.0104850246759582,
+              0.3059532777237033,
+              0.4861694735941524
+            ]
+          },
+          "attitudeQuaternion": [
+            -0.7441681457139342,
+            -0.0585831665999919,
+            0.3573014805876217,
+            0.5613532180950743
+          ],
+          "requestedDeltaVMps": [
+            -0.5227681274765732,
+            -0.9908578650825807,
+            -2.597097259586728
+          ],
+          "actualDeltaVMps": [
+            -0.5227681274765734,
+            -0.9908578650825807,
+            -2.5970972595867283
+          ],
+          "fuelBeforeKg": 0.25,
+          "fuelUsedKg": 0.06813081760616133,
+          "fuelAfterKg": 0.18186918239383867,
+          "centerOfMassM": [
+            0.10818894285005995,
+            -0.042164076151935966,
+            -0.05613422704668218
+          ],
+          "thrustDirectionBody": [
+            0.1204582568863472,
+            0.9907489756152175,
+            -0.06250020532206388
+          ],
+          "gimbalAngleDeg": 7.7995207555628046,
+          "pointingErrorDeg": 3.555968236953808e-15,
+          "angularRateDegS": 0
+        },
+        "achievedExit": {
+          "time": 171327.08696912593,
+          "jdTdb": 2461619.841271069,
+          "localPositionKm": [
+            -62688.013227946154,
+            -74478.45069789732,
+            -22872.983608915212
+          ],
+          "localVelocityKmS": [
+            -1.8077370970540194,
+            -2.480435624851202,
+            -0.7953710699448306
+          ],
+          "heliocentricPositionKm": [
+            -166135278.4069547,
+            -151491939.7931482,
+            -64996709.73318954
+          ],
+          "heliocentricVelocityKmS": [
+            16.16492865638642,
+            -16.0550100249451,
+            -7.506450028704734
+          ],
+          "outwardRadialSpeedKmS": 3.162549588934135,
+          "energyKm2S2": -279.3396693480874,
+          "directionErrorDeg": 0.05205466562897632,
+          "directionPassed": true,
+          "energyPassed": false
+        },
+        "packets": [
+          {
+            "id": "mars-spectrum:-11",
+            "capturedAt": 138672.55484771729,
+            "readyAt": 138687.7148477173,
+            "bits": 1600000,
+            "quality": 0.4000000007207473,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 157849.7510414724
+          },
+          {
+            "id": "mars-spectrum:-10",
+            "capturedAt": 138807.7148477173,
+            "readyAt": 138822.8748477173,
+            "bits": 1600000,
+            "quality": 0.4200609219076999,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 169550.2464845979
+          },
+          {
+            "id": "mars-spectrum:-9",
+            "capturedAt": 139101.4257123512,
+            "readyAt": 139116.5857123512,
+            "bits": 1600000,
+            "quality": 0.47234781160406625,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 188931.07713741183
+          },
+          {
+            "id": "mars-spectrum:-8",
+            "capturedAt": 139401.4257123512,
+            "readyAt": 139416.5857123512,
+            "bits": 1600000,
+            "quality": 0.5407549424866551,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 200571.56782467375
+          },
+          {
+            "id": "mars-spectrum:-7",
+            "capturedAt": 139701.4257123512,
+            "readyAt": 139716.5857123512,
+            "bits": 1600000,
+            "quality": 0.6319409065458672,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 212212.06073237833
+          },
+          {
+            "id": "mars-spectrum:-6",
+            "capturedAt": 140001.4257123512,
+            "readyAt": 140016.5857123512,
+            "bits": 1600000,
+            "quality": 0.7586886851248877,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999995,
+            "receivedAt": 231532.88097731196
+          },
+          {
+            "id": "mars-spectrum:-5",
+            "capturedAt": 140301.4257123512,
+            "readyAt": 140316.5857123512,
+            "bits": 1600000,
+            "quality": 0.9444598467382381,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.999999999,
+            "receivedAt": 243173.37624132878
+          },
+          {
+            "id": "mars-spectrum:-4",
+            "capturedAt": 140601.4257123512,
+            "readyAt": 140616.5857123512,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 254753.8601376989
+          },
+          {
+            "id": "mars-spectrum:-3",
+            "capturedAt": 140901.4257123512,
+            "readyAt": 140916.5857123512,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 266394.3557768346
+          },
+          {
+            "id": "mars-spectrum:-2",
+            "capturedAt": 141201.4257123512,
+            "readyAt": 141216.5857123512,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999993,
+            "receivedAt": 285715.17158188316
+          },
+          {
+            "id": "mars-spectrum:-1",
+            "capturedAt": 141501.4257123512,
+            "readyAt": 141516.5857123512,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1599999.9999999993,
+            "receivedAt": 297355.6621867612
+          },
+          {
+            "id": "mars-spectrum:0",
+            "capturedAt": 141801.4257123512,
+            "readyAt": 141816.5857123512,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 1600000,
+            "receivedBits": 1600000,
+            "receivedAt": 308936.1543792645
+          }
+        ],
+        "events": [
+          {
+            "time": 0,
+            "code": "SCENARIO_START",
+            "message": "Declared actual-epoch local encounter begins; no prior flight is simulated.",
+            "severity": "info",
+            "reasonCode": "SCENARIO_START"
+          },
+          {
+            "time": 3600,
+            "code": "CORRECTION_FIRED",
+            "message": "Actual attitude-directed impulse applied and fuel charged.",
+            "severity": "info",
+            "reasonCode": "CORRECTION_FIRED"
+          },
+          {
+            "time": 138687.7148477173,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 138822.8748477173,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139116.5857123512,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139416.5857123512,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139716.5857123512,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140016.5857123512,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140316.5857123512,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140616.5857123512,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140916.5857123512,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141216.5857123512,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141516.5857123512,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141801.4257123512,
+            "code": "PERIAPSIS",
+            "message": "The actual closest approach was recorded.",
+            "severity": "info",
+            "reasonCode": "PERIAPSIS"
+          },
+          {
+            "time": 141816.5857123512,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 157849.7510414724,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 169550.2464845979,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 171327.08696912593,
+            "code": "EXIT_MEASURED",
+            "message": "Actual outward crossing recorded direction and specific energy.",
+            "severity": "info",
+            "reasonCode": "EXIT_MEASURED"
+          },
+          {
+            "time": 188931.07713741183,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 200571.56782467375,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 212212.06073237833,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 231532.88097731196,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 243173.37624132878,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 254753.8601376989,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 266394.3557768346,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 285715.17158188316,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 297355.6621867612,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 308936.1543792645,
+            "code": "DATA_RECEIVED",
+            "message": "A complete unique spectrum has reached Earth.",
+            "severity": "info",
+            "reasonCode": "DATA_RECEIVED"
+          },
+          {
+            "time": 326082.8678744751,
+            "code": "MARS_PATCH_EXIT",
+            "message": "The supported local encounter has ended.",
+            "severity": "info",
+            "reasonCode": "MARS_PATCH_EXIT"
+          }
+        ]
+      },
+      "functionalWallMs": 17353.13559999998
+    },
+    {
+      "name": "no-downlink",
+      "pass": true,
+      "craft": {
+        "version": 1,
+        "missionId": "mars",
+        "name": "PATHFINDER-H2",
+        "parts": [
+          {
+            "id": "solar-1",
+            "kind": "solarLarge",
+            "modelId": "tsp45-sixwing-v2",
+            "face": "px",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "science-1",
+            "kind": "spectrometer",
+            "modelId": "mars-spectra-v2",
+            "face": "nz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "antenna-1",
+            "kind": "antenna",
+            "modelId": "xband-reflector-1m-v1",
+            "face": "pz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "radio-1",
+            "kind": "radio",
+            "modelId": "iris22-carrier-v1",
+            "face": "py",
+            "u": -0.22,
+            "v": 0.2,
+            "rotation": 0
+          },
+          {
+            "id": "battery-1",
+            "kind": "battery",
+            "modelId": "bpx100-dual-v2",
+            "face": "py",
+            "u": -0.22,
+            "v": -0.22,
+            "rotation": 0
+          },
+          {
+            "id": "storage-1",
+            "kind": "storage",
+            "modelId": "recorder-1p6-v2",
+            "face": "py",
+            "u": 0.22,
+            "v": -0.22,
+            "rotation": 0
+          },
+          {
+            "id": "adcs-1",
+            "kind": "adcs",
+            "modelId": "xact50-carrier-v1",
+            "face": "py",
+            "u": 0.22,
+            "v": 0.2,
+            "rotation": 0
+          },
+          {
+            "id": "engine-1",
+            "kind": "engine",
+            "modelId": "chemical230-v2",
+            "face": "ny",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          }
+        ],
+        "plan": {
+          "altitudeKm": 600,
+          "inclinationDeg": 51.6,
+          "burnTime": 1200,
+          "progradeMps": 0,
+          "normalMps": 0,
+          "radialMps": 0,
+          "periapsisAltitudeKm": 1000,
+          "bPlaneAngleDeg": 0,
+          "operations": [
+            {
+              "id": "obs-1",
+              "kind": "observe",
+              "start": 7200,
+              "end": 10400
+            },
+            {
+              "id": "down-1",
+              "kind": "downlink",
+              "start": 10600,
+              "end": 17100
+            }
+          ]
+        },
+        "seed": 20261115,
+        "hardwareVersion": "hardware-2.0.0",
+        "busId": "pathfinder-d35-v1",
+        "activeRadioId": "radio-1"
+      },
+      "plan": {
+        "version": 1,
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "aim": {
+          "xKm": 0.006937822771334368,
+          "yKm": 248.73329086937196
+        },
+        "operations": [
+          {
+            "id": "encounter-science",
+            "kind": "observe",
+            "start": 138241.26661755153,
+            "end": 143641.26661755153
+          }
+        ]
+      },
+      "evaluation": {
+        "launchable": true,
+        "issues": [],
+        "loadedMassKg": 54.364999999999995,
+        "initialFuelKg": 0.25,
+        "requiredFuelKg": 0.04818465935733436,
+        "availableDeltaVMps": 10.396079890725943,
+        "carrierMassKg": 0.4,
+        "carrierCost": 12,
+        "totalCost": 480,
+        "budget": 760,
+        "gimbalAngleDeg": 7.7995207555628046,
+        "enginePartId": "engine-1"
+      },
+      "result": {
+        "modelVersion": "swingby-1.0.0",
+        "scoreDefinitionId": "swingby-exit-1",
+        "scenarioId": "mars-exit-corridor-2027-v1",
+        "scenarioHash": "f885da27a370025eccee8f5d3d7d688f6f5a4244f2a74dedfe010062f7825091",
+        "simulationStatus": "complete",
+        "evaluatedAt": 326164.3881802467,
+        "status": "failed",
+        "score": 55,
+        "received": 0,
+        "required": 3,
+        "requirements": [
+          {
+            "id": "direction",
+            "status": "passed",
+            "actual": 0.000001321436450167183,
+            "limit": 0.12
+          },
+          {
+            "id": "energy",
+            "status": "passed",
+            "actual": -281.8899229514153,
+            "range": [
+              -284.5,
+              -279.5
+            ]
+          },
+          {
+            "id": "safety",
+            "status": "passed",
+            "actual": 1004.5747528252914,
+            "limit": 250
+          },
+          {
+            "id": "science",
+            "status": "failed",
+            "actual": 0,
+            "limit": 3
+          }
+        ],
+        "reasons": [
+          "science"
+        ],
+        "elapsedSeconds": 326164.3881802467,
+        "energyMinimumWh": 120.76772039153677,
+        "fuelRemainingKg": 0.20181534064266565,
+        "totalCost": 480,
+        "budgetRemaining": 280,
+        "burn": {
+          "id": "correction",
+          "time": 3600,
+          "status": "fired",
+          "reasons": [],
+          "before": {
+            "positionKm": [
+              429318.84956555546,
+              -36703.51631162845,
+              -66504.17666674826
+            ],
+            "velocityKmS": [
+              -3.009962256548486,
+              0.30694413558878453,
+              0.4887665708537383
+            ]
+          },
+          "after": {
+            "positionKm": [
+              429318.8495655551,
+              -36703.51631162854,
+              -66504.17666674833
+            ],
+            "velocityKmS": [
+              -3.0101725903628203,
+              0.3077657579128459,
+              0.48695529927899983
+            ]
+          },
+          "attitudeQuaternion": [
+            -0.47690878197118197,
+            -0.248849453355418,
+            0.29878962430141776,
+            0.7882618369890115
+          ],
+          "requestedDeltaVMps": [
+            -0.21033381433707052,
+            0.8216223240612465,
+            -1.8112715747387023
+          ],
+          "actualDeltaVMps": [
+            -0.2103338143370708,
+            0.8216223240612464,
+            -1.8112715747387025
+          ],
+          "fuelBeforeKg": 0.25,
+          "fuelUsedKg": 0.04818465935733436,
+          "fuelAfterKg": 0.20181534064266565,
+          "centerOfMassM": [
+            0.10818894285005995,
+            -0.042164076151935966,
+            -0.05613422704668218
+          ],
+          "thrustDirectionBody": [
+            0.1204582568863472,
+            0.9907489756152175,
+            -0.06250020532206388
+          ],
+          "gimbalAngleDeg": 7.7995207555628046,
+          "pointingErrorDeg": 9.83532217479511e-15,
+          "angularRateDegS": 0
+        },
+        "achievedExit": {
+          "time": 171403.04422020866,
+          "jdTdb": 2461619.842150204,
+          "localPositionKm": [
+            -65514.65310425329,
+            -72339.6327741574,
+            -21790.083954161586
+          ],
+          "localVelocityKmS": [
+            -1.8956037583528338,
+            -2.423473140634921,
+            -0.7658653719482721
+          ],
+          "heliocentricPositionKm": [
+            -166136739.88737434,
+            -151490832.0582079,
+            -64996136.58677814
+          ],
+          "heliocentricVelocityKmS": [
+            16.077192749630523,
+            -15.997928321451084,
+            -7.476893173344615
+          ],
+          "outwardRadialSpeedKmS": 3.161912504355068,
+          "energyKm2S2": -281.8899229514153,
+          "directionErrorDeg": 0.000001321436450167183,
+          "directionPassed": true,
+          "energyPassed": true
+        },
+        "packets": [
+          {
+            "id": "mars-spectrum:-11",
+            "capturedAt": 138710.61581420898,
+            "readyAt": 138725.775814209,
+            "bits": 1600000,
+            "quality": 0.40000000103793554,
+            "transmittedBits": 0,
+            "receivedBits": 0,
+            "receivedAt": null
+          },
+          {
+            "id": "mars-spectrum:-10",
+            "capturedAt": 138845.775814209,
+            "readyAt": 138860.935814209,
+            "bits": 1600000,
+            "quality": 0.4200187702580085,
+            "transmittedBits": 0,
+            "receivedBits": 0,
+            "receivedAt": null
+          },
+          {
+            "id": "mars-spectrum:-9",
+            "capturedAt": 139141.98417675195,
+            "readyAt": 139157.14417675196,
+            "bits": 1600000,
+            "quality": 0.4719876017153793,
+            "transmittedBits": 0,
+            "receivedBits": 0,
+            "receivedAt": null
+          },
+          {
+            "id": "mars-spectrum:-8",
+            "capturedAt": 139441.98417675195,
+            "readyAt": 139457.14417675196,
+            "bits": 1600000,
+            "quality": 0.5393179704109621,
+            "transmittedBits": 0,
+            "receivedBits": 0,
+            "receivedAt": null
+          },
+          {
+            "id": "mars-spectrum:-7",
+            "capturedAt": 139741.98417675195,
+            "readyAt": 139757.14417675196,
+            "bits": 1600000,
+            "quality": 0.6283903917413157,
+            "transmittedBits": 0,
+            "receivedBits": 0,
+            "receivedAt": null
+          },
+          {
+            "id": "mars-spectrum:-6",
+            "capturedAt": 140041.98417675195,
+            "readyAt": 140057.14417675196,
+            "bits": 1600000,
+            "quality": 0.7507866353106294,
+            "transmittedBits": 0,
+            "receivedBits": 0,
+            "receivedAt": null
+          },
+          {
+            "id": "mars-spectrum:-5",
+            "capturedAt": 140341.98417675195,
+            "readyAt": 140357.14417675196,
+            "bits": 1600000,
+            "quality": 0.9269494107593246,
+            "transmittedBits": 0,
+            "receivedBits": 0,
+            "receivedAt": null
+          },
+          {
+            "id": "mars-spectrum:-4",
+            "capturedAt": 140641.98417675195,
+            "readyAt": 140657.14417675196,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 0,
+            "receivedBits": 0,
+            "receivedAt": null
+          },
+          {
+            "id": "mars-spectrum:-3",
+            "capturedAt": 140941.98417675195,
+            "readyAt": 140957.14417675196,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 0,
+            "receivedBits": 0,
+            "receivedAt": null
+          },
+          {
+            "id": "mars-spectrum:-2",
+            "capturedAt": 141241.98417675195,
+            "readyAt": 141257.14417675196,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 0,
+            "receivedBits": 0,
+            "receivedAt": null
+          },
+          {
+            "id": "mars-spectrum:-1",
+            "capturedAt": 141541.98417675195,
+            "readyAt": 141557.14417675196,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 0,
+            "receivedBits": 0,
+            "receivedAt": null
+          },
+          {
+            "id": "mars-spectrum:0",
+            "capturedAt": 141841.98417675195,
+            "readyAt": 141857.14417675196,
+            "bits": 1600000,
+            "quality": 1,
+            "transmittedBits": 0,
+            "receivedBits": 0,
+            "receivedAt": null
+          }
+        ],
+        "events": [
+          {
+            "time": 0,
+            "code": "SCENARIO_START",
+            "message": "Declared actual-epoch local encounter begins; no prior flight is simulated.",
+            "severity": "info",
+            "reasonCode": "SCENARIO_START"
+          },
+          {
+            "time": 3600,
+            "code": "CORRECTION_FIRED",
+            "message": "Actual attitude-directed impulse applied and fuel charged.",
+            "severity": "info",
+            "reasonCode": "CORRECTION_FIRED"
+          },
+          {
+            "time": 138725.775814209,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 138860.935814209,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139157.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139457.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 139757.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140057.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140357.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140657.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 140957.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141257.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141557.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 141841.98417675195,
+            "code": "PERIAPSIS",
+            "message": "The actual closest approach was recorded.",
+            "severity": "info",
+            "reasonCode": "PERIAPSIS"
+          },
+          {
+            "time": 141857.14417675196,
+            "code": "SCIENCE_CAPTURED",
+            "message": "노출 및 데이터 버스 기록을 마친 화성 분광 자료를 저장했습니다.",
+            "severity": "info"
+          },
+          {
+            "time": 171403.04422020866,
+            "code": "EXIT_MEASURED",
+            "message": "Actual outward crossing recorded direction and specific energy.",
+            "severity": "info",
+            "reasonCode": "EXIT_MEASURED"
+          },
+          {
+            "time": 326164.3881802467,
+            "code": "MARS_PATCH_EXIT",
+            "message": "The supported local encounter has ended.",
+            "severity": "info",
+            "reasonCode": "MARS_PATCH_EXIT"
+          }
+        ]
+      },
+      "functionalWallMs": 5434.103600000002
+    }
+  ]
+}

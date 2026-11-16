@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'./tests/browser',timeout:60000,expect:{timeout:15000},use:{baseURL:process.env.PLAYWRIGHT_BASE_URL||'http://127.0.0.1:5173',viewport:{width:1440,height:900},headless:true,channel:process.env.PLAYWRIGHT_BROWSER==='edge'?'msedge':undefined,launchOptions:{...(process.env.PLAYWRIGHT_EXECUTABLE_PATH?{executablePath:process.env.PLAYWRIGHT_EXECUTABLE_PATH}:{}),args:['--disable-background-timer-throttling']}},workers:1,reporter:'list',outputDir:'test-results'});

@@ -1,0 +1,26 @@
+[
+  {
+    "path": "tests\\deployment-scene.test.ts",
+    "sourceSha256": "7df03eafff4c22b073b64531205f86f114e056f555c40fe1142cb5e170decc16",
+    "adaptation": null
+  },
+  {
+    "path": "tests\\deployment-grab.test.ts",
+    "sourceSha256": "4a88f22b764000ff9373ac779a56c372a4e3387c243e2263dbf477933d931461",
+    "adaptation": null
+  },
+  {
+    "path": "tests\\deployment-view.test.ts",
+    "sourceSha256": "729df5088ed272a797a657d988dae24f364617866e6f237554b627579b8cf4ee",
+    "adaptation": null
+  },
+  {
+    "path": "tests\\hinge-manipulator.test.ts",
+    "sourceSha256": "99fb56c381c9a86addf0683832451e79e0c1ff94058d836218271bba8f57d715",
+    "adaptation": null
+  },
+  {
+    "path": "tests/deployment-internal-art.test.ts",
+    "adaptation": "Baseline moved from product src to test fixtures; only relative imports adjusted in test and fixture. Baseline implementation unchanged."
+  }
+]

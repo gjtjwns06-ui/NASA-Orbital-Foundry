@@ -1,0 +1,31 @@
+{
+  "model": "transfer-1.0.0",
+  "timeScale": "TDB",
+  "frame": "Sun-centred geometric ICRF",
+  "datasetId": "jpl-horizons-icrf-tdb-20260801-20280301-v1",
+  "source": {
+    "earth": {
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%4010%27&START_TIME=%272026-08-01%27&STOP_TIME=%272028-03-01%27&STEP_SIZE=%276+h%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27FRAME%27&OUT_UNITS=%27KM-S%27&TIME_TYPE=%27TDB%27&VEC_TABLE=%272%27&VEC_CORR=%27NONE%27&CSV_FORMAT=%27YES%27&VEC_LABELS=%27YES%27&COMMAND=%27399%27",
+      "sha256": "785c43fe2189d1470b03ee33ccace2eafbe897dde7f7e09f9dee34b1fa7aa22e",
+      "samples": 2313,
+      "stepSeconds": 21600
+    },
+    "mars": {
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&OBJ_DATA=%27YES%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%4010%27&START_TIME=%272026-08-01%27&STOP_TIME=%272028-03-01%27&STEP_SIZE=%276+h%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27FRAME%27&OUT_UNITS=%27KM-S%27&TIME_TYPE=%27TDB%27&VEC_TABLE=%272%27&VEC_CORR=%27NONE%27&CSV_FORMAT=%27YES%27&VEC_LABELS=%27YES%27&COMMAND=%27499%27",
+      "sha256": "959901a397605c0b2d1b0fae5799172fe927b16fd30bbbe3fbcf2ea4ed1ef2d4",
+      "samples": 2313,
+      "stepSeconds": 21600
+    }
+  },
+  "limitations": [
+    "Patched central-body gravity, not continuous n-body acceleration.",
+    "Ideal aligned impulsive escape stage. No finite-burn or atmospheric launch model.",
+    "Reference-case GMAT propagation does not validate celestial frame or TDB/TAI conversion.",
+    "Stage, RF, sensor, attitude and resource policies contain disclosed educational assumptions."
+  ],
+  "evidence": {
+    "propagation": "gmat-research-summary.json",
+    "interpolation": "interpolation-report.json",
+    "model": "model.md"
+  }
+}

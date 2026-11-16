@@ -1,0 +1,14 @@
+{
+  "exitCode": 4294967295,
+  "startedAtUtc": "2026-11-15T04:45:26.705226+00:00",
+  "endedAtUtc": "2026-11-15T04:45:55.893383+00:00",
+  "wallSeconds": 29.188171200017678,
+  "command": [
+    "run",
+    "--maxWorkers=1",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-deployment\\docs\\qa\\resumed-full-suite-2026-11-15T04-45-26Z\\vitest-results.json"
+  ],
+  "output": "docs/qa/resumed-full-suite-2026-11-15T04-45-26Z"
+}

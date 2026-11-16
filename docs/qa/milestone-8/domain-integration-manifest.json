@@ -1,0 +1,188 @@
+{
+  "status": "Production source frozen: original full suite interrupted without terminal verdict; source-matched recovery1 and terminal3 retained; resumed18-file/65-case continuation running",
+  "modelVersion": "deployment-1.0.0",
+  "productionFiles": [
+    {
+      "path": "src/deployment/clearance.ts",
+      "sha256": "dd6f8dd65a32043e683e9844a7188a06664128983fd98a290f8e758b92e5f690"
+    },
+    {
+      "path": "src/deployment/craft.ts",
+      "sha256": "cb2d0e589ef3640039c59caa538418f6ee2e52361024380fe5d266d44fdfbc16"
+    },
+    {
+      "path": "src/deployment/devices.ts",
+      "sha256": "b9693f16d2c5565dab3d30dc3a19cabdab3bddb1cb1114c10210ccd955b3573c"
+    },
+    {
+      "path": "src/deployment/drive-feasibility.ts",
+      "sha256": "3ec4e57381bbf0f710db7ed8fae882797ab2fc2c361b8a9bfbbc5bb217569e01"
+    },
+    {
+      "path": "src/deployment/environment.ts",
+      "sha256": "c54f302350a21009fa8d5af609dcf666be8e1b9390cdcc73fbeb713d857c18ca"
+    },
+    {
+      "path": "src/deployment/identity.ts",
+      "sha256": "357ad661c316a485793ebd9644f1fb038638de7fe1c5a28c6c6d46126730e943"
+    },
+    {
+      "path": "src/deployment/index.ts",
+      "sha256": "b3c2c05f7e0da478d2074043630aea928c62ad64190bc5af6195b128df2d6844"
+    },
+    {
+      "path": "src/deployment/kinematics.ts",
+      "sha256": "7cae3a5de631464ce1544b3d2a61a93802b69e941e3a6d79f15291fe70849877"
+    },
+    {
+      "path": "src/deployment/lessons.ts",
+      "sha256": "b9c3bec80b9fe034c7933da2284de2c4dadecba9384bf0fdfa3e81ea967f9c2f"
+    },
+    {
+      "path": "src/deployment/math.ts",
+      "sha256": "c772617c4f2a34114371f9d3b88775fa3df02e95a2e3fdc12c029680f4d97b67"
+    },
+    {
+      "path": "src/deployment/mechanism.ts",
+      "sha256": "8c558d11280dd385073b5d259fef9a6eb95f95127791d7817e16e7824b64584d"
+    },
+    {
+      "path": "src/deployment/momentum.ts",
+      "sha256": "ddff5498117277ba3a7339a289cd3a0ef4333a21b5cb94820f6eed37f99a4ced"
+    },
+    {
+      "path": "src/deployment/motion.ts",
+      "sha256": "1849b9490f25066f4598971acbdd501bb3578017db881ceafb866b1292735891"
+    },
+    {
+      "path": "src/deployment/persistence.ts",
+      "sha256": "454549781a9b88482ebd601cd7e64422a2bc7bf2c493921ffa018a349739e957"
+    },
+    {
+      "path": "src/deployment/plan.ts",
+      "sha256": "889275f219759083f37b6c08a002016e963d5f245679049e7e50e38b18a13e32"
+    },
+    {
+      "path": "src/deployment/power.ts",
+      "sha256": "7c808a0a87c5d2a843345cc99b677162b10471a9a19dabb49780e7f8f83a65f6"
+    },
+    {
+      "path": "src/deployment/runtime.ts",
+      "sha256": "e28a7ff09a957e1438299cfa85d0800b8b4119cc6c5a671008a486210782a7aa"
+    },
+    {
+      "path": "src/deployment/types.ts",
+      "sha256": "4d2fdfe9781a832f77bd2cc4eb3dc2c046ecb6c5f54ff409f75183717196a28b"
+    },
+    {
+      "path": "src/deployment/visibility.ts",
+      "sha256": "496fdac44d3f386922f56f3e3f38652b410d9d2f231d175b673201a9b2e65138"
+    }
+  ],
+  "legacyDependencyManifest": "research/legacy-dependency-manifest.json",
+  "sharedProductionChanges": [],
+  "scope": "New isolated deployment domain only. No main/render/UI/Worker changes.",
+  "terminalEvidence": "docs/qa/terminal-drain-2026-11-14T23-44-48-963Z/report.json",
+  "contract": "docs/deployment-terminal-handoff.md",
+  "testFiles": [
+    {
+      "sha256": "7b685b8143fe580df41ea964b1e719dcf64c74793c4935cd288f5d8ca17e6aec",
+      "path": "tests/deployment-clearance-lesson.test.ts"
+    },
+    {
+      "sha256": "6e96a182bb5aef53ee877ea9f3452aea07a5d9057435220b32d9342722551f11",
+      "path": "tests/deployment-clearance.test.ts"
+    },
+    {
+      "sha256": "b27c7ead7c5bde8126a887edbdecbf9c155ca80ff9af9fc68864d1fbb56ed8a1",
+      "path": "tests/deployment-convergence.test.ts"
+    },
+    {
+      "sha256": "5c9e4311bf9448893c5e033e027a69f69ba52f2fe79f21e3b4837c6fcead7d1d",
+      "path": "tests/deployment-craft.test.ts"
+    },
+    {
+      "sha256": "0a8533023d25a87abf7a3700c2abf3a211b15c216b7747af5ab58c194d7ebf6d",
+      "path": "tests/deployment-devices.test.ts"
+    },
+    {
+      "sha256": "a41924b2caace0c1b9f0d2b058c09163217a2beaa5358e332da3890a0e835e4f",
+      "path": "tests/deployment-drive-feasibility.test.ts"
+    },
+    {
+      "sha256": "efaa7858c655c415c2e7fb201609fd948c6e88f99784bf5c23b9dfc46ce34b12",
+      "path": "tests/deployment-dynamics.test.ts"
+    },
+    {
+      "sha256": "3e9f73dd4bccbb303c6e555840cfc7e66cbf4a5ce0c7c206adb59d20f38587ef",
+      "path": "tests/deployment-fixed-flight.test.ts"
+    },
+    {
+      "sha256": "cafa28c3d86c23654454bb60c8d653527dab6b68c28cce080a2051188abfa7d9",
+      "path": "tests/deployment-flight-variants.test.ts"
+    },
+    {
+      "sha256": "1ad90b14fc5036578e9679382c77a36d73ef49385bee9ff4e6f0f47bafa1b8ac",
+      "path": "tests/deployment-kinematics.test.ts"
+    },
+    {
+      "sha256": "d4b6d677ba9d507ff4d427265dc9e20feae1c0a22739288f7aefda0a7508c71d",
+      "path": "tests/deployment-mechanism.test.ts"
+    },
+    {
+      "sha256": "4bf5ff2b1d46d8bca6477afaeef6316458c260257c4f3a82234f27b47d884b1d",
+      "path": "tests/deployment-mission.test.ts"
+    },
+    {
+      "sha256": "4aac8757fe21441e8925e11af4ce998de34a6e019164a18146201df76171e639",
+      "path": "tests/deployment-outage-boundaries.test.ts"
+    },
+    {
+      "sha256": "8461d42e6dc602c0f86263f562cdf2686d00f3b4b36154bce6a03e4e418ce468",
+      "path": "tests/deployment-partition.test.ts"
+    },
+    {
+      "sha256": "6947666c07360127422f5e549642e76006dde36a10f7c1844452b1a8a0404867",
+      "path": "tests/deployment-recovery-convergence.test.ts"
+    },
+    {
+      "sha256": "a8a10583f7a88ed8a46db79706a32d80a1601a5b6d07b11b8348837d4d14f236",
+      "path": "tests/deployment-recovery-replay.test.ts"
+    },
+    {
+      "sha256": "54ba6e0a9361eb60034abb583bd714e247cecab7075ffd807a837dc743062b3a",
+      "path": "tests/deployment-reference-dynamics.test.ts"
+    },
+    {
+      "sha256": "89437f6ea8648657987dad7d615ec7e9d1e4ef36cf28b90cfb49789cf6a7c1c2",
+      "path": "tests/deployment-replay.test.ts"
+    },
+    {
+      "sha256": "ae8f9c18fe295737b4a24078886fe459fbd8714da5de26180ebc4183e2b047f3",
+      "path": "tests/deployment-runtime.test.ts"
+    },
+    {
+      "sha256": "e3be42991f4617ad06b9ca27e5ec74219b6497aee32aa2715994e2cc172a25f4",
+      "path": "tests/deployment-terminal-drain.test.ts"
+    }
+  ],
+  "requiredTestFixtures": [
+    {
+      "sha256": "a093244be4d676d58d3c542d80af06280a4b8497f8f77d9e88f5cb7918972d6f",
+      "path": "tests/fixtures/deployment/recovery-full-candidate.json"
+    },
+    {
+      "sha256": "5162990da1ff8337cc75c4cc2bc26f37bf3b9dfc9ce32eef5acd5cfdde3b4079",
+      "path": "tests/fixtures/deployment/recovery-full-candidate.provenance.json"
+    },
+    {
+      "sha256": "ac3f106d6cb95d4e9e1cac8418758d29e0acb5b3b54a7aaaa87ab02c0d1419c5",
+      "path": "docs/qa/mission-2026-11-14T22-37-57-328Z/compact-save.json"
+    },
+    {
+      "sha256": "dbdc2963f7c46be5f1ac7769d84734bc1271a7d8c813b1bb5c5b8235cfdffa8d",
+      "path": "research/legacy-dependency-manifest.json"
+    }
+  ],
+  "resumedAcceptance": "docs/qa/resumed-continuation-2026-11-15T04-46-12Z/scope.json"
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "file": "launch-campus.glb",
+    "triangles": 122782,
+    "meshObjects": 26,
+    "bytes": 3566520,
+    "authoredBy": "Orbital Foundry project",
+    "coordinates": "glTF Y-up, metres"
+  },
+  {
+    "file": "hangar.glb",
+    "triangles": 132740,
+    "meshObjects": 15,
+    "bytes": 3432944,
+    "authoredBy": "Orbital Foundry project",
+    "coordinates": "glTF Y-up, metres"
+  }
+]

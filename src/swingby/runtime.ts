@@ -1,0 +1,117 @@
+import {connectedInstruments,getBusDefinition,hardwareSafePower,resolveHardware} from '../hardware';
+import {flightEnvironmentAt} from '../flight/environment';
+import {flightTelemetry,resources,requestedAxes,energyRate} from '../flight/resources';
+import type {TransferTelemetry} from '../flight/resources';
+import {advanceFlightData} from '../flight/data';
+import {add,cross,dot,magnitude,normalize,scale} from '../sim/physics';
+import {quaternionAngleDeg,quaternionFromBasis} from '../sim/attitude';
+import type {Design,Quaternion,Vec3} from '../sim/types';
+import type {TransferEnvironment} from '../transfer/types';
+import {freezeTransferInput} from '../transfer/immutable';
+import {applyLocalImpulse,localArcPeriapsisTime,localArcRadiusTime,localArcStateAt,SWINGBY_MARS_RADIUS_KM,SwingbyError} from './conic';
+import {swingbyStateAt,measureSwingbyExit} from './orbit';
+import {getSwingbyScenario,SWINGBY_PROPULSION as P} from './scenario';
+import {solveSwingbyPlan,normalizeSwingbyCraft,evaluateSwingby} from './planning';
+import {swingbyActualThrust,swingbyBurnAxes,swingbyEngine,swingbyFuelUsed,swingbySlew,swingbyThrustGeometry} from './propulsion';
+import {SWINGBY_MODEL_VERSION} from './types';
+import type {SwingbyNumerics,SwingbyRuntime,SwingbySolution,BurnExecutionRecord,SwingbyRequirement} from './types';
+const scenario=getSwingbyScenario(),node=scenario.correctionSeconds;
+const event=(s:SwingbyRuntime,code:string,message:string,severity:'info'|'warning'|'error'='info')=>s.events.push({time:s.time,code,message,severity,reasonCode:code});
+const duration=(s:SwingbyRuntime)=>Math.min(scenario.deadlineSeconds,s.actualPatchExitSeconds);
+const currentArc=(s:SwingbyRuntime)=>s.actualArcs.at(-1)!;
+const hasBurn=(s:SwingbyRuntime)=>magnitude(s.solution.correction.vectorMps)>1e-9;
+const preparing=(s:SwingbyRuntime,time=s.time)=>hasBurn(s)&&!s.burn&&time>=node-P.prepareLeadSeconds&&time<node;
+const valveOn=(s:SwingbyRuntime,time:number)=>preparing(s,time)&&time>=node-P.valveLeadSeconds&&!s.safeMode&&!!swingbyEngine(s.craft);
+function activeMode(s:SwingbyRuntime,time=s.time){return s.safeMode||preparing(s,time)?'charge' as const:s.solution.plan.operations.find(o=>time>=o.start&&time<o.end)?.kind??'charge';}
+function environment(s:SwingbyRuntime,time:number,network=true){return flightEnvironmentAt(swingbyStateAt(s.actualArcs,time),network);}
+function targetAxes(s:SwingbyRuntime,time:number,env:TransferEnvironment){return preparing(s,time)&&!s.safeMode?swingbyBurnAxes(s.craft,s.fuelKg,s.solution.correction.vectorMps,environment(s,node,false).sunDirection):requestedAxes(env,activeMode(s,time));}
+function telemetry(s:SwingbyRuntime,time:number,q:Quaternion,env=environment(s,time),full=false):TransferTelemetry {
+ const h=resolveHardware(s.craft),radio=h.parts.find(p=>p.part.id===h.radioId),mode=activeMode(s,time),enabled=!s.safeMode&&s.status!=='failed',tx=enabled&&mode==='downlink'&&s.packets.some(p=>(p.readyAt??p.capturedAt)<=time&&p.transmittedBits<p.bits),power=enabled?(tx?radio?.definition.activePowerW:radio?.definition.idlePowerW)??0:0,extraLoadW=valveOn(s,time)?(swingbyEngine(s.craft)?.definition.activePowerW??0)/getBusDefinition(s.craft).conversionEfficiency:0;
+ return flightTelemetry(s,time,q,env,{operation:mode,duration:duration(s),requestedAxes:targetAxes(s,time,env),extraLoadW,radio:{receiverPowered:enabled,mode:!enabled?'off':tx?'tx':'rx',powerW:power}},full);
+}
+export function getSwingbyTelemetry(s:SwingbyRuntime){return {...telemetry(s,s.time,s.attitudeQuaternion,environment(s,s.time),true),burnPhase:s.burn?s.burn.status:preparing(s)?'preparing':'pending',burnPreparationSeconds:s.burnPreparationSeconds,thrust:swingbyThrustGeometry(s.craft,s.fuelKg),navigationStatus:s.achievedExit?s.achievedExit.directionPassed&&s.achievedExit.energyPassed?'passed':'failed':s.status==='running'?'pending':'unreached',achievedExit:s.achievedExit?structuredClone(s.achievedExit):null,minimumAltitudeKm:s.minimumAltitudeKm};}
+function updatePower(s:SwingbyRuntime,t:TransferTelemetry){const ev=resources(s.craft);if(!s.safeMode&&(s.energyWh<=ev.batteryWh*.04+1e-8||t.loadPowerW-t.solarPowerW>ev.dischargeLimitW)){s.safeMode=true;event(s,'SAFE_MODE','EPS reserve or discharge limit requires solar recovery.','warning');}else if(s.safeMode&&s.energyWh>=ev.batteryWh*.16-1e-8){const prospective={...s,safeMode:false},next=telemetry(prospective,s.time,s.attitudeQuaternion,t.environment);if(next.loadPowerW-next.solarPowerW<=ev.dischargeLimitW){s.safeMode=false;event(s,'RECOVERED','Stored energy supports the onboard schedule.');}}}
+function receiveData(s:SwingbyRuntime){for(const signal of s.signals.filter(a=>a.arrivesAt<=s.time+1e-6)){const packet=s.packets.find(p=>p.id===signal.packetId);if(packet){packet.receivedBits=Math.min(packet.bits,packet.receivedBits+signal.bits);if(packet.receivedBits>=packet.bits-1e-6&&packet.receivedAt===null){packet.receivedAt=signal.arrivesAt;event(s,'DATA_RECEIVED','A complete unique spectrum has reached Earth.');}}}s.signals=s.signals.filter(a=>a.arrivesAt>s.time+1e-6);s.scienceReceived=s.packets.filter(p=>p.receivedAt!==null&&p.quality>=scenario.science.minimumQuality).length;}
+function executeBurn(s:SwingbyRuntime){
+ if(s.burn)return;const before=localArcStateAt(currentArc(s),node),geometry=swingbyThrustGeometry(s.craft,s.fuelKg),dv=magnitude(s.solution.correction.vectorMps),actualDirection=swingbyActualThrust(s.craft,s.fuelKg,s.attitudeQuaternion),desired=normalize(s.solution.correction.vectorMps),pointing=dv>1e-9?Math.atan2(magnitude(cross(actualDirection,desired)),dot(actualDirection,desired))*180/Math.PI:0,rate=s.hardwareData?.angularRateDegS??0,engine=swingbyEngine(s.craft),required=engine?swingbyFuelUsed(s.craft,s.fuelKg,dv):0,reasons:string[]=[];
+ if(dv>1e-9){if(!engine)reasons.push('PROPULSION_UNAVAILABLE');if(s.safeMode||s.status!=='running')reasons.push('BURN_POWER');if(s.burnPreparationSeconds<P.valveLeadSeconds-1e-6)reasons.push('VALVE_NOT_PREPARED');if(geometry.gimbalAngleDeg>P.maximumGimbalDeg)reasons.push('GIMBAL_LIMIT');if(pointing>P.pointingToleranceDeg||rate>P.angularRateToleranceDegS)reasons.push('BURN_ATTITUDE');if(required>s.fuelKg+1e-10)reasons.push('FUEL');}
+ const applied=reasons.length||dv<=1e-9?[0,0,0] as Vec3:scale(actualDirection,dv);let corrected=null;if(dv>1e-9&&!reasons.length){try{corrected=applyLocalImpulse(currentArc(s),node,applied);}catch(e){reasons.push(e instanceof SwingbyError?e.code:'CONIC_INVALID');}}
+ const fuelUsed=corrected?required:0,status:BurnExecutionRecord['status']=dv<=1e-9?'no-op':corrected?'fired':'skipped',after=corrected?localArcStateAt(corrected,node):before;
+ s.burn={id:'correction',time:s.time,status,reasons,before,after,attitudeQuaternion:[...s.attitudeQuaternion],requestedDeltaVMps:[...s.solution.correction.vectorMps],actualDeltaVMps:corrected?applied:[0,0,0],fuelBeforeKg:s.fuelKg,fuelUsedKg:fuelUsed,fuelAfterKg:s.fuelKg-fuelUsed,centerOfMassM:geometry.centerOfMassM,thrustDirectionBody:geometry.thrustDirectionBody,gimbalAngleDeg:geometry.gimbalAngleDeg,pointingErrorDeg:pointing,angularRateDegS:rate};
+ if(corrected){s.fuelKg-=fuelUsed;s.actualArcs.push(corrected);s.actualPeriapsisSeconds=localArcPeriapsisTime(corrected);s.actualPatchExitSeconds=localArcRadiusTime(corrected,scenario.patchRadiusKm,'outbound');}event(s,status==='fired'?'CORRECTION_FIRED':status==='no-op'?'CORRECTION_NOOP':'BURN_SKIPPED',status==='fired'?'Actual attitude-directed impulse applied and fuel charged.':status==='no-op'?'Zero correction; the original physical trajectory continues.':reasons.join(', '),status==='skipped'?'warning':'info');
+}
+function settle(s:SwingbyRuntime){
+ receiveData(s);if(!s.burn&&s.time>=node-1e-7)executeBurn(s);
+ const arc=currentArc(s),altitude=magnitude(localArcStateAt(arc,s.time).positionKm)-SWINGBY_MARS_RADIUS_KM;s.minimumAltitudeKm=Math.min(s.minimumAltitudeKm,altitude);
+ if(arc.periapsisRadiusKm<=SWINGBY_MARS_RADIUS_KM&&s.time>=localArcRadiusTime(arc,SWINGBY_MARS_RADIUS_KM,'inbound')-1e-7){s.status='failed';s.failureReason='SURFACE_CONTACT';event(s,'SURFACE_CONTACT','The trajectory intersects the surface.','error');return;}
+ if(s.time>=s.actualPeriapsisSeconds-1e-7&&!s.processedEventIds.includes('periapsis')){s.processedEventIds.push('periapsis');s.minimumAltitudeKm=Math.min(s.minimumAltitudeKm,arc.periapsisRadiusKm-SWINGBY_MARS_RADIUS_KM);event(s,'PERIAPSIS','The actual closest approach was recorded.');}
+ if(!s.achievedExit&&s.time>=localArcRadiusTime(arc,scenario.exit.radiusKm,'outbound')-1e-7){s.achievedExit=measureSwingbyExit(arc);s.processedEventIds.push('exit');event(s,'EXIT_MEASURED','Actual outward crossing recorded direction and specific energy.');}
+ if(s.time>=duration(s)-1e-7){if(s.status==='running')s.status='complete';event(s,'MARS_PATCH_EXIT','The supported local encounter has ended.');}else updatePower(s,telemetry(s,s.time,s.attitudeQuaternion));
+ // Starting an exposure is a committed boundary event, not a delayed reward at
+ // the end of an arbitrary following step. A zero/substep request never calls
+ // this routine; an already active exposure sees dt=0 and is unchanged.
+ if(s.status==='running'){
+  const acquisition=s.hardwareData?.acquisition,instrument=connectedInstruments(s.craft,'spectrometer')[0];
+  // Absolute elapsed seconds lose a few tens of picoseconds when a .16s
+  // readout boundary is subtracted. Finish only a <=100ns arithmetic residue;
+  // otherwise it could wait an entire following5s step. This tolerance matches
+  // the event-time comparisons and cannot hide the observed second-scale drift.
+  if(acquisition&&instrument&&!s.safeMode){if(acquisition.exposureRemainingS<=1e-7)acquisition.exposureRemainingS=0;const rate=Math.min(resolveHardware(s.craft).dataWriteRateBps,instrument.dataRateBps);if(acquisition.exposureRemainingS===0&&acquisition.remainingBits/rate<=1e-7){acquisition.remainingBits=0;const t=telemetry(s,s.time,s.attitudeQuaternion,environment(s,s.time,activeMode(s)==='downlink'));advanceFlightData(s,s.time,s.time,t,t,s.actualPeriapsisSeconds);}}
+  if(!s.hardwareData?.acquisition&&activeMode(s)==='observe'){const t=telemetry(s,s.time,s.attitudeQuaternion,environment(s,s.time,false));advanceFlightData(s,s.time,s.time,t,t,s.actualPeriapsisSeconds);}
+ }
+}
+function eventTimes(s:SwingbyRuntime){const arc=currentArc(s),times=[duration(s),s.actualPeriapsisSeconds,localArcRadiusTime(arc,scenario.exit.radiusKm,'outbound')];if(!s.burn)times.push(node,...(hasBurn(s)?[node-P.prepareLeadSeconds,node-P.valveLeadSeconds]:[]));for(const o of s.solution.plan.operations)times.push(o.start,o.end);for(const signal of s.signals)times.push(signal.arrivesAt);if(arc.periapsisRadiusKm<=SWINGBY_MARS_RADIUS_KM)times.push(localArcRadiusTime(arc,SWINGBY_MARS_RADIUS_KM,'inbound'));return times;}
+export function getSwingbyNextEventTime(s:SwingbyRuntime){return Math.min(duration(s),...eventTimes(s).filter(t=>t>s.time+1e-7));}
+function nextTime(s:SwingbyRuntime){
+ const env=environment(s,s.time,false),near=Math.abs(s.time-s.actualPeriapsisSeconds)<9000,step=near?5:s.numerics.cruiseStepSeconds;let next=Math.min(duration(s),(Math.floor((s.time+1e-7)/step)+1)*step,...eventTimes(s).filter(t=>t>s.time+1e-7));
+ for(const boundary of [s.actualPeriapsisSeconds-9000,s.actualPeriapsisSeconds+9000])if(boundary>s.time+1e-7)next=Math.min(next,boundary);
+ if(activeMode(s)==='downlink'||s.pendingFrames.length)next=Math.min(next,(Math.floor((s.time+1e-7)/60)+1)*60);
+ if(preparing(s)||quaternionAngleDeg(s.attitudeQuaternion,quaternionFromBasis(targetAxes(s,s.time,env)))>.25)next=Math.min(next,(Math.floor((s.time+1e-7)/s.numerics.activeStepSeconds)+1)*s.numerics.activeStepSeconds);
+ const acquisition=s.hardwareData?.acquisition,instrument=connectedInstruments(s.craft,'spectrometer')[0];
+ if(acquisition&&instrument){const remaining=acquisition.exposureRemainingS>0?acquisition.exposureRemainingS:acquisition.remainingBits/Math.min(resolveHardware(s.craft).dataWriteRateBps,instrument.dataRateBps);if(remaining>1e-7)next=Math.min(next,s.time+remaining);}
+ if(activeMode(s)==='observe'){
+  const bin=scenario.science.uniqueBinS,boundary=s.actualPeriapsisSeconds+(Math.floor((s.time-s.actualPeriapsisSeconds+1e-7)/bin)+1)*bin,cadence=s.lastCapture+scenario.science.captureIntervalS;
+  if(boundary>s.time+1e-7)next=Math.min(next,boundary);if(cadence>s.time+1e-7)next=Math.min(next,cadence);
+ }
+ if(next-s.time>5&&environment(s,next,false).eclipse!==env.eclipse){let lo=s.time,hi=next;for(let i=0;i<24&&hi-lo>.01;i++){const mid=(lo+hi)/2;if(environment(s,mid,false).eclipse===env.eclipse)lo=mid;else hi=mid;}next=hi;}
+ // Resolve physical observing-condition changes on the actual two-half-step
+ // attitude path. This removes a whole integration quantum from acquisition
+ // start times; it does not grant camera access before its real ray/FOV opens.
+ if(activeMode(s)==='observe'&&activeMode(s,next-1e-8)==='observe'&&next-s.time>1e-5){
+  const observingAt=(time:number)=>{const dt=time-s.time,mid=s.time+dt/2,e=environment(s,mid,false),turn=swingbySlew(s.craft,s.fuelKg,s.attitudeQuaternion,quaternionFromBasis(targetAxes(s,mid,e)),dt/2,s.hardwareData?.angularRateDegS),endEnv=environment(s,time,false),end=swingbySlew(s.craft,s.fuelKg,turn.quaternion,quaternionFromBasis(targetAxes(s,time-1e-8,endEnv)),dt/2,turn.rateDegS);return telemetry(s,time,end.quaternion,endEnv).observing;},initial=telemetry(s,s.time,s.attitudeQuaternion,env).observing;
+  if(observingAt(next)!==initial){let lo=s.time,hi=next;for(let i=0;i<40&&hi-lo>1e-5;i++){const mid=(lo+hi)/2;if(observingAt(mid)===initial)lo=mid;else hi=mid;}next=hi;}
+ }
+ const ev=resources(s.craft),initial=telemetry(s,s.time,s.attitudeQuaternion,env),rate=energyRate(initial),threshold=s.safeMode?(rate>=0?ev.batteryWh*.16:0):ev.batteryWh*.04,rising=s.safeMode&&rate>=0,possible=Math.max(ev.chargeLimitW*.92,ev.dischargeLimitW/.95)*(next-s.time)/3600;
+ if(Math.abs(s.energyWh-threshold)>1e-8&&Math.abs(s.energyWh-threshold)<=possible+1e-6){const energyAt=(t:number)=>{const dt=t-s.time,mid=s.time+dt/2,e=environment(s,mid,false),q=swingbySlew(s.craft,s.fuelKg,s.attitudeQuaternion,quaternionFromBasis(targetAxes(s,mid,e)),dt/2,s.hardwareData?.angularRateDegS).quaternion;return s.energyWh+energyRate(telemetry(s,mid,q,e))*dt/3600;},endEnergy=energyAt(next),crossed=rising?s.energyWh<threshold&&endEnergy>=threshold:s.energyWh>threshold&&endEnergy<=threshold;if(crossed){let lo=s.time,hi=next;for(let i=0;i<35&&hi-lo>1e-5;i++){const mid=(lo+hi)/2,value=energyAt(mid);if(rising?value<threshold:value>threshold)lo=mid;else hi=mid;}next=hi;}}
+ return next;
+}
+function step(s:SwingbyRuntime,end:number){
+ const start=s.time,dt=end-start,mid=start+dt/2,operation=activeMode(s,start),env=environment(s,mid,operation==='downlink'),midTurn=swingbySlew(s.craft,s.fuelKg,s.attitudeQuaternion,quaternionFromBasis(targetAxes(s,mid,env)),dt/2,s.hardwareData?.angularRateDegS),t=telemetry(s,mid,midTurn.quaternion,env),ev=resources(s.craft),prepared=valveOn(s,mid)&&!s.safeMode;
+ s.energyWh=Math.max(0,Math.min(ev.batteryWh,s.energyWh+energyRate(t)*dt/3600));s.energyMinimumWh=Math.min(s.energyMinimumWh,s.energyWh);
+ // Entire [start,end) interval belongs to its left-limit operation. Endpoint
+ // geometry is current, but a newly starting mode cannot steer retroactively.
+ const endEnv=environment(s,end,operation==='downlink'),endTurn=swingbySlew(s.craft,s.fuelKg,midTurn.quaternion,quaternionFromBasis(targetAxes(s,Math.max(start,end-1e-8),endEnv)),dt/2,midTurn.rateDegS);s.attitudeQuaternion=endTurn.quaternion;if(s.hardwareData)s.hardwareData.angularRateDegS=endTurn.rateDegS;s.time=end;s.tick++;
+ // Finish work powered during [start,end) before applying a new endpoint mode.
+ // Its eligibility/bin is the left limit, while completion is stamped at end.
+ // A full exposure at observe.end is retained for later recorder readout.
+ const eligibilityTime=Math.max(start,end-1e-8),current=telemetry(s,eligibilityTime,s.attitudeQuaternion,endEnv);advanceFlightData(s,start,end,t,current,s.actualPeriapsisSeconds,0,eligibilityTime);
+ updatePower(s,telemetry(s,end,s.attitudeQuaternion,endEnv));if(s.energyWh<=1e-8&&t.solarPowerW<hardwareSafePower(s.craft,true)){s.status='failed';s.failureReason='POWER_LOSS';event(s,'POWER_LOSS','Battery depletion cannot sustain the spacecraft bus.','error');}
+ if(start>=node-P.valveLeadSeconds-1e-7&&end<=node+1e-7)s.burnPreparationSeconds=prepared&&!s.safeMode?s.burnPreparationSeconds+dt:0;
+ if(s.pendingFrames.length&&(Math.abs(end/60-Math.round(end/60))<1e-8||activeMode(s,end)!==operation||end>=duration(s)-1e-6)){const network=endEnv.groundStationId?endEnv:environment(s,end);for(const frame of s.pendingFrames)s.signals.push({id:`signal-${s.tick}-${frame.packetId}`,packetId:frame.packetId,bits:frame.bits,sentAt:end,arrivesAt:end+network.lightTimeSeconds,stationId:network.groundStationId||'network'});s.pendingFrames=[];}
+ settle(s);
+}
+export function createSwingbyRuntime(input:SwingbySolution,rawCraft:Design,numerics:SwingbyNumerics={cruiseStepSeconds:300,activeStepSeconds:1}):SwingbyRuntime {
+ if(!numerics||typeof numerics!=='object'||Array.isArray(numerics)||Object.keys(numerics).some(k=>!['cruiseStepSeconds','activeStepSeconds'].includes(k))||![60,300].includes(numerics.cruiseStepSeconds)||![1,.5,.25].includes(numerics.activeStepSeconds))throw new SwingbyError('NUMERICS_UNSUPPORTED');
+ if(!input||input.modelVersion!==SWINGBY_MODEL_VERSION||input.scenarioHash!==scenario.hash)throw new SwingbyError('MODEL_UNSUPPORTED');const craft=freezeTransferInput(normalizeSwingbyCraft(rawCraft)),solved=solveSwingbyPlan(input.plan,craft);if(solved.status!=='solved'||input.inputHash!==solved.solution.inputHash)throw new SwingbyError('SOLUTION_MISMATCH');const solution=solved.solution,arc=solution.arcs[0],env=flightEnvironmentAt(swingbyStateAt([arc],0)),ev=resources(craft),state:SwingbyRuntime={version:1,modelVersion:SWINGBY_MODEL_VERSION,scenarioHash:scenario.hash,propulsionHash:P.hash,craft,solution,time:0,requestedTime:0,numerics:{...numerics},energyWh:ev.batteryWh,energyMinimumWh:ev.batteryWh,fuelKg:scenario.initialFuelKg,safeMode:false,status:'running',failureReason:null,attitudeQuaternion:quaternionFromBasis(requestedAxes(env,'charge')),hardwareData:{angularRateDegS:0,acquisition:null},packets:[],signals:[],events:[],pendingFrames:[],processedEventIds:[],lastCapture:-1e20,scienceReceived:0,tick:0,burn:null,actualArcs:[arc],actualPeriapsisSeconds:localArcPeriapsisTime(arc),actualPatchExitSeconds:localArcRadiusTime(arc,scenario.patchRadiusKm,'outbound'),achievedExit:null,burnPreparationSeconds:0,minimumAltitudeKm:env.state.altitudeKm};
+ if(!solved.evaluation.launchable){state.status='failed';state.failureReason=solved.evaluation.issues.filter(i=>i.severity==='error').map(i=>i.code).join(',');event(state,'LAUNCH_BLOCKED',state.failureReason,'error');}else{event(state,'SCENARIO_START','Declared actual-epoch local encounter begins; no prior flight is simulated.');settle(state);}return state;
+}
+export function advanceSwingby(s:SwingbyRuntime,elapsedSeconds:number,maxSteps=500):SwingbyRuntime {
+ if(!Number.isFinite(elapsedSeconds)||elapsedSeconds<0||maxSteps!==Infinity&&(!Number.isInteger(maxSteps)||maxSteps<0))throw new SwingbyError('INVALID_ADVANCE');s.requestedTime=Math.min(scenario.deadlineSeconds,s.requestedTime+elapsedSeconds);let count=0;
+ while(s.status==='running'&&s.time<s.requestedTime-1e-7&&count<maxSteps){const next=nextTime(s);if(next>s.requestedTime+1e-7)break;if(next<=s.time+1e-9)throw new SwingbyError('EVENT_STALLED');step(s,next);count++;}return s;
+}
+export function getSwingbyResult(s:SwingbyRuntime){
+ const evaluation=evaluateSwingby(s.solution,s.craft),exit=s.achievedExit,complete=s.status==='complete',terminal=s.status!=='running',safe=s.processedEventIds.includes('periapsis')&&s.minimumAltitudeKm>=scenario.safetyAltitudeKm,science=s.scienceReceived>=scenario.science.targetPackets,requirements:SwingbyRequirement[]=[{id:'direction',status:exit?(exit.directionPassed?'passed':'failed'):terminal?'unreached':'pending',actual:exit?.directionErrorDeg??null,limit:scenario.exit.toleranceDeg},{id:'energy',status:exit?(exit.energyPassed?'passed':'failed'):terminal?'unreached':'pending',actual:exit?.energyKm2S2??null,range:[...scenario.exit.energyRangeKm2S2]},{id:'safety',status:s.processedEventIds.includes('periapsis')?(safe?'passed':'failed'):terminal?'unreached':'pending',actual:s.minimumAltitudeKm,limit:scenario.safetyAltitudeKm},{id:'science',status:science?'passed':terminal?'failed':'pending',actual:s.scienceReceived,limit:scenario.science.targetPackets}];
+ const success=complete&&safe&&science&&!!exit?.directionPassed&&!!exit?.energyPassed,status=success?'success':s.scienceReceived>0&&s.status!=='failed'?'partial':'failed',navigation=exit?(Number(exit.directionPassed)+Number(exit.energyPassed))*20:0,scienceScore=Math.min(1,s.scienceReceived/scenario.science.targetPackets)*40,efficiency=Math.max(0,Math.min(1,s.fuelKg/scenario.initialFuelKg))*.5+Math.max(0,Math.min(1,s.energyMinimumWh/(resources(s.craft).batteryWh||1)))*.5;
+ return {modelVersion:SWINGBY_MODEL_VERSION,scoreDefinitionId:'swingby-exit-1',scenarioId:scenario.id,scenarioHash:scenario.hash,simulationStatus:s.status,evaluatedAt:s.time,status,score:Math.round(navigation+scienceScore+20*efficiency),received:s.scienceReceived,required:scenario.science.targetPackets,requirements,reasons:[...(s.failureReason?[s.failureReason]:[]),...requirements.filter(r=>r.status!=='passed').map(r=>r.id)],elapsedSeconds:s.time,energyMinimumWh:s.energyMinimumWh,fuelRemainingKg:s.fuelKg,totalCost:evaluation.totalCost,budgetRemaining:evaluation.budget-evaluation.totalCost,burn:s.burn?structuredClone(s.burn):null,achievedExit:exit?structuredClone(exit):null,packets:structuredClone(s.packets),events:structuredClone(s.events)};
+}
+export function getSwingbyTrajectory(source:SwingbySolution|SwingbyRuntime,count=240){if(!Number.isFinite(count)||count<2||count>2000)throw new SwingbyError('TRAJECTORY_COUNT');const runtime='actualArcs'in source,arcs=runtime?source.actualArcs:source.arcs,end=runtime?duration(source):source.patchExitSeconds;return Array.from({length:Math.floor(count)},(_,i)=>swingbyStateAt(arcs,end*i/(Math.floor(count)-1)));}

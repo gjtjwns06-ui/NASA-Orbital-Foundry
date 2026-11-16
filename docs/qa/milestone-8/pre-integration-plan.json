@@ -1,0 +1,231 @@
+{
+  "status": "product-copied-with-accepted-internal-art-overlay",
+  "source": "orbital-foundry-next-deployment-ui",
+  "baseline": "5cecc18",
+  "files": [
+    {
+      "path": "src/deployment-storage.ts",
+      "sourceSha256": "2b13cb632e20e68d3395dd38735b35a159b1cd0f00262c12b65451db9fae8216",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment-timeline.ts",
+      "sourceSha256": "2ccccafe1be50e83661228bc4392c257fd4d847ff77350d994163d085cb7a8c4",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment-ui.css",
+      "sourceSha256": "b069b8b09a5887c4edfd96a22bc1603bca8b95d4c807cc0cd3dbaa02d88c5c9f",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment-ui.ts",
+      "sourceSha256": "cd5f81e92d69d80decc5f1646b43aaaeef99e738e4b45395920195a45b2dc9f6",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment-worker-controller.ts",
+      "sourceSha256": "6453eb9d1f132d56b486552afa0c97a01a14b41b154ffdcbbcfffd0681f70242",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment.worker.ts",
+      "sourceSha256": "197709b68be0e5dd45e2a4a6d7f6d1543914233b885365f58e2f202930163e5d",
+      "role": "new"
+    },
+    {
+      "path": "src/keyboard-assembly.css",
+      "sourceSha256": "408152c79c55403942fce7fbe6adcc5d5c29030f49b85db1bf15db735d97e094",
+      "role": "new"
+    },
+    {
+      "path": "src/keyboard-assembly.ts",
+      "sourceSha256": "f720dbcb74552cd432c5ac8dcbee4096f09ef055bcb5539cf32f49ebd243e73a",
+      "role": "new"
+    },
+    {
+      "path": "src/main.ts",
+      "sourceSha256": "12b0834bb49b15f8b54ae11cacafdfdd0939550eb782b09b4269fbeab0039ea7",
+      "role": "changed"
+    },
+    {
+      "path": "src/deployment/clearance.ts",
+      "sourceSha256": "dd6f8dd65a32043e683e9844a7188a06664128983fd98a290f8e758b92e5f690",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/craft.ts",
+      "sourceSha256": "cb2d0e589ef3640039c59caa538418f6ee2e52361024380fe5d266d44fdfbc16",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/devices.ts",
+      "sourceSha256": "b9693f16d2c5565dab3d30dc3a19cabdab3bddb1cb1114c10210ccd955b3573c",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/drive-feasibility.ts",
+      "sourceSha256": "3ec4e57381bbf0f710db7ed8fae882797ab2fc2c361b8a9bfbbc5bb217569e01",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/environment.ts",
+      "sourceSha256": "c54f302350a21009fa8d5af609dcf666be8e1b9390cdcc73fbeb713d857c18ca",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/identity.ts",
+      "sourceSha256": "357ad661c316a485793ebd9644f1fb038638de7fe1c5a28c6c6d46126730e943",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/index.ts",
+      "sourceSha256": "b3c2c05f7e0da478d2074043630aea928c62ad64190bc5af6195b128df2d6844",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/kinematics.ts",
+      "sourceSha256": "7cae3a5de631464ce1544b3d2a61a93802b69e941e3a6d79f15291fe70849877",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/lessons.ts",
+      "sourceSha256": "b9c3bec80b9fe034c7933da2284de2c4dadecba9384bf0fdfa3e81ea967f9c2f",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/math.ts",
+      "sourceSha256": "c772617c4f2a34114371f9d3b88775fa3df02e95a2e3fdc12c029680f4d97b67",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/mechanism.ts",
+      "sourceSha256": "8c558d11280dd385073b5d259fef9a6eb95f95127791d7817e16e7824b64584d",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/momentum.ts",
+      "sourceSha256": "ddff5498117277ba3a7339a289cd3a0ef4333a21b5cb94820f6eed37f99a4ced",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/motion.ts",
+      "sourceSha256": "1849b9490f25066f4598971acbdd501bb3578017db881ceafb866b1292735891",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/persistence.ts",
+      "sourceSha256": "454549781a9b88482ebd601cd7e64422a2bc7bf2c493921ffa018a349739e957",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/plan.ts",
+      "sourceSha256": "889275f219759083f37b6c08a002016e963d5f245679049e7e50e38b18a13e32",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/power.ts",
+      "sourceSha256": "7c808a0a87c5d2a843345cc99b677162b10471a9a19dabb49780e7f8f83a65f6",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/runtime.ts",
+      "sourceSha256": "e28a7ff09a957e1438299cfa85d0800b8b4119cc6c5a671008a486210782a7aa",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/types.ts",
+      "sourceSha256": "4d2fdfe9781a832f77bd2cc4eb3dc2c046ecb6c5f54ff409f75183717196a28b",
+      "role": "new"
+    },
+    {
+      "path": "src/deployment/visibility.ts",
+      "sourceSha256": "496fdac44d3f386922f56f3e3f38652b410d9d2f231d175b673201a9b2e65138",
+      "role": "new"
+    },
+    {
+      "path": "src/render/deployment-candidate.ts",
+      "sourceSha256": "dd19c64dde6c57e120851918ff17089a3cab9b1604f62d4f7d962ef3bb1edddb",
+      "role": "new"
+    },
+    {
+      "path": "src/render/deployment-chassis-art.ts",
+      "sourceSha256": "14817f22d8f7cd0bd0b4063354019493225360b3a2b352644833cb98bc35fe80",
+      "role": "new"
+    },
+    {
+      "path": "src/render/deployment-link-meshes.ts",
+      "sourceSha256": "c00119c1b8828b4b15300fe44a9d180b0ec2aab3202dd5481d6543b9ccc7cb69",
+      "role": "new"
+    },
+    {
+      "path": "src/render/deployment-scene-math.ts",
+      "sourceSha256": "3d5ab5a514f74ffc10eca2b5e8e8c2135df767999d5e32b765bec7ec2903a8c6",
+      "role": "new"
+    },
+    {
+      "path": "src/render/deployment-scene-types.ts",
+      "sourceSha256": "7f400465bd0e47723079c7c395e64afde83e85bbf95b8d9e9ee05ce145e4a0ef",
+      "role": "new"
+    },
+    {
+      "path": "src/render/deployment-scene.ts",
+      "sourceSha256": "b2b544b3331a9326a8ee28ecfb57094661f352be5de38ec754e51a4884c2e59a",
+      "role": "new"
+    },
+    {
+      "path": "src/render/deployment-view.ts",
+      "sourceSha256": "147ac678cce4d0cf9f81887dffee4421ad7e2182cc9f449d8620aca7cc80d514",
+      "role": "new"
+    },
+    {
+      "path": "src/render/deployment-workshop.ts",
+      "sourceSha256": "3356321299ef3fa68074165f2cd6d69fe57d0736c46a14ae431917fd11b6923e",
+      "role": "new"
+    },
+    {
+      "path": "src/render/hinge-manipulator.ts",
+      "sourceSha256": "14c13dfe28effd9ab365535f96a114bb7b56dfe35c62575993cf54a4392ea7f9",
+      "role": "new"
+    },
+    {
+      "path": "src/render/scene.ts",
+      "sourceSha256": "cbcd25481d0502073a2e57da67f82adea76c4ab7021b94f0df9e0683cb1c0f95",
+      "role": "changed"
+    },
+    {
+      "path": "public/assets/fonts/font-0.woff",
+      "sourceSha256": "1e62f708ad69034e2daea29e2a39b781f3e4c5e4107e1aa6ad46d65da6dabb17",
+      "role": "changed"
+    },
+    {
+      "path": "public/assets/fonts/font-1.woff",
+      "sourceSha256": "2df8318bed9ff8611aa4e44e2bad6035e711146541f2d7047c3bd2182cdffad4",
+      "role": "changed"
+    },
+    {
+      "path": "public/assets/fonts/font-2.woff",
+      "sourceSha256": "42880c239280af76bbc496a66a96a7089b1275e7a73474d1f27c280114ffe6ea",
+      "role": "changed"
+    },
+    {
+      "path": "public/assets/fonts/font-3.woff",
+      "sourceSha256": "0644aa2c5c265dd417bb446dea60284c1ff629fb7917b48c63b023a56dc4ebdf",
+      "role": "changed"
+    },
+    {
+      "path": "public/assets/fonts/font-4.woff",
+      "sourceSha256": "bedb8a47fb3498ad3a9301ab4db4c3336aede4b581fb38e0f682d7ad7a03f718",
+      "role": "changed"
+    },
+    {
+      "path": "public/assets/fonts/font-5.woff",
+      "sourceSha256": "351f4453c82eb31588a5379820414f400a2628754a5d656e6339e8c29f54d587",
+      "role": "changed"
+    }
+  ],
+  "internalArtOverlay": [
+    "deployment-internal-art.ts",
+    "deployment-link-meshes.ts"
+  ]
+}

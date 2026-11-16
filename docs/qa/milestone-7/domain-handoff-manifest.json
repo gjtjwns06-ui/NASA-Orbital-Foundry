@@ -1,0 +1,30 @@
+{
+  "status": "FROZEN M02B adapter + archive Worker candidate; targeted checks PASS; product UI not included",
+  "engineSemanticSha256": "f79626ffcba1206bb22a7e7706abcf6d3a7088bc6fc4daec656dbe6e935e7988",
+  "normalization": "UTF-8 CRLF/CR to LF only; raw engine provenance retained separately",
+  "adapterFiles": {
+    "src/redesign/adapters/swingby.ts": "94e45fb29d1052269d952d8b5f28849de969bbb1c11bdbc22c3ca280adbefe4e",
+    "src/redesign/archive.ts": "f40bd2724c2ff758b677a48c975f9c7ec44d68851d5e087d1a21d4ab79037b34",
+    "src/redesign/compare.ts": "13556f0cd99d857d615ab37b0b3165ab513d781c3ff5de1da9d894c6ff61ce93",
+    "src/redesign/diagnostics.ts": "66db685bebd0de9433c096d820700f173a26ae06cf475c4156048203f81526f2",
+    "src/redesign/engine-pin.ts": "643641ed9ade2b8ce09ce31761607bd3eedc0ce2f520360bcd22e3d662537741",
+    "src/redesign/index.ts": "d034a7ace5f7405f606170070cf4de287c34b7691b9fc7d83c0dde3ff5b8a83d",
+    "src/redesign/render-types.ts": "5e25bf5c60cc15156d923d851423e01d726922290cc660ed32f088bdac5d3878",
+    "src/redesign/review.worker.ts": "a6785380f8f69636a201cf952257533effa9a0597070e974cbf957f783555da4",
+    "src/redesign/schema.ts": "276b61ac0ba243d617c3dd2ee96a1b7483caac3520caa40c7bd0576456ea82a4",
+    "src/redesign/semantics.ts": "a20bdb9a70121daa9f6c218a444333c41c95e08682ffbedc5a945716d1313754",
+    "src/redesign/validation.ts": "c274fcbb344ed9b806bb534f3c3cf39a3900203c318b90d788070607e82b67cf",
+    "src/redesign/worker-controller.ts": "abb4c55a415683dae9b3eda1f889871e823ad1975f896cf3a4f78731462bb936"
+  },
+  "engineFilesToCopy": [],
+  "warning": "Copy only new redesign modules; verify existing engine normalized identity. Do not replace unrelated engine/UI files.",
+  "recordedAt": "2026-11-14T22:38:30.247003+00:00",
+  "tests": {
+    "tests/archive-cancel.test.ts": "d0e261ce23a85b7d0c98e020f1b9a9af96a017ced7eea8615fa441742bdc9fb6",
+    "tests/browser/archive.spec.ts": "01d6d34f6dd56586c12b6ce07a921e263601e4ff18463b73cd69f9421a993d8f",
+    "tests/integrity.ts": "13c1fb4f8ce8be8d22ae340e1da3b23e3494bcc10241b76912f9d1cf584e8834",
+    "tests/redesign.test.ts": "1614fe37a76b5a100866e482d22b9bcef89b782295caa5de11c75094ca88a1b7",
+    "tests/review-archive-controller.test.ts": "13bccd5544ef7c254fac2df0f1c4e0f47df7f46ddbbab3f11c0c5cbada5ff486",
+    "tests/review-worker.test.ts": "d641906ecf02da78deb3d7caca06dbc0b48d3b1388ec2fb45d5634c05d577863"
+  }
+}

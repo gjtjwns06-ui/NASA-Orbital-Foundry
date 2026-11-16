@@ -1,0 +1,114 @@
+import {afterEach,describe,expect,it} from 'vitest';
+import * as THREE from 'three';
+import {GameScene} from '../src/render/scene';
+import {createDesign} from '../src/sim/catalog';
+import {earthStateAt,EARTH_RADIUS_KM} from '../src/sim/physics';
+import type {Design,TrajectoryPoint,Vec3} from '../src/sim/types';
+import {planeAngleFromRay} from '../src/render/orbit-manipulator';
+
+type Handle={position:THREE.Vector3;label:string;from?:THREE.Vector3};
+const allocated:THREE.Group[]=[];
+afterEach(()=>{for(const group of allocated.splice(0))group.traverse(object=>{
+ const renderable=object as THREE.Mesh;if(renderable.geometry)renderable.geometry.dispose();
+ const material=renderable.material;if(material)for(const m of Array.isArray(material)?material:[material])m.dispose();
+});});
+
+/** Uses real production GameScene methods and Three geometry. The WebGL/DOM
+ * constructor and label rasterization are deliberately outside this CPU test.
+ * addHandle records the exact locations/bases requested by production methods.
+ */
+function cpuScene(design:Design){
+ const scene:any=Object.create(GameScene.prototype),handles=new Map<string,Handle>();
+ const camera=new THREE.PerspectiveCamera(43,1280/720,.05,1800);camera.position.set(8,7,10);camera.lookAt(0,0,0);camera.updateMatrixWorld();
+ Object.assign(scene,{design,mission:'earth',mode:'plan',scale:3/EARTH_RADIUS_KM,pathGroup:new THREE.Group(),handleGroup:new THREE.Group(),groundFeatures:new THREE.Group(),scienceMarkers:new Map(),parts:new Map(),controls:{enabled:true},camera,ray:new THREE.Raycaster(),mouse:new THREE.Vector2(),canvas:{getBoundingClientRect:()=>({left:0,top:0,width:1280,height:720})},referenceCameraHalfFov:()=>undefined,cb:{navigation:()=>{},cancelNavigation:()=>{},burnAt:()=>{}},selectedManeuverId:'legacy'});
+ scene.addHandle=(name:string,position:THREE.Vector3,_color:number,label:string,from?:THREE.Vector3)=>handles.set(name,{position:position.clone(),label,from:from?.clone()});
+ allocated.push(scene.pathGroup,scene.handleGroup,scene.groundFeatures);return {scene,handles};
+}
+function ellipse(periapsis=400,apoapsis=950,inclination=51.6){const design=createDesign('earth','starter');design.plan.altitudeKm=periapsis;design.plan.inclinationDeg=inclination;design.plan.earthOrbit={version:'earth-ellipse-rtn-1',apoapsisAltitudeKm:apoapsis};return design;}
+function points(design:Design):TrajectoryPoint[]{return [0,700,1700].map(t=>{const state=earthStateAt(design.plan,t);return {...state,t,eclipse:false,altitudeKm:Math.hypot(...state.positionKm)-EARTH_RADIUS_KM};});}
+const render=(v:Vec3)=>new THREE.Vector3(v[0],v[2],-v[1]);
+const closeVector=(actual:THREE.Vector3,expected:THREE.Vector3,tolerance=1e-10)=>expect(actual.distanceTo(expected)).toBeLessThan(tolerance);
+
+describe('NAV01 production renderer and gesture contract (CPU)',()=>{
+ it('draws an Earth-focus ellipse whose extrema and Pe/Ap controls match the physical radii',()=>{
+  const design=ellipse(180,2000,97.6),{scene,handles}=cpuScene(design);scene.addInitialOrbitHandles();
+  const line=scene.handleGroup.getObjectByName('initial-earth-orbit') as THREE.Line,vertices=line.geometry.getAttribute('position');
+  const rp=EARTH_RADIUS_KM+180,ra=EARTH_RADIUS_KM+2000,a=(rp+ra)/2,e=(ra-rp)/(ra+rp),b=Math.sqrt(rp*ra),i=97.6*Math.PI/180;
+  expect(vertices.count).toBe(129);
+  for(let n=0;n<vertices.count;n++){
+   const x=vertices.getX(n)/scene.scale,y=-vertices.getZ(n)/scene.scale,z=vertices.getY(n)/scene.scale;
+   const along=y*Math.cos(i)+z*Math.sin(i),normal=-y*Math.sin(i)+z*Math.cos(i);
+   expect(Math.abs(normal)).toBeLessThan(.001); // Float32 display vertices, not a physics tolerance.
+   expect(Math.abs(((x+a*e)/a)**2+(along/b)**2-1)).toBeLessThan(3e-7);
+  }
+  closeVector(handles.get('earth-periapsis')!.position,new THREE.Vector3(rp*scene.scale,0,0));
+  closeVector(handles.get('earth-apoapsis')!.position,new THREE.Vector3(-ra*scene.scale,0,0));
+  expect(Math.abs((handles.get('earth-periapsis')!.position.x+handles.get('earth-apoapsis')!.position.x)/2)).toBeGreaterThan(.1);
+ });
+ it('keeps the compact offset ring on the actual orbit plane and recovers its inclination from camera rays',()=>{
+  for(const inclination of [0,51.6,97.6,180]){
+   const design=ellipse(400,950,inclination),{scene,handles}=cpuScene(design);scene.addInitialOrbitHandles();
+   const handle=handles.get('earth-plane')!.position,ring=scene.handleGroup.getObjectByName('initial-orbit-plane-ring') as THREE.Line,vertices=ring.geometry.getAttribute('position'),planeX=vertices.getX(0);
+   expect(planeX).toBeGreaterThan(handles.get('earth-periapsis')!.position.x);
+   expect(Math.abs(handle.x-planeX)).toBeLessThan(3e-7);
+   const physical=earthStateAt(design.plan,0),normal=render(physical.positionKm).cross(render(physical.velocityKmS)).normalize();
+   expect(Math.abs(new THREE.Vector3(0,handle.y,handle.z).dot(normal))).toBeLessThan(1e-12);
+   for(const eye of [[8,7,10],[-10,3,8]] as Vec3[]){
+    const direction=handle.clone().sub(new THREE.Vector3(...eye)).toArray() as Vec3;
+    expect(planeAngleFromRay(eye,direction,handle.x)).toBeCloseTo(inclination,10);
+   }
+  }
+ });
+ it('retains independent orbit controls when the player removes every maneuver',()=>{
+  const design=ellipse();design.plan.maneuvers=[];const {scene,handles}=cpuScene(design);scene.setTrajectory(points(design));
+  expect([...handles.keys()].sort()).toEqual(['earth-apoapsis','earth-periapsis','earth-plane']);
+  expect(scene.handleGroup.getObjectByName('initial-earth-orbit')).toBeTruthy();
+ });
+ it('anchors the selected coeval node at its true time and orients RTN after the preceding impulse',()=>{
+  const design=ellipse();design.plan.maneuvers=[{id:'a',time:1200,progradeMps:40,radialMps:20,normalMps:30},{id:'b',time:1200,progradeMps:5,radialMps:3,normalMps:-2}];
+  const initial=earthStateAt(design.plan,1200),r=new THREE.Vector3(...initial.positionKm),v=new THREE.Vector3(...initial.velocityKmS),radial=r.clone().normalize(),normal0=r.clone().cross(v).normalize(),transverse0=normal0.clone().cross(radial).normalize();
+  const vAfter=v.clone().addScaledVector(transverse0,.040).addScaledVector(radial,.020).addScaledVector(normal0,.030),normal=r.clone().cross(vAfter).normalize(),transverse=normal.clone().cross(radial).normalize();
+  expect(normal.distanceTo(normal0)).toBeGreaterThan(.003);
+  const {scene,handles}=cpuScene(design);scene.selectedManeuverId='b';scene.setTrajectory(points(design));
+  const origin=render(initial.positionKm).multiplyScalar(scene.scale);
+  for(const [name,axis,length]of [['prograde',transverse,.68],['radial',radial,.65],['normal',normal,.7]] as const){
+   const actual=handles.get(name)!;closeVector(actual.from!,origin);closeVector(actual.position,origin.clone().addScaledVector(render(axis.toArray() as Vec3),length));
+  }
+  expect(handles.get('prograde')!.label).toBe('T');
+ });
+ it('dispatches real constrained ray displacement in kilometres and ring displacement in degrees with Shift scaling',()=>{
+  for(const name of ['earth-periapsis','earth-apoapsis','earth-plane']){
+   const design=ellipse(),{scene,handles}=cpuScene(design);scene.addInitialOrbitHandles();const start=handles.get(name)!.position,end=start.clone();
+   if(name==='earth-plane'){const angle=70*Math.PI/180,radius=Math.hypot(start.y,start.z);end.set(start.x,radius*Math.sin(angle),-radius*Math.cos(angle));}
+   else end.x+=(name==='earth-periapsis'?1:-1)*180*scene.scale;
+   const from=scene.project(start),to=scene.project(end),parameter=scene.orbitPointerParameter(name,from.x,from.y),calls:unknown[][]=[];
+   scene.drag={type:'nav',handle:name,x:from.x,y:from.y,moved:false,orbitParameter:parameter};scene.cb.navigation=(...args:unknown[])=>calls.push(args);
+   scene.onMove({clientX:to.x,clientY:to.y,shiftKey:true});expect(calls).toHaveLength(1);expect(calls[0][0]).toBe(name);expect(calls[0][2]).toBe(0);expect(calls[0][3]).toBe(false);
+   expect(calls[0][1]).toBeCloseTo(name==='earth-plane'?(70-51.6)*.2:180*.2,8);
+  }
+ });
+ it('notifies commit before cleanup, but cancelled or motionless gestures never notify commit',()=>{
+  for(const outcome of ['commit','cancel','click'] as const){
+   const {scene}=cpuScene(ellipse()),events:string[]=[];let transactionOpen=true;
+   scene.controls.enabled=false;scene.drag={type:'nav',handle:'earth-apoapsis',x:10,y:20,moved:outcome!=='click',orbitParameter:3};scene.down={x:10,y:20};
+   scene.cb.navigation=(_handle:string,_x:number,_y:number,finish:boolean)=>{expect(finish).toBe(true);transactionOpen=false;events.push('commit');};
+   scene.cb.cancelNavigation=()=>{expect(scene.drag).toBeNull();events.push(transactionOpen?'rollback':'cleanup');transactionOpen=false;};
+   if(outcome==='cancel')scene.cancelDrag();else scene.onUp({clientX:30,clientY:40});
+   expect(events).toEqual(outcome==='commit'?['commit','cleanup']:['rollback']);expect(scene.controls.enabled).toBe(true);expect(scene.drag).toBeNull();expect(scene.down).toBeNull();
+   scene.cancelDrag();expect(events).toHaveLength(outcome==='commit'?2:1);
+  }
+ });
+ it('disposes the previous curve and plane-ring resources once when an accepted path is replaced',()=>{
+  const design=ellipse(),{scene}=cpuScene(design);scene.setTrajectory(points(design));const old=[scene.handleGroup.getObjectByName('initial-earth-orbit'),scene.handleGroup.getObjectByName('initial-orbit-plane-ring')] as THREE.Line[],events:number[][]=[];
+  for(const line of old){const counters=[0,0];line.geometry.addEventListener('dispose',()=>counters[0]++);(line.material as THREE.Material).addEventListener('dispose',()=>counters[1]++);events.push(counters);}
+  design.plan.earthOrbit!.apoapsisAltitudeKm=1200;scene.setTrajectory(points(design));expect(events).toEqual([[1,1],[1,1]]);for(const line of old)expect(line.parent).toBeNull();
+ });
+ it('cancels an active ray-constrained edit before the F focus command changes its camera',()=>{
+  const {scene}=cpuScene(ellipse()),events:string[]=[];scene.restoreFocusShadow=()=>{};scene.craft=new THREE.Group();scene.craft.position.set(3.3,0,0);scene.controls.target=new THREE.Vector3();scene.controls.update=()=>{};
+  scene.drag={type:'nav',handle:'earth-apoapsis',x:10,y:20,moved:true,orbitParameter:3.5};scene.down={x:10,y:20};scene.controls.enabled=false;
+  const originalCamera=scene.camera.position.clone();
+  scene.cb.cancelNavigation=()=>{closeVector(scene.camera.position,originalCamera);events.push('rollback-before-camera-change');};
+  scene.focusCraft();
+  expect(events).toEqual(['rollback-before-camera-change']);expect(scene.drag).toBeNull();expect(scene.controls.enabled).toBe(true);expect(scene.camera.position.distanceTo(originalCamera)).toBeGreaterThan(1);
+ });
+});

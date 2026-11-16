@@ -1,0 +1,363 @@
+{
+  "createdAt": "2026-11-15T05:26:34.856697+00:00",
+  "status": "All4 bounded final-v8b production browser cases passed: Chrome2 and Edge2, no rejected or skipped cases.",
+  "scope": "Affected UI/camera and exact cross-browser physical-state replay only; the previous17-case r1 regression remains separately scoped. Not a performance benchmark or hosted deployment claim.",
+  "url": "http://127.0.0.1:5188/?qa",
+  "entrypoint": "assets/index-CJ7SVJJP.js",
+  "deploymentUI": "assets/deployment-ui-PlZTXnvP.js",
+  "deploymentWorker": "assets/deployment.worker-BIezmTdy.js",
+  "identity": {
+    "productFiles": 276,
+    "allProductAndSharedHarnessFilesExactAcrossBrowsers": true,
+    "servedHTMLExactlyMatchesDist": true,
+    "sourceChangesFromAcceptedR1": [
+      "src/deployment-ui.ts",
+      "src/render/deployment-scene.ts",
+      "src/render/working-face-direction.ts"
+    ],
+    "deploymentWorkerByteIdenticalToR1": true
+  },
+  "runs": [
+    {
+      "candidate": "m8-v8b-chrome-r1",
+      "stats": {
+        "startTime": "2026-11-15T05:20:53.685Z",
+        "duration": 61491.482,
+        "expected": 2,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "identities": 283,
+      "allBeforeAfterExact": true,
+      "cases": [
+        {
+          "title": "Chrome normal fixed wing labels and working faces control",
+          "status": "passed",
+          "durationMs": 49693
+        },
+        {
+          "title": "Chrome large fixed wing labels and working faces control",
+          "status": "passed",
+          "durationMs": 9029
+        }
+      ]
+    },
+    {
+      "candidate": "m8-v8b-edge-r1",
+      "stats": {
+        "startTime": "2026-11-15T05:22:09.377Z",
+        "duration": 166694.916,
+        "expected": 2,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "identities": 284,
+      "allBeforeAfterExact": true,
+      "cases": [
+        {
+          "title": "Edge actual repair full flight exact replay and working faces navigation",
+          "status": "passed",
+          "durationMs": 107546
+        },
+        {
+          "title": "Edge strictly imports actual Chrome terminal source with exact cross browser state",
+          "status": "passed",
+          "durationMs": 56870
+        }
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-chrome-r1/chrome-large-fixed-wing-labels-and-working-faces-control.json",
+      "title": "Chrome large fixed wing labels and working faces control",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 3,
+      "warningsRetained": 0,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CJ7SVJJP.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-chrome-r1/chrome-normal-fixed-wing-labels-and-working-faces-control.json",
+      "title": "Chrome normal fixed wing labels and working faces control",
+      "status": "passed",
+      "browser": "157.0.8103.52",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 3,
+      "warningsRetained": 1,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CJ7SVJJP.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-edge-r1/edge-actual-repair-full-flight-exact-replay-and-working-faces-navigation.json",
+      "title": "Edge actual repair full flight exact replay and working faces navigation",
+      "status": "passed",
+      "browser": "157.0.4341.46",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 2,
+      "warningsRetained": 1,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CJ7SVJJP.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-edge-r1/edge-strictly-imports-actual-chrome-terminal-source-with-exact-cross-browser-state.json",
+      "title": "Edge strictly imports actual Chrome terminal source with exact cross browser state",
+      "status": "passed",
+      "browser": "157.0.4341.46",
+      "url": "http://127.0.0.1:5188/?qa",
+      "appErrors": 0,
+      "nativeErrors": 0,
+      "nativeContexts": 2,
+      "warningsRetained": 0,
+      "scripts": [
+        "http://127.0.0.1:5188/assets/index-CJ7SVJJP.js"
+      ],
+      "workers": [
+        "http://127.0.0.1:5188/assets/forecast.worker-D4BYZ_Rh.js",
+        "http://127.0.0.1:5188/assets/preview.worker-DUFLQiFr.js",
+        "http://127.0.0.1:5188/assets/deployment.worker-BIezmTdy.js"
+      ]
+    }
+  ],
+  "crossBrowser": {
+    "originalActualChromeInput": {
+      "path": "tests/browser/artifacts/deployment-flow/m8-production-r1-closure/repaired-terminal-save.json",
+      "bytes": 126787,
+      "sha256": "2a90184b942e3c138618cf10b02ec35d8e1f69806f7ebe9bbb6fe58220418878"
+    },
+    "readonlyChromeBaseline": {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-chrome-r1/chrome-strict-replay-baseline.json",
+      "bytes": 449719,
+      "sha256": "682ce30ad06298676db59c714179ababde838d2ecb69398491f03381f12428bf"
+    },
+    "sourceDocumentExactExceptNewExportTimestamp": true,
+    "runtimeResultCraftPlanNumericsSourceExactlyEqual": true,
+    "strictReplayToleranceUnchanged": true,
+    "success": true,
+    "receivedBits": 16000000,
+    "priorEdgeFlightWasGenuineComputedPrefix": true,
+    "priorEdgeFlightTimeSeconds": 65,
+    "rejectionPathExecuted": false
+  },
+  "camera": {
+    "physicalBeforeAfterExact": true,
+    "workingFacesViewAngleDegrees": 111.9392570482059,
+    "nativeRightDragAngleDegrees": 36.49876201238615,
+    "nativeWheelDistanceRatio": 1.0967244118415442,
+    "screenshots": "Actual before/working-faces/right-drag-and-wheel captures retained. Visible curved Earth horizon behind craft and readable working surfaces; no fixed vertical horizon/craft relation claimed."
+  },
+  "ui": {
+    "scales": [
+      "normal",
+      "large"
+    ],
+    "languages": [
+      "ko",
+      "en"
+    ],
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "fixedWingLabels": [
+      "고정형 태양판",
+      "Fixed solar wing"
+    ],
+    "workingFacesControlVisibleAndHitTestableAllFourCombinations": true,
+    "actualFlightPrefixesBeforeControlChecks": true
+  },
+  "nativeAudit": {
+    "mandatoryEveryCase": true,
+    "applicationErrors": 0,
+    "ownershipErrors": 0,
+    "shaderWarningsRetained": true
+  },
+  "visualReview": [
+    "chrome-r1-terminal-working-faces.png",
+    "en-large-fixed-working-faces.png",
+    "edge-terminal-working-faces.png",
+    "edge-chrome-terminal-exact-replay.png"
+  ],
+  "limits": [
+    "Camera view is independent presentation state, so cross-browser physical replay does not claim pixel-identical camera screenshots.",
+    "Only4 scoped cases ran on v8b; no claim of rerunning all17 r1 cases or the earlier development resilience6.",
+    "No cross-browser rejection occurred; previous-state preservation on rejection remains a guarded assertion rather than an exercised v8b branch.",
+    "No failed trace ZIPs were produced by these successful batches; all raw Playwright output remains outside Git.",
+    "Root-owned preview5188 remains running; QA-owned browsers and all command sessions have finished."
+  ],
+  "files": [
+    {
+      "path": "docs/qa/milestone-8/v8b-chrome-r1/batch-results.json",
+      "bytes": 5467,
+      "sha256": "54de8cd96fa8eb7c9fee81acebaec949165fd28e3721d8529ed0a937562878c7"
+    },
+    {
+      "path": "docs/qa/milestone-8/v8b-chrome-r1/run.log",
+      "bytes": 463,
+      "sha256": "30ac99f0c3ed7c5eb9b544e4173eee8da4f2e628090b4ecb46a57619feea9deb"
+    },
+    {
+      "path": "docs/qa/milestone-8/v8b-chrome-r1/source-after.json",
+      "bytes": 46997,
+      "sha256": "a0090c81c00ea1e8bb8813f90892bc44db1a07db5b59915f4fb1889a41cd8ecf"
+    },
+    {
+      "path": "docs/qa/milestone-8/v8b-chrome-r1/source-before.json",
+      "bytes": 46997,
+      "sha256": "4622c72dbfb097bfdf26f490c2973a5217e2b2207df4ce89af804eac1a10d670"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-chrome-r1/chrome-large-fixed-wing-labels-and-working-faces-control.json",
+      "bytes": 1611,
+      "sha256": "b249fd158ab1e47038d0478a3f4fb27e2f43739b882942463a03a3b49b5304ca"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-chrome-r1/chrome-normal-fixed-wing-labels-and-working-faces-control.json",
+      "bytes": 2397,
+      "sha256": "1a0c4f390a1eee782a1c3368765ea79c5182f5a0ea67a978a4854313fad6a570"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-chrome-r1/chrome-r1-terminal-working-faces.png",
+      "bytes": 319617,
+      "sha256": "f721ea778b8a0e58499d52b5febbde4d3c8cebd0d3f65305a99438ccad3d1e58"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-chrome-r1/chrome-strict-replay-baseline.json",
+      "bytes": 449719,
+      "sha256": "682ce30ad06298676db59c714179ababde838d2ecb69398491f03381f12428bf"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-chrome-r1/en-large-fixed-working-faces.png",
+      "bytes": 311584,
+      "sha256": "297eb8164329103e9fe3aa693100e66114a66f249c0817653dca07afa6b47fd1"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-chrome-r1/en-normal-fixed-working-faces.png",
+      "bytes": 314546,
+      "sha256": "b82bf04da7fe8999c15c40233cd359a17424e662f3964472f1567567d8cbdbf8"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-chrome-r1/ko-large-fixed-working-faces.png",
+      "bytes": 299265,
+      "sha256": "8cc0650c1ba46d468cca3eae25235b5db18597968bc61d9c94e4b5540bed4100"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-chrome-r1/ko-normal-fixed-working-faces.png",
+      "bytes": 304399,
+      "sha256": "19036daabcce58e631bfbc0d9ab4ed7d2491c6fcab0d5122893e9cfcce02e8ea"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-chrome-r1/large-labels-and-bounds.json",
+      "bytes": 3086,
+      "sha256": "942783b5fb562076b9c0007999aee70b138f6570361a408da20540a058a1a3ec"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-chrome-r1/normal-labels-and-bounds.json",
+      "bytes": 3088,
+      "sha256": "f9e2a20b3b46f83d84cfbe04594e60a0fa6f5749c383542f766cf2666b846c05"
+    },
+    {
+      "path": "docs/qa/milestone-8/v8b-edge-r1/batch-results.json",
+      "bytes": 5472,
+      "sha256": "502e00a43f3339e1f70b6a279fe705cd215ff44e5f5b3f366f6d3a0055b15353"
+    },
+    {
+      "path": "docs/qa/milestone-8/v8b-edge-r1/run.log",
+      "bytes": 503,
+      "sha256": "05e21fc1e6de343a3dc878c60ebba79df6e72b986c4f08773923aca115672682"
+    },
+    {
+      "path": "docs/qa/milestone-8/v8b-edge-r1/source-after.json",
+      "bytes": 47222,
+      "sha256": "7903d65d8b82d4fddb49cee62cb41280f79198cd5cf9e393b02e578386c79845"
+    },
+    {
+      "path": "docs/qa/milestone-8/v8b-edge-r1/source-before.json",
+      "bytes": 47222,
+      "sha256": "ddd6dcb0e028bc02137814428effebde8924679f9fed3a20d91fdc03c8c0b277"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-edge-r1/edge-actual-repair-full-flight-exact-replay-and-working-faces-navigation.json",
+      "bytes": 2258,
+      "sha256": "8b5a5a28ba140db43f1a95e370e624ae3af6253fd43b0fe6eda4f67eec4f3167"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-edge-r1/edge-chrome-exact-replay.json",
+      "bytes": 723924,
+      "sha256": "eb33d274ba3377c41bd4818ef099368b3f3359a4e1328b4ba8bbf458dc82a744"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-edge-r1/edge-chrome-terminal-exact-replay.png",
+      "bytes": 438779,
+      "sha256": "309ccc279ad0801574211c0e7f1e03eedbd5b3310234c5b699e5638e8aaa51eb"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-edge-r1/edge-self-terminal-save.json",
+      "bytes": 126787,
+      "sha256": "6d755b121981603fe6a1b9ebc2ada913df0cc04b98dad5b46953ea76f96284ec"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-edge-r1/edge-strictly-imports-actual-chrome-terminal-source-with-exact-cross-browser-state.json",
+      "bytes": 1483,
+      "sha256": "a65a06555cb95cd0c3642bcabc5e20da5069a015ed036de5c7266c1052921495"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-edge-r1/edge-terminal-after-native-orbit-and-wheel.png",
+      "bytes": 201490,
+      "sha256": "43591f82766f5e55238db6295d30b082d767063974760777d29b8f0f9f5e282d"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-edge-r1/edge-terminal-before-working-faces.png",
+      "bytes": 340628,
+      "sha256": "869def366b4ee2dab75c04dbdb2c05316691bc952359cccb01fbe857f24b9a4b"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-edge-r1/edge-terminal-working-faces.png",
+      "bytes": 312104,
+      "sha256": "ca6239eacba3002a2018855836453b9e1d6e32575b79f3bccac7d842e2bb12a7"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-v8b/m8-v8b-edge-r1/edge-working-faces-state-evidence.json",
+      "bytes": 459654,
+      "sha256": "c5d25a52e7e9bb82921bb2a6c550ed1be0c709515219a53814cc49c174c885d9"
+    },
+    {
+      "path": "tests/browser/deployment-v8b.spec.ts",
+      "bytes": 13650,
+      "sha256": "25fc9fe1e2551d8e8737d7b54f24448686ab6d39d114d8363e55bd51d4641632"
+    },
+    {
+      "path": "tools/milestone8-v8b-source.mjs",
+      "bytes": 2132,
+      "sha256": "823ff4acc369a996d5314fd70ced6df056d1f8e5a22a8752877cd08cfe61fb29"
+    }
+  ]
+}

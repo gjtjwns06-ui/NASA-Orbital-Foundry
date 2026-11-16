@@ -1,0 +1,48 @@
+{
+  "first": {
+    "elapsedMs": 260.16849999999977,
+    "replayedSteps": 200,
+    "fromCheckpointSeconds": 4000
+  },
+  "warm": {
+    "elapsedMs": 12.350800000014715,
+    "replayedSteps": 0,
+    "fromCheckpointSeconds": 4200
+  },
+  "exactSourceWarmPinMs": 1.7441999999864493,
+  "stats": {
+    "strictVerifications": 4,
+    "verifiedCacheHits": 1,
+    "histories": [
+      {
+        "key": "eff50547bd075ce2c93a151bcf10f77e7e7a34a0a9e0cc6a567a2e2febe5babc:f79626ffcba1206bb22a7e7706abcf6d3a7088bc6fc4daec656dbe6e935e7988:7130f9fa835171c9501ddf49d7b836dbc2b2ba67a60cf44e06cc34c8ba21f3f6",
+        "checkpointCount": 1,
+        "checkpointTimes": [
+          3600
+        ]
+      },
+      {
+        "key": "1cf5b0d1e31d2091bca27bcf9ba87c5357f65a1a82c96285800fadc2fc894505:f79626ffcba1206bb22a7e7706abcf6d3a7088bc6fc4daec656dbe6e935e7988:7130f9fa835171c9501ddf49d7b836dbc2b2ba67a60cf44e06cc34c8ba21f3f6",
+        "checkpointCount": 1,
+        "checkpointTimes": [
+          0
+        ]
+      },
+      {
+        "key": "f62498ba7192bff90a72ad58dffc1282ae9b01166c14917afaaae446eb77e26e:f79626ffcba1206bb22a7e7706abcf6d3a7088bc6fc4daec656dbe6e935e7988:7130f9fa835171c9501ddf49d7b836dbc2b2ba67a60cf44e06cc34c8ba21f3f6",
+        "checkpointCount": 4,
+        "checkpointTimes": [
+          0,
+          4000,
+          4200,
+          326162.9554585013
+        ]
+      }
+    ],
+    "limits": {
+      "sources": 3,
+      "checkpointsPerSource": 48
+    }
+  },
+  "scope": "Observed candidate workload; no general performance guarantee"
+}

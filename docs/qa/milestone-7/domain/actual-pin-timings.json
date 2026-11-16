@@ -1,0 +1,9 @@
+{
+  "timings": {
+    "actualWeakFlightMs": 72682.87,
+    "actualRepairedFlightMs": 29965.996400000004,
+    "strictWeakPinMs": 72998.83789999998,
+    "strictRepairedPinMs": 30374.1066
+  },
+  "scope": "Observed actual fixture and strict replay wall time; concurrent functional QA, not an isolated benchmark"
+}

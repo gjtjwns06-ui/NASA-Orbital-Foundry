@@ -1,0 +1,10 @@
+import {DeploymentError} from './math';
+export interface BatteryPolicy {capacityWh:number;chargeLimitW:number;dischargeLimitW:number;chargeEfficiency:number;dischargeEfficiency:number}
+export interface BatteryFlow {energyWh:number;chargeInputJ:number;deliveredOutputJ:number;conversionLossJ:number;unservedLoadJ:number;curtailedSolarJ:number;depletedAtSeconds:number|null;fullAtSeconds:number|null}
+/** Constant-power interval integral in bus-side watts. Insufficient output is
+ * explicitly unserved; it is never silently counted as supplied power. */
+export function integrateBattery(energyWh:number,solarW:number,loadW:number,dt:number,p:BatteryPolicy):BatteryFlow {
+ if(![energyWh,solarW,loadW,dt,p.capacityWh,p.chargeLimitW,p.dischargeLimitW,p.chargeEfficiency,p.dischargeEfficiency].every(Number.isFinite)||[energyWh,solarW,loadW,dt,p.capacityWh,p.chargeLimitW,p.dischargeLimitW].some(v=>v<0)||energyWh>p.capacityWh+1e-9||p.chargeEfficiency<=0||p.chargeEfficiency>1||p.dischargeEfficiency<=0||p.dischargeEfficiency>1)throw new DeploymentError('INVALID_POWER_INTERVAL');
+ const net=solarW-loadW;if(net>=0){const input=Math.min(net,p.chargeLimitW),freeJ=Math.max(0,p.capacityWh-energyWh)*3600,tFull=input>0?freeJ/(input*p.chargeEfficiency):Infinity,used=input*Math.min(dt,tFull),stored=used*p.chargeEfficiency;return {energyWh:Math.min(p.capacityWh,energyWh+stored/3600),chargeInputJ:used,deliveredOutputJ:0,conversionLossJ:used-stored,unservedLoadJ:0,curtailedSolarJ:net*dt-used,depletedAtSeconds:null,fullAtSeconds:tFull<=dt?tFull:null};}
+ const demand=-net,output=Math.min(demand,p.dischargeLimitW),usableJ=energyWh*3600*p.dischargeEfficiency,tEmpty=output>0?usableJ/output:Infinity,delivered=output*Math.min(dt,tEmpty),spent=delivered/p.dischargeEfficiency;return {energyWh:Math.max(0,energyWh-spent/3600),chargeInputJ:0,deliveredOutputJ:delivered,conversionLossJ:spent-delivered,unservedLoadJ:demand*dt-delivered,curtailedSolarJ:0,depletedAtSeconds:tEmpty<=dt?tEmpty:null,fullAtSeconds:null};
+}

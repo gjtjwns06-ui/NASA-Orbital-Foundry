@@ -1,0 +1,61 @@
+[
+  {
+    "file": "earth-day.jpg",
+    "sourceUrl": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/bmng/bmng-base/july/world.200407.3x5400x2700.jpg?w=4096&h=2048&fit=clip&crop=faces%2Cfocalpoint",
+    "sourcePage": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/",
+    "credit": "NASA Earth Observatory / Reto Stockli",
+    "note": "July 2004 Blue Marble Next Generation; historical composite",
+    "transformation": "NASA-served 4096x2048 derivative of published 5400x2700 July 2004 map; bytes unchanged; no AI upscaling or recolouring",
+    "width": 4096,
+    "height": 2048,
+    "bytes": 436962,
+    "sourceSha256": "7a1ed50d144364f6c23a2a277bb990014f07d79488b74daf8ae0c897185c9b5b",
+    "sha256": "7a1ed50d144364f6c23a2a277bb990014f07d79488b74daf8ae0c897185c9b5b",
+    "usage": "NASA Images and Media Usage Guidelines; source attribution, no NASA endorsement implied",
+    "originalSourceUrl": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/july/world.200407.3x5400x2700.jpg",
+    "reviewedOn": "2026-11-15",
+    "licenseUrl": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+  },
+  {
+    "file": "earth-night.jpg",
+    "sourceUrl": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/144000/144898/BlackMarble_2016_01deg.jpg?w=2048&h=1024&fit=clip&crop=faces%2Cfocalpoint",
+    "sourcePage": "https://science.nasa.gov/earth/earth-observatory/earth-at-night/maps/",
+    "credit": "NASA Earth Observatory / Black Marble team",
+    "note": "2016 night lights; historical composite",
+    "transformation": "NASA-served 2048x1024 derivative, bytes unchanged",
+    "width": 2048,
+    "height": 1024,
+    "bytes": 117858,
+    "sourceSha256": "e927fdb873e5cbe87bba3094f867b9352500b87f7d519daa5937179caa204709",
+    "sha256": "e927fdb873e5cbe87bba3094f867b9352500b87f7d519daa5937179caa204709",
+    "usage": "NASA Images and Media Usage Guidelines; source attribution, no NASA endorsement implied"
+  },
+  {
+    "file": "earth-clouds.png",
+    "sourceUrl": "https://svs.gsfc.nasa.gov/vis/a000000/a003800/a003837/frames/2048x1024_2x1_30p/Clouds/clouds.0350.tif",
+    "sourcePage": "https://svs.gsfc.nasa.gov/3837/",
+    "credit": "NASA/Goddard Space Flight Center Scientific Visualization Studio",
+    "note": "GEOS-5 atmospheric model, published 2011; illustrative cloud layer, not live weather",
+    "transformation": "Original alpha preserved exactly; RGB set to neutral white for cloud-shell rendering; dimensions unchanged; TIFF to PNG",
+    "width": 2048,
+    "height": 1024,
+    "bytes": 1640591,
+    "sourceSha256": "b254a27e90bdea3901de3d8b69d74f6a0e9d1128acc9c9450ad48ced7eb4e764",
+    "sha256": "5d1310c32468dd44c87ebb00254866670d652fa4b102e3841329edcc29fe6154",
+    "usage": "NASA Images and Media Usage Guidelines; source attribution, no NASA endorsement implied"
+  },
+  {
+    "file": "mars.jpg",
+    "sourceUrl": "https://raw.githubusercontent.com/nasa/NASA-3D-Resources/master/Images%20and%20Textures/Mars/Mars.jpg",
+    "sourcePage": "https://science.nasa.gov/3d-resources/mars/",
+    "credit": "NASA/Jet Propulsion Laboratory & Caltech",
+    "note": "Viking imagery processed at USGS; global cylindrical map",
+    "transformation": "Original bytes unchanged",
+    "width": 1440,
+    "height": 720,
+    "bytes": 972896,
+    "sourceSha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780",
+    "sha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780",
+    "usage": "NASA Images and Media Usage Guidelines; source attribution, no NASA endorsement implied"
+  }
+]

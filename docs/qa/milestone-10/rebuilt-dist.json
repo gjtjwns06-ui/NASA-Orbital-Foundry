@@ -1,0 +1,409 @@
+{
+  "scope": "All compiled runtime/CSS/image/wasm files exact. Six unchanged public text assets retain published-v9 canonical bytes rather than candidate Git checkout CRLF. Three JSON references, Basis loader, its LICENSE and README. No runtime edits caused by canonicalization.",
+  "exact": [
+    {
+      "path": "assets/KTX2Loader-BZTl2LJe.js",
+      "sha256": "35e42e35eed7ff2f57fed53ddffa83eab6e71282fe934cc3836abb05cabdc239",
+      "bytes": 59410
+    },
+    {
+      "path": "assets/basis/basis_transcoder.wasm",
+      "sha256": "6cf17dc889352c42e9acf8897107978d127005fe3386c36a0e3845e27967630a",
+      "bytes": 527333
+    },
+    {
+      "path": "assets/celestial-stars-BeTG9sg8.js",
+      "sha256": "d75c0d2179af7fb392c60d410e3bbda46e0cfb8a9104ca451b028a1b7a7feec0",
+      "bytes": 1806
+    },
+    {
+      "path": "assets/data-Dd4TOZ0w.js",
+      "sha256": "8412e384513c40bb4b726d52f750e26d56dfef847377da70788f024172231e2d",
+      "bytes": 15225
+    },
+    {
+      "path": "assets/deployment-ui-D3KCMYMI.css",
+      "sha256": "14612bd41ef1d89753ced307bb32804a7defdd47c53b03ae684a55276e6f0de3",
+      "bytes": 13164
+    },
+    {
+      "path": "assets/deployment-ui-DMMk-5_6.js",
+      "sha256": "9d4f405eabe75aba22e715035843cd52a09d2fff9472a259a2d90a954684c414",
+      "bytes": 142327
+    },
+    {
+      "path": "assets/deployment.worker-pnFV-DFf.js",
+      "sha256": "e58ead0347a0145af9a133167acd45dd2ebfa3da533d43be95fa722a039659ec",
+      "bytes": 119288
+    },
+    {
+      "path": "assets/earth-clouds.png",
+      "sha256": "5d1310c32468dd44c87ebb00254866670d652fa4b102e3841329edcc29fe6154",
+      "bytes": 1640591
+    },
+    {
+      "path": "assets/earth-day.jpg",
+      "sha256": "7a1ed50d144364f6c23a2a277bb990014f07d79488b74daf8ae0c897185c9b5b",
+      "bytes": 436962
+    },
+    {
+      "path": "assets/earth-night.jpg",
+      "sha256": "e927fdb873e5cbe87bba3094f867b9352500b87f7d519daa5937179caa204709",
+      "bytes": 117858
+    },
+    {
+      "path": "assets/environment-stats.json",
+      "sha256": "0f75f0abcd0bd40b0f1d42a9eb1fe9a693584a0234ba7330483a4e72bbb886a5",
+      "bytes": 404
+    },
+    {
+      "path": "assets/fonts/Barlow-OFL.txt",
+      "sha256": "b4cc842153e834885f3f9385ce26de4e1213d3ffbe473a6c0519e5522a8e3608",
+      "bytes": 4470
+    },
+    {
+      "path": "assets/fonts/IBMPlexSansKR-OFL.txt",
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "bytes": 4456
+    },
+    {
+      "path": "assets/fonts/SOURCE.txt",
+      "sha256": "08c01cb7abced6f3d01323a4eec9a16932723c2f53ef62860d4d0e42881877e1",
+      "bytes": 257
+    },
+    {
+      "path": "assets/fonts/font-0.woff",
+      "sha256": "65e36e90bf3cc4b937430cc037ed4b1de40ffb32d5a9e7c30e5ba6dfb9733827",
+      "bytes": 22948
+    },
+    {
+      "path": "assets/fonts/font-1.woff",
+      "sha256": "ebc49ba82b1478d63483610dd9f15e1a861f1757ac96b04174117143075b061d",
+      "bytes": 24008
+    },
+    {
+      "path": "assets/fonts/font-2.woff",
+      "sha256": "8522cc905c36015209aee2cd9cc0a9a9ef638b2d8fda17de705a207c4e6cc05e",
+      "bytes": 24060
+    },
+    {
+      "path": "assets/fonts/font-3.woff",
+      "sha256": "146f4b25d964c9d1b964aceb26141be52f701d80ea631d964a9bdd4ba8b5730f",
+      "bytes": 84084
+    },
+    {
+      "path": "assets/fonts/font-4.woff",
+      "sha256": "b968283ea3a2c9f4f7d61eb7a3fd18502ed30cfaf595c65c658749fbbe320f63",
+      "bytes": 92788
+    },
+    {
+      "path": "assets/fonts/font-5.woff",
+      "sha256": "5a3033ccc9a89d0c260cab5cc5917a2051b7e42ad8abf2b2d36758b9b8514d3a",
+      "bytes": 93044
+    },
+    {
+      "path": "assets/fonts/fonts.css",
+      "sha256": "994675cb9042e4ef2e912de535474e24d4beb2786cdb9e852ca19900690bcf27",
+      "bytes": 1050
+    },
+    {
+      "path": "assets/forecast.worker-BOq_7-Hd.js",
+      "sha256": "dd816465c27f222fb41f6f946e2d915222970f60f820e0c89bffa8c9979ab958",
+      "bytes": 81514
+    },
+    {
+      "path": "assets/hangar.glb",
+      "sha256": "92af2508e0ea2a1b1b3c75577dc36e335d71ca704515cd2815e3c570f6785eab",
+      "bytes": 3432944
+    },
+    {
+      "path": "assets/hardware/library-v3.webp",
+      "sha256": "4154565a92642517272b5aa966a284c36bce7fde9f00357d7638316a2a264143",
+      "bytes": 77488
+    },
+    {
+      "path": "assets/index-BsQl5UgJ.js",
+      "sha256": "cd40f5c9844e13af4844d4aa93bc20e3280b65798468381103708176c6bb26b1",
+      "bytes": 78480
+    },
+    {
+      "path": "assets/index-CPekGVYp.js",
+      "sha256": "6bc2ce30358340a311fbb6997bd70d3d9cc8e8e407e16b77b82744516d50c785",
+      "bytes": 1205762
+    },
+    {
+      "path": "assets/index-PdPCyJuF.css",
+      "sha256": "c3f2843d6f40dc96cf585525544b2cba45425aa7e527109c06152a125f692eb9",
+      "bytes": 51121
+    },
+    {
+      "path": "assets/launch-campus.glb",
+      "sha256": "754af65553eda7867a0fba459aef74b2c57bfec24b410d31993e3e5bc7427e06",
+      "bytes": 3566520
+    },
+    {
+      "path": "assets/lazy-surface-texture-uAHGtvVa.js",
+      "sha256": "d15e38e25384218e57e1d760bea5aa00cfabd0485ecd0a7431be38eb595c47d1",
+      "bytes": 1497
+    },
+    {
+      "path": "assets/mars.jpg",
+      "sha256": "12ec6bf02ebd42a246edc778cb2ce8c595b4d9f0892badf0bfff8abb2303c780",
+      "bytes": 972896
+    },
+    {
+      "path": "assets/mission-control-stats.json",
+      "sha256": "69910277760e06140dbd87bfc90378853be7f3ed0a78c568414533b34c81f4ce",
+      "bytes": 1101
+    },
+    {
+      "path": "assets/mission-control.glb",
+      "sha256": "fc166790eadcb735d7f9517fc53c9ed00692d0a68c6d254133cb44910efc918e",
+      "bytes": 3019548
+    },
+    {
+      "path": "assets/operations-codec-CRbvJp2L.js",
+      "sha256": "5ee4b7511af513dfdc788e70f9803a10e76065010566d14ff0d81317024ef404",
+      "bytes": 590028
+    },
+    {
+      "path": "assets/persistence-CmCuKwMy.js",
+      "sha256": "a11893b64e72b3564b9519f733e46d22c95a605bb99547889538d8d1ca03c050",
+      "bytes": 30133
+    },
+    {
+      "path": "assets/planet-inspection-direction-CPxAdX1N.js",
+      "sha256": "b4d961a0dc2a40905c4a9dabc571d5f842b57dde45463df81cb42d52a65256dc",
+      "bytes": 922
+    },
+    {
+      "path": "assets/preview.worker-CkVnPFfo.js",
+      "sha256": "417cf5e354ff8788aad203821c630ef8eb4412dc3a2324b404f2b76e49f52fe5",
+      "bytes": 80627
+    },
+    {
+      "path": "assets/review-ui-BR4HXEXi.js",
+      "sha256": "f2f2793494ead3ffecd312118615df40fadf462ecf44c677e4069212d6040070",
+      "bytes": 38947
+    },
+    {
+      "path": "assets/review-ui-BS_4bUaN.css",
+      "sha256": "dee4cfe0280a0a2cbf04dea9583efd941163f990ad0ecb4cbb31f08827d13e87",
+      "bytes": 9360
+    },
+    {
+      "path": "assets/review.worker-BoLKL8-R.js",
+      "sha256": "6ab6d7be0530d7d7d747903842a9ad4bcbb65c0ed5587718a80449ec39c09a28",
+      "bytes": 718172
+    },
+    {
+      "path": "assets/scenario-Bb9ZGf9_.js",
+      "sha256": "64b4ffa5a95dcdfb650c933d2c4f0089ae9c52bc075a74c4bee8a687d7689b75",
+      "bytes": 3861
+    },
+    {
+      "path": "assets/swingby-BT6IabNm.js",
+      "sha256": "ed34ea0457f996d4a4d8000b123953d532cda899ccfd613053718972d7aec424",
+      "bytes": 3347
+    },
+    {
+      "path": "assets/swingby-scene-DXCgzZKK.js",
+      "sha256": "6a2189c00586fc87130c84290ce540cf3659e97038d099c378f8aa61cd642900",
+      "bytes": 45466
+    },
+    {
+      "path": "assets/swingby-ui-DvB6iyn4.js",
+      "sha256": "b7ae3ade6138f38296de8ce20a0607dfcb74359c04f3b23e29486146e7b39dfc",
+      "bytes": 39926
+    },
+    {
+      "path": "assets/swingby-ui-RBBPcnaa.css",
+      "sha256": "407158867f8bb625d3f46eef22c72635596bcd331eb7d434f6dfe984bbaaa05d",
+      "bytes": 7368
+    },
+    {
+      "path": "assets/swingby.worker-D95WMzCs.js",
+      "sha256": "bfa6c916202c1ef5c741d1d719d3e932e689094ced16b121b5ee01f31a6aaa6a",
+      "bytes": 693686
+    },
+    {
+      "path": "assets/texture-provenance.json",
+      "sha256": "c4870ff7554b8992c1486e611b4874b9dee0a005a56bb5a38f32b40390dd3cbc",
+      "bytes": 3718
+    },
+    {
+      "path": "assets/textures/earth-bmng-july2004-16k.ktx2",
+      "sha256": "dae2a97d896170340f0df8331475145b1ac9e567e4726e3403583a02d5995f92",
+      "bytes": 10062327
+    },
+    {
+      "path": "assets/textures/earth-bmng-july2004-8k.ktx2",
+      "sha256": "754427060f3910d6cead0a443468013c69aa8585ebfd5e885187b2d8f9ae1fd8",
+      "bytes": 2682779
+    },
+    {
+      "path": "assets/textures/mars-mdim21-4k.webp",
+      "sha256": "5d06074054c7405a444ca1824acfc8f64589a2a65efcb986a2a9a31d3dbbe5df",
+      "bytes": 2553544
+    },
+    {
+      "path": "assets/transfer-ui-BdEWkTo2.js",
+      "sha256": "06660297631e0d5ed312f006f440f6ea732fb92ae4b4cc9b7e4e3a7a3613c516",
+      "bytes": 147628
+    },
+    {
+      "path": "assets/transfer-ui-ZXtxuJae.css",
+      "sha256": "8b65c8a5043fdc454fd8a3c7d604961ac24208ec23aad83e8140504f5c360ebf",
+      "bytes": 15646
+    },
+    {
+      "path": "assets/transfer.worker-xBEW4vhK.js",
+      "sha256": "6650792bcf9c100126aaced3467ffcb09de67ef4373236cf9fb61faf4a59915b",
+      "bytes": 745241
+    },
+    {
+      "path": "data/command-network.json",
+      "sha256": "1eb4ebd04d12efb8ea2bf36e30a8b88c0ee198e504ca6efbc7d992fa8159fff6",
+      "bytes": 2706
+    },
+    {
+      "path": "data/component-sources.json",
+      "sha256": "46b6e9838fc2abff06465e5200a74d6d179621363f315025edb53e5cabfdb464",
+      "bytes": 22010
+    },
+    {
+      "path": "data/earth-surface-detail.json",
+      "sha256": "73726ec26765be49c04cffece7dc944380137b8fc88d0e35d9c80e974989d25c",
+      "bytes": 3708
+    },
+    {
+      "path": "data/gmat/earth-low-inclination.json",
+      "sha256": "8cdd6964b31711d41a59128d3b8450862c811e19e5d397dc3c3de939bb6125e4",
+      "bytes": 192683
+    },
+    {
+      "path": "data/gmat/earth-polar.json",
+      "sha256": "ff52a7cf8c119270a1244352e06daf1b77485b7738aea6aaf1df2839fdab8513",
+      "bytes": 192619
+    },
+    {
+      "path": "data/gmat/earth-reference.json",
+      "sha256": "a03e6cb00c074519e69650650457c9d161ae09b472bb8bd3d4f716cb355e4131",
+      "bytes": 192249
+    },
+    {
+      "path": "data/gmat/earth-three-axis-burn.json",
+      "sha256": "9a9cd5b6cb7a155ed303e79c2731682223bbf352c8c9917fe0e5229471da5fb3",
+      "bytes": 192384
+    },
+    {
+      "path": "data/gmat/mars-distant-tilted.json",
+      "sha256": "af6ef8c64d43ba2836dca095811d19acf483d49f0c85ba0e74a6b7118aff7848",
+      "bytes": 40692
+    },
+    {
+      "path": "data/gmat/mars-high-polar.json",
+      "sha256": "d331853f2676f00fdbcb84215863be21c879e266fb27858631cc0d8a0db33703",
+      "bytes": 40968
+    },
+    {
+      "path": "data/gmat/mars-low-tilted.json",
+      "sha256": "0bc722171226494c66f794568f430dde1124de936bcc9e2735f474dc592e56eb",
+      "bytes": 41073
+    },
+    {
+      "path": "data/gmat/mars-reference.json",
+      "sha256": "b3fc9d5fc2a4ea262833dc1ca1aaf54807e6ac4416600f5d341e984c423cadf5",
+      "bytes": 30763
+    },
+    {
+      "path": "data/gmat/validation-summary.json",
+      "sha256": "ccd5295bacae1544f784c824641f0e92361d778811c4c87e58dc9c870ddd01da",
+      "bytes": 9812
+    },
+    {
+      "path": "data/hardware-catalog-v2.json",
+      "sha256": "7878c95c22bb6f1d34a132be1de8a13db2355da49ff6655484803267c8280b29",
+      "bytes": 65922
+    },
+    {
+      "path": "data/hardware-thumbnails-v3.json",
+      "sha256": "b8f10669afc805399267a0741ca7b79e6f10aecc8803e6ee300ba35a943f25c8",
+      "bytes": 712
+    },
+    {
+      "path": "data/mars-surface-detail.json",
+      "sha256": "887469f1eaebbcc49270ef3f41c6d296227e913ffd0a81b689d5ff65e90a790d",
+      "bytes": 53116
+    },
+    {
+      "path": "data/transfer/gmat-research-summary.json",
+      "sha256": "183b43fcd78cc28cfade46f95e2b70b21020d6b3cf53875e2103811378d655c4",
+      "bytes": 3297
+    },
+    {
+      "path": "data/transfer/interpolation-report.json",
+      "sha256": "07a84964ce89fae67eb7d43bc4fe9bfcba7e45dbfed288fa78ee377125a93f8d",
+      "bytes": 1977
+    },
+    {
+      "path": "data/transfer/model.md",
+      "sha256": "e70dcaafc64a45e046ebdc637e0ec699242b5d17113ccb681799122d4f9a74ea",
+      "bytes": 10738
+    },
+    {
+      "path": "data/transfer/sources.json",
+      "sha256": "40cd7001fa1da435f288a6ec52a9d29395a4ddfe2dd83a7a0b2ad39526f09bbc",
+      "bytes": 1869
+    },
+    {
+      "path": "favicon.svg",
+      "sha256": "fc18700f7e557a5603588e71adb9d65778de99175c8f0ee54577441442bdf960",
+      "bytes": 362
+    },
+    {
+      "path": "index.html",
+      "sha256": "e8b6ae9d64723413c2cb0acda636236d1297d98b35ba26518dea01705d6dd00b",
+      "bytes": 633
+    }
+  ],
+  "lineEndingsOnly": [
+    {
+      "path": "assets/basis/LICENSE",
+      "sha256": "065fcf48d6af21c0b75e23be5ed5753aee75c892e1c2cf178fa6736305614a5c",
+      "bytes": 11347,
+      "mainByteIdenticalToPublishedV9": true
+    },
+    {
+      "path": "assets/basis/README.md",
+      "sha256": "930b11bbbb742b2525491b0964f0462d63d8b21383c0623ec4c98c43d53723c6",
+      "bytes": 1448,
+      "mainByteIdenticalToPublishedV9": true
+    },
+    {
+      "path": "assets/basis/basis_transcoder.js",
+      "sha256": "8478b5b6d6b74e7d3082b89f6417321d8d1dc0307f2b30d4484bb11b441696a1",
+      "bytes": 57529,
+      "mainByteIdenticalToPublishedV9": true
+    },
+    {
+      "path": "data/swingby/model-v1.json",
+      "sha256": "bc1597a6078b2eb3f7244385dd06f4421a441220ae02c53ae5a1b898df476bb7",
+      "bytes": 4183,
+      "mainByteIdenticalToPublishedV9": true
+    },
+    {
+      "path": "data/swingby/propulsion-v1.json",
+      "sha256": "ab2ef8f3504a52c7bc04f7f44f1404bcc237aa4e47b48c1836e94d6fea72541a",
+      "bytes": 920,
+      "mainByteIdenticalToPublishedV9": true
+    },
+    {
+      "path": "data/swingby/scenario-v1.json",
+      "sha256": "416b3929434961bac9e9cdce67ac65a57292c8eca7d9ba0fdff6627c365d9f69",
+      "bytes": 2121,
+      "mainByteIdenticalToPublishedV9": true
+    }
+  ],
+  "initialVerification": "Initial three-file whitelist rejected basis/LICENSE. Expanded only after inspecting all6CRLF/LF-only differences and checking main hashes against published-v9 evidence; no product changes."
+}

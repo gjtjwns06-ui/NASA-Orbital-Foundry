@@ -1,0 +1,13 @@
+{
+  "stats": {
+    "startTime": "2026-11-15T10:29:46.748Z",
+    "duration": 40507.724,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "identitiesUnchanged": 305,
+  "entry": "index-CPekGVYp.js",
+  "scope": "Actual Edge157 Korean720p+English large1080p NAV05 pointer/restore/context/import/launch functional cases. No FPS or hosted measurement."
+}

@@ -1,0 +1,46 @@
+{
+  "scope": "Explicit operations3 domain integration. No renderer/UI/worker or released runtime/resource implementation is included.",
+  "sourceRoot": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-operations",
+  "files": {
+    "src/transfer/operations-types.ts": "4e9160a2cc4f7cedb2d1e29dc6b1719a3839784979b9a97fc29c427a504df1a4",
+    "src/transfer/operations-codes.ts": "154c6f71f30011382affb69e6b7712a63308597edb8a206ade8d0a7ba9689a8e",
+    "src/transfer/operations-codec.ts": "c920b2795606b887a0eaeb55a2bb70a8129c383fd04e40b50add4a9dc893cf4d",
+    "src/transfer/command-network.ts": "477034ed8c734bd0bd31da12d0990f3bafa0245f3b9b8a5a02eec9220ed06c00",
+    "src/transfer/command-link.ts": "00295ca1c4c1af53942540551575986b396234d63aa91d60b9314e0e719591bb",
+    "src/transfer/command-guards.ts": "647bd2c91bf62ca6c62c2f7a95af129ad02423e5f6aadeb1e49288674f8f3bce",
+    "src/transfer/command-transport.ts": "e6816f452a6000fb47061740640d6e06471621dbc3dcfc1b8c966ed00a35a6a8",
+    "src/transfer/operations.ts": "4325762f88a4e954b65e0f10b649c90338b6ba9e9b0c16e486919cbf3e69357c",
+    "src/transfer/runtime-v3.ts": "f7306504ccefd8ad5f272a127a0b07f0932e800f7825461d4877cce5e7a5dcb7",
+    "src/transfer/persistence-v2.ts": "c4b5ecc3ab4747372599baa33c2f7448a8cb65150b7d947b4029c742a47a5a2a",
+    "src/transfer/operations-lesson.ts": "f1ec4a42b34e58757c778befb778075b7d6d0837edc1e1f5bee51c85cdf846f1",
+    "src/transfer/engine.ts": "8d87f9b491998806d4d818dcab4a0753ed48a0f28804f46c20bd87006a37e05c",
+    "src/transfer/state.ts": "cdf807b9c880f7f9098c82a035cdc77157c31f592d3db44c3b24a09aeff733af",
+    "src/transfer/types.ts": "40e635e632a323a66c41857857487dc8e4dcbab528796cca6b9adba340765487",
+    "src/transfer/index.ts": "c5ca88fef4412abd1d49c8a01d8652172b1f6a9d0a3ff2b5c17b51cb1ac44715",
+    "tests/operations-runtime.test.ts": "25a3184c53c4e3a66c4e0de9e6e98b69847d3152a7998bdede6e2413337e682e",
+    "tests/operations-journal-audit.test.ts": "36d59cfed8641682d6c95ba0e9c507987990ac0a489801352732f77e40da9906",
+    "tests/operations-link.test.ts": "8a6134ba2b0da185d7bbef2c16f4bdf2d8d4207f2c45a9a97885da79062e7290",
+    "tests/operations-guards.test.ts": "b9fef400a72b5d85bde7a4db1b5adae4b28cd56668ef210a42d2b7754455776e",
+    "tests/operations-save.test.ts": "20832c9ec438d367f0264f0539692c3a7df80a98e31d515dfe0d51af2dff218d",
+    "tests/operations-released-compatibility.test.ts": "833b84fa7c7356e8af6e818eb8e11a9e0bd2bb80202e4d5335b7461f1c8566f6",
+    "tests/fixtures/operations-released-source-manifest.json": "304a084ddd448a083fe42ab14e212983e0d0e9003b3754b41c64d38b2cd4d64f",
+    "public/data/command-network.json": "1eb4ebd04d12efb8ea2bf36e30a8b88c0ee198e504ca6efbc7d992fa8159fff6",
+    "tools/operations/export-model.mjs": "7422e398523620596086d7e23304e5466fd1859af0b4cc73910bf54f2e760e68",
+    "tools/operations/record-negative-cases.mjs": "a89c243a99e755095c34a598377c9f45844726e86d7b3aafe1e12652a93bf882",
+    "docs/m03-operations-implementation.md": "cffc3564504ef701b78c47bbc5e92bc9ca655d39a809439d60c6b7c2cba76adf",
+    "tests/operations-active-convergence.test.ts": "a095e361597c95128f417ef99eda237f6e827dfa5fec7064ac8a873e2e95a27b"
+  },
+  "evidenceToIncludeAfterFinalRun": [
+    "docs/qa/operations/model-definition.json",
+    "docs/qa/operations/lesson-runtime-evidence.json",
+    "docs/qa/operations/negative-lesson-evidence.json",
+    "docs/qa/operations/acceptance-summary.md",
+    "docs/qa/operations/active-slew-convergence.json"
+  ],
+  "excluded": [
+    "baseline/**",
+    "node_modules/**",
+    "all rejected performance prototype source",
+    "copied root contracts not authored by this change"
+  ]
+}

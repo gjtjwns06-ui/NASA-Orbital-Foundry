@@ -1,0 +1,84 @@
+{
+  "status": "pass",
+  "scope": "Final continuous-lid variant:two same-camera actual assembly captures. Native context proof belongs to the preceding cap-only variant, not repeated here. No performance claim.",
+  "browser": "157.0.8103.52",
+  "records": [
+    {
+      "busId": "pathfinder-d35-v1",
+      "pose": "normal-closed",
+      "style": "classic",
+      "camera": [
+        5.900000000000001,
+        3.8999999999999995,
+        -4.599999999999999
+      ],
+      "quaternion": [
+        -0.06120056291228247,
+        0.889790929570107,
+        0.12531914839238908,
+        0.43453619388975073
+      ],
+      "target": [
+        0,
+        1.75,
+        0
+      ],
+      "sun": [
+        12,
+        18,
+        10
+      ],
+      "exposure": 1.1,
+      "bayOpen": false,
+      "triangles": 11358,
+      "draws": 9,
+      "textures": 3,
+      "renderResources": {
+        "geometries": 112,
+        "textures": 19,
+        "programs": 18
+      }
+    },
+    {
+      "busId": "pathfinder-d35-v1",
+      "pose": "normal-closed",
+      "style": "panelled-v1",
+      "camera": [
+        5.900000000000001,
+        3.8999999999999995,
+        -4.599999999999999
+      ],
+      "quaternion": [
+        -0.06120056291228247,
+        0.889790929570107,
+        0.12531914839238908,
+        0.43453619388975073
+      ],
+      "target": [
+        0,
+        1.75,
+        0
+      ],
+      "sun": [
+        12,
+        18,
+        10
+      ],
+      "exposure": 1.1,
+      "bayOpen": false,
+      "triangles": 14430,
+      "draws": 9,
+      "textures": 3,
+      "renderResources": {
+        "geometries": 112,
+        "textures": 19,
+        "programs": 18
+      }
+    }
+  ],
+  "nativeErrors": [],
+  "errors": [],
+  "warnings": [
+    "THREE.WebGLProgram: Program Info Log: (221,91-147): warning X4122: sum of 0.996094 and -2.98545e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(207,10-73): warning X4008: floating point division by zero\n(207,10-73): warning X4008: floating point division by zero\n(207,10-73): warning X4008: floating point division by zero"
+  ]
+}

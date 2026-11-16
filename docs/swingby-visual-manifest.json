@@ -1,0 +1,74 @@
+{
+  "status": "Isolated source:35 focused tests passed before final far-depth addition;4 star tests+TSC and full standalone wrapper passed after final shader. No main changes.",
+  "files": [
+    {
+      "path": "src/render/swingby-objective.ts",
+      "sha256": "7bc2348cf4d2462c71ded5062abe102416d6b96dd7385b587284d30e20e05d16"
+    },
+    {
+      "path": "src/render/swingby-carrier.ts",
+      "sha256": "e52f2a5af93a9b9cd85f546bf115a0edeacc2e3f584138952ce86ae2acf460af"
+    },
+    {
+      "path": "src/render/swingby-scene.ts",
+      "sha256": "78a989638ab44cf731cc639be139ff527ef58b0efa5f60d572500b70765495d4"
+    },
+    {
+      "path": "src/render/swingby-aim-camera.ts",
+      "sha256": "91809d39953054e0a6699110d21d6eeaa8888e263b2a3751712171fe11319b81"
+    },
+    {
+      "path": "src/render/swingby-builder-carrier.ts",
+      "sha256": "f2b6ff48b17e281a18a251e4a46a1464ba92db5f483d5c858845e973c12ab7d9"
+    },
+    {
+      "path": "src/render/planet-inspection-direction.ts",
+      "sha256": "5883dd99d75673708dba4a55ca16e23d32072318cb035404b58f77ecb56f4c23"
+    },
+    {
+      "path": "src/render/context-resources.ts",
+      "sha256": "83aed555679d4e99ea07c688ce438c50833b765336ad7d4daa855136650c6330"
+    },
+    {
+      "path": "tests/swingby-objective.test.ts",
+      "sha256": "61866739438586b090454118ef498bbfa0b277e5de5658226108532fd10d75be"
+    },
+    {
+      "path": "tests/swingby-carrier.test.ts",
+      "sha256": "9fcdda22391cce3fdcc5097a62427512ea0e7b1751c563db4b07dacd236856fa"
+    },
+    {
+      "path": "tests/swingby-scene-state.test.ts",
+      "sha256": "5c8e42db533c0363ee1ccd7c8d576461e853bcafadb763636e3fa343d92068e4"
+    },
+    {
+      "path": "tests/swingby-builder-carrier.test.ts",
+      "sha256": "d3b5fc74f3f5d4b062d1f542e03d48b5e45c836af8c4c2e0c649297204ce46d2"
+    },
+    {
+      "path": "tests/swingby-aim-camera.test.ts",
+      "sha256": "19753e0d79f84e02cb854958333f7f23345d03e6dc792c45a93a16f34f799c02"
+    },
+    {
+      "path": "docs/qa/builder-adapter/game-scene-carrier.patch",
+      "sha256": "0ce9e1f12fd961e5f3becadf64f34e293dee18a39a1651b2ee0f6c977f89e265"
+    },
+    {
+      "path": "src/render/swingby-velocity-camera.ts",
+      "sha256": "81403df27130a2277220d1e9fd35956a89ed8cf84361f063e10f71c2176700c2"
+    },
+    {
+      "path": "tests/swingby-velocity-camera.test.ts",
+      "sha256": "e30f84b83ff5649d6bf09b186a5580b8735129e421461473d68f2566dda8004d"
+    },
+    {
+      "path": "src/render/celestial-stars.ts",
+      "sha256": "a9e56c309f9e8db9803ff0b755dfc802f5246e439ceb6fcee4365650f93049f0"
+    },
+    {
+      "path": "tests/celestial-stars.test.ts",
+      "sha256": "61057ab06ddd28e512d6f776b3990161dc9f2c414aae8da208ba779d88aa4a0d"
+    }
+  ],
+  "browserEvidence": "docs/qa/swingby-wrapper/report.json"
+}

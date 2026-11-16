@@ -1,0 +1,56 @@
+{
+  "source": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry",
+  "isolatedWorkspace": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-art",
+  "baseline": "candidate C main index-CNPUcqf4.js, transfer-ui-Bh6EDW1H.js",
+  "changedFiles": [
+    "src/render/parts.ts",
+    "src/render/scene.ts",
+    "tests/hardware-art.test.ts",
+    "tests/hardware-render.test.ts",
+    "tools/hardware-art-functional.mjs",
+    "tools/hardware-art-angles.mjs",
+    "tools/generate-hardware-thumbnails.mjs",
+    "public/assets/hardware/library-v3.webp",
+    "public/data/hardware-thumbnails-v3.json",
+    "tools/hardware-art-ownership.mjs"
+  ],
+  "files": [
+    {
+      "path": "src/render/parts.ts",
+      "sha256": "522CA94101AE9DA01C04700BFAE420B4544E5DB3A14FB6A6EFAF6BE83F9102FD"
+    },
+    {
+      "path": "src/render/scene.ts",
+      "sha256": "9701E45817222F6611B9AA76D3CE8662C22CAB214026C4C76B2E13B3DDF790F5"
+    },
+    {
+      "path": "src/render/inspection.ts",
+      "sha256": "59F0ECE8A2D18F52CB2B064285E979B35C733BA22701FD441BC93190582399AF"
+    },
+    {
+      "path": "src/render/stow.ts",
+      "sha256": "DF55C89833CCA1E578D7FCBAC091BD8E1F096B411437957A09995E583334D282"
+    },
+    {
+      "path": "src/render/transfer-scene.ts",
+      "sha256": "5324C9D58F464052736056A2D2CB2F1240FE374B44F76BF399BA92BF05DBD4E5"
+    }
+  ],
+  "copiedAt": "2026-11-15T03:43:45.0269986+09:00",
+  "checks": [
+    "35CPU tests PASS:24 hardware geometry/visibility/legacy contracts,5art ownership/optical contracts,6inspection tests",
+    "Final prototype buildPASS mainindex-DjskVm6z",
+    "Core browser functional0errors: actualradio/camerafocus, shadowrestore,8bus/model/ghostcycles, WebGLloss/restore",
+    "Final profile-camera/normal-large1280actualUIproof PASS; camera pose tolerance1mm to accommodate residualOrbitControls damping",
+    "All screenshots reviewed; thumbnail16models77,488bytestransparent, fixedsourcehashandcataloguehash",
+    "Main application not modified or merged; no quantitative FPS claim for this prototype",
+    "Actual ownership regression29checksPASS:3hardware and1freshlegacy UIPlan/Edit cycles, every original assembly resource0dispose, every ownedtransferclone1dispose, bothatlasandPVmapsdistinctobjects withsharedCPUsources, realWebGLloss/restore regeneratesPMREM, zeroerrors; hardwareGPU129geometry/19texture/18programs stable acrossall3returns. Rendererownershipcode unchanged."
+  ],
+  "plannedGpuChecks": [
+    "18-model production sheet after publication and explicit slot",
+    "Actual internal-board focus, optical depth and foil with normal/large1280UI",
+    "Shadow restore and acne inspection across camera/mode changes",
+    "Texture survival after ghost/delete/bus/model/transfer changes and context loss",
+    "Repeat inherited1080medium20partperformance against retained baseline"
+  ]
+}

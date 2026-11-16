@@ -1,0 +1,75 @@
+{
+  "status": "REJECTED_CANDIDATE_EVIDENCE",
+  "files": [
+    {
+      "file": "report.json",
+      "bytes": 297004,
+      "sha256": "f501e98262a7618d3641e48df94916e2de7f76ec915e7ded599727bafcc1e507"
+    },
+    {
+      "file": "verify-convergence.mjs",
+      "bytes": 2917,
+      "sha256": "924e0a455391ddaf13b44b92adb0f5b55b6b7d6f9e5335885438b34f3fae6bd2"
+    },
+    {
+      "file": "flight/data.ts",
+      "bytes": 2866,
+      "sha256": "ee417119b7d3b8bec122143d86cb16dc83009ab65c2080490d779c7aa8485c6a"
+    },
+    {
+      "file": "flight/environment.ts",
+      "bytes": 4243,
+      "sha256": "b9b65babf4fe4aeed7f381b920423af648a18fd6fc7a550f6c5b4275fcfd3149"
+    },
+    {
+      "file": "flight/resources.ts",
+      "bytes": 9677,
+      "sha256": "17619a9f2392352fc39eabdd19b6a842e68af583e464e71b89b1f3dac7ec351a"
+    },
+    {
+      "file": "swingby/conic.ts",
+      "bytes": 3558,
+      "sha256": "ad51769b2f7fba1ad588f45b1db9fc38d202dd937684c07b99ab0e4fee9713ec"
+    },
+    {
+      "file": "swingby/index.ts",
+      "bytes": 219,
+      "sha256": "bc090c881a7c8e33718ee5905652f6faff61043f2e161ddcba28028807fae05f"
+    },
+    {
+      "file": "swingby/orbit.ts",
+      "bytes": 5815,
+      "sha256": "9ae2c66c47b0ff95e96b7a414f7dcf3e4e319577082dabb6f34fd08a54dc71f9"
+    },
+    {
+      "file": "swingby/persistence.ts",
+      "bytes": 8085,
+      "sha256": "801962a034a3523e3438c361e45886cd8588fb26c6b6aa12ad2d17c23bef09fd"
+    },
+    {
+      "file": "swingby/planning.ts",
+      "bytes": 7542,
+      "sha256": "a40bcdcb5ff1b1e87648ffa58c351ef94faf04f2975e9ed0a7c4c2b806abec19"
+    },
+    {
+      "file": "swingby/propulsion.ts",
+      "bytes": 5312,
+      "sha256": "db7e175335f8f09d19581e07ec337b5cacb1fb41394dce367aafaa2743993564"
+    },
+    {
+      "file": "swingby/runtime.ts",
+      "bytes": 18738,
+      "sha256": "e4feb137f8e9d07aa9f1dcad6aa5d143fbf14d120fae05417a7d0561cd88449d"
+    },
+    {
+      "file": "swingby/scenario.ts",
+      "bytes": 2878,
+      "sha256": "4f993848b0651e0f69026c776fc1f4909437791a71cf07b73ef834dba0dbeb90"
+    },
+    {
+      "file": "swingby/types.ts",
+      "bytes": 5147,
+      "sha256": "822dfd1bd64d0cdf3a148e0814dfacb5ee188e3ce9e2fc1753a1ef4d8d20c739"
+    }
+  ]
+}

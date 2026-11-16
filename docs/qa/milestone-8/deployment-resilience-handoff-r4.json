@@ -1,0 +1,351 @@
+{
+  "createdAt": "2026-11-15T04:55:04.449579+00:00",
+  "status": "six unique browser cases passed across two recorded batches; not one clean six-case batch",
+  "scope": "Chrome157.0.8103.52,1280x720,Korean,actual development candidate at127.0.0.1:5187. Not production deployment or FPS/input-latency measurement.",
+  "productFilesCompared": 203,
+  "allProductFilesExactAcrossBothRuns": true,
+  "sourceBefore": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/source-before.json",
+  "sourceAfter": "tests/browser/artifacts/deployment-resilience/v8-ui-r4-terminal-closure/source-after.json",
+  "runs": [
+    {
+      "candidate": "v8-ui-r4",
+      "stats": {
+        "startTime": "2026-11-15T04:48:25.078Z",
+        "duration": 158115.231,
+        "expected": 5,
+        "skipped": 0,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "reports": [
+        {
+          "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/denied-idb-write-retains-previous-slot-and-allows-json-and-explicit-unsaved-exit.json",
+          "title": "denied IDB write retains previous slot and allows JSON and explicit unsaved exit",
+          "status": "passed",
+          "errors": 0,
+          "nativeErrors": 0,
+          "observedNativeContexts": 3,
+          "warnings": 1
+        },
+        {
+          "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/forged-checkpoint-replay-preserves-the-exact-previous-committed-flight.json",
+          "title": "forged checkpoint replay preserves the exact previous committed flight",
+          "status": "passed",
+          "errors": 0,
+          "nativeErrors": 0,
+          "observedNativeContexts": 2,
+          "warnings": 0
+        },
+        {
+          "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/genuine-failed-flight-replays-its-pending-signal-and-retains-failure-after-earth-receipt.json",
+          "title": "genuine failed flight replays its pending signal and retains failure after Earth receipt",
+          "status": "failed",
+          "errors": 0,
+          "nativeErrors": 0,
+          "observedNativeContexts": 2,
+          "warnings": 0
+        },
+        {
+          "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/genuine-save-response-survives-a-real-context-loss-pause-and-commits-once.json",
+          "title": "genuine save response survives a real context-loss pause and commits once",
+          "status": "passed",
+          "errors": 0,
+          "nativeErrors": 0,
+          "observedNativeContexts": 2,
+          "warnings": 2
+        },
+        {
+          "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/strict-draft-import-clears-an-earlier-actual-flight-and-input-specific-evidence.json",
+          "title": "strict draft import clears an earlier actual flight and input-specific evidence",
+          "status": "passed",
+          "errors": 0,
+          "nativeErrors": 0,
+          "observedNativeContexts": 2,
+          "warnings": 2
+        },
+        {
+          "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/unsupported-continue-preserves-stored-bytes-through-raw-backup-autosave-and-exit.json",
+          "title": "unsupported Continue preserves stored bytes through raw backup autosave and Exit",
+          "status": "passed",
+          "errors": 0,
+          "nativeErrors": 0,
+          "observedNativeContexts": 3,
+          "warnings": 1
+        }
+      ]
+    },
+    {
+      "candidate": "v8-ui-r4-terminal-closure",
+      "stats": {
+        "startTime": "2026-11-15T04:51:40.068Z",
+        "duration": 120963.065,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "reports": [
+        {
+          "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4-terminal-closure/genuine-failed-flight-replays-its-pending-signal-and-retains-failure-after-earth-receipt.json",
+          "title": "genuine failed flight replays its pending signal and retains failure after Earth receipt",
+          "status": "passed",
+          "errors": 0,
+          "nativeErrors": 0,
+          "observedNativeContexts": 2,
+          "warnings": 1
+        }
+      ]
+    }
+  ],
+  "failureRetained": {
+    "cause": "Harness attempted the flight-only speed button before launch. Corrected test order is visible launch, pause, choose512x, resume. Product source and physics were unchanged.",
+    "source": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/harness-source.failed.txt",
+    "tracePath": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\deployment-v8-ui-r4-traces\\deployment-resilience-genu-6aeda-failure-after-Earth-receipt\\trace.zip",
+    "traceBytes": 24910969,
+    "traceSha256": "b9a5d6ed8516481b27f822d72e34e07f3612f8839bca769b79b6331509bd9abd"
+  },
+  "terminalObservations": {
+    "fatal": {
+      "modelVersion": "deployment-1.0.0",
+      "status": "failed",
+      "success": false,
+      "evaluatedAt": 1385.0033526800594,
+      "reason": "POWER_LOSS",
+      "fatalAtSeconds": 1385.0033526800594,
+      "receiverDrainUntilSeconds": 1385.0067053601188,
+      "pendingReceiverDrain": true,
+      "solarGoodSeconds": 60,
+      "diagnosticCreatedAt": 227.25,
+      "receivedBits": 15936000,
+      "requiredBits": 16000000,
+      "energyMinimumWh": 28.45163410891241,
+      "energyWh": 36.554896269557915,
+      "motorEnergyJ": 1128,
+      "massKg": 50.884999999999984,
+      "cost": 410,
+      "budget": 560,
+      "mechanisms": [
+        {
+          "partId": "wing",
+          "phase": "releasing",
+          "mechanicalLatch": true,
+          "powerContactClosed": false,
+          "rfContactClosed": false
+        },
+        {
+          "partId": "antenna",
+          "phase": "deployed-latched",
+          "mechanicalLatch": true,
+          "powerContactClosed": false,
+          "rfContactClosed": true
+        }
+      ]
+    },
+    "received": {
+      "modelVersion": "deployment-1.0.0",
+      "status": "failed",
+      "success": false,
+      "evaluatedAt": 1385.0067053601188,
+      "reason": "POWER_LOSS",
+      "fatalAtSeconds": 1385.0033526800594,
+      "receiverDrainUntilSeconds": 1385.0067053601188,
+      "pendingReceiverDrain": false,
+      "solarGoodSeconds": 60,
+      "diagnosticCreatedAt": 227.25,
+      "receivedBits": 16000000,
+      "requiredBits": 16000000,
+      "energyMinimumWh": 28.45163410891241,
+      "energyWh": 36.554896269557915,
+      "motorEnergyJ": 1128,
+      "massKg": 50.884999999999984,
+      "cost": 410,
+      "budget": 560,
+      "mechanisms": [
+        {
+          "partId": "wing",
+          "phase": "waiting-power",
+          "mechanicalLatch": true,
+          "powerContactClosed": false,
+          "rfContactClosed": false
+        },
+        {
+          "partId": "antenna",
+          "phase": "deployed-latched",
+          "mechanicalLatch": true,
+          "powerContactClosed": false,
+          "rfContactClosed": true
+        }
+      ]
+    },
+    "pendingReplayExact": true,
+    "finalReplayExact": true
+  },
+  "files": [
+    {
+      "path": "tests/browser/deployment-resilience.spec.ts",
+      "bytes": 21069,
+      "sha256": "a9a440cdb88ae717c324f197aaf7e0258a482b08df63ba2348911d49bb26964e"
+    },
+    {
+      "path": "tests/browser/native-gl-audit.ts",
+      "bytes": 2301,
+      "sha256": "fb6c180498f2be920d88cf46690529801a8eb7ba2bec1c119698af0da52f2276"
+    },
+    {
+      "path": "tools/deployment-resilience-source.mjs",
+      "bytes": 1398,
+      "sha256": "830e47374c9f6535495244c9184d4bf763af27aca46ef5a985ff8d2345ad7884"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/batch-results.json",
+      "bytes": 32620,
+      "sha256": "be2540f6fae5c76d88452e2577680bda0e834675f60d987c401769733670c710"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/denied-idb-write-retains-previous-slot-and-allows-json-and-explicit-unsaved-exit.json",
+      "bytes": 2073,
+      "sha256": "e2147665bbd616758f11c6425812885cf88d5f1c2d527279a3e53d09439b0af0"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/draft-import-clean-workshop.png",
+      "bytes": 234423,
+      "sha256": "9a14bfeefcf9ec7bbacc8cff4e4b4a99a0d566203c856c745d2d82f94c17dda9"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/forged-checkpoint-replay-preserves-the-exact-previous-committed-flight.json",
+      "bytes": 1126,
+      "sha256": "0a48117da3e0d785b67b1e602a43b6e712f5582ec294619452721e9668617244"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/forged-import-retained-flight.png",
+      "bytes": 218934,
+      "sha256": "4f066535d3e681f88188e581b0719b9fc84205af920af7ffa6a57f9dac49a91e"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/genuine-failed-flight-replays-its-pending-signal-and-retains-failure-after-earth-receipt-failure.png",
+      "bytes": 232639,
+      "sha256": "d8f0b27b996e55482d2e857a3b617d3aeaba678e2d26a46fa47e032f806cc27c"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/genuine-failed-flight-replays-its-pending-signal-and-retains-failure-after-earth-receipt.json",
+      "bytes": 1221,
+      "sha256": "b294c995147723bb7820c40974101072b25b3676d332d0703dfb30c020ceba46"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/genuine-save-response-survives-a-real-context-loss-pause-and-commits-once.json",
+      "bytes": 2695,
+      "sha256": "26c6a20eea2d9f8cf85155edc118f9fd883364b6717a286947af98a2a9a252f7"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/harness-source.failed.txt",
+      "bytes": 20864,
+      "sha256": "4b8d425e68252d9c9c70752fa4c4942e67ac7f43fb666e39d8e8e487f010ef17"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/run.log",
+      "bytes": 3390,
+      "sha256": "1959ed40c2a0bf8b18efbc7bc6ab1e5bdafd98936c5e2bf3dc93b8166f9c215d"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/save-context-restored.png",
+      "bytes": 195803,
+      "sha256": "6dd43bbd7efdfdd71c98273aafe15e45b80160c7f39e75b36065227a1c994f49"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/source-after.json",
+      "bytes": 33442,
+      "sha256": "c55d2dcdc0a2ab00c336714ad9eda5d6e63f4d9a1c48c8b063b7023c7603c665"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/source-before.json",
+      "bytes": 33442,
+      "sha256": "f9c5655b68f0ae771a9454e4bfe2666dd3bac4864e8cd9e2681d9c0bbbb74b70"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/storage-denied-explicit-exit.png",
+      "bytes": 231392,
+      "sha256": "53b2d0d5c6368b084280ae962651f43e48647f9336fa1e84232cad2d3ee57b96"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/strict-draft-import-clears-an-earlier-actual-flight-and-input-specific-evidence.json",
+      "bytes": 2701,
+      "sha256": "3553417e133849ce8464e4cf40144d1d32cb199c0c3fb8ac45fbee75f59700fd"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/unsupported-continue-preserves-stored-bytes-through-raw-backup-autosave-and-exit.json",
+      "bytes": 2071,
+      "sha256": "eb5ad79c2d8f863921e3502fc5bec08eaa5166c0515cce7b44d1bc4bb761b529"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4/unsupported-continue-protected-original.png",
+      "bytes": 235981,
+      "sha256": "1035553071c30416c9e181036e7e0a6495d48c672123685a4ea5ed8ab63b80c6"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4-terminal-closure/actual-failed-drained-source.json",
+      "bytes": 126737,
+      "sha256": "7dd501090c49ab37ae77c90cdbe1b4a8ba1b179606f41cf955f336b75b3c3cdd"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4-terminal-closure/actual-failed-pending-source.json",
+      "bytes": 126496,
+      "sha256": "f98d0757a9d280bfbec79a1843937c3a99a315594a74ace16eefdc55b60d048b"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4-terminal-closure/batch-results.json",
+      "bytes": 7405,
+      "sha256": "03b45492dc2cd56df092079ab8e66dc5070c43070b763a8eb3dd437eec9eddab"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4-terminal-closure/failed-after-earth-receipt.png",
+      "bytes": 446637,
+      "sha256": "b108d92542021aa8f30e2d59aa0c5598a3dfeb602acbe6f6d3a82e61b87ffa3a"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4-terminal-closure/failed-pending-earth-signal.png",
+      "bytes": 446547,
+      "sha256": "a5bee5d635929dfb5f9379315646831c0a39850305ec1c5b5041e01a41752d7a"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4-terminal-closure/genuine-failed-flight-replays-its-pending-signal-and-retains-failure-after-earth-receipt.json",
+      "bytes": 1945,
+      "sha256": "6f93c8f19105182cb87f3cbbe3e44ec424ebb011cccaa4dc9627b3050e8e205a"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4-terminal-closure/run.log",
+      "bytes": 380,
+      "sha256": "1abff68d98690885b9b223916d104f695ed68494f2861f5afc8464f2910d6964"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4-terminal-closure/source-after.json",
+      "bytes": 33442,
+      "sha256": "e9d218f60ee54c84ff25018d7d7e6440fd2aa100f9063edaa9165feca03c5e1a"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4-terminal-closure/source-before.json",
+      "bytes": 33442,
+      "sha256": "3b9f7c7410dd7664c6e60994095cc0e3270b9cc6b569adbb1329f16eae5d8821"
+    },
+    {
+      "path": "tests/browser/artifacts/deployment-resilience/v8-ui-r4-terminal-closure/terminal-signal-observations.json",
+      "bytes": 7086,
+      "sha256": "350b080ec6b212fdfe75830c2e9ac9df5e0fed2d5e0d16a7a33441504caf3f1e"
+    }
+  ],
+  "visualReview": [
+    "save-context-restored.png",
+    "draft-import-clean-workshop.png",
+    "storage-denied-explicit-exit.png",
+    "unsupported-continue-protected-original.png",
+    "failed-pending-earth-signal.png",
+    "failed-after-earth-receipt.png"
+  ],
+  "limits": [
+    "All successful cases had zero application/HTTP/native ownership errors. Vendor shader precision warnings remain in raw reports; not a zero-all-warnings claim.",
+    "Mid-motion assertions require an actually moving wing, nonzero joint rate and open latch at the computed60-second prefix.",
+    "Terminal case modifies only authored draft inputs via ordinary JSON import; frames, energy, outcomes and checkpoints are freshly computed by the actual browser Worker.",
+    "No unsupported-save migration is claimed. Old bytes are retained through raw backup, a real32-second autosave window and Exit.",
+    "The sparse interior/close Earth blur belong to the tested pre-next-art snapshot and remain separate visual work.",
+    "Draft-only restore wording still says saved flight restored. Unsupported-source error appears twice (error and notice); behavior is correct but copy may be polished later."
+  ]
+}

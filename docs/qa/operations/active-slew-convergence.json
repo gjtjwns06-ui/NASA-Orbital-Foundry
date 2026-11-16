@@ -1,0 +1,3926 @@
+{
+  "generatedAt": "2026-11-14T22:20:27.722Z",
+  "samples": [
+    {
+      "active": 1,
+      "values": [
+        {
+          "time": 22453205,
+          "slewAngleDeg": 55.86968808308873,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453210,
+          "slewAngleDeg": 55.352511601389885,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453215,
+          "slewAngleDeg": 54.755304995967876,
+          "angleDifferenceDeg": 0.00037326608870487095,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453220,
+          "slewAngleDeg": 54.1580983904401,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453225,
+          "slewAngleDeg": 53.56089178477265,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453230,
+          "slewAngleDeg": 52.96368517939627,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453235,
+          "slewAngleDeg": 52.36647857403524,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453240,
+          "slewAngleDeg": 51.76927196829275,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453245,
+          "slewAngleDeg": 51.172065362962385,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453250,
+          "slewAngleDeg": 50.574858757647526,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453255,
+          "slewAngleDeg": 49.977652152072146,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453260,
+          "slewAngleDeg": 49.38044554666737,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453265,
+          "slewAngleDeg": 48.783238941398984,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453270,
+          "slewAngleDeg": 48.186032335870266,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453275,
+          "slewAngleDeg": 47.588825730633,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453280,
+          "slewAngleDeg": 46.99161912529061,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453285,
+          "slewAngleDeg": 46.39441251980892,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453290,
+          "slewAngleDeg": 45.79720591461887,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453295,
+          "slewAngleDeg": 45.19999930944456,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453300,
+          "slewAngleDeg": 44.60279270388926,
+          "angleDifferenceDeg": 0.00037326608870487095,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453305,
+          "slewAngleDeg": 44.005586098746704,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453310,
+          "slewAngleDeg": 43.40837949362001,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453315,
+          "slewAngleDeg": 42.81117288850934,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453320,
+          "slewAngleDeg": 42.213966283017676,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453325,
+          "slewAngleDeg": 41.61675967793905,
+          "angleDifferenceDeg": 0.00037326608870487095,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453330,
+          "slewAngleDeg": 41.01955307287643,
+          "angleDifferenceDeg": 0.00037327780556885645,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453335,
+          "slewAngleDeg": 40.422346467554014,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453340,
+          "slewAngleDeg": 39.82513986240271,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453345,
+          "slewAngleDeg": 39.22793325738859,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453350,
+          "slewAngleDeg": 38.630726652114866,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453355,
+          "slewAngleDeg": 38.033520047133244,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453360,
+          "slewAngleDeg": 37.43631344204709,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453365,
+          "slewAngleDeg": 36.839106836822246,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453370,
+          "slewAngleDeg": 36.24190023188978,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453375,
+          "slewAngleDeg": 35.64469362697382,
+          "angleDifferenceDeg": 0.00037327780556885645,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453380,
+          "slewAngleDeg": 35.04748702167744,
+          "angleDifferenceDeg": 0.00037327780556885645,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453385,
+          "slewAngleDeg": 34.45028041679448,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453390,
+          "slewAngleDeg": 33.85307381192816,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453395,
+          "slewAngleDeg": 33.25586720680259,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453400,
+          "slewAngleDeg": 32.65866060184865,
+          "angleDifferenceDeg": 0.00037326608870487095,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453405,
+          "slewAngleDeg": 32.06145399703236,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453410,
+          "slewAngleDeg": 31.46424739195704,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453415,
+          "slewAngleDeg": 30.86704078717441,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453420,
+          "slewAngleDeg": 30.269834182287724,
+          "angleDifferenceDeg": 0.00037327780556885645,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453425,
+          "slewAngleDeg": 29.672627577262894,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453430,
+          "slewAngleDeg": 29.075420972531074,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453435,
+          "slewAngleDeg": 28.47821436781641,
+          "angleDifferenceDeg": 0.0003732817111084565,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453440,
+          "slewAngleDeg": 27.88100776272178,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453445,
+          "slewAngleDeg": 27.28380115804104,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453450,
+          "slewAngleDeg": 26.686594553377805,
+          "angleDifferenceDeg": 0.00037327780556885645,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453455,
+          "slewAngleDeg": 26.08938794845565,
+          "angleDifferenceDeg": 0.00037326608870487095,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453460,
+          "slewAngleDeg": 25.492181343706026,
+          "angleDifferenceDeg": 0.00037327780556885645,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453465,
+          "slewAngleDeg": 24.894974739094323,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453470,
+          "slewAngleDeg": 24.2977681342242,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453475,
+          "slewAngleDeg": 23.70056152964763,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453480,
+          "slewAngleDeg": 23.103354924967473,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453485,
+          "slewAngleDeg": 22.50614832015001,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453490,
+          "slewAngleDeg": 21.908941715626085,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453495,
+          "slewAngleDeg": 21.311735111119937,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453500,
+          "slewAngleDeg": 20.71452850623466,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453505,
+          "slewAngleDeg": 20.11732190176383,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453510,
+          "slewAngleDeg": 19.520115297311065,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453515,
+          "slewAngleDeg": 18.922908692600394,
+          "angleDifferenceDeg": 0.00037326608870487095,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453520,
+          "slewAngleDeg": 18.32570208806285,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453525,
+          "slewAngleDeg": 17.72849548366415,
+          "angleDifferenceDeg": 0.0003732621830018097,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453530,
+          "slewAngleDeg": 17.131288879007727,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453535,
+          "slewAngleDeg": 16.534082274645357,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453540,
+          "slewAngleDeg": 15.936875670180596,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453545,
+          "slewAngleDeg": 15.33966906585515,
+          "angleDifferenceDeg": 0.00037327780556885645,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453550,
+          "slewAngleDeg": 14.742462461272396,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453555,
+          "slewAngleDeg": 14.145255856984086,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453560,
+          "slewAngleDeg": 13.548049252593477,
+          "angleDifferenceDeg": 0.00037327780556885645,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453565,
+          "slewAngleDeg": 12.950842648066658,
+          "angleDifferenceDeg": 0.00037327780556885645,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453570,
+          "slewAngleDeg": 12.353636043834667,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453575,
+          "slewAngleDeg": 11.756429439621865,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453580,
+          "slewAngleDeg": 11.159222835031247,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453585,
+          "slewAngleDeg": 10.562016230857084,
+          "angleDifferenceDeg": 0.00037327780556885645,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453590,
+          "slewAngleDeg": 9.964809626702056,
+          "angleDifferenceDeg": 0.00037326608870487095,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453595,
+          "slewAngleDeg": 9.367603022290629,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453600,
+          "slewAngleDeg": 8.770396418175421,
+          "angleDifferenceDeg": 0.00037326999436706505,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453605,
+          "slewAngleDeg": 8.173189813958922,
+          "angleDifferenceDeg": 0.00037327780556885645,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453610,
+          "slewAngleDeg": 7.57598320960743,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": -0.010798483736607523
+        },
+        {
+          "time": 22453615,
+          "slewAngleDeg": 6.978776605552643,
+          "angleDifferenceDeg": 0.00037326608870487095,
+          "marginDifferenceDb": -0.009947253022858149
+        },
+        {
+          "time": 22453620,
+          "slewAngleDeg": 6.38157000151873,
+          "angleDifferenceDeg": 0.00037326608870487095,
+          "marginDifferenceDb": -0.009096016540524943
+        },
+        {
+          "time": 22453625,
+          "slewAngleDeg": 5.78436339710886,
+          "angleDifferenceDeg": 0.00037327780556885645,
+          "marginDifferenceDb": -0.008244774822458112
+        },
+        {
+          "time": 22453630,
+          "slewAngleDeg": 5.187156793116956,
+          "angleDifferenceDeg": 0.00037327389998839303,
+          "marginDifferenceDb": -0.0073935283805326435
+        },
+        {
+          "time": 22453635,
+          "slewAngleDeg": 4.5899501891483165,
+          "angleDifferenceDeg": 0.00037327780556885645,
+          "marginDifferenceDb": -0.006542277724520318
+        },
+        {
+          "time": 22453640,
+          "slewAngleDeg": 3.9927435849241277,
+          "angleDifferenceDeg": 0.00037327780556885645,
+          "marginDifferenceDb": -0.005691023370985704
+        },
+        {
+          "time": 22453645,
+          "slewAngleDeg": 3.3955636664112268,
+          "angleDifferenceDeg": 0.0003652834401859979,
+          "marginDifferenceDb": -0.004736178182469075
+        },
+        {
+          "time": 22453650,
+          "slewAngleDeg": 2.798427206039975,
+          "angleDifferenceDeg": 0.0003632182282209268,
+          "marginDifferenceDb": -0.003881137631310594
+        },
+        {
+          "time": 22453655,
+          "slewAngleDeg": 2.2012659525754077,
+          "angleDifferenceDeg": 0.0003615446621447966,
+          "marginDifferenceDb": -0.0030388742682987413
+        },
+        {
+          "time": 22453660,
+          "slewAngleDeg": 1.6040853114071536,
+          "angleDifferenceDeg": 0.00036027629307236865,
+          "marginDifferenceDb": -0.0022066473218842475
+        },
+        {
+          "time": 22453665,
+          "slewAngleDeg": 1.0068906879774202,
+          "angleDifferenceDeg": 0.0003594133546042905,
+          "marginDifferenceDb": -0.001381714392550748
+        },
+        {
+          "time": 22453670,
+          "slewAngleDeg": 0.41054855508323507,
+          "angleDifferenceDeg": 0.0015042435295245734,
+          "marginDifferenceDb": 0.0023626547553305954
+        },
+        {
+          "time": 22453680,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453740,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453800,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460405,
+          "slewAngleDeg": 13.703717342591615,
+          "angleDifferenceDeg": 0.000009195423586105977,
+          "marginDifferenceDb": -0.000001785489899930326
+        },
+        {
+          "time": 22460410,
+          "slewAngleDeg": 13.209718766257863,
+          "angleDifferenceDeg": 0.0003751439043027251,
+          "marginDifferenceDb": 0.0004459499665756539
+        },
+        {
+          "time": 22460415,
+          "slewAngleDeg": 12.635790226746893,
+          "angleDifferenceDeg": 0.0003798669132094182,
+          "marginDifferenceDb": 0.0007839072909234801
+        },
+        {
+          "time": 22460420,
+          "slewAngleDeg": 12.06196367065761,
+          "angleDifferenceDeg": 0.0003873423402851538,
+          "marginDifferenceDb": 0.0010808810081073261
+        },
+        {
+          "time": 22460425,
+          "slewAngleDeg": 11.488241064176327,
+          "angleDifferenceDeg": 0.0003973855478907456,
+          "marginDifferenceDb": 0.0013369484528880093
+        },
+        {
+          "time": 22460430,
+          "slewAngleDeg": 10.914624525749053,
+          "angleDifferenceDeg": 0.0004097828900912091,
+          "marginDifferenceDb": 0.0015522124387530312
+        },
+        {
+          "time": 22460435,
+          "slewAngleDeg": 10.341116349232347,
+          "angleDifferenceDeg": 0.00042428341266655535,
+          "marginDifferenceDb": 0.001726806938251002
+        },
+        {
+          "time": 22460440,
+          "slewAngleDeg": 9.767719031399006,
+          "angleDifferenceDeg": 0.00044066962486264495,
+          "marginDifferenceDb": 0.0018609042854222935
+        },
+        {
+          "time": 22460445,
+          "slewAngleDeg": 9.194435305186701,
+          "angleDifferenceDeg": 0.00045867911486349104,
+          "marginDifferenceDb": 0.0019547245777857825
+        },
+        {
+          "time": 22460450,
+          "slewAngleDeg": 8.621268181689524,
+          "angleDifferenceDeg": 0.00047809494640162865,
+          "marginDifferenceDb": 0.002008548074002192
+        },
+        {
+          "time": 22460455,
+          "slewAngleDeg": 8.048221003196865,
+          "angleDifferenceDeg": 0.0004986856713969794,
+          "marginDifferenceDb": 0.002022731766743391
+        },
+        {
+          "time": 22460460,
+          "slewAngleDeg": 7.475297509313688,
+          "angleDifferenceDeg": 0.0005202669912395928,
+          "marginDifferenceDb": 0.001997732083424353
+        },
+        {
+          "time": 22460465,
+          "slewAngleDeg": 6.902501924787737,
+          "angleDifferenceDeg": 0.0005426508998091178,
+          "marginDifferenceDb": 0.0019341363771729903
+        },
+        {
+          "time": 22460470,
+          "slewAngleDeg": 6.329839074161682,
+          "angleDifferenceDeg": 0.0005656416326037255,
+          "marginDifferenceDb": 0.0018327080092603865
+        },
+        {
+          "time": 22460475,
+          "slewAngleDeg": 5.75731453627476,
+          "angleDifferenceDeg": 0.0005890741186910651,
+          "marginDifferenceDb": 0.0016944524913924397
+        },
+        {
+          "time": 22460480,
+          "slewAngleDeg": 5.184934859950905,
+          "angleDifferenceDeg": 0.0006127716119026011,
+          "marginDifferenceDb": 0.0015207178637695051
+        },
+        {
+          "time": 22460485,
+          "slewAngleDeg": 4.612707871396574,
+          "angleDifferenceDeg": 0.0006365304824682891,
+          "marginDifferenceDb": 0.0013133532596043551
+        },
+        {
+          "time": 22460490,
+          "slewAngleDeg": 4.040643128451229,
+          "angleDifferenceDeg": 0.0006601343381446121,
+          "marginDifferenceDb": 0.0010749720049716416
+        },
+        {
+          "time": 22460495,
+          "slewAngleDeg": 3.468770853642264,
+          "angleDifferenceDeg": 0.0006805191892415922,
+          "marginDifferenceDb": 0.0007005462456390887
+        },
+        {
+          "time": 22460500,
+          "slewAngleDeg": 2.897144381091622,
+          "angleDifferenceDeg": 0.0007018642536974645,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460505,
+          "slewAngleDeg": 2.325704382231474,
+          "angleDifferenceDeg": 0.0007219452603453687,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460510,
+          "slewAngleDeg": 1.75448674431947,
+          "angleDifferenceDeg": 0.0007395592139945471,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460515,
+          "slewAngleDeg": 1.1835463533822341,
+          "angleDifferenceDeg": 0.000751976376085933,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460520,
+          "slewAngleDeg": 0.6129852369706397,
+          "angleDifferenceDeg": 0.0007501673288291055,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460525,
+          "slewAngleDeg": 0.12888800565891034,
+          "angleDifferenceDeg": 0.010008337746154308,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460530,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460535,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460540,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460545,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460550,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460555,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460560,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460565,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460570,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460575,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460580,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460585,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460590,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460595,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460600,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460605,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460610,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460615,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460620,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460625,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460630,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460635,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460640,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460645,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460650,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460655,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460660,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460665,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460670,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460675,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460680,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460685,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460690,
+          "slewAngleDeg": 0.0000024148365394514667,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460695,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460700,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460705,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460710,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460715,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460720,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460725,
+          "slewAngleDeg": 0.0000029575586669421963,
+          "angleDifferenceDeg": 0.0000029575586669421963,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460730,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460735,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460740,
+          "slewAngleDeg": 0.0000024148365394514667,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460745,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460750,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460755,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460760,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460765,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460770,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460775,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460780,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460785,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460790,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460795,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460800,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460805,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460810,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460815,
+          "slewAngleDeg": 0.0000029575586669421963,
+          "angleDifferenceDeg": 0.0000029575586669421963,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460820,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460825,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460830,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460835,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460840,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460845,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460850,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460855,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460860,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460865,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460870,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460875,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460880,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460885,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460890,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460895,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000029575586669421963,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460900,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460905,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460910,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460915,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460920,
+          "slewAngleDeg": 0.0000024148365394514667,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460925,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460930,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460935,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460940,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460945,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460950,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460955,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460960,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460965,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460970,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460975,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460980,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460985,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460990,
+          "slewAngleDeg": 0.0000024148365394514667,
+          "angleDifferenceDeg": 0.0000029575586669421963,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460995,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22461000,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        }
+      ]
+    },
+    {
+      "active": 0.5,
+      "values": [
+        {
+          "time": 22453205,
+          "slewAngleDeg": 55.86968808308873,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453210,
+          "slewAngleDeg": 55.35221298152411,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453215,
+          "slewAngleDeg": 54.75500637610206,
+          "angleDifferenceDeg": 0.00007460633482796114,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453220,
+          "slewAngleDeg": 54.15779977057428,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453225,
+          "slewAngleDeg": 53.56059316490683,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453230,
+          "slewAngleDeg": 52.96338655953044,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453235,
+          "slewAngleDeg": 52.36617995416942,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453240,
+          "slewAngleDeg": 51.76897334842689,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453245,
+          "slewAngleDeg": 51.17176674309659,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453250,
+          "slewAngleDeg": 50.57456013778166,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453255,
+          "slewAngleDeg": 49.97735353220626,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453260,
+          "slewAngleDeg": 49.38014692680142,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453265,
+          "slewAngleDeg": 48.78294032153304,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453270,
+          "slewAngleDeg": 48.18573371600434,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453275,
+          "slewAngleDeg": 47.58852711076712,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453280,
+          "slewAngleDeg": 46.99132050542461,
+          "angleDifferenceDeg": 0.00007460633482796114,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453285,
+          "slewAngleDeg": 46.394113899942965,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453290,
+          "slewAngleDeg": 45.796907294752806,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453295,
+          "slewAngleDeg": 45.199700689578435,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453300,
+          "slewAngleDeg": 44.602494084023185,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453305,
+          "slewAngleDeg": 44.005287478880604,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453310,
+          "slewAngleDeg": 43.40808087375391,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453315,
+          "slewAngleDeg": 42.8108742686433,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453320,
+          "slewAngleDeg": 42.21366766315168,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453325,
+          "slewAngleDeg": 41.616461058073035,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453330,
+          "slewAngleDeg": 41.01925445301036,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453335,
+          "slewAngleDeg": 40.422047847687935,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453340,
+          "slewAngleDeg": 39.82484124253663,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453345,
+          "slewAngleDeg": 39.22763463752261,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453350,
+          "slewAngleDeg": 38.63042803224873,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453355,
+          "slewAngleDeg": 38.033221427267236,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453360,
+          "slewAngleDeg": 37.436014822181036,
+          "angleDifferenceDeg": 0.00007460633482796114,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453365,
+          "slewAngleDeg": 36.838808216956274,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453370,
+          "slewAngleDeg": 36.24160161202382,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453375,
+          "slewAngleDeg": 35.644395007107825,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453380,
+          "slewAngleDeg": 35.04718840181143,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453385,
+          "slewAngleDeg": 34.44998179692855,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453390,
+          "slewAngleDeg": 33.852775192062104,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453395,
+          "slewAngleDeg": 33.25556858693666,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453400,
+          "slewAngleDeg": 32.65836198198272,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453405,
+          "slewAngleDeg": 32.06115537716655,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453410,
+          "slewAngleDeg": 31.463948772091165,
+          "angleDifferenceDeg": 0.00007460633482796114,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453415,
+          "slewAngleDeg": 30.866742167308633,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453420,
+          "slewAngleDeg": 30.269535562421993,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453425,
+          "slewAngleDeg": 29.67232895739717,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453430,
+          "slewAngleDeg": 29.075122352665435,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453435,
+          "slewAngleDeg": 28.47791574795057,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453440,
+          "slewAngleDeg": 27.880709142856038,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453445,
+          "slewAngleDeg": 27.283502538175483,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453450,
+          "slewAngleDeg": 26.686295933512227,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453455,
+          "slewAngleDeg": 26.08908932859022,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453460,
+          "slewAngleDeg": 25.49188272384039,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453465,
+          "slewAngleDeg": 24.894676119228755,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453470,
+          "slewAngleDeg": 24.297469514358642,
+          "angleDifferenceDeg": 0.00007460633482796114,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453475,
+          "slewAngleDeg": 23.700262909782182,
+          "angleDifferenceDeg": 0.00007468445666593813,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453480,
+          "slewAngleDeg": 23.10305630510203,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453485,
+          "slewAngleDeg": 22.50584970028457,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453490,
+          "slewAngleDeg": 21.90864309576057,
+          "angleDifferenceDeg": 0.00007460633482796114,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453495,
+          "slewAngleDeg": 21.31143649125457,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453500,
+          "slewAngleDeg": 20.714229886369004,
+          "angleDifferenceDeg": 0.0000745867915834011,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453505,
+          "slewAngleDeg": 20.117023281898355,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453510,
+          "slewAngleDeg": 19.519816677445682,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453515,
+          "slewAngleDeg": 18.92261007273508,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453520,
+          "slewAngleDeg": 18.325403468197404,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453525,
+          "slewAngleDeg": 17.728196863798505,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453530,
+          "slewAngleDeg": 17.130990259142443,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453535,
+          "slewAngleDeg": 16.533783654779928,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453540,
+          "slewAngleDeg": 15.936577050315261,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453545,
+          "slewAngleDeg": 15.33937044598972,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453550,
+          "slewAngleDeg": 14.742163841406924,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453555,
+          "slewAngleDeg": 14.144957237118835,
+          "angleDifferenceDeg": 0.00007468445666593813,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453560,
+          "slewAngleDeg": 13.547750632728116,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453565,
+          "slewAngleDeg": 12.950544028201287,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453570,
+          "slewAngleDeg": 12.353337423969586,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453575,
+          "slewAngleDeg": 11.756130819756445,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453580,
+          "slewAngleDeg": 11.158924215166346,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453585,
+          "slewAngleDeg": 10.561717610991783,
+          "angleDifferenceDeg": 0.0000746454059669724,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453590,
+          "slewAngleDeg": 9.964511006836819,
+          "angleDifferenceDeg": 0.0000745867915834011,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453595,
+          "slewAngleDeg": 9.367304402425562,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453600,
+          "slewAngleDeg": 8.770097798310296,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453605,
+          "slewAngleDeg": 8.172891194093827,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453610,
+          "slewAngleDeg": 7.5756845897427585,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": -0.0021596317357079897
+        },
+        {
+          "time": 22453615,
+          "slewAngleDeg": 6.978477985688213,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": -0.001989387128560338
+        },
+        {
+          "time": 22453620,
+          "slewAngleDeg": 6.381271381654261,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": -0.0018191414098964742
+        },
+        {
+          "time": 22453625,
+          "slewAngleDeg": 5.78406477724394,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": -0.0016488946822335038
+        },
+        {
+          "time": 22453630,
+          "slewAngleDeg": 5.186858173252439,
+          "angleDifferenceDeg": 0.00007466493386945612,
+          "marginDifferenceDb": -0.0014786470514138728
+        },
+        {
+          "time": 22453635,
+          "slewAngleDeg": 4.589651569283379,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": -0.0013083986104334144
+        },
+        {
+          "time": 22453640,
+          "slewAngleDeg": 3.9924449650602973,
+          "angleDifferenceDeg": 0.00007462587295447861,
+          "marginDifferenceDb": -0.0011381494811075754
+        },
+        {
+          "time": 22453645,
+          "slewAngleDeg": 3.395270312931221,
+          "angleDifferenceDeg": 0.00007191997844398732,
+          "marginDifferenceDb": -0.0009325634850370079
+        },
+        {
+          "time": 22453650,
+          "slewAngleDeg": 2.7981352272683733,
+          "angleDifferenceDeg": 0.00007122744482062379,
+          "marginDifferenceDb": -0.0007611332820829375
+        },
+        {
+          "time": 22453655,
+          "slewAngleDeg": 2.200975080980031,
+          "angleDifferenceDeg": 0.00007069328280689397,
+          "marginDifferenceDb": -0.0005939914764780951
+        },
+        {
+          "time": 22453660,
+          "slewAngleDeg": 1.603795279373132,
+          "angleDifferenceDeg": 0.00007023812670751205,
+          "marginDifferenceDb": -0.00043022032090789253
+        },
+        {
+          "time": 22453665,
+          "slewAngleDeg": 1.0066012278258658,
+          "angleDifferenceDeg": 0.0000699677791026038,
+          "marginDifferenceDb": -0.00026890150547842495
+        },
+        {
+          "time": 22453670,
+          "slewAngleDeg": 0.41115133859249764,
+          "angleDifferenceDeg": 0.000901460453188768,
+          "marginDifferenceDb": 0.0014169227859497369
+        },
+        {
+          "time": 22453680,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453740,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453800,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460405,
+          "slewAngleDeg": 13.703717345379031,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": -6.056491770323191e-7
+        },
+        {
+          "time": 22460410,
+          "slewAngleDeg": 13.209420170929905,
+          "angleDifferenceDeg": 0.00007569270368275544,
+          "marginDifferenceDb": 0.00008544790944142733
+        },
+        {
+          "time": 22460415,
+          "slewAngleDeg": 12.635491687858822,
+          "angleDifferenceDeg": 0.0000782496472061291,
+          "marginDifferenceDb": 0.0001438272538223373
+        },
+        {
+          "time": 22460420,
+          "slewAngleDeg": 12.061665227561605,
+          "angleDifferenceDeg": 0.00008224636888175316,
+          "marginDifferenceDb": 0.0001884838214039064
+        },
+        {
+          "time": 22460425,
+          "slewAngleDeg": 11.487942759951753,
+          "angleDifferenceDeg": 0.00008738572425355211,
+          "marginDifferenceDb": 0.00021943521230127772
+        },
+        {
+          "time": 22460430,
+          "slewAngleDeg": 10.914326407749643,
+          "angleDifferenceDeg": 0.0000935262170110894,
+          "marginDifferenceDb": 0.00023670600558034494
+        },
+        {
+          "time": 22460435,
+          "slewAngleDeg": 10.340818469749248,
+          "angleDifferenceDeg": 0.00010042642938226717,
+          "marginDifferenceDb": 0.00024032935669993094
+        },
+        {
+          "time": 22460440,
+          "slewAngleDeg": 9.76742144846712,
+          "angleDifferenceDeg": 0.00010800827163831883,
+          "marginDifferenceDb": 0.00023034902753238384
+        },
+        {
+          "time": 22460445,
+          "slewAngleDeg": 9.194138083582498,
+          "angleDifferenceDeg": 0.00011605042143649699,
+          "marginDifferenceDb": 0.00020682201193267247
+        },
+        {
+          "time": 22460450,
+          "slewAngleDeg": 8.620971394174658,
+          "angleDifferenceDeg": 0.0001244285388690159,
+          "marginDifferenceDb": 0.0001698220286243668
+        },
+        {
+          "time": 22460455,
+          "slewAngleDeg": 8.047924732094733,
+          "angleDifferenceDeg": 0.00013310109348265345,
+          "marginDifferenceDb": 0.00011944415768994077
+        },
+        {
+          "time": 22460460,
+          "slewAngleDeg": 7.475001848533499,
+          "angleDifferenceDeg": 0.0001420141532354721,
+          "marginDifferenceDb": 0.00005581125529374731
+        },
+        {
+          "time": 22460465,
+          "slewAngleDeg": 6.9022069824735715,
+          "angleDifferenceDeg": 0.00015107692939369608,
+          "marginDifferenceDb": -0.000020917219643479257
+        },
+        {
+          "time": 22460470,
+          "slewAngleDeg": 6.329544976226646,
+          "angleDifferenceDeg": 0.00016020033610921096,
+          "marginDifferenceDb": -0.00011053250491954714
+        },
+        {
+          "time": 22460475,
+          "slewAngleDeg": 5.757021431231971,
+          "angleDifferenceDeg": 0.00016936596849680585,
+          "marginDifferenceDb": -0.00021275799269915296
+        },
+        {
+          "time": 22460480,
+          "slewAngleDeg": 5.184642925692596,
+          "angleDifferenceDeg": 0.00017854283023361662,
+          "marginDifferenceDb": -0.00032722103372861966
+        },
+        {
+          "time": 22460485,
+          "slewAngleDeg": 4.612417325038147,
+          "angleDifferenceDeg": 0.00018766713824311954,
+          "marginDifferenceDb": -0.00045340857258224787
+        },
+        {
+          "time": 22460490,
+          "slewAngleDeg": 4.040354241198352,
+          "angleDifferenceDeg": 0.00019665726611896062,
+          "marginDifferenceDb": -0.0005905936433237002
+        },
+        {
+          "time": 22460495,
+          "slewAngleDeg": 3.4684891058407485,
+          "angleDifferenceDeg": 0.0002053818121889469,
+          "marginDifferenceDb": -0.0007416737031462617
+        },
+        {
+          "time": 22460500,
+          "slewAngleDeg": 2.8968664915475255,
+          "angleDifferenceDeg": 0.00021361409804487494,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460505,
+          "slewAngleDeg": 2.3254307580683635,
+          "angleDifferenceDeg": 0.0002214024546299257,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460510,
+          "slewAngleDeg": 1.7542181380988202,
+          "angleDifferenceDeg": 0.00022840958344723681,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460515,
+          "slewAngleDeg": 1.1832842505572836,
+          "angleDifferenceDeg": 0.00023379683653608572,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460520,
+          "slewAngleDeg": 0.6127332306312802,
+          "angleDifferenceDeg": 0.00023505925099594996,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460525,
+          "slewAngleDeg": 0.13215266700893133,
+          "angleDifferenceDeg": 0.006745094950665441,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460530,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460535,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460540,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460545,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460550,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460555,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460560,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460565,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460570,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460575,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460580,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460585,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460590,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460595,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460600,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460605,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460610,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460615,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460620,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460625,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460630,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460635,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460640,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460645,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460650,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460655,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460660,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460665,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460670,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460675,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460680,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460685,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460690,
+          "slewAngleDeg": 0.0000024148365394514667,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460695,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460700,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460705,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460710,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460715,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460720,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460725,
+          "slewAngleDeg": 0.0000029575586669421963,
+          "angleDifferenceDeg": 0.0000029575586669421963,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460730,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460735,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460740,
+          "slewAngleDeg": 0.0000024148365394514667,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460745,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460750,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460755,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460760,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460765,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460770,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460775,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460780,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460785,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460790,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460795,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460800,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460805,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460810,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460815,
+          "slewAngleDeg": 0.0000029575586669421963,
+          "angleDifferenceDeg": 0.0000029575586669421963,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460820,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460825,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460830,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460835,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460840,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460845,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460850,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460855,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460860,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460865,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460870,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460875,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460880,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460885,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460890,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460895,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000029575586669421963,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460900,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460905,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460910,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460915,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460920,
+          "slewAngleDeg": 0.0000024148365394514667,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460925,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460930,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460935,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460940,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460945,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460950,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460955,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460960,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460965,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460970,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460975,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460980,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460985,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460990,
+          "slewAngleDeg": 0.0000024148365394514667,
+          "angleDifferenceDeg": 0.0000029575586669421963,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460995,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22461000,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        }
+      ]
+    },
+    {
+      "active": 0.25,
+      "values": [
+        {
+          "time": 22453205,
+          "slewAngleDeg": 55.869688083088676,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453210,
+          "slewAngleDeg": 55.352138326557586,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453215,
+          "slewAngleDeg": 54.75493172113554,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453220,
+          "slewAngleDeg": 54.15772511560784,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453225,
+          "slewAngleDeg": 53.56051850994031,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453230,
+          "slewAngleDeg": 52.96331190456392,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453235,
+          "slewAngleDeg": 52.366105299202815,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453240,
+          "slewAngleDeg": 51.76889869346023,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453245,
+          "slewAngleDeg": 51.17169208812997,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453250,
+          "slewAngleDeg": 50.57448548281497,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453255,
+          "slewAngleDeg": 49.977278877239705,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453260,
+          "slewAngleDeg": 49.380072271834734,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453265,
+          "slewAngleDeg": 48.782865666566295,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453270,
+          "slewAngleDeg": 48.18565906103762,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453275,
+          "slewAngleDeg": 47.588452455800436,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453280,
+          "slewAngleDeg": 46.99124585045792,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453285,
+          "slewAngleDeg": 46.39403924497622,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453290,
+          "slewAngleDeg": 45.796832639786096,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453295,
+          "slewAngleDeg": 45.199626034611796,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453300,
+          "slewAngleDeg": 44.60241942905646,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453305,
+          "slewAngleDeg": 44.005212823913894,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453310,
+          "slewAngleDeg": 43.408006218787165,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453315,
+          "slewAngleDeg": 42.810799613676515,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453320,
+          "slewAngleDeg": 42.21359300818481,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453325,
+          "slewAngleDeg": 41.616386403106176,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453330,
+          "slewAngleDeg": 41.01917979804354,
+          "angleDifferenceDeg": 0.0000029575586669421963,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453335,
+          "slewAngleDeg": 40.421973192721104,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453340,
+          "slewAngleDeg": 39.824766587569876,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453345,
+          "slewAngleDeg": 39.227559982555825,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453350,
+          "slewAngleDeg": 38.630353377282034,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453355,
+          "slewAngleDeg": 38.03314677230054,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453360,
+          "slewAngleDeg": 37.43594016721425,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453365,
+          "slewAngleDeg": 36.83873356198958,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453370,
+          "slewAngleDeg": 36.241526957057104,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453375,
+          "slewAngleDeg": 35.6443203521412,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453380,
+          "slewAngleDeg": 35.04711374684474,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453385,
+          "slewAngleDeg": 34.44990714196188,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453390,
+          "slewAngleDeg": 33.85270053709561,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453395,
+          "slewAngleDeg": 33.255493931970044,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453400,
+          "slewAngleDeg": 32.65828732701612,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453405,
+          "slewAngleDeg": 32.06108072219983,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453410,
+          "slewAngleDeg": 31.463874117124544,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453415,
+          "slewAngleDeg": 30.866667512341955,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453420,
+          "slewAngleDeg": 30.269460907455393,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453425,
+          "slewAngleDeg": 29.67225430243055,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453430,
+          "slewAngleDeg": 29.075047697698757,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453435,
+          "slewAngleDeg": 28.477841092984047,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453440,
+          "slewAngleDeg": 27.880634487889473,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453445,
+          "slewAngleDeg": 27.283427883208777,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453450,
+          "slewAngleDeg": 26.686221278545645,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453455,
+          "slewAngleDeg": 26.08901467362356,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453460,
+          "slewAngleDeg": 25.491808068873787,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453465,
+          "slewAngleDeg": 24.89460146426232,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453470,
+          "slewAngleDeg": 24.297394859392167,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453475,
+          "slewAngleDeg": 23.70018825481568,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453480,
+          "slewAngleDeg": 23.102981650135536,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453485,
+          "slewAngleDeg": 22.505775045318085,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453490,
+          "slewAngleDeg": 21.90856844079424,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453495,
+          "slewAngleDeg": 21.311361836287944,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453500,
+          "slewAngleDeg": 20.714155231402437,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453505,
+          "slewAngleDeg": 20.116948626931983,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453510,
+          "slewAngleDeg": 19.519742022479182,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453515,
+          "slewAngleDeg": 18.9225354177684,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453520,
+          "slewAngleDeg": 18.32532881323076,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453525,
+          "slewAngleDeg": 17.728122208831923,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453530,
+          "slewAngleDeg": 17.13091560417581,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453535,
+          "slewAngleDeg": 16.533708999813758,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453540,
+          "slewAngleDeg": 15.93650239534889,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453545,
+          "slewAngleDeg": 15.33929579102339,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453550,
+          "slewAngleDeg": 14.742089186440607,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453555,
+          "slewAngleDeg": 14.144882582152237,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453560,
+          "slewAngleDeg": 13.547675977761886,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453565,
+          "slewAngleDeg": 12.950469373234977,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453570,
+          "slewAngleDeg": 12.35326276900329,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453575,
+          "slewAngleDeg": 11.756056164790346,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453580,
+          "slewAngleDeg": 11.158849560200004,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453585,
+          "slewAngleDeg": 10.561642956025857,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453590,
+          "slewAngleDeg": 9.96443635187046,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453595,
+          "slewAngleDeg": 9.367229747459524,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453600,
+          "slewAngleDeg": 8.770023143344437,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453605,
+          "slewAngleDeg": 8.172816539127794,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453610,
+          "slewAngleDeg": 7.5756099347769625,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453615,
+          "slewAngleDeg": 6.9784033307218465,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453620,
+          "slewAngleDeg": 6.381196726688112,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453625,
+          "slewAngleDeg": 5.783990122277829,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453630,
+          "slewAngleDeg": 5.186783518286266,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453635,
+          "slewAngleDeg": 4.589576914317213,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453640,
+          "slewAngleDeg": 3.9923703100945596,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453645,
+          "slewAngleDeg": 3.395198384110701,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453650,
+          "slewAngleDeg": 2.7980639925722786,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453655,
+          "slewAngleDeg": 2.2009044059665532,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453660,
+          "slewAngleDeg": 1.603725029558043,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453665,
+          "slewAngleDeg": 1.0065312686935974,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453670,
+          "slewAngleDeg": 0.4120528001846671,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453680,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453740,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22453800,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460405,
+          "slewAngleDeg": 13.703717346884547,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460410,
+          "slewAngleDeg": 13.209345528699682,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460415,
+          "slewAngleDeg": 12.635417074171475,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460420,
+          "slewAngleDeg": 12.061590661945225,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460425,
+          "slewAngleDeg": 11.487868263786073,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460430,
+          "slewAngleDeg": 10.914252004538959,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460435,
+          "slewAngleDeg": 10.340744185451202,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460440,
+          "slewAngleDeg": 9.767347311895431,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460445,
+          "slewAngleDeg": 9.194064126902163,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460450,
+          "slewAngleDeg": 8.620897653523828,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460455,
+          "slewAngleDeg": 8.047851248368387,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460460,
+          "slewAngleDeg": 7.4749286683928196,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460465,
+          "slewAngleDeg": 6.902134159667609,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460470,
+          "slewAngleDeg": 6.32947257335621,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460475,
+          "slewAngleDeg": 5.75694952216142,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460480,
+          "slewAngleDeg": 5.1845715989391845,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460485,
+          "slewAngleDeg": 4.6123466886958,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460490,
+          "slewAngleDeg": 4.040284430387406,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460495,
+          "slewAngleDeg": 3.468420488857553,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460500,
+          "slewAngleDeg": 2.8967998054927957,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460505,
+          "slewAngleDeg": 2.3253662060627356,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460510,
+          "slewAngleDeg": 1.7541560973777734,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460515,
+          "slewAngleDeg": 1.1832254698476865,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460520,
+          "slewAngleDeg": 0.6126795397199482,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460525,
+          "slewAngleDeg": 0.13889619449227955,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460530,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460535,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460540,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460545,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460550,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460555,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460560,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460565,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460570,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460575,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460580,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460585,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460590,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460595,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460600,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460605,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460610,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460615,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460620,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460625,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460630,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460635,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460640,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460645,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460650,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460655,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460660,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460665,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460670,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460675,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460680,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460685,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460690,
+          "slewAngleDeg": 0.0000024148365394514667,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460695,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460700,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460705,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460710,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460715,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460720,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460725,
+          "slewAngleDeg": 0.0000029575586669421963,
+          "angleDifferenceDeg": 0.0000029575586669421963,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460730,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460735,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460740,
+          "slewAngleDeg": 0.0000024148365394514667,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460745,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460750,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460755,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460760,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460765,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460770,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460775,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460780,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460785,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460790,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460795,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460800,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460805,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460810,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460815,
+          "slewAngleDeg": 0.0000029575586669421963,
+          "angleDifferenceDeg": 0.0000029575586669421963,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460820,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460825,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460830,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460835,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460840,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460845,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460850,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460855,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460860,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460865,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460870,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460875,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460880,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460885,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460890,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460895,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000029575586669421963,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460900,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460905,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460910,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460915,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460920,
+          "slewAngleDeg": 0.0000024148365394514667,
+          "angleDifferenceDeg": 0.0000024148365394514667,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460925,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460930,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460935,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460940,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460945,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460950,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460955,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460960,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460965,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460970,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460975,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460980,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460985,
+          "slewAngleDeg": 0,
+          "angleDifferenceDeg": 0,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460990,
+          "slewAngleDeg": 0.0000024148365394514667,
+          "angleDifferenceDeg": 0.0000029575586669421963,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22460995,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        },
+        {
+          "time": 22461000,
+          "slewAngleDeg": 0.0000017075472925031877,
+          "angleDifferenceDeg": 0.0000017075472925031877,
+          "marginDifferenceDb": 0
+        }
+      ]
+    }
+  ]
+}

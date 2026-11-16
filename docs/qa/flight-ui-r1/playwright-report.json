@@ -1,0 +1,477 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-flight-ui\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/browser/deployment-flight-ui.spec.ts",
+      "--reporter=json"
+    ],
+    "configFile": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-flight-ui\\playwright.config.ts",
+    "rootDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry-next-flight-ui/tests/browser",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry-next-flight-ui/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/gjtjw/Desktop/NASA_apps_challenge/orbital-foundry-next-flight-ui/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-flight-ui\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-flight-ui\\tests\\browser",
+        "snapshotDir": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-flight-ui\\tests\\browser",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5192",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "headless": true,
+          "launchOptions": {
+            "executablePath": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+            "args": [
+              "--disable-background-timer-throttling"
+            ]
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "deployment-flight-ui.spec.ts",
+      "file": "deployment-flight-ui.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "flight drawer ko normal 1280",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21079,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T09:22:37.942Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c76ec6b4dbf59306b1ee-e17079d618b83b86ddaa",
+          "file": "deployment-flight-ui.spec.ts",
+          "line": 38,
+          "column": 160
+        },
+        {
+          "title": "flight drawer en normal 1280",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 23416,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T09:23:00.147Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c76ec6b4dbf59306b1ee-12e19a7d95d3298b6f6f",
+          "file": "deployment-flight-ui.spec.ts",
+          "line": 38,
+          "column": 160
+        },
+        {
+          "title": "flight drawer ko large 1280",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 19562,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T09:23:23.641Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c76ec6b4dbf59306b1ee-5fc65e1f0169185c349d",
+          "file": "deployment-flight-ui.spec.ts",
+          "line": 38,
+          "column": 160
+        },
+        {
+          "title": "flight drawer en large 1280",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12369,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T09:23:43.251Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c76ec6b4dbf59306b1ee-940b23a46baa1bf2201f",
+          "file": "deployment-flight-ui.spec.ts",
+          "line": 38,
+          "column": 160
+        },
+        {
+          "title": "flight drawer ko normal 1920",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12791,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T09:23:55.648Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c76ec6b4dbf59306b1ee-179b3c15ad15916c9682",
+          "file": "deployment-flight-ui.spec.ts",
+          "line": 38,
+          "column": 160
+        },
+        {
+          "title": "flight drawer en normal 1920",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14251,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T09:24:08.454Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c76ec6b4dbf59306b1ee-0737536f21a18953c962",
+          "file": "deployment-flight-ui.spec.ts",
+          "line": 38,
+          "column": 160
+        },
+        {
+          "title": "flight drawer ko large 1920",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 18884,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T09:24:22.744Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c76ec6b4dbf59306b1ee-bd7831b6c64d5ca1b9d6",
+          "file": "deployment-flight-ui.spec.ts",
+          "line": 38,
+          "column": 160
+        },
+        {
+          "title": "flight drawer en large 1920",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 19664,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T09:24:41.679Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c76ec6b4dbf59306b1ee-a698b6bef606279b4960",
+          "file": "deployment-flight-ui.spec.ts",
+          "line": 38,
+          "column": 160
+        },
+        {
+          "title": "actual mesh selection details focus flight lock and repaint recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 33376,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T09:25:01.389Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c76ec6b4dbf59306b1ee-31d57eb8098db3de7e43",
+          "file": "deployment-flight-ui.spec.ts",
+          "line": 50,
+          "column": 1
+        },
+        {
+          "title": "actual terminal replay displays compact truthful objective beside baseline",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 180297,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 180000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-flight-ui\\tests\\browser\\deployment-flight-ui.spec.ts",
+                        "column": 249,
+                        "line": 35
+                      },
+                      "message": "Error: page.waitForFunction: Test timeout of 180000ms exceeded.\n\n  33 | }\n  34 | async function shortFlight(p:Page){await control(p,'variants').click();await control(p,'preset:compact').click();await ready(p);await control(p,'launch').click();await p.waitForFunction(()=>(window as any).__game.deployment().getState().runtime?.time>=3);await control(p,'play').click();await ready(p);expect((await state(p)).playing).toBe(false);await settledCamera(p);}\n> 35 | async function restoreTerminal(p:Page){const choose=p.waitForEvent('filechooser');await control(p,'import').click();await(await choose).setFiles({name:'actual-v8-terminal.json',mimeType:'application/json',buffer:Buffer.from(terminalText)});await p.waitForFunction(()=>(window as any).__game.deployment().getState().result?.success===true,null,{timeout:180000});await ready(p);expect((await state(p)).error).toBe('');}\n     |                                                                                                                                                                                                                                                         ^\n  36 | async function factsMatch(p:Page){const s=await state(p);const values=await p.locator('.deployment-objective-row meter').evaluateAll(es=>es.map(e=>({id:e.parentElement?.dataset.objective,value:(e as HTMLMeterElement).value,text:e.getAttribute('aria-valuetext')})));expect(values.find(v=>v.id==='power')?.value).toBeCloseTo(Math.min(90,Math.max(0,s.telemetry.solarPowerW)),10);expect(values.find(v=>v.id==='stable')?.value).toBeCloseTo(Math.min(60,s.runtime.solarGoodSeconds),10);expect(values.find(v=>v.id==='received')?.value).toBeCloseTo(Math.min(16e6,s.runtime.diagnosticReceivedBits),10);return values;}\n  37 |\n  38 | for(const size of [{width:1280,height:720},{width:1920,height:1080}])for(const scale of ['normal','large'] as const)for(const language of ['ko','en'] as const)test(`flight drawer ${language} ${scale} ${size.width}`,async({page})=>{\n    at restoreTerminal (C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-flight-ui\\tests\\browser\\deployment-flight-ui.spec.ts:35:249)\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-flight-ui\\tests\\browser\\deployment-flight-ui.spec.ts:68:252"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-15T09:25:34.795Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-flight-ui\\test-results\\deployment-flight-ui-actua-325ed-l-objective-beside-baseline\\error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c76ec6b4dbf59306b1ee-277c55d6994c54adc3ce",
+          "file": "deployment-flight-ui.spec.ts",
+          "line": 66,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-15T09:22:37.141Z",
+    "duration": 359409.431,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

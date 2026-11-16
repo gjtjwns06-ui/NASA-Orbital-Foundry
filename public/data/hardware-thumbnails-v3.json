@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "catalogHash": "25a47f24340365b5b52d62708ce987f7a90df4ee6559879b91464a2d24ae9a98",
+  "image": "/assets/hardware/library-v3.webp",
+  "columns": 4,
+  "rows": 4,
+  "tileSizePx": 256,
+  "models": [
+    "tsp45-fixed-v2",
+    "tsp45-sixwing-v2",
+    "bpx100-4s2p-v2",
+    "bpx100-dual-v2",
+    "wide-mono-v2",
+    "narrow-mono-v2",
+    "mars-spectra-v2",
+    "ax100u-carrier-v1",
+    "iris22-carrier-v1",
+    "uhf-dipole-pair-v1",
+    "xband-reflector-1m-v1",
+    "xact15-carrier-v1",
+    "xact50-carrier-v1",
+    "chemical230-v2",
+    "recorder-1p6-v2",
+    "recorder-8-v2"
+  ],
+  "renderSourceSha256": "9c8be91b7ed6d11410451a748522997c72887f57b74659d39b49782770fdbfeb"
+}

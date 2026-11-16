@@ -1,0 +1,17 @@
+import {chromium} from '@playwright/test';
+import fs from 'node:fs/promises';
+const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
+const page=await browser.newPage({viewport:{width:1600,height:1000},deviceScaleFactor:1});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+await page.goto((process.env.PLAYWRIGHT_BASE_URL||'http://127.0.0.1:5173')+'/?qa');
+await page.waitForFunction(()=>window.__game?.getState().assetsReady,{timeout:60000});
+await page.waitForTimeout(1800);await fs.mkdir('docs/qa/browser',{recursive:true});
+await page.screenshot({path:'docs/qa/browser/01-campus.png'});
+await page.getByRole('button',{name:'새로운 임무'}).click();await page.locator('[data-mission="earth"]').click();
+await page.waitForTimeout(1600);await page.screenshot({path:'docs/qa/browser/02-workshop-empty.png'});
+await page.locator('[data-action="preset-balanced"]').click();await page.waitForFunction(()=>!window.__game.getState().pending);await page.waitForTimeout(300);
+await page.screenshot({path:'docs/qa/browser/03-workshop.png'});
+await page.locator('[data-action="plan"]').last().click();await page.waitForTimeout(1600);await page.screenshot({path:'docs/qa/browser/04-earth-plan.png'});
+await page.locator('[data-action="launch"]').click();await page.waitForTimeout(1600);await page.locator('[data-action="play-pause"]').click();await page.screenshot({path:'docs/qa/browser/05-flight.png'});
+console.log(JSON.stringify({errors,state:await page.evaluate(()=>({mode:window.__game.getState().mode,result:window.__game.getState().preview?.status,renderer:window.__game.scene.renderer.info.render}))},null,2));
+await browser.close();

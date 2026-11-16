@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 1,
+  "status": "RESEARCH PROTOTYPE; NOT GAME INTEGRATION",
+  "generatedAtUtc": "2026-11-14T17:01:26.304Z",
+  "source": "JPL Horizons, raw requests/hashes in tools/transfer/data",
+  "timeScale": "TDB",
+  "frame": "Sun-centred geometric ICRF",
+  "solarMu": 132712440041.27942,
+  "testCount": 7,
+  "tests": [
+    "independent analytic quarter-circle Lambert velocity",
+    "long-way 270-degree branch preserves prograde plane",
+    "rejects degenerate endpoints and forbidden extrapolation",
+    "Hermite exactly preserves source positions and velocities at nodes",
+    "Mars hyperbola has the actual incoming asymptote and conserved speed/energy",
+    "bounded launch-grid has no silent non-finite/incorrect trajectories",
+    "finite-SOI shooting joins all three segments without a hidden correction burn"
+  ],
+  "gridCount": 285,
+  "worstEndpointKm": 0.00001884223992508578,
+  "bestGridCases": [
+    {
+      "departure": "2026-11-03 TDB",
+      "arrival": "2027-08-15 TDB",
+      "departureJdTdb": 2461347.5,
+      "arrivalJdTdb": 2461632.5,
+      "flightDays": 285,
+      "c3": 9.235392139164126,
+      "arrivalVInfinity": 2.8055771129715397,
+      "endpointErrorKm": 0.000001103994038223711
+    },
+    {
+      "departure": "2026-11-03 TDB",
+      "arrival": "2027-08-30 TDB",
+      "departureJdTdb": 2461347.5,
+      "arrivalJdTdb": 2461647.5,
+      "flightDays": 300,
+      "c3": 9.286469917626683,
+      "arrivalVInfinity": 2.598321321497623,
+      "endpointErrorKm": 2.1387189767371602e-7
+    },
+    {
+      "departure": "2026-11-03 TDB",
+      "arrival": "2027-09-14 TDB",
+      "departureJdTdb": 2461347.5,
+      "arrivalJdTdb": 2461662.5,
+      "flightDays": 315,
+      "c3": 9.361226818238427,
+      "arrivalVInfinity": 2.576669975372395,
+      "endpointErrorKm": 0.000001943216547725724
+    },
+    {
+      "departure": "2026-11-03 TDB",
+      "arrival": "2027-09-29 TDB",
+      "departureJdTdb": 2461347.5,
+      "arrivalJdTdb": 2461677.5,
+      "flightDays": 330,
+      "c3": 9.475119646482788,
+      "arrivalVInfinity": 2.7038840232285275,
+      "endpointErrorKm": 0.000001818979565027571
+    },
+    {
+      "departure": "2026-10-24 TDB",
+      "arrival": "2027-08-20 TDB",
+      "departureJdTdb": 2461337.5,
+      "arrivalJdTdb": 2461637.5,
+      "flightDays": 300,
+      "c3": 9.512497243919542,
+      "arrivalVInfinity": 2.709590853640955,
+      "endpointErrorKm": 5.724839184373184e-7
+    }
+  ],
+  "windowExamples": [
+    {
+      "departure": "2026-08-15 TDB",
+      "arrival": "2027-05-02 TDB",
+      "c3": 61.74181537678119,
+      "arrivalVInfinity": 5.1643614821546615,
+      "escapeBurnFrom300KmMps": 5732.194941748886
+    },
+    {
+      "departure": "2026-11-15 TDB",
+      "arrival": "2027-08-02 TDB",
+      "c3": 11.73251793366276,
+      "arrivalVInfinity": 3.060870675314455,
+      "escapeBurnFrom300KmMps": 3724.4476163727168
+    },
+    {
+      "departure": "2027-02-15 TDB",
+      "arrival": "2027-11-02 TDB",
+      "c3": 119.80548114165735,
+      "arrivalVInfinity": 6.598442143432014,
+      "escapeBurnFrom300KmMps": 7739.69234683066
+    }
+  ],
+  "reference": {
+    "departureJdTdb": 2461359.5,
+    "arrivalJdTdb": 2461619.5,
+    "flightTimeDays": 260,
+    "lambert": {
+      "departureVelocityKmS": [
+        -25.50060392732454,
+        19.136363479889035,
+        9.024466088189914
+      ],
+      "arrivalVelocityKmS": [
+        14.91694572817757,
+        -13.319942043559298,
+        -6.231905475486108
+      ],
+      "flightTimeSeconds": 22464000,
+      "transferAngleRad": 3.008001975683035,
+      "iterations": 38,
+      "timeResidualSeconds": 6.332993507385254e-8,
+      "endpointErrorKm": 3.8056352106100715e-7
+    },
+    "earth": {
+      "positionKm": [
+        90591652.98296772,
+        107379281.4452783,
+        46546360.02430067
+      ],
+      "velocityKmS": [
+        -24.05019439145743,
+        16.62286422586882,
+        7.204809084255287
+      ]
+    },
+    "mars": {
+      "positionKm": [
+        -166601780.2747513,
+        -151016522.3698595,
+        -64775662.68214195
+      ],
+      "velocityKmS": [
+        17.92184744394697,
+        -13.62077418696369,
+        -6.730899454468627
+      ]
+    },
+    "departureVInfinityKmS": [
+      -1.4504095358671094,
+      2.513499254020214,
+      1.8196570039346271
+    ],
+    "arrivalVInfinityKmS": [
+      -3.0049017157693996,
+      0.3008321434043921,
+      0.4989939789825195
+    ],
+    "c3Km2S2": 11.73251793366276,
+    "arrivalSpeedKmS": 3.060870675314455,
+    "idealEscapeBurnFrom300KmMps": 3724.4476163727168
+  },
+  "provisionalEncounter": {
+    "incomingAsymptote": [
+      -3.0049017157693996,
+      0.3008321434043921,
+      0.4989939789825195
+    ],
+    "periapsisRadiusKm": 4389.5,
+    "bPlaneAngleRad": 0,
+    "boundaryRadiusKm": 577000,
+    "incoming": {
+      "positionKm": [
+        567596.6293289987,
+        -49747.25590181008,
+        -91039.9742123957
+      ],
+      "velocityKmS": [
+        -3.0286397408990147,
+        0.3030605105192919,
+        0.5028686160073492
+      ]
+    },
+    "outgoing": {
+      "positionKm": [
+        -356599.23755522375,
+        -427643.99935355876,
+        -151283.1570001145
+      ],
+      "velocityKmS": [
+        -1.8746182792348012,
+        -2.307965860679617,
+        -0.8224847057850738
+      ]
+    },
+    "periapsis": {
+      "positionKm": [
+        -1609.4758902894005,
+        3641.5128599898053,
+        1848.4268173519902
+      ],
+      "velocityKmS": [
+        -4.965469181077378,
+        -2.0303430262734885,
+        -0.32367128897786207
+      ]
+    },
+    "secondsToPeriapsis": 182712.20248600835,
+    "turnAngleRad": 1.070707400737298,
+    "eccentricity": 1.9602258997068187,
+    "impactParameterKm": 7707.096068647476,
+    "vInfinityOutgoingKmS": [
+      -1.8598152666759686,
+      -2.2899783529392375,
+      -0.8160977931036548
+    ]
+  },
+  "limitations": [
+    "Finite-SOI patched conics now join position/velocity, but acceleration switches between central-body models.",
+    "Planet ephemerides include perturbations, spacecraft coast does not.",
+    "No launch-site accessibility or rendezvous with an independently chosen parking orbit.",
+    "Escape burn assumes an aligned circular parking orbit and instantaneous launcher stage.",
+    "No game power, thermal, communications, cruise commands, fuel/stage or objective integration."
+  ],
+  "patchedCases": [
+    {
+      "departure": "2026-10-15",
+      "angle": -1,
+      "iterations": 3,
+      "residualKmS": 7.529116235955401e-11,
+      "c3": 17.595436408479802
+    },
+    {
+      "departure": "2026-10-15",
+      "angle": 0,
+      "iterations": 3,
+      "residualKmS": 1.1719948155960466e-10,
+      "c3": 17.577639721123127
+    },
+    {
+      "departure": "2026-10-15",
+      "angle": 1,
+      "iterations": 3,
+      "residualKmS": 1.518896624701638e-10,
+      "c3": 17.56038138878541
+    },
+    {
+      "departure": "2026-11-15",
+      "angle": -1,
+      "iterations": 2,
+      "residualKmS": 1.2785263763356963e-10,
+      "c3": 10.891367899822276
+    },
+    {
+      "departure": "2026-11-15",
+      "angle": 0,
+      "iterations": 2,
+      "residualKmS": 2.0361545985228307e-10,
+      "c3": 10.882816770379902
+    },
+    {
+      "departure": "2026-11-15",
+      "angle": 1,
+      "iterations": 2,
+      "residualKmS": 7.027796581047294e-10,
+      "c3": 10.873665684536796
+    },
+    {
+      "departure": "2026-12-15",
+      "angle": -1,
+      "iterations": 2,
+      "residualKmS": 1.8947880069207714e-11,
+      "c3": 27.605566583114026
+    },
+    {
+      "departure": "2026-12-15",
+      "angle": 0,
+      "iterations": 2,
+      "residualKmS": 1.8267603299193975e-11,
+      "c3": 27.610326060075355
+    },
+    {
+      "departure": "2026-12-15",
+      "angle": 1,
+      "iterations": 2,
+      "residualKmS": 2.4124008514332652e-11,
+      "c3": 27.611559249199285
+    }
+  ]
+}

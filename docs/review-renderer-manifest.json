@@ -1,0 +1,48 @@
+{
+  "status": "Final source 8 pure tests + TypeScript PASS; actual renderer component browser PASS4.347s; three native context restores/rebuilds/disposal clean. Integrated strict replay UI remains separate.",
+  "base": "accepted isolated four-radius Encounter camera candidate",
+  "productionFiles": [
+    "src/render/review-frame.ts",
+    "src/render/swingby-review-scene.ts",
+    "src/render/swingby-scene.ts",
+    "src/render/swingby-objective.ts"
+  ],
+  "files": [
+    {
+      "path": "src/render/review-frame.ts",
+      "sha256": "7193312421d8c5ddf0e7d288157373fee7689dea8bfd67ba4cd0fb4eeb7a7de1"
+    },
+    {
+      "path": "src/render/swingby-review-scene.ts",
+      "sha256": "36134ce7aa67201a10893d6c5ed9ca38157bec59ad2e9c645d845a4b55960840"
+    },
+    {
+      "path": "src/render/swingby-scene.ts",
+      "sha256": "8dbacc1aeb70e9493e7050ffca0af94cbb8dd8a844f82657b3fe49e291eca991"
+    },
+    {
+      "path": "src/render/swingby-objective.ts",
+      "sha256": "af7474aea537e7fa1b72c03bfb66b96463459d0f64a2d57ad323da45aa0db7e0"
+    },
+    {
+      "path": "tests/review-frame.test.ts",
+      "sha256": "1dfd55e8cdb9203561da482d1e3a3e249ff504f7c0c05b14e16dc9d82ea59afa"
+    },
+    {
+      "path": "tools/review-harness.html",
+      "sha256": "fab18a3e7feff944474cf215a1ad8475fa682129da882b47d1b6e2522218f3d3"
+    },
+    {
+      "path": "tools/review-harness.ts",
+      "sha256": "6d15a05c0efbdfb93d16cb67f2c66eec45e8084d9e9c072767fd773ed91f74e7"
+    },
+    {
+      "path": "tools/check-review-scene.mjs",
+      "sha256": "2ce1ddac30463d45625ce9722e4332d5718b59177a7742499dbe7e3b3ba2b1de"
+    },
+    {
+      "path": "docs/qa/review-renderer/report.json",
+      "sha256": "4916b015dbd8e89000da15bd8fce987d3af395b25a6085bca294d033aa43d1e2"
+    }
+  ]
+}

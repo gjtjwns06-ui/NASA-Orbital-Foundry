@@ -1,0 +1,32 @@
+{
+  "exitCode": 0,
+  "startedAtUtc": "2026-11-15T04:46:12.869270+00:00",
+  "endedAtUtc": "2026-11-15T05:01:31.442960+00:00",
+  "wallSeconds": 918.6102822000103,
+  "command": [
+    "run",
+    "tests/deployment-clearance-lesson.test.ts",
+    "tests/deployment-clearance.test.ts",
+    "tests/deployment-convergence.test.ts",
+    "tests/deployment-craft.test.ts",
+    "tests/deployment-devices.test.ts",
+    "tests/deployment-drive-feasibility.test.ts",
+    "tests/deployment-dynamics.test.ts",
+    "tests/deployment-fixed-flight.test.ts",
+    "tests/deployment-flight-variants.test.ts",
+    "tests/deployment-kinematics.test.ts",
+    "tests/deployment-mechanism.test.ts",
+    "tests/deployment-mission.test.ts",
+    "tests/deployment-outage-boundaries.test.ts",
+    "tests/deployment-partition.test.ts",
+    "tests/deployment-recovery-replay.test.ts",
+    "tests/deployment-reference-dynamics.test.ts",
+    "tests/deployment-replay.test.ts",
+    "tests/deployment-runtime.test.ts",
+    "--maxWorkers=1",
+    "--reporter=default",
+    "--reporter=json",
+    "--outputFile=C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-deployment\\docs\\qa\\resumed-continuation-2026-11-15T04-46-12Z\\vitest-results.json"
+  ],
+  "output": "docs/qa/resumed-continuation-2026-11-15T04-46-12Z"
+}

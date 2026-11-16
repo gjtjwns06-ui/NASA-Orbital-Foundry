@@ -1,0 +1,527 @@
+{
+  "status": "pass",
+  "browser": "157.0.8103.52",
+  "scope": "Real visible remote lesson UI; exact deterministic epochs and runtime equality; first-entry only camera composition; no performance claim",
+  "records": [
+    {
+      "variant": "baseline9b",
+      "scale": "normal",
+      "phase": "decision",
+      "runtimeHash": "882f8fd1e10fba68ca74e2cdd9836baefb67bffdced023e802c0b386c18a3631",
+      "inspection": {
+        "enabled": true,
+        "frameKey": "mars-flyby",
+        "displayScale": 0.015767603991121686,
+        "fitDistance": 0.2401624506758695,
+        "distance": 0.24016245067587025,
+        "minDistance": 0.0353495533868091,
+        "maxDistance": 0.6811327874040013,
+        "conservativeSurfaceClearance": 0.8800862959138516,
+        "displayEnvelopeRadius": 0.035129506929520916,
+        "viewport": {
+          "left": 256,
+          "right": 256,
+          "top": 175.640625,
+          "bottom": 242
+        },
+        "phase": "mars-flyby",
+        "selectedPartId": null,
+        "focusedPartId": null,
+        "selectedPart": null,
+        "epochSeconds": 22455800,
+        "previewingPhase": false,
+        "view": "mars",
+        "attitudeIsActual": true,
+        "exaggeration": 17814.764575968984,
+        "cameraSurfaceClearance": 24.56626131656013,
+        "cameraPosition": [
+          27.326127308464958,
+          -1.6431059680163798,
+          -3.237550319657459
+        ],
+        "craftPosition": [
+          27.118624766947615,
+          -1.7245627741457945,
+          -3.140940897611844
+        ],
+        "craftQuaternion": [
+          -0.13080347802265918,
+          -0.7503609990158805,
+          -0.15427412143582714,
+          -0.6293236979077373
+        ]
+      },
+      "planetCenter": {
+        "x": 950.3249542102684,
+        "y": -76.49750055121179,
+        "z": 0.9999379572424868
+      },
+      "resources": {
+        "geometries": 65,
+        "textures": 11,
+        "programs": 24
+      }
+    },
+    {
+      "variant": "baseline9b",
+      "scale": "normal",
+      "phase": "periapsis",
+      "runtimeHash": "f7974b5c3a40e3990933cd128f092fe32821d5e98b460963b5f228db9ff772c9",
+      "inspection": {
+        "enabled": true,
+        "frameKey": "mars-flyby",
+        "displayScale": 0.015767603991121662,
+        "fitDistance": 0.24016245067586914,
+        "distance": 0.24016245067586905,
+        "minDistance": 0.03534955338680905,
+        "maxDistance": 0.6811327874040003,
+        "conservativeSurfaceClearance": 0.8800862959138502,
+        "displayEnvelopeRadius": 0.03512950692952087,
+        "viewport": {
+          "left": 256,
+          "right": 256,
+          "top": 175.640625,
+          "bottom": 242
+        },
+        "phase": "mars-flyby",
+        "selectedPartId": null,
+        "focusedPartId": null,
+        "selectedPart": null,
+        "epochSeconds": 22464000,
+        "previewingPhase": false,
+        "view": "mars",
+        "attitudeIsActual": true,
+        "exaggeration": 17814.76457596896,
+        "cameraSurfaceClearance": 1.1006205915469263,
+        "cameraPosition": [
+          -1.4287888655064611,
+          1.6837567832266094,
+          -3.4552300514671677
+        ],
+        "craftPosition": [
+          -1.4435637330401163,
+          1.627641191979684,
+          -3.2188201915484247
+        ],
+        "craftQuaternion": [
+          -0.8999188588553104,
+          -0.06454224508844889,
+          0.3739627294976307,
+          0.21478413121592665
+        ]
+      },
+      "planetCenter": {
+        "x": 231.48071443815,
+        "y": 558.7061041076781,
+        "z": 0.9995894466062722
+      },
+      "resources": {
+        "geometries": 65,
+        "textures": 11,
+        "programs": 24
+      }
+    },
+    {
+      "variant": "baseline9b",
+      "scale": "large",
+      "phase": "decision",
+      "runtimeHash": "882f8fd1e10fba68ca74e2cdd9836baefb67bffdced023e802c0b386c18a3631",
+      "inspection": {
+        "enabled": true,
+        "frameKey": "mars-flyby",
+        "displayScale": 0.014224838105460985,
+        "fitDistance": 0.24016245067586953,
+        "distance": 0.24016245067587025,
+        "minDistance": 0.0318908106971006,
+        "maxDistance": 0.6816547386615287,
+        "conservativeSurfaceClearance": 0.8800862959138516,
+        "displayEnvelopeRadius": 0.0316922944715303,
+        "viewport": {
+          "left": 256,
+          "right": 256,
+          "top": 183.625,
+          "bottom": 264
+        },
+        "phase": "mars-flyby",
+        "selectedPartId": null,
+        "focusedPartId": null,
+        "selectedPart": null,
+        "epochSeconds": 22455800,
+        "previewingPhase": false,
+        "view": "mars",
+        "attitudeIsActual": true,
+        "exaggeration": 16071.696252820004,
+        "cameraSurfaceClearance": 24.56603047661203,
+        "cameraPosition": [
+          27.32595939401803,
+          -1.6429490420509631,
+          -3.2370816917718965
+        ],
+        "craftPosition": [
+          27.118624766947615,
+          -1.7245627741457945,
+          -3.140940897611844
+        ],
+        "craftQuaternion": [
+          -0.13080347802265918,
+          -0.7503609990158805,
+          -0.15427412143582714,
+          -0.6293236979077373
+        ]
+      },
+      "planetCenter": {
+        "x": 950.3420608134007,
+        "y": -83.49970813281855,
+        "z": 0.9999440271300468
+      },
+      "resources": {
+        "geometries": 65,
+        "textures": 11,
+        "programs": 24
+      }
+    },
+    {
+      "variant": "baseline9b",
+      "scale": "large",
+      "phase": "periapsis",
+      "runtimeHash": "f7974b5c3a40e3990933cd128f092fe32821d5e98b460963b5f228db9ff772c9",
+      "inspection": {
+        "enabled": true,
+        "frameKey": "mars-flyby",
+        "displayScale": 0.014224838105460963,
+        "fitDistance": 0.24016245067586914,
+        "distance": 0.24016245067586905,
+        "minDistance": 0.03189081069710055,
+        "maxDistance": 0.6816547386615277,
+        "conservativeSurfaceClearance": 0.8800862959138502,
+        "displayEnvelopeRadius": 0.03169229447153025,
+        "viewport": {
+          "left": 256,
+          "right": 256,
+          "top": 183.625,
+          "bottom": 264
+        },
+        "phase": "mars-flyby",
+        "selectedPartId": null,
+        "focusedPartId": null,
+        "selectedPart": null,
+        "epochSeconds": 22464000,
+        "previewingPhase": false,
+        "view": "mars",
+        "attitudeIsActual": true,
+        "exaggeration": 16071.696252819978,
+        "cameraSurfaceClearance": 1.100278531885012,
+        "cameraPosition": [
+          -1.4288795963068832,
+          1.6832904884665358,
+          -3.455013787198696
+        ],
+        "craftPosition": [
+          -1.4435637330401163,
+          1.627641191979684,
+          -3.2188201915484247
+        ],
+        "craftQuaternion": [
+          -0.8999188588553104,
+          -0.06454224508844889,
+          0.3739627294976307,
+          0.21478413121592665
+        ]
+      },
+      "planetCenter": {
+        "x": 231.42583529112864,
+        "y": 551.6160732183138,
+        "z": 0.9996295847180637
+      },
+      "resources": {
+        "geometries": 65,
+        "textures": 11,
+        "programs": 24
+      }
+    },
+    {
+      "variant": "candidate9c",
+      "scale": "normal",
+      "phase": "decision",
+      "runtimeHash": "882f8fd1e10fba68ca74e2cdd9836baefb67bffdced023e802c0b386c18a3631",
+      "inspection": {
+        "enabled": true,
+        "frameKey": "mars-flyby",
+        "displayScale": 0.015767603991121686,
+        "fitDistance": 0.2401624506758695,
+        "distance": 0.24016245067586905,
+        "minDistance": 0.0353495533868091,
+        "maxDistance": 0.6811327874040013,
+        "conservativeSurfaceClearance": 0.8800862959138516,
+        "displayEnvelopeRadius": 0.035129506929520916,
+        "viewport": {
+          "left": 256,
+          "right": 256,
+          "top": 175.640625,
+          "bottom": 242
+        },
+        "phase": "mars-flyby",
+        "selectedPartId": null,
+        "focusedPartId": null,
+        "selectedPart": null,
+        "epochSeconds": 22455800,
+        "previewingPhase": false,
+        "view": "mars",
+        "attitudeIsActual": true,
+        "exaggeration": 17814.764575968984,
+        "cameraSurfaceClearance": 24.596490386418825,
+        "cameraPosition": [
+          27.357884034002907,
+          -1.7305400009241365,
+          -3.1808323022374254
+        ],
+        "craftPosition": [
+          27.118624766947615,
+          -1.7245627741457945,
+          -3.140940897611844
+        ],
+        "craftQuaternion": [
+          -0.13080347802265918,
+          -0.7503609990158805,
+          -0.15427412143582714,
+          -0.6293236979077373
+        ]
+      },
+      "planetCenter": {
+        "x": 668.2770379203397,
+        "y": 286.0613549593776,
+        "z": 0.9999457926018027
+      },
+      "resources": {
+        "geometries": 65,
+        "textures": 11,
+        "programs": 24
+      }
+    },
+    {
+      "variant": "candidate9c",
+      "scale": "normal",
+      "phase": "periapsis",
+      "runtimeHash": "f7974b5c3a40e3990933cd128f092fe32821d5e98b460963b5f228db9ff772c9",
+      "inspection": {
+        "enabled": true,
+        "frameKey": "mars-flyby",
+        "displayScale": 0.015767603991121662,
+        "fitDistance": 0.24016245067586914,
+        "distance": 0.24016245067586917,
+        "minDistance": 0.03534955338680905,
+        "maxDistance": 0.6811327874040003,
+        "conservativeSurfaceClearance": 0.8800862959138502,
+        "displayEnvelopeRadius": 0.03512950692952087,
+        "viewport": {
+          "left": 256,
+          "right": 256,
+          "top": 175.640625,
+          "bottom": 242
+        },
+        "phase": "mars-flyby",
+        "selectedPartId": null,
+        "focusedPartId": null,
+        "selectedPart": null,
+        "epochSeconds": 22464000,
+        "previewingPhase": false,
+        "view": "mars",
+        "attitudeIsActual": true,
+        "exaggeration": 17814.76457596896,
+        "cameraSurfaceClearance": 1.1284615252803105,
+        "cameraPosition": [
+          -1.522381461031862,
+          1.7291483582047975,
+          -3.4258714523671165
+        ],
+        "craftPosition": [
+          -1.4435637330401163,
+          1.627641191979684,
+          -3.2188201915484247
+        ],
+        "craftQuaternion": [
+          -0.8999188588553104,
+          -0.06454224508844889,
+          0.3739627294976307,
+          0.21478413121592665
+        ]
+      },
+      "planetCenter": {
+        "x": 601.0354277131454,
+        "y": 343.2631298164757,
+        "z": 0.9996369477890068
+      },
+      "resources": {
+        "geometries": 65,
+        "textures": 11,
+        "programs": 24
+      }
+    },
+    {
+      "variant": "candidate9c",
+      "scale": "large",
+      "phase": "decision",
+      "runtimeHash": "882f8fd1e10fba68ca74e2cdd9836baefb67bffdced023e802c0b386c18a3631",
+      "inspection": {
+        "enabled": true,
+        "frameKey": "mars-flyby",
+        "displayScale": 0.014224838105460985,
+        "fitDistance": 0.24016245067586953,
+        "distance": 0.24016245067587041,
+        "minDistance": 0.0318908106971006,
+        "maxDistance": 0.6816547386615287,
+        "conservativeSurfaceClearance": 0.8800862959138516,
+        "displayEnvelopeRadius": 0.0316922944715303,
+        "viewport": {
+          "left": 256,
+          "right": 256,
+          "top": 183.625,
+          "bottom": 264
+        },
+        "phase": "mars-flyby",
+        "selectedPartId": null,
+        "focusedPartId": null,
+        "selectedPart": null,
+        "epochSeconds": 22455800,
+        "previewingPhase": false,
+        "view": "mars",
+        "attitudeIsActual": true,
+        "exaggeration": 16071.696252820004,
+        "cameraSurfaceClearance": 24.596319496207368,
+        "cameraPosition": [
+          27.357792416940615,
+          -1.731322651142895,
+          -3.1797115727658376
+        ],
+        "craftPosition": [
+          27.118624766947615,
+          -1.7245627741457945,
+          -3.140940897611844
+        ],
+        "craftQuaternion": [
+          -0.13080347802265918,
+          -0.7503609990158805,
+          -0.15427412143582714,
+          -0.6293236979077373
+        ]
+      },
+      "planetCenter": {
+        "x": 665.8116491005682,
+        "y": 282.61443040040575,
+        "z": 0.9999511081985607
+      },
+      "resources": {
+        "geometries": 65,
+        "textures": 11,
+        "programs": 24
+      }
+    },
+    {
+      "variant": "candidate9c",
+      "scale": "large",
+      "phase": "periapsis",
+      "runtimeHash": "f7974b5c3a40e3990933cd128f092fe32821d5e98b460963b5f228db9ff772c9",
+      "inspection": {
+        "enabled": true,
+        "frameKey": "mars-flyby",
+        "displayScale": 0.014224838105460963,
+        "fitDistance": 0.24016245067586914,
+        "distance": 0.24016245067586905,
+        "minDistance": 0.03189081069710055,
+        "maxDistance": 0.6816547386615277,
+        "conservativeSurfaceClearance": 0.8800862959138502,
+        "displayEnvelopeRadius": 0.03169229447153025,
+        "viewport": {
+          "left": 256,
+          "right": 256,
+          "top": 183.625,
+          "bottom": 264
+        },
+        "phase": "mars-flyby",
+        "selectedPartId": null,
+        "focusedPartId": null,
+        "selectedPart": null,
+        "epochSeconds": 22464000,
+        "previewingPhase": false,
+        "view": "mars",
+        "attitudeIsActual": true,
+        "exaggeration": 16071.696252819978,
+        "cameraSurfaceClearance": 1.1281709487087737,
+        "cameraPosition": [
+          -1.523407864872935,
+          1.729070785949589,
+          -3.4251040971307796
+        ],
+        "craftPosition": [
+          -1.4435637330401163,
+          1.627641191979684,
+          -3.2188201915484247
+        ],
+        "craftQuaternion": [
+          -0.8999188588553104,
+          -0.06454224508844889,
+          0.3739627294976307,
+          0.21478413121592665
+        ]
+      },
+      "planetCenter": {
+        "x": 604.8160843562748,
+        "y": 334.5781519196327,
+        "z": 0.9996725123436057
+      },
+      "resources": {
+        "geometries": 65,
+        "textures": 11,
+        "programs": 24
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "variant": "baseline9b",
+      "scale": "normal",
+      "warning": "THREE.WebGLProgram: Program Info Log: (221,91-147): warning X4122: sum of 0.996094 and -2.98545e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(207,10-73): warning X4008: floating point division by zero\n(207,10-73): warning X4008: floating point division by zero\n(207,10-73): warning X4008: floating point division by zero"
+    },
+    {
+      "variant": "baseline9b",
+      "scale": "normal",
+      "warning": "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20"
+    },
+    {
+      "variant": "baseline9b",
+      "scale": "normal",
+      "warning": "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20"
+    },
+    {
+      "variant": "baseline9b",
+      "scale": "large",
+      "warning": "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20"
+    },
+    {
+      "variant": "baseline9b",
+      "scale": "large",
+      "warning": "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20"
+    },
+    {
+      "variant": "candidate9c",
+      "scale": "normal",
+      "warning": "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20"
+    },
+    {
+      "variant": "candidate9c",
+      "scale": "normal",
+      "warning": "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20"
+    },
+    {
+      "variant": "candidate9c",
+      "scale": "large",
+      "warning": "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20"
+    },
+    {
+      "variant": "candidate9c",
+      "scale": "large",
+      "warning": "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20"
+    }
+  ]
+}

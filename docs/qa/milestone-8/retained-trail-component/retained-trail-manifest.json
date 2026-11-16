@@ -1,0 +1,211 @@
+{
+  "createdAt": "2026-11-15T05:43:24.648893+00:00",
+  "scope": "Isolated candidate handoff; no main writes. GPU released.",
+  "files": [
+    {
+      "path": "src/render/deployment-scene.ts",
+      "sha256": "96fb848cf5961f7f54bedd78617bab4a5b06278cea478287e2ab3ecebc35f07a",
+      "bytes": 36944
+    },
+    {
+      "path": "src/render/committed-orbit-trail.ts",
+      "sha256": "8f0faa19d2b95832d3f74f4889ab850f43417ccdaaa084c22a8e050f8bf91ce3",
+      "bytes": 3867
+    },
+    {
+      "path": "tests/committed-orbit-trail.test.ts",
+      "sha256": "f7294e046bcb0059c2eb02f29480bb63968851613a9cd79993faa0393caf72a2",
+      "bytes": 8810
+    },
+    {
+      "path": "docs/actual-camera-fixture.json",
+      "sha256": "4a744ee2c294435dad3759cd20862d5163b294459e707c1cc5fe5dbd875ae054",
+      "bytes": 143734
+    },
+    {
+      "path": "docs/actual-camera-input.json",
+      "sha256": "c77564f6bba8a410aae27063b832a5f931f95cc2cf46897405e5e415babe9fc8",
+      "bytes": 126787
+    },
+    {
+      "path": "docs/deployment-scene-baseline.ts.txt",
+      "sha256": "a978cdaf3da76d4156bf94a552b1e0c11d33224a4aa444898842da591e3509a2",
+      "bytes": 37192
+    },
+    {
+      "path": "docs/qa/retained-trail-v1/actual-actions.json",
+      "sha256": "f4816b02e78120d213568f07bcb145608b38c2525ec66d880cc7d5fe21ef239a",
+      "bytes": 1845
+    },
+    {
+      "path": "docs/qa/retained-trail-v1/baseline-t0.png",
+      "sha256": "6a207ed1c6a0c1b3d72464c2de07195be7481cd21fbfb943cae8bf52e7716c8b",
+      "bytes": 235077
+    },
+    {
+      "path": "docs/qa/retained-trail-v1/baseline-t1385.png",
+      "sha256": "60fca0296009a3e2daf5ec39b6019498f75e4f51fc16f927f71cd61ea0534ec8",
+      "bytes": 235552
+    },
+    {
+      "path": "docs/qa/retained-trail-v1/baseline-t240.png",
+      "sha256": "f67928c65ed7108c23924736c74dadbb5b9a46fe0f23dfc69f8202ef880bf35f",
+      "bytes": 235438
+    },
+    {
+      "path": "docs/qa/retained-trail-v1/baseline-t600.png",
+      "sha256": "f757812ac7e7ab111c7ebfd65ad0cec972046ffdd5e7bb0474b6285438093207",
+      "bytes": 235658
+    },
+    {
+      "path": "docs/qa/retained-trail-v1/candidate-t0.png",
+      "sha256": "c406b31a323400391b40beee498da5fe7117d8269e1ca1e433437fbae3aac1b2",
+      "bytes": 234979
+    },
+    {
+      "path": "docs/qa/retained-trail-v1/candidate-t1385.png",
+      "sha256": "27c634f38d4a39d48a37df44934763df02330ad720970de5062c5df3f0a57b35",
+      "bytes": 235461
+    },
+    {
+      "path": "docs/qa/retained-trail-v1/candidate-t240.png",
+      "sha256": "c64af23395531acca98629f10aa69551c0a93840f1e9b82f834c6c0a998f79b5",
+      "bytes": 235333
+    },
+    {
+      "path": "docs/qa/retained-trail-v1/candidate-t600.png",
+      "sha256": "e14c2adf07a72d5110300d39e92cf0625c18291d87b1dfadcbbbd4747f95e5ab",
+      "bytes": 235562
+    },
+    {
+      "path": "docs/qa/retained-trail-v1/failure.json",
+      "sha256": "6b132ef488df953bb72850ad76cf2d794cdc61045f547b5410e5ece2b8a8835d",
+      "bytes": 1588144
+    },
+    {
+      "path": "docs/qa/retained-trail-v1/failure.png",
+      "sha256": "02c3863666b30d9e5e731a27e757442c411fed24f64692504adfdb14836db3ee",
+      "bytes": 356169
+    },
+    {
+      "path": "docs/qa/retained-trail-v2-actual-closure/actual-actions.json",
+      "sha256": "f4816b02e78120d213568f07bcb145608b38c2525ec66d880cc7d5fe21ef239a",
+      "bytes": 1845
+    },
+    {
+      "path": "docs/qa/retained-trail-v2-actual-closure/actual-live-restored.png",
+      "sha256": "f66c1ca86ef4a50d96057def3298199a5261e61e62015a78d112f7016d519dcd",
+      "bytes": 195119
+    },
+    {
+      "path": "docs/qa/retained-trail-v2-actual-closure/report.json",
+      "sha256": "e9aa5e2dff30448317178955920d5d55b010e6263960da9876ef541a977a73d8",
+      "bytes": 2506
+    },
+    {
+      "path": "docs/rejected-trail-unit-v1.json",
+      "sha256": "90d38b6ce93af001ae7062f737b169356295a61fcddbc2112be4cdc3e8488e91",
+      "bytes": 7564
+    },
+    {
+      "path": "docs/retained-trail-handoff.md",
+      "sha256": "7b9495070a41848f49d525fe6e795136d7cf06f08a6e10c82113e2583b6c568c",
+      "bytes": 5811
+    },
+    {
+      "path": "docs/retained-trail-production.diff",
+      "sha256": "e32f1224c66237f1941ef816ffde0a5882b6b65770e7b4a516db26e18ab8d766",
+      "bytes": 13735
+    },
+    {
+      "path": "docs/trail-typecheck.json",
+      "sha256": "1e7d51fa3c7c75933b5447787f8902b7fa3e3dbe16d2fcf0612faeb82d682cc7",
+      "bytes": 292
+    },
+    {
+      "path": "docs/trail-unit-results.json",
+      "sha256": "3e4b77ab6952525af30b9db6a182b07bb188979679e165f597f170e9dca939ef",
+      "bytes": 3793
+    },
+    {
+      "path": "docs/trail-visual-comparison.json",
+      "sha256": "f1457756010f505328ced070162a21fa651d81d7f1ce7f076f7d0d286c0590ec",
+      "bytes": 960
+    },
+    {
+      "path": "tools/check-trail.mjs",
+      "sha256": "65af45203a8f6dc70f73185426aaa11e6049437281d274a97a4faa118fe09bb3",
+      "bytes": 8572
+    },
+    {
+      "path": "tools/native-gl-audit.ts",
+      "sha256": "831ed787cd2864170b34b942158b0c2d538f3ca0ca94d64ca4dbbae4bd0e8909",
+      "bytes": 2271
+    },
+    {
+      "path": "tools/package-trail-handoff.py",
+      "sha256": "238a214b30ecb130eb3ea5a962490411ee8075211a28e8b1c499ebde2295aaca",
+      "bytes": 2661
+    },
+    {
+      "path": "tools/trail.html",
+      "sha256": "c36c443f6280155ec023400295960e299dfab71594bf0e81b8d13bf930a8b5f2",
+      "bytes": 626
+    },
+    {
+      "path": "tools/trail.ts",
+      "sha256": "aba408c8c4a2592409d6a11c19d506e819541b6c97ab070d6d863b38d16b75a8",
+      "bytes": 2729
+    }
+  ],
+  "visualComparisons": [
+    {
+      "time": "0",
+      "region": [
+        0,
+        70,
+        1280,
+        720
+      ],
+      "reason": "Exclude explicitly different harness header; no images altered.",
+      "equalPixels": true,
+      "differenceBounds": null
+    },
+    {
+      "time": "240",
+      "region": [
+        0,
+        70,
+        1280,
+        720
+      ],
+      "reason": "Exclude explicitly different harness header; no images altered.",
+      "equalPixels": true,
+      "differenceBounds": null
+    },
+    {
+      "time": "600",
+      "region": [
+        0,
+        70,
+        1280,
+        720
+      ],
+      "reason": "Exclude explicitly different harness header; no images altered.",
+      "equalPixels": true,
+      "differenceBounds": null
+    },
+    {
+      "time": "1385",
+      "region": [
+        0,
+        70,
+        1280,
+        720
+      ],
+      "reason": "Exclude explicitly different harness header; no images altered.",
+      "equalPixels": true,
+      "differenceBounds": null
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "schema": "retained-performance-audit-1",
+  "reviewedAt": "2026-11-15T05:55:00.372Z",
+  "verdict": "PASS_SCOPED_SUCCESSOR_CONTRACT",
+  "auditMethod": "Read-only raw report, interval, input, ownership, counter and hash audit; no simulation or browser rerun.",
+  "candidate": "m8-retained-active-r1",
+  "browser": {
+    "name": "chrome",
+    "version": "157.0.8103.52",
+    "node": "v24.14.0"
+  },
+  "hardware": {
+    "cpu": "Intel(R) Core(TM) Ultra 5 226V",
+    "logicalCpus": 8,
+    "ramGiB": 15.541706085205078,
+    "os": "win32",
+    "release": "10.0.26200"
+  },
+  "gpu": [
+    {
+      "vendorId": 32902,
+      "deviceId": 25760,
+      "subSysId": 3252491341,
+      "revision": 4,
+      "vendorString": "",
+      "deviceString": "Intel(R) Arc(TM) 130V GPU (8GB)",
+      "driverVendor": "Intel",
+      "driverVersion": "32.0.101.8626"
+    },
+    {
+      "vendorId": 5140,
+      "deviceId": 140,
+      "subSysId": 0,
+      "revision": 0,
+      "vendorString": "",
+      "deviceString": "Microsoft Basic Render Driver",
+      "driverVendor": "",
+      "driverVersion": "10.0.26100.9818"
+    }
+  ],
+  "scope": {
+    "scene": "Compact First Light active craft commissioning",
+    "partCount": 8,
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "quality": "medium",
+    "motion": "full",
+    "nativeDpr": 1,
+    "pausedWarmupSeconds": 10,
+    "measurementWallSeconds": 120.01320000001787,
+    "physicalStartSeconds": 0,
+    "physicalEndSeconds": 119.75,
+    "physicalAdvanceSeconds": 119.75,
+    "terminalStatus": "running",
+    "completeMissionClaim": false,
+    "original20PartWholeGameClaim": false,
+    "hostedClaim": false
+  },
+  "metrics": {
+    "wallSeconds": 120.01320000001787,
+    "frames": 7200,
+    "averageFps": 60.00080001066681,
+    "meanFrameMs": 16.666444444444444,
+    "p50Ms": 16.69999999999709,
+    "p95Ms": 16.900000000001455,
+    "p99Ms": 17,
+    "maxMs": 18.70000000001164,
+    "over33_3ms": 0,
+    "over50ms": 0,
+    "longTasks": 0
+  },
+  "terminal": {
+    "motorEnergyJ": 564,
+    "batteryWh": 29.312732061301723,
+    "mechanisms": {
+      "wing": {
+        "phase": "deployed-latched",
+        "mechanicalLatch": true,
+        "motorEnergyJ": 564
+      },
+      "antenna": {
+        "phase": "stowed-latched",
+        "mechanicalLatch": true,
+        "motorEnergyJ": 0
+      }
+    },
+    "gpuResources": {
+      "geometries": 82,
+      "textures": 7,
+      "programs": 12
+    },
+    "activeHistoryPoints": 393,
+    "capacity": 1024,
+    "positionBytes": 12288,
+    "longTasks": 0,
+    "actualInputs": {
+      "rightDrags": 12,
+      "wheels": 12,
+      "totalTrustedEvents": 144
+    },
+    "applicationErrors": 0,
+    "resourceErrors": 0,
+    "nativeOwnershipErrors": 0
+  },
+  "predecessor": {
+    "path": "tests/browser/artifacts/performance-deployment/m8-v8b-active-r1/chrome/report.json",
+    "passed": false,
+    "failedCriteria": [
+      "resourceCountsStable"
+    ],
+    "meanFps": 60.00078323477615,
+    "p99Ms": 17,
+    "sourceIsDifferent": true,
+    "note": "Original exact-count gate and failed verdict retained. A causally justified, explicitly approved ownership/lifetime successor was run after actual retained-resource optimization; no retroactive pass."
+  },
+  "contract": {
+    "unchangedFromOriginal": [
+      "meanFpsAtLeast",
+      "p99MsAtMost",
+      "minimumPhysicalAdvanceSeconds",
+      "maximumPhysicalLeadSeconds",
+      "maximumMeasurementSeconds",
+      "quality",
+      "motion",
+      "uiScale",
+      "nativeDpr",
+      "rightDrags",
+      "wheels",
+      "zeroApplicationErrors",
+      "zeroResourceErrors",
+      "zeroNativeOwnershipErrors"
+    ],
+    "resourceContract": {
+      "id": "retained-history-ownership-v1",
+      "explicitInitialPhase": "CPU-owned hidden history, zero history GPU uploads; zero or one committed point",
+      "maximumActiveHistoryPoints": 720,
+      "cpuPositionCapacity": 1024,
+      "float32DisplayTolerance": 0.000001,
+      "stableNonHistoryGeometryMaterialIdentities": true,
+      "stableHistoryObjectGeometryMaterialAttributeArrayIdentities": true,
+      "unchangedNativeCountersAfterFirstUpload": true,
+      "onlyAllowedFirstUploadDelta": {
+        "Buffer": {
+          "created": 1,
+          "deleted": 0
+        },
+        "VertexArray": {
+          "created": 1,
+          "deleted": 0
+        },
+        "Program": {
+          "created": 1,
+          "deleted": 0
+        },
+        "Shader": {
+          "created": 2,
+          "deleted": 2
+        },
+        "Texture": {
+          "created": 0,
+          "deleted": 0
+        },
+        "Framebuffer": {
+          "created": 0,
+          "deleted": 0
+        },
+        "Renderbuffer": {
+          "created": 0,
+          "deleted": 0
+        }
+      }
+    },
+    "firstUploadPhysicalSeconds": 5,
+    "firstUploadNativeDelta": {
+      "Buffer": {
+        "created": 1,
+        "deleted": 0
+      },
+      "VertexArray": {
+        "created": 1,
+        "deleted": 0
+      },
+      "Program": {
+        "created": 1,
+        "deleted": 0
+      },
+      "Shader": {
+        "created": 2,
+        "deleted": 2
+      },
+      "Texture": {
+        "created": 0,
+        "deleted": 0
+      },
+      "Framebuffer": {
+        "created": 0,
+        "deleted": 0
+      },
+      "Renderbuffer": {
+        "created": 0,
+        "deleted": 0
+      }
+    },
+    "afterFirstUploadNewNativeObjects": 0,
+    "afterFirstUploadNativeDeletions": 0,
+    "originalAggregateNativeObjectTotalMustNotBeEntirelyAttributedToHistory": true
+  },
+  "rechecks": {
+    "originalFailedVerdictPreserved": true,
+    "originalHarnessByteExact": true,
+    "successorHarnessMatchesDeclaredFrozenFile": true,
+    "allUnchangedOriginalGateValues": true,
+    "allOriginalNonResourceCriteriaRetained": true,
+    "all41DeclaredCriteriaTrue": true,
+    "completedAndPassed": true,
+    "rawTimingHashMatchesReport": true,
+    "rawMetricsReproduceReport": true,
+    "rawInputAndLongTaskRecordsMatch": true,
+    "mean60Target": true,
+    "p99_33_3Target": true,
+    "duration120To121": true,
+    "actualPhysicalAdvanceAtLeast115": true,
+    "actualAdvanceMatchesReported": true,
+    "noFasterThan1x": true,
+    "allSixActualSamplesRunningAt1x": true,
+    "genuineMechanismMotionAndEnergy": true,
+    "allRenderPosesRecomputedAgainstWorker": true,
+    "allFramesUseExactConfiguration": true,
+    "twelveTrustedRightDragsAndWheels": true,
+    "allGesturePathsHitCanvas": true,
+    "noAppOrResourceErrors": true,
+    "noNativeErrors": true,
+    "genuineInitiallyHiddenHistory": true,
+    "firstUploadExactDeclaredBirth": true,
+    "noNativeCounterOrLiveIdentityChangeAfterUpload": true,
+    "allCpuHistoryIdentitiesStable": true,
+    "allNonHistoryIdsStable": true,
+    "exactAttributedGpuCoreStable": true,
+    "boundedActiveHistory": true,
+    "activeBoundsIndependentlyRecomputed": true,
+    "frozenBeforeAfterExact": true,
+    "manifestAggregateMatchesReport": true,
+    "currentEveryFrozenFileMatches": true,
+    "noUnlistedSourcePublicDistFiles": true,
+    "visibleExitAndPauseWarmup": true,
+    "artifactsStillByteIdenticalAtAuditWrite": true
+  },
+  "rawDiscrepancies": {
+    "manifest": [],
+    "render": [],
+    "bounds": []
+  },
+  "warnings": {
+    "count": 1,
+    "retained": [
+      "THREE.WebGLProgram: Program Info Log: (221,91-147): warning X4122: sum of 0.996094 and -2.98545e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(207,10-73): warning X4008: floating point division by zero\n(207,10-73): warning X4008: floating point division by zero\n(207,10-73): warning X4008: floating point division by zero"
+    ],
+    "interpretation": "Recorded driver shader compiler warnings are not zero warnings; they did not match the declared native ownership/error gates. No claim that the browser emitted no warnings."
+  },
+  "immutableEvidence": {
+    "frozenFileCount": 282,
+    "groups": {
+      "src/": 163,
+      "public/": 44,
+      "dist/": 70,
+      "tests/": 3,
+      "package": 2
+    },
+    "beforeRecordHash": "b69801c757f230a6850f020297c7b5173c1f683f729050c81b0d793815a481e5",
+    "afterRecordHash": "b69801c757f230a6850f020297c7b5173c1f683f729050c81b0d793815a481e5",
+    "currentMatch": true,
+    "artifactManifest": [
+      {
+        "path": "tests/browser/artifacts/performance-deployment-retained/m8-retained-active-r1/chrome/frozen-after.json",
+        "bytes": 43461,
+        "sha256": "901349d2e13ba2e038002c44e06c6297030dcf9d7bde91e9dec62c5610038ce4"
+      },
+      {
+        "path": "tests/browser/artifacts/performance-deployment-retained/m8-retained-active-r1/chrome/frozen-before.json",
+        "bytes": 43461,
+        "sha256": "901349d2e13ba2e038002c44e06c6297030dcf9d7bde91e9dec62c5610038ce4"
+      },
+      {
+        "path": "tests/browser/artifacts/performance-deployment-retained/m8-retained-active-r1/chrome/report.json",
+        "bytes": 701572,
+        "sha256": "132c6c9e6d30924172ce3e30f0ec053acd99c8d02ec02292d8cd0c41d02de9e7"
+      },
+      {
+        "path": "tests/browser/artifacts/performance-deployment-retained/m8-retained-active-r1/chrome/timing.json",
+        "bytes": 179610,
+        "sha256": "231733207435bd7bda3024c7ddf7864a717ff51ded3cc8c8307fb0e8448e14d3"
+      },
+      {
+        "path": "tests/browser/artifacts/performance-deployment/m8-v8b-active-r1/chrome/report.json",
+        "bytes": 293554,
+        "sha256": "62a0e76c9a83ffef98f0214848c6ba77a96e661f668227e80d904189bc70e302"
+      },
+      {
+        "path": "tests/browser/performance-deployment.mjs",
+        "bytes": 25335,
+        "sha256": "848c7cf3136d99a3a02f65bd280577e6caa249ad9e0627b1d0eb84f5a18fc46a"
+      },
+      {
+        "path": "tests/browser/performance-deployment-retained.mjs",
+        "bytes": 36300,
+        "sha256": "a2f822d69a3be379130f661bbfd9ecc692df7aa00c86e510220549998ea68614"
+      },
+      {
+        "path": "docs/qa/milestone-8/resource-attribution/report.json",
+        "bytes": 3243597,
+        "sha256": "3f9b79152953b3aa8a131c03006313dbf3be02770411538a3617b061745372e9"
+      },
+      {
+        "path": "docs/qa/milestone-8/resource-attribution/analysis.json",
+        "bytes": 7363,
+        "sha256": "2c71030b5ec0cac4200cbb6b26b7c60d695f3d456c5f7395aef2e519d514aa30"
+      }
+    ]
+  },
+  "limits": [
+    "One headless Chrome 157 run on Intel Arc 130V / Core Ultra 5 226V, local frozen production server; not published HTTPS or all devices.",
+    "120.0132 wall seconds advanced 119.75 actual seconds. Mission remains running; wing deployed/latched, antenna still stowed. This measurement does not prove complete commissioning or complete scientific mission success.",
+    "Render FK is compared against committed Worker geometry. Independent physical truth remains the separately scoped domain acceptance.",
+    "The active-path source correspondence uses the read-only runtime assertion and frozen harness; this audit independently recomputes raw bounds, counters, identity sets and frame statistics.",
+    "No invisible history warmup, native allocation bypass, blanket count tolerance, or lowered frame-time threshold. Original 20-part benchmark remains a separate gate."
+  ],
+  "payloadSha256": "8210cc76c656ed38e9e30cdd28627e141aa78c3a314c0ce7f748999259f14dc5"
+}

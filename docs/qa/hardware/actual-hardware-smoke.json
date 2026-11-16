@@ -1,0 +1,18 @@
+{
+  "browser": "157.0.8103.52",
+  "snapshot": "development source, concurrent integration; not frozen release evidence",
+  "errors": [],
+  "card": {
+    "x": 26,
+    "y": 557,
+    "width": 198,
+    "height": 49
+  },
+  "target": {
+    "x": 637.9153638871376,
+    "y": 316.1994440574582,
+    "visible": true
+  },
+  "status": "failed",
+  "failure": "page.waitForFunction: Timeout 30000ms exceeded.\n    at C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry\\tools\\hardware-browser-smoke.mjs:21:14"
+}

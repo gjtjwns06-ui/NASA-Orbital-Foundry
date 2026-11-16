@@ -1,0 +1,10 @@
+{
+  "scope": "Isolated9C first-entry composition only; not integrated production",
+  "baselineMain": "index-TfmOhXw5.js",
+  "files": {
+    "src/render/planet-inspection-direction.ts": "5883dd99d75673708dba4a55ca16e23d32072318cb035404b58f77ecb56f4c23",
+    "src/render/transfer-scene.ts": "c4481d115894cfe7b978b2faddd0dde9c23ef7c8b4fd3b5d3534ae7276d6e490",
+    "tests/planet-inspection-direction.test.ts": "ab695e98b5dd9a5e399351bf2252ae80862f5296db6f780bf8bac97eaeebe721",
+    "tools/compare-composition.mjs": "c252b5eaeb10583f14a9677dbaa434762eecb48786174b7a9c74657bdcb287fe"
+  }
+}

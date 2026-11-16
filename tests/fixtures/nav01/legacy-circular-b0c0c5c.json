@@ -1,0 +1,594 @@
+{
+  "baseCommit": "b0c0c5cc07c8e0f7f77e06fb1eef86c99a274586",
+  "method": "Captured before NAV01 source edits; little-endian Float64 hashes preserve signed zero and exact bits, full real simulation JSON and actual result hashes.",
+  "cases": [
+    {
+      "design": {
+        "version": 1,
+        "missionId": "earth",
+        "name": "AURORA-01",
+        "parts": [
+          {
+            "id": "solar-1",
+            "kind": "solar",
+            "face": "px",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "science-1",
+            "kind": "camera",
+            "face": "nz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "antenna-1",
+            "kind": "antenna",
+            "face": "pz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "battery-1",
+            "kind": "battery",
+            "face": "py",
+            "u": -0.28,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "storage-1",
+            "kind": "storage",
+            "face": "py",
+            "u": 0.28,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "engine-1",
+            "kind": "engine",
+            "face": "ny",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          }
+        ],
+        "plan": {
+          "altitudeKm": 600,
+          "inclinationDeg": 51.6,
+          "burnTime": 1200,
+          "progradeMps": 0,
+          "normalMps": 0,
+          "radialMps": 0,
+          "periapsisAltitudeKm": 1000,
+          "bPlaneAngleDeg": 0,
+          "operations": [
+            {
+              "id": "obs-1",
+              "kind": "observe",
+              "start": 300,
+              "end": 2300
+            },
+            {
+              "id": "down-1",
+              "kind": "downlink",
+              "start": 2300,
+              "end": 5300
+            },
+            {
+              "id": "obs-2",
+              "kind": "observe",
+              "start": 6000,
+              "end": 7800
+            },
+            {
+              "id": "down-2",
+              "kind": "downlink",
+              "start": 7800,
+              "end": 10800
+            }
+          ],
+          "maneuvers": []
+        },
+        "seed": 20261115
+      },
+      "times": [
+        0,
+        60,
+        899,
+        900,
+        901,
+        1199,
+        1200,
+        1201,
+        3699,
+        3700,
+        3701,
+        10800,
+        86400
+      ],
+      "stateVectorFloat64Sha256": "c33a598fabe9d8d1f973cb0d62ab22e588930935931ae6c43d16f7a863f3d360",
+      "simulationJsonSha256": "0ef0a84bdbb2313aea7df21ec60e00bf81383edfcc8d42155d6b64c9c5df3b72",
+      "resultJsonSha256": "40eca1c28a7b367ed607d419005f7a3aa83b1d25af52652d2c1e2c5dc0614582"
+    },
+    {
+      "design": {
+        "version": 1,
+        "missionId": "earth",
+        "name": "AURORA-01",
+        "parts": [
+          {
+            "id": "solar-1",
+            "kind": "solar",
+            "face": "px",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "science-1",
+            "kind": "camera",
+            "face": "nz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "antenna-1",
+            "kind": "antenna",
+            "face": "pz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "battery-1",
+            "kind": "battery",
+            "face": "py",
+            "u": -0.28,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "storage-1",
+            "kind": "storage",
+            "face": "py",
+            "u": 0.28,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "engine-1",
+            "kind": "engine",
+            "face": "ny",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          }
+        ],
+        "plan": {
+          "altitudeKm": 400,
+          "inclinationDeg": 28.5,
+          "burnTime": 1200,
+          "progradeMps": 0,
+          "normalMps": 0,
+          "radialMps": 0,
+          "periapsisAltitudeKm": 1000,
+          "bPlaneAngleDeg": 0,
+          "operations": [
+            {
+              "id": "obs-1",
+              "kind": "observe",
+              "start": 300,
+              "end": 2300
+            },
+            {
+              "id": "down-1",
+              "kind": "downlink",
+              "start": 2300,
+              "end": 5300
+            },
+            {
+              "id": "obs-2",
+              "kind": "observe",
+              "start": 6000,
+              "end": 7800
+            },
+            {
+              "id": "down-2",
+              "kind": "downlink",
+              "start": 7800,
+              "end": 10800
+            }
+          ],
+          "maneuvers": []
+        },
+        "seed": 20261115
+      },
+      "times": [
+        0,
+        60,
+        899,
+        900,
+        901,
+        1199,
+        1200,
+        1201,
+        3699,
+        3700,
+        3701,
+        10800,
+        86400
+      ],
+      "stateVectorFloat64Sha256": "b72f330d7dcc0690eea990512e8a0488700dede67df5c92723659ff94bf917db",
+      "simulationJsonSha256": "dbec3748ddf2fe081a0da58a8263344a1a0a244889fce1ff844796cfacadd283",
+      "resultJsonSha256": "92e705bb7818635ee0e865a2f71ee815b3f6f4d1a8dcd88e127c91fa446ce245"
+    },
+    {
+      "design": {
+        "version": 1,
+        "missionId": "earth",
+        "name": "AURORA-01",
+        "parts": [
+          {
+            "id": "solar-1",
+            "kind": "solar",
+            "face": "px",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "science-1",
+            "kind": "camera",
+            "face": "nz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "antenna-1",
+            "kind": "antenna",
+            "face": "pz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "battery-1",
+            "kind": "battery",
+            "face": "py",
+            "u": -0.28,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "storage-1",
+            "kind": "storage",
+            "face": "py",
+            "u": 0.28,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "engine-1",
+            "kind": "engine",
+            "face": "ny",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          }
+        ],
+        "plan": {
+          "altitudeKm": 900,
+          "inclinationDeg": 97.6,
+          "burnTime": 1200,
+          "progradeMps": 0,
+          "normalMps": 0,
+          "radialMps": 0,
+          "periapsisAltitudeKm": 1000,
+          "bPlaneAngleDeg": 0,
+          "operations": [
+            {
+              "id": "obs-1",
+              "kind": "observe",
+              "start": 300,
+              "end": 2300
+            },
+            {
+              "id": "down-1",
+              "kind": "downlink",
+              "start": 2300,
+              "end": 5300
+            },
+            {
+              "id": "obs-2",
+              "kind": "observe",
+              "start": 6000,
+              "end": 7800
+            },
+            {
+              "id": "down-2",
+              "kind": "downlink",
+              "start": 7800,
+              "end": 10800
+            }
+          ],
+          "maneuvers": []
+        },
+        "seed": 20261115
+      },
+      "times": [
+        0,
+        60,
+        899,
+        900,
+        901,
+        1199,
+        1200,
+        1201,
+        3699,
+        3700,
+        3701,
+        10800,
+        86400
+      ],
+      "stateVectorFloat64Sha256": "fabe4b73c5821395c8bf2e3aae420f284573ef3b5b7d377a23889dcba42289f1",
+      "simulationJsonSha256": "bc104e72c474c38107195ec5d8f554c7d2aba2813349912257c466c6cfda60d7",
+      "resultJsonSha256": "ae2ec9d6091c553ddb6411863ace4b0beb118bc96c00fe62d7113350bdf14fb5"
+    },
+    {
+      "design": {
+        "version": 1,
+        "missionId": "earth",
+        "name": "AURORA-01",
+        "parts": [
+          {
+            "id": "solar-1",
+            "kind": "solar",
+            "face": "px",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "science-1",
+            "kind": "camera",
+            "face": "nz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "antenna-1",
+            "kind": "antenna",
+            "face": "pz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "battery-1",
+            "kind": "battery",
+            "face": "py",
+            "u": -0.28,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "storage-1",
+            "kind": "storage",
+            "face": "py",
+            "u": 0.28,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "engine-1",
+            "kind": "engine",
+            "face": "ny",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          }
+        ],
+        "plan": {
+          "altitudeKm": 600,
+          "inclinationDeg": 51.6,
+          "burnTime": 1200,
+          "progradeMps": 0,
+          "normalMps": 0,
+          "radialMps": 0,
+          "periapsisAltitudeKm": 1000,
+          "bPlaneAngleDeg": 0,
+          "operations": [
+            {
+              "id": "obs-1",
+              "kind": "observe",
+              "start": 300,
+              "end": 2300
+            },
+            {
+              "id": "down-1",
+              "kind": "downlink",
+              "start": 2300,
+              "end": 5300
+            },
+            {
+              "id": "obs-2",
+              "kind": "observe",
+              "start": 6000,
+              "end": 7800
+            },
+            {
+              "id": "down-2",
+              "kind": "downlink",
+              "start": 7800,
+              "end": 10800
+            }
+          ],
+          "maneuvers": [
+            {
+              "id": "a",
+              "time": 1200,
+              "progradeMps": 80,
+              "radialMps": 20,
+              "normalMps": 15
+            }
+          ]
+        },
+        "seed": 20261115
+      },
+      "times": [
+        0,
+        60,
+        899,
+        900,
+        901,
+        1199,
+        1200,
+        1201,
+        3699,
+        3700,
+        3701,
+        10800,
+        86400
+      ],
+      "stateVectorFloat64Sha256": "9bccc830d3fe8b07aa631b2e168ee53332ac1f00e04df97ef434f5d710093978",
+      "simulationJsonSha256": "20c1647d8014f9e94c9b9b60b597b7f69af760f47638503ee8145dbf3fad691d",
+      "resultJsonSha256": "82830ee82ae5fb77734a16cd26bfef3dff3bc38f12cdfcafd8d53ef89a03af97"
+    },
+    {
+      "design": {
+        "version": 1,
+        "missionId": "earth",
+        "name": "AURORA-01",
+        "parts": [
+          {
+            "id": "solar-1",
+            "kind": "solar",
+            "face": "px",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "science-1",
+            "kind": "camera",
+            "face": "nz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "antenna-1",
+            "kind": "antenna",
+            "face": "pz",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "battery-1",
+            "kind": "battery",
+            "face": "py",
+            "u": -0.28,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "storage-1",
+            "kind": "storage",
+            "face": "py",
+            "u": 0.28,
+            "v": 0,
+            "rotation": 0
+          },
+          {
+            "id": "engine-1",
+            "kind": "engine",
+            "face": "ny",
+            "u": 0,
+            "v": 0,
+            "rotation": 0
+          }
+        ],
+        "plan": {
+          "altitudeKm": 600,
+          "inclinationDeg": 51.6,
+          "burnTime": 1200,
+          "progradeMps": 0,
+          "normalMps": 0,
+          "radialMps": 0,
+          "periapsisAltitudeKm": 1000,
+          "bPlaneAngleDeg": 0,
+          "operations": [
+            {
+              "id": "obs-1",
+              "kind": "observe",
+              "start": 300,
+              "end": 2300
+            },
+            {
+              "id": "down-1",
+              "kind": "downlink",
+              "start": 2300,
+              "end": 5300
+            },
+            {
+              "id": "obs-2",
+              "kind": "observe",
+              "start": 6000,
+              "end": 7800
+            },
+            {
+              "id": "down-2",
+              "kind": "downlink",
+              "start": 7800,
+              "end": 10800
+            }
+          ],
+          "maneuvers": [
+            {
+              "id": "a",
+              "time": 900,
+              "progradeMps": 25,
+              "radialMps": -7,
+              "normalMps": 5
+            },
+            {
+              "id": "b",
+              "time": 3700,
+              "progradeMps": -13,
+              "radialMps": 11,
+              "normalMps": 2
+            }
+          ]
+        },
+        "seed": 20261115
+      },
+      "times": [
+        0,
+        60,
+        899,
+        900,
+        901,
+        1199,
+        1200,
+        1201,
+        3699,
+        3700,
+        3701,
+        10800,
+        86400
+      ],
+      "stateVectorFloat64Sha256": "bd897bf930df3ef36379d51a1ac9be4759b6b9e14a7a783e4a0ee5f29f8df196",
+      "simulationJsonSha256": "f6386241dd07ce451d2dfd3b0146f0cc27a5cb6a81a41b2638287cc4c1ef95e8",
+      "resultJsonSha256": "7ee55a925b7e4e965f0ed3cbe916a9dae91fc7c5710ce3eced75748934c0d7b4"
+    }
+  ]
+}

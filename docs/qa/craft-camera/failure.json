@@ -1,0 +1,241 @@
+{
+  "message": "TypeError: Cannot read properties of undefined (reading 'id')",
+  "errors": [],
+  "warnings": [
+    "THREE.WebGLProgram: Program Info Log: (221,91-147): warning X4122: sum of 0.996094 and -2.98545e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(220,41-69): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(221,92-120): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(207,10-73): warning X4008: floating point division by zero\n(207,10-73): warning X4008: floating point division by zero\n(207,10-73): warning X4008: floating point division by zero",
+    "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20",
+    "THREE.sigmaRadians, 0.08, is too large and will clip, as it requested 39 samples when the maximum is set to 20"
+  ],
+  "evidence": [
+    {
+      "name": "earth-current-normal",
+      "state": {
+        "enabled": true,
+        "frameKey": "earth-escape",
+        "displayScale": 0.0032100903733545062,
+        "fitDistance": 0.03714158395368432,
+        "distance": 0.037141583953684235,
+        "minDistance": 0.007196734589051827,
+        "maxDistance": 0.10507744379116078,
+        "conservativeSurfaceClearance": 0.13610703485986583,
+        "displayEnvelopeRadius": 0.007151935834933618,
+        "viewport": {
+          "left": 256,
+          "right": 256,
+          "top": 140.640625,
+          "bottom": 179
+        },
+        "phase": "earth-escape",
+        "selectedPartId": null,
+        "focusedPartId": null,
+        "selectedPart": null,
+        "epochSeconds": 0,
+        "previewingPhase": false,
+        "view": "earth",
+        "attitudeIsActual": true,
+        "exaggeration": 6824.79872787873,
+        "cameraSurfaceClearance": 0.177514815766473,
+        "cameraPosition": [
+          -0.3938244192009069,
+          -1.7239459016891883,
+          2.63998357178706
+        ],
+        "craftPosition": [
+          -0.38455829546907133,
+          -1.7114472813903363,
+          2.605689260992896
+        ],
+        "craftQuaternion": [
+          -0.5505466794242028,
+          0.6553384790921052,
+          -0.3561083759523374,
+          -0.3749888747320636
+        ]
+      }
+    },
+    {
+      "name": "earth-user-orbit",
+      "state": {
+        "enabled": true,
+        "frameKey": "earth-escape",
+        "displayScale": 0.0032100903733545062,
+        "fitDistance": 0.03714158395368432,
+        "distance": 0.034745703375606084,
+        "minDistance": 0.007196734589051827,
+        "maxDistance": 0.10507744379116078,
+        "conservativeSurfaceClearance": 0.13610703485986583,
+        "displayEnvelopeRadius": 0.007151935834933618,
+        "viewport": {
+          "left": 256,
+          "right": 256,
+          "top": 140.640625,
+          "bottom": 179
+        },
+        "phase": "earth-escape",
+        "selectedPartId": null,
+        "focusedPartId": null,
+        "selectedPart": null,
+        "epochSeconds": 0,
+        "previewingPhase": false,
+        "view": "earth",
+        "attitudeIsActual": true,
+        "exaggeration": 6824.79872787873,
+        "cameraSurfaceClearance": 0.169023205934955,
+        "cameraPosition": [
+          -0.40733343420503626,
+          -1.732491565529185,
+          2.622071800790975
+        ],
+        "craftPosition": [
+          -0.38455829546907133,
+          -1.7114472813903363,
+          2.605689260992896
+        ],
+        "craftQuaternion": [
+          -0.5505466794242028,
+          0.6553384790921052,
+          -0.3561083759523374,
+          -0.3749888747320636
+        ]
+      }
+    },
+    {
+      "name": "solar-cruise-current",
+      "state": {
+        "enabled": true,
+        "frameKey": "solar-coast",
+        "displayScale": 0.0014466884918661021,
+        "fitDistance": 0.01673856366209534,
+        "distance": 0.016738563662095092,
+        "minDistance": 0.003243345793444493,
+        "maxDistance": 0.04735515546514858,
+        "conservativeSurfaceClearance": 0.061339232885217324,
+        "displayEnvelopeRadius": 0.003223156379909376,
+        "viewport": {
+          "left": 256,
+          "right": 256,
+          "top": 140.640625,
+          "bottom": 179
+        },
+        "phase": "solar-coast",
+        "selectedPartId": null,
+        "focusedPartId": null,
+        "selectedPart": null,
+        "epochSeconds": 248798.23730885983,
+        "previewingPhase": false,
+        "view": "solar",
+        "attitudeIsActual": true,
+        "exaggeration": 21642151.794936314,
+        "cameraSurfaceClearance": null,
+        "cameraPosition": [
+          5.623803516423494,
+          3.261834501141709,
+          -7.505442022066273
+        ],
+        "craftPosition": [
+          5.620683341783045,
+          3.2600516790596967,
+          -7.489552892274244
+        ],
+        "craftQuaternion": [
+          -0.45709371368691243,
+          0.19463892231943636,
+          -0.8634524855384389,
+          0.08735463378509042
+        ]
+      }
+    },
+    {
+      "name": "mars-current-normal",
+      "state": {
+        "enabled": true,
+        "frameKey": "mars-flyby",
+        "displayScale": 0.020756873802614415,
+        "fitDistance": 0.24016245067586917,
+        "distance": 0.24016245067586925,
+        "minDistance": 0.04653504863782286,
+        "maxDistance": 0.6794448088996423,
+        "conservativeSurfaceClearance": 0.8800862959138502,
+        "displayEnvelopeRadius": 0.04624537390048071,
+        "viewport": {
+          "left": 256,
+          "right": 256,
+          "top": 140.640625,
+          "bottom": 179
+        },
+        "phase": "mars-flyby",
+        "selectedPartId": null,
+        "focusedPartId": null,
+        "selectedPart": null,
+        "epochSeconds": 22464000,
+        "previewingPhase": false,
+        "view": "mars",
+        "attitudeIsActual": true,
+        "exaggeration": 23451.807917987186,
+        "cameraSurfaceClearance": 1.098063242587549,
+        "cameraPosition": [
+          -1.4279048148345213,
+          1.673605581953703,
+          -3.4574925214775196
+        ],
+        "craftPosition": [
+          -1.4435637330401163,
+          1.627641191979684,
+          -3.2188201915484247
+        ],
+        "craftQuaternion": [
+          -0.9561681176976662,
+          -0.020775923203413815,
+          0.18834070468897063,
+          0.2232457629403295
+        ]
+      }
+    },
+    {
+      "name": "mars-current-large",
+      "state": {
+        "enabled": true,
+        "frameKey": "mars-flyby",
+        "displayScale": 0.019138245250432652,
+        "fitDistance": 0.24016245067586917,
+        "distance": 0.24016245067586925,
+        "minDistance": 0.04290622865661452,
+        "maxDistance": 0.6799924261474266,
+        "conservativeSurfaceClearance": 0.8800862959138502,
+        "displayEnvelopeRadius": 0.04263914286041864,
+        "viewport": {
+          "left": 256,
+          "right": 256,
+          "top": 148.625,
+          "bottom": 203
+        },
+        "phase": "mars-flyby",
+        "selectedPartId": null,
+        "focusedPartId": null,
+        "selectedPart": null,
+        "epochSeconds": 22464000,
+        "previewingPhase": false,
+        "view": "mars",
+        "attitudeIsActual": true,
+        "exaggeration": 21623.02742544716,
+        "cameraSurfaceClearance": 1.097819110945565,
+        "cameraPosition": [
+          -1.4281555169540379,
+          1.673150331428263,
+          -3.4573199524871776
+        ],
+        "craftPosition": [
+          -1.4435637330401163,
+          1.627641191979684,
+          -3.2188201915484247
+        ],
+        "craftQuaternion": [
+          -0.9561681176976662,
+          -0.020775923203413815,
+          0.18834070468897063,
+          0.2232457629403295
+        ]
+      }
+    }
+  ]
+}

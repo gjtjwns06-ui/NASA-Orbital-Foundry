@@ -1,0 +1,215 @@
+{
+  "status": "bounded-component-accepted",
+  "productionFiles": [
+    "src/render/deployment-scene.ts",
+    "src/render/deployment-scene-types.ts",
+    "src/render/orbital-inspection-follow.ts"
+  ],
+  "files": [
+    {
+      "path": "src/render/deployment-scene.ts",
+      "bytes": 34970,
+      "sha256": "a30331d542c587b63eeec9ffb47578841d2a99c3771b0ffd1d7c988a0de6ed57"
+    },
+    {
+      "path": "src/render/deployment-scene-types.ts",
+      "bytes": 3879,
+      "sha256": "407ecaa33d4a95a1d3ac9965daa7d23dc5f16ea9815bf4d0ffdda3d193e8351c"
+    },
+    {
+      "path": "src/render/orbital-inspection-follow.ts",
+      "bytes": 3538,
+      "sha256": "0d2ff215102a4efb2c3464a3a5e16b9ad3a74dfad94982b07d04a1d10ec41055"
+    },
+    {
+      "path": "tests/orbital-inspection-follow.test.ts",
+      "bytes": 5630,
+      "sha256": "d4349d9d94a7867c38a6aee172d29c45c0bc9fe09dffe8e7b39f391abc63f2bc"
+    },
+    {
+      "path": "tools/build-camera-fixture.mjs",
+      "bytes": 1601,
+      "sha256": "c54c18ae18760d602c1e9d7f84be8b04e26f23fbe00d4614bc3286f5be8f6aa5"
+    },
+    {
+      "path": "tools/build-camera-fixture.ts",
+      "bytes": 2307,
+      "sha256": "e23a1b17011e3a474411585b1c56deb3d8d0347c9574cb933eed9917228067d3"
+    },
+    {
+      "path": "tools/fixture.html",
+      "bytes": 149,
+      "sha256": "7dcfe060b6131ce1548ba37e5d19738a830a9cad0068377b774b9daa8ebbb816"
+    },
+    {
+      "path": "tools/check-orbital-camera.mjs",
+      "bytes": 8246,
+      "sha256": "04d7e09e83d30909b78bf3715c89032cb7a4e99c1c358060dc37e7725a49a02e"
+    },
+    {
+      "path": "tools/orbital-camera.html",
+      "bytes": 1614,
+      "sha256": "2ec8b13cbae9143b36a1d35913dbfd7c16db4af99dc944e58794a363853f93bd"
+    },
+    {
+      "path": "tools/orbital-camera.ts",
+      "bytes": 2383,
+      "sha256": "2548cad8b5fdebbc037d52e78d0906303636d23ed25f49bc9778f40ccd5ec0b5"
+    },
+    {
+      "path": "tools/native-gl-audit.ts",
+      "bytes": 2271,
+      "sha256": "831ed787cd2864170b34b942158b0c2d538f3ca0ca94d64ca4dbbae4bd0e8909"
+    },
+    {
+      "path": "docs/actual-camera-input.json",
+      "bytes": 126787,
+      "sha256": "c77564f6bba8a410aae27063b832a5f931f95cc2cf46897405e5e415babe9fc8"
+    },
+    {
+      "path": "docs/qa/camera-replay-fixture.json",
+      "bytes": 143734,
+      "sha256": "4a744ee2c294435dad3759cd20862d5163b294459e707c1cc5fe5dbd875ae054"
+    },
+    {
+      "path": "docs/camera-unit-results.json",
+      "bytes": 2667,
+      "sha256": "58b760a45099184416fdc92c07de3c611b3fca12c513e64ccafc83df6435ca86"
+    },
+    {
+      "path": "docs/qa/camera-fixture-browser-result.json",
+      "bytes": 76,
+      "sha256": "7c829be52abd2de9a811f6949ff1862b60843c684226714b5c78ee51d26a5d43"
+    },
+    {
+      "path": "docs/orbital-camera-handoff.md",
+      "bytes": 4994,
+      "sha256": "ce23e8cfea25c5d645abd9586b315bf92d6054f1b1a304aa424b2d6da0ed433d"
+    },
+    {
+      "path": "docs/orbital-camera-proof.md",
+      "bytes": 2287,
+      "sha256": "5fbde0124be89762161cd8dedc2b6139860a8c0d7c180439ce8b3de4db9c4eee"
+    },
+    {
+      "path": "docs/rejected-camera-cpu-v1.json",
+      "bytes": 432,
+      "sha256": "d23246467360b1b220b11ef0fe5a6213baf28f534d22af4f51eeb7b63a81fc6f"
+    },
+    {
+      "path": "docs/rejected-node-camera-fixture-v1.json",
+      "bytes": 2329,
+      "sha256": "35bd473736899e29ab614e00c5c9acac44d04729694943402e627f840d88b22a"
+    },
+    {
+      "path": "docs/rejected-node-fixture-generator.ts.txt",
+      "bytes": 2769,
+      "sha256": "44d8db1f904fe81b8eaa92f22730ed9c815b7848503890f5470fc57a15913bbc"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/1280-after-t0.png",
+      "bytes": 177358,
+      "sha256": "b4845ac4006c37d4f8daea30177b2b82171c0770b448db3d4a2eff4030ad84a0"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/1280-after-t1385.png",
+      "bytes": 366376,
+      "sha256": "d5e57021b098643c88982dd6731713bf8515b984ffaca5d619b727e43342783b"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/1280-after-t240.png",
+      "bytes": 270818,
+      "sha256": "3e22ea28fc7b01b6338e00b60eac7f2761d18e920be606299fa78e8d595049b7"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/1280-after-t600.png",
+      "bytes": 303888,
+      "sha256": "f0e14a8e9f20926f6663923e3a4933d83045e180a89cf51d240e3d3a771a41ba"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/1280-before-t0.png",
+      "bytes": 176472,
+      "sha256": "b6d2e9eb9aa531d4ee6848f3d346d313ab607634f3c4f5acf1384eee157dafd2"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/1280-before-t1385.png",
+      "bytes": 451893,
+      "sha256": "100d22a6b78d75737be5921de7f9aee0fecf72d26be7b9388ae3339d37597f80"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/1280-before-t240.png",
+      "bytes": 364117,
+      "sha256": "a8414fd42646306eb6840dc7aa721497f09f1c4a73c4483410812588b27f8ad4"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/1280-before-t600.png",
+      "bytes": 337392,
+      "sha256": "9ef2c85ceede5a4ea086d8734ff8210fe163ca6468e6167c1ec4d51bcc0b682e"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/1920-after-t0.png",
+      "bytes": 329208,
+      "sha256": "a4f19ea58e0ea99428f56dbc3def21999931b79e04ab3fc0a49d9965b18ba9b8"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/1920-after-t1385.png",
+      "bytes": 741799,
+      "sha256": "b56a1287c01230811fec388e4561e929e3aa185b0e5e290d98805ca7892c669e"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/1920-after-t240.png",
+      "bytes": 521747,
+      "sha256": "2c40927f89c7ad10f4ff01bc48960a2af9853d28f5a5170b71e1dcaa775f1712"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/1920-after-t600.png",
+      "bytes": 601868,
+      "sha256": "1e43099fcf6aacc39e3c5bef0997184ca636a1b6933810ec6bbe8af389d171f9"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/1920-before-t0.png",
+      "bytes": 328330,
+      "sha256": "a4c214ebd82b0c7d663e8ebfea04ad5c0b1afbcd356eb8b3c75528f351e48a3d"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/1920-before-t1385.png",
+      "bytes": 878161,
+      "sha256": "fc7122e401f7574a3c0eb99b15625f287d12916674f0ff907b180cedff3db2a6"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/1920-before-t240.png",
+      "bytes": 710335,
+      "sha256": "033ba69e52d33681fd51ef6505f5b173f521b088cf7e0fdcb883858d8bce3e72"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/1920-before-t600.png",
+      "bytes": 615237,
+      "sha256": "1d5b0bc9f7671589837d09270f06e4e144cfe99f7199ec239aafc5cf7130d30c"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/committed-during-pointer-drag.png",
+      "bytes": 49395,
+      "sha256": "da85b53826b7d0f30dfc067a64271dc3c228de9da81417778d9369adb5dcdf38"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/native-restored.png",
+      "bytes": 54774,
+      "sha256": "c4c04b9fe7021bfbcd8504ec48caa1db6e3c62ae6eb7d9b57db774a7e14b27a3"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/report.json",
+      "bytes": 1946959,
+      "sha256": "b3f4ba03554c195e936d464e33b5943526aaa8688b17117465a1a7ee3de468e5"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/saved-craft-return-t1385.png",
+      "bytes": 54774,
+      "sha256": "c4c04b9fe7021bfbcd8504ec48caa1db6e3c62ae6eb7d9b57db774a7e14b27a3"
+    },
+    {
+      "path": "docs/qa/orbital-camera-v3/user-chosen-t240.png",
+      "bytes": 43208,
+      "sha256": "cb76e5e62286ee1c4b31cddaa3c42f417451f083e98a4f433d71d6800c181149"
+    }
+  ]
+}

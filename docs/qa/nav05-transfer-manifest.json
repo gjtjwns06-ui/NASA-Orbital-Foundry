@@ -1,0 +1,230 @@
+{
+  "capturedAt": "2026-11-15T10:25:38.550390+00:00",
+  "sourceWorktree": "C:\\Users\\gjtjw\\Desktop\\NASA_apps_challenge\\orbital-foundry-next-nav05",
+  "baseCommit": "e0853fe",
+  "scope": "Exactly four production source files plus only this task's supporting tests/tool/acceptance/raw evidence. No old README/unrelated docs/dist/assets/dependencies/model/worker files. This manifest is additional delivery metadata and not self-hashed. Rebuild and verify integrated v9-based candidate.",
+  "files": [
+    {
+      "path": "src/transfer-ui.ts",
+      "kind": "production",
+      "bytes": 82883,
+      "sha256": "a56b025402d0c68d3b9f97e3194da713635bb09c4f3ef4a7718b00ec3117a57b"
+    },
+    {
+      "path": "src/transfer-ui.css",
+      "kind": "production",
+      "bytes": 14376,
+      "sha256": "3d2d21ad858b91bf1691da651f74dc24ad44c45590f6454657cadb5c16eeb869"
+    },
+    {
+      "path": "src/render/transfer-scene.ts",
+      "kind": "production",
+      "bytes": 71617,
+      "sha256": "65d5bb2a870b74a57e476f30845fdc4e26230c0750404e7c0e948da86e91da0b"
+    },
+    {
+      "path": "src/transfer-plan-comparison.ts",
+      "kind": "production",
+      "bytes": 8077,
+      "sha256": "0178aa3e1b7bb32552d02d8740cc273f3e0bdb53c4114750a0d9e5fa6d94723c"
+    },
+    {
+      "path": "tests/transfer-plan-comparison.test.ts",
+      "kind": "supporting-proof",
+      "bytes": 10170,
+      "sha256": "8afe35f0447e5cb5f9180f09001fb79bd8b180ca575dd08d897bac3828056d8f"
+    },
+    {
+      "path": "tests/browser/transfer-plan-comparison.spec.ts",
+      "kind": "supporting-proof",
+      "bytes": 12365,
+      "sha256": "03fadc86bc625aa9f9fdb4a1d9587c50bf014c8e00de1171d0a6a16307c18e19"
+    },
+    {
+      "path": "tools/nav05-source.mjs",
+      "kind": "supporting-proof",
+      "bytes": 1916,
+      "sha256": "06ce993aa55c69ba8f3cde654541f76deaac5ca860c03796b80a5475696e296f"
+    },
+    {
+      "path": "docs/qa/nav05-acceptance.md",
+      "kind": "supporting-proof",
+      "bytes": 5853,
+      "sha256": "9667fd13762fee8cf8532fa1ac5407559f3ec9b940f4c6c0dbe38a9b3898d5ed"
+    },
+    {
+      "path": "docs/qa/nav05-source-r1/build.log",
+      "kind": "supporting-proof",
+      "bytes": 307,
+      "sha256": "ca54388f1b8321d46d633ca92a7a83a6abe22de33c087aca19ff4d365a17e8d2"
+    },
+    {
+      "path": "docs/qa/nav05-source-r1/cpu.json",
+      "kind": "supporting-proof",
+      "bytes": 4766,
+      "sha256": "c276430540a9c8bd186db66409cfb971ba98e6c66fe234641dae796f37669b76"
+    },
+    {
+      "path": "docs/qa/nav05-source-r2/build.log",
+      "kind": "supporting-proof",
+      "bytes": 2352,
+      "sha256": "76e4a0f00f6bb559a3840426cf404785b0e2fcc091f8f0078c009a55c68f1ba1"
+    },
+    {
+      "path": "docs/qa/nav05-source-r3/build.log",
+      "kind": "supporting-proof",
+      "bytes": 2352,
+      "sha256": "57baf71cc61afae74659b0a55277de8630f000417542c57769b2c9fcade0b32d"
+    },
+    {
+      "path": "docs/qa/nav05-native-r1/frozen-after.json",
+      "kind": "supporting-proof",
+      "bytes": 47211,
+      "sha256": "127fe6413c5b707ce05f4f8fcfeef85d291f45d63a52c6955edda1d24685704e"
+    },
+    {
+      "path": "docs/qa/nav05-native-r1/frozen-before.json",
+      "kind": "supporting-proof",
+      "bytes": 47211,
+      "sha256": "4c18c0f6104776f44cf352fd3426158f349fe6d420528aaf14edc8a8fd41567a"
+    },
+    {
+      "path": "docs/qa/nav05-native-r1/import-error-context.md",
+      "kind": "supporting-proof",
+      "bytes": 19382,
+      "sha256": "8d99520f8ebaf32509c418f7b64daae380bba929c308caf79bcba77da413a36b"
+    },
+    {
+      "path": "docs/qa/nav05-native-r1/playwright-report.json",
+      "kind": "supporting-proof",
+      "bytes": 44409,
+      "sha256": "12b25bf67f3e57f9db9ccab9de84143498395b36d6c53a3f44d191e9e23b30a3"
+    },
+    {
+      "path": "docs/qa/nav05-native-r1/rejected-harness.ts.txt",
+      "kind": "supporting-proof",
+      "bytes": 12088,
+      "sha256": "70d3f43be017fed9d948438c297bc70963a49d16c343d00d4e2b6459edf924f9"
+    },
+    {
+      "path": "docs/qa/nav05-native-r1/route-error-context.md",
+      "kind": "supporting-proof",
+      "bytes": 21910,
+      "sha256": "c8be7ab8d5a16a14e0c5b3850b4eea3a8ee61b6b94da15a465939c0366b3a80e"
+    },
+    {
+      "path": "docs/qa/nav05-native-r2/frozen-after.json",
+      "kind": "supporting-proof",
+      "bytes": 47211,
+      "sha256": "3dbfc13ca45b68b39db8ad37ccfe6579593bff299e0df9248f81d3b82985b5d5"
+    },
+    {
+      "path": "docs/qa/nav05-native-r2/frozen-before.json",
+      "kind": "supporting-proof",
+      "bytes": 47211,
+      "sha256": "85585242b9012b8548bfe158e6676ba43bd68d56618870e6170136c761bfbc84"
+    },
+    {
+      "path": "docs/qa/nav05-native-r2/playwright-report.json",
+      "kind": "supporting-proof",
+      "bytes": 5620,
+      "sha256": "2aaa6c1806fef69a2c1a6948d39baa86b30c44150674fe2c9003fbd71176e86b"
+    },
+    {
+      "path": "tests/browser/artifacts/nav05/nav05-native-r1/en-large-1920-context-restored.png",
+      "kind": "supporting-proof",
+      "bytes": 249184,
+      "sha256": "e4d85a5772afbb25536a8b811d2aca319e25647dbf9614e4052e2133b604df96"
+    },
+    {
+      "path": "tests/browser/artifacts/nav05/nav05-native-r1/english-large-comparison-survives-pointer-cancellation-context-restore-and-resets-on-import-and-launch-failure.png",
+      "kind": "supporting-proof",
+      "bytes": 228704,
+      "sha256": "c3d6449a8684a793114f44cb05b4bc5a992c789dc2799d5804bb5db834e101f9"
+    },
+    {
+      "path": "tests/browser/artifacts/nav05/nav05-native-r1/english-large-comparison-survives-pointer-cancellation-context-restore-and-resets-on-import-and-launch.json",
+      "kind": "supporting-proof",
+      "bytes": 2035,
+      "sha256": "a19a2598187cc794cdd2bdc50cc0852ac2346ceef447393ad5459b517a41b9b7"
+    },
+    {
+      "path": "tests/browser/artifacts/nav05/nav05-native-r1/ko-normal-1280-changed.png",
+      "kind": "supporting-proof",
+      "bytes": 157779,
+      "sha256": "d297348b99f981d17871185cec61b843f18b197c24a7ca27e7645f5628185cdf"
+    },
+    {
+      "path": "tests/browser/artifacts/nav05/nav05-native-r1/ko-normal-1280-fuel-blocked.png",
+      "kind": "supporting-proof",
+      "bytes": 157203,
+      "sha256": "97177cf82acb3ff445c739d7dece0d20b20a3297f4167271aad4e438382c5978"
+    },
+    {
+      "path": "tests/browser/artifacts/nav05/nav05-native-r1/native-date-route-change-preserves-computed-consequences-through-infeasible-input-and-exact-return-failure.png",
+      "kind": "supporting-proof",
+      "bytes": 138427,
+      "sha256": "e59129d51881ca80ee0050ed1a3c4d990559b477b02b85c05d0d1292183bfff9"
+    },
+    {
+      "path": "tests/browser/artifacts/nav05/nav05-native-r1/native-date-route-change-preserves-computed-consequences-through-infeasible-input-and-exact-return.json",
+      "kind": "supporting-proof",
+      "bytes": 1792,
+      "sha256": "a96247399d81591a091b3dc2b5badc5402bc34fb1510a959109defd01414d113"
+    },
+    {
+      "path": "tests/browser/artifacts/nav05/nav05-native-r2/en-large-1920-context-restored.png",
+      "kind": "supporting-proof",
+      "bytes": 249184,
+      "sha256": "e4d85a5772afbb25536a8b811d2aca319e25647dbf9614e4052e2133b604df96"
+    },
+    {
+      "path": "tests/browser/artifacts/nav05/nav05-native-r2/english-large-comparison-survives-pointer-cancellation-context-restore-and-resets-on-import-and-launch.json",
+      "kind": "supporting-proof",
+      "bytes": 1253,
+      "sha256": "07184348c6c4767693a1f83a77437aee1f42837035a7b0a1f05f542e29b1340c"
+    },
+    {
+      "path": "tests/browser/artifacts/nav05/nav05-native-r2/ko-normal-1280-changed.png",
+      "kind": "supporting-proof",
+      "bytes": 157779,
+      "sha256": "d297348b99f981d17871185cec61b843f18b197c24a7ca27e7645f5628185cdf"
+    },
+    {
+      "path": "tests/browser/artifacts/nav05/nav05-native-r2/ko-normal-1280-fuel-blocked.png",
+      "kind": "supporting-proof",
+      "bytes": 157203,
+      "sha256": "97177cf82acb3ff445c739d7dece0d20b20a3297f4167271aad4e438382c5978"
+    },
+    {
+      "path": "tests/browser/artifacts/nav05/nav05-native-r2/ko-normal-1280-infeasible.png",
+      "kind": "supporting-proof",
+      "bytes": 137596,
+      "sha256": "8cd78585406c03c4c8e9e3507a00b6f9d59a6a13ddcf96f31f8f97792b8115c0"
+    },
+    {
+      "path": "tests/browser/artifacts/nav05/nav05-native-r2/ko-normal-1280-restored.png",
+      "kind": "supporting-proof",
+      "bytes": 145434,
+      "sha256": "df0589ebc7aaf77d9741f598b94e4d456eb7992ba74e6dbd6e28a5f73e41575d"
+    },
+    {
+      "path": "tests/browser/artifacts/nav05/nav05-native-r2/native-date-route-change-preserves-computed-consequences-through-infeasible-input-and-exact-return.json",
+      "kind": "supporting-proof",
+      "bytes": 1792,
+      "sha256": "e926a2eff8931d8d505e1d25df89e2c021cb55569147f26beabcf0a07deb0727"
+    },
+    {
+      "path": "tests/browser/artifacts/nav05/nav05-native-r2/native-lifecycle.json",
+      "kind": "supporting-proof",
+      "bytes": 73604,
+      "sha256": "8cad7dc6e4542b055bff2891b07d416825c3c8b46bc924b60a15290384ad91a6"
+    },
+    {
+      "path": "tests/browser/artifacts/nav05/nav05-native-r2/native-route-return.json",
+      "kind": "supporting-proof",
+      "bytes": 123245,
+      "sha256": "408f6a9fa6ffce92dee6f6144c29f7f3a2b5ca5e85487401ce06c6374e4916f7"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "status": "PREPARED_ONLY_SYNTAX_VALIDATED",
+  "createdAt": "2026-11-15T09:41:10.914561+00:00",
+  "browserLaunched": false,
+  "gpuAcquired": false,
+  "performanceRuns": 0,
+  "fps": null,
+  "performanceVerdict": null,
+  "files": [
+    {
+      "path": "tools/performance/v9-active-first-light.mjs",
+      "bytes": 41717,
+      "sha256": "c9e5e6d6b27740ecd8b56a84f2c05e3c68c7ae924543a61a4878bf18d1bd3a37"
+    },
+    {
+      "path": "tools/performance/v9-native-lifetime.mjs",
+      "bytes": 1478,
+      "sha256": "1c4beac48ca8f7cc03fa4b2702885bef2fd2b4fec653c08f22f1373f9e4326ae"
+    },
+    {
+      "path": "tools/performance/v9-run.ps1",
+      "bytes": 1696,
+      "sha256": "686603ec74c69e77eafcc083e2988ece89caf4c78d72c9624ebb2961d30f2122"
+    },
+    {
+      "path": "tools/performance/v9-scenario-contract.json",
+      "bytes": 3469,
+      "sha256": "d8664c052141ab5dbda96cf082012f3bddf4d3f5b06cb55b7788116ae5bbb79a"
+    },
+    {
+      "path": "tools/performance/v9-standard20.mjs",
+      "bytes": 18789,
+      "sha256": "dab5eaa121cdf4d6134cd2fb7c86ce0c0d625e937617c2167f2c607163f483ea"
+    }
+  ],
+  "syntaxChecks": [
+    {
+      "command": "node --check tools/performance/v9-active-first-light.mjs",
+      "exitCode": 0
+    },
+    {
+      "command": "node --check tools/performance/v9-native-lifetime.mjs",
+      "exitCode": 0
+    },
+    {
+      "command": "node --check tools/performance/v9-standard20.mjs",
+      "exitCode": 0
+    },
+    {
+      "command": "PowerShell Parser.ParseFile tools/performance/v9-run.ps1 (no execution)",
+      "parseErrors": 0
+    }
+  ],
+  "originalReadOnlyHarnesses": [
+    {
+      "path": "tests/browser/performance-standard.mjs",
+      "sha256": "7f1c7ef59906c0cfc9466fc14b30bfa5c50aa2d03d7543cbbee5cd181887049c",
+      "mainAcceptedRawSha256": "2f6f9a5738bf2e9d7cc25d18ae97992aba53f3dda2acd0bfad024b7e2a223fb6",
+      "uiLfNormalizedSha256": "2f6f9a5738bf2e9d7cc25d18ae97992aba53f3dda2acd0bfad024b7e2a223fb6",
+      "mainLfNormalizedSha256": "2f6f9a5738bf2e9d7cc25d18ae97992aba53f3dda2acd0bfad024b7e2a223fb6",
+      "equalAfterCRLFNormalization": true
+    },
+    {
+      "path": "tests/browser/performance-deployment.mjs",
+      "sha256": "88444ca0b161a34e092a0fcbb116cdc9649f44b47724a981f29505fd8a5d37c3",
+      "mainAcceptedRawSha256": "848c7cf3136d99a3a02f65bd280577e6caa249ad9e0627b1d0eb84f5a18fc46a",
+      "uiLfNormalizedSha256": "848c7cf3136d99a3a02f65bd280577e6caa249ad9e0627b1d0eb84f5a18fc46a",
+      "mainLfNormalizedSha256": "848c7cf3136d99a3a02f65bd280577e6caa249ad9e0627b1d0eb84f5a18fc46a",
+      "equalAfterCRLFNormalization": true
+    },
+    {
+      "path": "tests/browser/performance-deployment-retained.mjs",
+      "sha256": "52bf4741d3b60bb38f5f7e91a7ad263ed31bffd4e795439a02c827d48eaa8351",
+      "mainAcceptedRawSha256": "a2f822d69a3be379130f661bbfd9ecc692df7aa00c86e510220549998ea68614",
+      "uiLfNormalizedSha256": "a2f822d69a3be379130f661bbfd9ecc692df7aa00c86e510220549998ea68614",
+      "mainLfNormalizedSha256": "a2f822d69a3be379130f661bbfd9ecc692df7aa00c86e510220549998ea68614",
+      "equalAfterCRLFNormalization": true
+    },
+    {
+      "path": "tests/browser/native-gl-audit.ts",
+      "sha256": "fb6c180498f2be920d88cf46690529801a8eb7ba2bec1c119698af0da52f2276",
+      "mainAcceptedRawSha256": "831ed787cd2864170b34b942158b0c2d538f3ca0ca94d64ca4dbbae4bd0e8909",
+      "uiLfNormalizedSha256": "831ed787cd2864170b34b942158b0c2d538f3ca0ca94d64ca4dbbae4bd0e8909",
+      "mainLfNormalizedSha256": "831ed787cd2864170b34b942158b0c2d538f3ca0ca94d64ca4dbbae4bd0e8909",
+      "equalAfterCRLFNormalization": true
+    }
+  ],
+  "limits": [
+    "Only syntax was executed. Import resolution, DOM selectors, serialization and runtime timing/resource behavior remain unverified until the root-owned integrated production run.",
+    "No product file or existing accepted harness/report was edited by this preparation.",
+    "Root must freeze and build the final integrated product before using these commands.",
+    "Current product changes by other agents were not prevented or relabeled as this preparation.",
+    "Accepted main uses LF while this worktree checkout uses CRLF for inherited harnesses. Raw hashes differ; normalized content matches. Both raw and LF hashes are retained, not conflated."
+  ]
+}
