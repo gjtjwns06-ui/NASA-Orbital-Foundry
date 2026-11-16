@@ -5,7 +5,7 @@
 ### Build a spacecraft. Shape its journey. Discover a world.
 
 A **3D mission-design game** for the browser.<br>
-Created for the NASA Space Apps Challenge — an independent educational project.
+Created for the NASA Space Apps Challenge
 
 [![Play](https://img.shields.io/badge/PLAY-Live_Game-89dfc9?style=for-the-badge)](https://orbital-foundry-mission-lab.gjtjwns06.chatgpt.site/)
 [![Demo](https://img.shields.io/badge/WATCH-29s_Demo-142e40?style=for-the-badge)](https://orbital-foundry-mission-lab.gjtjwns06.chatgpt.site/demo/)
